@@ -37,6 +37,14 @@
     <option value="bootstrap.php">♥ Twitter Bootstrap e Rails</option>
 </select>
 <button type="button" id="ir">IR</button>
+<script type="text/javascript">
+var botaoIr = document.getElementById('ir'); 
+botaoIr.onclick = function() { 
+	var menuSelecao = document.getElementById('menu');	
+	var urlSelecionada = menuSelecao.options[menuSelecao.selectedIndex].value;
+		self.location = urlSelecionada;	
+}
+</script> 
 </nav>
       </div>
     </header>
