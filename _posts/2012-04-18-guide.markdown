@@ -44,7 +44,7 @@ Eventos Rails Girls são realizados em um ambiente inclusivo, amigável e seguro
 * [Rails Girls DC Code of Conduct](https://docs.google.com/document/d/1XEnFI3R30IiGXOpC4idb0ku3pw8OoJcBpG9mg3iKiAo/edit)
 * [Rails Girls NZ Code of Conduct](https://docs.google.com/document/d/1EiTZ-__VDuXpN1OqgVKnYr2Km_N3fD9WWN3g5cv5hAA/edit)
 
-### Examplo de programa para o evento
+### Exemplo de programa para o evento
 
 Todo evento Rails Girls começa com a festa de instalação onde configurações de instalação são pré-instaladas no computador das meninas.  Consulte o tutorial [guides.railsgirls.com/install](http://guides.railsgirls.com/install) para instruções de instalação. Na festa de instalação poderão ser previstas minipalestras, mas o foco principal é oferecer um vinho espumante, deixar tudo configurado para o dia seguinte e promover a integração entre as participantes.  O horário para realização do evento é flexível - você conhece sua audiência e saberá escolher o horário que seja mais conveniente. Nós já realizamos eventos em finais de semana e também durante a semana. Pode ser que a realização do evento em duas tardes-noites (dàs 16:00h às 22:00h)  seja a melhor solução para o seu evento.
 
