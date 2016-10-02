@@ -1,39 +1,41 @@
 ---
 layout: default
-title: Guides
+title: Guias
 permalink: guide
 ---
 
-# The How to Guide
+# Como organizar eventos Rails Girls
 
+*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
 
-## Hosting your first Rails Girls event
+## Organizando seu primeiro evento Rails Girls
 
-Our aim is to give tools for women to understand technology. The Rails Girls events do this by providing a great first experience on building the Internet.
+Nosso objetivo é fornecer ferramentas para que mulheres estudem e entendam a tecnologia Rails. Os eventos Rails Girls foram criados com a finalidade de proporcionar uma primeira experiência com as técnicas Rails de criação para a Internet.
 
-Rails Girls was founded in end of 2010 in Helsinki. Originally intended as a onetime event, we never thought we'd see so many local chapters all around the world! This guide has been put together to help you get started.
+Rails Girls foi criado na cidade de Helsinki no final do ano 2010. A intenção inicial foi a de criar um único evento local e nós jamais imaginamos que a ideia atingisse a proporção atual com a proliferação de vários eventos pelo mundo inteiro.  Estes tutoriais foram criados para ajudá-lo a iniciar seus estudos de Rails.
 
-If you want to organize an event, start by filling out [http://railsgirls.com/inyourcity](http://railsgirls.com/inyourcity) and you'll receive more instructions. 
+Se você pretnde organizar um evento rails Girls comece preenchendo e enviando o formulário existe em [http://railsgirls.com/inyourcity](http://railsgirls.com/inyourcity) e nós enviaremos para você instruções sobre a organização do evento. 
 
-The roadmap for future events can be seen at [www.railsgirls.com](http://railsgirls.com).
+Uma listagem dos próximos eventos programados pode ser vista em [www.railsgirls.com](http://railsgirls.com).
 
-You are also welcome to join our [organizers' Slack discussion forum](https://rails-girls-slack.herokuapp.com/).
+Você está convidado a se engajar em nosso fórum de discussões em [organizers' Slack discussion forum](https://rails-girls-slack.herokuapp.com/).
 
-### The Basics
-Rails Girls events are non-profit. We don’t charge the participants and do not pay for coaches or speakers. Participants don’t need any previous knowledge about programming and there are no age-limitations. All the participants need is a laptop and some curiosity.
+### Princípios fundamentais
 
-The two-day event includes a lot of small group working and short focused talks on programming, design and web. No panel discussions or podium-talks - the spirit should be informal and hands-on. The more you can remove abstractions and add inclusivity the better.
+Os eventos Rails Girls não têm fins lucrativos. Nós não cobramos ingresso dos participantes e nem remuneramos os coachs e palestrantes. Não existe qualquer restrição relativa a requisitos básicos e conhecimentos, bem como não há limitações quanto a idade dos participantes. Tudo o que é necessário para participar limita-se a um laptop e uma boa dose de curiosidade.
 
-#### Rails Girls philosophy
+Nos dois dias dedicados ao evento os participantes serão separados em pequenos grupos de estudos que assistirão mini palestras sobre programação, design e web.  Não serão realizados painéis de discussão e nem exaustivas palestras - o ambiente de estudos deverá ser informal e os métodos de estudo do tipo "mãos na massa". Quanto menos abstrações e mais participação nas tarefas do evento tanto melhor.
 
-* Show sparks, personality and keep in mind the big picture. Explain, repeat and always tie what you're telling into a larger context.
-* Internet was made by people and it doesn’t break by a little tinkering. Continuously show the human side: encourage coaches to talk about open source communities, their programming idols and their aspirations.
-* Copy-pasting rules. Programming per se isn’t central - you can't really learn to speak Chinese in one day, in a similar manner you can only learn the basic vocabulary and expressions in coding. The goal of every event is to make something visible!
-* Girls run this world! But also women, ladies, even boys are allowed in. More than semantics we're interested in a mindset. Both founders were born in the Spice Girls era, they don't see the word girl as condescending or cutesy-cute.
+#### Filosofia Rails Girls
 
-#### Codes of Conduct
+* Sem perder o foco no objetivo maior, aprender Rails, transmitir conhecimentos em "doses homeopáticas".  Explicar, repetir e sempre posicionar o que está sendo ensinado no contexto mais amplo relacionado ao assunto ensinado.
+* A Internet foi criada por humanos (e não vai ser destruida por pequenos ajustes ???) it doesn’t break by a little tinkering. Enfatizar continuamente o lado humano: os coaches são incentivados a falar sobre as comunidades de código aberto, seus ídolos e onde eles, coaches, buscam inspiração para seu trabalho.
+* Copiar-Colar. Programação não é algo que se aprende de uma vez - você não conseguirá aprender a falar chinês em um dia e de modo similar você aprenderá somente a sintaxe básica ao estudar e praticar codificação. O objetivo de cada evento é chamar a atenção para alguns aspectos da programação Rails!
+* Meninas movem o mundo! Contudo, mulheres, senhoras e até mesmo garotos são muito bem-vindos. Mas do que em semântica nós estamos interessados em ideias.  As fundadoras do Rails Girls nasceram na era das Spice Girls, elas acreditam que o mundo feminimo é muito mais do que um simples mundo condescendente e charmoso.
 
-Rails Girls events are inclusive, friendly and safe environments. They have zero tolerance of harrasment or bullying. You can include a Code of Conduct to your event. Below are examples:
+#### Código de conduta
+
+Eventos Rails Girls são realizados em um ambiente inclusivo, amigável e seguro. Nos eventos a tolerância para assédio ou buling é zero. Você pode criar um código de conduta para seu evento. A seguir uma lista de links com exemplos de alguns códigos de conduta:
 
 * [Rails Girls Summer of Code Code of Conduct](http://railsgirlssummerofcode.org/about/code-of-conduct/)
 * [PyLadies Code of Conduct](http://www.pyladies.com/CodeOfConduct/)
@@ -42,17 +44,17 @@ Rails Girls events are inclusive, friendly and safe environments. They have zero
 * [Rails Girls DC Code of Conduct](https://docs.google.com/document/d/1XEnFI3R30IiGXOpC4idb0ku3pw8OoJcBpG9mg3iKiAo/edit)
 * [Rails Girls NZ Code of Conduct](https://docs.google.com/document/d/1EiTZ-__VDuXpN1OqgVKnYr2Km_N3fD9WWN3g5cv5hAA/edit)
 
-### Example Program
+### Examplo de programa para o evento
 
-Every Rails Girls event starts with an installation-fest where the setup is pre-installed to the girl's computers. See [guides.railsgirls.com/install](http://guides.railsgirls.com/install) for readymade instructions. The installation-fest can include short talks, but the main point is to offer some sparkling wine, get everything set for the next day and the women to know each other. The timeframe is tentative - you know your audience and what suits them best. We've hosted events both during weekend and weekdays. Also, doing two evenings (4PM - 22 PM) might be a more suitable solution for your community needs.
+Todo evento Rails Girls começa com a festa de instalação onde configurações de instalação são pré-instaladas no computador das meninas.  Consulte o tutorial [guides.railsgirls.com/install](http://guides.railsgirls.com/install) para instruções de instalação. Na festa de instalação poderão ser previstas minipalestras, mas o foco principal é oferecer um vinho espumante, deixar tudo configurado para o dia seguinte e promover a integração entre as participantes.  O horário para realização do evento é flexível - você conhece sua audiência e saberá escolher o horário que seja mais conveniente. Nós já realizamos eventos em finais de semana e também durante a semana. Pode ser que a realização do evento em duas tardes-noites (dàs 16:00h às 22:00h)  seja a melhor solução para o seu evento.
 
-#### Learning objectives of the workshop:
+#### Objetivos do workshop:
 
-* Understanding the difference between a dynamic and static web page.
-* Vocabulary of the web: developing a basic understanding of what components make a web application. Understanding the ABCs of coding: strings, methods, variables, arrays, exclamations, chaining, hashed, symbols, blocks.. as well as the tools (terminal, browser, text editor). Creating a conceptual understanding of the web's building blocks: programming languages, frameworks, databases, infrastructure.
-* Have an idea of how to move forward in the programming world: both online and offline.
+* Entender a diferença entre páginas web dinâmicas e estáticas.
+* Vocabulário da web: adquirir conhecimentos básicos sobre os componentes de uma aplicação web. Entender o ABC da codificação: strings, métodos, variáveis, arrays, exclamações, encadeamento, hash, símbolos, blocos e também algumas ferramentas, tais como terminal, navegador e editor de texto. Entender o conceito de funcionalidades para web: linguagem de programação, frameworks, banco de dados e infraestrutura.
+* Ter uma ideia de como ir além do mundo da programação: tanto online como offline.
 
-#### Friday evening: Installation
+#### Sexta-feira: Instalação
 
 19:00 - 21:00 Installations and getting to know each other  
 *Hint*: Have a coach table where problematic computers can be brought.
