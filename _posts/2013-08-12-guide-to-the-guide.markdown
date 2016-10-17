@@ -156,10 +156,10 @@ HTML, que significa HyperText Markup Language, é o idioma principal para a cria
 ### ERB: Ruby incorporado 
 ERB é um sistema fornecido por Ruby que permite inserir código Ruby puro em arquivos escritos em outras linguagens, such as Javascript or HTML. como o Javascript ou HTML. O código Ruby está contido dentro de tags específicas (`<%` e `%>`) que instruem o sistema para executar o conteúdo. Se um sinal `=` acompanha as tags, (`<%=` e %`>`) em seguida, os conteúdos são executados e renderizados na página.
 
-Por exemplo, se você tivesse 25 ideias ativos em seu aplicativo, o código:
+Por exemplo, se você tivesse 25 ideias ativas em seu aplicativo, o código:
 `Atualmente há <%= Idea.count %> ideas ativas`
 Renderizaria:
-> Atualmente há 25 ideas ativas
+> Atualmente há 25 ideias ativas
 
 ### Arquitetura MVC 
 Em uma aplicação Rails padrão (como a que você tem gerado), o `app/` pasta da sua aplicação começa com três pastas (ou diretórios): ‘models’ (que nós já discutimos), ‘controllers’ (controladores) and ‘views’ (visões). A relação entre esses diretórios é a base (conhecido como MVC Architecture) da aplicação e do desenvolvimento Rails.
@@ -169,7 +169,7 @@ Quando você executou o comando `rails generate scaffold` command, além de cria
 Ao tentar exibir um site Rails, um navegador da Web envia uma solicitação através do servidor que eventualmente atinge o *controller* (controlador) do Rails. *Controllers* trabalham como mediadores entre as *views* e os *models*. Quando o *controller* recebe a informação, ele se comunica com o *model* representando um recurso da aplicação (no nosso caso, uma “idea”) que por sua vez comunica com a base de dados. Após recuperar as informações necessárias a partir do *model*, o *controller* renderiza a *view* que retorna a página web completa para o navegador como HTML.
 
 ### CSS and layouts
-CSS (Cascading Style Sheets) is a language used to describe the formatting of pages written in a ‘markup language’, i.e. a language for processing, defining and presenting text with a prescribed formatting code e.g. tags, that distinguish it from plain text. The most common application of CSS is in conjunction with HTML.
+CSS (Cascading Style Sheets) é uma linguagem usada para descrever a formatação de páginas escritas em uma ‘linguagem de marcação’, ou seja, uma linguagem para processamento, definindo e apresentando texto com um código de formatação prescrita por exemplo tags,que o distinguem de texto simples. A aplicação mais comum de CSS é em conjunto com HTML.
 {% highlight css %}
 body { padding-top: 100px; }
 footer { margin-top: 100px; }
@@ -177,24 +177,25 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
-Within the CSS you have applied:
+Dentro do CSS você deve ter aplicado:
 
-`body` - this part is known as the selector and refers to the HTML element you wish to style.
-`{ padding-top: 100px; }` - this part is known as the declaration; each declaration has a property which is the style attribute you wish to change (`padding-top`), and an associated value (`100px`). Declarations always end with a semicolon and declaration groups are always enclosed by curly brackets.
+`body` (corpo) - esta parte é conhecido como o selector e refere-se ao elemento HTML que você deseja estilo.
+`{ padding-top: 100px; }` - Esta parte é conhecida como a declaração;  cada declaração tem uma propriedade que é o estilo de atributo que deseja alterar (`padding-top`), Declarações sempre terminam com um ponto e vírgula e declaração grupos são sempre cercada por chaves.
 
-For each Rails application there is a default layout file called `application.html.erb`, located in the layouts folder of your views directory. With this file you can create a default format for all of the pages in your application.
+Para cada aplicação Rails há um arquivo de layout padrão chamado `application.html.erb`, localizado na pasta layouts do seu diretório views. Com este arquivo você pode criar um formato padrão para todas as páginas em seu aplicativo.
 
 {% highlight html %}
 <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
 {% endhighlight %}
 
-In the above code, the `link rel` (link relation) is defining the nature of the URL that the `href` (hypertext reference) attribute is requesting content from. This argument indicates that the external source requested is a stylesheet and the web browser will need to fetch this file to render the page properly.
+No código acima, o `link rel` (link relação)  está definindo a natureza da URL que o atributo `href` (referência de hipertexto) está solicitando conteúdo. Este argumento indica que a fonte externa é solicitada uma folha de estilo eo navegador web vai precisar obter esse arquivo para processar a página corretamente.
 
 {% highlight erb %}
 <%= stylesheet_link_tag "application" %>
 {% endhighlight %}
 
-This code returns a stylesheet link tag for the source, in this case “application”, i.e. `application.css`. This means that the styling you implemented in application.css will be applied to the various pages of your application.
+Este código retorna uma tag link folha de estilo para a fonte, neste caso “application”, ou seja, `application.css`. Isto significa que o estilo que você implementou em application.css será aplicado às várias páginas do seu aplicativo.
+
 
 
 {% highlight erb %}
@@ -203,11 +204,11 @@ This code returns a stylesheet link tag for the source, in this case “applicat
 </div>
 {% endhighlight %}
 
-In this code:
+Neste código:
 
-- The HTML `div` tag divides the code into parts.
-- The *container class* adds additional styling to everything inside the div tags
-- The `<%= yield %>` argument is responsible for inserting the unique content from each page into the container `div`. This means that in your application the overall layout can be consistent even though the content will differ from page to page.
+- A tag HTML `div`divide o código em partes.
+- A *class container* adiciona estilo adicional para tudo dentro das tags div
+- O `<%= yield %>` argumento é responsável por inserir o conteúdo original de cada página dentro da `div` container. Isto significa que na sua aplicação o layout geral pode ser consistente mesmo que o conteúdo seja diferente de uma página para outra.
 
 ## <a id="4_add_picture_uploads">*4.* Add picture uploads</a>
 
