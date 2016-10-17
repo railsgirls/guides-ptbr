@@ -9,106 +9,91 @@ permalink: guide-to-the-guide
 *Criado por H Salmon to accompany the [app guide](/app).*
 *Traduzido por Willany Silva, @willanySilva (https://twitter.com/willanySilva).*
 
-This guide is an accompaniment to the [Rails Girls Guide](/app) you will be using to build your first Rails application. Its purpose is to provide background information about the structure of a Rails application, Rails terminology and commands, so you can understand what is happening when you are implementing the code in the Rails Girls Guide. We hope that this guide will provide you with a way to retain what you learn over the course of this workshop, and to maintain your interest in Rails development. Welcome!
 
 Este tutorial é um acompanhamento para o [RailsGirls Tutorial](/app) que será utilizado para construir sua primeira aplicação
 em Rails. O propósito desse tutorial é fornecer informações básicas sobre a estrutura de uma aplicação Rails, terminologia Rails e comandos, para que você possa entender o que está acontecendo quando estiver implementando o código no tutorial do Rails Girls. Esperamos que este tutorial lhe forneça uma forma de reter o que aprendeu ao longo deste workshop, e para manter o seu interesse no
 desenvolvimento Rails. Bem vinda!
 
-### [**1.** Creating the application](#1_create_the_application)
-Commands you need to know
-
 ### [**1.** Criando a aplicação](#1_criando_a_aplicacao)
 Comandos que você precisa saber
 
-### [**2.** Creating Idea scaffold](#2_create_idea_scaffold)
-Scaffolding, models, migrations
-
 ### [**2.** Criando Idea scaffold](#2_criando_idea_scaffold)
 Scaffolding, models, migrations
-
-### [**3.** Designing](#3_design)
-The design layers ( HTML, CSS, ERB)
-MVC Architecture
 
 ### [**3.** Design](#3_design)
 As camadas de design (HTML, CSS, ERB) 
 Arquiterura MVC
 
-### [**4.** Adding picture uploads](#4_add_picture_uploads)
-Libraries, gems and open-source
-
 ### [**4.** Adicionando upload de imagens](#4_add_upload_imagens)
 Bibliotecas, gems e código-aberto
-
-### [**5.** Finetuning the routes](#5_finetune_the_routes)
-routes, HTTP Methods: GET, POST, PUT and DELETE
 
 ### [**5.** Regularização de rotas](#5_regularizacao_de_rotas)
 rotas, métodos HTTP: GET, POST, PUT e DELETE
 
 
+## <a id="1_criando_a_aplicacao">*1.* Criando a aplicação</a>
 
-## <a id="1_create_the_application">*1.* Create the application</a>
+`mkdir projetos` - cria um *diretório* (pasta) chamado de “projetos” na pasta em que você está, muito provavelmente sua pasta pessoal.
+`mkdir` = cria diretório.
 
-`mkdir projects` - makes a *directory* (folder) called “projects” in the folder you are currently in, most likely your home folder.
-`mkdir` = **m**a**k**e **dir**ectory.
+`cd projetos` - navega para a pasta “projetos” que você acabou de criar. `cd` = muda o diretório.
 
-`cd projects` - navigates to the “projects” folder you just created. `cd` = **c**hange **d**irectory.
+`rails new railsgirls` - cria um novo aplicativo Ruby on Rails chamado **railsgirls** contendo várias pastas geradas automaticamente, no seu *diretório de trabalho* (a pasta que está trabalhando no momento).
 
-`rails new railsgirls` - creates a new Ruby on Rails application called **railsgirls** containing various auto-generated folders, in your *working directory* (the folder you are working in at the moment).
+`cd railsgirls` - navega para a pasta “railsgirls”.
 
-`cd railsgirls` - navigates to the “railsgirls” folder.
+`ruby script\rails server` - inicia um servidor web local em seu computador. Este servidor web é acessado através do endereço web [http://localhost:3000](http://localhost:3000).
 
-`ruby script\rails server` - starts a local web server on your computer. This web server is accessed through the web address [http://localhost:3000](http://localhost:3000).
+“Localhost” refere-se especificamente ao seu computador (considerado o “host local”), a partir do qual o servidor está rodando. Localhost fornece uma maneira para os desenvolvedores para ver a sua aplicação em um navegador e testar a funcionalidade enquanto ele ainda está em desenvolvimento.
 
-“Localhost” refers specifically to your computer (considered the “local host”), from which a server is being launched. Localhost provides a way for developers to see their application in a browser and test the functionality while it is still in development.
 
-## <a id="2_create_idea_scaffold">*2.* Create Idea scaffold</a>
+## <a id="2_criando_idea_scaffold">*2.* Criando Idea scaffold</a>
 
-### What is Rails scaffolding?
+### O que é Rails scaffolding?
 
-Every web application consists of many different concepts or resources (such as “users”, “ideas”, “posts”, “comments”, etc.).
-Rails scaffolding is a command (`rails generate scaffold`) for introducing a new resource into your application. It generates all of the code files necessary for representing and interacting with this resource.
+Cada aplicação web é composta de muitos conceitos ou recursos diferentes (como “usuários”, “ideas”, “posts”, “comentários”, etc.).
+Rails scaffolding é um comando (`rails generate scaffold`) para a introdução de um novo recurso em seu aplicativo. Ele gera todos os arquivos de código necessários para representar e interagir com este recurso.
 
-### What is a model?
 
-In Rails, a model represents a definition of a resource in your application, and how it should interact with other parts of the application. Depending on the nature of the website, these resources could be users, posts, groups etc. When a model is generated, a corresponding *database table* is created. This database table contains information that represents specified attributes of the model, e.g. for a User model, there might be a ‘name’ column and an ‘email’ column, and there will be rows for each subsequent user created. In the application you are creating, these resources are ideas and the model is ‘Idea’.
+### O que é um model (modelo)?
+
+No Rails, um model representa uma definição de um recurso em sua aplicação, e como ele deve interagir com outras partes da aplicação. Dependendo da natureza do site, estes recursos poderiam ser usuários, mensagens, grupos etc. Quando um model é gerado, uma *tabela de banco de dados* correspondente é criada. Esta tabela de banco de dados contém informações que representam atributos específicos do model, por exemplo, para um modelo de usuário, pode haver uma coluna ‘nome’ e uma coluna de ‘e-mail’, e haverá linhas para cada usuário subsequente criado. Na aplicação que você está criando, esses recursos são ideas e o model é ‘Ideia’.
 
 {% highlight rb %}
-rails generate scaffold idea name:string description:text picture:string
+rails generate scaffold idea nome:string descricao:text imagem:string
 {% endhighlight %}
 
-In order to create our idea model, we use the `scaffold` command which includes an argument with the singular version of the model name (`idea`), and an argument with parameters (specifications) for the model’s attributes. This means that the `idea` model corresponds to a table in the database with columns for the attributes specified in the command: `name`, `description` and `picture`. The `scaffold` command also auto-generates an `id` attribute, referred to as the `primary key`, which is used to establish relationships between database tables.
+A fim de criar o nosso modelo de Idea, usamos o comando `scaffold` que inclui uma discussão com a versão singular do nome do modelo  (`idea`), e uma discussão com parâmetros (especificações) para os atributos do modelo. Isso significa que o modelo `idea`corresponde a uma tabela no banco de dados com colunas para os atributos especificados no comando: `nome`, `descricao` and `imagem`. O comando  `scaffold` também gera automaticamente um atributo `id` referido como a `primary key` (chave primária),  que é usado para estabelecer relações entre as tabelas de banco de dados.
 
-`rails generate scaffold` - this calls the scaffold command.
 
-`idea` - this tells the scaffold command what we want to call our model.
+`rails generate scaffold` - isto chama o comando scaffold.
 
-`name:string description:text picture:string` - provides a list of attributes we want our model (and the database table that goes with it) to have. The `string` and `text` parts of the argument determine the nature of each attribute, i.e. each description needs to be ‘text’, and not, for example, an ‘integer’ (or any other type of information).
+`idea` - diz ao comando scaffold o que queremos chamar nosso modelo.
 
-### The ideas table
+`nome:string descricao:text imagem:string` - fornece uma lista de atributos que queremos que o model (e a tabela de banco de dados que vai com ele) terá. A `string` e `text` partes do argumento determinam a natureza de cada atributo, ou seja, cada descrição precisa ser  ‘text’, e não, por exemplo, um ‘integer’ (ou qualquer outro tipo de informação).
+
+### A tabela ideas
 
 <table class="table table-hover table-bordered">
 	<thead>
 		<tr>
 			<th>id</th>
-			<th>name</th>
-			<th>description</th>
-			<th>picture</th>
+			<th>nome</th>
+			<th>descricao</th>
+			<th>imagem</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>1</td>
-			<td>“Money-spinner”</td>
-			<td>“Open a moveable shop!”</td>
+			<td>“Mina de ouro”</td>
+			<td>“Abrir uma loja de móveis!”</td>
 			<td>“GreatIdea.jpg”</td>
 		</tr>
 		<tr>
 			<td>2</td>
-			<td>“Champagne For Breakfast!”</td>
-			<td>“We should do this every Friday!”</td>
+			<td>“Champagne para o café da manhã!”</td>
+			<td>“Nós devemos fazer isso toda sexta-feira!”</td>
 			<td>“Champagne.jpg”</td>
 		</tr>
 		<tr>
@@ -120,47 +105,47 @@ In order to create our idea model, we use the `scaffold` command which includes 
 	</tbody>
 </table>
 
-### Naming conventions
+### Convenções de nomenclatura
 
 #### Active Record
-In Rails, the default system for communicating with an application’s database is called *Active Record*, which provides various methods for creating, saving, and finding data. To retrieve information from the database, *Active Record* establishes relationships between different parts of the application using naming conventions:
+No Rails, o sistema padrão para a comunicação com banco de dados de um aplicativo é chamado *Active Record*, que fornece vários métodos para criar, salvar e encontrar dados. Para recuperar as informações do banco de dados, *Active Record* estabelece relações entre diferentes partes da aplicação usando as convenções de nomenclatura:
 
-- Table names have all lowercase letters and underscores between words, e.g. “ideas”, “invoice\_items”
-- The model is named using the convention of unbroken MixedCase and is always the singular of the table name, e.g. if the table name is “invoice\_items”, the model name would be “InvoiceItem”. So, in this case our table name is "ideas" and our model is "Idea".
+- Os nomes de tabela tem todas as letras minúsculas e sublinhados entre as palavras, por exemplo,  “ideas”, “fatura\_itens”
+- O model é chamado usando a convenção de MixedCase ininterrupta e é sempre o singular do nome da tabela, por exemplo, se o nome da tabela é “fatura\_itens”, o nome do model seria “FaturaItem”. Assim, neste caso, o nosso nome da tabela é "ideas" e nosso model é "Idea".
 
-#### Model attributes and types
+#### Model atributos e tipos
 
-As we’ve already discussed, a model can have attributes (properties) represented by columns in the corresponding database table. To be supported by the Active Record system, these attributes must conform to a list of appropriate types:
+Como já discutido, um model pode ter atributos (propriedades) representados por colunas na tabela de banco de dados correspondente. Para ser compatível com o sistema Active Record, esses atributos devem estar de acordo com uma lista de tipos apropriados:
 
-- `:binary` - stores data such as images, audio files or movies
+- `:binary` (binário) - armazena dados como imagens, arquivos de áudio ou filmes
 
-- `:boolean` - stores true or false values (such as whether a particular user is an administrator of an application or not)
+- `:boolean` (booleano) - armazena valores verdadeiros ou falsos (por exemplo, se um determinado usuário é um administrador de uma aplicação ou não)
 
-- `:date` - stores only a date (year, month, day)
+- `:date` (data) - armazena apenas uma data (ano, mês, dia)
 
-- `:datetime` - stores both a date and a time
+- `:datetime` (data e hora) - armazena uma data  e uma hora
 
-- `:decimal` - stores decimal numbers with precision that varies according to your specifications
+- `:decimal` - armazena números decimais com precisão que varia de acordo com suas especificações
 
-- `:float` - stores decimal points with fixed precision i.e. you can’t specify the precision (`:decimal` is better for mathematical operations in which precision is required, but `:float` is processed faster and is better in situations where speed is required and accuracy is secondary)
+- `:float` - armazena pontos decimais com precisão fixa ou seja, você não pode especificar a precisão (: decimal é melhor para operações matemáticas em que é necessária precisão, mas: float é processado mais rápido e é melhor em situações onde é necessária velocidade e precisão é secundário )
 
-- `:integer` - stores whole numbers
+- `:integer` (inteiro) - armazena números inteiros
 
-- `:primary_key` - the primary key of a table is assumed to be the id
+- `:primary_key` (chave primária) - a chave primária de uma tabela é assumido como sendo o id
 
-- `:string` - stores 255 characters of text information, i.e. is used for short text fields (names, emails etc)
+- `:string` - armazena 255 caracteres das informações de texto, ou seja, é usado para campos de texto curtos (nomes, e-mails etc)
 
-- `:text` - stores text information with no character limit (used for comments, blog posts etc)
+- `:text` (texto) - armazena informações de texto sem limite de caracteres (usado para comentários, posts de blogs, etc)
 
-- `:time` - stores only a time
+- `:time` (tempo) - armazena apenas um tempo
 
-- `:timestamp` - stores both a time and date. `:timestamp` is different from `:datetime` and serves a different purpose, but there’s no need to go into that here
+- `:timestamp` - armazena, tanto a hora e a data. : Timestamp é diferente: data e hora e tem uma finalidade diferente, mas não há necessidade de entrar em detalhes aqui
 
-### What are migrations and why do you need them?
+### O que são as migrations (migrações) e por que você precisa deles?
 
-Migrations change the state of the database. When you run the `scaffold` command, a migration file containing instructions for the database table relevant to your command is added to the `db/migrate` folder of your application. For example, when you ran the `rails generate scaffold` command, a migration containing instructions for our ideas table was created. There are other commands that create migrations such as the `rails generate model` command and the `rails generate migration` command.
+As migrations alteraram o estado da base de dados. Quando você executa o comando scaffold, um arquivo de migration que contém instruções para a tabela de banco de dados relevantes para o seu comando é adicionado à pasta `db/migrate` da sua aplicação. Por exemplo, quando você executou o comando `rails generate scaffold`, uma migration contendo instruções para a nossa tabela ideas foi criada. Há outros comandos que criam as migrations, como o comando `rails generate model` e o comando `rails generate migration`.
 
-The `rake db:migrate` command updates the database according to the specifications in the migration file. This command, known as “migrating up”, ensures that your idea model is added to the database. Migrations can also be undone (“migrating down”) using the command `rake db:rollback`.
+O comando `rake db:migrate` atualiza o banco de dados de acordo com as especificações que constam na migration. Este comando, conhecido como “migrating up”, garante que o seu model idea é adicionado ao banco de dados. Migrations também podem ser desfeitas (“migrating down”)  usando o comando `rake db:rollback`.
 
 ## <a id="3_design">*3.* Design</a>
 In a Ruby on Rails application, the user interface (what someone visiting the website will see), is often written in HTML with Embedded Ruby (ERB) code. This code is contained in a specific directory called ‘views’, located in the `app` folder of your Rails application directory.
