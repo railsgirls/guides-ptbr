@@ -325,10 +325,11 @@ respond_to do |format|
 
 (Este código é difícil de dissecar com muita clareza, nesta fase, mas se você persistir com Rails você vai obter uma melhor compreensão com o tempo.)
 
-Na definição acima da ação show, Rails está usando um método helper `respond_to`, que diz para o Rails para executar o *block* subsequente de código (o código fechado por  `do...end` sintaxe). Este código contém duas opções de formatação diferentes dependendo da natureza do pedido. Se o navegador solicita HTML, em seguida, o código HTML contido na view que corresponde com esta ação do controlador (`show.html.erb`) é renderizado. Se o json é solicitado, em seguida, a view ié ignorada e informação limitada é fornecida.
+Na definição acima da ação show, Rails está usando um método helper `respond_to`, que diz para o Rails para executar o *block* subsequente de código (o código fechado por  `do...end` sintaxe). Este código contém duas opções de formatação diferentes dependendo da natureza do pedido. Se o navegador solicita HTML, em seguida, o código HTML contido na view que corresponde com esta ação do controlador (`show.html.erb`) é renderizado. Se o json é solicitado, em seguida, a view é ignorada e informação limitada é fornecida.
 
-`GET` - this is a comment to let us know which HTTP method is being executed.
+`GET` - isto é um comentário para deixar-nos saber qual o método HTTP está sendo executado.
 
-So, URL requests, translated into HTTP methods, are mapped to controller actions which tell Rails to return a view.
+Assim, as requisições da URL, traduzidas em métodos HTTP, são mapeadas em ações do controller que dizem para o Rails retornar uma view.
+
 
 When we insert the code `root :to => redirect('/ideas')` into our `config.rb`, it tells Rails to make the default root of our application [http://localhost:3000/ideas](http://localhost:3000/ideas) (note Localhost is being used as the domain because our application is still in development, when you launch your application this domain will be different). This URL contains a path (`/ideas`) which, by default, maps the URL to the ‘index’ action of our ideas controller and renders the associated view; `index.html.erb`. The code `rm public/index.html` removes (`rm`) the `public/index.html` file, containing the “Welcome Aboard” code, which was the previous default root for our application.
