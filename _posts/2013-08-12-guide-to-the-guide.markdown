@@ -210,20 +210,21 @@ Neste código:
 - A *class container* adiciona estilo adicional para tudo dentro das tags div
 - O `<%= yield %>` argumento é responsável por inserir o conteúdo original de cada página dentro da `div` container. Isto significa que na sua aplicação o layout geral pode ser consistente mesmo que o conteúdo seja diferente de uma página para outra.
 
-## <a id="4_add_picture_uploads">*4.* Add picture uploads</a>
+## <a id="4_add_upload_imagens">*4.* Add picture uploads</a>
 
-### Libraries
-Many programming languages, including Ruby, use a wide range of libraries. In Ruby’s case, most of these libraries are released in the form of self-contained packages called *gems*, which contain all the information required to install and implement them. These gems are contained in your application’s `Gemfile` and if you look in this file you’ll notice that when you created your first Rails application it came with several gems that ensure your application functions correctly.
+### Bibliotecas
+Muitas linguagens de programação, incluindo Ruby, utilizam uma ampla gama de bibliotecas. No caso de Ruby, a maioria destas bibliotecas são liberadas na forma de pacotes independentes chamados *gems*,que contêm todas as informações necessárias para instalar e implementá-las. Essas gems estão contidas no arquivo `Gemfile` da sua aplicação e se você olhar neste arquivo você vai notar que quando você criou sua primeira aplicação Rails ele veio com várias gems que garantem as funções da aplicação corretamente.
 
-Gems help simplify and prevent repetition in a developer’s code, in keeping with the DRY (Don’t Repeat Yourself) principle of software development. Gems may solve specific problems, add specific functionality, or address specific requirements, meaning that should another developer encounter a similar scenario, instead of writing new code, they can install a gem containing pre-written code. For example, “CarrierWave”, the gem you are adding to your gemfile is designed to make it easy to upload files to your application.
+Gems ajudam a simplificar e evitar a repetição no código de um desenvolvedor, de acordo com o DRY (Don’t Repeat Yourself) princípio do desenvolvimento de software. Gems podem resolver problemas específicos, adicionar funcionalidade específica, ou atender aos requisitos específicos, significando que deveria outro desenvolvedor encontrar um cenário semelhante, em vez de escrever novo código, eles podem instalar uma gem contendo o código pré-escrito. Por exemplo, “CarrierWave”, a gem que você está adicionando ao seu Gemfile é projetada para tornar mais fácil o upload de arquivos para a sua aplicação.
 
-“Bundler” is the software Ruby uses to track and manage gems. The `bundle` command runs Bundler and installs the gems specified in your Gemfile. You’ll notice the code `source 'https://rubygems.org'` at the top of your Gemfile. Whenever you add a gem to your gemfile and run the `bundle` command, this code tells your application to fetch the gem from [https://rubygems.org](https://rubygems.org). “RubyGems” is a Ruby-specific packaging system, the purpose of which is to simplify the creation, sharing and installation of gems.
+“Bundler” é o software Ruby usado para controlar e gerenciar gems. O comando `bundle` roda o Bundler e instala as gems especificadas em seu Gemfile. Você notará que o `código fonte 'https://rubygems.org'` no topo do seu Gemfile.Sempre que você adicionar uma gem para o seu Gemfile e execute o comando `bundle`, este código informa o aplicativo para buscar a gem de [https://rubygems.org](https://rubygems.org). “RubyGems” é um sistema de pacotes específico para o Ruby, cujo objectivo é simplificar a criação, compartilhamento e instalação de gems.
 
-### Open-source software
+### Software livre
 
-Both the Rails framework and the Ruby language are examples of open-source software. Open-source software is released under a licence which ensures universal access; anyone has the right to change, study and distribute the software. Making the source code accessible enables the establishment of a diverse, reflexive, collaborative and consequently ever-evolving interactive community of programmers who all benefit from each others’ developments.
+Tanto o framework Rails e a linguagem Ruby são exemplos de software de código aberto. Software de código aberto  é distribuído sob uma licença que garante o acesso universal; ninguém tem o direito de mudar, estudar e distribuir o software. Fazendo o código fonte acessível permitindo o estabelecimento de uma diversificada, reflexiva, colaborativa e, consequentemente, uam comunidade interativa de programadores em constante evolução que beneficiam uns aos outros programadores.
 
-### More HTML
+
+### Mais HTML
 
 The file `app/views/ideas/_form.html.erb` contains HTML code that determines the look and feel of the form used for editing and creating ideas (the `edit.html.erb` and `new.html.erb` views). A partial is a snippet of HTML and Ruby code that can be reused in multiple locations. The form for editing existing ideas and the form for creating new ideas will look pretty much the same, so it makes sense to have one form for both files to use. If you look in these files you’ll notice that they have a customised heading (e.g. `<h1>Editing idea</h1>`) and then they simply say `<%= render 'form' %>` which tells Rails to render the partial `_form.html.erb`.
 
