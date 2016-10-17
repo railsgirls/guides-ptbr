@@ -141,32 +141,32 @@ Como já discutido, um model pode ter atributos (propriedades) representados por
 
 - `:timestamp` - armazena, tanto a hora e a data. : Timestamp é diferente: data e hora e tem uma finalidade diferente, mas não há necessidade de entrar em detalhes aqui
 
-### O que são as migrations (migrações) e por que você precisa deles?
+### O que são as migrations (migrações) e por que você precisa delas?
 
 As migrations alteraram o estado da base de dados. Quando você executa o comando scaffold, um arquivo de migration que contém instruções para a tabela de banco de dados relevantes para o seu comando é adicionado à pasta `db/migrate` da sua aplicação. Por exemplo, quando você executou o comando `rails generate scaffold`, uma migration contendo instruções para a nossa tabela ideas foi criada. Há outros comandos que criam as migrations, como o comando `rails generate model` e o comando `rails generate migration`.
 
 O comando `rake db:migrate` atualiza o banco de dados de acordo com as especificações que constam na migration. Este comando, conhecido como “migrating up”, garante que o seu model idea é adicionado ao banco de dados. Migrations também podem ser desfeitas (“migrating down”)  usando o comando `rake db:rollback`.
 
 ## <a id="3_design">*3.* Design</a>
-In a Ruby on Rails application, the user interface (what someone visiting the website will see), is often written in HTML with Embedded Ruby (ERB) code. This code is contained in a specific directory called ‘views’, located in the `app` folder of your Rails application directory.
+Em um aplicativo Ruby on Rails, a interface do usuário (o que alguém visitando o site vai ver), é muitas vezes escrito em HTML com código incorporado Ruby (ERB). Este código está contido em um diretório específico chamado de ‘views’, localizado na pasta `app` do seu diretório do aplicativo Rails.
 
 ### HTML
-HTML, which stands for HyperText Markup Language, is the primary language for creating web pages and other information that can be displayed in a web browser. HTML is written using tags, angle brackets which tend to come in pairs (a “start tag” and an “end tag”), enclosing text-based content. In paired tags, the end tag also has a slash after the opening angle bracket, to distinguish it from the start tag. A paragraph (represented in HTML by the letter ‘p’) would use a start tag like this: `<p>` and an end tag like this: `</p>`, to enclose the text intended for display. Unpaired tags that are opened but don’t need to be closed (e.g. `<br>`, which defines a single line break) are known as “empty elements”. The web browser uses HTML tags to interpret how the contents will be displayed.
+HTML, que significa HyperText Markup Language, é o idioma principal para a criação de páginas web e outras informações que podem ser exibidas em um navegador da web. HTML é escrito usando tags, menor que e maior que (< >) que tendem a vir em pares (uma “tag de início” e uma “tag fim”), abrangendo conteúdo baseado em texto. Em pares de tags, a tag fim também tem uma barra depois da abertura da tag menor que, para distingui-lo a partir da tag de início. Um parágrafo (representado em HTML pela letra ‘p’) usaria uma tag de início como esta: `<p>` e uma tag final como esta: `</p>`, para colocar o texto pretendido para a exposição. Tags que não possuem pares e que são abertas, mas não precisam de tags de fechamento (por exemplo `<br>`,  que define uma única quebra de linha) são conhecidas como “elementos vazios”. O navegador usa tags HTML para interpretar como o conteúdo será exibido.
 
-### ERB: Embedded Ruby
-ERB is a system supplied by Ruby that allows you to insert pure Ruby code into files written in other languages, such as Javascript or HTML. The Ruby code is contained within specific angle brackets (`<%` and `%>`) which instruct the system to execute the contents. If an `=` sign accompanies the angle brackets, (`<%=` and %`>`) then the contents are executed and rendered on the page.
+### ERB: Ruby incorporado 
+ERB é um sistema fornecido por Ruby que permite inserir código Ruby puro em arquivos escritos em outras linguagens, such as Javascript or HTML. como o Javascript ou HTML. O código Ruby está contido dentro de tags específicas (`<%` e `%>`) que instruem o sistema para executar o conteúdo. Se um sinal `=` acompanha as tags, (`<%=` e %`>`) em seguida, os conteúdos são executados e renderizados na página.
 
-For example, if you had 25 active ideas in your application, the code:
-`There are currently <%= Idea.count %> active ideas`
-would render as:
-> There are currently 25 active ideas
+Por exemplo, se você tivesse 25 ideias ativos em seu aplicativo, o código:
+`Atualmente há <%= Idea.count %> ideas ativas`
+Renderizaria:
+> Atualmente há 25 ideas ativas
 
-### MVC Architecture
-In a standard Rails application (like you one you have generated), the `app/` folder of your application starts out with three folders (or directories): ‘models’ (which we have already discussed), ‘controllers’ and ‘views’. The relationship between these directories is the foundation (known as MVC Architecture) of the application, and of Rails development.
+### Arquitetura MVC 
+Em uma aplicação Rails padrão (como a que você tem gerado), o `app/` pasta da sua aplicação começa com três pastas (ou diretórios): ‘models’ (que nós já discutimos), ‘controllers’ (controladores) and ‘views’ (visões). A relação entre esses diretórios é a base (conhecido como MVC Architecture) da aplicação e do desenvolvimento Rails.
 
-When you ran the `rails generate scaffold` command, in addition to creating the idea model, you also created an accompanying ideas controller (`ideas_controller.rb`), located in the controllers folder, and an ideas views folder containing several files that you will use to create a dynamic application.
+Quando você executou o comando `rails generate scaffold` command, além de criar o model de idea, você também criou um controlador que acompanha ideias (`ideas_controller.rb`), localizado na pasta controladores, e uma pasta view ideas que contém vários arquivos que você irá usar para criar uma aplicação dinâmica.
 
-When attempting to display a Rails website, a web browser sends a request via the server which eventually hits the Rails *controller*. *Controllers* act as mediators between the *views* and the *models*. When the *controller* receives the information, it communicates with a *model* representing a resource of the application (in our case, an “idea”) which in turn communicates with the database. Upon retrieving the required information from the *model*, the *controller* renders the *view* which returns the complete web page to the browser as HTML.
+Ao tentar exibir um site Rails, um navegador da Web envia uma solicitação através do servidor que eventualmente atinge o *controller* (controlador) do Rails. *Controllers* trabalham como mediadores entre as *views* e os *models*. Quando o *controller* recebe a informação, ele se comunica com o *model* representando um recurso da aplicação (no nosso caso, uma “idea”) que por sua vez comunica com a base de dados. Após recuperar as informações necessárias a partir do *model*, o *controller* renderiza a *view* que retorna a página web completa para o navegador como HTML.
 
 ### CSS and layouts
 CSS (Cascading Style Sheets) is a language used to describe the formatting of pages written in a ‘markup language’, i.e. a language for processing, defining and presenting text with a prescribed formatting code e.g. tags, that distinguish it from plain text. The most common application of CSS is in conjunction with HTML.
