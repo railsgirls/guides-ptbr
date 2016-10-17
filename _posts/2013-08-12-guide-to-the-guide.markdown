@@ -1,30 +1,51 @@
 ---
 layout: default
-title: The Guide to the Guide
+title: O tutorial para o tutorial
 permalink: guide-to-the-guide
 ---
 
-# Your guide to the Rails Girls Guide!
+# Seu tutorial para o Rails Girls tutorial!
 
-*Created by H Salmon to accompany the [app guide](/app).*
+*Criado por H Salmon to accompany the [app guide](/app).*
+*Traduzido por Willany Silva, @willanySilva (https://twitter.com/willanySilva).*
 
 This guide is an accompaniment to the [Rails Girls Guide](/app) you will be using to build your first Rails application. Its purpose is to provide background information about the structure of a Rails application, Rails terminology and commands, so you can understand what is happening when you are implementing the code in the Rails Girls Guide. We hope that this guide will provide you with a way to retain what you learn over the course of this workshop, and to maintain your interest in Rails development. Welcome!
+
+Este tutorial é um acompanhamento para o [RailsGirls Tutorial](/app) que será utilizado para construir sua primeira aplicação
+em Rails. O propósito desse tutorial é fornecer informações básicas sobre a estrutura de uma aplicação Rails, terminologia Rails e comandos, para que você possa entender o que está acontecendo quando estiver implementando o código no tutorial do Rails Girls. Esperamos que este tutorial lhe forneça uma forma de reter o que aprendeu ao longo deste workshop, e para manter o seu interesse no
+desenvolvimento Rails. Bem vinda!
 
 ### [**1.** Creating the application](#1_create_the_application)
 Commands you need to know
 
+### [**1.** Criando a aplicação](#1_criando_a_aplicacao)
+Comandos que você precisa saber
+
 ### [**2.** Creating Idea scaffold](#2_create_idea_scaffold)
+Scaffolding, models, migrations
+
+### [**2.** Criando Idea scaffold](#2_criando_idea_scaffold)
 Scaffolding, models, migrations
 
 ### [**3.** Designing](#3_design)
 The design layers ( HTML, CSS, ERB)
 MVC Architecture
 
+### [**3.** Design](#3_design)
+As camadas de design (HTML, CSS, ERB) 
+Arquiterura MVC
+
 ### [**4.** Adding picture uploads](#4_add_picture_uploads)
 Libraries, gems and open-source
 
+### [**4.** Adicionando upload de imagens](#4_add_upload_imagens)
+Bibliotecas, gems e código-aberto
+
 ### [**5.** Finetuning the routes](#5_finetune_the_routes)
 routes, HTTP Methods: GET, POST, PUT and DELETE
+
+### [**5.** Regularização de rotas](#5_regularizacao_de_rotas)
+rotas, métodos HTTP: GET, POST, PUT e DELETE
 
 
 
