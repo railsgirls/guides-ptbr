@@ -246,9 +246,9 @@ Em uma aplicação Rails funcional, existe um sistema embutido no lugar para tra
 	<thead>
 		<tr>
 			<td>HTTP Method</td>
-			<td>Path</td>
-			<td>Action</td>
-			<td>used for</td>
+			<td>Caminho</td>
+			<td>Ação</td>
+			<td>Usado parar</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -256,49 +256,50 @@ Em uma aplicação Rails funcional, existe um sistema embutido no lugar para tra
 			<td>GET</td>
 			<td>/ideas</td>
 			<td>index</td>
-			<td>displaying a list of all ideas</td>
+			<td>exibir uma lista de todas as ideias</td>
 		</tr>
 		<tr>
 			<td>GET</td>
 			<td>/ideas/new</td>
 			<td>new</td>
-			<td>returning an HTML form for creating a new idea</td>
+			<td>devolver um formulário HTML para a criação de uma nova ideia</td>
 		</tr>
 		<tr>
 			<td>POST</td>
 			<td>/ideas</td>
 			<td>create</td>
-			<td>creating a new idea</td>
+			<td>criar de uma nova ideia</td>
 		</tr>
 		<tr>
 			<td>GET</td>
 			<td>/photos/:id</td>
 			<td>show</td>
-			<td>displaying a specific photo</td>
+			<td>Exibir uma foto especifica</td>
 		</tr>
 		<tr>
 			<td>GET</td>
 			<td>/photos/:id/edit</td>
 			<td>edit</td>
-			<td>returning an HTML form for editing a specific photo</td>
+			<td>devolver um formulário HTML para editar uma foto específica</td>
 		</tr>
 		<tr>
 			<td>PUT</td>
 			<td>/photos/:id</td>
 			<td>update</td>
-			<td>updating a specific photo</td>
+			<td>atualizar uma foto específica</td>
 		</tr>
 		<tr>
 			<td>DELETE</td>
 			<td>/photos/:id</td>
 			<td>destroy</td>
-			<td>deleting a specific photo</td>
+			<td>Excluir uma foto específica</td>
 		</tr>
 	</tbody>
 </table>
 
 
-If you look in your `ideas_controller.rb` you can see these actions and the associated behaviour, and the HTTP method that corresponds with each action:
+Se você olhar no arquivo `ideas_controller.rb` você pode ver essas ações e o comportamento associado, e o método HTTP que corresponde com cada acção:
+
 
 {% highlight rb %}
 def show
@@ -314,7 +315,7 @@ def show
   # GET /ideas/new.json
 {% endhighlight %}
 
-`show` - the controller action
+`show` - a ação do controlador
 
 {% highlight rb %}
 respond_to do |format|
@@ -322,9 +323,9 @@ respond_to do |format|
       format.json { render json: @idea }
 {% endhighlight %}
 
-(This code is difficult to dissect with much clarity at this stage but if you persist with Rails you will get a better understanding as time progresses.)
+(Este código é difícil de dissecar com muita clareza, nesta fase, mas se você persistir com Rails você vai obter uma melhor compreensão com o tempo.)
 
-In the above definition of the show action, Rails is using a `respond_to` helper method, which tells Rails to execute the subsequent *block* of code (the code enclosed by the `do...end` syntax). This code contains two different formatting options depending on the nature of the request. If the browser requests HTML then the HTML code contained in the view that corresponds with this controller action (`show.html.erb`) is rendered. If json is requested then the view is bypassed and limited information is provided.
+Na definição acima da ação show, Rails está usando um método helper `respond_to`, que diz para o Rails para executar o *block* subsequente de código (o código fechado por  `do...end` sintaxe). Este código contém duas opções de formatação diferentes dependendo da natureza do pedido. Se o navegador solicita HTML, em seguida, o código HTML contido na view que corresponde com esta ação do controlador (`show.html.erb`) é renderizado. Se o json é solicitado, em seguida, a view ié ignorada e informação limitada é fornecida.
 
 `GET` - this is a comment to let us know which HTTP method is being executed.
 
