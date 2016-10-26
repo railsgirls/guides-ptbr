@@ -1,93 +1,99 @@
 ---
 layout: default
-title: The Guide to the Guide
+title: O tutorial para o tutorial
 permalink: guide-to-the-guide
 ---
 
-# Your guide to the Rails Girls Guide!
+# Seu tutorial para o Rails Girls tutorial!
 
-*Created by H Salmon to accompany the [app guide](/app).*
+*Criado por H Salmon to accompany the [app guide](/app).*
+*Traduzido por Willany Silva, @willanySilva (https://twitter.com/willanySilva).*
 
-This guide is an accompaniment to the [Rails Girls Guide](/app) you will be using to build your first Rails application. Its purpose is to provide background information about the structure of a Rails application, Rails terminology and commands, so you can understand what is happening when you are implementing the code in the Rails Girls Guide. We hope that this guide will provide you with a way to retain what you learn over the course of this workshop, and to maintain your interest in Rails development. Welcome!
 
-### [**1.** Creating the application](#1_create_the_application)
-Commands you need to know
+Este tutorial é um acompanhamento para o [RailsGirls Tutorial](/app) que será utilizado para construir sua primeira aplicação
+em Rails. O propósito desse tutorial é fornecer informações básicas sobre a estrutura de uma aplicação Rails, terminologia Rails e comandos, para que você possa entender o que está acontecendo quando estiver implementando o código no tutorial do Rails Girls. Esperamos que este tutorial lhe forneça uma forma de reter o que aprendeu ao longo deste workshop, e para manter o seu interesse no
+desenvolvimento Rails. Bem vinda!
 
-### [**2.** Creating Idea scaffold](#2_create_idea_scaffold)
+### [**1.** Criando a aplicação](#1_criando_a_aplicacao)
+Comandos que você precisa saber
+
+### [**2.** Criando Idea scaffold](#2_criando_idea_scaffold)
 Scaffolding, models, migrations
 
-### [**3.** Designing](#3_design)
-The design layers ( HTML, CSS, ERB)
-MVC Architecture
+### [**3.** Design](#3_design)
+As camadas de design (HTML, CSS, ERB) 
+Arquiterura MVC
 
-### [**4.** Adding picture uploads](#4_add_picture_uploads)
-Libraries, gems and open-source
+### [**4.** Adicionando upload de imagens](#4_add_upload_imagens)
+Bibliotecas, gems e código-aberto
 
-### [**5.** Finetuning the routes](#5_finetune_the_routes)
-routes, HTTP Methods: GET, POST, PUT and DELETE
+### [**5.** Regularização de rotas](#5_regularizacao_de_rotas)
+rotas, métodos HTTP: GET, POST, PUT e DELETE
 
 
+## <a id="1_criando_a_aplicacao">*1.* Criando a aplicação</a>
 
-## <a id="1_create_the_application">*1.* Create the application</a>
+`mkdir projetos` - cria um *diretório* (pasta) chamado de “projetos” na pasta em que você está, muito provavelmente sua pasta pessoal.
+`mkdir` = cria diretório.
 
-`mkdir projects` - makes a *directory* (folder) called “projects” in the folder you are currently in, most likely your home folder.
-`mkdir` = **m**a**k**e **dir**ectory.
+`cd projetos` - navega para a pasta “projetos” que você acabou de criar. `cd` = muda o diretório.
 
-`cd projects` - navigates to the “projects” folder you just created. `cd` = **c**hange **d**irectory.
+`rails new railsgirls` - cria um novo aplicativo Ruby on Rails chamado **railsgirls** contendo várias pastas geradas automaticamente, no seu *diretório de trabalho* (a pasta que está trabalhando no momento).
 
-`rails new railsgirls` - creates a new Ruby on Rails application called **railsgirls** containing various auto-generated folders, in your *working directory* (the folder you are working in at the moment).
+`cd railsgirls` - navega para a pasta “railsgirls”.
 
-`cd railsgirls` - navigates to the “railsgirls” folder.
+`ruby script\rails server` - inicia um servidor web local em seu computador. Este servidor web é acessado através do endereço web [http://localhost:3000](http://localhost:3000).
 
-`ruby script\rails server` - starts a local web server on your computer. This web server is accessed through the web address [http://localhost:3000](http://localhost:3000).
+“Localhost” refere-se especificamente ao seu computador (considerado o “host local”), a partir do qual o servidor está rodando. Localhost fornece uma maneira para os desenvolvedores para ver a sua aplicação em um navegador e testar a funcionalidade enquanto ele ainda está em desenvolvimento.
 
-“Localhost” refers specifically to your computer (considered the “local host”), from which a server is being launched. Localhost provides a way for developers to see their application in a browser and test the functionality while it is still in development.
 
-## <a id="2_create_idea_scaffold">*2.* Create Idea scaffold</a>
+## <a id="2_criando_idea_scaffold">*2.* Criando Idea scaffold</a>
 
-### What is Rails scaffolding?
+### O que é Rails scaffolding?
 
-Every web application consists of many different concepts or resources (such as “users”, “ideas”, “posts”, “comments”, etc.).
-Rails scaffolding is a command (`rails generate scaffold`) for introducing a new resource into your application. It generates all of the code files necessary for representing and interacting with this resource.
+Cada aplicação web é composta de muitos conceitos ou recursos diferentes (como “usuários”, “ideas”, “posts”, “comentários”, etc.).
+Rails scaffolding é um comando (`rails generate scaffold`) para a introdução de um novo recurso em seu aplicativo. Ele gera todos os arquivos de código necessários para representar e interagir com este recurso.
 
-### What is a model?
 
-In Rails, a model represents a definition of a resource in your application, and how it should interact with other parts of the application. Depending on the nature of the website, these resources could be users, posts, groups etc. When a model is generated, a corresponding *database table* is created. This database table contains information that represents specified attributes of the model, e.g. for a User model, there might be a ‘name’ column and an ‘email’ column, and there will be rows for each subsequent user created. In the application you are creating, these resources are ideas and the model is ‘Idea’.
+### O que é um model (modelo)?
+
+No Rails, um model representa uma definição de um recurso em sua aplicação, e como ele deve interagir com outras partes da aplicação. Dependendo da natureza do site, estes recursos poderiam ser usuários, mensagens, grupos etc. Quando um model é gerado, uma *tabela de banco de dados* correspondente é criada. Esta tabela de banco de dados contém informações que representam atributos específicos do model, por exemplo, para um modelo de usuário, pode haver uma coluna ‘nome’ e uma coluna de ‘e-mail’, e haverá linhas para cada usuário subsequente criado. Na aplicação que você está criando, esses recursos são ideas e o model é ‘Ideia’.
 
 {% highlight rb %}
-rails generate scaffold idea name:string description:text picture:string
+rails generate scaffold idea nome:string descricao:text imagem:string
 {% endhighlight %}
 
-In order to create our idea model, we use the `scaffold` command which includes an argument with the singular version of the model name (`idea`), and an argument with parameters (specifications) for the model’s attributes. This means that the `idea` model corresponds to a table in the database with columns for the attributes specified in the command: `name`, `description` and `picture`. The `scaffold` command also auto-generates an `id` attribute, referred to as the `primary key`, which is used to establish relationships between database tables.
+A fim de criar o nosso modelo de Idea, usamos o comando `scaffold` que inclui uma discussão com a versão singular do nome do modelo  (`idea`), e uma discussão com parâmetros (especificações) para os atributos do modelo. Isso significa que o modelo `idea`corresponde a uma tabela no banco de dados com colunas para os atributos especificados no comando: `nome`, `descricao` and `imagem`. O comando  `scaffold` também gera automaticamente um atributo `id` referido como a `primary key` (chave primária),  que é usado para estabelecer relações entre as tabelas de banco de dados.
 
-`rails generate scaffold` - this calls the scaffold command.
 
-`idea` - this tells the scaffold command what we want to call our model.
+`rails generate scaffold` - isto chama o comando scaffold.
 
-`name:string description:text picture:string` - provides a list of attributes we want our model (and the database table that goes with it) to have. The `string` and `text` parts of the argument determine the nature of each attribute, i.e. each description needs to be ‘text’, and not, for example, an ‘integer’ (or any other type of information).
+`idea` - diz ao comando scaffold o que queremos chamar nosso modelo.
 
-### The ideas table
+`nome:string descricao:text imagem:string` - fornece uma lista de atributos que queremos que o model (e a tabela de banco de dados que vai com ele) terá. A `string` e `text` partes do argumento determinam a natureza de cada atributo, ou seja, cada descrição precisa ser  ‘text’, e não, por exemplo, um ‘integer’ (ou qualquer outro tipo de informação).
+
+### A tabela ideas
 
 <table class="table table-hover table-bordered">
 	<thead>
 		<tr>
 			<th>id</th>
-			<th>name</th>
-			<th>description</th>
-			<th>picture</th>
+			<th>nome</th>
+			<th>descricao</th>
+			<th>imagem</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>1</td>
-			<td>“Money-spinner”</td>
-			<td>“Open a moveable shop!”</td>
+			<td>“Mina de ouro”</td>
+			<td>“Abrir uma loja de móveis!”</td>
 			<td>“GreatIdea.jpg”</td>
 		</tr>
 		<tr>
 			<td>2</td>
-			<td>“Champagne For Breakfast!”</td>
-			<td>“We should do this every Friday!”</td>
+			<td>“Champagne para o café da manhã!”</td>
+			<td>“Nós devemos fazer isso toda sexta-feira!”</td>
 			<td>“Champagne.jpg”</td>
 		</tr>
 		<tr>
@@ -99,71 +105,71 @@ In order to create our idea model, we use the `scaffold` command which includes 
 	</tbody>
 </table>
 
-### Naming conventions
+### Convenções de nomenclatura
 
 #### Active Record
-In Rails, the default system for communicating with an application’s database is called *Active Record*, which provides various methods for creating, saving, and finding data. To retrieve information from the database, *Active Record* establishes relationships between different parts of the application using naming conventions:
+No Rails, o sistema padrão para a comunicação com banco de dados de um aplicativo é chamado *Active Record*, que fornece vários métodos para criar, salvar e encontrar dados. Para recuperar as informações do banco de dados, *Active Record* estabelece relações entre diferentes partes da aplicação usando as convenções de nomenclatura:
 
-- Table names have all lowercase letters and underscores between words, e.g. “ideas”, “invoice\_items”
-- The model is named using the convention of unbroken MixedCase and is always the singular of the table name, e.g. if the table name is “invoice\_items”, the model name would be “InvoiceItem”. So, in this case our table name is "ideas" and our model is "Idea".
+- Os nomes de tabela tem todas as letras minúsculas e sublinhados entre as palavras, por exemplo,  “ideas”, “fatura\_itens”
+- O model é chamado usando a convenção de MixedCase ininterrupta e é sempre o singular do nome da tabela, por exemplo, se o nome da tabela é “fatura\_itens”, o nome do model seria “FaturaItem”. Assim, neste caso, o nosso nome da tabela é "ideas" e nosso model é "Idea".
 
-#### Model attributes and types
+#### Model atributos e tipos
 
-As we’ve already discussed, a model can have attributes (properties) represented by columns in the corresponding database table. To be supported by the Active Record system, these attributes must conform to a list of appropriate types:
+Como já discutido, um model pode ter atributos (propriedades) representados por colunas na tabela de banco de dados correspondente. Para ser compatível com o sistema Active Record, esses atributos devem estar de acordo com uma lista de tipos apropriados:
 
-- `:binary` - stores data such as images, audio files or movies
+- `:binary` (binário) - armazena dados como imagens, arquivos de áudio ou filmes
 
-- `:boolean` - stores true or false values (such as whether a particular user is an administrator of an application or not)
+- `:boolean` (booleano) - armazena valores verdadeiros ou falsos (por exemplo, se um determinado usuário é um administrador de uma aplicação ou não)
 
-- `:date` - stores only a date (year, month, day)
+- `:date` (data) - armazena apenas uma data (ano, mês, dia)
 
-- `:datetime` - stores both a date and a time
+- `:datetime` (data e hora) - armazena uma data  e uma hora
 
-- `:decimal` - stores decimal numbers with precision that varies according to your specifications
+- `:decimal` - armazena números decimais com precisão que varia de acordo com suas especificações
 
-- `:float` - stores decimal points with fixed precision i.e. you can’t specify the precision (`:decimal` is better for mathematical operations in which precision is required, but `:float` is processed faster and is better in situations where speed is required and accuracy is secondary)
+- `:float` - armazena pontos decimais com precisão fixa ou seja, você não pode especificar a precisão (: decimal é melhor para operações matemáticas em que é necessária precisão, mas: float é processado mais rápido e é melhor em situações onde é necessária velocidade e precisão é secundário )
 
-- `:integer` - stores whole numbers
+- `:integer` (inteiro) - armazena números inteiros
 
-- `:primary_key` - the primary key of a table is assumed to be the id
+- `:primary_key` (chave primária) - a chave primária de uma tabela é assumido como sendo o id
 
-- `:string` - stores 255 characters of text information, i.e. is used for short text fields (names, emails etc)
+- `:string` - armazena 255 caracteres das informações de texto, ou seja, é usado para campos de texto curtos (nomes, e-mails etc)
 
-- `:text` - stores text information with no character limit (used for comments, blog posts etc)
+- `:text` (texto) - armazena informações de texto sem limite de caracteres (usado para comentários, posts de blogs, etc)
 
-- `:time` - stores only a time
+- `:time` (tempo) - armazena apenas um tempo
 
-- `:timestamp` - stores both a time and date. `:timestamp` is different from `:datetime` and serves a different purpose, but there’s no need to go into that here
+- `:timestamp` - armazena, tanto a hora e a data. : Timestamp é diferente: data e hora e tem uma finalidade diferente, mas não há necessidade de entrar em detalhes aqui
 
-### What are migrations and why do you need them?
+### O que são as migrations (migrações) e por que você precisa delas?
 
-Migrations change the state of the database. When you run the `scaffold` command, a migration file containing instructions for the database table relevant to your command is added to the `db/migrate` folder of your application. For example, when you ran the `rails generate scaffold` command, a migration containing instructions for our ideas table was created. There are other commands that create migrations such as the `rails generate model` command and the `rails generate migration` command.
+As migrations alteraram o estado da base de dados. Quando você executa o comando scaffold, um arquivo de migration que contém instruções para a tabela de banco de dados relevantes para o seu comando é adicionado à pasta `db/migrate` da sua aplicação. Por exemplo, quando você executou o comando `rails generate scaffold`, uma migration contendo instruções para a nossa tabela ideas foi criada. Há outros comandos que criam as migrations, como o comando `rails generate model` e o comando `rails generate migration`.
 
-The `rake db:migrate` command updates the database according to the specifications in the migration file. This command, known as “migrating up”, ensures that your idea model is added to the database. Migrations can also be undone (“migrating down”) using the command `rake db:rollback`.
+O comando `rake db:migrate` atualiza o banco de dados de acordo com as especificações que constam na migration. Este comando, conhecido como “migrating up”, garante que o seu model idea é adicionado ao banco de dados. Migrations também podem ser desfeitas (“migrating down”)  usando o comando `rake db:rollback`.
 
 ## <a id="3_design">*3.* Design</a>
-In a Ruby on Rails application, the user interface (what someone visiting the website will see), is often written in HTML with Embedded Ruby (ERB) code. This code is contained in a specific directory called ‘views’, located in the `app` folder of your Rails application directory.
+Em um aplicativo Ruby on Rails, a interface do usuário (o que alguém visitando o site vai ver), é muitas vezes escrito em HTML com código incorporado Ruby (ERB). Este código está contido em um diretório específico chamado de ‘views’, localizado na pasta `app` do seu diretório do aplicativo Rails.
 
 ### HTML
-HTML, which stands for HyperText Markup Language, is the primary language for creating web pages and other information that can be displayed in a web browser. HTML is written using tags, angle brackets which tend to come in pairs (a “start tag” and an “end tag”), enclosing text-based content. In paired tags, the end tag also has a slash after the opening angle bracket, to distinguish it from the start tag. A paragraph (represented in HTML by the letter ‘p’) would use a start tag like this: `<p>` and an end tag like this: `</p>`, to enclose the text intended for display. Unpaired tags that are opened but don’t need to be closed (e.g. `<br>`, which defines a single line break) are known as “empty elements”. The web browser uses HTML tags to interpret how the contents will be displayed.
+HTML, que significa HyperText Markup Language, é o idioma principal para a criação de páginas web e outras informações que podem ser exibidas em um navegador da web. HTML é escrito usando tags, menor que e maior que (< >) que tendem a vir em pares (uma “tag de início” e uma “tag fim”), abrangendo conteúdo baseado em texto. Em pares de tags, a tag fim também tem uma barra depois da abertura da tag menor que, para distingui-lo a partir da tag de início. Um parágrafo (representado em HTML pela letra ‘p’) usaria uma tag de início como esta: `<p>` e uma tag final como esta: `</p>`, para colocar o texto pretendido para a exposição. Tags que não possuem pares e que são abertas, mas não precisam de tags de fechamento (por exemplo `<br>`,  que define uma única quebra de linha) são conhecidas como “elementos vazios”. O navegador usa tags HTML para interpretar como o conteúdo será exibido.
 
-### ERB: Embedded Ruby
-ERB is a system supplied by Ruby that allows you to insert pure Ruby code into files written in other languages, such as Javascript or HTML. The Ruby code is contained within specific angle brackets (`<%` and `%>`) which instruct the system to execute the contents. If an `=` sign accompanies the angle brackets, (`<%=` and %`>`) then the contents are executed and rendered on the page.
+### ERB: Ruby incorporado 
+ERB é um sistema fornecido por Ruby que permite inserir código Ruby puro em arquivos escritos em outras linguagens, such as Javascript or HTML. como o Javascript ou HTML. O código Ruby está contido dentro de tags específicas (`<%` e `%>`) que instruem o sistema para executar o conteúdo. Se um sinal `=` acompanha as tags, (`<%=` e %`>`) em seguida, os conteúdos são executados e renderizados na página.
 
-For example, if you had 25 active ideas in your application, the code:
-`There are currently <%= Idea.count %> active ideas`
-would render as:
-> There are currently 25 active ideas
+Por exemplo, se você tivesse 25 ideias ativas em seu aplicativo, o código:
+`Atualmente há <%= Idea.count %> ideas ativas`
+Renderizaria:
+> Atualmente há 25 ideias ativas
 
-### MVC Architecture
-In a standard Rails application (like you one you have generated), the `app/` folder of your application starts out with three folders (or directories): ‘models’ (which we have already discussed), ‘controllers’ and ‘views’. The relationship between these directories is the foundation (known as MVC Architecture) of the application, and of Rails development.
+### Arquitetura MVC 
+Em uma aplicação Rails padrão (como a que você tem gerado), o `app/` pasta da sua aplicação começa com três pastas (ou diretórios): ‘models’ (que nós já discutimos), ‘controllers’ (controladores) and ‘views’ (visões). A relação entre esses diretórios é a base (conhecido como MVC Architecture) da aplicação e do desenvolvimento Rails.
 
-When you ran the `rails generate scaffold` command, in addition to creating the idea model, you also created an accompanying ideas controller (`ideas_controller.rb`), located in the controllers folder, and an ideas views folder containing several files that you will use to create a dynamic application.
+Quando você executou o comando `rails generate scaffold` command, além de criar o model de idea, você também criou um controlador que acompanha ideias (`ideas_controller.rb`), localizado na pasta controladores, e uma pasta view ideas que contém vários arquivos que você irá usar para criar uma aplicação dinâmica.
 
-When attempting to display a Rails website, a web browser sends a request via the server which eventually hits the Rails *controller*. *Controllers* act as mediators between the *views* and the *models*. When the *controller* receives the information, it communicates with a *model* representing a resource of the application (in our case, an “idea”) which in turn communicates with the database. Upon retrieving the required information from the *model*, the *controller* renders the *view* which returns the complete web page to the browser as HTML.
+Ao tentar exibir um site Rails, um navegador da Web envia uma solicitação através do servidor que eventualmente atinge o *controller* (controlador) do Rails. *Controllers* trabalham como mediadores entre as *views* e os *models*. Quando o *controller* recebe a informação, ele se comunica com o *model* representando um recurso da aplicação (no nosso caso, uma “idea”) que por sua vez comunica com a base de dados. Após recuperar as informações necessárias a partir do *model*, o *controller* renderiza a *view* que retorna a página web completa para o navegador como HTML.
 
 ### CSS and layouts
-CSS (Cascading Style Sheets) is a language used to describe the formatting of pages written in a ‘markup language’, i.e. a language for processing, defining and presenting text with a prescribed formatting code e.g. tags, that distinguish it from plain text. The most common application of CSS is in conjunction with HTML.
+CSS (Cascading Style Sheets) é uma linguagem usada para descrever a formatação de páginas escritas em uma ‘linguagem de marcação’, ou seja, uma linguagem para processamento, definindo e apresentando texto com um código de formatação prescrita por exemplo tags,que o distinguem de texto simples. A aplicação mais comum de CSS é em conjunto com HTML.
 {% highlight css %}
 body { padding-top: 100px; }
 footer { margin-top: 100px; }
@@ -171,24 +177,25 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
-Within the CSS you have applied:
+Dentro do CSS você deve ter aplicado:
 
-`body` - this part is known as the selector and refers to the HTML element you wish to style.
-`{ padding-top: 100px; }` - this part is known as the declaration; each declaration has a property which is the style attribute you wish to change (`padding-top`), and an associated value (`100px`). Declarations always end with a semicolon and declaration groups are always enclosed by curly brackets.
+`body` (corpo) - esta parte é conhecido como o selector e refere-se ao elemento HTML que você deseja estilo.
+`{ padding-top: 100px; }` - Esta parte é conhecida como a declaração;  cada declaração tem uma propriedade que é o estilo de atributo que deseja alterar (`padding-top`), Declarações sempre terminam com um ponto e vírgula e declaração grupos são sempre cercada por chaves.
 
-For each Rails application there is a default layout file called `application.html.erb`, located in the layouts folder of your views directory. With this file you can create a default format for all of the pages in your application.
+Para cada aplicação Rails há um arquivo de layout padrão chamado `application.html.erb`, localizado na pasta layouts do seu diretório views. Com este arquivo você pode criar um formato padrão para todas as páginas em seu aplicativo.
 
 {% highlight html %}
 <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
 {% endhighlight %}
 
-In the above code, the `link rel` (link relation) is defining the nature of the URL that the `href` (hypertext reference) attribute is requesting content from. This argument indicates that the external source requested is a stylesheet and the web browser will need to fetch this file to render the page properly.
+No código acima, o `link rel` (link relação)  está definindo a natureza da URL que o atributo `href` (referência de hipertexto) está solicitando conteúdo. Este argumento indica que a fonte externa é solicitada uma folha de estilo eo navegador web vai precisar obter esse arquivo para processar a página corretamente.
 
 {% highlight erb %}
 <%= stylesheet_link_tag "application" %>
 {% endhighlight %}
 
-This code returns a stylesheet link tag for the source, in this case “application”, i.e. `application.css`. This means that the styling you implemented in application.css will be applied to the various pages of your application.
+Este código retorna uma tag link folha de estilo para a fonte, neste caso “application”, ou seja, `application.css`. Isto significa que o estilo que você implementou em application.css será aplicado às várias páginas do seu aplicativo.
+
 
 
 {% highlight erb %}
@@ -197,51 +204,51 @@ This code returns a stylesheet link tag for the source, in this case “applicat
 </div>
 {% endhighlight %}
 
-In this code:
+Neste código:
 
-- The HTML `div` tag divides the code into parts.
-- The *container class* adds additional styling to everything inside the div tags
-- The `<%= yield %>` argument is responsible for inserting the unique content from each page into the container `div`. This means that in your application the overall layout can be consistent even though the content will differ from page to page.
+- A tag HTML `div`divide o código em partes.
+- A *class container* adiciona estilo adicional para tudo dentro das tags div
+- O `<%= yield %>` argumento é responsável por inserir o conteúdo original de cada página dentro da `div` container. Isto significa que na sua aplicação o layout geral pode ser consistente mesmo que o conteúdo seja diferente de uma página para outra.
 
-## <a id="4_add_picture_uploads">*4.* Add picture uploads</a>
+## <a id="4_add_upload_imagens">*4.* Adicionando upload de imagens</a>
 
-### Libraries
-Many programming languages, including Ruby, use a wide range of libraries. In Ruby’s case, most of these libraries are released in the form of self-contained packages called *gems*, which contain all the information required to install and implement them. These gems are contained in your application’s `Gemfile` and if you look in this file you’ll notice that when you created your first Rails application it came with several gems that ensure your application functions correctly.
+### Bibliotecas
+Muitas linguagens de programação, incluindo Ruby, utilizam uma ampla gama de bibliotecas. No caso de Ruby, a maioria destas bibliotecas são liberadas na forma de pacotes independentes chamados *gems*,que contêm todas as informações necessárias para instalar e implementá-las. Essas gems estão contidas no arquivo `Gemfile` da sua aplicação e se você olhar neste arquivo você vai notar que quando você criou sua primeira aplicação Rails ele veio com várias gems que garantem as funções da aplicação corretamente.
 
-Gems help simplify and prevent repetition in a developer’s code, in keeping with the DRY (Don’t Repeat Yourself) principle of software development. Gems may solve specific problems, add specific functionality, or address specific requirements, meaning that should another developer encounter a similar scenario, instead of writing new code, they can install a gem containing pre-written code. For example, “CarrierWave”, the gem you are adding to your gemfile is designed to make it easy to upload files to your application.
+Gems ajudam a simplificar e evitar a repetição no código de um desenvolvedor, de acordo com o DRY (Don’t Repeat Yourself) princípio do desenvolvimento de software. Gems podem resolver problemas específicos, adicionar funcionalidade específica, ou atender aos requisitos específicos, significando que deveria outro desenvolvedor encontrar um cenário semelhante, em vez de escrever novo código, eles podem instalar uma gem contendo o código pré-escrito. Por exemplo, “CarrierWave”, a gem que você está adicionando ao seu Gemfile é projetada para tornar mais fácil o upload de arquivos para a sua aplicação.
 
-“Bundler” is the software Ruby uses to track and manage gems. The `bundle` command runs Bundler and installs the gems specified in your Gemfile. You’ll notice the code `source 'https://rubygems.org'` at the top of your Gemfile. Whenever you add a gem to your gemfile and run the `bundle` command, this code tells your application to fetch the gem from [https://rubygems.org](https://rubygems.org). “RubyGems” is a Ruby-specific packaging system, the purpose of which is to simplify the creation, sharing and installation of gems.
+“Bundler” é o software Ruby usado para controlar e gerenciar gems. O comando `bundle` roda o Bundler e instala as gems especificadas em seu Gemfile. Você notará que o `código fonte 'https://rubygems.org'` no topo do seu Gemfile.Sempre que você adicionar uma gem para o seu Gemfile e execute o comando `bundle`, este código informa o aplicativo para buscar a gem de [https://rubygems.org](https://rubygems.org). “RubyGems” é um sistema de pacotes específico para o Ruby, cujo objectivo é simplificar a criação, compartilhamento e instalação de gems.
 
-### Open-source software
+### Software livre
 
-Both the Rails framework and the Ruby language are examples of open-source software. Open-source software is released under a licence which ensures universal access; anyone has the right to change, study and distribute the software. Making the source code accessible enables the establishment of a diverse, reflexive, collaborative and consequently ever-evolving interactive community of programmers who all benefit from each others’ developments.
+Tanto o framework Rails e a linguagem Ruby são exemplos de software de código aberto. Software de código aberto  é distribuído sob uma licença que garante o acesso universal; ninguém tem o direito de mudar, estudar e distribuir o software. Fazendo o código fonte acessível permitindo o estabelecimento de uma diversificada, reflexiva, colaborativa e, consequentemente, uma comunidade interativa de programadores em constante evolução que beneficiam uns aos outros.
 
-### More HTML
 
-The file `app/views/ideas/_form.html.erb` contains HTML code that determines the look and feel of the form used for editing and creating ideas (the `edit.html.erb` and `new.html.erb` views). A partial is a snippet of HTML and Ruby code that can be reused in multiple locations. The form for editing existing ideas and the form for creating new ideas will look pretty much the same, so it makes sense to have one form for both files to use. If you look in these files you’ll notice that they have a customised heading (e.g. `<h1>Editing idea</h1>`) and then they simply say `<%= render 'form' %>` which tells Rails to render the partial `_form.html.erb`.
+### Mais HTML
 
-If you take a look in the `_form.html.erb` file, you will see the code `form_for` in the first line of code. This is a block used to create an HTML form. Using this block, we can access methods to put different input fields in the form.
+O arquivo `app/views/ideas/_form.html.erb` contém código HTML que determina a aparência do formulário utilizado para edição e criação de ideas (o `edit.html.erb` e `new.html.erb` views). A parcial é um fragmento de código HTML e Ruby que pode ser reutilizado em vários locais. O formulário para edição de ideas existentes e a forma para a criação de novas ideas vão olhar praticamente o mesmo, por isso faz sentido ter um formulário para ambos os arquivos para usar. Se você olhar nestes arquivos que você vai notar que eles têm um cabeçalho personalizado (por exemplo, `<h1>Editando idea</h1>`) e, em seguida, eles simplesmente dizem `<%= render 'form' %>` que diz ao Rails para processar o partial `_form.html.erb`.
 
-The code we are implementing, `<%= f.file_field :picture %>`, tells Rails to create a file input on the form and map the submitted information to the ‘picture’ attribute of an ‘idea’ in our ideas database table. We changed the code from `<%= f.text_field :picture %>` to `<%= f.file_field :picture %>` because `file_field` makes it easier for the user to select the image they wish to upload.
+Se você der uma olhada no arquivo `_form.html.erb`, você vai ver o código `form_for` na primeira linha de código. Este é um bloco usado para criar um formulário HTML. Usando este bloco, podemos acessar métodos para colocar diferentes campos de entrada no formulário.
 
-In the code `<%= @idea.picture %>`, `@idea` is known as an *instance variable*. Instance variables are prefixed with an @ symbol and are defined in the controller action that corresponds with the view in which they are referenced. For the purposes of the code we are implementing, `@idea` is defined in the ‘show’ action of the `Ideas` controller, with the code `@idea = Idea.find(params[:id])`. This makes it available for us to use in the view `show.html.erb`. It could be defined differently in different controller actions (e.g. index or new). The code `@idea = Idea.find(params[:id])` uses the Rails `find` method to retrieve specific ideas from the database.
+O código que estamos implementando, `<%= f.file_field :picture %>`, diz ao Rails para criar um arquivo de entrada no formulário e mapear as informações apresentadas ao atributo ‘imagem’de uma ‘idea’ em nossa tabela ideas no banco. Mudamos o código `<%= f.text_field :imagem %>` para `<%= f.file_field :imagem %>` porque `file_field` torna mais fácil para que o usuário selecione a imagem que deseja enviar.
 
-The code that follows the `@idea` variable (`.picture`) tells Rails to access the ‘picture’ attribute of our resource (idea). By replacing the code  `<%= @idea.picture %>` with `<%= image_tag(@idea.picture_url...)` we are using the Ruby `image_tag` *helper* which translates to an HTML `<img>` tag (used to define images in HTML) but by default retrieves images from the folder public/images, which is where our uploaded images are stored. The `image_tag` helper also allows us to insert a block of code which creates a path to an image associated with a particular idea (`@idea.picture_url`).
+No código `<%= @idea.imagem %>`, `@idea` é conhecido como uma *variável de instância*. Variáveis de instância  são prefixados com um símbolo @ e são definidos na ação do controlador que corresponde à view em que são referenciadas. Para efeitos do código que estamos implementando, `@idea` é definido na acção ‘show’ do controlador de `Ideas`, com o código `@idea = Idea.find(params[:id])`. Isso torna disponível para utilizarmos na view `show.html.erb`. Pode ser definido de forma diferente em ações de controlador diferentes (por exemplo, índice ou novos). O código `@idea = Idea.find(params[:id])` Usa o método Rails `find`  para recuperar idéias específicas do banco de dados.
 
-You will notice that within this block of code you are implementing we are also able to set a default width for each image (`:width => 600`). The final line of code `if @idea.picture.present?` tells Rails to check the corresponding database table to see whether a picture exists before rendering the code underneath.
+O código que segue a variável `@idea` (`.imagem`) diz ao Rails para acessar o atributo de ‘imagem’ de nosso recurso (idea). Ao substituir o código  `<%= @idea.imagem %>` com `<%= image_tag(@idea.imagem_url...)`estamos usando o Ruby `image_tag` *helper (auxiliar)* que converte para um HTML `<img>` tag (usado para definir as imagens em HTML) mas, por padrão, recupera imagens da pasta public/images, que é onde nossas imagens enviadas são armazenadas. O helper `image_tag` também nos permite inserir um bloco de código que cria um caminho para uma imagem associada a uma idea (`@idea.imagem_url`).
 
-## <a id="5_finetune_the_routes">*5.* Finetune the routes</a>
+Você vai notar que dentro deste bloco de código que você está implementando também somos capazes de definir uma largura padrão para cada imagem (`:width => 600`).A linha final do código, `se @idea.imagem.present?` diz ao Rails para verificar a tabela de banco de dados correspondente para ver se existi uma imagem antes de renderizar o código por abaixo.
 
-In a functional Rails application, there is an inbuilt system in place for translating incoming requests from the browser in order to return the intended response. This system is called *routing*. Requests from the browser are interpreted as specific HTTP methods. HTTP (Hypertext Transfer Protocol) is the protocol that defines how information (usually webpages or webpage components composed of text with hyperlinks - ‘hypertext’), is formatted and transmitted across the internet. There are four primary HTTP methods, each of which is a request to perform an operation on a specific resource (e.g. users, posts); GET, POST, PUT and DELETE. Rails’ inbuilt routing system automatically generates routes for each resource that map to specific actions (index, show, new, edit, create, update, delete) defined in the controller. So, for each of our models, there are seven related actions defined in the associated controller, `ideas_controller.rb`. These actions specify the appropriate response (a ‘method’) which is most likely to render the corresponding view, e.g. `ideas/index.html.erb`.
+## <a id="5_regularizacao_de_rotas">*5.* Regularização de rotas</a>
 
+Em uma aplicação Rails funcional, existe um sistema embutido no lugar para traduzir solicitações de entrada a partir do browser, a fim de retornar a resposta pretendida. ste sistema é chamado *routing (roteamento)*. Solicitações do navegador são interpretadas como métodos HTTP específicos. HTTP (Hypertext Transfer Protocol) é o protocolo que define como a informação (geralmente páginas ou componentes de páginas web compostas de texto com hyperlinks - ‘hipertexto’), é formatada e transmitida através da internet. Existem quatro métodos HTTP primários, cada um dos quais é um pedido para executar uma operação em um recurso específico (por exemplo, usuários, posts); GET, POST, PUT and DELETE. sistema de roteamento embutido Rails gera automaticamente rotas para cada recurso que mapeiam para acções específicas (index, show, new, edit, create, update, delete) definidos no controlador. Assim, para cada um dos nossos modelos, há sete acções conexas definidas no controlador associado, `ideas_controller.rb`. Essas ações especificar especificam a resposta apropriada (um ‘method (método)’) que é mais provável para tornar a vista correspondente, por exemplo, `ideas/index.html.erb`.
 
 <table class="table table-bordered table-hover">
 	<thead>
 		<tr>
 			<td>HTTP Method</td>
-			<td>Path</td>
-			<td>Action</td>
-			<td>used for</td>
+			<td>Caminho</td>
+			<td>Ação</td>
+			<td>Usado parar</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -249,49 +256,50 @@ In a functional Rails application, there is an inbuilt system in place for trans
 			<td>GET</td>
 			<td>/ideas</td>
 			<td>index</td>
-			<td>displaying a list of all ideas</td>
+			<td>exibir uma lista de todas as ideias</td>
 		</tr>
 		<tr>
 			<td>GET</td>
 			<td>/ideas/new</td>
 			<td>new</td>
-			<td>returning an HTML form for creating a new idea</td>
+			<td>devolver um formulário HTML para a criação de uma nova ideia</td>
 		</tr>
 		<tr>
 			<td>POST</td>
 			<td>/ideas</td>
 			<td>create</td>
-			<td>creating a new idea</td>
+			<td>criar de uma nova ideia</td>
 		</tr>
 		<tr>
 			<td>GET</td>
 			<td>/photos/:id</td>
 			<td>show</td>
-			<td>displaying a specific photo</td>
+			<td>Exibir uma foto especifica</td>
 		</tr>
 		<tr>
 			<td>GET</td>
 			<td>/photos/:id/edit</td>
 			<td>edit</td>
-			<td>returning an HTML form for editing a specific photo</td>
+			<td>devolver um formulário HTML para editar uma foto específica</td>
 		</tr>
 		<tr>
 			<td>PUT</td>
 			<td>/photos/:id</td>
 			<td>update</td>
-			<td>updating a specific photo</td>
+			<td>atualizar uma foto específica</td>
 		</tr>
 		<tr>
 			<td>DELETE</td>
 			<td>/photos/:id</td>
 			<td>destroy</td>
-			<td>deleting a specific photo</td>
+			<td>Excluir uma foto específica</td>
 		</tr>
 	</tbody>
 </table>
 
 
-If you look in your `ideas_controller.rb` you can see these actions and the associated behaviour, and the HTTP method that corresponds with each action:
+Se você olhar no arquivo `ideas_controller.rb` você pode ver essas ações e o comportamento associado, e o método HTTP que corresponde com cada acção:
+
 
 {% highlight rb %}
 def show
@@ -307,7 +315,7 @@ def show
   # GET /ideas/new.json
 {% endhighlight %}
 
-`show` - the controller action
+`show` - a ação do controlador
 
 {% highlight rb %}
 respond_to do |format|
@@ -315,12 +323,14 @@ respond_to do |format|
       format.json { render json: @idea }
 {% endhighlight %}
 
-(This code is difficult to dissect with much clarity at this stage but if you persist with Rails you will get a better understanding as time progresses.)
+(Este código é difícil de dissecar com muita clareza, nesta fase, mas se você persistir com Rails você vai obter uma melhor compreensão com o tempo.)
 
-In the above definition of the show action, Rails is using a `respond_to` helper method, which tells Rails to execute the subsequent *block* of code (the code enclosed by the `do...end` syntax). This code contains two different formatting options depending on the nature of the request. If the browser requests HTML then the HTML code contained in the view that corresponds with this controller action (`show.html.erb`) is rendered. If json is requested then the view is bypassed and limited information is provided.
+Na definição acima da ação show, Rails está usando um método helper `respond_to`, que diz para o Rails para executar o *block* subsequente de código (o código fechado por  `do...end` sintaxe). Este código contém duas opções de formatação diferentes dependendo da natureza do pedido. Se o navegador solicita HTML, em seguida, o código HTML contido na view que corresponde com esta ação do controlador (`show.html.erb`) é renderizado. Se o json é solicitado, em seguida, a view é ignorada e informação limitada é fornecida.
 
-`GET` - this is a comment to let us know which HTTP method is being executed.
+`GET` - isto é um comentário para deixar-nos saber qual o método HTTP está sendo executado.
 
-So, URL requests, translated into HTTP methods, are mapped to controller actions which tell Rails to return a view.
+Assim, as requisições da URL, traduzidas em métodos HTTP, são mapeadas em ações do controller que dizem para o Rails retornar uma view.
 
-When we insert the code `root :to => redirect('/ideas')` into our `config.rb`, it tells Rails to make the default root of our application [http://localhost:3000/ideas](http://localhost:3000/ideas) (note Localhost is being used as the domain because our application is still in development, when you launch your application this domain will be different). This URL contains a path (`/ideas`) which, by default, maps the URL to the ‘index’ action of our ideas controller and renders the associated view; `index.html.erb`. The code `rm public/index.html` removes (`rm`) the `public/index.html` file, containing the “Welcome Aboard” code, which was the previous default root for our application.
+
+Quando inserimos o código `root :to => redirect('/ideas')` em nosso `config.rb`, ele diz ao Rails para fazer como a raiz padrão da nossa aplicação [http://localhost:3000/ideas](http://localhost:3000/ideas) (perceba que Localhost está sendo usado como o domínio porque a nossa aplicação ainda está em desenvolvimento, quando você iniciar a sua aplicação domínio será diferente). Esta URL contém o caminho (`/ideas`) que, por padrão, mapeia a URL para a ação ‘index’ do nosso controlador de ideas  e renderiza a view associada; `index.html.erb`. O código `rm public/index.html` remove (`rm`) o arquivo `public/index.html`, contendo o código de “Bem-vindo a bordo”, que era a raiz padrão anterior da nossa aplicação.
+
