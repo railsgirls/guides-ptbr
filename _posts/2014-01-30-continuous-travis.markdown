@@ -4,47 +4,50 @@ title: Continuous Deployment - cuz less hassle
 permalink: continuous-travis
 ---
 
-# Continuous Deployment with Travis
+# Entrega Contínua com Travis
 
-*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* 
+*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)* 
 
-### What is this Continuous Deployment thing?
+*Traduzido por Joana Souza, [@sspjoana](https://twitter.com/sspjoana)*
 
-Continuous deployment is part of the continuous delivery 'movement'. The idea behind continuous delivery is to automate the software delivery process as far as possible. 
+### O que é Entrega Contínua ?
 
-With a working continuous deployment chain in place you'll enforce Git deployments (everything must be committed to be tested and everything must be tested to be deployed), making collaboration easier and deployment faster. So you can focus on making your app even more awesome!
+Implantação contínua é parte do movimento de entrega contínua. A ideia por detrás da entrega contínua é automatizar o processo de entrega de software o mais rápido possível.
 
-There are a few great companies sailing the continuous wave, in this guide we'll set up continuous deployment for our Ruby on Rails app from GitHub to anynines, using [Travis-ci](http://about.travis-ci.org/). 
+Trabalhando em um lugar com uma cadeia de implantação contínua, você irá fortificar o processo de deploys no Git (tudo deve ser comitado para ser testado e tudo deve ser testado para ser implantado), tornando a colaboração mais fácil e o desenvolvimento mais rápido. Assim, você poderá focar em fazer um app mais incrível!
 
-__COACH__: Talk about the benefits of continuous deployment.
+Há algumas grandes empresas que navegam na onda contínua, neste guia vamos configurar a implantação contínua para o nosso aplicativo Ruby on Rails do GitHub para o anynines, usando Travis-ci.
 
-###Github, Travis CI and anynines
+__COACH__: Fale sobre os benefícios da implantação contínua.
 
-The first thing we need is an app in a Github repository. And we have just that! Next you'll need to make sure you followed the guide on how to deploy your app via anynines until the very last step.
+###Github, Travis CI e anynines
 
-Then, we need to create a file called `manifest.yml` in the main directory of your app, so we can save some information about the deployment there. In your terminal run:
+A primeira coisa que precisamos é um app com um repositório no Github. E nós temos isso! Após isso você precisará ter certeza que seguiu o tutorial de como fazer deploy para o seu app via anynines até o último passo.
+
+Então, nós criaremos um arquivo chamado `manifest.yml` no diretório principal do seu teu app, lá podemos salvar informação sobre o deployment. No seu terminal execute:
 
 {% highlight sh %}
 cf push
 {% endhighlight %}
 
-This will trigger a first deployment to anynines. The cf gem will notice that there is no `manifest.yml` and will ask you a standard set of configuration questions such as the desired number and memory size of your app instances, whether and which services to bind to them and most importantly, whether you want to store this information.
-Please answer this question with a 'hell yes' as it will create the desired `manifest.yml` file!
+Isso irá disparar o  primeiro deploy para o anynimes. A gem cf irá notar que não existe `manifest.yml`e irá pedir-lhe um conjunto  padrão de perguntas de configuração, tais como o número e tamanho da memória desejado de suas instâncias de aplicativos, se e quais serviços para se ligarem à eles e mais importante, se você deseja armazenar essas informações.
 
-Once your push was successful, you should be able to access your application using a browser of your choice, which means your are ready to setup Travis!
+Por favor, responda a esta pergunta com um "hell yes" uma vez que o desejado arquivo `manifest.yml` será criado!
 
-For now we don't have 'real tests', so we will go ahead and create a Travis configuration file that will fake a succeeding test suite. Please go to your local app directory and create a ``.travis.yml`` file. At the moment, paste the following content. We’ll add some more information later on, using the Travis gem.
+Uma vez que o seu push foi com sucesso, você deve ser capaz de acessar a sua aplicação utilizando um browser de sua escolha, o que significa que você está pronta para configurar o Travis!
+
+Por agora, nós não temos 'testes reais', então iremos adiante e criaremos um arquivo de configuração do Travis que irá falsificar um conjunto de testes de sucesso. Por favor, vá para o diretório local do seu app e crie um arquivo ``.travis.yml``. No momento, cole o seguinte conteúdo. Vamos adicionar mais algumas informações mais tarde
 
 {% highlight sh %}
 language: ruby
 script: 'true'
 {% endhighlight %}
 
-Your app now contains the Travis configuration but how should Travis know when to pull your code from Github and trigger test execution? This is where Github hooks come into play!
+Seu aplicativo agora contém a configuração do Travis, mas como o Travis deve saber como puxar o seu código do Github e disparar a execução do teste? É aí que o Github hooks entra em cena!
 
 #### Travis CI Github hook activation
 
-Commit and push a code change to your repository and check travis-ci.org to see if your test suite is being executed. You should also receive an email that your build succeeded.
+Comite e envie as mudanças do seu código para o seu repositório e cheque o check travis-ci.org para ver se o seu conjunto de testes está sendo executado. Você deve também receber um email de que a sua build foi bem sucedida.
 
 {% highlight sh %}
 git add .  
@@ -52,25 +55,25 @@ git commit -m "test Travis integration"
 git push origin master
 {% endhighlight %}
 
-Now we can configure the actual deployment.
-Let's use the travis gem:
+Agora podemos configurar a implantação real.
+Vamos usar a gem do travis:
 {% highlight sh %}
 gem install travis
 {% endhighlight %}
 
-Now use the `travis` command to setup the anynines deployment.
+Agora use o comando `travis` para configurar as anynies de implantação.
 {% highlight sh %}
 travis setup cloudfoundry
 {% endhighlight %}
 
-In case you don’t know the anynines target URL use
+No caso de você não saber a URL do anynies, use
 {% highlight sh %}
 cf target
 {% endhighlight %}
 
-to gather all information required for Travis setup. This includes target url, username, the organization and space you are currently using. You can also take a look-see at the welcome mail you have received after signing up at anynines.com.
+para reunir todas as informações necessárias para a configuração do Travis. Isso inclui URL de destino, nome de usuário, a organização e espaço que você está usando atualmente. Você pode também dar uma olhada no email de boas vindas que você deve ter recebido após se inscrever no anynines.com.
 
-After the `travis` command has finished, your ``.travis.yml`` should look somewhat like this:
+Após o comando `travis` ter finalizado, seu ``.travis.yml``deve parecer algo como isso:
 {% highlight sh %}
 language: ruby
 script: 'true'
@@ -86,9 +89,9 @@ deploy:
     repo: jane/railsgirls
 {% endhighlight %}
 
-Don’t forget to commit and push your changes to ``.travis.yml`` as it will be required in your Github repository to take effect.
+Não esqueça de comitar e enviar suas mudanças para ``.travis.yml`` uma vez que será necessário em seu repositório Github para fazer efeito.
 
-From now on whenever you commit changes to your Github repository, tests will be run and your app is being deployed. Travis will then show a log output similar to this:
+De agora em diante, sempre que você cometer alterações ao seu repositório GitHub, os testes serão executados e sua aplicação será implantada. O Travis irá então mostrar uma saída de log semelhante a esta:
 
 {% highlight sh %}
 Installing deploy dependencies
@@ -159,4 +162,4 @@ Push successful! App 'railsgirls' available at http://railsgirls.de.a9sapp.eu
 Logging out... OK
 {% endhighlight %}
 
-This means your are done and good to go! 
+Isso quer dizer que você já terminou e está pronta para a próxima! 
