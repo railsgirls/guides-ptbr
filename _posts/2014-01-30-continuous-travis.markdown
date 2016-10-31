@@ -6,25 +6,25 @@ permalink: continuous-travis
 
 # Entrega Contínua com Travis
 
-*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)* 
+*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)*
 
 *Traduzido por Joana Souza, [@sspjoana](https://twitter.com/sspjoana)*
 
-### O que é Entrega Contínua ?
+### O que é Implantação Contínua ?
 
-Implantação contínua é parte do movimento de entrega contínua. A ideia por detrás da entrega contínua é automatizar o processo de entrega de software o mais rápido possível.
+Implantação contínua é parte do movimento de entrega contínua. A ideia por detrás da implantação contínua é automatizar o processo de entrega de software o mais rápido possível.
 
 Trabalhando em um lugar com uma cadeia de implantação contínua, você irá fortificar o processo de deploys no Git (tudo deve ser comitado para ser testado e tudo deve ser testado para ser implantado), tornando a colaboração mais fácil e o desenvolvimento mais rápido. Assim, você poderá focar em fazer um app mais incrível!
 
-Há algumas grandes empresas que navegam na onda contínua, neste guia vamos configurar a implantação contínua para o nosso aplicativo Ruby on Rails do GitHub para o anynines, usando Travis-ci.
+Há algumas grandes empresas que navegam na onda contínua, neste guia vamos configurar a implantação contínua para o nosso aplicativo Ruby on Rails do GitHub para o *anynines*, usando Travis-ci.
 
 __COACH__: Fale sobre os benefícios da implantação contínua.
 
-###Github, Travis CI e anynines
+### Github, Travis CI e anynines
 
 A primeira coisa que precisamos é um app com um repositório no Github. E nós temos isso! Após isso você precisará ter certeza que seguiu o tutorial de como fazer deploy para o seu app via anynines até o último passo.
 
-Então, nós criaremos um arquivo chamado `manifest.yml` no diretório principal do seu teu app, lá podemos salvar informação sobre o deployment. No seu terminal execute:
+Então, nós criaremos um arquivo chamado `manifest.yml` no diretório principal do seu app, lá podemos salvar informação sobre o deployment. No seu terminal execute:
 
 {% highlight sh %}
 cf push
@@ -47,7 +47,7 @@ Seu aplicativo agora contém a configuração do Travis, mas como o Travis deve 
 
 #### Travis CI Github hook activation
 
-Comite e envie as mudanças do seu código para o seu repositório e cheque o check travis-ci.org para ver se o seu conjunto de testes está sendo executado. Você deve também receber um email de que a sua build foi bem sucedida.
+Comite e envie as mudanças do seu código para o seu repositório e cheque o travis-ci.org para ver se o seu conjunto de testes está sendo executado. Você deve também receber um email de que a sua build foi bem sucedida.
 
 {% highlight sh %}
 git add .  
@@ -162,4 +162,4 @@ Push successful! App 'railsgirls' available at http://railsgirls.de.a9sapp.eu
 Logging out... OK
 {% endhighlight %}
 
-Isso quer dizer que você já terminou e está pronta para a próxima! 
+Isso quer dizer que você já terminou e está pronta para a próxima!
