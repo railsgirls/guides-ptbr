@@ -1,113 +1,114 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App
+title: App para turismo de autismo amigável
 permalink: touristic-autism_intro
 ---
 
 # Rails Girls Touristic Autism-friendly Spots App Tutorial
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 
 
-This guide merges, adapts and extends some of the basic RailsGirls guides **for the scenario**: description, displaying and commenting touristic places and rate them with respect to their autism-friendliness. This application was requested by the [Galway Autism Partnership](http://www.galwayautismpartnership.com/) to support autistic adults during their travelings.
+Este tutorial mescla, adapta e extende alguns dos guias básicos do RailsGirls **para o cenário de**: descrever, exibir e comentar locais turísticos e avaliá-los com o autismo amigável. Esta aplicação foi solicitada por [Galway Autism Partnership](http://www.galwayautismpartnership.com/) para ajudar autistas adultos em suas viagens.
 
-The extension comprises of the following **new features**:
+A extensão é composta de **novas funcionalidades**:
 
-* TDD using Guide
-* Resource Rating
-* Authenticated User (via devise) permission setting
+* Tutorial de TDD
+* Avaliação de Recurso
+* Configuração de permissão para ususuário autenticado (via devise)
 
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e o tutorial para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando um design](http://guides.railsgirls.com/design), [implementando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
 
 
-### [*0.*Installation](/install)
+### [*0.*Instalação](/install)
 
-**Make sure you have Rails and Git installed.** [**Follow the installation guide**](/install), the [**Installing Git section of Pro Git**](http://www.git-scm.com/book/en/Getting-Started-Installing-Git) to get set up. Then configure GitHub by typing the following in your terminal:
+**Certifique-se de que você possui o Rails e o Git instalados.** [**Siga o tutorial de instação**](/install), em seguinda [**Instale o Git**](http://www.git-scm.com/book/en/Getting-Started-Installing-Git). Então, configure o GitHub inserindo estes comandos no terminal:
 
 {% highlight sh %}
-$ git config --global user.name "Your Name"
-$ git config --global user.email your.email@example.com
+$ git config --global user.name "Seu Nome"
+$ git config --global user.email seu.email@example.com
 {% endhighlight %}
 
-<p>one-time setup steps for GitHub.</p>
+<p>Etapas de configuração do GitHub.</p>
 
-Sign up for a [free GitHub account](https://github.com/signup/free) if you don’t have one already.
+Crie uma [conta grátis no GitHub](https://github.com/signup/free), caso você ainda não possua uma.
 
 
-### [*1.*Basic Web Application](/touristic-autism_basic-app)
+### [*1.*Aplicação Web Básica](/touristic-autism_basic-app)
 
-### [*2.*Version control with Git](/touristic-autism_git)
+### [*2.*Controle de versão com Git](/touristic-autism_git)
 
-### [*3.*Resource Modeling](/touristic-autism_resource-modeling)
+### [*3.*Modelagem de Recursos](/touristic-autism_resource-modeling)
 
-### [*4.*Resource Rating](/touristic-autism_resource-rating)
+### [*4.*Avaliação de Recursos](/touristic-autism_resource-rating)
 
 ### [*5.*Design](/touristic-autism_design)
 
-### [*6.*Image upload and Thumbnails](/touristic-autism_image-upload)
+### [*6.*Upload de imagens e Thumbnails](/touristic-autism_image-upload)
 
-**Optional - for advanced Rails Girls:**
+**Opcional - para Garotas Rails avançadas:**
 
-### [*7.*Continuous Deployment](/touristic-autism_continuous-deployment)
+### [*7.*Implatanção Contínua](/touristic-autism_continuous-deployment)
 
-### [*8.*Continuous Testing and Integration](/touristic-autism_static-pages-tdd)
-
-
+### [*8.*Teste e Integração Contínua](/touristic-autism_static-pages-tdd)
 
 
-## Additional Guides
-
-* Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guide 1: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift) / [Put your app online with anynines](/anynines) / [Put your app online with Trucker.io](/trucker)
-* Guide 2: [Adding profile pictures with Gravatar](/gravatar)
-* Guide 3: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
 
 
-# Appendices
+## Tutoriais Adicionais
 
-## Undoing things
+* Guide 0: [Macetes de Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
+* Guide 1: [Coloque o seu app online com o Heroku, por Terence Lee](/heroku) / [Coloque o seu app online com o OpenShift, por Katie Miller](/openshift) / [Coloque o seu app online com o anynines](/anynines) / [Coloque o seu app online com o Trucker.io](/trucker)
+* Guide 2: [Adicionando imagens de perfil com o Gravatar](/gravatar)
+* Guide 3: [Leia explicações adiciones do app, por Lucy Bain](https://github.com/lbain/railsgirls)
 
-Rails has some facilities to help you recover from mistakes.
 
-For instance, you may decide to change the name of a controller. Since, when generating a controller, Rails creates many more files than the controller file itself, undoing the generation means removing a whole set of files. In Rails, this can be accomplished with rails destroy. In particular, these two commands cancel each other out:
+# Anexo
+
+## Desfazendo Coisas
+
+O Rails possui ferramentas que facilitam bastante a recuperação de erros.
+
+Por exemplo, você pode decidir alterar o nome do controller. Uma vez que, ao gerar o controller, o Rails cria muito mais arquivos que o controller. Desfazer essa operação, significa a remoção de um conjunto de arquivos. No Rails, isso pode ser feito com o 'rails destroy'. Em particular, estes dois comandos cancelam um ao outro:
 
   $ rails generate controller FooBars baz quux
   $ rails destroy  controller FooBars baz quux
 
-Similarly, after we generate a model as follows:
+De uma forma análoga, depois geramos um modelo assim:
 
   $ rails generate model Foo bar:string baz:integer
 
-This can be undone using
+Isso pode ser desfeito utilinzado:
 
   $ rails destroy model Foo
 
 
-Migrations change the state of the database using
+As migrações alteram o estado do banco de dados:
 
   $ rake db:migrate
 
-We can undo a single migration step using
+Podemos desfazer uma única migração utilizando:
 
   $ rake db:rollback
 
-To go all the way back to the beginning, we can use
+Para voltar ao início, basta inserir:
 
   $ rake db:migrate VERSION=0
 
-As you might guess, substituting any other number for 0 migrates to that version number, where the version numbers come from listing the migrations sequentially.
+Como você pode imaginar. As you might guess, substituting any other number for 0 migrates to that version number, where the version numbers come from listing the migrations sequentially.
 
-To drop a table from the db enter
+Para apagar a table do banco de dados, digite:
 
   $ rails console
 
-Then just type:
+Então, basta inserir o comando:
 
   >> ActiveRecord::Migration.drop_table(:<table-name>)
 
-You can browse directly the database (if sqlite3 type ".quit" to exit afterwards) by typing
+Você pode acessar o banco de dados diretamente (Caso seja sqlite3, digite ".quit" para sair), utilizando:
 
   $ rails db
 
