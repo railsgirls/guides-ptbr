@@ -6,19 +6,21 @@ permalink: test-driven-development
 
 # Test Driven Development
 
-*Written by Gregory McIntyre, [@gregmcintyre](https://twitter.com/gregmcintyre)*
+*Escrito por Gregory McIntyre, [@gregmcintyre](https://twitter.com/gregmcintyre)*
 
-This exercise is intended to teach you what we're talking about when we say
+*Traduzido por Marina Limeira, [@marinalimeira_](https://twitter.com/marinalimeira_)
+
+Este exercício objetiva em te ensinar sobre o que nós estamos falando quando dizemos
 *Test Driven Development* (TDD).
 
 ## Background information
 
-**Roman Numerals**
+**Numerais Romanos**
 
-If you are not already familiar with Roman numerals, please read up
-on [how Roman numerals work][Roman numerals] before continuing.
+Se você não está familiar com números Romanos, por favor leia
+[como números romanos funcionam][Roman numerals] antes de continuar.
 
-In summary, here are some examples of how Roman people wrote numbers:
+Em resumo, aqui estão alguns exemplos de como romanos escrevem números:
 
 <style>
 .roman-table th,
@@ -30,8 +32,8 @@ In summary, here are some examples of how Roman people wrote numbers:
 <table class="roman-table">
   <thead>
     <tr>
-      <th>Hindu-Arabic</th>
-      <th>Roman</th>
+      <th>Hindu-Arábico</th>
+      <th>Romano</th>
     </tr>
   </thead>
   <tbody>
@@ -82,29 +84,28 @@ In summary, here are some examples of how Roman people wrote numbers:
   </tbody>
 </table>
 
-We are going to write a program that takes an integer value in the left column
-and calculates the equivalent string value in the right column. If we finish
-that, we will then make it work with the *subtractive digits* like *IV*.
+Nós iremos escrever um programa que recebe um valor inteiro na coluna esquerda
+e calcula o valor na string equivalente na coluna direita. Se nós finalizarmos
+isto, iremos então fazer a *subtração de dígitos* como em *IV*.
 
-**Guide for working in a group**
+**Guia para trabalhar em grupo**
 
-We encourage doing this exercise in a group of 2-4 people. The rules that
-govern how this works are very similar to how programmers do *pair programming*
-and this exercise is also intended to give you some exposure to that practice
-also.
+Nós encorajamos fazer este exercícios em um grupo de 2-4 pessoas. As regras que
+governam como isto funcionam são muito similares a como programadores fazem *programação
+em par* e este exercício tem a intenção de te dar alguma exposição a esta prática.
 
-- Each group has one **hot seat** with laptop and *Sublime Text* ready.
-- Everybody else should **close their laptops** and sit around the hot seat chair.
-- You will all regularly stand up and **rotates chairs** so the next person is
-  in the hot seat. The steps below explain when to do that.
-- Pick somebody to start in the hot seat. That person should follow all the
-  steps until swapping seats is mentioned.
+- Cada grupo possui uma **pessoa no comando** com laptop e *Sublime Text* prontos.
+- Todos os outros devem **fechar seus laptops** e sentar ao redor de quem está no comando.
+- Vocês todos irão regurlarmente levantar-se e **rodar as cadeiras** para que a próxima
+pessoa esteja no comando. Os passos abaixo explicam quando fazer isso.
+- Escolha alguém para começar no comando. Aquela pessoa deverá seguir todas os passos
+até que a troca de assentos seja mencionada.
 
-**Coach:** Explain how pair programming can be useful.
+**Coach:** Explique como programação em par pode ser útil.
 
-## *1.* Initial code
+## *1.* Código inicial
 
-Copy this code into a file called `roman.rb`:
+Copie este código em um arquivo chamado `roman.rb`:
 
 {% highlight ruby %}
 def roman(n)
@@ -115,50 +116,50 @@ require "minitest/spec"
 require "minitest/autorun"
 
 describe "roman" do
-  it "converts the number 1 to the string I" do
+  it "converte o número 1 na string I" do
     roman(1).must_equal "I"
   end
 end
 {% endhighlight %}
 
-**Run your tests**
+**Rode seus testes**
 
-If you use *Sublime Text* on Linux, OSX Mavericks (or later) or Windows, you
-can run the tests by pressing <kbd>Ctrl</kbd>+<kbd>B</kbd>. Otherwise you can type the following into
-your terminal:
+Se você utiliza *Sublime Text* no Linux, OSX Mavericks (ou superior) ou Windows, você
+pode rodar os testes pressionando <kbd>Ctrl</kbd>+<kbd>B</kbd>. Caso contrário, você pode digitar
+o seguinte no seu terminal:
 
 {% highlight sh %}
 ruby roman.rb
 {% endhighlight %}
 
-**Output**
+**Saída**
 
-You should see the following output from the tests:
+Você deverá ver a seguinte saída dos testes:
 
 {% highlight sh %}
-roman#test_0001_converts the number 1 to the string I [tdd1.rb:11]:
+roman#test_0001_converte o número 1 na string I [tdd1.rb:11]:
 Expected: "I"
   Actual: "?"
 
 1 tests, 1 assertions, 1 failures, 0 errors, 0 skips
 {% endhighlight %}
 
-Take a moment to read this output carefully. It is quite a mouthful.
+Reserve um momento para ler esta saída com cuidado. Há bastante informação.
 
-Your tests are now **red**. i.e. One or more of the tests are failing. You can
-tell you have a failing test by checking the summary at the end: `1 tests, 1
+Seus teste agora estão **vermelhos**, ou seja, um ou mais testes estão falhando. Você pode
+perceber que você possui um teste falhando checando o resumo no final: `1 tests, 1
 assertions, 1 failures, 0 errors, 0 skips`.
 
-**Stand up** and give the hot seat to the next person.
+**Levante-se** e de o comando a próxima pessoa.
 
-**Coach:** Explain how TDD can be useful.
+**Coach:** Explique como TDD pode ser útil
 
-## *2.* Make the tests pass
+## *2.* Faça o teste passar
 
-It is time to make the test pass. Do this however you see fit. It's fine if the
-change is just an extra `if` statement or one extra character. In fact, that is
-encouraged: you generally shouldn't write unnecessary code. If you're stuck,
-you can ask the people around you for their opinions.
+Agora é hora de fazer o teste passar. Faça como você achar melhor. Está bem se a
+mudança é apenas uma condição extra `if` ou um caractere. De fato, isso é encorajado:
+você geralmente não deveria escrever código desnecessário. Se você está preso,
+você pode pedir a opinião de pessoas próximas.
 
 Here is a way that you could make the first test pass, just to get you into the
 swing of things:
@@ -172,26 +173,34 @@ end
 If this seems facetious, you're right but it is a valid solution because it
 makes all the tests pass. When your tests all pass, we call them **green**.
 
-## *3.* Refactor your code
+## *3.* Refatore seu código
 
 Look over the code and decide if it's a good idea to **refactor** it (clean up
 the code and make it easier to read). If you decide to not to refactor, skip
 this step.
 
-**Hint**: It's a good time to refactor when you notice *repetition*. If you
-like, you can also refactor the tests.
+**Dica**: É uma boa hora para refatorar quando você notar *repetição*. Se você preferir,
+pode também refatorar os testes.
 
-Run your tests after refactoring. If they fail, you accidentally broke
-something.
+Rode seus testes após refatorar. Se eles falharem, você acidentalmente quebrou alguma coisa.
 
-**Coach:** Explain how focusing on something small enough to test can be useful.
 
-## *4.* Write a new failing test
+**Coach:** Explique como focar em algo pequeno o suficiente para testar pode ser útil.
+
+## *4.* Escreva um novo teste que falha
 
 If you all agree that the code should work in general, and you can't think of
 any more cases to test and everything passes, you can stop here. You win!
 
-Otherwise, your last job in the hot seat is to write a new test. We currently have a test that checks that the number one is turned into an `"I"`, but we need more tests to verify that all other numbers convert as expected. When you add a new test for another number, be sure to run the tests to find your test fail. If you're stuck, there are some suggestions at the bottom of this page.
+Otherwise, your last job in the hot seat is to write a new test. We currently have
+a test that checks that the number one is turned into an `"I"`, but we need more tests
+to verify that all other numbers convert as expected. When you add a new test for another
+number, be sure to run the tests to find your test fail. If you're stuck, there are
+somesuggestions at the bottom of this page.
+
+Você pode copiar e colar o teste anterior e alterá-lo. Você pode altera-lo para
+ser o que você quiser. Seus testes deverão p
+
 
 You can copy and paste the previous test and alter it. You can change it to be
 anything you like. Your tests should probably test the next trickiest
@@ -201,25 +210,25 @@ fine too as long as it fails.
 The other members of the group can chime in and ask questions or spot problems
 for you.
 
-Here is an example of an expanded test suite:
+Aqui está um exemplo de como expandir seus casos de teste:
 
 {% highlight ruby %}
 describe "roman" do
-  it "converts the number 1 to the string I" do
+  it "converte o número 1 na string I" do
     roman(1).must_equal "I"
   end
 
-  it "converts the number 2 to the string II" do
+  it "converte o número 2 na string II" do
     roman(2).must_equal "II"
   end
 end
 {% endhighlight %}
 
-Your tests are now **red** again; at least one is failing.
+Seus testes agora estão **vermelhos** de novo; ao menos um está falhando.
 
 **Stand up** and offer the hot seat to the next person in your group.
 
-## Repeat!
+## Repita!
 
 Keep repeating steps 2 through 4, making sure to continue switching at the end
 of step 4. You are done when your team feels like they are done.
@@ -228,13 +237,13 @@ Don't worry about finishing all cases. The goal is to practice the steps and
 learn to work together in this way. Get used to writing tests as well as
 getting them to pass. Practice. Good luck!
 
-## Hints
+## Dicas
 
-If you are stuck for ideas, here is a list of Roman numerals to write tests
-for, in this order. Note the way that the build up incrementally in complexity.
+Se você está sem ideias, aqui está uma lista de numerais romanos para escrever casos
+de teste, nesta ordem. Note a maneira que a complexidade aumenta.
 
 :--------- | :-----------
-Input      | Output
+Entrada    | Saída
 :--------- | :-----------
  `1`       | `"I"`
  `5`       | `"V"`
@@ -250,7 +259,7 @@ your program works with all the numbers above, try dealing with subtractive
 digits.
 
 :--------- | :-----------
-Input      | Output
+Entrada    | Saída
 :--------- | :-----------
 `4`        | `"IV"`
 `14`       | `"XIV"`

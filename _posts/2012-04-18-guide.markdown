@@ -10,32 +10,32 @@ permalink: guide
 
 ## Organizando seu primeiro evento Rails Girls
 
-Nosso objetivo é fornecer ferramentas para que mulheres estudem e entendam a tecnologia Rails. Os eventos Rails Girls foram criados com a finalidade de proporcionar uma primeira experiência com as técnicas Rails de criação para a Internet.
+Nosso objetivo é fornecer ferramentas para que mulheres estudem e entendam a tecnologia Rails. Os eventos Rails Girls foram criados com a finalidade de proporcionar uma ótima primeira experiência de construir a Internet.
 
-Rails Girls foi criado na cidade de Helsinki no final do ano 2010. A intenção inicial foi a de criar um único evento local e nós jamais imaginamos que a ideia atingisse a proporção atual com a proliferação de vários eventos pelo mundo inteiro.  Estes tutoriais foram criados para ajudá-lo a iniciar seus estudos de Rails.
+Rails Girls foi criado na cidade de Helsinki no final do ano 2010. A intenção inicial foi a de criar um único evento local, e nós jamais imaginamos que a ideia atingisse a proporção atual com a proliferação de vários eventos pelo mundo inteiro. Estes tutoriais foram criados para ajudá-lo a iniciar seus estudos de Rails.
 
-Se você pretnde organizar um evento rails Girls comece preenchendo e enviando o formulário existe em [http://railsgirls.com/inyourcity](http://railsgirls.com/inyourcity) e nós enviaremos para você instruções sobre a organização do evento. 
+Se você pretende organizar um evento, comece preenchendo e enviando o formulário existe em [http://railsgirls.com/inyourcity](http://railsgirls.com/inyourcity) e nós enviaremos para você instruções sobre a organização do evento.
 
 Uma listagem dos próximos eventos programados pode ser vista em [www.railsgirls.com](http://railsgirls.com).
 
-Você está convidado a se engajar em nosso fórum de discussões em [organizers' Slack discussion forum](https://rails-girls-slack.herokuapp.com/).
+Você está convidado a participar do [Slack de disssão dos organizadores](https://rails-girls-slack.herokuapp.com/).
 
-### Princípios fundamentais
+### Básico
 
-Os eventos Rails Girls não têm fins lucrativos. Nós não cobramos ingresso dos participantes e nem remuneramos os coachs e palestrantes. Não existe qualquer restrição relativa a requisitos básicos e conhecimentos, bem como não há limitações quanto a idade dos participantes. Tudo o que é necessário para participar limita-se a um laptop e uma boa dose de curiosidade.
+Os eventos Rails Girls não têm fins lucrativos. Nós não cobramos ingresso dos participantes e nem remuneramos os coaches e palestrantes. Não existe qualquer restrição relativa a requisitos básicos e conhecimentos, bem como não há limitações quanto a idade dos participantes. Tudo o que é necessário para participar limita-se a um laptop e uma boa dose de curiosidade.
 
-Nos dois dias dedicados ao evento os participantes serão separados em pequenos grupos de estudos que assistirão mini palestras sobre programação, design e web.  Não serão realizados painéis de discussão e nem exaustivas palestras - o ambiente de estudos deverá ser informal e os métodos de estudo do tipo "mãos na massa". Quanto menos abstrações e mais participação nas tarefas do evento tanto melhor.
+Nos dois dias dedicados ao evento, os participantes serão separados em pequenos grupos de estudos que assistirão mini palestras sobre programação, design e web.  Não serão realizados painéis de discussão e nem exaustivas palestras - o ambiente de estudos deverá ser informal e os métodos de estudo do tipo "mãos na massa". Quanto menos abstrações e mais participação nas tarefas do evento tanto melhor.
 
 #### Filosofia Rails Girls
 
 * Sem perder o foco no objetivo maior, aprender Rails, transmitir conhecimentos em "doses homeopáticas".  Explicar, repetir e sempre posicionar o que está sendo ensinado no contexto mais amplo relacionado ao assunto ensinado.
-* A Internet foi criada por humanos (e não vai ser destruida por pequenos ajustes ???) it doesn’t break by a little tinkering. Enfatizar continuamente o lado humano: os coaches são incentivados a falar sobre as comunidades de código aberto, seus ídolos e onde eles, coaches, buscam inspiração para seu trabalho.
+* A Internet foi criada por humanos e não será quebrada se você mexer. Enfatizar continuamente o lado humano: os coaches são incentivados a falar sobre as comunidades de código aberto, seus ídolos e onde eles, coaches, buscam inspiração para seu trabalho.
 * Copiar-Colar. Programação não é algo que se aprende de uma vez - você não conseguirá aprender a falar chinês em um dia e de modo similar você aprenderá somente a sintaxe básica ao estudar e praticar codificação. O objetivo de cada evento é chamar a atenção para alguns aspectos da programação Rails!
 * Meninas movem o mundo! Contudo, mulheres, senhoras e até mesmo garotos são muito bem-vindos. Mas do que em semântica nós estamos interessados em ideias.  As fundadoras do Rails Girls nasceram na era das Spice Girls, elas acreditam que o mundo feminimo é muito mais do que um simples mundo condescendente e charmoso.
 
 #### Código de conduta
 
-Eventos Rails Girls são realizados em um ambiente inclusivo, amigável e seguro. Nos eventos a tolerância para assédio ou buling é zero. Você pode criar um código de conduta para seu evento. A seguir uma lista de links com exemplos de alguns códigos de conduta:
+Eventos Rails Girls são realizados em um ambiente inclusivo, amigável e seguro. Nos eventos a tolerância para assédio ou bulling é zero. Você pode criar um código de conduta para seu evento. A seguir uma lista de links com exemplos de alguns códigos de conduta:
 
 * [Rails Girls Summer of Code Code of Conduct](http://railsgirlssummerofcode.org/about/code-of-conduct/)
 * [PyLadies Code of Conduct](http://www.pyladies.com/CodeOfConduct/)
@@ -46,7 +46,7 @@ Eventos Rails Girls são realizados em um ambiente inclusivo, amigável e seguro
 
 ### Exemplo de programa para o evento
 
-Todo evento Rails Girls começa com a festa de instalação onde configurações de instalação são pré-instaladas no computador das meninas.  Consulte o tutorial [guides.railsgirls.com/install](http://guides.railsgirls.com/install) para instruções de instalação. Na festa de instalação poderão ser previstas minipalestras, mas o foco principal é oferecer um vinho espumante, deixar tudo configurado para o dia seguinte e promover a integração entre as participantes.  O horário para realização do evento é flexível - você conhece sua audiência e saberá escolher o horário que seja mais conveniente. Nós já realizamos eventos em finais de semana e também durante a semana. Pode ser que a realização do evento em duas tardes-noites (dàs 16:00h às 22:00h)  seja a melhor solução para o seu evento.
+Todo evento Rails Girls começa com a festa de instalação onde configurações de instalação são pré-instaladas no computador das meninas.  Consulte o tutorial [guides.railsgirls.com/install](http://guides.railsgirls.com/install) para instruções de instalação. Na festa de instalação poderão ser previstas minipalestras, mas o foco principal é oferecer um vinho espumante, deixar tudo configurado para o dia seguinte e promover a integração entre as participantes. O horário para realização do evento é flexível - você conhece sua audiência e saberá escolher o horário que seja mais conveniente. Nós já realizamos eventos em finais de semana e também durante a semana. Pode ser que a realização do evento em duas tardes-noites (dàs 16:00h às 22:00h) seja a melhor solução para o seu evento.
 
 #### Objetivos do workshop:
 
@@ -56,16 +56,16 @@ Todo evento Rails Girls começa com a festa de instalação onde configurações
 
 #### Sexta-feira: Instalação
 
-19:00 - 21:00 Installations and getting to know each other  
-*Hint*: Have a coach table where problematic computers can be brought.
+19:00 - 21:00 Instalações e conhecendo uns aos outros
+*Dica*: Tenha uma mesa com coaches onde computadores problemáticos poderão ir.
 
-Some installations will fail: be prepared to set women up in pairs, don't use endless amounts of time.
+Algumas instalações irão falhar: esteja preparado para deixar mulheres em pares, não passe muito tempo se preocupando com isso.
 
-Decorate the place with balloons and posters. Put a fun <a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> together for the evening.
+Decode o local com balões e posters. Coloque uma <a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> divertida para o final da tarde.
 
-Come up with activities to break the ice: ask the girls to write why they are attending the event on post-its or to draw and describe their dream web app.
+Venha com atividades para quebrar o gelo: pergunte as meninas para escrever porque elas estão participando do evento em post-its ou para desenharem e escreverem sua aplicação dos sonhos.
 
-Remember to do a [FridayHug](http://fridayhug.com)!
+Lembre-se de fazer um [FridayHug](http://fridayhug.com)!
 
 21 -> Coach dinner
 Go through the application with the coaches during dinner.

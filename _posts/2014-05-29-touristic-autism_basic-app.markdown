@@ -7,11 +7,11 @@ permalink: touristic-autism_basic-app
 # Aplicação Web Básica
 
 *Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*
 *para o projeto [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
+
+*Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*
+
 Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e o tutorial para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando um design](http://guides.railsgirls.com/design), [implementando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
-
-
 
 ## Conheça as ferramentas
 
@@ -43,9 +43,9 @@ Onde você irá iniciar o servidor rails e rodar os comandos.
 É importante que você selecione as instruções específicas do seu sistema operacional - os comandos que você roda no Windows são superficialmente diferentes dos comandos do Mac ou do Linux. Se você estiver tendo algum problema, verifique o comutador do sistema operacional no rodapé dos comandos.
 
 
-## *1.*Criando a aplicação
+## 1. Criando a aplicação
 
-Nós iremos criar um novo app Rails chamado *railsgirls-galway-2014*.
+Nós iremos criar um novo app Rails chamado *railsgirls-galway*.
 
 Primeiro, vamos abrir o terminal:
 
@@ -55,91 +55,53 @@ Primeiro, vamos abrir o terminal:
 
 Próximo, digite estes comandos no terminal:
 
-<div class="os-specific">
-  <div class="nix">
+<!-- <div class="os-specific">
+  <div class="nix"> -->
 {% highlight sh %}
 mkdir projetos
 {% endhighlight %}
 
-    <div>
-<p>Você pode verificar o diretório <code>projetos</code> (que acabou de ser criada), utilizando o comando: <code>ls</code>. Se tudo ocorreu bem, você deverá ver o diretório <code>projetos</code> na listagem. Agora, devemos acessar o conteúdo do diretório que você acabamos de criar: <code>projects</code>, utlizando o seguinte comando:</p>
-    </div>
+<div>
+  <p>Você pode verificar o diretório `projetos` (que acabou de ser criado), utilizando o comando: `ls`. Se tudo ocorreu bem, você deverá ver o diretório `projetos` na listagem. Agora, devemos acessar o conteúdo do diretório `projetos` que acabamos de criar, utilizando o seguinte comando:</p>
+</div>
 
 {% highlight sh %}
 cd projetos
 {% endhighlight %}
 
     <div>
-<p>Você pode verificar se está em um diretório vazio utilizando o comando <code>ls</code>. Agora, você pode criar uma nova aplicação chamada  <code>railsgirls</code> com o comando:</p>
+<p>Você pode verificar se está em um diretório vazio utilizando o comando `ls`. Agora, você pode criar uma nova aplicação chamada  `railsgirls-galway` com o comando:</p>
     </div>
 
 {% highlight sh %}
-rails new railsgirls-galway-2014
+rails new railsgirls-galway
 {% endhighlight %}
 
     <div>
-<p>Este comando irá criar uma nova aplicação na pasta <code>railsgirls</code>. Então, nós devemos sair do diretório atual para entrarmos no diretório principal da nossa aplicação. Podemos fazer isso com o seguinte código:</p>
+<p>Este comando irá criar uma nova aplicação na pasta `railsgirls`. Então, nós devemos sair do diretório atual para entrarmos no diretório principal da nossa aplicação. Podemos fazer isso com o seguinte código:</p>
     </div>
 
 {% highlight sh %}
 rvm rubygems latest
-cd railsgirls-galway-2014
+cd railsgirls-galway
 {% endhighlight %}
 
     <div>
-<p>Se você digitar o comando <code>ls</code> dentro do diretório, você deverá ver as pastas <code>app</code> e <code>config</code>. Então, você pode iniciar o servidor Rails com o comando:</p>
+<p>Se você digitar o comando `ls` dentro do diretório, você deverá ver as pastas `app` e `config`. Então, você pode iniciar o servidor Rails com o comando:</p>
     </div>
 
 {% highlight sh %}
 rails server
 {% endhighlight %}
+  <!-- </div> -->
+
+  <!-- <div class="win">
   </div>
-
-  <div class="win">
-{% highlight sh %}
-mkdir projetos
-{% endhighlight %}
-
-    <div>
-<p>Você pode perceber que o diretório <code>projetos</code> foi criado através do comando: <code>dir</code>. Você deverá ver o diretório <code>projetos</code> na listagem que aparecerá. Agora, devemos acessar o conteúdo do diretório que você acabamos de criar: <code>projects</code>, utlizando o seguinte comando:</p>
-    </div>
-
-{% highlight sh %}
-cd projetos
-{% endhighlight %}
-
-    <div>
-
-<p>Você pode verificar se está em um diretório vazio ultilizando o comando <code>dir</code>. Agora, você pode criar uma nova aplicação chamada <code>railsgirls</code> com o comando:</p>    
-    </div>
-
-{% highlight sh %}
-rails new railsgirls-galway-2014
-{% endhighlight %}
-
-    <div>
-
-<p>Este comando irá criar uma nova aplicação na pasta <code>railsgirls</code>. Então, nós devemos sair do diretório atual para entrarmos no diretório principal da nossa aplicação. Podemos fazer isso com o seguinte código:</p>    
-    </div>
-
-{% highlight sh %}
-
-cd railsgirls
-{% endhighlight %}
-
-    <div>
-<p>Se você digitar <code>dir</code> dentro do diretório, você deverá ver as pastas <code>app</code> e <code>config</code>. Então, você pode iniciar o servidor Rails com o comando:</p>
-    </div>
-
-{% highlight sh %}
-rails server
-{% endhighlight %}
-  </div>
-</div>
+</div> -->
 
 Acesse [http://localhost:3000](http://localhost:3000) no seu navegador. Deverá aparecer a página de boas-vindas: "Welcome aboard". Isso significa que a sua aplicação em Rails está funcionando perfeitamente.
 
-Perceba que nesta janela, o prompt de comando não está visível porque vôcê está em um servidor Rails. O prompt de comando será mais ou menos assim:
+Perceba que nesta janela, o prompt de comando não está visível porque você está em um servidor Rails. O prompt de comando será mais ou menos assim:
 
 <div class="os-specific">
   <div class="nix">
@@ -161,4 +123,3 @@ Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para sair do servidor.
 **Referência:** Explica o que cada comando faz.
 [O que é um servidor e uma aplicação web - Slides por @]()
 O esqueleto gerado por "rails new" reflete o padrão de arquitetura [Model-View-Controller(MVC) - Slides por @]().
-
