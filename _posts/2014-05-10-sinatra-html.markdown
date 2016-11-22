@@ -1,32 +1,34 @@
 ---
 layout: default
-title: Coffee List Display
+title: Mostrando a lista de Café
 permalink: sinatra-html
 ---
 
-*Created by Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*
+*Criado por Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*
 
-Using `.inspect` works for debugging, but we don’t want to use it in production. For one thing, it’s really hard to style the output. Let’s wrap our coffee list in proper HTML.
+*Traduzido por Marina Limeira, [@marinalimeira_](http://twitter.com/marinalimeira_)*
 
-## *1.*Setup
+Utilizar `.inspect` funciona para depurar, mas nós não queremos utilizá-lo em produção. Para uma coisa, é muito difícil estilizar a saída. Vamos colocar nossa lista de cafés dentro do HTML correto.
 
-First let’s make a method that will return our coffees wrapped in HTML tags. We’ll name the method `coffees_html`, so that what it does is reasonably obvious. Define it like so:
+## 1. Configuração
+
+Primeiro vamos fazer um método que irá retornar nossos café dentro de tags HTML. Nós iremos nomear o método `coffees_html`, e o que ele faz é meio óbvio. Defina ele como:
 
 {% highlight ruby %}
 def coffees_html
-# build HTML here
+  # construa o HTML aqui
 end
 {% endhighlight %}
 
-And in your template method change your `#{ $coffees.inspect }` line to call our new method:
+E no seu template altere a linha `#{ $coffees.inspect }` para chamar nosso novo método:
 
 {% highlight ruby %}
 #{ coffees_html }
 {% endhighlight %}
 
-## *2.*Add some HTML
+## 2. Adicione algum HTML
 
-Write something to turn the `$coffees` global variable into HTML that looks like this:
+Escreva alguma coisa para tornar a variável global `$coffees` em HTML que pareça assim:
 
 {% highlight HTML %}
 <div>Flat White $3.50</div>
@@ -34,9 +36,8 @@ Write something to turn the `$coffees` global variable into HTML that looks like
 <div>Cappuccino $2.50</div>
 {% endhighlight %}
 
-**Hint:** Remember, the `$coffees` variable is an array of hashes.
+**Dica:** Lembre-se, a variável `$coffees` é um array de hashes.
 
-We’ll want to loop over the `$coffees` array and turn each hash into an HTML string, surrounded by `<div>`s, which should then be all joined together with `<br/>`s. We’ll also need to ensure we’re returning a string.
+Nós queremos iterar o array `$coffees` e transformar cada hash em uma string HTML, dentro de `<div>`s, que deveriam ser todos separados por `<br/>`s. Nós também queremos ter certeza de estar retornando uma string.
 
-For some solution ideas, [check this out](http://tjmcewan.github.io/coffeecalc/snippets/coffees_html.rb.txt).
-
+Para alguma ideias de solução, [cheque isto](http://tjmcewan.github.io/coffeecalc/snippets/coffees_html.rb.txt).
