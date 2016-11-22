@@ -7,8 +7,7 @@ permalink: touristic-autism_git
 # Controle de Vesão com o Git
 
 *Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*  
 *Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*
 
 Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e o tutorial para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando um design](http://guides.railsgirls.com/design), [implementando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
