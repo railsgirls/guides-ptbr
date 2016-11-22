@@ -23,7 +23,29 @@
         <a class="span3" href="/" id="logo">
           <img alt="Tutoriais Rails Girls Guides" src="images/railsgirls-guides-portugues.png" />
         </a>
-        <nav></nav>
+        <nav>
+<select id="menu">
+    <option value="">Escolha um documento...</option>
+    <option value="/railsgirlsguides/">♥ Home</option>
+    <option value="/railsgirlsguides/install">♥ Instale Ruby on Rails</option>
+    <option value="/railsgirlsguides/app">♥ Desenvolva sua primeira aplicação</option>
+    <option value="/railsgirlsguides/commenting">♥ Crie área de comentários</option>
+    <option value="/railsgirlsguides/thumbnails">♥ Crie thumbnails</option>
+	<option value="/railsgirlsguides/devise">♥ Autenticação com Devise</option>
+    <option value="/railsgirlsguides/heroku">♥ Publique sua aplicação com Heroku</option>
+    <option value="app-railsgirls-berlim.php">♥ Tutorial App Rails Girls Berlim</option>
+    <option value="/railsgirlsguides/bootstrap">♥ Twitter Bootstrap e Rails</option>
+</select>
+<button type="button" id="ir">IR</button>
+<script type="text/javascript">
+var botaoIr = document.getElementById('ir'); 
+botaoIr.onclick = function() { 
+	var menuSelecao = document.getElementById('menu');	
+	var urlSelecionada = menuSelecao.options[menuSelecao.selectedIndex].value;
+		self.location = urlSelecionada;	
+}
+</script> 
+</nav>
       </div>
     </header>
     <article class="container">

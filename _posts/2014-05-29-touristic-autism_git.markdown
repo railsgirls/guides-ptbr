@@ -1,17 +1,19 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App 
+title: App para turismo de autismo amigável
 permalink: touristic-autism_git
 ---
 
-# Version Control with Git
+# Controle de Vesão com o Git
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
+
+Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e o tutorial para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando um design](http://guides.railsgirls.com/design), [implementando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
 
-Navigate to the root directory of the first app and initialize a new repository:
+Navegue até o diretório principal do primeiro app e inicialize um novo repositório:
 
 <div class="os-specific">
   <div class="nix">
@@ -21,20 +23,20 @@ Navigate to the root directory of the first app and initialize a new repository:
   </div>
 </div>
 
-Before adding the project to the repository, let's tell Git which files to ignore - because too frequently subject to changes - by listing them in the .gitignore file. The "rails new" command already create a .gitignore file but let's extend it with the following.
+Antes de adicionar o projeto ao repositório, vamos dizer ao Git quais arquivos ele deve ignorar listando no arquivo .gitignore. O comando "rails new" já cria o arquivo .gitignore, mas vamos estendê-lo com seguinte comando:
 
 <div class="os-specific">
   <div class="nix">
     {% highlight sh %}
-# Ignore other unneeded files.
+# Ignore outros arquivos desnecessários.
 database.yml
-# Ignore Rails documentation files
+# Ignore a documentação do Rails
 doc/
-# Ignore Vim and Emacs swap files
+# Ignore Vim e Emacs
 *.swp
 *~
 .project
-# Ignore (for OS X users) the .DS_Store directories created by the Mac Finder application
+# Ignore (para usuários de OS X) o diretório .DS_Store criado pelo Mac Finder application
 .DS_Store
 .idea
 .secret
@@ -42,7 +44,7 @@ doc/
   </div>
 </div>
 
-Add the changes (recursively adding every sub-directory, too).
+Adicione as alterações (recursivamente, adicionando todos os sub-diretórios).
 <div class="os-specific">
   <div class="nix">
     {% highlight sh %}
@@ -51,7 +53,7 @@ git add .
   </div>
 </div>
 
-The "git add" command adds the project files to a staging area, which contains pending changes to your projectbu; you can see which files are in the staging area using the status command:
+O comando "git add", adiciona os arquivos do projeto área de stage, onde contém as alterações pendentes no seu projeto; Você pode ver quais arquivos estão na área de stage utilizando o comando status:
 
 <div class="os-specific">
   <div class="nix">
@@ -61,19 +63,19 @@ $ git status
   </div>
 </div>
 
-Now commit the changes while justifying them with a message:
+Agora, faça o commit justificando o motivo de tal ação:
 <div class="os-specific">
   <div class="nix">
     {% highlight sh %}
-$ git commit -m "Initialize repository"
+$ git commit -m "Inicializando Repositório"
   {% endhighlight %}
   </div>
-Git commits are local, recorded only on the machine on which the commits occur. You can view a list of all the commit messages with "git log" typing "q" to quit.
+Os commits do Git são locais. Eles são gravados apenas na máquina utilizada, na máquina em que os commits ocorrem. Você pode ver a lista com todos os commits com o "git log", digitando "q" para sair.
 </div>
 
-Now we want our changes to be pushed from our local machine to a remote repository.
-[Create a repository](http://github.com/new) called "railsgirls-galway-2014" and fill in the information. Do not to initialize the repository with a README file since "rails new" already created that automatically. 
-Push up your local changes to the remote repository as follows:
+Agora, queremos evniar nossas alterações para um repositório remoto:
+[Criando um repositório](http://github.com/new) chamado "railsgirls-galway-2014" e inserindo informações. Não inicie um repositório com o arquivo "README", pois o comando "rails new" já cria automaticamente.
+Envie as alterações locais para o repositório remoto desta forma:
 
 <div class="os-specific">
   <div class="nix">
@@ -82,9 +84,9 @@ $ git remote add origin https://github.com/<username>/railsgirls-galway-2014.git
 $ git push -u origin master
   {% endhighlight %}
   </div>
-The result is a page at GitHub (for instance, [here's mine](https://github.com/iammyr/railsgirls-galway-2014)) for our application repository, which provides nice rendering, sharing functionalities and statistics: take a look by yourself at https://github.com/<your username>/railsgirls-galway-2014
+O resultado é uma página no GitHub (for instance, [here's mine](https://github.com/iammyr/railsgirls-galway-2014)) para o repositório da nossa aplicação, que fornece renderização agradável, compartilhando funcionalidades e estatísticas. Veja aqui: https://github.com/<your username>/railsgirls-galway-2014
 </div>
 
-**Coach:** Explain the branch-edit-commit-merge workflow on GitHub: modify the README file to be more descriptive.
-([Slides by Myriam Leggieri @iammyr]())
+**Referência:** Explicando como funciona o branch, edit, commit e merge no GitHub: insira uma descrição do seu projeto no arquivo README
+([Slides por Myriam Leggieri @iammyr]())
 
