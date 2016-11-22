@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Adding a back-end with Active Admin
+title: Adicionando back-end com Active Admin
 permalink: backend-with-active-admin
 ---
 
@@ -12,86 +12,86 @@ permalink: backend-with-active-admin
 
 Active Admin is a Ruby on Rails plugin for generating administration style interfaces. It abstracts common business application patterns to make it simple for developers to implement beautiful and elegant interfaces with very little effort. You can read more about Active Admin [here](http://activeadmin.info/).
 
-## Adding the "Active Admin" gem
-Open up your `Gemfile` and add these lines
+## Adicionando a gem "Active Admin"
+Abra seu `Gemfile` e adicione as seguintes linhas
 
 {% highlight ruby %}
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 {% endhighlight %}
-and run
+e rode
 {% highlight sh %}
 $ bundle install
 {% endhighlight %}
-to install the gems.
+para instalar as gems.
 
-After updating your bundle, run the installer
+Depois de atualizar sem bundle, rode o instalador
 {% highlight sh %}
 $ rails generate active_admin:install
 {% endhighlight %}
 
-The installer creates an initializer used for configuring defaults used by Active Admin as well as a new folder at app/admin to put all your admin configurations.
+O instalador cria um inicializador utilizado para configurar os padrões utilizados pelo Active Admin e uma nova pasta em `app/admin` para colocar todas as suas configrações de administrador.
 
-Migrate your db and start the server:
+Migre seu banco e inicie o servidor:
 {% highlight sh %}
 $ rake db:migrate
 $ rails server
 {% endhighlight %}
 
-## Creating your first admin account
-Open up the Rails console and create your new user via the `AdminUser` model:
+## Criando sua primeira conta de administrador
+Abra o Rails console e crie seu novo usuário utilizando o model `AdminUser`:
 {% highlight sh %}
 $ rails console
 irb(main):001:0> AdminUser.create(:email => 'admin@railsgirls.com', :password => 'password123', :password_confirmation => 'password123')
 {% endhighlight %}
 
-You should see something like:
+Você deverá ver alguma coisa como:
 {% highlight sh %}
 # (0.3ms)  begin transaction
 # SQL (0.4ms)  INSERT INTO "admin_users" ...
 # (0.9ms)  commit transaction
 {% endhighlight %}
 
-You can exit the console session with a simple `exit` command:
+Você pode sair da sessão do console com um simples comando `exit`:
 {% highlight sh %}
 irb(main):002:0> exit
 {% endhighlight %}
 
-## Accessing your admin panel
-Visit [http://localhost:3000/admin](http://localhost:3000/admin) and log in using your created credentials.
+## Acessando seu painel de administrador
+Visite [http://localhost:3000/admin](http://localhost:3000/admin) e faça login utilizando suas credenciais.
 
-Voila! You're on your brand new Active Admin dashboard.
+Voila! Você está no seu novo painel de controle do Active Admin.
 
-## Add "Ideas" to back-end
-To register your `Idea` model with Active Admin, run:
+## Adicione "Ideas" ao back-end
+Para registrar seu model `Ideia` com Active Admin, rode:
 {% highlight sh %}
-$ rails generate active_admin:resource Idea
+$ rails generate active_admin:resource Ideia
 {% endhighlight %}
-Refresh your admin page and you will find [Ideas](http://localhost:3000/admin/ideas) in the navigation.
+Atualize sua página de admin e você encontrará [Ideias](http://localhost:3000/admin/ideias) na navegação.
 
-*You can replace "Idea" with whatever model you like to register another model with Active Admin.*
+*Você pode substituir "Ideia" por qualquer model que você quiser registrar com o Active Admin.*
 
 ### Setting up Strong Parameters
-To prevent **ActiveModel::ForbiddenAttributesError in Admin::IdeasController#update** exception when updating a model you have to use the [permit_params](http://activeadmin.info/docs/2-resource-customization.html) method to define which attributes may be changed:
+Para prevenir a exceção **ActiveModel::ForbiddenAttributesError in Admin::IdeasController#update** ao atualizar o mode, você tem que utilizar o método [permit_params](http://activeadmin.info/docs/2-resource-customization.html) para definir quais atributos podem ter sido alterados:
 
-Open up your `app/admin/idea.rb` file and add `:name`, `:description` and `:picture` to `permit_params`:
+Abra seu arquivo `app/admin/ideia.rb` e adicione `:nome`, `:descricao` e `:imagem` ao `permit_params`:
 {% highlight ruby %}
-ActiveAdmin.register Idea do
-  permit_params :name, :description, :picture
+ActiveAdmin.register Ideia do
+  permit_params :nome, :descricao, :imagem
 end
 {% endhighlight %}
 
-## Remove "new", "edit" and "destroy" for users.
-If you don't want your non-admin users to update your ideas you can easy fix this by updating your route file to only allow "index" and "show". Add `only: [:show, :index]` to `config/route.rb`:
+## Remova "new", "edit" e "destroy" para usuários.
+Se você não quer que usuários não administradores atualize suas ideias, você pode facilmente consertar isso atualizando seu arquivo de todas para permidir apenas "index" e "show". Adicione `only: [:show, :index]` ao `config/route.rb`:
 {% highlight ruby %}
-resources :ideas, only: [:show, :index]
+resources :ideias, only: [:show, :index]
 {% endhighlight %}
 
-**Don't forget to remove now broken links from your front-end code such as:** `<%= link_to 'New Idea', new_idea_path %>`, `<%= link_to 'Edit', edit_idea_path(idea) %>`, `<%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %>`
+**Não se esqueça de remover os links agora quebrados, do seu código front-end, como:** `<%= link_to 'Nova Ideia', new_ideia_path %>`, `<%= link_to 'Editar', edit_idea_path(ideia) %>`, `<%= link_to 'Excluir', ideia, method: :delete, data: { confirm: 'Você tem certeza?' } %>`
 
-Voila! You can now manage your Ideas from your new admin panel!
+Voila! Você pode agora gerenciar uas ideias do seu novo painel de administrador!
 
-## What next?
+## E agora?
 
-* Add another resource to admin such as Blog and Comments
+* Adicione outro recurso ao admin como Blog e Comentarios
