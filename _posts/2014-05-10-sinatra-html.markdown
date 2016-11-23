@@ -8,7 +8,7 @@ permalink: sinatra-html
 
 *Traduzido por Marina Limeira, [@marinalimeira_](http://twitter.com/marinalimeira_)*
 
-Utilizar `.inspect` funciona para depurar, mas nós não queremos utilizá-lo em produção. Para uma coisa, é muito difícil estilizar a saída. Vamos colocar nossa lista de cafés dentro do HTML correto.
+Utilizar `.inspect` funciona para depurar, mas nós não queremos utilizá-lo em produção. Por um motivo, é muito difícil estilizar a saída. Vamos colocar nossa lista de cafés dentro do HTML correto.
 
 ## 1. Configuração
 

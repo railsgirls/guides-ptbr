@@ -73,7 +73,7 @@ Atualize sua página de admin e você encontrará [Ideias](http://localhost:3000
 *Você pode substituir "Ideia" por qualquer model que você quiser registrar com o Active Admin.*
 
 ### Setting up Strong Parameters
-Para prevenir a exceção **ActiveModel::ForbiddenAttributesError in Admin::IdeasController#update** ao atualizar o mode, você tem que utilizar o método [permit_params](http://activeadmin.info/docs/2-resource-customization.html) para definir quais atributos podem ter sido alterados:
+Para prevenir a exceção **ActiveModel::ForbiddenAttributesError in Admin::IdeasController#update** ao atualizar o model, você tem que utilizar o método [permit_params](http://activeadmin.info/docs/2-resource-customization.html) para definir quais atributos podem ter sido alterados:
 
 Abra seu arquivo `app/admin/ideia.rb` e adicione `:nome`, `:descricao` e `:imagem` ao `permit_params`:
 {% highlight ruby %}
@@ -83,7 +83,7 @@ end
 {% endhighlight %}
 
 ## Remova "new", "edit" e "destroy" para usuários.
-Se você não quer que usuários não administradores atualize suas ideias, você pode facilmente consertar isso atualizando seu arquivo de todas para permidir apenas "index" e "show". Adicione `only: [:show, :index]` ao `config/route.rb`:
+Se você não quer que usuários não administradores atualize suas ideias, você pode facilmente consertar isso atualizando seu arquivo de todas para permitir apenas "index" e "show". Adicione `only: [:show, :index]` ao `config/route.rb`:
 {% highlight ruby %}
 resources :ideias, only: [:show, :index]
 {% endhighlight %}
