@@ -7,6 +7,7 @@ permalink: openshift
 # Colocar Seu App Online com OpenShift
 
 *Criado por Katie Miller, [@codemiller](https://twitter.com/codemiller)*
+
 *Traduzido por Marcela Oliveira, [@magaeu](https://twitter.com/magaeu)*
 
 ### Adquira o OpenShift
@@ -138,34 +139,34 @@ __COACH__: Fale sobre banco de dados relacionais e as diferenças entre SQLite e
 
 ### Implantar a aplicação no OpenShift
 
-We are now ready to deploy the Rails Girls app to OpenShift. We need to tell our Git repository where to push the code. To get the location of your OpenShift code repository, run the following command, and copy the Git URL from the output.
+Agora estamos prontos para implantar a aplicação Rails Girls no OpenShift. Nós precisamos informar ao repositório do Git para enviar (push) o código. Para obter a localização do seu repositório no OpenShift execute o seguinte comando e copie a URL que foi exibida na saída.
 
 {% highlight sh %}
 rhc app show openshiftapp
 {% endhighlight %}
 
-Now run the following commands, replacing the SSH string with your Git URL. We are using '-f' for force here because we are happy to wipe away the history of the current OpenShift repository, which contains the sample Rails app. When you are pushing future changes, you can just use 'git push'.
+Agora execute os seguintes comandos, substituindo o texto (string) SSH com a sua URL do Git. Nós estamos utilizando '-f' aqui para forçar que o Git apague todo o histórico da aplicação atual no repositório do OpenShift, o qual contém o modelo da aplicação Rails. Quando você estiver enviando futuras mudanças, você só precisa utilizar 'git push'.
 
 {% highlight sh %}
 git remote add openshift ssh://0123456789abcdef01234567@openshiftapp-yourdomain.rhcloud.com/~/git/openshiftapp.git/
 git push -f --set-upstream openshift master
 {% endhighlight %}
 
-Refresh the app in your browser to see the result.
+Atualize a aplicação no seu navegador para ver o resultado.
 
-__COACH__: Talk about Git remotes.
+__COACH__: Fale sobre o Git remoto.
 
-### Extra credit
+### Crédito extra
 
-Congratulations - your Rails application is now online for the whole world to admire. The following sections explain optional further steps you can take to improve and share your app.
+Parabéns! Sua aplicação Rails está online para todo o mundo admirar. As seguintes seções servirão para explicar passos opcionais para você melhorar e compartilhar sua aplicação.
 
-#### Persist uploaded images
+#### Armazenar imagens adicionadas
 
-The app should be looking pretty good now, but there is an issue lurking because of the ephemeral nature of the deployment. When we push a new version of the application, anything stored within OpenShift's copy of the repo will be wiped to make way for the new files. This includes the images uploaded by users. To fix this, we can store these files in a persistent directory on OpenShift instead. The filepath of the location we need is stored in an environment variable.
+A aplicação deve estar muito boa agora, mas existe um pequeno problema ocasionado pela natureza temporária do desenvolvimento. Quando nós enviamos uma nova versão da aplicação, tudo o que está armazenado na cópia do repositório do OpenShift será removido para dar espaço para novos arquivos. Isso inclui as imagens carregadas pelos usuários. Para resolver esse problema, nós podemos armazenar os arquivos num diretório do OpenShift. O caminho para esse armazenamento pode ser salvo em uma variável de ambiente.
 
-__COACH__: Explain the motivation for using environment variables.
+__COACH__: Explique a motivação para utilizar variáveis de ambiente.
 
-The directory where uploaded pictures are currently stored is within the app repository, so it will be deleted when we rebuild. To switch the uploads directory to one that will persist, open `app/uploaders/picture_uploader.rb` and replace
+O diretório onde as imagens são atualmente armazenadas é o diretório da aplicação, que será apagado quando refizermos a aplicação. Para mudar o diretório de armazenamento, abra `app/uploaders/picture_uploader.rb` e substitua
 
 {% highlight ruby %}
 def store_dir
@@ -173,7 +174,7 @@ def store_dir
 end
 {% endhighlight %}
 
-with
+por
 
 {% highlight ruby %}
 def store_dir
@@ -187,7 +188,7 @@ def url
 end
 {% endhighlight %}
 
-Now uploaded images will be stored in a persistent directory, but they will still be available through the same URL as what we were using previously. To make this work, we also need to add a symbolic link on the filesystem from the repository location to the real storage location. To do this, open `.openshift/action_hooks/build` and add the following code:
+Agora as imagens carregas serão armazenadas no diretório, mas elas ainda estarão disponíveis na mesma URL que estávamos utilizando anteriormente. Para fazer isso funcionar, nós também precisáremos adicionar um link simbólico no sistema de arquivo da localização do repositório para a localização real de armazenamento. Para realizar essa etapa, abra `.openshift/action_hooks/build` e adicione o seguinte código:
 
 {% highlight sh %}
 mkdir -p $OPENSHIFT_DATA_DIR/uploads
@@ -195,9 +196,9 @@ ln -sf $OPENSHIFT_DATA_DIR/uploads $OPENSHIFT_REPO_DIR/public/uploads
 
 {% endhighlight %}
 
-This action hook code will run every time the OpenShift app is built, so the link between the directories will always be there when it's needed.
+Essa ação de linkar o código será executada toda vez que a aplicação do OpenShift for construída, então o link entre os diretórios sempre estará disponível quando necessário.
 
-Commit your changes and push them to the cloud:
+Comite suas mudanças e as envie para o repositório em nuvem:
 
 {% highlight sh %}
 git add --all
@@ -205,14 +206,15 @@ git commit -m "Added OpenShift environment variables"
 git push
 {% endhighlight %}
 
-The images you uploaded before making this change will no longer display, but anything uploaded now will stick around between app rebuilds.
+As imagens carregadas antes dessa mudança ser realizada não serão visualizadas, mas tudo que for carregado a partir de agora será armazenado entre as reconstruções da aplicação.
 
-__COACH__: Explain symbolic links.
+__COACH__: Explique links simbólicos.
 
-#### Push code to GitHub
+#### Enviar o código para o GitHub
 
-Now that your application is under source control with Git, you may also wish to share a copy with others on a Git repository website such as GitHub. To push your code to a GitHub repository, [create a repository](https://github.com/new) on GitHub and copy the HTTPS string (something like *https://github.com/username/reponame.git*).
+Agora que sua aplicação está sobre controle de versão com o Git, você pode querer compartilhar uma cópia dela em um website que utilize Git como o GitHub. Para enviar seu código para o repositório do GitHub, [crie um repositório](https://github.com/new) no GitHub e copie o link HTTPS (algo como *https://github.com/username/reponame.git*).
 
+Explore o repositório da sua aplicação OpenShift no terminal e execute os seguintes comandos, substituindo o texto HTTPS com a URL copiada anteriormente:
 Navigate to your OpenShift app repository in the terminal and enter the following commands, replacing the HTTPS location with the string you copied:
 
 {% highlight sh %}
@@ -220,10 +222,10 @@ git remote add github https://github.com/username/reponame.git
 git push github master
 {% endhighlight %}
 
-The 'master' branch of the local copy of your repository will be pushed to GitHub. Go to the GitHub website to check it out.
+A branch 'master' local do seu repositório será enviada para o GitHub. Acesse o website do GitHub e verifique se está tudo certo.
 
-__COACH__: Talk about Git branches and the benefits of open source code.
+__COACH__: Fale sobre as branches do Git e os benefícios do código aberto.
 
-### Conclusion
+### Conclusão
 
-Your Rails app is now running in the cloud on [OpenShift](https://www.openshift.com/developers). You can push whatever other changes you like and share the URL to show off your app to your friends.
+Sua aplicação Rails agora está rodando em nuvem no [OpenShift](https://www.openshift.com/developers). Você pode enviar qualquer outras mudanças que você queira e compartilhar a URL e mostrar sua aplicação para seus amigos.
