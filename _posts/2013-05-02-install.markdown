@@ -1,6 +1,6 @@
 ---
 layout: default
-title: tutorial de Instalação para Rails Girls
+title: Tutorial de Instalação para Rails Girls
 permalink: install
 ---
 
@@ -11,15 +11,15 @@ Traduzido por Marcela Oliveira, [@magaeu](https://twitter.com/magaeu)
 
 <span class="muted">Tempo previsto: 5min ativo / 15-30min passivo</span>
 
-Para construir apps ou outras coisas com Ruby on Rails, precisamos configurar alguns softwares e o ambiente de desenvolvimento em seu computador.
+Para construir apps e outras coisas com Ruby on Rails, precisamos configurar alguns softwares e o ambiente de desenvolvimento em seu computador.
 
 Siga as instruições para seu sistema operacional (SO). Se você tiver algum problema, não entre em pânico. Avise-nos e vamos resolver juntos.
 
-* [Instalação para OS X](#instalação-para-os-x)
-* [Instalação para Windows](#instalação-para-windows)
-* [Instalação para Linux](#instalação-para-linux)
-* [Utilização da Máquina Virtual](#utilização-da-máquina-virtual)
-* [Utilização de Serviço em Nuvem - Não é necessária qualquer instalação](#utilização-de-serviço-em-nuvem)
+* [Instalação para OS X](#instalao-para-os-x)
+* [Instalação para Windows](#instalao-para-windows)
+* [Instalação para Linux](#instalao-para-linux)
+* [Utilização da Máquina Virtual](#utilizao-da-mquina-virtual)
+* [Utilização de Serviço em Nuvem - Não é necessária qualquer instalação](#utilizao-de-servio-em-nuvem)
 
 <hr />
 
@@ -29,12 +29,12 @@ Siga as instruições para seu sistema operacional (SO). Se você tiver algum pr
 
 Clique no menu Apple e escolha *About this Mac*.
 
-![Apple menu](/images/1.png "Apple menu")
+![Apple menu](images/1.png "Apple menu")
 
 ### *2.* Na janela você irá encontrar a versão do seu sistema operacional.
 Se a versão do seu sistema começa com 10.6, 10.7, 10.8, 10.9, 10.10 ou 10.11, esse é o tutorial exato para você. Caso seja outra versão, podemos configurar sua máquina durante o evento.
 
-![About this Mac dialog](/images/2.png "About this Mac dialog")
+![About this Mac dialog](images/2.png "About this Mac dialog")
 
 ### *3a.* Se a versão do seu OS X é igual ou maior que 10.9:
 
@@ -113,11 +113,12 @@ rails new myapp
 ### *4.* Instalar editor de texto
 
 Para esse workshop recomendamos o editor de texto Atom.
+
 * [Baixar e instalar Atom](https://atom.io/)
 
 Se você estiver usando Mac OS X 10.7 ou versões anteriores, você pode utilizar outro editor [Sublime Text 2](http://www.sublimetext.com/2).
 
-### *5.* Atualizar seu navegador (browser)
+### *5.* Atualizar seu navegador
 
 Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso não tenha a versão mais recente.
 
