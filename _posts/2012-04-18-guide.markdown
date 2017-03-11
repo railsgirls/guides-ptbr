@@ -35,7 +35,7 @@ Nos dois dias dedicados ao evento, os participantes serão separados em pequenos
 
 #### Código de conduta
 
-Eventos Rails Girls são realizados em um ambiente inclusivo, amigável e seguro. Nos eventos a tolerância para assédio ou bulling é zero. Você pode criar um código de conduta para seu evento. A seguir uma lista de links com exemplos de alguns códigos de conduta:
+Eventos Rails Girls são realizados em um ambiente inclusivo, amigável e seguro. Nos eventos a tolerância para assédio ou bullying é zero. Você pode criar um código de conduta para seu evento. A seguir uma lista de links com exemplos de alguns códigos de conduta:
 
 * [Rails Girls Summer of Code Code of Conduct](http://railsgirlssummerofcode.org/about/code-of-conduct/)
 * [PyLadies Code of Conduct](http://www.pyladies.com/CodeOfConduct/)

@@ -49,7 +49,7 @@ Leia os tutoriais em http://guides.railsgirls.com ou clone este repositório, in
 ### Instalando jekyll
 
 ```
-$ cd railsgirls.github.com
+$ cd railsgirls.github.io
 ```
 
 ```

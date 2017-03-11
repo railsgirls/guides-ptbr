@@ -46,7 +46,7 @@ We're going to create a new Rails app called *railsgirls*.
 First, let's open a terminal:
 
 * Mac OS X: Open Spotlight, type *Terminal* and click the *Terminal* application.
-* Windows: Click Start and look for *Command Prompt*, then click *Command Prompt with Ruby on Rails*.
+* Windows: Click Start and look for *Command Prompt*, then click *Command Prompt with Ruby and Rails*.
 * Linux (Ubuntu/Fedora): Search for *Terminal* on the dash and click *Terminal*.
 
 Next, type these commands in the terminal:
@@ -435,4 +435,3 @@ Now you can open the file `app/views/pages/info.html.erb` and add information ab
 * Guide 5: [Add design using HTML &amp; CSS by Alex Liao](/design)
 * Guide 6: [Add Authentication (user accounts) with Devise by Piotr Steininger](/devise/)
 * Guide 7: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
-

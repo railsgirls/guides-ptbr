@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App 
+title: Touristic Autism-friendly Spots App
 permalink: touristic-autism_static-pages-tdd
 ---
 
@@ -10,13 +10,13 @@ permalink: touristic-autism_static-pages-tdd
 *for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/), [adding comments](http://guides.railsgirls.com/commenting) and [Mark McDonnell's tutorial] (http://code.tutsplus.com/tutorials/testing-your-ruby-code-with-guard-rspec-pry--cms-19974).
 
-Rails includes a default Test::Unit framework used to test your code. We will use a more advanced testing framework called RSpec to write a thorough test suite. We need to be able to write tests that are fast and give us instant feedback on problems with our code. 
+Rails includes a default Test::Unit framework used to test your code. We will use a more advanced testing framework called RSpec to write a thorough test suite. We need to be able to write tests that are fast and give us instant feedback on problems with our code.
 
-We will use Guard and RSpec to monitor some of our files and run tests over them as soon as they get modified, so to be sure that the latest changes are not breaking the app anywhere. 
+We will use Guard and RSpec to monitor some of our files and run tests over them as soon as they get modified, so to be sure that the latest changes are not breaking the app anywhere.
 
 If any error is found, then we are going to dig into it so to understand the cause and fix it, by using Pry.
 
-Finally, since we are assuming to be developing in collaboration with other via GitHub, we will also make sure that each contribution does not conflit when integrating with the others' ones. For this very reason, we will also commit, push and test the integration often, in a process called "Continuous Integration". We will use Travis-CI to support us.
+Finally, since we are assuming to be developing in collaboration with other via GitHub, we will also make sure that each contribution does not conflict when integrating with the others' ones. For this very reason, we will also commit, push and test the integration often, in a process called "Continuous Integration". We will use Travis-CI to support us.
 
 ##Continuous testing with Guard
 
@@ -37,7 +37,7 @@ Then run "bundle install". Then create a file called Rakefile in your main proje
 
 {% highlight sh %}
 require 'rspec/core/rake_task'
- 
+
 RSpec::Core::RakeTask.new do |task|
   task.rspec_opts = ['--color', '--format', 'doc']
 end
@@ -55,7 +55,7 @@ guard 'rspec' do
   watch(%r{^app/views/(.+).html.rb$}) do |m|
     "spec/features/#{m[1]}_spec.rb"
   end
- 
+
 # watch /spec/ files
   watch(%r{^spec/features/(.+).rb$}) do |m|
     "spec/features/#{m[1]}.rb"
@@ -63,26 +63,26 @@ guard 'rspec' do
 end
 {% endhighlight %}
 
-The contents of this file tells Guard what to do when we run the guard command. 
+The contents of this file tells Guard what to do when we run the guard command.
 
 If we ran guard rspec then Guard would watch the specified files and execute the specified commands once any changes to those files had occurred. Note: because we only have one guard task, rspec, then that is run by default if we ran the command guard.
 
 In this instance, we're telling Guard to watch all the files within our app/views and spec/features folders and if any changes occur to any of those files then to execute the test files within our spec/features folder to make sure no changes we made broke our tests (and subsequently didn't break our code).
 
-Now, as in proper Test-Driven Development(TDD), let's create a test for our static "Home" page, before we even create the Home page. 
+Now, as in proper Test-Driven Development(TDD), let's create a test for our static "Home" page, before we even create the Home page.
 
 We're going to create a file titled home_spec.rb and place it in the spec/feature folder (as this is what we told Guard to expect). The purpose of this file is to become our specification file (in other words, this is going to be our test code and will represent the expected functionality).
 
-Note: in Ruby the words "test" and "specification" are often considered interchangable.
+Note: in Ruby the words "test" and "specification" are often considered interchangeable.
 
 ###TDD: Writing Test Code Before Application Code
 
 Typically, if you write your application code first (so you're not doing TDD), then you will find yourself writing code that at some point in the future is over engineered and potentially obsolete. Through the process of refactoring or changing requirements, you may find that some functions will fail to ever be called.
 
-This is why TDD is considered the better practice and the preferred development method to use, because every line of code you will produce has been produced for a reason: to get a failing specification (your actual business requirement) to pass. 
+This is why TDD is considered the better practice and the preferred development method to use, because every line of code you will produce has been produced for a reason: to get a failing specification (your actual business requirement) to pass.
 
 Let's write the test "home.html.erb_spec.rb as:
-	
+
 {% highlight sh %}
 require 'spec_helper'
 
@@ -91,7 +91,7 @@ describe "test for the static page Home" do
     render
     rendered.should contain("Hello world!")
   end
-end 
+end
 {% endhighlight %}
 
 
@@ -107,7 +107,7 @@ Here is the code:
 
 {% highlight sh %}
 $ << File.join(File.dirname(FILE), '..', 'app/views')
- 
+
 require 'pry'
 require 'home'
 {% endhighlight %}
@@ -168,9 +168,9 @@ For the purpose of demonstrating Pry we are going to add more code to our contro
 {% highlight sh %}
 class PagesController < ApplicationController
 attr_accessor :test
- 
+
   @@class_property = "I'm a class property"
- 
+
   def home
     binding.pry
     @instance_property = "I'm an instance property"
@@ -178,7 +178,7 @@ attr_accessor :test
     privs
     "Hello RSpec!"
   end
- 
+
   def about
     test_var = "I'm a test variable"
     test_var
@@ -186,9 +186,9 @@ attr_accessor :test
 
   def help
   end
- 
+
   private
- 
+
   def privs
     puts "I'm private"
   end
@@ -222,18 +222,18 @@ The .travis.yml file determines the configuration settings for Travis-CI so it k
 {% highlight sh %}
 language: ruby
 cache: bundler
- 
+
 rvm:
   - 1.25.26
- 
+
 script: 'bundle exec rake spec'
- 
+
 bundler_args: --without development
- 
+
 branches:
   only:
     - master
- 
+
 notifications:
   email:
     - you@example.com
@@ -250,17 +250,17 @@ Also, let's add to spec/spec_helper.rb the following:
 
 and make clear in our Gemfile which gems are required for testing and which for development:
 
-{% highlight sh %} 
+{% highlight sh %}
 group :test do
   gem 'rake'
   gem 'rspec'
 end
- 
+
 group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'pry'
- 
+
   # Adds debugging steps to Pry
   # continue, step, next
   gem 'pry-remote'
@@ -269,4 +269,3 @@ end
 {% endhighlight %}
 
 **Note:** if you have any issues regarding Travis-CI then you can join the "#travis" channel on IRC freenode to get help answering any questions you may have.
-

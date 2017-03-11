@@ -132,7 +132,7 @@ Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso 
 
 Baixar o [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.0.exe) e executá-lo. Utilize as configurações padrões durante a instalação.
 
-Abra o `Command Prompt with Ruby on Rails` e execute os comandos abaixo para resolver problemas com o RailsInstaller3.2.0.
+Abra o `Command Prompt with Ruby and Rails` e execute os comandos abaixo para resolver problemas com o RailsInstaller3.2.0.
 
 **Coach:** O erro **No such file or directory** ocorre quando o comando `rails` é utilizado no RailsInstaller3.2.0. Esse problema acontece devido a um erro no caminho do arquivo `rails.bat` e `bundle.bat`. Podemos resolvê-lo copiando o arquivo `rake.bat` para `rails.bat` e `bundle.bat`. ([github issue page](https://github.com/railsinstaller/railsinstaller-windows/issues/76))
 
@@ -142,7 +142,7 @@ copy rake.bat rails.bat
 copy rake.bat bundle.bat
 {% endhighlight %}
 
-Abra o `Command Prompt with Ruby on Rails` e execute o seguinte comando:
+Abra o `Command Prompt with Ruby and Rails` e execute o seguinte comando:
 
 {% highlight sh %}
 rails -v
@@ -172,10 +172,10 @@ gem -v
 
 Se a versão for menor que `2.2.3` você precisa atualizá-la manualmente através dos seguintes passos:
 
-Primeiro baixe o [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem). Mova o arquivo para `c:\\rubygems-update-2.2.3.gem` e execute (via terminal):
+Primeiro baixe o [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.6.7.gem). Mova o arquivo para `c:\\rubygems-update-2.6.7.gem` e execute (via terminal):
 
 {% highlight sh %}
-gem install --local c:\\rubygems-update-2.2.3.gem
+gem install --local c:\\rubygems-update-2.6.7.gem
 update_rubygems --no-document
 gem uninstall rubygems-update -x
 {% endhighlight %}
@@ -186,9 +186,17 @@ Verifique novamente sua versão do Rubygems:
 gem -v
 {% endhighlight %}
 
-Tenha certeza que seja igual ou maior que `2.2.3`. Caso não, execute o procedimento acima novamente.
+Tenha certeza que seja igual ou maior que `2.6.7`. Caso não, execute o procedimento acima novamente.
 
-### 'x64_mingw' is not a valid platform error
+Se você ainda está enfrentando problemas, você pode sempre encontrar a versão mais recente do rubygems online em [rubygems.org](https://rubygems.org/pages/download). Se você clicar em **GEM**, você terá a última versão.
+
+### Durante bundle install
+
+O erro `Gem::RemoteFetcher::FetchError: SSL_connect` pode também acontecer durante a etapa de `bundle install` ao criar um novo rails app.
+
+O erro irá mencionar [bit.ly/ruby-ssl](http://bit.ly/ruby-ssl). O que é relevante para usuários de Windows neste ponto é [este GitHub gist](https://gist.github.com/867550). O manual descrito se provou ser bem sucedido para resolver esse erro de `bundle install`.
+
+### Erro 'x64_mingw' não é uma plataforma válida
 
 Algumas vezes você pode se deparar com o seguinte erro quando executar `rails server`:
 
@@ -306,38 +314,58 @@ Ao invés de instalar todas as ferramentas em seu computador, você pode configu
 
 ## Utilização de Serviço em Nuvem
 
-Ao invés de instalar **Ruby on Rails** e o editor em seu computador, você pode utilizar um webservice para desenvolvimento. Tudo que precisa é um navegador e conexão com a internet. Esse tutorial explica como utilizar o [nitrous.io](https://nitrous.io). Se você utilizar outro serviço, talvez eles utilizem outra nomeclatura, como por exemplo 'workspace' ao invés de 'box', mas o processo é geralmente bem parecido.
+Ao invés de instalar **Ruby on Rails** e o editor em seu computador, você pode utilizar um webservice para desenvolvimento. Tudo que precisa é um navegador e conexão com a internet. Esse tutorial explica como utilizar o [codenvy.io](https://codenvy.io). Se você utilizar outro serviço, talvez eles utilizem outra nomeclatura, como por exemplo 'workspace' ao invés de 'box', mas o processo é geralmente bem parecido.
 
 ### *1.* Atualizar seu navegador (browser)
 
-Se você utilza **Internet Explorer**, recomendamos instalar o [Firefox](mozilla.org/firefox) ou [Google Chrome](google.com/chrome).
+Se você utiliza **Internet Explorer**, recomendamos instalar o [Firefox](mozilla.org/firefox) ou [Google Chrome](google.com/chrome).
 
 Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso não tenha a versão mais recente.
 
 ### *2.* Criar uma conta
 
-Acesse [https://nitrous.io](https://nitrous.io/) e realize o cadastro.
+Acesse [codenvy.io](https://codenvy.io) e crie sua conta de graça.
 
-### *3.* Configurar o box/workspace de desenvolvimento para Ruby on Rails
+![](/images/codenvy/create-account.jpg)
 
-* Logue na sua conta
-* Acesse o dashboard utilizando o botão verde 'Open dashboard'
-* Crie uma nitrous box: escolha Ruby/Rails a partir dos modelos - deixe as outras informações como estão, mas você pode mudar o nome do seu box para o que você desejar
-* Aguarde enquanto sua box é montada
+### *3.* Configure seu workspace de desenvolvimento Ruby on Rails
 
-### *4.* Encontrar e reiniciar sua box de desenvolvimento
-* Se você acabou de criar sua box, você provavelmente pode pular esses passos - porém, eles são importantes quando você logar na nitrous novamente
-* Você sempre pode encontrar suas nitrous boxes indo na dashboard ou escolhendo 'Boxes' no menu principal
-* Escolha sua box a partir da lista de boxes
-* Se faz tempo que você não utilza sua box, ela pode ter sido desligada devido a inatividade. Se sua box não estiver executando, reinicie sua box com o botão restart
-* Quando sua box estiver executando, escolha 'IDE' para começar a codificar
+O Ruby on Rails Workspace possui pré-instalado todo o software que nós precisamos para o workshop. Para criar um workspace, logue em [codenvy.io](https://codenvy.io) e clique em 'Dashboard'. Se nenhum foi criado, o botão 'New Workspace' irá aparecer.
+
+![](/images/codenvy/create-workspace-dashboard.jpg)
+
+Na tela 'New workspace', algumas configurações tem que ser feitas.
+
+* 'New from blank, template, or sample project' deve estar selecionado
+* Selecione 'Create new workspace from stack'
+* Selecione 'Ready to go Stacks'
+* Selecione 'Rails' Stack
+* De ao workspace um nome de sua escolha. Neste exemplo, ele se chamará 'railsgirls'.
+* Agora clique em 'Create' para criar o workspace (levará alguns minutos para o processo finalizar)
+
+![](/images/codenvy/create-workspace.jpg)
+
+* Codeenvy cria uma pasta '/projects' durante a instalação, que você poderá depois colocar seu código. Ele também cria uma pasta 'console-ruby-simple' que nós não precisamos. VOcê pode vê-lo no Project Explorer. Ignore ou delete a pasta clicando com o botão direito.
+
+### *4.* Encontre e reinicie seu workspace
+* Se você acabou de criar seu projeto, você pode provavelmente pular estes passos - eles são bons de saber se você fizer login no Codenvy mais tarde
+* Se você não utilizou seu workspace ou projetos por um tempo, eles talvez possam ser desligados por inatividade. Vocé irá notar um círculo vazio próximo ao nome do workspace.
+
+![](/images/codenvy/start-workspace.jpg)
+
+* Neste caso simplesmente clique no nome do workspace. Ele então será reiniciado (o que pode demorar um pouco) e depois abrirá.
+* Se você reiniciou seu workspace, você precisará rodar o comando `bundle` de novo no diretório do seu projeto Rails (o que você irá aprender mais sobre o comando no tutorial do app)
 
 ### *5.* Codificar com sua box de desenvolvimento
 
 * Ao lado esquerdo você encontra o navegador de arquivos onde você pode navegar entre seus diretórios e arquivos
 * No meio você encontra o editor para modificar seus arquivos
 * Na parte de baixo você encontra o terminal onde executa os comandos
-* Tudo que você precisa está aí na sua janela do navegador - você não precisa iniciar o editor ou o terminal
-* Se você seguir estiver seguindo o tutorial, use os comandos para **Linux**, mesmo que esteja utilizando o Windows - seu sistema operacional não faz diferença, desde que todos os comandos são executados na sua box de desenvolvimento que é uma máquina Linux
-* Se o tutorial pedir para acessar algo como `http://localhost:3000`, acesse o menu 'Preview' e escolha 'Port 3000'
-* Se, por exemplo, for solicitado acessar `http://localhost:3000/posts`, favor adicionar '/posts' manualmente a URL que está aberta
+* Tudo que você precisa agora está na janela do seu browser - não precisa iniciar um editor ou terminal em outro lugar
+* Se você está seguindo um guia ou um tutorial, use comandos para Linux mesmo que você esteja em um computador Windows - seu sistema operacional não importa, desde que todos os comandos estejam rodando em  uma máquina do seu projeto na nuvem, que roda Linux
+* Se um guia ou tutorial te perguntar para rodar um comando rails que contem `rails` ou `rake`, adicione anteriormente `bundle exec` a este comando, e. g. `bundle exec rake db:migrate`. Exceção: o comando `rails new` não é pré-fixado.
+* Se um guia ou tutorial te pedir para iniciar o servidor com `rails server` ou `rails s`, adicione `-b 0.0.0.0` ao final deste comando, então execute `rails server -b 0.0.0.0`
+* Se um guia ou tutorial te pedir para apontar seu browser para algo como http://localhost:3000, siga estas instruções:
+  * Abra 'Operations perspective' (1) no Codenvy, vá na aba 'Servers' (2) e selecione 'Server Address' na linha começando com 'Server-3000-tcp' (3). Ao invés de abrir http://localhost:3000, abra esta URL no seu browser.
+  ![](/images/codenvy/get-workspace-ip.jpg)
+  * Se, por exemplo, você for pedido para abrir http://localhost:3000/posts, abra a URL anterior no seu browser e adicione '/posts' a URL.

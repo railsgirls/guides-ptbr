@@ -50,7 +50,7 @@ Nós iremos criar um novo app Rails chamado *railsgirls-galway*.
 Primeiro, vamos abrir o terminal:
 
 * Mac OS X: Abra o Spotlight, digite *Terminal* e clique em *Terminal*.
-* Windows: Clique no Menu Iniciar e digite *Prompt* e clique em *Command Prompt with Ruby on Rails*.
+* Windows: Clique no Menu Iniciar e digite *Prompt* e clique em *Command Prompt with Ruby and Rails*.
 * Linux (Ubuntu/Fedora): Procure por *Terminal* no dashboard e clique em *Terminal*.
 
 Próximo, digite estes comandos no terminal:
@@ -120,6 +120,6 @@ Enquanto o prompt de comando não estiver visível, você não poderá executar 
 
 Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para sair do servidor.
 
-**Referência:** Explica o que cada comando faz.
+**COACH:** Explique o que cada comando faz.
 [O que é um servidor e uma aplicação web - Slides por @]()
 O esqueleto gerado por "rails new" reflete o padrão de arquitetura [Model-View-Controller(MVC) - Slides por @]().

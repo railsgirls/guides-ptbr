@@ -41,6 +41,13 @@ end
 
 Rode `bundle install --without production` para configurar suas dependências.
 
+Não se esqueça de fazer `git add .` e `git commit -m "Utilizando postgres como banco de dados de producao"`
+para adicionar esta mudança ao seu branch master antes de enviar ao heroku mais tarde.
+
+__COACH__: You can talk about RDBMS and the different ones out there, plus
+include some details on Heroku's dependency on PostgreSQL.
+
+
 __COACH__: Você pode falar sobre RDBMS e as diferenças para outros sistemas de gerenciamento bem como  apresentar alguns detalhes das dependências em Heroku no PostgreSQL.
 
 #### Sistema de controle de versão
