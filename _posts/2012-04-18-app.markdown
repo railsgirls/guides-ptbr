@@ -130,7 +130,7 @@ rails server
   </div>
 </div>
 
-Abra <http://localhost:3000> no navegador. Se você estiver usando um serviço na nuvem (por exemplo: nitrous), use a funcionalidade preview do serviço (ver [guia de instalação](/install#using-a-cloud-service) para detalhes).
+Abra <http://localhost:3000> no navegador. Se você estiver usando um serviço na nuvem (por exemplo: nitrous), use a funcionalidade preview do serviço (ver [guia de instalação](/install#utilizao-de-servio-em-nuvem) para detalhes).
 
 Se você ver a página denominada  "Welcome aboard" é porque tudo deu certo e sua nova app está funcionando corretamente.
 
@@ -176,7 +176,7 @@ rails server
 
 Abra <http://localhost:3000/ideas> no navegador. Para serviços na nuvem (por exemplo: nitrous) acrescente '/ideas' na url do preview (ver [guia de instalação](/install#using-a-cloud-service)).
 
-Click around and test what you got by running these few command-line commands. (**precisa ser traduzido**)
+Teste o que você tem rodando estes comandos no terminal.
 
 ## *3.*Design
 
