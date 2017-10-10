@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Caixa eletrônico em Ruby
-permalink: ruby-atm
+permalink: caixa-eletronico-em-ruby
 ---
 
 # Caixa eletrônico em Ruby
@@ -20,7 +20,7 @@ Começaremos com algo simples, mas vamos aumentar muito a dificuldade perto do f
 
 Para cada passo, você vai precisar executar as ações a seguir:
 
-**1. Rodar os novos testes:** Apague os testes do passo anterior, e cole os testes pré-escritos para o passo atual. *(Testes para cada passo são exibidos no fim do mesmo.)* Rode os testes para ver quais deles falham. No Sublime Text, você pode usar <kbd>Ctrl</kbd>+<kbd>B</kbd> para rodar os testes. Ou, você pode abrir um terminal, `cd` para o seu diretório de trabalho, e rodar `ruby atm.rb`.
+**1. Rodar os novos testes:** Apague os testes do passo anterior, e cole os testes pré-escritos para o passo atual. *(Testes para cada passo são exibidos no fim do mesmo.)* Rode os testes para ver quais deles falham. No Sublime Text, você pode usar <kbd>Ctrl</kbd>+<kbd>B</kbd> para rodar os testes. Ou, você pode abrir um terminal, `cd` para o seu diretório de trabalho, e executar `ruby caixa_eletronico.rb`.
 
 **2. Faça os testes passarem:** Edite seu código para satisfazer os requisitos funcionais do passo atual. Você saberá que conseguiu quando todos os testes ficarem verdes.
 
@@ -44,7 +44,7 @@ A operação módulo, `%` obtém o resto de uma divisão. Por exemplo, `9 % 4` r
 
 **Código inicial:**
 
-Crie um arquivo chamado `atm.rb`. Cole o seguinte código nele. Ele contém a casca da sua função `withdraw()`, com os testes.
+Crie um arquivo chamado `caixa_eletronico.rb`. Cole o seguinte código nele. Ele contém a casca da sua função `withdraw()`, com os testes.
 
 {% highlight ruby %}
 def withdraw(amount)
