@@ -66,7 +66,7 @@ require 'minitest/autorun'
 # SEGUEM ABAIXO OS TESTES PARA VERIFICAR AUTOMATICAMENTE A SUA SOLUÇÃO.
 # ESTES TESTES SÃO PARA O PASSO 1.
 # ELES DEVEM SER SUBSTITUÍDOS A CADA PASSO.
-describe 'atm' do
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -115,7 +115,7 @@ new_number = 25/10
 
 {% highlight ruby %}
 # Substitua seus testes existentes por estes abaixo.
-describe 'atm' do
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -165,7 +165,7 @@ remainder.times { my_array << 5 } # agora my_array contém [20, 30, 5, 5, 5]
 ### Testes para o passo 3:
 {% highlight ruby %}
 # Substitua seus testes existentes por estes abaixo.
-describe 'atm' do
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -194,7 +194,7 @@ Agora imagine que o caixa retorne apenas notas de R$10. Modifique sua função p
 
 {% highlight ruby %}
 # Substitua seus testes existentes por estes abaixo.
-describe 'atm' do
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -252,7 +252,7 @@ Imagine que seu caixa agora tem notas de R$5 e de R$10. As pessoas vão querer o
 
 {% highlight ruby %}
 # Substitua seus testes existentes por estes abaixo.
-describe 'atm' do
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -293,7 +293,7 @@ Para remover o primeiro elemento de um array: `my_array.shift`. Por exemplo, `[1
 
 {% highlight ruby %}
 # Substitua seus testes existentes por estes abaixo.
-describe 'atm' do
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -314,7 +314,7 @@ end
 
 ### Refatore
 
-* Quantas linhas você teve que mudar, do passo 5 para o paso 6?
+* Quantas linhas você teve que mudar, do passo 5 para o passo 6?
 * E se disponibilizássemos notas de R$100? Você poderia fazer em uma única linha?
 * Refatore seu código para que você possa mudar para notas de R$100, R$20 e R$10, mudando apenas uma linha.
 * Qual é a solução mais à prova de futuro?
