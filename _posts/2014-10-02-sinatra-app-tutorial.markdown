@@ -1,72 +1,70 @@
 ---
 layout: default
-title: Rails Girls Sinatra tutorial
+Título: Rails Girls Sinatra tutorial
 permalink: sinatra-app
 ---
 
-# Create your first voting app with Sinatra
+# Crie sua primeira app de votação com Sinatra
 
-*Created by Piotr Szotkowski, [@chastell](https://twitter.com/chastell)*
+*Criado por Piotr Szotkowski, [@chastell](https://twitter.com/chastell)*
 
-We will create a little voting app from scratch using a web development framework for Ruby called Sinatra, which is much like Ruby on Rails. Just another tool to get the job done really, and a fun one too!
+Nós vamos criar um pequeno app de votação do zero usando um framework de desenvolvimento web para Ruby chamado Sinatra, e que é muito parecido com Ruby on Rails. Mas é só outra ferramenta para fazermos nosso trabalho e uma bem divertida também!
 
-Imagine your group of friends is figuring out what to order for your weekly movie watching marathon. With the many fast food options out there, this can become quite a discussion. This is where our app comes into play!
+Imagine seu grupo de amigos tentando decidir o que pedir para sua maratona de filmes semanal. Com tantas opções de fast food para pedir, isso pode se tornar uma discussão e tanto. É nessa hora que entra o nosso app!
 
-__COACH__: Explain shortly what [Sinatra](http://www.sinatrarb.com) is.
+__INSTRUTOR__: Breve explicação sobre o que é o [Sinatra](http://www.sinatrarb.com).
 
-## Install Sinatra
+## Instalação Sinatra
 
-Remember how we needed to install Ruby on Rails? Similarly we need to install Sinatra:
+Lembra como nós precisávamos instalar Ruby on Rails? Da mesma maneira precisamos instalar o Sinatra:
 
 `gem install sinatra`
 
-### Create your first Sinatra app
+### Crie sua primeira aplicação Sinatra
 
-Create a `suffragist.rb` file with the following contents:
+Crie o arquivo `sufragista.rb` com o seguinte conteúdo:
 
 {% highlight ruby %}
 require 'sinatra'
 
 get '/' do
-  'Hello, voter!'
+  'Olá, eleitor!'
 end
 {% endhighlight %}
 
+Você pode chamar seu arquivo Ruby do que preferir. 'voto.rb' por exemplo funcionaria bem também. Mas [Sufragista] (http://www.vocabulary.com/dictionary/suffragist) é uma referencia a um evento super importante no movimento a favor do direito das mulheres, então vamos usar este por agora!
 
-You can actually call your Ruby file whatever you'd like. `vote.rb` for instance would totally work as well, when used consistently. But [suffragist](http://www.vocabulary.com/dictionary/suffragist) actually references to a super important event in the women's rights movement, so let's just go with that for now!  
+### Rode sua app
 
+Vá para o diretório onde você colocou sua app e execute `ruby sufragista.rb`
+Agora você pode visitar <a href="localhost:4567" target=_blank">localhost:4567</a>. Onde você deverá
+ver a página "Olá, eleitor!", o que significa que a geração do seu novo
+app está funcionando corretamente. Aperte <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servidor. Se <kbd>Ctrl</kbd>+<kbd>C</kbd> não funcionar para você significa que você provavelmente está usando Windows e <kbd>Ctrl</kbd>+<kbd>Z</kbd>/ <kbd>Ctrl</kbd>+<kbd>Pause</kbd> / <kbd>Ctrl</kbd>+<kbd>Break</kbd> deve resolver esse problema.
 
-### Run your app
-
-Go to the directory where you put your app and run `ruby suffragist.rb`.
-Now you can visit <a href="localhost:4567" target="_blank">localhost:4567</a>. You should
-see a ‘Hello, voter!’ page, which means that the generation of your new
-app worked correctly. Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to shut down the server. If <kbd>Ctrl</kbd>+<kbd>C</kbd> does not work for you it means you are probably Windows user and <kbd>Ctrl</kbd>+<kbd>Z</kbd>/ <kbd>Ctrl</kbd>+<kbd>Pause</kbd> / <kbd>Ctrl</kbd>+<kbd>Break</kbd> will fix the issue)
-
-__COACH__: Explain POST and GET methods, and how to communicate with the browser.
+__INSTRUTOR__: Explique o método POST e GET e como eles se comunicam com o browser.
 
 
 
-### Add the index view
+### Adicione o index view
 
-To keep everything in order let’s make
-a directory for our views (and name it `views`).
+Para manter tudo em ordem vamos criar um
+diretório para nossas views (e nomear como `views`).
 
-Put this code into an `index.erb` file in the `views` directory:
+Coloque esse código no arquivo `index.erb` dentro do diretório `views`:
 
 {% highlight erb %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset='UTF-8' />
-    <title>Suffragist</title>
+    <title>Sufragista</title>
     <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
   </head>
   <body class='container'>
-    <p>What's for dinner?</p>
+    <p>O que tem para jantar?</p>
     <form action='cast' method='post'>
       <ul class='unstyled'>
-        <% Choices.each do |id, text| %>
+        <% Opcoes.each do |id, text| %>
           <li>
             <label class='radio'>
               <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
@@ -75,16 +73,16 @@ Put this code into an `index.erb` file in the `views` directory:
           </li>
         <% end %>
       </ul>
-      <button type='submit' class='btn btn-primary'>Cast this vote!</button>
+      <button type='submit' class='btn btn-primary'>Votar!</button>
     </form>
   </body>
 </html>
 {% endhighlight %}
 
-And into `suffragist.rb`:
+e dentro do `sufragista.rb`:
 
 {% highlight ruby %}
-Choices = {
+Opcoes = {
   'HAM' => 'Hamburger',
   'PIZ' => 'Pizza',
   'CUR' => 'Curry',
@@ -92,7 +90,7 @@ Choices = {
 }
 {% endhighlight %}
 
-Change the `get` action:
+Mude a ação `get`:
 
 {% highlight ruby %}
 get '/' do
@@ -100,53 +98,53 @@ get '/' do
 end
 {% endhighlight %}
 
-Run `ruby suffragist.rb`, check your
-results and shut down the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Rode `ruby sufragista.rb`, cheque seus
+resultados e pare o servidor com <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__COACH__: Talk a little about HTML and erb. Explain
-templates. Explain what global constants are.
+__INSTRUTOR__: Fale um pouco sobre HTML e erb. Explique
+sobre templates e sobre o que são constantes globais.
 
 
 
 ### Templates
 
-Adjust the `index.erb` file in the `views`
-directory and add the `<h1>…</h1>` line:
+Ajuste o arquivo `index.erb` no diretório `views`
+e adicione a linha `<h1>…</h1>`:
 
 {% highlight erb %}
   <body class='container'>
-    <h1><%= @title %></h1>
-    <p>What's for dinner?</p>
+    <h1><%= @titulo %></h1>
+    <p>O que tem para jantar?</p>
 {% endhighlight %}
 
-Change the `get` action:
+Mude a ação `get`:
 
 {% highlight ruby %}
 get '/' do
-  @title = 'Welcome to the Suffragist!'
+  @titulo = 'Bem vindo ao Sufragista!'
   erb :index
 end
 {% endhighlight %}
 
-__COACH__: Explain what instance variables are and
-how Sinatra makes them visible in the views.
+__INSTRUTOR__: Explique o que são instancias de variáveis
+e como Sinatra faz elas visíveis nas views.
 
 
 
-### Add the ability to POST results
+### Adicione a habilidade de fazer um POST dos resultados
 
-Put this into `suffragist.rb`:
+Coloque isto no `sufragista.rb`:
 
 {% highlight ruby %}
 post '/cast' do
-  @title = 'Thanks for casting your vote!'
+  @titulo = 'Obrigada por votar!'
   @vote  = params['vote']
   erb :cast
 end
 {% endhighlight %}
 
-Create a new file in the `views` directory, `cast.erb`,
-and put there some HTML with embedded Ruby code:
+Crie um novo arquivo `cast.erb` no diretório `views`,
+e coloque lá um pouco de HTML com código Ruby junto:
 
 {% highlight erb %}
 <!DOCTYPE html>
@@ -157,22 +155,22 @@ and put there some HTML with embedded Ruby code:
     <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
   </head>
   <body class='container'>
-    <h1><%= @title %></h1>
-    <p>You cast: <%= Choices[@vote] %></p>
-    <p><a href='/results'>See the results!</a></p>
+    <h1><%= @titulo %></h1>
+    <p>Seu voto: <%= Choices[@vote] %></p>
+    <p><a href='/results'>Veja os Resultados!</a></p>
   </body>
 </html>
 {% endhighlight %}
 
-__COACH__: Explain how POST works. How to catch what
-was sent in the form? Where do `params` come from?
+__INSTRUTOR__: Explique como o POST funciona. Como buscar o que
+foi mandado no formulário? de onde veio o `params`?
 
 
 
-### Factor out a common layout
+### Construa um layout comum
 
-Create a `layout.erb` file in the `views`
-directory. Put the following in there:
+Crie o arquivo `layout.erb` no diretório `views`.
+Coloque o seguinte lá:
 
 {% highlight erb %}
 <!DOCTYPE html>
@@ -183,23 +181,23 @@ directory. Put the following in there:
     <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
   </head>
   <body class='container'>
-    <h1><%= @title %></h1>
+    <h1><%= @titulo %></h1>
     <%= yield %>
   </body>
 </html>
 {% endhighlight %}
 
-Remove the above part from the other two templates
-(`index.erb` and `cast.erb` in the `views` directory).
+Remova a parte acima dos outros dois templates
+(`index.erb` e `cast.erb` que estão no diretório `views`).
 
-__COACH__: Talk about the structure of HTML documents and how factoring
-out common code work in general. Explain what `yield` does.
+__INSTRUTOR__: Fale sobre a estrutura de documentos HTML e sobre como a construção de código comum
+funciona. Explique o que `yield` faz.
 
 
 
-### Add the results route and the results view
+### Adicione o resultado route e o resultado view
 
-Paste the following code into `suffragist.rb`:
+Cole o seguinte código em `sufragista.rb`:
 
 {% highlight ruby %}
 get '/results' do
@@ -208,11 +206,11 @@ get '/results' do
 end
 {% endhighlight %}
 
-Create a new file in the `views` directory, called `results.erb`.
+Crie um novo arquivo no diretório `views`, chamado `results.erb`.
 
 {% highlight erb %}
 <table class='table table-hover table-striped'>
-  <% Choices.each do |id, text| %>
+  <% Opcoes.each do |id, text| %>
     <tr>
       <th><%= text %></th>
       <td><%= @votes[id] || 0 %>
@@ -220,33 +218,32 @@ Create a new file in the `views` directory, called `results.erb`.
     </tr>
   <% end %>
 </table>
-<p><a href='/'>Cast more votes!</a></p>
+<p><a href='/'>Vote Mais!</a></p>
 {% endhighlight %}
 
-Run `ruby suffragist.rb`, check
-your results and shut down the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Rode `ruby sufragistat.rb`, cheque
+seus resultados e pause o servidor com <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__COACH__: Explain HTML tables and how the
-missing values from the hash default to zero.
-
+__INSTRUTOR__: Explique tabelas HTML e como os valores faltando vem como zero.
 
 
-### Persist the results using YAML::Store
 
-Time for something new! Let’s store our choices.
+### Guarde os resultados usando YAML::Store
 
-Add the following to the top of `suffragist.rb`:
+Hora de algo novo! Vamos salvar nossas escolhas.
+
+No topo de `sufragista.rb`, adicione o seguinte:
 
 {% highlight ruby %}
 require 'yaml/store'
 {% endhighlight %}
 
-Add some more code into `suffragist.rb` – replace
-`post '/cast'` and `get '/results'` with the following:
+Adicione mais código em `sufragista.rb` – substitua
+`post '/cast'` e `get '/results'` com o seguinte:
 
 {% highlight ruby %}
 post '/cast' do
-  @title = 'Thanks for casting your vote!'
+  @titulo = 'Obrigada por votar!'
   @vote  = params['vote']
   @store = YAML::Store.new 'votes.yml'
   @store.transaction do
@@ -258,34 +255,34 @@ post '/cast' do
 end
 
 get '/results' do
-  @title = 'Results so far:'
+  @titulo = 'Resultados até agora:'
   @store = YAML::Store.new 'votes.yml'
   @votes = @store.transaction { @store['votes'] }
   erb :results
 end
 {% endhighlight %}
 
-__COACH__: Explain what YAML is.
+__INSTRUTOR__: Explique o que é YAML.
 
 
-### See how the YAML file changes when votes are cast
+### Veja como o arquivo YAML muda quando votos são salvos
 
-Let’s open `votes.yml`. And vote. And check again.
+Vamos abrir `votes.yml`. e votar. e checar novamente.
 
-__COACH__: There will be situations when one or more students will
-forget to shut down the server before running it again. It’s a good
-opportunity to search the Internet for a solution. They don’t
-have to know everything about killing processes to find a solution.
+__INSTRUTOR__: Vai ter situações onde um ou mais estudantes vão
+esquecer de pausar o servidor antes de roda-lo novamente. É uma boa
+oportunidade para procurar na Internet por uma solução. Eles não tem
+que saber de tudo sobre "matar" processos para achar a solução.
 
-__COACH__: In the end explain shortly the differences between Sinatra and Rails.
+__INSTRUTOR__: No final explique brevemente a diferença entre Sinatra e Rails.
 
 
 
-## Play with the app
+## Brinque com o app
 
-Try to change things in the app in any way you see fit:
+Tente mudar algumas coisas no app como:
 
-* Add some additional logic to the views.
-* Redirect to the results outright.
-* Add other votings; how would the YAML file need to change?
-* Try to style the file in different ways.
+* Adicionar alguma lógica adicional nas views.
+* Redirecionar para os resultados.
+* Adicione outra votação; como o arquivo YAML precisaria mudar?
+* Tente estilizar o arquivo de diferente maneiras.
