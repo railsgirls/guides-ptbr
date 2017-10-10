@@ -26,7 +26,7 @@ Aguarde a resposta ao seu e-mail informando que a tradução está liberada (ou 
 
 ## Como atualizar meu fork com as novas atualizações deste repositório?
 
-    git remote add upstream https://github.com/railsgirlsmaceio/railsgirlsguides.git (url origem do fork)
+    git remote add upstream https://github.com/railsgirls/guides-ptbr.git (url origem do fork)
     git pull upstream gh-pages (nome do branch)
     git push
 
@@ -44,12 +44,12 @@ Você pode usar nosso material para criar seu próprio workshop na sua cidade, n
 
 ## Mãos à obra
 
-Leia os tutoriais em http://guides.railsgirls.com ou clone este repositório, instale e rode [jekyll](https://github.com/mojombo/jekyll)
+Leia os tutoriais em http://guides.railsgirls.com/guides-ptbr/ ou clone este repositório, instale e rode [jekyll](https://github.com/mojombo/jekyll)
 
 ### Instalando jekyll
 
 ```
-$ cd railsgirls.github.io
+$ cd guides-ptbr
 ```
 
 ```
