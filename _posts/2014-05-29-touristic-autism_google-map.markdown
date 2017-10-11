@@ -14,10 +14,11 @@ nós precisamos instalar um software para que nos de a permissão de exibir e in
 
 Abra `Gemfile` na sua pasta do projeto usando seu editor de texto e adicione:
 
+```
 {% highlight ruby %}
-gem 'gmaps4rails'
+  gem 'gmaps4rails'
 {% endhighlight %}
-
+```
 
 Execute o Bundle como de costume. Em seguida adicione um novo arquivo: app/model/marker.rb
 
