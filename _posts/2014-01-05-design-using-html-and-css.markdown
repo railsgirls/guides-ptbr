@@ -1,12 +1,14 @@
 ---
 layout: default
-title: Add design to your App with HTML and CSS
+title: Adicione design à sua aplicação com HTML e CSS
 permalink: design-html-css
 ---
+*Traduzido por [@MADPT](https://github.com/MADPT) aka [Miguel Ângelo](http://www.miguelangelo.io)*
+
 
 1.Desenhe o cabeçalho
 
-+ Coloque o seguinte código na parte inferior do ficheiro `app/assets/stylesheets/application.css`:
++ Coloque o seguinte código na parte inferior do arquivo `app/assets/stylesheets/application.css`:
 
     ```
     .navbar {
@@ -17,7 +19,7 @@ permalink: design-html-css
 
   Agora atualize a página e verifique as mudanças. Você pode tentar alterar a cor ou fonte do cabeçalho. Você pode verificar a referência de cor aqui [http://color.uisdc.com/](http://color.uisdc.com/).
 
-    **Formador:** fale sobre a propriedade `display`, `inline` e `block`.
+    **Coach:** fale sobre a propriedade `display`, `inline` e `block`.
 
 + Em seguida, coloque estas linhas na parte inferior:
 
@@ -30,12 +32,12 @@ permalink: design-html-css
     }
     ```
 
-    **Formador:** explique os 4 estados de um link
+    **Coach:** explique os 4 estados de um link
 
 
 2.Desenhe a tabela
 
- + Nós simplesmente usamos o Twitter [Bootstrap](http://getbootstrap.com/) para polir a nossa tabela. Encontre esta linha no ficheiro `app/views/ideas/index.html.erb` e substitua:
+ + Nós simplesmente usamos o Twitter [Bootstrap](http://getbootstrap.com/) para polir a nossa tabela. Encontre esta linha no arquivo `app/views/ideas/index.html.erb` e substitua:
 
    `<table>`
 
@@ -49,10 +51,10 @@ permalink: design-html-css
      <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
      ```
 
-     tente mudar a largura e veja o que vai acontecer
+     Tente mudar a largura e veja o que vai acontecer
 
 
- + Adicione as seguintes linhas à parte inferior do ficheiro `app/assets/stylesheets/ideas.css.scss`:
+ + Adicione as seguintes linhas à parte inferior do arquivo `app/assets/stylesheets/ideas.css.scss`:
 
   ```
   .container a:hover {
@@ -78,15 +80,13 @@ permalink: design-html-css
     }
     ```
 
-    tente adicionar mais coisas em `footer`, depois ajuste sua posição.
+    Tente adicionar mais coisas em `footer`, depois ajuste sua posição.
 
 4.Adicione estilo ao botão
 
-  + abra [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new)
-[http://localhost:3000/ideas/new](http://localhost:3000/ideas/new)
-    e encontre o botão `Create Idea`.
+  + Abra [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new) e encontre o botão `Create Idea`.
 
-   adicione estas linhas ao ficheiro `app/assets/stylesheets/ideas.css.scss`
+   Adicione estas linhas ao ficheiro `app/assets/stylesheets/ideas.css.scss`
 
    ```
    .container input[type="submit"] {
@@ -98,4 +98,4 @@ permalink: design-html-css
     }
    ```
 
-   **Formador** explique como usar `border` em css, tente modificar o estilo do botão como em volta da esquina, adicione sombra ou cor, etc.
+   **Coach** explique como usar `border` em css, tente modificar o estilo do botão como em volta da esquina, adicione sombra ou cor, etc.
