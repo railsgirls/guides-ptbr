@@ -15,98 +15,85 @@ nós precisamos instalar um software para que nos de a permissão de exibir e in
 Abra `Gemfile` na sua pasta do projeto usando seu editor de texto e adicione:
 
 ```
-{% highlight ruby %}
-  gem 'gmaps4rails'
-{% endhighlight %}
+gem 'gmaps4rails'
 ```
 
 Execute o Bundle como de costume. Em seguida adicione um novo arquivo: app/model/marker.rb
 
 ```
-{% highlight sh %}
-  class Marker
+class Marker
 
-    include ActiveModel::Validations
-    include Gmaps4rails::ActsAsGmappable
+  include ActiveModel::Validations
+  include Gmaps4rails::ActsAsGmappable
 
-    acts_as_gmappable :position => :location
+  acts_as_gmappable :position => :location
 
-    attr_accessor :location
+  attr_accessor :location
 
-      def gmaps4rails_infowindow
-        'foo'
-      end
+    def gmaps4rails_infowindow
+      'foo'
+    end
 
-  end
-{% endhighlight %}
+end
 ```
 
 
 Em seguida, adicione o config/application.rb dentro do seu escopo do projeto:
 
 ```
-{% highlight sh %}
-  config.active_support.escape_html_entities_in_json = true
-  config.encoding = "utf-8"
-  config.filter_parameters += [:password]
-  config.assets.enabled = true
-  config.assets.version = '1.0'
-{% endhighlight %}
+config.active_support.escape_html_entities_in_json = true
+config.encoding = "utf-8"
+config.filter_parameters += [:password]
+config.assets.enabled = true
+config.assets.version = '1.0'
 ```
 Crie seu app/controllers/google_controller.rb:
 
 ```
-{% highlight sh %}
-  class GoogleController < ApplicationController
-    def index; end
+class GoogleController < ApplicationController
+  def index; end
 
-    def markers
-      @marker ||= (1..10).map {
-        m = Marker.new
-        m.location = [ (Random.new.rand(-5000..5000) / 100.0),(Random.new.rand(-5000..5000) / 100.0) ]
-        m
-      }.to_gmaps4rails
-    end
-    helper_method :markers
+  def markers
+    @marker ||= (1..10).map {
+      m = Marker.new
+      m.location = [ (Random.new.rand(-5000..5000) / 100.0),(Random.new.rand(-5000..5000) / 100.0) ]
+      m
+    }.to_gmaps4rails
   end
-{% endhighlight %}
+  helper_method :markers
+end
 ```
 Crie seu view/google/index.html.erb:
 
+
+<h1>Veja alguns indicadores defaults no seu mapa</h1>
+<div class="google_map"></div>
 ```
-{% highlight sh %}
-  <h1>Veja alguns indicadores defaults no seu mapa</h1>
-  <div class="google_map"></div>
-  <%= gmaps("markers" => {"data" => markers},
-            'last_map' => false,
-            "map_options" =>  {
-              "center_on_user" => true,
-              "detect_location" => true,
-              "provider" => "google", :id => 'google_map'}) %>
-
-  <h1>Veja em camadas abertas</h1>
-  <div class="openlayer_map"></div>
-
-  <%= gmaps("markers" => {"data" => markers},
-            "map_options" =>  {
-    "center_on_user" => true,
-    "detect_location" => true,
-    "provider" => "openlayers", :id => 'openlayer_map'}) %>
-{% endhighlight %}
+<%= gmaps("markers" => {"data" => markers},
+          'last_map' => false,
+          "map_options" =>  {
+            "center_on_user" => true,
+            "detect_location" => true,
+            "provider" => "google", :id => 'google_map'}) %>
+```
+<h1>Veja em camadas abertas</h1>
+<div class="openlayer_map"></div>
+  ```
+<%= gmaps("markers" => {"data" => markers},
+          "map_options" =>  {
+  "center_on_user" => true,
+  "detect_location" => true,
+  "provider" => "openlayers", :id => 'openlayer_map'}) %>
 ```
 Adicione o seguinte no app: app/views/application.html.erb after "<%= yield %>":
 
 ```
-{% highlight sh %}
-  <%= yield :scripts %>
-{% endhighlight %}
+<%= yield :scripts %>
 ```
 
 Para finalizar, adicione o seguinte na sua config/routes.rb:
 
 ```
-{% highlight sh %}
-  get '/google' => 'google#index'
-  root :to => 'google#index'
-{% endhighlight %}
+get '/google' => 'google#index'
+root :to => 'google#index'
 ```
