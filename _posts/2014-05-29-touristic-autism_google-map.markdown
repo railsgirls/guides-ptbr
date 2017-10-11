@@ -4,11 +4,11 @@ title: Touristic Autism-friendly Spots App
 permalink: touristic-autism_google-map
 ---
 
-# Show All Places in a Google Map
+# Mostrar todos os lugares em um mapa do Google
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
+Os guias básicos que foram mesclados e adaptados são os [Ruby on Rails Tutorial](http://www.railstutorial.org/book), [basic RailsGirls app](http://guides.railsgirls.com/app/) e os tutoriais são [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) e [adding comments](http://guides.railsgirls.com/commenting).
 
 
 We need to install a piece of software to let us display and interact with Google Maps.
