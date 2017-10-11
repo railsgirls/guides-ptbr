@@ -61,195 +61,197 @@ Todo evento Rails Girls começa com a festa de instalação onde configurações
 
 Algumas instalações irão falhar: esteja preparado para deixar mulheres em pares, não passe muito tempo se preocupando com isso.
 
-Decode o local com balões e posters. Coloque uma <a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> divertida para o final da tarde.
+Decore o local com balões e posters. Coloque uma <a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> divertida para o final da tarde.
 
 Venha com atividades para quebrar o gelo: pergunte as meninas para escrever porque elas estão participando do evento em post-its ou para desenharem e escreverem sua aplicação dos sonhos.
 
 Lembre-se de fazer um [FridayHug](http://fridayhug.com)!
 
-21 -> Coach dinner
-Go through the application with the coaches during dinner.
+21 -> Jantar com Coaches
+Repassar a aplicação com os coaches durante jantar.
 
 
-#### Saturday: Workshop
 
-09:00 - 10:00 Registration and coffee  
-*Hint* Reserve enough time for people to mingle and to solve any problems there might be with installations. Give out workbooks, collect acronyms for the Bento exercise.
+#### Sábado: Workshop
 
-10:00 - 10:10 Welcoming words  
-*Hint* Mention sponsors, show what we'll build, tell what programming is.
+09:00 - 10:00 Credenciamento e café 
+*Dica* Reserve tempo suficiente para que as pessoas possam interagir e resolver quaisquer problemas que possam haver com as instalações. Distribua workbooks, colete acrônimos para o exercício Bento.
 
-10:30 - 11:00 UX workshop
+10:00 - 10:10 Boas-vindas 
+*Dica* Mentione apoiadores, mostre o que iremos construir, explique o que é programação.
 
-11:00 - 11:30 Introduction to programming  
-*Hint* Ask one of the coaches to do this. Explain why learning Ruby basics is important even though they'll be using Rails.
+10:30 - 11:00 Workshop de UX
 
-Themes to cover:
+11:00 - 11:30 Introdução à programação 
+*Dica* Peça a algum dos coaches para fazer isto. Explique porque aprender os básicos de Ruby é importante mesmo se vamos estar utilizando Rails.
 
-+ The difference between dynamic and static websites: what are web apps?
-+ What are programming languages? What is Rails?
-+ The tools we’ll be using: browser, terminal, code editor, folder structure
+Temas a serem abordados:
 
-Show & tell with <a href="http://tryruby.org">tryruby.org</a>, first three-four exercises all together.
++ A diferença entre websites dinâmicos e estáticos: o que são aplicações web?
++ O que são linguagens de programação? O que é o Rails?
++ Ferramentas que vamos usar: navegador, terminal, editor de código, estrutura de pastas.
 
-11:30 - 13:00 Workshop time
-Going (slowly!) through the curriculum at <a href="http://guides.railsgirls.com/app">guides.railsgirls.com/app</a>. Stop to explain what you’re doing and what the different concepts mean.
+Show & tell com <a href="http://tryruby.org">tryruby.org</a>, primeiros três a quatro excerícios todas juntas.
 
-Try to aim for simple explanations even with the cost of accuracy. You don’t need to talk about all underlying concepts. Just try to answer questions when they arise, or move on if they’re too hard or out of scope. You are not here to teach perfect coding skills but to show how to get stuff done. One has to learn how to build web apps before learning how to do it well.
+11:30 - 13:00 Hora para o workshop
+Avançando (lentamente!) através do currículo em <a href="http://guides.railsgirls.com/app">guides.railsgirls.com/app</a>. Pare para explicar o que você está fazendo e o que os diferentes conceitos significam.
 
-Concepts to cover:
+Tenha como objetivo explicações simples, mesmo que à custo da precisão. Você não precisa falar sobre todos os conceitos fundamentais. Apenas tente responder as dúvidas quando elas surgirem, ou siga em frente se elas forem muito difíceis ou além do escopo. Você não está aqui para ensinar habilidades de programação perfeitas mas para mostrar como conseguir criar algo. É necessário aprender a criar aplicações web antes de aprender a criá-las bem.
+
+Conceitos para abordar:
 + Rails Generators
 + Scaffolds: Rails App Structure
 + Gem Management
 + MVC, REST/Resources
-+ Models and Active Record
-+ Controllers and ActionController
-+ Views and ERB
++ Models e Active Record
++ Controllers e ActionController
++ Views e ERB
 
-*Tips:* Coaches are people too. They are doing this for the first time too. Teaching might be hard and intimidating, so remember to be available to help coaches or groups with difficult situations or just provide support and encouragement.
+*Dica:* Coaches são pessoas também. Elas também estão fazendo isto pela primeira vez. Ensinar pode ser difícil e intimidante, então lembre-se de estar disponível para ajudar coaches ou grupos com situações difíceis ou apenas ofereça apoio e encorajamento.
 
-13:00 - 14:00 Lunch
+13:00 - 14:00 Almoço
 
-14:00 - 14:30 Bentobox exercise
-Putting technical jargon into a context with a conceptual model called Bentobox.
+14:00 - 14:30 Exercício Bentobox
+Colocando jargão técnico em contexto com um modelo conceitual chamado Bentobox.
 
-Two exercises: 1) Going through the 10 technical concepts with the physical Bentobox boards.  2) Going through the words the women have themselves submitted with the coaches.
+Dois exercícios: 1) Abordar os dez conceitos técnicos com os tabuleiros Bentobox.  2) Abordar as palavras que as próprias mulheres submeteram aos coaches.
 
 + [Bentobox slidedeck](http://speakerdeck.com/u/railsgirls/p/rails-girls-bentobox-exercise)
-+ [Instruction video](http://vimeo.com/39049632)
-+ [Example video from Rails Girls ATL](http://vimeo.com/54912357)
++ [Vídeo de instrução](http://vimeo.com/39049632)
++ [Vídeo de exemplo do Rails Girls ATL](http://vimeo.com/54912357)
 
-14:30 - 18:00 Workshop time.
+14:30 - 18:00 Hora do Workshop
 
-Time to continue working on the applications. Monitor the situation: when it seems like people have a hard time concentrating, have the coaches or other speakers give quick lightning talks.
+Hora para continuar trabalhando nas aplicações. Monitore a situação: quando parecer que as pessoas estão tendo dificuldade para se concentrar, peça que os coaches ou outros pessoas ministrem palestras curtas.
 
-Example topics for lighting talks:
+Sugestões de tópicos para palestras rápidas:
 
-+ Real (female) programmers telling what their career has been like.
-+ Design: UX & UI. Making mockups together either with paper or computer.
-+ Fun ways of explaining technical concepts and recent frameworks: what is CoffeeScript explained in 80s pop songs? How would you describe GitHub? What coding and creative writing have in common?
-+ Show us something real: don’t speak in abstractions, be specific and tell stories.
++ Histórias reais de programadoras contando como suas carreiras tem sido.
++ Design: Experiência de Usuário e Interface de Usuário. Criando mockups juntas com papel ou computador.
++ Maneiras divertidas de explicar conceitos técnicos e frameworks recentes: como seria o CoffeeScript explicado por meio de músicas pop dos anos 80? Como você descreveria o GitHub? O que programação e escrita criativa têm em comum?
++ Nos mostre algo real: não fale em abstrações, seja específica e conte histórias.
 
-Once everyone has finished their app, there is time to extend the application by modifying the CSS, implementing commenting systems etc. Allow enough time for experimentation.
+Assim que todas tiverem finalizado suas aplicações, vai haver tempo para estender a aplicação modificando o CSS, implementando sistemas de comentários, etc. Permita que haja tempo suficiente para experimentação.
 
-19:00 After party  
-*Hint:*
-Invite everyone, also the local developers, boys, those who weren't accepted, to join!
+19:00 Pós-festa  
+*Dica:*
+Convite todo mundo, os desenvolvedores locais também, rapazes, quem não foi aceito, para participar!
 
-[Fork this project on GitHub][github], add yourself, and send us a pull request.
+[Fork este projeto no GitHub][github], se adicione, e nos envie um pull request.
 
 [self]: http://guides.railsgirls.com/ "The Rails Girls Guide"
 [github]: https://github.com/railsgirls/railsgirls.github.com "Fork on GitHub"
 
-#### Materials
+#### Materiais
 
-+ [Download materials](http://www.speakerdeck.com/u/railsgirls)
++ [Baixar materiais](http://www.speakerdeck.com/u/railsgirls)
 
-### Promotion of Rails Girls
+### Promoção de Rails Girls
 
-Every Rails Girls workshop will get a custom website at railsgirls.com/city where the information is collected and then stored. For past cities, see [railsgirls.com/events](http://railsgirls.com/events)
+Todo workshop Rails Girls ganha um website customizado em railsgirls.com/cidade onde a informação é coletada e armazenada. Para cidades passadas, veja [railsgirls.com/events](http://railsgirls.com/events).
 
-You can also set up your own Facebook and Twitter page (remember to add links to your workshop's page!) or whatever service is popular in your community. Promoting the event through social media can go a long way these days, but make sure you have somebody to take care of the chosen channels. Some tips:
+Você também pode criar sua própria página no Facebook e Twitter (lembre-se de adicionar links para a página de seu workshop!) ou qualquer serviço que seja popular na sua comunidade. Promover o evento através das mídias sociais pode ser bem produtivo atualmente, mas certifique-se de ter alguém para cuidar dos canais escolhidos. Algumas dicas:
 
-* Keep the tone of posts friendly, positive and welcoming. Be direct in inviting fans/followers to share the event with their friends.
-* Photos are especially powerful messengers. Create your own graphics (*some ideas: "I'm a Rails Girl" Facebook cover for the event, word cloud with first names of women who signed up, an infographic of applications*) or promote photos from other workshops if this is your event. Follow other Rails Girls pages and account to get ideas for content and pass it along to your community.
-* Try various pitches for events to attract different types of women; some will be in it for the fun and meeting new people, some to learn new things, some will be fueled by the desire to show guys that women can do anything. No need to focus on just one group!
-* Don't be afraid to publicly thank women, coaches, blogs, media and other supporters who help you spread the word about your workshop for their support.
-* If your language supports it, use feminine forms when addressing women.
+* Mantenha o tom das postagens amigável, positivo e acolhedor. Seja direta em convidar fãs/seguidores para compartilhar o evento com suas amigas.
+* Fotos enviam mensagens particularmente poderosas. Crie seus próprios gráficos (*algumas ideias: Uma capa de Facebook para o evento com a frase "Eu sou uma Rails Girl", nuvém de palavras com os nomes das mulheres que se inscreveram, um infográfico de inscrições*) ou promova fotos de outros workshops se este é o seu evento. Siga páginas e contas de outras Rails Girls para buscar ideias para conteúdo e repassar para sua comunidade.
+* Experimente com diversas abordagens para o evento para atrair diferentes tipos de mulheres; algumas serão atraídas pela diversão e vontade de conhecer novas pessoas, outras para aprender coisas novas, algumas estarão impulsionadas pelo desejo de mostrar aos homens que as mulheres podem fazer de tudo. Não há necessidade de focar em apenas um grupo!
+* Não tenha medo de agradecer publicamente mulheres, coaches, blogs, mídia e outras apoiadoras pela ajuda em divulgar seu workshop.
+* Se seu idioma permite, use palavras femininas quando se dirigir a mulheres.
 
-While the event is underway, remember to take pictures, collect tweets and ask questions of the participants. You'll be thankful for all of that for your next event. We love to write blog posts about the speaker and participant experiences. A list of the coaches is also required.
+Quando o evento estiver ocorrendo, lembre-se de tirar fotos, coletar tweets e fazer perguntas às participantes. Você ficará grata por isso no próximo evento. Nós amamos escrever posts nos nossos blogs sobre as experiências de palestrantes e participantes. Uma lista dos coaches também é necessária.
 
-+ [Download materials](http://www.speakerdeck.com/u/railsgirls)
++ [Baixar materiais](http://www.speakerdeck.com/u/railsgirls)
 
 #### Website
-E-mail contact(a)railsgirls.com and ask to be included in the repo. Look for readme.txt for further instructions! Before making a site you should have at least two coaches and one sponsor onboard.
+
+Envie um email para contact(a)railsgirls.com e peça para ser incluída no repositório. Veja as instruções no arquivo readme.txt! Antes de criar um site você deveria ter ao menos dois coaches e um apoiador a bordo.
 
 
-+ [Counter for the site](https://github.com/ys/rails-girls-count#readme)
++ [Contador para o site](https://github.com/ys/rails-girls-count#readme)
 
-#### How to find local developers?
-
-* Google. Almost every country has some sort of a Rails or Ruby community (sometimes called Ruby Brigade or Ruby Tuesday). Look for [Hackernews](http://news.ycombinator.com) meetups, [GitHub](http://www.github.com) contributors or [Dribbble](http://dribbble) draftees. Find the local open source scene. Surf the technology conferences (here's [a list](http://rubythere.com/) of Ruby-themed ones, but others are cool too) and meetups at [meetup.com](http://www.meetup.com). Call software development houses, big and small. Don't forget IRC and podcasts!
-
-* Check out hashtags like #rails #ruby and #opensource from [Twitter search](https://twitter.com/#!/search-home). To find people from, say, close to NYC, use the following search operators "near:NYC within:15mi". Some countries have specific hashtags like #Rubysur and #RubyArg they use, remember to ask!
-
-* Startup community. Startup Digest is a good beginning point for events and communities.
-
-* Often there are one or two key people who will be able to introduce you further. The technology world is surprisingly connected.
-
-#### How to find participants?
-
-* Use social media: Facebook, Twitter & local networks such as Weibo. Friends, girlfriends, co-workers!
-
-* Local [Girls in Tech](https://twitter.com/#!/gitweet), [DevChix](http://www.devchix.com/), [Geek Girl](http://geekgirlmeetup.com/) chapters etc. Check out also [Meetup.com](http://www.meetup.com/). Twitter lists like @anitaborg's [Tech Women Programs](https://twitter.com/#!/anitaborg_org/tech-women-programs) and similar.
-
-* Think outside the box: universities, book clubs, music stores, design agencies, [Etsy](http://www.etsy.com). We want women who are interested in technology, but they can still have very varied backgrounds.
-
-#### How to get press?
-
-One of the big aims of Rails Girls is to make it more mainstream for women to build the web. That’s why we like to engage the local press and highlight the participants and their enthusiasm. We’d be happy to help prepare a press-release for the media. Check out [railsgirls.com/press](http://railsgirls.com/press) for more. If you're working with a big company as a sponsor, their PR department might be able to help you spread the message about the workshop.
-
-Send the press release to local blogs, find contact at various media outlets. The more doors you knock on, the greater you chance of getting through. Make a list of journalists and bloggers you contact, mark those that respond to your emails, so they can be the first ones to receive your next press release. You can also write a press release after the event that includes photos and statements from satisfied participants.
-
-### Sponsorships
-
-Rails Girls talks to a demographic that might be hard to reach other ways: women who have an interest in technology, who are possible users, employees or partners of the sponsoring company.
-
-We are looking for sponsors who are active participants in the local technology scene, whether it’s a startup or a big corporation, a non-profit or a government organization.
-
-Also non-traditional technology companies can be approached: kids stores, universities, women's magazines, beverage brands etc. They all should however have some affiliation or interest in technology.
-
-Rails Girls should always be kept non-profit: if there's money left, it should be used to support the future activities of the attendees. Don’t forget that you don’t need that much funding and even a two-person startup could be very willing to chip in.
-
-### Example letter for sponsors
-
-Dear xxx,
-
-We are organizing a Rails Girls programming workshop in (insert city) on (insert dates).
-
-Rails Girls is a two-day non-profit event for women of all ages to give them a great first experience in software craftsmanship. We aim to give the tools to understand technology along with the community and inspiration to get started.
-
-Rails Girls is not just about programming, it’s about building things. During the workshop, we’ll build an application and also have inspiring lightning talks and exercises.
-
-For a closer look, please see www.railsgirls.com for past events and coverage.Here’s also a short video on the Berlin event held in April 2012: [http://vimeo.com/40852182](http://vimeo.com/40852182)
-
-We are now looking for sponsors to help us realize this all.
-We’d love to have your support!
-
-Yours, name
+#### Como encontrar pessoas desenvolvedoras locais?
 
 
+* Google. Praticamente todo país tem algum tipo de comunidade Rails ou Ruby (às vezes chamada de Ruby Brigade ou Ruby Tuesday). Procure por  encontros do [Hackernews](http://news.ycombinator.com), contribudores no [GitHub](http://www.github.com)  ou designers no [Dribbble](http://dribbble). Encontre a cena open source local. Surfe as conferências de tecnologia (aqui tem uma [lista](http://rubythere.com/) de eventos sobre Ruby, mas tudo bem se for sobre outros temas) e reuniões em [meetup.com](http://www.meetup.com). Ligue para empresas de desenvolvimetno de software, grandes e pequenas. Não esqueça do IRC e de podcasts! 
 
-### How much does it cost?
+* Confira hashtags como #rails #ruby e #opensource no [Twitter search](https://twitter.com/#!/search-home). Para achar pessoas, digamos, próximas à Nova York, use os seguintes operadores de busca: "near:NYC within:15mi". Alguns países possuem hashtags específicas como #Rubysur e #RubyArg, não esqueça de perguntar!
 
-The costs below are estimated for 30 participants, 10 coaches - but they may vary a lot. It's easiest to try to get a local sponsor to pay the bills directly or partner with someone who has a set account to handle money. These calculations are done in Finland, in €, where food & alcohol is very expensive, but spaces are often free. All in all you should be able to organise an event easily for a little over a thousand euros.
+* Comunidade de startups. Startup Digest é um bom começo para eventos e comunidades.
 
-+ **Sparkling wine + cups** for the installation festival. 6 bottles, 6 euros a bottle. 36 euros.
+* Frequentemente há uma ou duas pessoas fundamentais que serão capazes de lhe apresentar muitas outras pessoas. O mundo da tecnologia é surpreendentemente bem conectado.
 
-+ **Breakfast Coffee**, pastry. 40 times around 5 euros. 200 euros
+#### Como encontrar participantes?
 
-+ **Lunch.** Catered lunch can be around 15 euros, but you can do with a lot less by cooking yourself.  Add some water and coffee (50 euros). 650 euros.
+* Use as mídias sociais: Facebook, Twitter e redes locais como Weibo. Amigas, namoradas, colegas de trabalho!
 
-+ **Marketing materials.** Printing workbooks, ordering stickers, posters and other swag. Again, varies a lot, maybe you can use someones printer, but at least around 200 should be reserved.
+* Grupos como [Girls in Tech](https://twitter.com/#!/gitweet), [DevChix](http://www.devchix.com/), [Geek Girl](http://geekgirlmeetup.com/) etc. Veja também [Meetup.com](http://www.meetup.com/). Listas de twitter como [Tech Women Programs](https://twitter.com/#!/anitaborg_org/tech-women-programs) da @anitaborg e similares.
 
-+ **Coach dinner.** At a restaurant or homemade. A way to say thank you to the coaches for their volunteer work. Around 20 euros per head. 200 euros.
+* Pense fora da caixa: universidades, clubes do livro, lojas de música, agências de design, [Etsy](http://www.etsy.com). Nós queremos mulheres interessadas em tecnologia, mas elas ainda podem ter backgrounds muito variados.
 
-+ **Space.** Try to get this one sponsored/free, they can be really expensive. Often startups are co-operative and can offer their space for use (esp. on weekends).	0 - XXXX euros.
+#### Como conseguir mídia?
 
-+ **Afterparty.** It's nice if you can throw a good party with free beverages, but can also be done low-key in a local bar or on set in the park!	0 - XXXX euros.
+Um dos principais objetivos das Rails Girls é tornar mais comum que mulheres construam a web. É por isso que nós gostamos de envolver a imprensa local e destacar as participantes e seus entusiasmo. Nós ficaríamos felizes em ajudar a preparar um press-release para a mídia. Acesse [railsgirls.com/press](http://railsgirls.com/press) para saber mais. Se você está trabalhando com uma grande empresa como patrocinadora, o departamento de relações públicas deles talvez seja capaz de ajudar você a divulgar o workshop.
 
-+ **Travel expenses.**	If you don't have any RG-team members in your country, consider inviting us over. We don't need fancy hotels, promise! Same if you want to invite speakers to your event. 	0 - XXX
+Envie o press release para blogs locais, encontre contatos em diversos veículos de mídia. Quanto mais portas você bater, maior é a chance de conseguir entrar. Faça uma lista de jornalistas e blogueiros que você entrar em contato, destaque quem responder a seus emails, para que sejam os primeiros a receber seu próximo press release. Você também pode escrever um press release após o evento que inclua fotos e declarações de participantes satisfeitas.
 
-+ *Total 1286 euros*.
+### Patrocínios
 
-__What do sponsors get?__
+Rails Girls falam com uma parcela da população que talvez seja difícil de atingir de outras maneiras: mulheres que têm um interesse em tecnologia, que são potenciais usuárias, funcionárias ou parceiras da empresa patrocinadora.
 
-* Logo on event website
-* Table space at event, opportunity to distribute handouts and/or swag
-* A chance to speak to attendees for 5 minutes
-* In most events there are official pictures taken that the sponsors can use afterwards
+Nós procuramos por patrocinadores que são participantes ativos na cena local de tecnologia, sendo desde uma startup até uma grande corporação, uma entidade sem fins lucrativos ou uma organização governamental.
 
-Don’t give out the participant info, but sponsors are free to hang out at the event and be sure to include a short message to the sponsor in a thank-you note. Sponsor swag may be included in the goodie bag to an extent, but it should be something tasteful, not trashy and/or related to women.
+Empresas que não são tradicionalmente de tecnologia também podem ser abordadas: lojas infantis, universidades, revistas femininas, marcas de bebidas, etc. Entretanto, elas precisam ter algum interesse ou afiliação com tecnologia.
+
+Rails Girls precisam sempre ser sem fins lucrativos: se sobrar algum dinheiro no final, ele deve ser usado para apoiar futuras atividades para as participantes. Não esqueça que você não precisa de tanto patrocínio e mesmo uma startup de duas pessoas pode estar disposta a colaborar.
+
+### Carta de exemplo para patrocinadores.
+
+Caro xxx,
+
+Estamos organizando um workshop de programação Rails Girls em (inserir cidade) nos dias (inserir datas).
+
+Rails Girls é um evento sem fins lucrativos de dois dia para mulheres de todas as idades para dar a elas uma ótima primeira experiência com criação de software. Nós temos a intenção de dá-las ferramentas para entender tecnologia junto com a comunidade e inspiração necessárias para começar.
+
+Rails Girls não é só sobre programação, também é sobre construir coisas. Durante o workshop, nós vamos criar uma aplicação e também ter palestras e exercícios inspiradores.
+
+Para mais detalhes, por favor acesse www.railsgirls.com para eventos anteriores e cobertura. Temos também um vídeo curto do evento realizado em Berlin em Abril de 2012: [http://vimeo.com/40852182](http://vimeo.com/40852182)
+
+Estamos agora procurando por patrocinadores para nos ajudar a realizar tudo isso. Nós adoraríamos contar com seu apoio!
+
+Cordialmente, nome.
+
+
+### Quanto custa?
+
+Os custos abaixo são estimados para 30 participantes, 10 coaches - mas podem variar bastante. O mais fácil é tentar arranjar para que um patrocinador local pague as contas diretamente ou fazer uma parceria com alguém que tenha uma set account para lidar com dinheiro. Os cálculos a seguir forem feitas na Finlândia, em €, onde comida e álcool é bem caro, mas os locais são geralmente gratuitos. No geral você provavelmente consiga organizar um evento com cerca de 1000 reais.
+
++ **Vinho espumante + copos** para o festival de instalação. 6 garrafas, 6 reais a garrafa. 36 reais.
+
++ **Café da manhã**, confeitaria. 40 vezes cerca de 5 reais. 200 reais
+
++ **Almoço.** Comprar almoço pode ser cerca de 15 reais, mas você consegue fazer por muito menos cozinhando você mesma. Adicione água e café (50 reais). 650 reais.
+
++ **Materiais de marketing.** Impressão de workbooks, pedido de stickers, pôsteres e outros brindes. De novo, isto pode variar bastante, talvez você possa usar a impressora de alguém, mas reserve pelo menos uns 200 para isso.
+
++ **Jantar para os Coaches.** Em um restaurante ou preparado por vocês. Uma maneira de dizer obrigada aos coaches por seu trabalho voluntário. Cerca de 20 reais por pessoa. 200 reais.
+
++ **Espaço.** Tente conseguir um lugar patrocinado ou gratuito, pois alugar um espaço pode ser muito caro. Frequentemente startups são cooperativas e oferecem seu espaço para uso (especialmente em finais de semana).	0 - XXXX reais.
+
++ **Pós-festa.** É legal se você puder dar uma boa festa com bebidas grátis, mas também pode ser feito algo mais simples em um bar local ou em um parque! 0 - XXXX reais.
+
++ **Despesas de viagem.** Se você não tem nenhuma integrante da equipe RG em seu país, considere nos convidar. Nós não precisamos de hotéis chiques, promessa! O mesmo vale se você quiser convidar palestrantes para seu evento. 	0 - XXX
+
+
++ *Total 1286 reais*.
+
+__O que patrocinadores recebem em troca?__
+
+* Logo no site do evento
+* Mesa no evento, oportunidade para distribuir panfletos e/ou brindes
+* Uma chance de conversar com participantes por 5 minutos
+* Na maioria dos eventos são tiradas fotos oficiais que os patrocinadores podem usar depois
+
+Não repasse as informações das participantes, mas patrocinadores podem ficar à vontade para circular no evento e certifique-se de enviar uma curta mensagem ao patrocinador em uma nota de agradecimento. Brindes dos patrocinadores podem ser inclusos no pacote de benefícios até um ponto, mas precisa ser um item de bom gosto, sem ser porcarias e relacionado a mulheres.
 
 
 
@@ -257,180 +259,184 @@ Don’t give out the participant info, but sponsors are free to hang out at the 
 
 ## FAQ
 
-#### Who can organise a Rails Girls workshop?
+#### Quem pode organizar um workshop Rails Girls?
 
-Anyone. What we look for is a group of people dedicated in making this a stellar first experience in the world of web making for women. What we hope to see is some (not all) of the following:
+Qualquer pessoa. O que nós procuramos é um grupo de pessoas dedicadas a tornar isto uma primeira experiência incrível no mundo de desenvolvimento web para as mulheres. O que nós esperamos ver são algumas (não todas) das seguintes coisas:
 
-* Contacts to the local developer scene. We are pretty technology agnostic, so it doesn’t have to be purely Ruby & Rails people. In practice every event needs 5 or more coaches (the number of coaches depends on the number of women you're planning to accept) that have basic knowledge of Rails and two days to contribute. In general the events have been around 25 - 40 people strong.
-* Event organisation know-how. Not heaps, but some practicalities under the belt.
-* An inkling of an idea where to look for women interested in technology. University, literature, arts, sports - we try to look for people who are interested in Internet, but do not have experience in coding.
-* Willingness to guide the women in the future if they have questions or want to organize their own events or find local developer gatherings.
+* Contatos na cena de desenvolvimento loca. Nós somos bem agnósticas com relação a tecnologia, então não precisa ser apenas pessoas de Ruby e Rails. Na prática todo evento precisa de 5 ou mais coaches (o número de coaches depende do número de mulheres que você está planejando em aceitar) que tenham um conhecimento básico de Rails e dois dias disponíveis para contribuir. Em geral os eventos tem tido de 25 a 40 participantes.
+* Conhecimento de organização de eventos. Não precisa de um enorme conhecimento, e sim algumas habilidades práticas na manga.
+* Uma noção de onde procurar por mulheres interessadas em tecnologia. Universidade, literatura, artes, esportes - nós tentamos achar pessoas que se interessam por Internet, mas não têm experiência com programação.
+* Disposição de guiar mulheres no futuro caso elas tenham dúvidas ou queiram organizar seus próprios eventos ou encontrar concentrações de desenvolvedores locais. 
 
-Start by filling out [http://railsgirls.com/inyourcity](http://railsgirls.com/inyourcity) and someone from our team will be in contact
+Comece preenchendo [http://railsgirls.com/inyourcity](http://railsgirls.com/inyourcity) e alguém do nosso time vai entrar em contato
 
-#### Where can I find all the materials for posters, nametags, sample presentations and such?
-Check out below, and let us know if something is missing!
+#### Onde posso encontrar materiais para pôsteres, crachás, apresentações de exemplo e coisas do tipo?
+Confira logo abaixo, e nos avise caso esteja faltando alguma coisa!
 
-+ [Download materials](http://www.speakerdeck.com/u/railsgirls)
++ [Baixar materiais](http://www.speakerdeck.com/u/railsgirls)
 
-#### What kind of venue is needed?
+#### O que tipo de local é necessário?
 
-We recommend choosing a venue with a built-in infrastructure for around 30-50 persons. For a programming event, this means:
+Nós recomendamos encontrar um local com uma infraestrutura já pronta para cerca de 30 a 50 pessoas. Para um evento de programação, isto significa:
 
-* High-speed, tested Internet. There’s going to be over 30 computers online all the time. Add to that mobilephones, streaming music, funny videos and you get the picture!
-* Space for 4-6 person groups to gather together: chairs and tables, sometimes big pillows will do! This doesn’t have to be in the same room.
-* Possibility to set up extension chords and a projector.
-* Enough electric outlets to spare. Some women might have older laptops that will need to be plugged in at all times.
-* Location for food and beverage setup - lunch space for catering or a nearby lunch venue.
-* External monitors for teams are encouraged but not mandatory, helps the coaches show what is happening in the code.
-* Whiteboards can be helpful for coaches to explain more abstract concepts. Alternatively, paper and pen work just fine. Just have something at hand people can draw on.
+* Internet de alta velocidade, testada. Haverão mais de 30 computadores online o tempo todo. Adicione a isto celulares, streaming de música, vídeos engraçados e você vai ter uma ideia!
+* Espaço para grupos de quatro a seis pessoas se reunirem: cadeiras e mesas, às vezes até almofadas grandes dão conta do recado! Estes espaços não precisam ser todos na mesma sala.
+* Possibilidade de instalar extensões e projetor.
+* Precisa ter tomadas de sobra. Algumas mulheres talvez tenham notebooks mais antigos que precisam estar plugados na tomada o tempo todo.
+* Local para organizar a comida e bebidas - espaço para almoço ou um local para almoço próximo.
+* Monitores externos para times são encorajados mas não obrigatórios; eles ajudam os coaches verem o que está acontecendo no código.
+* Quadros brancos podem ser úteis para os coaches explicarem conceitos mais abstratos. Alternativamente, papel e caneta funcionam também. Só tenha algo à mão onde as pessoas possam desenhar.
 
-Ask where local developer meetings are usually hosted. Often co-working spaces are also willing to negotiate deals to gain some visibility among new people.
+Pergunte onde encontros de desenvolvedores locais geralmente acontecem. Frequentemente, espaços de co-working estão dispostos a negociar um preço mais vantajoso para atrair visibilidade.
 
-#### What is expected from the coaches?
+#### O que é esperado dos coaches?
 
-Rails Girls events are organized around small groups, maximum of 4-5 persons per one coach. If possible, try to have groups of 3 women for each coach. For instance, if you're doing an event for 30 women, aim for having 10 coaches (a few more for backup don't hurt). We know this isn't always possible, but do try not to have groups of more than 5 women, so the coach can still answer all questions in the group.
+Eventos Rails Girls são organizados em pequenos grupos, um máximo de quatro a cinco pessoas por coach. Se possível, tente ter grupos de três mulheres para cada coach. Por exemplo, se o seu evento terá 30 mulheres, tente ter dez coaches (alguns a mais por precaução não faz mal). Nós sabemos que nem sempre isto é possível, mas tente não ter grupo de mais de cinco mulheres, para que o coach ainda consiga responder a todas as dúvidas dentro do grupo.
 
-The coaches don’t need to be hardcore experts on Rails - basic knowledge and willingness to explain trumps expertise. So, if your local Rails community isn't very strong, do expand your search. You can have a mix of Rails experts and people with web development expertise in other frameworks. We are looking for people who like answering questions and can keep an upbeat and positive atmosphere through a period of 8 hours!
+Não é obrigatório que os coaches sejam super especialistas em Rails - conhecimento básico e disposição para ensinar valem mais que expertise. Então, se a sua comunidade Rails local não é muito forte, fique à vontade para expandir sua busca. Você pode ter uma mistura de especialistas em Rails e pessoas com experiência em desenvolvimento Web com outros frameworks. Nós procuramos por pessoas que gostam de responder perguntas e que são capazes de manter uma atmosfera positiva e acolhedora durante oito horas!
 
-You can get to know the curriculum by checking out [guides.railsgirls.com/app](http://guides.railsgirls.com/app). There is also always a pre-event coach dinner where we’ll go through some pedagogical suggestions and check everyone knows what is happening. Avoid jargon, tie examples to what your doing, encourage asking questions. The installation instructions can be found at [guides.railsgirls.com/install](http://guides.railsgirls.com/install). We also understand that coaches are human and that for most of the people this is the first time teaching something. Worry not - the women have always been really happy with whatever they learn and just the chance to ask questions is enough.
+ 
+Você pode conhecer o currículo em [guides.railsgirls.com/app](http://guides.railsgirls.com/app). Também sempre existe um jantar com os coaches antes do evento onde nós damos algumas sugestões pedagógicas e checamos que todos estão entendendo o que está acontecendo. Evite jargão, associe exemplos com o que você está fazendo, encoraje as participantes a fazerem perguntas. As instruções de instalação podem ser encontradas em [guides.railsgirls.com/install](http://guides.railsgirls.com/install). 
 
+Nós também entendemos que os coaches são humanos e que para a maioria das pessoas esta é a primeira vez ensinando alguma coisa. Não se preocupe - as participantes sempre têm ficado muito feliz com o que quer que seja que elas aprendem e apenas a oportunidade de fazer perguntas já é o bastante.
 
-We hope the coaches are ok with having their name and twitter-id/github/some mean of contact on railsgirls.com so the women always have a local face to answer their questions.
+Nós esperamos que os coaches concordem em terem seus nomes e twitter/github/alguma forma de contato listados em railsgirls.com para que mulheres sempre tenham um rosto local para responderem suas dúvidas.
 
-In addition, we encourage coaches to come up with additional exercises for the group. After completing the ideation app many women will want to try tweaking the look & feel of the site, implementing commenting, Facebook sharing, pushing the app to Heroku, etc.
+Além disso, nós também encorajamos coaches a criarem exercícios adicionais para o grupo. Após finalizarem a criação da aplicação muitas mulheres vão querer tentar mexer com a aparência e usabilidade do site, implementar comentários, compartilhamento no Facebook, publicação do app no Heroku, etc.
 
-#### How to find coaches?
+#### Como encontrar coaches?
 
-Ask around, ask sponsors (tech companies), ask anyone to help you out. Once you do get some coaches on board, they can help you out with their own contacts. Influential bloggers or Twitter users in your local dev community can help you out by broadcasting a call for coaches. *Hint: You can also thank coaches for their help by providing a spot at the workshop for their girlfriends ;)*
+Pergunte por aí, pergunte a patrocinadores (empresas de tecnologia), peça para qualquer pessoa lhe ajudar. Assim que você conseguir alguns coaches a bordo, elas poderão te ajudar com seus próprios contatos. Blogueiros influentes ou usuários de twitter na sua comunidade de desenvolvimento local podem ajudá-la enviando divulgando sua busca por coaches. *Dica: Você também pode agradecer coaches por sua ajuda providenciando um lugar no workshop para suas amigas ;)*
 
-##### Sample letter for potential coaches
+##### Carta de exemplo para potenciais coaches
 
-"Dear community member,
+"Caro(a) membro da comunidade,
 
-We wish to invite you to take part in the Rails Girls event on (insert date). The event is aimed for women of all ages with no previous programming experience, but a lot of passion to building things. Rails Girls is an international non-profit, volunteer-based workshop. We've had events in Shanghai, Berlin, Helsinki, and Singapore. We expect to receive around a 100 applications.
+Nós queremos convidá-la a tomar parte no evento Rails Girls que será realizado nos dias (coloque a data). O evento é focado em mulheres de todas as idades sem nenhuma experiência de programação prévia, mas com muita paixão por criar coisas. Rails Girls é um workshop internacional sem fins lucrativos, baseado no trabalho voluntário. Nós já tivemos eventos em Shanghai, Berlin, Helsinki e Singapura. Nós esperamos receber cerca de 100 inscrições.
 
-In addition to giving a safe and fun first experience to coding for the women we want to engage them with local developers, open source, and the startup scene. We've attached some information on what coaching requires in practice. In addition, we have room for small lightning talks on technical subjects. If you have something you'd like to speak about, let us know.
+Além de oferecermos uma primeira experiência segura e divertida na programação para mulheres nós também queremos envolvê-las com desenvolvedores locais, movimento open source e a cena startup. Nós anexamos algumas informações sobre o que é necessário na prática para ser coach. Adicionalmente, nós temos espaços para palestras curtas (lightning talks) em tópicos técnicos. Se você tem algum tema sobre o qual gostaria de palestrar, nos avise.
 
-For more information about the non-profit event, check railsgirls.com or guides.railsgirls.com
+Para mais informações sobre o evento sem fins-lucrativos, cheque railsgirls.com ou guides.railsgirls.com.
 
-(You can also include the chapter "What is expected from the coaches" to the mail)"
+(Você também pode incluir o capítulo "O que esperamos dos coaches" na mensagem)"
 
 ---
 
 
 
-#### What materials do I get?
+#### Que materiais eu recebo?
 
-Each Rails Girls event gets a specific webpage.
+Cada evento Rails Girls recebe uma página específica.
 
-In addition we’ll help you out with the goodie bags, poster templates, workbooks and other swag like stickers, reflectors and so forward. All of the materials can be found on this site. You can also ask the sponsors to include some sponsor materials if they wish. We are always looking for creative outlets for the Rails Girls brand, if you have ideas, let us know!
+Adicionalmente nós também podemos ajudá-la com a sacola de brindes, templates de pôsteres, workbooks e outros brindes como stickers, reflectors e etc. Todos os materiais podem ser encontrados neste site. Você também pode pedir aos patrocinadores que incluam algumas materiais caso eles queiram. Nós estamos sempre em busca de maneiras de expandir a marca Rails Girls, se você tem alguma ideia, nos avise!
 
-So far we've had
+Até agora nós já tivemos
 
 * Stickers
 * Reflectors
-* Tattoos
+* Tatuagens
 
-Also, check out:
+Também, confira:
 
-+ [Download materials](http://www.speakerdeck.com/u/railsgirls)
++ [Baixar materiais](http://www.speakerdeck.com/u/railsgirls)
 
-#### How do I choose attendees?
+#### Como eu seleciono participantes?
 
-In the form we ask only two questions: do you have any previous background in coding and why would you be a good participant for Rails Girls
+No formulário nos fazemos apenas duas perguntas: você tem alguma experiência prévia com programação e por que você seria uma boa participante para Rails Girls.
 
-Rails Girls is intended for anyone and we want to keep it flexible enough for learners any age. However, make clear to the attendees what to expect: Rails Girls won’t make anyone into a coder, so people looking for i.e career change will be disappointed. On the other hand we like people with very diverse backgrounds and loads of enthusiasm.
+Rails Girls é um evento para todas as mulheres e nós queremos mantê-lo flexível o suficiente para participantes de quaisquer idades. No entanto, deixe bem claro o que as participantes devem esperar: Rails Girls não vai tornar ninguém uma programadora, então pessoas que estejam procurando, por exemplo, por uma mudança de carreira ficarão decepcionadas. Por outro lado, nós gostamos de pessoas com experiências bem diversas e muito entusiasmo.
 
-After selecting participants we generally split them into three groups:
+Após selecionar as participantes, nós geralmente as separamos em três grupos:
 
-1. people with no previous programming experience
-2. people with some front-end experience (HTML, CSS, Javascript) and
-3. people with a little experience in programming or a background in computer sciences. You can use the different name-tags for each group if you want to (rubies, foxes, octocats, rails..)
-
-
-##### Sample letter of acceptance
-
-Title: Rails Girls workshop - welcome!
-
-Dear attendee,
-
-Congratulations! We’re happy to invite you to join in on the  Rails Girls workshop in (insert city). We hope that this workshop will provide you a great first experience on building web apps.
-
-What happens next?
-
-(Insert date for installation fest) starts at (insert time) with an installation fest - so please bring your laptop with you! You should also try to pre-install Rails with instructions from <http://guides.railsgirls.com/install/>
-
-We will hold the event in (insert address)
-
-On (insert date) we’ll dive into development. We’ll work in small groups with four to six person teams. Your team members will have about the same experience level as you. We'll be all developing a simple listing application. We'll wrap the day around (insert time). There's also going to be an evening party.
-
-We have a lot of people wanting to get to the class, so if you can’t make it this time, let us know as soon as possible!
-
-If you have any questions, please don't hesitate to contact me. We'll also be updating the website at (insert address)!
-
-Best,
-
-(Signature)
-
-##### Sample letter of not being accepted
-
-Title: Rails Girls - not accepted this time
-
-Dear applicant,
-
-Unfortunately we couldn’t fit you in the workshop this time. To be able to give personal guidance to each participant, we could only take a fraction of the applicants. This time we prioritized women with no previous programming experience.
-
-However, you're warmly welcome to the official afterparty. (Insert details).
-
-We'll also be most likely organizing more events in your city. Follow twitter.com/railsgirls or facebook.com/railsgirls for more information.
-
-There's always cancellations and we fill all available places, so we might still be taking in a couple of people!
-
-Best,
-
-(Signature)
-
-##### Sample thank you letter for participants
-
-Dear Rails Girls,
-
-Thank you for taking part in the Rails Girls event. We truly felt lucky to have such a talented & enthusiastic crowd of people with us and hope many of you will continue working with Rails in the future - you have the tools, now build something cool!
-
-(Say a few words about the sponsors and coaches - thank you for the community)
-
-Three things we want to share:
-in
-Workshop Materials
-(Almost all) materials can be found in the guides section at http://guides.railsgirls.com. You can find presentations, materials and instructions from the workshop. If you took pictures or blogged about the event - let us know! We'll be publishing regularly on blog.railsgirls.com
-
-Make Rails Girls better - give us feedback!
-We want to hear from you! Give us feedback about the workshop or how we can make the event better – it’s really quick, and it’ll help us improve our workshop at railsgirls.com/feedback
-
-Keep on coding!
-We realize there was quite a lot of stuff in todays lecture and for most of you it all felt a little overwhelming. We strongly recommend trying out Rails for Zombies exercise at http://www.codeschool.com/ latest by next weekend, it'll refreshen all you've learned so far and teach you some more.
-
-Two things to keep you going:
-- (Insert here a couple of community events that the participants should take part in)
-
-There was a LOT of interest in doing follow-up events. If you have ideas for this or want to volunteer for the organizing team, let us know and sign up for the group e-mailing list at http://groups.google.com/group/rails-girls-team!
-
-And that’s all for now,
-Your Rails Girls team
+1. pessoas com nenhuma experiência anterior em programação
+2. pessoas com alguma experiência em front-end (HTML, CSS, Javascript) e
+3. pessoas com alguma experiência em programação ou algum conhecimento em informática. Você pode usar os diferentes crachás para cada grupo se quiser (rubies, foxes, octocats, rails..)
 
 
+##### Exemplo de carta de aceitação
+
+Título: Rails Girls workshop - bem-vinda!
+
+Cara participante,
+
+Parabéns! Estamos felizes em convidá-la para participar do nosso workshop Rails Girls em (cidade). Nós esperamos que este workshop lhe proporcione uma ótima primeira experiência na criação de aplicações web.
+
+O que acontece agora?
+
+(Coloque a data para festa de instalação) começa às (coloque horário) com uma festa de instalação - então por favor traga seu notebook com você! Você também pode tentar pré-instalar Rails com as instruções seguintes: <http://guides.railsgirls.com/install/>
+
+O evento será realizado em (coloque endereço).
+
+No dia (data) iremos mergulhar no desenvolvimento. Vamos trabalhar em pequenos grupos com times contendo de quatro a seis pessoas. Suas colegas de time terão aproximadamente o mesmo nível de experiência que você. Nós estaremos desenvolvendo uma aplicação de listagem simples. O evento termina por volta das (coloque a hora). Também haverá uma festa à noite.
+
+Nós temos muitas pessoas querendo participar, então se por alguma razão você não puder comparecer desta vez, por favor nos avise o mais cedo possível!
+
+Se você tiver qualquer dúvida, não hesite em entrar em contato. Nós também estaremos atualizando o site no endereço (adicione endereço).
+
+Atenciosamente,
+
+(Assinatura)
+
+##### Exemplo de carta de não aceitação
+
+Título: Rails Girls - não aceita desta vez
+
+Cara inscrita,
+
+Infelizmente não podemos incluí-la no workshop desta vez. Para sermos capazes de oferecer orientação pessoal a cada participante, tivemos que acomodar apenas uma fração das inscritas. Desta vez nós priorizamos mulheres sem experiência prévia com programação.
+
+Entretanto, você está mais que convidada para a pós-festa oficial. (Insira detalhes).
+
+É muito provável que nós organizemos mais eventos na sua cidade no futuro. Siga twitter.com/railsgirls ou facebook.com/railsgirls para mais informações.
+
+Sempre tem algum cancelamento de última hora e nós preenchemos todos os lugares disponíveis, então ainda é possível incluirmos mais algumas pessoas!
+
+Atenciosamente,
+
+(Assinatura)
+
+##### Exemplo de carta de agradecimento para as participantes
+
+Caras Rails Girls,
+
+Obrigada por terem feito parte do evento Rails Girls. Nós nos sentimos muito sortudas em ter um grupo de pessoas tão talentosas e entusiasmadas conosco e esperamos que muitas de vocês continuem trabalhando com Rails no futuro - vocês têm as ferramentas, agora é hora de construir algo legal!
+
+(Diga algumas palavras sobre os patrocinadores e coaches - obrigada pela comunidade)
+
+Três coisas que queremos compartilhar:
+em Materiais do Workshop
+(Quase todos) materiais podem ser encontrados na seção de guias em http://guides.railsgirls.com. Você pode achar apresentações, materiais e instruções para o workshop. Caso você tenha tirado fotos ou blogado sobre o evento - nos avise! Nós vamos publicar regularmente em blog.railsgirls.com
+
+
+Torne o Rails Girls melhor - nos dê seu feedback!
+Queremos ouvir sua opinião! Nos dê feedback sobre o workshop ou sobre como nós podemos melhorar o evento - é rapidinho, e vai nos ajudar a melhorar nosso workshop em railsgirls.com/feedback
+
+
+Continue programando!
+Nós sabemos que houve bastante coisa na palestra de hoje e para a maioria de vocês talvez tenha sido um pouco pesado. Nós recomendamos fortemente experimentar os exercícios Rails for Zombies em http://www.codeschool.com/latest no próximo final de semana, isso vai ajudar a refrescar o que vocês aprenderam até agora e ensinar algumas coisas novas também.
+
+Duas coisas para mantê-las no ritmo:
+- (Insira aqui uns dois eventos da comunidade que as participantes deveriam participar)
+
+
+Houve MUITO interesse em criar eventos de continuação. Se você tem ideias para isso ou quer se voluntariar para a equipe de organização, nos avise e assine a lista de e-mail em http://groups.google.com/group/rails-girls-team!
+
+É o que temos por hoje,
+Sua equipe Rails Girls
 
 
 
-#### What happens after the event?
 
-Inviting real developers to coach is Rails Girls sessions not only gives the participants a chance for hands-on education, but also makes the barrier to enter the technology world lower. How to keep the women coding?
 
-* Encourage them to continue practicing by trying different exercises like Codecademy and such.
-* Mention at least two forthcoming developer events where the local coaches will be. Try to get the women to attend actual developer meetups.
-* Invite everyone to the Facebook Group where they can ask questions.
-* Invite the women together again within a month. You can host these meetups at the Rails Girls global meetup page <http://www.meetup.com/Rails-Girls/> - we’ll be happy to promote events. However, it doesn't matter under which brand you want to continue meeting - the important thing'
-* Write about your event for blog.railsgirls.com by [submitting a story](http://blog.railsgirls.com/submit)
+#### O que acontece depois do evento?
+
+Convidar desenvolvedores reais para serem coaches em sessões Rails Girls não apenas dá às participantes a chance de educação na prática, mas também diminui a barreira de acesso ao mundo da tecnologia. Como fazer com que as mulheres continuem programando?
+
+* Encoraje as participantes a continuarem praticando através de diferentes exercícios, tais como Codecademy e similares.
+* Mencione pelo menos dois eventos que ocorrerão em breve onde os coaches locais irão participar. Tente fazer com que as mulheres participarem de encontros de desenvolvedores para valer.
+* Convide todas a entrarem no grupo do Facebook onde poderão fazer perguntas.
+* Convide as mulheres a se reunirem novamente depois de um mês. Você pode hospedar estas reuniões na página de reuniõe globais Rails Girls <http://www.meetup.com/Rails-Girls/> - nós ficaremos felizes em promover eventos. Porém, não importa sob qual marca vocês continuarem a se reunir - a coisa importante'
+* Escreva sobre seu evento para blog.railsgirls.com [enviando uma história](http://blog.railsgirls.com/submit)
 
 
 
@@ -438,46 +444,46 @@ Inviting real developers to coach is Rails Girls sessions not only gives the par
 
 ## Checklist
 
-This is a small checklist for your event. Rails Girls can be thrown together in a matter of weeks, but to truly have time to make a good event, prepare at least two months. Not all of these steps are of course mandatory and they are here just to help you remember.
+Esta é uma pequena checklist para seu evento. Um evento Rails Girls pode ser organizado em questão de semanas, mas para ter tempo de fazer um evento realmente bom, prepare pelo menos dois meses. É claro que nem todos os passos a seguir são obrigatórios e estão aqui apenas para ajudar você a lembrar.
 
-### Before the event:
+### Antes do evento:
 
-* Fill in the [application](http://railsgirls.com/inyourcity) and the team will contact you!
-* Start working with the project plan template on Google Docs
-* Decide dates and set a venue
-* Reach out for the local coaches - try finding five people who commit to taking part
-* Release the website: write the copy and suggest a theme
-  1. Dates and location.
-  2. Application deadlines.
-  3. Short introductory text, around 200 characters. Check out the past events for inspiration!
-  4. Speakers of the day
-  5. Partners - a two parapgraph sentence and a logo (100 x 100px or 250 x 90px and in png format)
-  6. Coaches with twitter-handle
+* Preencha a [inscrição](http://railsgirls.com/inyourcity) e o time vai entrar em contato com você!
+* Comece a trabalhar com o template do planejamento do projeto no Google Docs
+* Decida datas e local
+* Aborde coachs locais - tente encontrar cinco pessoas que se comprometam a participar
+* Lance o website: escreva a cópia e sugira um tema
+  1. Datas e local.
+  2. Prazos para inscrição.
+  3. Texto de introdução curto, cerca de 200 caracteres. Confira os eventos passados para se inspirar!
+  4. Palestrantes do dia.
+  5. Parceiros - dois parágrafos de texto e um logo (100 x 100px ou 250 x 90px e no formato png)
+  6. Coaches com nome de usuário no twitter
 
-* Start marketing the event, you can use materials from [here](http://www.speakerdeck.com/u/railsgirls)
-* Start looking for sponsors
-* Reach out for press and write a pre-event story
-* E-mail accepted participants and non-accepted applicants
-* E-mail installation instructions and last minute event details
-* Set a date for coach dinner and send them instructions
-* Check if there are other events taking place the same weekend
+* Comece a divulgar o evento, você pode usar materiais [daqui](http://www.speakerdeck.com/u/railsgirls)
+* Comece a procurar por patrocinadores
+* Aborde a imprensa e escreve uma matéria de pré-evento
+* Envie e-mail para as participantes aceitas e não-aceitas
+* Envie e-mail com instruções de instalação e detalhes de última hora para o evento
+* Escolha uma data para jantar com os coaches e envie instruções para eles
+* Confira se há outros eventos acontecendo no mesmo final de semana
 
-#### During the event
+#### Durante o evento
 
 * Tweet!
-* Remember to take photos
-* Interview participants and speakers about their experiences
-* Do a Friday Hug! Learn more about Friday hugs at [Fridayhug.com](http://fridayhug.com)
-* Have a Skype with other Rails Girls chapters hosting events at the same time
+* Lembre-se de tirar fotos
+* Entreviste participantes e palestras sobre suas experiências
+* Dê um Friday Hug! Aprenda mais sobre Friday Hugs em [Fridayhug.com](http://fridayhug.com)
+* Converse por Skype com outros capítulos das Rails Girls tendo eventos ao mesmo tempo
 
-#### After the event
+#### Após o evento
 
-* Update website to include pictures and blogposts
-* Upload your photos to our [official Flickr group](http://flickr.com/groups/railsgirls/) (preferably under a [Creative Commons](http://www.flickr.com/groups/railsgirls/discuss/72157634650757777/) licence!)
-* Invite active participants to [global e-mail list](https://groups.google.com/group/rails-girls-team)
-* Send a thank you note to participants and ask for [feedback](http://www.railsgirls.com/feedback) (you can also create your own feedback form in your local language)
-* Send a thank you note to coaches
-* Send a thank you note for organizers
-* Add yourself to the [Rails Girls Map](http://rails-girls-map.herokuapp.com/)
-* Share the numbers of your event by filling out this short [Questionaire](https://railsgirls.wufoo.eu/forms/rails-girls-events-all-the-numbers/)
-* Write a blogpost to the global blog by [submitting your story](http://blog.railsgirls.com/submit) - or ask one of the participants or coaches to write one!
+* Atualize o site para incluir fotos e posts
+* Suba suas fotos para nosso [grupo oficial no Flickr](http://flickr.com/groups/railsgirls/) (de preferência sob uma licença [Creative Commons!](http://www.flickr.com/groups/railsgirls/discuss/72157634650757777/))
+* Convite participantes ativas para nossa [lista de e-mails global](https://groups.google.com/group/rails-girls-team)
+* Envie uma nota de agradecimento às participantes e peça por [feedback](http://www.railsgirls.com/feedback) (você também pode criar seu próprio formulário na sua linguagem local)
+* Envie uma nota de agradecimento aos coaches
+* Envie uma nota de agradecimento aos organizadores
+* Se adicione ao [Mapa Rails Girls](http://rails-girls-map.herokuapp.com/)
+* Compartilhe os números do seu evento preenchendo este pequeno [questionário](https://railsgirls.wufoo.eu/forms/rails-girls-events-all-the-numbers/)
+* Escreva um blogpost no blog global [submetendo sua história](http://blog.railsgirls.com/submit) - ou peça à alguma das participantes ou coaches para escrever uma!
