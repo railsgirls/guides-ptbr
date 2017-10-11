@@ -31,26 +31,26 @@ Agora podemos gerar o código para a execução do upload. No terminal, execute:
 rails generate uploader Picture
 ```
 
-Nesse momento você irá **precisar reiniciar servidor do Rails** no terminal
+Nesse momento você irá **precisar reiniciar o servidor do Rails** no terminal.
 
 Precione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servidor. Uma vez parado, você pode apertar a seta pra cima no seu teclado para pegar o ultimo comando executado, entao aperte o enter para iniciar o servidor novamente.
 
 
 Isso é necessário para que o app carregue a biblioteca adicionada.
 
-Abra `app/models/place.rb` e adicione
+Abra `app/models/place.rb` e adicione:
 
 ```
 mount_uploader :picture, PictureUploader
 ```
 
-Abra `app/views/places/_form.html.erb` e mude
+Abra `app/views/places/_form.html.erb` e mude:
 
 ```
 <%= f.text_field :picture %>
 ```
 
-para
+para:
 
 ```
 <%= f.file_field :picture %>
@@ -59,13 +59,13 @@ para
 
 Algumas vezes você pode obter um *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*.
 
-Se isso acontecer, no arquivo `app/views/places/_form.html.erb` mude a linha
+Se isso acontecer, no arquivo `app/views/places/_form.html.erb` mude a linha:
 
 ```
 <%= form_for(@place) do |f| %>
 ```
 
-Para
+para:
 
 ```
 <%= form_for @place, :html => {:multipart => true} do |f| %>
@@ -73,13 +73,13 @@ Para
 
 Agora, se você executar o seu servidor e tentar adicionar um novo local com uma imagem, você notará que a imagem não parece bonita porque mostra apenas um caminho para o arquivo. Vamos consertar isso.
 
-Abra `app/views/places/show.html.erb` e mude
+Abra `app/views/places/show.html.erb` e mude:
 
 ```
 <%= @place.picture %>
 ```
 
-Para
+para:
 
 ```
 <%= image_tag(@place.picture_url, :width => 600) if @place.picture.present? %>
@@ -94,17 +94,17 @@ __Coach__: Explique o que especifica a largura da imagem em HTML no final da eta
 
 ## Instalando ImageMagick
 
-* OS X: Execute `brew install imagemagick`. Se você nao tiver o comando brew, você [instalar aqui][in-homebrew].
-* Windows: download e execute [ImageMagick installer][im-win] (use o primeiro
+* OS X: Execute `brew install imagemagick`. Se você nao tiver o comando brew, você pode [instalar aqui][in-homebrew].
+* Windows: Baixe e execute [ImageMagick installer][im-win] (use o primeiro
   *download* link). Depois reabra o Shell de comando do Rails.
-* Linux: noe Ubuntu e Debian, execute `sudo apt-get install imagemagick`. Use o gerenciador de pacote apropriado ao invés de usar `apt-get` para outras distribuições.
+* Linux: No Ubuntu e Debian, execute `sudo apt-get install imagemagick`. Use o gerenciador de pacote apropriado ao invés de usar `apt-get` para outras distribuições.
 
   [im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
   [in-homebrew]: http://mxcl.github.io/homebrew/
 
 __Coach__: O que é ImageMagick e o que difere das bibliotecas usadas anteriormente?
 
-Abra `Gemfile` no projeto e adicione
+Abra `Gemfile` no projeto e adicione:
 
 ```
 gem 'mini_magick', '3.5.0'
@@ -142,13 +142,13 @@ have weren't affected. Então, edite um dos lugares existentes e volte a adicion
 ## Mostrando as thumbnails
 
 Para ver se a imagem carregado foi redimencionada abra
-`app/views/places/index.html.erb`. Mude a linha
+`app/views/places/index.html.erb`. Mude a linha:
 
 ```
 <td><%= place.picture %></td>
 ```
 
-Para
+para:
 
 ```
 <td><%= image_tag place.picture_url(:thumb) if place.picture? %></td>
