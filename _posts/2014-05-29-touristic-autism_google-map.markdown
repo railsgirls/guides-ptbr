@@ -68,6 +68,7 @@ Crie seu view/google/index.html.erb:
 
 <h1>Veja alguns indicadores defaults no seu mapa</h1>
 <div class="google_map"></div>
+
 ```
 <%= gmaps("markers" => {"data" => markers},
           'last_map' => false,
@@ -76,15 +77,18 @@ Crie seu view/google/index.html.erb:
             "detect_location" => true,
             "provider" => "google", :id => 'google_map'}) %>
 ```
+
 <h1>Veja em camadas abertas</h1>
 <div class="openlayer_map"></div>
-  ```
+
+```
 <%= gmaps("markers" => {"data" => markers},
           "map_options" =>  {
   "center_on_user" => true,
   "detect_location" => true,
   "provider" => "openlayers", :id => 'openlayer_map'}) %>
 ```
+
 Adicione o seguinte no app: app/views/application.html.erb after "<%= yield %>":
 
 ```
