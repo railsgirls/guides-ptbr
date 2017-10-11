@@ -19,9 +19,9 @@ gem 'gmaps4rails'
 {% endhighlight %}
 
 
-Bundle como de costume. Em seguida adicione um novo arquivo: app/model/marker.rb
+Execute o Bundle como de costume. Em seguida adicione um novo arquivo: app/model/marker.rb
 
-`{% highlight sh %}
+{% highlight sh %}
 class Marker
 
   include ActiveModel::Validations
@@ -36,11 +36,11 @@ class Marker
     end
 
 end
-{% endhighlight %}`
+{% endhighlight %}
 
 
 
-Then add to config/application.rb within your project block:
+Em seguida, adicione o config/application.rb dentro do seu escopo do projeto:
 
 {% highlight sh %}
 config.active_support.escape_html_entities_in_json = true
@@ -50,7 +50,7 @@ config.assets.enabled = true
 config.assets.version = '1.0'
 {% endhighlight %}
 
-Create your app/controllers/google_controller.rb:
+Crie seu app/controllers/google_controller.rb:
 
 {% highlight sh %}
 class GoogleController < ApplicationController
@@ -68,10 +68,10 @@ class GoogleController < ApplicationController
 end
 {% endhighlight %}
 
-Create your view/google/index.html.erb:
+Crie seu view/google/index.html.erb:
 
 {% highlight sh %}
-<h1>See some marker on your map by default</h1>
+<h1>Veja alguns indicadores defaults no seu mapa</h1>
 <div class="google_map"></div>
 <%= gmaps("markers" => {"data" => markers},
           'last_map' => false,
@@ -80,7 +80,7 @@ Create your view/google/index.html.erb:
             "detect_location" => true,
             "provider" => "google", :id => 'google_map'}) %>
 
-<h1>See on OpenLayer</h1>
+<h1>Veja em camadas abertas</h1>
 <div class="openlayer_map"></div>
 
 <%= gmaps("markers" => {"data" => markers},
@@ -90,13 +90,13 @@ Create your view/google/index.html.erb:
   "provider" => "openlayers", :id => 'openlayer_map'}) %>
 {% endhighlight %}
 
-Add the following in app/views/application.html.erb after "<%= yield %>":
+Adicione o seguinte no app: app/views/application.html.erb after "<%= yield %>":
 
 {% highlight sh %}
 <%= yield :scripts %>
 {% endhighlight %}
 
-Finally add the following to your config/routes.rb:
+Para finalizar, adicione o seguinte na sua config/routes.rb:
 
 {% highlight sh %}
   get '/google' => 'google#index'
