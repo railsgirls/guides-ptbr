@@ -1,73 +1,76 @@
 ---
 layout: default
-title: Rails Girls on anynines
+title: Rails Girls no anynines
 permalink: anynines
 ---
 
-# Put your app online with anynines
+# Coloque seu app online com anynines
 
-*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)*
+*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)*
 
-__COACH__: Talk about the benefits of deploying to anynines vs utilising US data centers.
+*Traduzido por [Júlio Fortunato](https://github.com/JulioFortunato)*
 
-### Get yourself some anynines
+__COACH__: Fale sobre os benefícios de fazer o deploy para o anynines vs utilizar outros data centers.
 
-1. [Create an anynines account](http://anynines.com/).
+### Pegue um pouco de anynines para você
 
-2. [Download and install the Command Line Interface](https://anynines.zendesk.com/entries/60241846-How-to-install-the-CLI-v6) to interact with anynines.
+1. [Crie uma conta do anynines](http://anynines.com/).
 
-3. Now select the anynines api endpoint as target and authenticate using your user credentials:
+2. [Faça o download e installe a Interface de Linha de Comando](https://anynines.zendesk.com/entries/60241846-How-to-install-the-CLI-v6) para interagir com o anynines.
+
+3. Agora selecione o endpoint da api do anynines como destino e autentique-se usando suas credenciais:
 
 {% highlight sh %}
 cf api https://api.de.a9s.eu  
-cf login -u [your@email] -p [yourpassword]  
+cf login -u [seu@email] -p [suasenha]  
 {% endhighlight %}
 
-
-Or if that doesn't work for you, use:
+Ou, se isso não funcionar para você, use:
 
 {% highlight sh %}
 cf login
 {% endhighlight %}
 
-... which will prompt you for your email address and password.
+... que solicitará seu endereço de email e senha.
 
-Wonder what that `cf` stands for? It's short for [Cloud Foundry](http://www.cloudfoundry.com/), a system anynines is using behind the scenes.
+Se perguntando o que `cf` significa? É um atalho para [Cloud Foundry](http://www.cloudfoundry.com/), um sistema que o anynines usa nos bastidores.
 
-### Push your app online
+### Envie seu app online
 
-Let's push this source code from your local machine to anynines:
+Vamos enviar o código-fonte da sua máquina local para o anynines:
 {% highlight sh %}
-$> cf push [application-name-of-your-choosing]
+$> cf push [nome-do-app-de-sua-escolha]
 {% endhighlight %}
 
-This will fail miserably since the example application needs a MySQL database to start. So, lets create one! The command below will create a MySQl service with a free service plan. After the plan name you have to specify a name for the service instance. This name will be used for further commands to refer to this service instance:
+Isso falhará miseravelmente, já que a aplicação precisa de um banco de dados MySQL para iniciar. Então, vamos criar um! O comando abaixo vai criar um serviço do MySQL com o plano gratuito. Depois do nome do plano, você precisa especificar um nome para a instância do serviço. Esse nome será usado em comandos futuros para se referir à essa instância do serviço:
 
-$> cf create-service mysql Pluto-free [service-name-you-can-choose]
-
-(Really, you can use any name. Make it count!)
-
-Next, binding the MySQL service instance to the application, to grant the application access to the MySQL instance, type:
 {% highlight sh %}
-$> cf bind-service [app-name-you-have-chosen-above] [service-name-you-have-chosen-above]
+$> cf create-service mysql Pluto-free [nome-do-servico-de-sua-escolha]
 {% endhighlight %}
 
-Finally we have to restart the application to make sure the service binding takes effect:
+(Sério, você pode usar qualquer nome. Faça valer a pena!)
+
+Em seguida, vinculamos a instância do serviço MySQL à aplicação, para conceder à aplicação acesso à instância do MySQL, digite:
 {% highlight sh %}
-$> cf restart [app-name-you-have-chosen-above]
+$> cf bind-service [nome-do-app-que-você-escolheu-acima] [nome-do-serviço-que-você-escolheu-acima]
 {% endhighlight %}
 
-You will see this:  
+Por fim, temos que reiniciar a aplicação para garantir que o vínculo do serviço funcionou:
+{% highlight sh %}
+$> cf restart [nome-do-app-que-você-escolheu-acima]
+{% endhighlight %}
+
+Você verá isto:  
 {% highlight sh %}
 Creating service postgresql-d2197... OK  
 Binding postgresql-d2197 to railsgirls... OK  
 {% endhighlight %}
 
-Ending with... `Push successful! App 'railsgirls' available at railsgirls.de.a9sapp.eu`. Score!
+Terminando com... `Push successful! App 'railsgirls' available at railsgirls.de.a9sapp.eu`. Score!
 
-### Version Control
+### Controle de Versão
 
-We need to add our new code to version control. You can do this by running the following in the terminal:
+Nós precisamos adicionar nosso novo código ao controle de versão. Você pode fazer isso executando o seguinte comando no terminal:
 
 {% highlight sh %}
 git status
@@ -75,11 +78,11 @@ git add .
 git commit -m "add anynines deployment"
 {% endhighlight %}
 
-__COACH__: This would be a great time to talk about version control systems and git, if you haven't already.
+__COACH__: Este será um ótimo momento para falar sobre sistemas de controle de versão e git, se ainda não o fez.
 
-### Help
+### Ajuda
 
-You can check all available cf sub-commands by typing `cf help`.
-In case your terminal does not have all the answers, the anynines team probably does. Just shoot them a mail at support@anynines.com.
+Você pode checar todos os sub-comandos do cf disponíveis digitando `cf help`.
+No caso de seu terminal não ter todas as respostas, a equipe do anynines certamente terá. Apenas envie um email para eles em support@anynines.com.
 
-Happy deploying!
+Bons deploys!

@@ -1,62 +1,63 @@
 ---
 layout: default
-title: Add design to your App with HTML and CSS
+title: Adicione design à sua aplicação com HTML e CSS
 permalink: design-html-css
 ---
 
-1.Design your header
+# Adicione design à sua aplicação com HTML e CSS
+*Traduzido por [@MADPT](https://github.com/MADPT) aka [Miguel Ângelo](http://www.miguelangelo.io)*
 
-+ put the following code to the bottom of `app/assets/stylesheets/application.css`:
+**Esse guia assume que você já construiu o app do Rails Girls** [**seguindo o tutorial de desenvolvimento do app**](/app).
+
+1.Desenhe o cabeçalho
+
++ Coloque o seguinte código na parte inferior do arquivo `app/assets/stylesheets/application.css`:
 
     ```
     .navbar {
         min-height: 38px;
-      background-color: #f55e55;
+        background-color: #f55e55;
     }
     ```
 
-  Now refresh the page and check the changes. You can try change the
-    color or font of the header. You can check the color reference
-    from [http://color.uisdc.com/](http://color.uisdc.com/).
+  Agora atualize a página e verifique as mudanças. Você pode tentar alterar a cor ou fonte do cabeçalho. Você pode verificar a referência de cor aqui [http://color.uisdc.com/](http://color.uisdc.com/).
 
-    **Coach: ** talk about the property `display`, inline and block element.
+    **Coach:** fale sobre a propriedade `display`, `inline` e `block`.
 
-+ Then put these lines at the bottom：
++ Em seguida, coloque estas linhas na parte inferior:
 
     ```
     .navbar a.brand { font-size: 18px; }
     .navbar a.brand:hover {
-     color: #fff;
-     background-color: transparent;
-     text-decoration: none;
+         color: #fff;
+        background-color: transparent;
+        text-decoration: none;
     }
     ```
 
-    **Coach: ** explain the 4 states of a link
+    **Coach:** explique os 4 estados de um link
 
 
-2.Design your table
+2.Desenhe a tabela
 
- + We simply use the twitter [Bootstrap](http://getbootstrap.com/) to
-   polish our table. Find this line from
-   app/views/ideas/index.html.erb and replace:
+ + Nós simplesmente usamos o Twitter [Bootstrap](http://getbootstrap.com/) para polir a nossa tabela. Encontre esta linha no arquivo `app/views/ideas/index.html.erb` e substitua:
 
    `<table>`
 
-   with
+   com
 
    `<table class="table">`
 
- + Modify size of the picture using the following lines
+ + Modifique o tamanho da imagem usando as seguintes linhas
 
      ```
      <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
      ```
 
-     try to change the width and see what's gonna happen
+     Tente mudar a largura e veja o que vai acontecer
 
 
- + add the following lines to the bottom of file app/assets/stylesheets/ideas.css.scss:
+ + Adicione as seguintes linhas à parte inferior do arquivo `app/assets/stylesheets/ideas.css.scss`:
 
   ```
   .container a:hover {
@@ -67,14 +68,13 @@ permalink: design-html-css
   ```
 
 
- + try add some background style with property `background-image`,
-   reference to
-   [http://subtlepatterns.com/](http://subtlepatterns.com/) for some patterns.
+ + Tente adicionar algum estilo ao fundo com a propriedade `background-image`, use como referência
+   [http://subtlepatterns.com/](http://subtlepatterns.com/) para alguns padrões.
 
 
-3.add style to footer
+3.Adicione estilo ao rodapé
 
-+ add the lines to bottom of  app/assets/stylesheets/application.css:
++ Adicione as linhas ao fundo do ficheiro `app/assets/stylesheets/application.css`:
 
     ```
     footer {
@@ -83,15 +83,13 @@ permalink: design-html-css
     }
     ```
 
-    try put more things into `footer`, then adjust it's position.
+    Tente adicionar mais coisas em `footer`, depois ajuste sua posição.
 
-4.add style to button
+4.Adicione estilo ao botão
 
-  + open
-    [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new)
-    and find the `Create Idea` button.
+  + Abra [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new) e encontre o botão `Create Idea`.
 
-   add these lines to app/assets/stylesheets/ideas.css.scss
+   Adicione estas linhas ao ficheiro `app/assets/stylesheets/ideas.css.scss`
 
    ```
    .container input[type="submit"] {
@@ -103,5 +101,4 @@ permalink: design-html-css
     }
    ```
 
-   **Coach** explain how to use `border` in css, try modify the style
-     of button like round the corner, add shadow or color etc.
+   **Coach** explique como usar `border` em css, tente modificar o estilo do botão como em volta da esquina, adicione sombra ou cor, etc.
