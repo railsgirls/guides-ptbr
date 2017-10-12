@@ -57,6 +57,7 @@ Todo evento Rails Girls começa com a festa de instalação onde configurações
 #### Sexta-feira: Instalação
 
 19:00 - 21:00 Instalações e conhecendo uns aos outros
+
 *Dica*: Tenha uma mesa com coaches onde computadores problemáticos poderão ir.
 
 Algumas instalações irão falhar: esteja preparado para deixar mulheres em pares, não passe muito tempo se preocupando com isso.
@@ -68,6 +69,7 @@ Venha com atividades para quebrar o gelo: pergunte as meninas para escrever porq
 Lembre-se de fazer um [FridayHug](http://fridayhug.com)!
 
 21 -> Jantar com Coaches
+
 Repassar a aplicação com os coaches durante jantar.
 
 
@@ -75,14 +77,17 @@ Repassar a aplicação com os coaches durante jantar.
 #### Sábado: Workshop
 
 09:00 - 10:00 Credenciamento e café 
+
 *Dica* Reserve tempo suficiente para que as pessoas possam interagir e resolver quaisquer problemas que possam haver com as instalações. Distribua workbooks, colete acrônimos para o exercício Bento.
 
-10:00 - 10:10 Boas-vindas 
+10:00 - 10:10 Boas-vindas
+ 
 *Dica* Mencione apoiadores, mostre o que iremos construir, explique o que é programação.
 
 10:30 - 11:00 Workshop de UX
 
 11:00 - 11:30 Introdução à programação 
+
 *Dica* Peça a algum dos coaches para fazer isto. Explique porque aprender os básicos de Ruby é importante mesmo se vamos estar utilizando Rails.
 
 Temas a serem abordados:
@@ -94,6 +99,7 @@ Temas a serem abordados:
 Show & tell com <a href="http://tryruby.org">tryruby.org</a>, primeiros três a quatro excerícios todas juntas.
 
 11:30 - 13:00 Hora para o workshop
+
 Avançando (lentamente!) através do currículo em <a href="http://guides.railsgirls.com/app">guides.railsgirls.com/app</a>. Pare para explicar o que você está fazendo e o que os diferentes conceitos significam.
 
 Tenha como objetivo explicações simples, mesmo que à custo da precisão. Você não precisa falar sobre todos os conceitos fundamentais. Apenas tente responder as dúvidas quando elas surgirem, ou siga em frente se elas forem muito difíceis ou além do escopo. Você não está aqui para ensinar habilidades de programação perfeitas mas para mostrar como conseguir criar algo. É necessário aprender a criar aplicações web antes de aprender a criá-las bem.
@@ -112,6 +118,7 @@ Conceitos para abordar:
 13:00 - 14:00 Almoço
 
 14:00 - 14:30 Exercício Bentobox
+
 Colocando jargão técnico em contexto com um modelo conceitual chamado Bentobox.
 
 Dois exercícios: 1) Abordar os dez conceitos técnicos com os tabuleiros Bentobox.  2) Abordar as palavras que as próprias mulheres submeteram aos coaches.
@@ -133,9 +140,9 @@ Sugestões de tópicos para palestras rápidas:
 
 Assim que todas tiverem finalizado suas aplicações, vai haver tempo para estender a aplicação modificando o CSS, implementando sistemas de comentários, etc. Permita que haja tempo suficiente para experimentação.
 
-19:00 Pós-festa  
-*Dica:*
-Convite todo mundo, os desenvolvedores locais também, rapazes, quem não foi aceito, para participar!
+19:00 Pós-festa
+  
+*Dica:* Convite todo mundo, os desenvolvedores locais também, rapazes, quem não foi aceito, para participar!
 
 [Fork este projeto no GitHub][github], se adicione, e nos envie um pull request.
 
@@ -306,7 +313,9 @@ Além disso, nós também encorajamos coaches a criarem exercícios adicionais p
 
 #### Como encontrar coaches?
 
-Pergunte por aí, pergunte a patrocinadores (empresas de tecnologia), peça para qualquer pessoa lhe ajudar. Assim que você conseguir alguns coaches a bordo, elas poderão te ajudar com seus próprios contatos. Blogueiros influentes ou usuários de twitter na sua comunidade de desenvolvimento local podem ajudá-la enviando divulgando sua busca por coaches. *Dica: Você também pode agradecer coaches por sua ajuda providenciando um lugar no workshop para suas amigas ;)*
+Pergunte por aí, pergunte a patrocinadores (empresas de tecnologia), peça para qualquer pessoa lhe ajudar. Assim que você conseguir alguns coaches a bordo, elas poderão te ajudar com seus próprios contatos. Blogueiros influentes ou usuários de twitter na sua comunidade de desenvolvimento local podem ajudá-la enviando divulgando sua busca por coaches. 
+
+*Dica: Você também pode agradecer coaches por sua ajuda providenciando um lugar no workshop para suas amigas ;)*
 
 ##### Carta de exemplo para potenciais coaches
 
