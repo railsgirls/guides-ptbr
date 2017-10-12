@@ -4,7 +4,7 @@ title: App para turismo de autismo amigável
 permalink: touristic-autism_image-upload
 ---
 
-# Envio de imagem e thumbnails
+# Envio de imagens e thumbnails
 
 *Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
 *para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
