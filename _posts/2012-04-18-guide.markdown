@@ -6,7 +6,7 @@ permalink: guide
 
 # Como organizar eventos Rails Girls
 
-*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
+*Traduzido por Maujor ([site do Maujor](http://www.maujor.com)) e [Carlos Schults](http://carlosschults.net)*
 
 ## Organizando seu primeiro evento Rails Girls
 
@@ -75,8 +75,6 @@ Repassar a aplicação com os coaches durante jantar.
 
 
 #### Sábado: Workshop
-
-*Traduzido por [Carlos Schults](http://carlosschults.net)*
 
 09:00 - 10:00 Credenciamento e café 
 
