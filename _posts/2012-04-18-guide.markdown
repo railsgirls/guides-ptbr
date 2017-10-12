@@ -78,7 +78,7 @@ Repassar a aplicação com os coaches durante jantar.
 *Dica* Reserve tempo suficiente para que as pessoas possam interagir e resolver quaisquer problemas que possam haver com as instalações. Distribua workbooks, colete acrônimos para o exercício Bento.
 
 10:00 - 10:10 Boas-vindas 
-*Dica* Mentione apoiadores, mostre o que iremos construir, explique o que é programação.
+*Dica* Mencione apoiadores, mostre o que iremos construir, explique o que é programação.
 
 10:30 - 11:00 Workshop de UX
 
