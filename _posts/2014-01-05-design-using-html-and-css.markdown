@@ -3,8 +3,11 @@ layout: default
 title: Adicione design à sua aplicação com HTML e CSS
 permalink: design-html-css
 ---
+
+# Adicione design à sua aplicação com HTML e CSS
 *Traduzido por [@MADPT](https://github.com/MADPT) aka [Miguel Ângelo](http://www.miguelangelo.io)*
 
+**Esse guia assume que você já construiu o app do Rails Girls** [**seguindo o tutorial de desenvolvimento do app**](/app).
 
 1.Desenhe o cabeçalho
 
