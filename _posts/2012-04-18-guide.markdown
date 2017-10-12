@@ -105,6 +105,7 @@ Avançando (lentamente!) através do currículo em <a href="http://guides.railsg
 Tenha como objetivo explicações simples, mesmo que à custo da precisão. Você não precisa falar sobre todos os conceitos fundamentais. Apenas tente responder as dúvidas quando elas surgirem, ou siga em frente se elas forem muito difíceis ou além do escopo. Você não está aqui para ensinar habilidades de programação perfeitas mas para mostrar como conseguir criar algo. É necessário aprender a criar aplicações web antes de aprender a criá-las bem.
 
 Conceitos para abordar:
+
 + Rails Generators
 + Scaffolds: Rails App Structure
 + Gem Management
