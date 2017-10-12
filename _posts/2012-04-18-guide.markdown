@@ -112,7 +112,7 @@ Conceitos para abordar:
 + Scaffolds: Rails App Structure
 + Gem Management
 + MVC, REST/Resources
-+ Models e Active Record
++ Modelos e Active Record
 + Controllers e ActionController
 + Views e ERB
 
