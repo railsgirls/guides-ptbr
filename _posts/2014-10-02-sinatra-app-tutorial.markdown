@@ -7,12 +7,13 @@ permalink: sinatra-app
 # Crie sua primeira app de votação com Sinatra
 
 *Criado por Piotr Szotkowski, [@chastell](https://twitter.com/chastell)*
+*Traduzido por Nathalia Pinheiro Mesquita, [@nathi_pinheiro](https://twitter.com/nathi_pinheiro)*
 
 Nós vamos criar um pequeno app de votação do zero usando um framework de desenvolvimento web para Ruby chamado Sinatra, e que é muito parecido com Ruby on Rails. Mas é só outra ferramenta para fazermos nosso trabalho e uma bem divertida também!
 
 Imagine seu grupo de amigos tentando decidir o que pedir para sua maratona de filmes semanal. Com tantas opções de fast food para pedir, isso pode se tornar uma discussão e tanto. É nessa hora que entra o nosso app!
 
-__INSTRUTOR__: Breve explicação sobre o que é o [Sinatra](http://www.sinatrarb.com).
+__COACH__: Breve explicação sobre o que é o [Sinatra](http://www.sinatrarb.com).
 
 ## Instalação Sinatra
 
@@ -32,7 +33,7 @@ get '/' do
 end
 {% endhighlight %}
 
-Você pode chamar seu arquivo Ruby do que preferir. 'voto.rb' por exemplo funcionaria bem também. Mas [Sufragista] (http://www.vocabulary.com/dictionary/suffragist) é uma referencia a um evento super importante no movimento a favor do direito das mulheres, então vamos usar este por agora!
+Você pode chamar seu arquivo Ruby do que preferir. `voto.rb` por exemplo funcionaria bem também. Mas [Sufragista] (http://www.vocabulary.com/dictionary/suffragist) é uma referencia a um evento super importante no movimento a favor do direito das mulheres, então vamos usar este por agora!
 
 ### Rode sua app
 
@@ -41,7 +42,7 @@ Agora você pode visitar <a href="localhost:4567" target=_blank">localhost:4567<
 ver a página "Olá, eleitor!", o que significa que a geração do seu novo
 app está funcionando corretamente. Aperte <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servidor. Se <kbd>Ctrl</kbd>+<kbd>C</kbd> não funcionar para você significa que você provavelmente está usando Windows e <kbd>Ctrl</kbd>+<kbd>Z</kbd>/ <kbd>Ctrl</kbd>+<kbd>Pause</kbd> / <kbd>Ctrl</kbd>+<kbd>Break</kbd> deve resolver esse problema.
 
-__INSTRUTOR__: Explique o método POST e GET e como eles se comunicam com o browser.
+__COACH__: Explique o método POST e GET e como eles se comunicam com o browser.
 
 
 
@@ -83,10 +84,10 @@ e dentro do `sufragista.rb`:
 
 {% highlight ruby %}
 Opcoes = {
-  'HAM' => 'Hamburger',
+  'HAM' => 'Hambúrger',
   'PIZ' => 'Pizza',
-  'CUR' => 'Curry',
-  'NOO' => 'Noodles',
+  'SUS' => 'Sushi',
+  'LAM' => 'Lámen',
 }
 {% endhighlight %}
 
@@ -98,10 +99,10 @@ get '/' do
 end
 {% endhighlight %}
 
-Rode `ruby sufragista.rb`, cheque seus
+Execute `ruby sufragista.rb`, cheque seus
 resultados e pare o servidor com <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__INSTRUTOR__: Fale um pouco sobre HTML e erb. Explique
+__COACH__: Fale um pouco sobre HTML e erb. Explique
 sobre templates e sobre o que são constantes globais.
 
 
@@ -126,7 +127,7 @@ get '/' do
 end
 {% endhighlight %}
 
-__INSTRUTOR__: Explique o que são instancias de variáveis
+__COACH__: Explique o que são instancias de variáveis
 e como Sinatra faz elas visíveis nas views.
 
 
@@ -138,7 +139,7 @@ Coloque isto no `sufragista.rb`:
 {% highlight ruby %}
 post '/cast' do
   @titulo = 'Obrigada por votar!'
-  @vote  = params['vote']
+  @voto  = params['voto']
   erb :cast
 end
 {% endhighlight %}
@@ -156,13 +157,13 @@ e coloque lá um pouco de HTML com código Ruby junto:
   </head>
   <body class='container'>
     <h1><%= @titulo %></h1>
-    <p>Seu voto: <%= Choices[@vote] %></p>
+    <p>Seu voto: <%= Opcoes[@voto] %></p>
     <p><a href='/results'>Veja os Resultados!</a></p>
   </body>
 </html>
 {% endhighlight %}
 
-__INSTRUTOR__: Explique como o POST funciona. Como buscar o que
+__COACH__: Explique como o POST funciona. Como buscar o que
 foi mandado no formulário? de onde veio o `params`?
 
 
@@ -190,7 +191,7 @@ Coloque o seguinte lá:
 Remova a parte acima dos outros dois templates
 (`index.erb` e `cast.erb` que estão no diretório `views`).
 
-__INSTRUTOR__: Fale sobre a estrutura de documentos HTML e sobre como a construção de código comum
+__COACH__: Fale sobre a estrutura de documentos HTML e sobre como a construção de código comum
 funciona. Explique o que `yield` faz.
 
 
@@ -201,7 +202,7 @@ Cole o seguinte código em `sufragista.rb`:
 
 {% highlight ruby %}
 get '/results' do
-  @votes = { 'HAM' => 7, 'PIZ' => 5, 'CUR' => 3 }
+  @voto = { 'HAM' => 7, 'PIZ' => 5, 'SUS' => 3 }
   erb :results
 end
 {% endhighlight %}
@@ -213,18 +214,18 @@ Crie um novo arquivo no diretório `views`, chamado `results.erb`.
   <% Opcoes.each do |id, text| %>
     <tr>
       <th><%= text %></th>
-      <td><%= @votes[id] || 0 %>
-      <td><%= '#' * (@votes[id] || 0) %></td>
+      <td><%= @voto[id] || 0 %>
+      <td><%= '#' * (@voto[id] || 0) %></td>
     </tr>
   <% end %>
 </table>
 <p><a href='/'>Vote Mais!</a></p>
 {% endhighlight %}
 
-Rode `ruby sufragistat.rb`, cheque
+Execute `ruby sufragistat.rb`, cheque
 seus resultados e pause o servidor com <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__INSTRUTOR__: Explique tabelas HTML e como os valores faltando vem como zero.
+__COACH__: Explique tabelas HTML e como os valores faltando vem como zero.
 
 
 
@@ -244,7 +245,7 @@ Adicione mais código em `sufragista.rb` – substitua
 {% highlight ruby %}
 post '/cast' do
   @titulo = 'Obrigada por votar!'
-  @vote  = params['vote']
+  @voto  = params['voto']
   @store = YAML::Store.new 'votes.yml'
   @store.transaction do
     @store['votes'] ||= {}
@@ -262,19 +263,19 @@ get '/results' do
 end
 {% endhighlight %}
 
-__INSTRUTOR__: Explique o que é YAML.
+__COACH__: Explique o que é YAML.
 
 
 ### Veja como o arquivo YAML muda quando votos são salvos
 
 Vamos abrir `votes.yml`. e votar. e checar novamente.
 
-__INSTRUTOR__: Vai ter situações onde um ou mais estudantes vão
-esquecer de pausar o servidor antes de roda-lo novamente. É uma boa
+__COACH__: Vai ter situações onde um ou mais estudantes vão
+esquecer de pausar o servidor antes de rodá-lo novamente. É uma boa
 oportunidade para procurar na Internet por uma solução. Eles não tem
 que saber de tudo sobre "matar" processos para achar a solução.
 
-__INSTRUTOR__: No final explique brevemente a diferença entre Sinatra e Rails.
+__COACH__: No final explique brevemente a diferença entre Sinatra e Rails.
 
 
 
