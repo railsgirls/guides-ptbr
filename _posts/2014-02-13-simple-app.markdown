@@ -10,6 +10,8 @@ permalink: simpleapp
 
 *Editado para incluir [simple_scaffold](https://github.com/Ben-M/simple_scaffold) por Ben Maraney.*
 
+*Traduzido por Laura Rocha Prado, [@arbolitoloco](https://arbolitoloco.github.io)*
+
 **Certifique-se de que o Rails esteja instalado.** [**Siga as instruções no guia de instalação**](/install) para deixar tudo pronto para começar.
 
 
