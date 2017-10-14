@@ -7,11 +7,11 @@ permalink: sinatra
 *Created by Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*
 *Traduzido por Bárbara Barbosa, [@bahbbc](https://twitter.com/bahbbc)*
 
-##Objetivo
+## Objetivo
 
 Você já imaginou como a informação sai e entra do seu nagevador web? Nesse tutorial nos vamos ver como tudo isso funciona explorando o HTTP.
 
-Nós vamos usar o [**sinatra**](http://www.sinatrarb.com/) como ferramenta para demostrar alguns principios básicos. O sinatra é um pequeno framework para criar aplicações web em Ruby como o mínimo de esforço. VOcê pode encontrar uma lista de [coisas construídas com sinatra aqui](http://www.sinatrarb.com/wild.html).
+Nós vamos usar o [**Sinatra**](http://www.sinatrarb.com/) como ferramenta para demostrar alguns principios básicos. O sinatra é um pequeno framework para criar aplicações web em Ruby como o mínimo de esforço. VOcê pode encontrar uma lista de [coisas construídas com Sinatra aqui](http://www.sinatrarb.com/wild.html).
 
 O sinatra é diferente do Rails. Os dois são frameworks que nos ajudam a escrever aplicativos web, mas o Sinatra contém menos recursos e menos mágica.
 
@@ -52,7 +52,7 @@ O seu app vai ficar parecido com esse no browser:
 
 <img src="../images/coffee-app.png" alt="Sinatra Coffee App" />
 
-## *0. Instalar o Sinatra - "Olá Mundo"
+## *0.* Instalar o Sinatra - "Olá Mundo"
 
 Vamos começar rodando o Sinatra.
 
@@ -63,7 +63,7 @@ gem install sinatra
 gem install sinatra-contrib
 {% endhighlight %}
 
-## *1.*"Olá Mundo"
+## *1.* "Olá Mundo"
 
 Crie um arquivo chamado `app.rb` e cole o seguinte código no seu editor de texto:
 
@@ -143,7 +143,7 @@ Agora vamos ver o que o browser enviou ao servidor quando você submeteu o formu
 GET /?cafe=flat+white&valor=3.50 HTTP/1.1
 {% endhighlight %}
 
-**Coach:** Falar sobre de onde ve os nomes dos parâmetros e o que faz o ponto de interrogação.
+**Instrutor:** Falar sobre de onde ve os nomes dos parâmetros e o que faz o ponto de interrogação.
 
 Se não deu muito certo, certifique-se de que o seu código parece com [esse código](http://tjmcewan.github.io/coffeecalc/snippets/html_form.rb.txt).
 
@@ -164,13 +164,13 @@ Accept-Encoding: gzip,deflate,sdch
 Accept-Language: en-US,en;q=0.8
 {% endhighlight %}
 
-**Coach:** Explicar o que são os cabeçalhos (headers) HTTP e o que eles significam.
+**Instrutor:** Explicar o que são os cabeçalhos (headers) HTTP e o que eles significam.
 
 A parte mais importante está na primeira linha, que separa o verbo HTTP da URL que foi chamada.
 
 **Nota:** Se o Sinatra disser "backup from WEBrick", o servidor embutido do Ruby, então pode ser que você veja multiplas requisições GET a cada atualização sua. Apenas uma requisição está sendo processada, você pode ignorar a outra tranquilamente.
 
-## *5.* Variavel global
+## *5.* Variável global
 
 Então, o nosso formulário está enviando a informação do café ao nosso app, mas nós não estamos fazendo nada com ela ainda. Nós devemos salvar a informação do café depois que ela for enviada para o servidor.
 
