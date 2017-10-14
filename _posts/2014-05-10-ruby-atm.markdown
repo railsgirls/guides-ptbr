@@ -274,7 +274,7 @@ Seu caixa agora tem notas de R$5, R$10 e R$20. Modifique seu código para reflet
 
 **Nota:** a esta altura, cada valor maior pode ser dividido por cada valor menor - por exemplo, R$20 / R$10 = 2. As coisas ficam mais difíceis quando não é o caso (por exemplo, notas de R$50 e de R$20). Para este passo, intencionalmente não lidaremos com este caso para deixar mais fácil.
 
-**Examples**
+**Exemplos**
 
 * `withdraw(15)` deve retornar `[10, 5]`
 * `withdraw(25)` deve retornar `[20, 5]`
