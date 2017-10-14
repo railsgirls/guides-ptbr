@@ -123,7 +123,7 @@ Café: <input name='cafe'>
 Valor: <input name='valor'>
 <button type='submit'>Adicionar café</button>
 </form>
-<!-- coffees go here -->
+<!-- cafes vao aqui -->
 </body>
 </html>
 "
@@ -171,59 +171,60 @@ A parte mais importante está na primeira linha, que separa o verbo HTTP da URL 
 
 ## *5.* Variavel global
 
-So our form is sending the coffee information to our app, but we're not doing anything with it yet. We should save the coffee information after it is sent to the server.
+Então, o nosso formulário está enviando a informação do café ao nosso app, mas nós não estamos fazendo nada com ela ainda. Nós devemos salvar a informação do café depois que ela for enviada para o servidor.
 
-For simplicity, let's just store the coffee details in a variable. So that they'll be available between requests, we'll need to use a [**global**](http://en.wikipedia.org/wiki/Global_variable) variable. This is a drastically simplified version of what Rails calls the Model layer.
+Para simplicaficar, vamos guardar os detalhes do café em uma variável. Assim eles estarão disponíveis entre requisições, para isso nós usaremos uma [**variável global**](http://en.wikipedia.org/wiki/Global_variable). Essa é uma versão drasticamente simplificada do que o Rails chama de camada de Modelo.
 
-Add this to your `app.rb` somewhere (convention says it should be near the top, under the `require` lines):
+Adicione o código abaixo ao seu arquivo `app.rb` (a convenção dita que deve ser próximo ao topo, abaixo das linhas de `require`):
+
 {% highlight ruby %}
 $coffees = []
 {% endhighlight %}
 
-This creates an empty array when your app first starts up.
+Isso criará um array vazio quando o seu app inicializar.
 
-**Hint:** This global variable won't be around for very long - it will be reset to the empty array each time the server restarts.  Because we're using Sinatra's reloader, this will be every time you save your `app.rb` file.  Don't worry though, it will suit our purposes nicely.
+**Dica** Essa variável global não ficará por perto por muito tempo - ela se toranará um array vazio toda vez que o servidor reiniciar. Como nós estamos usando o reloader do Sinatra, isso acontecerá toda vez que você salvar o seu arquivo `app.rb`. Não se preocupe, ele servirá aos nossos propósitos.
 
-## *6.* Receiving information - Storing Coffees
+## *6.* Recebendo informação - Salvando cafés
 
-Now you'll need to get the information into that `$coffees` array when the request is received. When you fill in your form and click the submit button, remember that your information is put on the end of the URL, after the ?, to be sent back to the server.
+Agora nós precisamos colocar a informação dentro do array `$coffees` quando a requisição for recebida. Quando você completa o formulário e clique no botão para enviar, lembre-se que a informação fica no final da URL, após o ?, para ser enviada de volta ao servidor.
 
- Sinatra grabs that information from the end of the URL and makes it available as a Hash called `params`. For example:
+O Sinatra captura essa informação do final da URL e a torna disponível como um hash chamado `params`. Por exemplo:
 
- {% highlight ruby %}
- params = {coffee = 'flat white', value ='2'}
+{% highlight ruby %}
+ params = {cafe = 'cafe com leite', valor ='2'}
 {% endhighlight %}
 
-You will need to write some code to take them from the params hash and add them to your  $coffees variable.
+Você vai precisar escrever um pouco de código para retirar a informação do hash de params e adicioná-los a sua variável $coffees.
 
-Before you start, first replace `<!-- coffees go here -->` in your form with:
+Antes de começarmos, primeiro substitua `<!-- cafes vao aqui -->` no seu formulário por:
 
 {% highlight ruby %}
 #{ $coffees.inspect }
 {% endhighlight %}
 
-This will display the `$coffees` variable in the HTML in your browser so we can tell if coffees are being added to your $coffees variable (i.e. that your code is working).
+Isso irá mostrar a variável `$coffees` no HTML do seu browser para podermos dizer se os café estão sendo adicionados a sua variável $coffees (i.e. que o seu código está funcionando).
 
-**Hint:**
-Your global variable is an array, so if you get stuck, try [Ruby's Array documentation ](http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-3C-3C) to find out how you can add information to an array.
+**Dica**
+Sua variável global é um array, então se você não souber o que fazer, olhe a [Documentação de array do Ruby](http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-3C-3C) para buscar mais informações sobre como adicionar informações para um array.
 
-If you're still stuck, [check here](http://tjmcewan.github.io/coffeecalc/snippets/store_coffees.rb.txt).
+Se você estiver travada, [clique aqui](http://tjmcewan.github.io/coffeecalc/snippets/store_coffees.rb.txt).
 
-If you're storing your params correctly, you should be able to refresh the browser and see that a new hash gets added to the `$coffees` array each time.
+Se você está guardando seus parâmetros corretamente, você deve conseguir recarregar a paǵina e ver que um novo hash foi adicionado ao array `$coffees` a cada vez.
 
-## *6.* Tidy Up
+## *6.* Arrumando tudo
 
-That big chunk of HTML in our `get` code is making it a bit hard to see what our app does. Let's move it to its own method.
+Aquele grande pedaço de HTML no seu código `get` está dificultando a visualização do que o seu app faz. Vamos movê-lo para o seu próprio método.
 
-Cut the HTML form out of your `get` code and paste it into a method called `template` (keep all your code in the same file). Like so:
+Tire o formulário HTML do seu código `get` e cole em um método chamado `template` (mantenha todo o seu código no mesmo arquivo). Tipo assim:
 
 {% highlight ruby %}
 def template
-# put your HTML form string here
+# Coloque o seu formuário HTML aqui
 end
 {% endhighlight %}
 
-Now replace the form from your `get` code with a simple call to the template method, like this:
+Agora substitua o formulário do seu código `get` por uma simples chamada ao método template, assim:
 
 {% highlight ruby %}
 get "/" do
@@ -232,24 +233,25 @@ template
 end
 {% endhighlight %}
 
-This will also make it easier to re-use the form, should we ever need to.
+Isso também tornará fácil reusar o formulário, caso a gente precise depois.
 
-**Hint:** [Check here](http://tjmcewan.github.io/coffeecalc/snippets/template_method.rb.txt) if something went awry.
+**Dica** [Check here](http://tjmcewan.github.io/coffeecalc/snippets/template_method.rb.txt) se algo der errado.
 
-## *7.* Moving Beyond GET
 
-As you saw in the store coffees section, if you refresh your browser, your app adds the information into the `$coffees` global variable repeatedly. This is because we're storing the params from the URL each time our `get` code is requested.
+## *7.* Indo além do GET
 
-This is a good point to mention that `GET` requests should not do things that add information to our app - while it does work, like in this instance, it's too easy for unintended side-effects to occur. In this case it's better to use a `POST` request.
+Como você viu na seção de salvar cafés, se você atualizar o seu browser, o seu app adiciona a informação na variável global `$coffees` repetidamente. Isso acontece porque estamos guardando os parâmetros da URL cada vez que o nosso código `get` é requisitado.
 
-Remember `GET` requests are asking to fetch a resource, whereas POST requests are asking to create a resource.
+Precisamos mencionar que as requisições `GET` não devem fazer coisas que adicionem informação ao nosso app - mesmo que funcione, como nessa instância, é muito fácil que efeitos colaterais não intencionados ocorram. Nesse caso é melhor usar uma requisição POST.
 
-So armed with that knowledge, let's change our form's method to `POST`:
+Lembre-se que as requisições `GET` estão querendo buscar um recurso, enquanto as requisições POST querem criar um recurso.
 
-* Locate the section in the form that specifies the method as `get` and change it to `post`.
-* Now refresh your browser and submit a new coffee.
+Então armados com esse conhecimento, vamos mudar o método do nosso formulário para `POST`:
 
-**Uh oh!** Welcome to Sinatra's lovely error page, if you haven't encountered it yet today. The message at the bottom should say this:
+* Localize a seção no formulário que especifica o método como `get` e mude para `post`.
+* Agora atualize o seu browser e adicione um novo café.
+
+**Uh oh!** Bem vindo a adorável página de erro do Sinatra, se você ainda não a viu hoje. A mensagem no final deve dizer algo assim:
 
 {% highlight ruby %}
 Try this:
@@ -258,45 +260,43 @@ post '/' do
 end
 {% endhighlight %}
 
-This is Sinatra's way of telling you that the route you requested doesn't exist. You may also know this as HTTP error number 404: *page not found*.
+Essa é a maneira do Sinatra de te contar que a rota que você requisitou não existe. Você talvez conheça isso como o erro HTTP número 404: *página não encontrada*
 
+## *8.* Adicionar a Post
 
-## *8.* Add Post
+Vamos **adicionar** o nosso código `post` no Sinatra (não remove o código de get!)
 
-Let's *add* our `post` code into Sinatra (don't remove the get one!):
+* Pegue o código `post` do "Olá mundo" da página 404 do Sinatra e o coloque depois do `get`. (**Dica:** Não copie do código de cima; esta página utiliza aspas estranhas & vai quebrar o seu código.)
+* Substitua o "Olá mundo" por uma chamada ao nosso método `template`. (**Dica:** Não remova a chamda para do método `template` do nosso código `get`.)
+* Agora *mova* a linha que guarda os parâmetros do café do código `get` (garanta que isso vá acima da chamada do método `template`).
 
-* Grab the "Hello world" `post` code from Sinatra's 404 page and put it after our `get`. (**Hint:** Do not copy from above; this page uses smart quotes & will break your code.)
-* Replace the "Hello world" with a call to our `template` method. (**Hint:** Don't remove the call to `template` from our `get` code.)
-* Now *move* the line that stores the coffee params over from the `get` code (ensure this goes *above* the call to `template`).
+Como usual, você pode verificar o seu progresso [por aqui](http://tjmcewan.github.io/coffeecalc/snippets/get_vs_post.rb.txt).
 
-As usual, you can check your progress [over here](http://tjmcewan.github.io/coffeecalc/snippets/get_vs_post.rb.txt).
-
-Now if you refresh the page after submitting a coffee, you should see a warning from your browser that it needs to resubmit the form in order to load the page:
+Agora se você atualizar a página depois de submeter um café, você deverá ver um aviso do browser avisando que ele precisa resubmeter o formulário para carregar a página:
 
 <img src="../images/chrome-confirm-resubmission.png" alt="Chrome's confirm resubmission dialog" />
 
-You might have seen this sometimes when you've submitted forms online. Having this warning prompts us to think about the consequences of our refresh and we will probably avoid inadvertently adding the same coffee multiple times.
+Você já deve ter visto isso algumas vezes quando você submteu formulários online. Ter esse aviso nos alerta as consequências da nossa atualização e nos provavelmente evitaremos adicionar o mesmo café várias vezes.
 
-Remember GET requests are asking to fetch a resource, whereas POST requests are asking to create a resource. If you refresh a page on a GET request, you are simply asking repeatedly to see the same page, which usually won't be a problem.
+Lembre-se que as requisições GET querem buscar um recurso, enquanto as requisições POST querem criar um recurso. Se você atualizar a página em uma requisição GET, você está simplesmente pedindo para ver a mesma página várias vezes, o que normalmente não será um problema.
 
-However, if you refresh a page on a POST request, this means you are resending the POST request, and could be creating a new resource each time you refresh. That's why the browser gives you a warning before allowing you to do it.
+Contudo, se você atualizar a página em uma requisição POST, isso significa que você está reenviando a requisição POST, e pode estar criando um novo recurso cada vez que você atualiza. É por isso que o browser te dá um aviso antes de permitir que você faça isso.
 
+## *9.* Adicionando um redirect
 
-## *9.* Add a Redirect
+Para contornar esse problema de resubmissão de formulário, vamos avisar o browser para carregar uma página diferente assim que ele receber a resposta do nosso `POST`. Nós faremos isso usando uma resposta HTTP especial conhecida como "redirect".
 
-In order to get around this form-resubmission problem, lets tell the browser to load a different page as soon as it receives the response to our `POST`.  We do this using a special HTTP response known as a "redirect".
+Ao invés de outra chamada ao nosso método `teplate`, nós podemos redirecionar o browser para outro lugar.
 
-Instead of the call to our `template` method, we can redirect the browser to another location.
-
-In Sinatra, it looks like this:
+No Sinatra é algo assim:
 
 {% highlight ruby %}
 redirect "/"
 {% endhighlight %}
 
-Try first, then [check it here](http://tjmcewan.github.io/coffeecalc/snippets/post_redirect.rb.txt).
+Tente primeiro, e depois [clique aqui](http://tjmcewan.github.io/coffeecalc/snippets/post_redirect.rb.txt).
 
-This sends back a special redirect response (HTTP 303) with a `location` header that specifies where the browser should go:
+Isso enviará uma resposta de redirect especial (HTTP 303) com um cabeçalho de `location` que especifica para onde o browser deve ir:
 
 {% highlight HTML %}
 HTTP/1.1 303 See Other
@@ -304,20 +304,20 @@ HTTP/1.1 303 See Other
 Location: http://localhost:4567/
 {% endhighlight %}
 
-To see this in action, have a look in Chrome's Web Inspector (Network tab) and send your app a coffee:
+Para ver isso em ação, você pode ver o Inspetor web do Chrome (na aba Rede) e enviar para o seu app um café:
 
 <img src="../images/chrome-post-redirect.png" alt="Chrome's network tab showing a post/redirect/get" />
 
-The first line shows the browser submitting the form via the `POST` request method. The response it receives is an HTTP 303, containing the `Location` header. It then issues a `GET` request for that location (which corresponds to our root URL, "/") and renders the response it gets from there - which is our HTML template.
+A primeira linha mostra o browser enviando o formulário usando a requisição POST. A resposta que ele recebe é um HTTP 303, contendo o cabeçalho `Location`. Ele então dispara uma requisição GET para aquela localização (que corresponde a nossa rota raiz, "/") e renderiza a resposta que ele pega de lá - que é o nosso template HTML.
 
-Now you can refresh all you want and all you're doing is requesting using `GET`, not `POST`. Your browser doesn't have to submit the form any more to display that page.
+Agora você pode atualizar tudo o que quiser e o que você está fazendo é requisitando usando `GET`, não `POST`. O seu browser não precisa ter mais ter que reenviar o formulário para aparecer aquela página.
 
-This is the end of the tutorial - you've done an excellent job!
+Esse é o fim do tutorial - você fez um excelente trabalho!
 
-Thanks for playing!
+Obrigada por jogar!
 
-## Additional Guides
-If you were fast and would like to continue on, you can try:
+## Guias adicionais
 
-* [rendering our coffee list in proper HTML](/sinatra-html)
-**LUCY-TODO**
+Se isso foi rápido e você quiser continuar, você pode ver:
+
+* [Renderizando a nossa listagem de cafés em HTML](/sinatra-html)
