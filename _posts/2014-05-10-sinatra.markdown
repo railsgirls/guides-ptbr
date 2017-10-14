@@ -10,108 +10,108 @@ permalink: sinatra
 
 Você já imaginou como a informação sai e entra do seu nagevador web? Nesse tutorial nos vamos ver como tudo isso funciona explorando o HTTP.
 
-Nós vamos usar o [**Sinatra**](http://www.sinatrarb.com/) como ferramenta para demostrar alguns principios básicos.
+Nós vamos usar o [**sinatra**](http://www.sinatrarb.com/) como ferramenta para demostrar alguns principios básicos. O sinatra é um pequeno framework para criar aplicações web em Ruby como o mínimo de esforço. VOcê pode encontrar uma lista de [coisas construídas com sinatra aqui](http://www.sinatrarb.com/wild.html).
 
-We're going to use [**Sinatra**](http://www.sinatrarb.com/) as a tool to demonstrate some basic web principles. Sinatra is a small framework for creating web applications in Ruby with minimal effort. You can find a list of [things built with Sinatra here](http://www.sinatrarb.com/wild.html).
+O sinatra é diferente do Rails. Os dois são frameworks que nos ajudam a escrever aplicativos web, mas o Sinatra contém menos recursos e menos mágica.
 
-Sinatra is different from Rails. They're both frameworks for helping you to write web apps, but Sinatra contains fewer features and less magic.
+## Introdução
 
-## Introduction
+HTTP é usado para enviar informação através de uma aplicação (como o seu app do Rails Girls) e um browser.
+O básico de uma cominicação com HTTP é o par requisição/resposta. Requisições são enviadas do browser para o servidor (ex. o seu app) e a resposta é enviada de volta para o servidor para o seu browser para um usuário ver.
 
-HTTP is used to send information between an application (like your Rails Girls app) and a browser.
-The basis of communication with HTTP is a request/response pair. Requests are sent by the browser to the server (e.g. your app) and the response is sent back from the server to your browser for a user to view.
+Para fazer uma requisição no browser, você precisa usar uma URL. Uma URL contém várias informações sobre qual informação você está requisitando então o servidor poderá te enviar a resposta correta.
 
-To make a request in a browser, you need to use a URL. A URL contains a lot of information about what information you are requesting so that the server can send you the correct response.
+Uma URL contém:
 
-A URL will contain;
+* O protocolo com o qual você se comunicará
+* O domínio que possui a informação que você deseja
+* O caminho para o recurso daquele servidor
+* Opcionalmente podem haver parâmetros no final da url, os pares chave/valor, que contém informação extra sobre a requisição
+* Os // no começo da URL especificam que essa requisição quer fazer contato com o servidor.
+* O ? no final de uma URL sinaliza o final do caminho do arquivo, e o início de parâmetros opcionais.
 
-* The protocol you will communicate with
-* The domain that has the information you want
-* The path to the resource on that server
-* Optionally there might be parameters on the end of the url, as key/value pairs, containing extra information about the request
-* The // towards the beginning of the URL specifies that this request wants to make contact with a server.
-* The ? towards the end of the url signals the end of the file path, and the beginning of any optional parameters.
+<img src="../images/url-breakdown.png" alt="Quebra de uma URL" />
 
-<img src="../images/url-breakdown.png" alt="Breakdown of a URL" />
+URLs revelam o recurso que você quer, mas a ação que precisa ser realizada naquele recurso precisa ser especificada usando verbos HTTP.
 
-URLs reveal the resource you want, but the action that needs to be performed on that resource needs to be specified using HTTP verbs.
+O verbos HTTP mais comuns são
 
-The most common HTTP verbs are
+* GET: busca um recurso já existente.
+* POST: cria um novo recurso. (Usalmente inclui dados que são necessários para criar o novo recurso).
+* PUT: atualiza um recurso existe.
+* DELETE: deleta um recurso existente.
 
-* GET: fetch an existing resource
-* POST: create a new resource. (Usually includes data needed to create the new resource)
-* PUT: update an existing resource.
-* DELETE: delete an existing resource.
+Você deve ter usado todos esses verbos no seu app do Rails Girls quando você fez ele mostrar, criar, editar e deletar posts ou notas.
 
-You would have used all these verbs on your Rails Girls app when you enabled it to show, create, edit and delete posts or notes.
+Um request para um servidor precisa incluir tanto a URL e o verbo HTTP.
 
-A request to a server needs to include both a URL and HTTP verb.
+Nos exercícios seguintes você irá construir uma pequena aplicação de um café que usa uma combinação de pastas de recursos e verbos HTTP para demostrar como os browser se comunicam com a sua aplicação.
 
-In the following exercises you will build a small coffee listing application that uses a combination of resource folder names and HTTP verbs to show how browsers communicate with your application.
-
-Your app will look something like this in the browser:
+O seu app vai ficar parecido com esse no browser:
 
 <img src="../images/coffee-app.png" alt="Sinatra Coffee App" />
 
-## *0.*Install Sinatra - "Hello World"
+## *0. Instalar o Sinatra - "Olá Mundo"
 
-Let's start off by getting Sinatra running.
+Vamos começar rodando o Sinatra.
 
-In your terminal, install the gem:
+No seu terminal, instale a gem:
+
 {% highlight sh %}
 gem install sinatra
 gem install sinatra-contrib
 {% endhighlight %}
 
-## *1.*"Hello World"
-Create a file called `app.rb` and paste the following into Sublime Text:
+## *1.*"Olá Mundo"
+
+Crie um arquivo chamado `app.rb` e cole o seguinte código no seu editor de texto:
 
 {% highlight ruby %}
 require "sinatra"
 require "sinatra/reloader"
 
 get "/" do
-"Hello world!"
+"Olá mundo!"
 end
 {% endhighlight %}
 
-And back in your terminal, run this code with:
+E no seu terminal, cole o código abaixo:
 {% highlight sh %}
 ruby app.rb
 {% endhighlight %}
 
-View your current site at: [http://localhost:4567](http://localhost:4567)
+Veja o seu site em: [http://localhost:4567](http://localhost:4567)
 
-The information showing now in your browser is the response to a GET request.
+A informação aparecendo no seu browser é a resposta de uma requisição GET.
 
-When you enter http://localhost:4567 you're sending a GET request to your Sinatra server.
+Quando você digita http://localhost:4567 você está enviando uma requisição GET para o seu servidor Sinatra.
 
-What you see in the browser is the response from your Sinatra server.
+O que você vê no browser é a resposta do seu servidor Sinatra.
 
-Where you've written "/", you are just specifying the root url, but you can create any path name you want.
+Quando você escreve "/", você só está especificando a url raiz, mas você pode criar qualquer caminho que você queira.
 
-In the same file, try creating more pages to visit, using the same syntax as the block above. You can add as many pages as you like, and have them say whatever you want.
+No mesmo arquivo, tente criar mais páginas para visitar, usando a mesma sintaxe do bloco acima. Você pode adicionar quantas páginas quiser, e fazê-las mostrar o que você quiser.
 
 e.g.
 {% highlight sh %}
-get "/page-name" do
- "This is text on the page"
+get "/nome-da-pagina" do
+ "Esse é o texto da página"
  end
 {% endhighlight %}
 
-If you need to you can hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in your command prompt to stop your app. (Just like for your Rails app!), however you don't need to stop and start to see your changes.
+Se você quiser você pode apertar <kbd>Ctrl</kbd>+<kbd>C</kbd> no seu terminal para parar o seu app. (Exatamente como o seu app Rails!), contudo você não precisa reiniciar o seu servidor para ver as mudanças.
 
-If you get stuck, make sure your app.rb looks like [this one](http://tjmcewan.github.io/coffeecalc/snippets/install_sinatra.rb.txt).
+Se você ficar travada, garanta que o seu app.rb parece [com esse aqui](http://tjmcewan.github.io/coffeecalc/snippets/install_sinatra.rb.txt).
 
-## *3.* HTML Form - Get Parameters
+## *3.* Formulário HTML - Parâmetros
 
-To start listing coffees in our app, we'll need an HTML form to send through which coffee we want and how much it costs.
+Para começar a listagem de cafés no seu app, nos vamos precisar de um formulário HTML para enviar qual café nos queremos e quando ele custa.
 
-This means sending a request to the Sinatra server, including some information.
+Isso significa enviar uma requisição para o servidor Sinatra, incluindo alguma informação.
 
-To send information to the server, we can use a form.
+Para enviar informação para o servidor, nós podemos usar um formulário.
 
-Replace your `get "/"` from above with this:
+Substitua o seu `get "/"` do exemplo anterior por:
 
 {% highlight ruby %}
 get "/" do
@@ -119,9 +119,9 @@ get "/" do
 <html>
 <body>
 <form action='/' method='get'>
-What: <input name='what'>
-Cost: <input name='cost'>
-<button type='submit'>add coffee</button>
+Café: <input name='cafe'>
+Valor: <input name='valor'>
+<button type='submit'>Adicionar café</button>
 </form>
 <!-- coffees go here -->
 </body>
@@ -132,25 +132,25 @@ end
 
 {% endhighlight %}
 
-For simplicity, this form sends the information to the same URL ("/").
+Para simplificação, esse formulário envia a informação para a mesma URL ("/").
 
-Refresh your browser and you should see the form you just created.
+Atualize o seu browser e veja o formulário que você acabou de criar.
 
-Now let's see what the browser sends to the server when you submit the form. Put some text into the form and click the 'add coffee' button. Check out your Sinatra logs back in your terminal and you should see something like this:
+Agora vamos ver o que o browser enviou ao servidor quando você submeteu o formulário. Coloque um pouco de texto no formulário e clique no botão 'Adicionar café'. Verifique os logs do Sinatra no seu terminal e você deve ver algo assim:
 
 {% highlight HTTP %}
-GET /?what=flat+white&cost=3.50 HTTP/1.1
+GET /?cafe=flat+white&valor=3.50 HTTP/1.1
 {% endhighlight %}
 
-**Coach:** Talk about where the parameter names come from and what the question mark is doing.
+**Coach:** Falar sobre de onde ve os nomes dos parâmetros e o que faz o ponto de interrogação.
 
-If it's not quite working, make sure your code looks like [this code](http://tjmcewan.github.io/coffeecalc/snippets/html_form.rb.txt).
+Se não deu muito certo, certifique-se de que o seu código parece com [esse código](http://tjmcewan.github.io/coffeecalc/snippets/html_form.rb.txt).
 
-## *4.*Web Inspector - Request Headers
+## *4.*Inspetor Web - Cabeçalho de requisição
 
-In your browser, open up your web console. (For most browsers, this can be accessed by *right clicking something on the page and choosing "Inspect Element"*.) I recommend you use Chrome for this; if you are using Chrome, you're looking for the 'Network' tab.
+No seu browser, abra o console web. (Para a maioria dos browser, o console pode ser acessado assim: *clique com o botão direito em qualquer lugar da página e selecione "Inpecionar Elemento"*.) Eu recomendo que você use o Chrome para isso; se você estiver usando o Chrome, olhe a aba 'Network'.
 
-Refresh your browser, then click on the 'localhost' line in the web inspector, then in the Headers tab, click 'view source'. You should see something similar to this:
+Atualize o seu browser, então clique na linha 'localhost' no impetor web, e então na aba cabeçalhos, clique em 'ver código fonte'. Você deve ver algo similar a isso:
 
 {% highlight HTTP %}
 GET / HTTP/1.1
@@ -163,14 +163,13 @@ Accept-Encoding: gzip,deflate,sdch
 Accept-Language: en-US,en;q=0.8
 {% endhighlight %}
 
-**Coach:** Explain what HTTP headers are and they mean.
+**Coach:** Explicar o que são os cabeçalhos (headers) HTTP e o que eles significam.
 
-The important part to note is the first line, which shows you the HTTP verb and the URL it was called on.
+A parte mais importante está na primeira linha, que separa o verbo HTTP da URL que foi chamada.
 
-**Note:** If Sinatra says it has "backup from WEBrick", Ruby's built-in webserver, then you may see multiple GET requests each time you refresh.  Only one request is actually being issued, you can safely ignore the other.
+**Nota:** Se o Sinatra disser "backup from WEBrick", o servidor embutido do Ruby, então pode ser que você veja multiplas requisições GET a cada atualização sua. Apenas uma requisição está sendo processada, você pode ignorar a outra tranquilamente.
 
-
-## *5.* Global Variable
+## *5.* Variavel global
 
 So our form is sending the coffee information to our app, but we're not doing anything with it yet. We should save the coffee information after it is sent to the server.
 
