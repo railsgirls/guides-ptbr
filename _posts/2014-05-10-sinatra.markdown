@@ -11,7 +11,7 @@ permalink: sinatra
 
 Você já imaginou como a informação sai e entra do seu nagevador web? Nesse tutorial nos vamos ver como tudo isso funciona explorando o HTTP.
 
-Nós vamos usar o [**Sinatra**](http://www.sinatrarb.com/) como ferramenta para demostrar alguns principios básicos. O sinatra é um pequeno framework para criar aplicações web em Ruby como o mínimo de esforço. VOcê pode encontrar uma lista de [coisas construídas com Sinatra aqui](http://www.sinatrarb.com/wild.html).
+Nós vamos usar o [**Sinatra**](http://www.sinatrarb.com/) como ferramenta para demostrar alguns principios básicos. O sinatra é um pequeno framework para criar aplicações web em Ruby como o mínimo de esforço. Você pode encontrar uma lista de [coisas construídas com Sinatra aqui](http://www.sinatrarb.com/wild.html).
 
 O sinatra é diferente do Rails. Os dois são frameworks que nos ajudam a escrever aplicativos web, mas o Sinatra contém menos recursos e menos mágica.
 
