@@ -1,59 +1,61 @@
 ---
 layout: default
-title: Continuous Deployment - cuz less hassle
+title: Deploy contínuo - muito menos complicado
 permalink: continuous
 ---
 
-# Continuous Deployment with the Codeship
+# Deploy contínuo com Codeship
 
-*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* 
+*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)*
+*Traduzido por Bárbara Barbosa [@bahbbc](https://twitter.com/bahbbc)*
 
-### What is this Continuous Deployment thing?
+### O que é esse tal de deploy contínuo?
 
-Continuous deployment is part of the continuous delivery 'movement'. The idea behind continuous delivery is to automate the software delivery process as far as possible. 
+Deploy contínuo é parte de um 'movimento' de entrega contínua. A ideia por trás da entrega contínua é a automação do máximo possível do processo de entrega de software.
 
-With a working continuous deployment chain in place you'll enforce Git deployments (everything must be committed to be tested and everything must be tested to be deployed), making collaboration easier and deployment faster. So you can focus on making your app even more awesome!
+Com um ambiente de deploy contínuo funcionando é possível implantar Deploys via Git (Deverá ser realizado o commit de tudo antes de testar e tudo deve ser testado antes do deploy), tornando a colaboração mais fácil e o deploy mais rápido. Então você pode focar em fazer o seu aplicativo ainda mais legal!
 
-There are a few great companies sailing the continuous wave, in this guide we'll set up continuous deployment for our Ruby on Rails app from GitHub to Heroku, using the [Codeship](http://www.codeship.io). 
+Existem algumas empresas muito legais velejando a onda do deploy contínuo, nesse guia nos iremos configurar um ambiente de deploy contínuo para um aplicativo Ruby on Rails do Github para o Heroku, usando o [Codeship](http://www.codeship.io).
 
-__COACH__: Talk about the benefits of continuous deployment.
+__TREINADOR__: Falar sobre os beneficios do deploy contínuo.
 
-### Sign up for Codeship
+### Conta no Codeship
 
-First, you need [a Codeship account](https://www.codeship.io/). Sign in to the Codeship with GitHub. The Codeship needs access to your GitHub repositories to be able to set them up, so make sure you allow access.  
+Primeiramente, você vai precisar de [uma conta no Codeship](https://www.codeship.io/). Inscreva-se no Codeship com o Github. O Codeship precisa de acesso aos seus repositórios do Github para aprontá-los, então tenha certeza de garantir o acesso.
 
-Back at the Codeship, let’s create your first project. The first step is to select GitHub as your repository provider. In the list of your GitHub repositories, search for the repository you want to set up and select it. In our case, that's the one called something like “railsgirls”.
+Voltando no Codeship, vamos criar o nosso primeiro projeto. O primeiro passo para isso é selecionar o Github como o seu providor de repositório. Na lista dos seus repositórios do Github, busque o respósitorio que você quer configurar e selecione-o. No nosso caso, é o que está escrito algo tipo "railsgirls".
 
-Now your repository is connected and you can set up your test commands. We've created a Ruby on Rails application. So choose “Ruby on Rails” as the framework used. This configures the setup commands and the test commands for you. By deleting the hash key (`#`) you can uncomment test commands you want to use for your application. For now you probably don't have tests set up yet, so you can skip this step and get back to it later.
+Agora o seu repositório está conectado e você pode configurar os seus comandos de teste. Nós criamos uma aplicação Ruby on Rails. Então selecione "Ruby on Rails" como o framework que usaremos. Isso configura os comandos de inicialização e os comandos de testes para você. Deletando a cerquilha (`#`) você pode descomentar os comandos de teste que você quiser usar para a sua aplicação. Por enquanto você não deve ter tester para configurar ainda, então você pode pular esse passo e voltar a ver isso depois.
 
-Now let's finish your setup and go to the dashboard. You can trigger a so-called 'new build' for your application by changing something and then pushing to your repository: 
+Agora vamos finalizar a configuração e ir para o painel de controle. Você pode ativar o chamado 'novo build' (new build) para a sua aplicação mudando alguma coisa e dando push no seu repositório:
+
 {% highlight sh %}
-git add .  
-git commit -m "test Codeship integration"  
+git add .
+git commit -m "teste integracao Codeship"
 git push origin master
 {% endhighlight %}
 
-You can access the build details by clicking the arrow on the right. Here you can follow the build while it's still running. Better than reality tv - promised. 
+Você pode acessar os detalhes do build clicando na seta da direita. Aqui você pode acompanhar o build enquanto ele ainda está rodando. Melhor do Big Brother - eu prometo.
 
-... and a few seconds later your build succeeded! You see all the commands that were run. After a few initial preparation commands the Codeship ran the commands that you specified a few moments ago. You can inspect the output of a single command by clicking on it. 
+... e alguns segundos depois o seu build está completo! Você pode ver todos os comandos que rodaram. Depois de alguns comandos iniciais de preparação o Codeship roda os comandos os comandos que você especificou há alguns momentos atrás. Você pode ver a saída de um único comando clicando nele.
 
-You've already pushed to your repository, watched your build log and got a green build. So you can finish the assistant at the top by clicking on the "click to finish" button.
+Você já mandou um push no seu repositório, viu o log do seu build e recebeu um build verde. Então você pode finizar o assistente no começo clicando no botão "Clique para finalizar" ("click to finish").
 
-### Setup Continuous Deployment
+### Configurando o deploy contínuo
 
-Now let's deploy your application to Heroku. Go to your project settings by clicking on the settings icon in the projects dropdown on the Codeship. Then navigate to the "Deployment" section. As you want to deploy to Heroku, click on the "Heroku" button.
+Agora vamos fazer o deploy da nossa aplicação no Heroku. Vá para a configuração do seu projeto no ícone de configuração no menu do Codeship. Então navegue até a seção "Deployment". Como você quer fazer deploy no Heroku, clique no botão "Heroku".
 
-You are asked to enter the name of your Heroku application and your API key. I sure hope you wrote that down somewhere! Enter your application's name and API key (to retrieve your Heroku API key, go to your Heroku account and click "Show API key") and save your deployment configuration.
+Você precisará colocar o nome da sua aplicação no Heroku e a sua chave da API. Espero que você a tenha escrito em algum lugar! Coloque o nome da sua aplicação e a sua chave da API (para recuperar a sua chave da API, vá para a sua conta no Heroku e clique "Show API key") e save a sua configuração de deploy.
 
-From now on the Codeship will deploy your application to Heroku, everytime you push to your GitHub repository. Neat! 
+De agora em diante o Codeship irá fazer deploy automática do seu aplicativo no Heroku, toda vez que você fizer um push no seu repositório do Github. Da hora!
 
-### Give it a try
-Now let's push a change and see if it gets deployed. Change something in your application first, then commit and push the change.
+### Faça um teste
+Agora vamos fazer um push com uma mudança e ver o que foi para deploy. Mude alguma coisa na sua aplicação primeiro, e depois faça um commit e um push com a mudança.
 
 {% highlight sh %}
-git add .  
-git commit -m "this changes everything"  
+git add .
+git commit -m "isso muda tudo"
 git push
 {% endhighlight %}
 
-And immediately another build will start running on the Codeship. Go back to your project overview and you'll see the commands we already know from your first build. Plus: your application gets deployed to Heroku now and should be online after a minute or two.
+E imediatamente outro build começará a rodar no Codeship. Volte ao seu projeto e você verá os comandos que nós já conhecemos do seu primeiro build. Bônus: A sua aplicação vai subir no Heroku e deve estar online depois de um minuto ou dois.
