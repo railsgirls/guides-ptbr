@@ -1,22 +1,24 @@
 ---
 layout: default
-title: Rails Girls on Engine Yard
+title: Rails Girls no Engine Yard
 permalink: engineyard
 ---
 
-# Put Your App Online With Engine Yard
+# Coloque sua aplicação online com Engine Yard
 
-*Created by Mary Jenn, [@mfjenn](https://twitter.com/mfjenn)*
+*Criado por Mary Jenn, [@mfjenn](https://twitter.com/mfjenn)*
 
-#### Ensure You're Using PostGres for Your Database
+#### Certifique-se que você está utilizando PostgreSQL como banco de dados
 
-You'll need to get your database to work on Engine Yard, which uses a different database than the Rails default. Please change the following in the Gemfile:
+Você precisará fazer com que seu banco de dados funcione no Engine Yard, que
+utiliza um banco diferente do padrão do Rails. Por favor, substitua o seguinte
+código no arquivo `Gemfile`:
 
 
 		gem 'sqlite3'
 
 
-to
+para
 
 		group :development do
 			gem 'sqlite3'
@@ -29,11 +31,13 @@ to
 
 
 
-Run `bundle install --without production` to setup your dependencies.
+Execute `bundle install --without production` para configurar suas
+dependências.
 
-#### Version Control Systems
+#### Sistemas de controle de versão
 
-You need to add your app to your Git repository. You can do this by running the following in the terminal:
+Você precisa adicionar sua aplicação ao seu repositório Git. Você pode fazer
+isso executando o seguinte no seu terminal:
 
 
 >	`git init`
@@ -43,66 +47,68 @@ You need to add your app to your Git repository. You can do this by running the 
 >	`git commit -m "initial commit"`
 
 
-__COACH__: This would be a good time to talk about version control systems and git.
+__TREINADORA__: Esta seria uma boa hora para falar sobre sistemas de versionamento e Git.
 
-### Be Sure to Have a Rails Application in a Repository on Github
+### Assegure que você tenha uma aplicação Rails em um repositório no GitHub
 
-You will need to have a GitHub account and a repo we can pull an app from. Follow these directions on [GitHub](https://help.github.com/articles/create-a-repo) to create a repo and push your app to it. If you do not have a working Rails application, you can fork [Engine Yard's sample todo app](https://github.com/engineyard/todo) to your own repo. A coach can walk you through this if you need help.
+Você precisará ter uma conta no GitHub e um repositório onde encontraremos sua
+aplicação. Siga estas instruções em [GitHub](https://help.github.com/articles/create-a-repo) para criar um repositório e submeter sua aplicação a ele. Se você não tem uma aplicação Rails funcionando, você pode fazer a cópia da [aplicação de exemplo da Engine Yard](https://github.com/engineyard/todo) para seu próprio repositório. Uma treinadora pode lhe ajudar se precisar.
 
-### Sign up for a Free Trial Engine Yard Account
+### Registre-se para uma conta de teste gráris na Engine Yard
 
-Go to Engine Yard's [Website](https://www.engineyard.com/) and click on "GET STARTED FREE" to sign up for your Free 500 Hour Trial. The sign up will send you a confirmation email, so go check your email, click on the link and sign in to your account. Click on the link under "Your available applications" that says "Engine Yard Cloud". This will take you to your dashboard.
+Navegue até o [site](https://www.engineyard.com/) da Engine Yard e clique em "GET STARTED FREE" para obter suas 500 horas de teste grátis. O registro lhe enviará um e-mail de confirmação; verifique seu e-mail, clique no link e entre em sua conta. Clique no link sob "Your available applications" que diz "Engine Yard Cloud". Isto leva ao seu painel.
 
-### Create your Engine Yard Cloud account
+### Crie sua conta Engine Yard Cloud
 
-1. 	Choose a name for your account. We suggest picking something relevant to who you are, either as a developer, or as an organization if you will be having collaborators. Click the button "Start Trial"
+1. 	Escolha um nome para sua conta. Sugerimos escolher algo relevante a quem você é, seja como desenvolvedora ou uma organização, se você tem colaboradores. Clique no botão "Start Trial".
 
-2. 	Feel free to explore what is in the drop downs, but let's go with the defaults for now, since they are in line with a basic Rails app.
+2. 	Fique à vontade para explorar os menus, mas vamos usar os padrões por ora, já que eles estão alinhados com uma aplicação Rails básica.
 
-3. 	In the box labeled "Git Repository URI", paste the URI from your Github repo. Be sure to use the URI from the SSH version of your application. HINT: The format should be the same as the placeholder text on your Engine Yard application page (or like this: "git@github.com:mfjenn/blogotron.git")
-
-
-### Putting Your Deploy Key in Place
-
-You should now be on a page that says "Allow Engine Yard access to private repository".
-
-1.	Copy the block of text in the box and go to your GitHub settings page.
-2.	Go to the SSH page
-3.	Click on the button that says "add a key"
-4.	Paste the block of text from your Engine Yard page here. Save it
-5.	Go back to your Engine Yard Page and Click the button that says, "My deploy key is in place".
-
-__COACH__: Talk about the difference between private and public repos and when to use either.
-
-### Creating and Configuring Your Environment
-
-Once you click the "My deploy key is in place" button, you will be taken to a page that says, "Create New Environment for (Your Account Name) App". It is here where we will configure your application. Feel free to explore all the options in the drop downs, but let's use the defaults for now. You do not need to set a domain name.
-*	Click the button that says, "Create Environment".
-
-#### Environment Setup
-
-On this page, let's select the staging configuration.
-*	Click "Boot This Configuration". You will go to a new page where you see several status bars moving. Our Platform is provisioning your instances. We need to wait till these turn to green dots. This usually takes about 10 minutes, so does anyone need to take a break? It's a good time to go grab some water or a coffee.
-
-__COACH__: Talk about Staging vs. Production, and why it's important to have replicas. Talk about what is a master & Slave. How does Engine Yard's Failover work? Why is that important?
+3. 	No campo com o nome "Git Repository URI", cole o endereço de seu repositório GitHub. Assegure-se de utilizar o endereço da versão SSH de sua aplicação. DICA: O formato deve ser como o do texto em sua página da aplicação Engine Yard (ou como este: "git@github.com:mfjenn/blogotron.git")
 
 
-#### Deploying Your Application
+### Colocando sua chave de deploy
 
-1.	Once all of the lights are green, click "Deploy".
-2.	Once you see the phrase "YOUR NAME successfully deployed HEAD" you will know it has been deployed! Congratulations!
-3.	Click on the link that says "View your application" to visit your application online.
-4.	If you get a red notification that your deploy failed, we just have some debugging to do. Raise your hand and a coach can come over to to help.
+Você deve estar agora em uma página que diz "Permitir que a Engine Yard acesse
+seu repositório privado".
+
+1.	Copie o bloco de texto da caixa e navegue até a página de configurações do GitHub;
+2.	Vá até a página "SSH";
+3.	Clique no botão que diz "adicionar uma chave";
+4.	Cole o bloco de texto de sua página da Engine Yard no campo e salve;
+5.	Volte à sua página na Engine Yard e clique no botão que diz "My deploy key is in place".
+
+__TREINADORA__: Explique a diferença entre repositórios públicos e privados e quando utilizá-los.
+
+### Criando e configurando seu ambiente
+
+Assim que você clicar no botão "My deploy key is in place", você será levada a uma página que diz "Create New Environment for (Your Account Name) App". É aqui onde vamos configurar sua aplicação. Fique à vontade para explorar todas as opções nos menus, mas vamos usar as opções padrão por ora. Você não precisa escolher um domínio.
+*	Clique no botão que diz "Create Environment".
+
+#### Configuração de Ambiente
+
+Nesta página, vamos selecionar a configuração de homologação (staging).
+*	Clique em "Boot This Configuration". Você será levada a uma nova página onde verá várias barras de progresso se movendo. Nossa plataforma estará provisionando suas instâncias. Nós precisamos esperar até que tudo vire pontinhos verdes. Isso normalmente leva uns 10 minutos, então, alguém precisa fazer um intervalo? É uma boa hora para um café ou água.
+
+__TREINADORA__: Fale sobre homologação (staging) vs. produção (production), e porque é importante ter réplicas. Fale sobre principal (master) e secundário (slave). Como o Failover da Engine Yard funciona? Por que isso é importante?
 
 
-#### Stopping Your Instances to Save Your Hours
+#### Colocando sua aplicação no ar
 
-Once you've got your app up & running, be sure to click the "stop" button to stop the instances so that your don't burn through all of your hours. You can always start them again.
+1.	Assim que todos os pontinhos estiverem verdes, clique em "Deploy".
+2.	Assim que vir a frase "SEU NOME successfully deployed HEAD", você saberá que seu código está no ar! Parabéns!
+3.	Clique no link que diz "View your application" para visitar sua aplicação;
+4.	Se você receber uma notificação vermelha que diz que seu deploy falhou, nós só teremos alguma depuração a fazer. Levante a mão e uma treinadora te ajudará com isso.
 
-### Additional Resources
-*	[A video tutorial](https://support.cloud.engineyard.com/entries/21009937-Video-Tutorial-Set-up-an-Account-and-Deploy-an-Application)
 
-*	[Another Tutorial From the Engine Yard Site](https://support.cloud.engineyard.com/entries/20996751-Tutorial-How-to-Deploy-the-ToDo-Application-on-a-Trial-Account)
+#### Parando suas instâncias para economizar suas horas de teste grátis
+
+Assim que você tiver sua aplicação rodando, certifique-se de clicar no botão "stop" para parar suas instâncias, assim você não usa suas horas em vão. Você sempre pode reiniciá-las.
+
+### Recursos adicionais
+*	[Um tutorial em vídeo (em inglês)](https://support.cloud.engineyard.com/entries/21009937-Video-Tutorial-Set-up-an-Account-and-Deploy-an-Application)
+
+*	[Outro tutorial do site da Engine Yard (em inglês)](https://support.cloud.engineyard.com/entries/20996751-Tutorial-How-to-Deploy-the-ToDo-Application-on-a-Trial-Account)
 
 
 
