@@ -21,7 +21,7 @@ gem 'gmaps4rails'
 {% endhighlight %}
 ```
 
-Bundle como de costume. Em seguida, adicione a um novo arquivo `app / model / marker.rb`:
+Bundle como de costume. Em seguida, adicione a um novo arquivo `app/model/marker.rb`:
 ```
 {% highlight sh %}
 class Marker
@@ -96,7 +96,7 @@ Crie o arquivo `view/google/index.html.erb`:
 ```
 
 
-Adicione o seguinte cdigo no arquivo `app/views/application.html.erb` depois de `"<%= yield %>"`:
+Adicione o seguinte código no arquivo `app/views/application.html.erb` depois de `"<%= yield %>"`:
 ```
 {% highlight sh %}
 <%= yield :scripts %>
