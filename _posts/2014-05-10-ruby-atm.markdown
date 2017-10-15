@@ -1,69 +1,72 @@
 ---
 layout: default
-title: Ruby ATM
-permalink: ruby-atm
+title: Caixa eletrônico em Ruby
+permalink: caixa-eletronico-em-ruby
 ---
 
-# Ruby ATM
+# Caixa eletrônico em Ruby
 
-*Created by Joshua Paling, [@joshuapaling](https://twitter.com/joshuapaling)*
+*Criado por Joshua Paling, [@joshuapaling](https://twitter.com/joshuapaling)*
 
-In this exercise you will write a function to handle withdrawing money from an ATM. It is intended to challenge you! Be prepared to ask lots of questions, Google things, and take a step back from the computer. But you'll learn a lot!
+*Traduzido por Ricardo Yasuda, [@shadowmaru](https://twitter.com/shadowmaru)
 
-You should use pair, group, or remote programming so you have other programmers to bounce ideas off. You'll use Test Driven Development. However, all the tests have been pre-written for you, so you can focus on the code itself.
+Neste exercício você vai escrever uma função para lidar com saques em um caixa eletrônico. A intenção é desafiar você! Prepare-se para fazer muitas perguntas, pesquisar, e sair um pouco do computador. Mas você aprenderá bastante!
 
-We'll start simple, but ramp the difficulty up pretty steeply toward the end!
+Você deverá usar programação em par, grupo ou remota, para ter outras pessoas para discutir ideias. Você vai usar Test Driven Development. No entanto, todos os testes já foram pré-escritos para você, para que você possa focar  no código em si.
 
-## Workflow
+Começaremos com algo simples, mas vamos aumentar muito a dificuldade perto do final!
 
-For each step, you will need to take the following actions:
+## Fluxo
 
-**1. Run the new tests:** Delete tests from the previous step, and paste in the pre-written tests for the current step. *(Tests for each step are show at the bottom of that step.)* Run the tests to see which ones fail. In sublime text, you can hit <kbd>Ctrl</kbd>+<kbd>B</kbd> to run the tests. Or, you can open a terminal, `cd` into your working directory, and run `ruby atm.rb`.
+Para cada passo, você vai precisar executar as ações a seguir:
 
-**2. Make the tests pass:** Edit your code to meet the functionality requirements of the current step. You'll know you've got it right when all your tests are green.
+**1. Rodar os novos testes:** Apague os testes do passo anterior, e cole os testes pré-escritos para o passo atual. *(Testes para cada passo são exibidos no fim do mesmo.)* Rode os testes para ver quais deles falham. No Sublime Text, você pode usar <kbd>Ctrl</kbd>+<kbd>B</kbd> para rodar os testes. Ou, você pode abrir um terminal, `cd` para o seu diretório de trabalho, e executar `ruby caixa_eletronico.rb`.
 
-**3. Refactor:** See if there are any edits you can make to ensure your code is as clean and easy to understand as possible. Some steps have discussion points. Discuss them with your pair - they'll help you moving forward.
+**2. Faça os testes passarem:** Edite seu código para satisfazer os requisitos funcionais do passo atual. Você saberá que conseguiu quando todos os testes ficarem verdes.
 
-You may recognise these steps as the **red, green, refactor** workflow of TDD.
+**3. Refatore:** Veja se você pode reescrever algo para fazer o código ficar o mais limpo e fácil de entender possível. Alguns passos têm pontos de discussão. Discuta-os com seus pares - eles vão ajudar a seguir em frente.
 
-## *1.* $5 bills
+Você deve ter reconhecido estes passos como o fluxo
+**red, green, refactor** do TDD.
 
-Imagine an ATM that holds only $5 notes. Write a function that returns `true` if an amount can be returned, and `false` otherwise.
+## *1.* Notas de R$5
 
-**Examples:**
+Imagine um caixa eletrônico que possui apenas notas de R$5. Escreva uma função que retorne `true` se um valor pode ser sacado, senão retorne `false`.
 
-* `withdraw(15)` should return `true`
-* `withdraw(18)` should return `false`, because $18 cannot be made up of $5 notes
+**Exemplos:**
 
-**Tips for getting tests green:**
+* `withdraw(15)` deve retornar `true`
+* `withdraw(18)` deve retornar `false`, porque R$18 não pode ser composto por notas de R$5
 
-The modulus operator, `%` gets the remainder of a division. Eg, `9 % 4` results in `1` (nine divided by four has a remainder of 1).
+**Dicas para fazer os testes ficarem verdes:**
 
-**Starting code:**
+A operação módulo, `%` obtém o resto de uma divisão. Por exemplo, `9 % 4` resulta em `1` (nove dividido por quatro tem resto 1).
 
-Create a file called `atm.rb`. paste the following code into it. This contains the shell of your `withdraw()` function, along with tests.
+**Código inicial:**
+
+Crie um arquivo chamado `caixa_eletronico.rb`. Cole o seguinte código nele. Ele contém a casca da sua função `withdraw()`, com os testes.
 
 {% highlight ruby %}
 def withdraw(amount)
-  if amount <= 0 # this deals with some of the situations...
+  if amount <= 0 # isso aqui lida com algumas das situações...
     return false
   end
-  # ToDo: figure out this bit
+  # ToDo: descubra como fazer esta parte
 end
 {% endhighlight %}
 
 
-### Tests for step 1:
+### Testes para o passo 1:
 
 {% highlight ruby %}
-# import required testing libraries
+# importe as bibliotecas de teste obrigatórias
 require 'minitest/spec'
 require 'minitest/autorun'
 
-# BELOW ARE THE TESTS FOR AUTOMATICALLY CHECKING YOUR SOLUTION.
-# THESE TESTS ARE FOR STEP 1.
-# THESE NEED TO BE REPLACED AFTER EACH STEP.
-describe 'atm' do
+# SEGUEM ABAIXO OS TESTES PARA VERIFICAR AUTOMATICAMENTE A SUA SOLUÇÃO.
+# ESTES TESTES SÃO PARA O PASSO 1.
+# ELES DEVEM SER SUBSTITUÍDOS A CADA PASSO.
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -74,44 +77,45 @@ describe 'atm' do
     [20, true],
     [35, true],
   ].each do |input, expected|
-    it "should return #{expected} when $#{input} is withdrawn" do
+    it "deve retornar #{expected} quando R$#{input} é sacado" do
       withdraw(input).must_equal expected
     end
   end
 end
 {% endhighlight %}
 
-## *2.* How many bills?
-Now, modify your function so that if the amount *can* be withdrawn, it will return the appropriate number of notes, rather than simply `true`
+## *2.* Quantas notas?
 
-**Examples:**
+Agora, modifique sua função para que caso o valor *possa* ser sacado, retorne o número apropriado de notas, em vez de simplesmente `true`
 
-* `withdraw(15)` should return `3`, since three $5 notes makes $15
-* `withdraw(20)` should return `4`, since four $5 notes makes $20
-* `withdraw(11)` should return `false`, because $11 cannot be made up of $5 notes
+**Exemplos:**
 
-**Tips for getting tests green:**
+* `withdraw(15)` deve retornar `3`, já que 3 notas de R$5 totalizam R$15
+* `withdraw(20)` deve retornar `4`, já que 4 notas de R$5 totalizam R$20
+* `withdraw(11)` deve retornar `false`, porque R$11 não pode ser composto por notas de R$5
 
-The `/` operator performs a division. For example, if you wanted to get half your age, and store it in a variable, you'd do this:
+**Dicas para fazer os testes ficarem verdes:**
+
+O operador `/` faz uma divisão. Por exemplo, se você quer saber a metade da sua idade, e guardar em uma variável, faça isso:
 
 {% highlight ruby %}
 my_age = 28
 half_my_age = my_age / 2
 {% endhighlight %}
 
-In ruby, when you do division with two whole numbers (integers), the result is rounded down to the nearest whole number.
+Em Ruby, quando você faz uma divisão com dois números inteiros (integers), o resultado é arredondado para baixo para o número inteiro mais próximo.
 
 {% highlight ruby %}
 new_number = 25/10
-# new_number contains 2, because 25/10 = 2.5, and ruby will round that down to 2.
+# new_number é 2, porque 25/10 = 2.5, e o Ruby vai arredondar para baixo para 2.
 {% endhighlight %}
 
 
-### Tests for step 2:
+### Testes para o passo 2:
 
 {% highlight ruby %}
-# Replace your existing tests with the ones below.
-describe 'atm' do
+# Substitua seus testes existentes por estes abaixo.
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -122,46 +126,46 @@ describe 'atm' do
     [20, 4],
     [35, 7],
   ].each do |input, expected|
-    it "should return #{expected} when $#{input} is withdrawn" do
+    it "deve retornar #{expected} quando R$#{input} é sacado" do
       withdraw(input).must_equal expected
     end
   end
 end
 {% endhighlight %}
 
-## *3.* Array of notes
+## *3.* Array de notas
 
-In programming, an `array` is basically a collection of things. It's like a list.
+Em programação, um `array` é basicamente uma coleção de coisas. É como se fosse uma lista.
 
-Rather than returning the number of notes, modify the code so that it returns an array of notes (in this case, all $5's).
+Ao invés de retornar o número de notas, modifique o código para ele retornar um array de notas (neste caso, todas de R$5).
 
-**Examples**
+**Exemplos**
 
-* `withdraw(15)` should return an array, `[5, 5, 5]`. (That's basically a collection of three $5 notes)
-* `withdraw(11)` should return `false`, because $11 cannot be made up of $5 notes
+* `withdraw(15)` deve retornar um array, `[5, 5, 5]`. (É basicamente uma coleção de 3 notas de R$5)
+* `withdraw(11)` deve retornar `false`, porque R$11 não pode ser composto por notas de R$5
 
-**Tips for getting tests green:**
+**Dicas para fazer os testes ficarem verdes:**
 
-`[]` defines an empty array. `[1, 2]` defines an array with two elements (1 and 2).
+`[]` define um array vazio. `[1, 2]` define um array com dois elementos (1 e 2).
 
-The shovel operator (`<<`) adds an element to an array. Eg. `[10, 20] << 30` will add 30 to the array, resulting in `[10, 20, 30]`.
+O operador `<<` adiciona um elemento a um array. Por exemplo, `[10, 20] << 30` vai adicionar 30 ao array, resultando em `[10, 20, 30]`.
 
-The `times` method executes a block of code several times - eg. `5.times { puts 'hello' }` will print 'hello' 5 times.
+O método `times` executa um bloco de código várias vezes - por exemplo, `5.times { puts 'hello' }` vai imprimir 'hello' 5 vezes.
 
-Bringing it all together:
+Juntando tudo:
 
 {% highlight ruby %}
-my_array = [] # create an empty array and store it in my_array
-my_array << 20 # now my array contains [20]
-my_array << 30 # now my_array contains [20, 30]
-remainder = 13 % 5 # remainder is 3
-remainder.times { my_array << 5 } # now my_array contains [20, 30, 5, 5, 5]
+my_array = [] # cria um array vazio e guarda em my_array
+my_array << 20 # agora my array contém [20]
+my_array << 30 # agora my_array contém [20, 30]
+remainder = 13 % 5 # remainder é 3
+remainder.times { my_array << 5 } # agora my_array contém [20, 30, 5, 5, 5]
 {% endhighlight %}
 
-### Tests for step 3:
+### Testes para o passo 3:
 {% highlight ruby %}
-# Replace your existing tests with the ones below.
-describe 'atm' do
+# Substitua seus testes existentes por estes abaixo.
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -170,27 +174,27 @@ describe 'atm' do
     [20, [5, 5, 5, 5]],
     [35, [5, 5, 5, 5, 5, 5, 5]],
   ].each do |input, expected|
-    it "should return #{expected} when $#{input} is withdrawn" do
+    it "deve retornar #{expected} quando R$#{input} é sacado" do
       withdraw(input).must_equal expected
     end
   end
 end
 {% endhighlight %}
 
-## *4.* $10 notes
+## *4.* Notas de R$10
 
-Now imagine the ATM returns only $10 notes. Modify your function to accommodate this.
+Agora imagine que o caixa retorne apenas notas de R$10. Modifique sua função para refletir isso.
 
-**Examples**
+**Exemplos**
 
-* `withdraw(20)` should return an array, `[10, 10]`
-* `withdraw(15)` should return `false`, because $15 cannot be made up of $10 notes
+* `withdraw(20)` deve retornar um array, `[10, 10]`
+* `withdraw(15)` deve retornar `false`, porque R$15 não pode ser composto por notas de R$10
 
-### Tests for step 4:
+### Testes para o passo 4:
 
 {% highlight ruby %}
-# Replace your existing tests with the ones below.
-describe 'atm' do
+# Substitua seus testes existentes por estes abaixo.
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -199,56 +203,56 @@ describe 'atm' do
     [20, [10, 10]],
     [40, [10, 10, 10, 10]],
   ].each do |input, expected|
-    it "should return #{expected} when $#{input} is withdrawn" do
+    it "deve retornar #{expected} quando R$#{input} é sacado" do
       withdraw(input).must_equal expected
     end
   end
 end
 {% endhighlight %}
 
-### Refactor
-Once you have your tests passing, it's time to refactor.
+### Refatore
 
-In programming, ['Magic Numbers'](http://en.wikipedia.org/wiki/Magic_number_(programming)) are a bad thing (don't be fooled by the name!). They refer to a hard-coded value that just sort of *appears* out of thin air, with no clear explanation of what that particular number represents.
+Uma vez que seus testes passarem, é hora de refatorar.
 
-Consider how easy / hard it is to understand the following code snippets:
+Em programação, ['Números Mágicos'](https://pt.wikipedia.org/wiki/N%C3%BAmero_m%C3%A1gico_(inform%C3%A1tica)) são algo ruim (não se deixe enganar pelo nome!). Eles se referem a um valor fixo que meio que *aparece* do nada, sem nenhuma explicação do que aquele número específico representa.
+
+Considere o quão fácil/difícil é entender os seguintes pedaços de código:
 
 {% highlight ruby %}
-# BAD - magic number!
+# RUIM - número mágico!
 balance = balance * 4.45
 {% endhighlight %}
 
 {% highlight ruby %}
-# BAD - nondescript variable name is not much better!
+# RUIM - nome de variável não descritivo não é muito melhor!
 value = 4.45
 balance = balance * value
 {% endhighlight %}
 
 {% highlight ruby %}
-# GOOD - isn't this much easier to understand?
+# BOM - não é bem mais fácil de entender?
 interest_rate = 4.45
 balance = balance * interest_rate
 {% endhighlight %}
 
-Magic numbers are particularly troublesome when the same hard-coded value appears in multiple places.
+Números mágicos são particularmente problemáticos quando os mesmos valores fixos aparecem em vários lugares.
 
-Did you use magic numbers? Can you refactor your code to eliminate them?
+Você usou números mágicos? Você pode refatorar seu código para eliminá-los?
 
+## *5.* Notas de R$5 e R$10
 
-## *5.* $5 and $10 notes
+Imagine que seu caixa agora tem notas de R$5 e de R$10. As pessoas vão querer o menor número de notas possível.
 
-Imagine your ATM now holds $5 and $10. People want as few notes as possible.
+**Exemplos**
 
-**Examples**
+* `withdraw(25)` deve retornar `[10, 10, 5]`
+* `withdraw(11)` deve retornar `false`, porque R$11 não pode ser composto por notas de R$5 e de R$10
 
-* `withdraw(25)` should return `[10, 10, 5]`
-* `withdraw(11)` should return `false`, because $11 cannot be made up of $5 and $10 notes
-
-### Tests for step 5:
+### Testes para o passo 5:
 
 {% highlight ruby %}
-# Replace your existing tests with the ones below.
-describe 'atm' do
+# Substitua seus testes existentes por estes abaixo.
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -257,39 +261,39 @@ describe 'atm' do
     [25, [10, 10, 5]],
     [35, [10, 10, 10, 5]],
   ].each do |input, expected|
-    it "should return #{expected} when $#{input} is withdrawn" do
+    it "deve retornar #{expected} quando R$#{input} é sacado" do
       withdraw(input).must_equal expected
     end
   end
 end
 {% endhighlight %}
 
-## *6.* $5, $10, and $20 notes
+## *6.* Notas de R$5, R$10 e R$20
 
-Your ATM now holds $5, $10, and $20 notes. Modify your function to accommodate this.
+Seu caixa agora tem notas de R$5, R$10 e R$20. Modifique seu código para refletir isso.
 
-**Note:** at this point, each higher denomination can be evenly divided by each lower denomination - eg. $20 / $10 = 2. Things get much trickier when that's not the case (eg, $50's and $20's). For this step, we'll intentionally not deal with this case to make it easier.
+**Nota:** a esta altura, cada valor maior pode ser dividido por cada valor menor - por exemplo, R$20 / R$10 = 2. As coisas ficam mais difíceis quando não é o caso (por exemplo, notas de R$50 e de R$20). Para este passo, intencionalmente não lidaremos com este caso para deixar mais fácil.
 
-**Examples**
+**Exemplos**
 
-* `withdraw(15)` should return `[10, 5]`
-* `withdraw(25)` should return `[20, 5]`
-* `withdraw(35)` should return `[20, 10, 5]`
-* `withdraw(11)` should return `false`, because $11 cannot be made up of $5 and $10 notes
+* `withdraw(15)` deve retornar `[10, 5]`
+* `withdraw(25)` deve retornar `[20, 5]`
+* `withdraw(35)` deve retornar `[20, 10, 5]`
+* `withdraw(11)` deve retornar `false`, porque R$11 não pode ser composto por notas de R$5 e de R$10
 
-**Tips for getting tests green:**
+**Dicas para fazer os testes ficarem verdes:**
 
-To tell if an array is empty: `my_array.empty?`
+Para saber se um array está vazio: `my_array.empty?`
 
-To tell if an array is not empty: `!my_array.empty?`
+Para saber se um array não está vazio: `!my_array.empty?` ou `my_array.any?`
 
-To remove the first element off an array: `my_array.shift`. Eg, `[1, 2, 3].shift` results in `[2, 3]`
+Para remover o primeiro elemento de um array: `my_array.shift`. Por exemplo, `[1, 2, 3].shift` resulta em `[2, 3]`
 
-### Tests for step 6:
+### Testes para o passo 6:
 
 {% highlight ruby %}
-# Replace your existing tests with the ones below.
-describe 'atm' do
+# Substitua seus testes existentes por estes abaixo.
+describe 'caixa eletrônico' do
   [
     [-1, false],
     [0, false],
@@ -301,31 +305,27 @@ describe 'atm' do
     [70, [20, 20, 20, 10]],
     [75, [20, 20, 20, 10, 5]],
   ].each do |input, expected|
-    it "should return #{expected} when $#{input} is withdrawn" do
+    it "deve retornar #{expected} quando R$#{input} é sacado" do
       withdraw(input).must_equal expected
     end
   end
 end
 {% endhighlight %}
 
+### Refatore
 
-### Refactor
+* Quantas linhas você teve que mudar, do passo 5 para o passo 6?
+* E se disponibilizássemos notas de R$100? Você poderia fazer em uma única linha?
+* Refatore seu código para que você possa mudar para notas de R$100, R$20 e R$10, mudando apenas uma linha.
+* Qual é a solução mais à prova de futuro?
 
-* How many lines did you have to change, going from step 5 to step 6?
-* What if we made $100 notes available, as well? Could you do this in a single line?
-* Refactor your code so that you could change to $100, $20 and $10 notes, by changing a single line.
-* What is the most future-proof solution?
+## *7.* Discussões Finais
 
+* Dado que uma solução particular *funcione*, o que faz dela um código 'bom' ou 'ruim'?
+* Você pode pensar em alguns princípios ou melhores práticas para guardar? Estrutura de código é importante? Por quê?
+* Você teve algum momento 'Aha!'? Quais foram eles?
+* Digamos que você começou uma microempresa de caixas eletrônicos, que rapidamente expandiu para se tornar um sucesso global. O quão adequado é o seu código para lidar com todas as formas de moeda, em todos os países do mundo? Ele ficou mais adequado com cada passo?
 
-## *7.* Final Discussion Points
-* Given a particular solution *works*, what makes it 'good' or 'bad' code?
-* Can you think of any take-home best practices or principles? Is code structure important? Why?
-* Did you have any 'Aha!' moments? What were they?
-* Let's say you started a little ATM company, which quickly expanded to become a global success. How suitable is your code for dealing with all denominations of currency, in all nations of the world? Did it get more suitable with each step?
+## Desafio! Notas de R$50 e de R$20
 
-
-## Challenge! $50 and $20 notes
-
-Up til now, we've intentionally avoided the case where a smaller note cannot fit evenly into each larger one. For example, we've avoided the case of having only $50s and $20s (where 20 does not divide evenly into 50). Can you see why this case will be harder? If your current code were to include only $50s and $20s, what would happen when you try to withdraw $60, or $110? In your head, or on paper, can you think of what logic would be needed to be in place to handle these cases correctly? If you're up for a challenge, try to handle this case in your code! (You'll need to write the tests yourself for this step).
-
-
+Até agora, nós evitamos intencionalmente o caso onde uma nota menor não encaixava em uma nota maior. Por exemplo, nós evitamos o caso de ter apenas notas de R$50 e R$20 (onde 20 não 'cabe' exatamente em 50). Você consege ver o porquê deste caso ser mais difícil? Se o seu código atual fosse incluir apenas notas de R$50 e R$20, o que aconteceria quando você tentasse sacar R$60, ou R$110? Na sua cabeça, ou no papel, você pode pensar qual lógica seria necesária para lidar com esses casos corretamente? Se estiver a fim de um desafio, tente lidar com este caso no seu código! (Você precisará escrever seus próprios testes para este passo).
