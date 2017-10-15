@@ -1,57 +1,60 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App 
+title: App para turismo de autismo amigável
 permalink: touristic-autism_resource-rating
 ---
 
-# Resource Rating
+# Avaliação de Recurso
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 
-What do we want our app to do? As a first thing, we would like to 
-* authenticate **users**
-* allow authenticated users to create a new touristic **place** description
-* allow authenticated users to **comment** those places
-* allow authenticated users to **rate** up to which extent those places are autism-friendly or not.
+*Traduzido por Beatriz Rezener, [@beatrizrezener](https://github.com/beatrizrezener)*
 
-We modeled and deployed comment, user and place resources, so far. Let's now enable the rating for places.
+Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e os tutoriais para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando design](http://guides.railsgirls.com/design), [implantando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
-## Rating Places
+O que queremos que nosso app faça? Primeiramente, nós gostaríamos de:
+* autenticar **usuários**
+* permitir usuários autenticados a criar uma nova descrição de **local** turístico
+* permitir usuários autenticados a **comentar** esses lugares
+* permitir usuários autenticados a **avaliar** até que ponto esses locais são ou não amigáveis ao autismo.
 
-## Step 0: Add letsrate gem
+Até então, nós modelamos e implementamos recursos de comentários, usuários e locais. Vamos agora habilitar a avaliação para lugares.
 
-Open up your `Gemfile` and add this line
+## Avaliando Locais
+
+## Passo 0: Adicionar a gem letsrate
+
+Abra o seu `Gemfile` e adicione a linha:
 
 {% highlight ruby %}
 gem "letsrate", :git => "git://github.com/iammyr/letsrate.git"
 {% endhighlight %}
-and run
+e execute
 {% highlight sh %}
 bundle install
 {% endhighlight %}
-to install the gem. **Also remember to restart the Rails server**.
+para instalar a gem. **Além disso, lembre-se de reiniciar o servidor Rails**.
 
-## Step 1: Set up letsrate in your app
+## Passo 1: Configure o letsrate em seu app
 
-Run the following command in the terminal. (we are assuming that we had already enabled authenticated users using the devise gem)
+Execute o comando a seguir no terminal (estamos assumindo que já habilitamos a autenticação de usuários usando a gem Devise).
 
 {% highlight sh %}
 rails g letsrate user
 {% endhighlight %}
 
-## Step 2: Apply letsrate to your resource
+## Step 2: Aplique letsrate a seu recurso
 
-You should add the letsrate_rateable function with its dimensions option, to the model of the resource you wish to rate, i.e., place. You can have multiple dimensions.
+Você deve adicionar a função letsrate_rateable, com sua opção de dimensões, ao modelo do recurso que você deseja avaliar, por exemplo, local. Você pode ter múltiplas dimensões.
 
-In app/models/place.rb add
+Em app/models/place.rb adicione
 
 {% highlight sh %}
-  letsrate_rateable "autism_friendly", "overall"
+  letsrate_rateable "autismo_amigavel", "geral"
 {% endhighlight %}
 
-Then you need to add a call letsrate_rater in the user model:
+Então você precisa adicionar uma chamada a letsrate_rater no modelo de usuário:
 
 {% highlight sh %}
   letsrate_rater
@@ -59,27 +62,27 @@ Then you need to add a call letsrate_rater in the user model:
 
 ## Step 3: Render the Views
 
-There is a helper method which name is rating_for to add the star links. By default rating_for will display the average rating and accept the new rating value from authenticated user.
+Há um método auxiliar chamado rating_for para adicionar as estrelas de avaliação. Por padrão, rating_for irá mostrar a média das avaliações e aceitará uma nova avaliação de um usuário autenticado.
 
-Open app/views/places/show.html.erb and add
+Abra app/views/places/show.html.erb e adicione
 
 {% highlight sh %}
 <p>
-<strong>Votes:</strong><br />
-Autism_friendly : <%= rating_for @place, "autism_friendly" %> <br />
-Overall : <%= rating_for @place, "overall" %>
+<strong>Votos:</strong><br />
+Autismo amigável : <%= rating_for @local, "autismo_amigavel" %> <br />
+Geral : <%= rating_for @local, "geral" %>
 </p>
 <hr />
 <p>
-<strong>Your votes:</strong><br />
-Autism_friendly : <%= rating_for_user @place, current_user, "autism_friendly", :star => 7 %>
-Overall : <%= rating_for_user @place, current_user, "autism_friendly", :star => 7 %>
+<strong>Seus votos:</strong><br />
+Autismo amigável : <%= rating_for_user @local, current_user, "autismo_amigavel", :star => 7 %>
+Geral : <%= rating_for_user @local, current_user, "geral", :star => 7 %>
 </p>
 <hr />
 {% endhighlight %}
 
-You can use the rating_for_user helper method to show the star rating for the user.
+Você pode usar o método auxiliar rating_for_user para mostrar a avaliação de estrelas para o usuário.
 
 
-That's it! ^__^
-Try it out by restarting the server, add, commit and push on GitHub. If all it's working then you can also deploy ;)
+É isso aí! ^__^
+Experimente reiniciar o servidor, dê um add, commit e push no GitHub. Se tudo estiver funcionando, você também pode implantar ;)
