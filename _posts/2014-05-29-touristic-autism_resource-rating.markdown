@@ -50,13 +50,13 @@ Você deve adicionar a função `letsrate_rateable`, com sua opção de dimensõ
 
 Em `app/models/place.rb` adicione
 
-{% highlight sh %}
+{% highlight ruby %}
   letsrate_rateable "autismo_amigavel", "geral"
 {% endhighlight %}
 
 Então você precisa adicionar uma chamada a `letsrate_rater` no modelo de usuário:
 
-{% highlight sh %}
+{% highlight ruby %}
   letsrate_rater
 {% endhighlight %}
 
@@ -66,7 +66,7 @@ Há um método auxiliar chamado `rating_for` para adicionar as estrelas de avali
 
 Abra `app/views/places/show.html.erb` e adicione
 
-{% highlight sh %}
+{% highlight html %}
 <p>
 <strong>Votos:</strong><br />
 Autismo amigável : <%= rating_for @local, "autismo_amigavel" %> <br />
