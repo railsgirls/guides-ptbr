@@ -38,7 +38,7 @@ para instalar a gem. **Além disso, lembre-se de reiniciar o servidor Rails**.
 
 ## Passo 1: Configure o letsrate em seu app
 
-Execute o comando a seguir no terminal (estamos assumindo que já habilitamos a autenticação de usuários usando a gem Devise).
+Execute o comando a seguir no terminal (estamos assumindo que já habilitamos a autenticação de usuários usando a gem `Devise`).
 
 {% highlight sh %}
 rails g letsrate user
@@ -46,15 +46,15 @@ rails g letsrate user
 
 ## Step 2: Aplique letsrate a seu recurso
 
-Você deve adicionar a função letsrate_rateable, com sua opção de dimensões, ao modelo do recurso que você deseja avaliar, por exemplo, local. Você pode ter múltiplas dimensões.
+Você deve adicionar a função `letsrate_rateable`, com sua opção de dimensões, ao modelo do recurso que você deseja avaliar, por exemplo, local. Você pode ter múltiplas dimensões.
 
-Em app/models/place.rb adicione
+Em `app/models/place.rb` adicione
 
 {% highlight sh %}
   letsrate_rateable "autismo_amigavel", "geral"
 {% endhighlight %}
 
-Então você precisa adicionar uma chamada a letsrate_rater no modelo de usuário:
+Então você precisa adicionar uma chamada a `letsrate_rater` no modelo de usuário:
 
 {% highlight sh %}
   letsrate_rater
@@ -62,9 +62,9 @@ Então você precisa adicionar uma chamada a letsrate_rater no modelo de usuári
 
 ## Step 3: Render the Views
 
-Há um método auxiliar chamado rating_for para adicionar as estrelas de avaliação. Por padrão, rating_for irá mostrar a média das avaliações e aceitará uma nova avaliação de um usuário autenticado.
+Há um método auxiliar chamado `rating_for` para adicionar as estrelas de avaliação. Por padrão, `rating_for` irá mostrar a média das avaliações e aceitará uma nova avaliação de um usuário autenticado.
 
-Abra app/views/places/show.html.erb e adicione
+Abra `app/views/places/show.html.erb` e adicione
 
 {% highlight sh %}
 <p>
@@ -81,7 +81,7 @@ Geral : <%= rating_for_user @local, current_user, "geral", :star => 7 %>
 <hr />
 {% endhighlight %}
 
-Você pode usar o método auxiliar rating_for_user para mostrar a avaliação de estrelas para o usuário.
+Você pode usar o método auxiliar `rating_for_user` para mostrar a avaliação de estrelas para o usuário.
 
 
 É isso aí! ^__^
