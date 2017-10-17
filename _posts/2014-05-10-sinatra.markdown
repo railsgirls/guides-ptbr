@@ -153,7 +153,7 @@ Se não deu muito certo, certifique-se de que o seu código parece com [esse có
 
 No seu browser, abra o console web. (Para a maioria dos browser, o console pode ser acessado assim: *clique com o botão direito em qualquer lugar da página e selecione "Inpecionar Elemento"*.) Eu recomendo que você use o Chrome para isso; se você estiver usando o Chrome, olhe a aba 'Network'.
 
-Atualize o seu browser, então clique na linha 'localhost' no impetor web, e então na aba cabeçalhos, clique em 'ver código fonte'. Você deve ver algo similar a isso:
+Atualize o seu browser, então clique na linha `localhost` no inspetor web, e então na aba cabeçalhos, clique em `ver código fonte`. Você deve ver algo similar a isso:
 
 {% highlight HTTP %}
 GET / HTTP/1.1
