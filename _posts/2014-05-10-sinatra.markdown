@@ -289,7 +289,7 @@ Contudo, se você atualizar a página em uma requisição POST, isso significa q
 
 Para contornar esse problema de resubmissão de formulário, vamos avisar o navegador para carregar uma página diferente assim que ele receber a resposta do nosso `POST`. Nós faremos isso usando uma resposta HTTP especial conhecida como "redirect".
 
-Ao invés de outra chamada ao nosso método `teplate`, nós podemos redirecionar o navegador para outro lugar.
+Ao invés de outra chamada ao nosso método `template`, nós podemos redirecionar o navegador para outro lugar.
 
 No Sinatra é algo assim:
 
