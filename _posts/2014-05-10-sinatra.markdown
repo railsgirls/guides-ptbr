@@ -176,12 +176,12 @@ A parte mais importante está na primeira linha, que separa o verbo HTTP da URL 
 
 Então, o nosso formulário está enviando a informação do café ao nosso app, mas nós não estamos fazendo nada com ela ainda. Nós devemos salvar a informação do café depois que ela for enviada para o servidor.
 
-Para simplicaficar, vamos guardar os detalhes do café em uma variável. Assim eles estarão disponíveis entre requisições, para isso nós usaremos uma [**variável global**](http://en.wikipedia.org/wiki/Global_variable). Essa é uma versão drasticamente simplificada do que o Rails chama de camada de Modelo.
+Para simplificar, vamos guardar os detalhes do café em uma variável. Assim eles estarão disponíveis entre requisições, para isso nós usaremos uma [**variável global**](http://en.wikipedia.org/wiki/Global_variable). Essa é uma versão drasticamente simplificada do que o Rails chama de camada de Modelo.
 
 Adicione o código abaixo ao seu arquivo `app.rb` (a convenção dita que deve ser próximo ao topo, abaixo das linhas de `require`):
 
 {% highlight ruby %}
-$coffees = []
+$cafes = []
 {% endhighlight %}
 
 Isso criará um array vazio quando o seu app inicializar.
@@ -190,7 +190,7 @@ Isso criará um array vazio quando o seu app inicializar.
 
 ## *6.* Recebendo informação - Salvando cafés
 
-Agora nós precisamos colocar a informação dentro do array `$coffees` quando a requisição for recebida. Quando você completa o formulário e clique no botão para enviar, lembre-se que a informação fica no final da URL, após o ?, para ser enviada de volta ao servidor.
+Agora nós precisamos colocar a informação dentro do array `$cafes` quando a requisição for recebida. Quando você completa o formulário e clique no botão para enviar, lembre-se que a informação fica no final da URL, após o ?, para ser enviada de volta ao servidor.
 
 O Sinatra captura essa informação do final da URL e a torna disponível como um hash chamado `params`. Por exemplo:
 
@@ -198,22 +198,22 @@ O Sinatra captura essa informação do final da URL e a torna disponível como u
  params = {cafe = 'cafe com leite', valor ='2'}
 {% endhighlight %}
 
-Você vai precisar escrever um pouco de código para retirar a informação do hash de params e adicioná-los a sua variável $coffees.
+Você vai precisar escrever um pouco de código para retirar a informação do hash de params e adicioná-los a sua variável $cafes.
 
 Antes de começarmos, primeiro substitua `<!-- cafes vao aqui -->` no seu formulário por:
 
 {% highlight ruby %}
-#{ $coffees.inspect }
+#{ $cafes.inspect }
 {% endhighlight %}
 
-Isso irá mostrar a variável `$coffees` no HTML do seu browser para podermos dizer se os café estão sendo adicionados a sua variável $coffees (i.e. que o seu código está funcionando).
+Isso irá mostrar a variável `$cafes` no HTML do seu browser para podermos dizer se os café estão sendo adicionados a sua variável $cafes (i.e. que o seu código está funcionando).
 
 **Dica**
 Sua variável global é um array, então se você não souber o que fazer, olhe a [Documentação de array do Ruby](http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-3C-3C) para buscar mais informações sobre como adicionar informações para um array.
 
 Se você estiver travada, [clique aqui](http://tjmcewan.github.io/coffeecalc/snippets/store_coffees.rb.txt).
 
-Se você está guardando seus parâmetros corretamente, você deve conseguir recarregar a paǵina e ver que um novo hash foi adicionado ao array `$coffees` a cada vez.
+Se você está guardando seus parâmetros corretamente, você deve conseguir recarregar a paǵina e ver que um novo hash foi adicionado ao array `$cafes` a cada vez.
 
 ## *6.* Arrumando tudo
 
@@ -231,7 +231,7 @@ Agora substitua o formulário do seu código `get` por uma simples chamada ao m�
 
 {% highlight ruby %}
 get "/" do
-$coffees << params
+$cafes << params
 template
 end
 {% endhighlight %}
@@ -243,7 +243,7 @@ Isso também tornará fácil reusar o formulário, caso a gente precise depois.
 
 ## *7.* Indo além do GET
 
-Como você viu na seção de salvar cafés, se você atualizar o seu browser, o seu app adiciona a informação na variável global `$coffees` repetidamente. Isso acontece porque estamos guardando os parâmetros da URL cada vez que o nosso código `get` é requisitado.
+Como você viu na seção de salvar cafés, se você atualizar o seu browser, o seu app adiciona a informação na variável global `$cafes` repetidamente. Isso acontece porque estamos guardando os parâmetros da URL cada vez que o nosso código `get` é requisitado.
 
 Precisamos mencionar que as requisições `GET` não devem fazer coisas que adicionem informação ao nosso app - mesmo que funcione, como nessa instância, é muito fácil que efeitos colaterais não intencionados ocorram. Nesse caso é melhor usar uma requisição POST.
 
