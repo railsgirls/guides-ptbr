@@ -1,6 +1,6 @@
 ---
 layout: default
-Título: Rails Girls Sinatra tutorial
+titulo: Rails Girls Sinatra tutorial
 permalink: sinatra-app
 ---
 
@@ -202,7 +202,7 @@ Cole o seguinte código em `sufragista.rb`:
 
 {% highlight ruby %}
 get '/results' do
-  @voto = { 'HAM' => 7, 'PIZ' => 5, 'SUS' => 3 }
+  @votos = { 'HAM' => 7, 'PIZ' => 5, 'SUS' => 3 }
   erb :results
 end
 {% endhighlight %}
@@ -245,8 +245,8 @@ Adicione mais código em `sufragista.rb` – substitua
 {% highlight ruby %}
 post '/cast' do
   @titulo = 'Obrigada por votar!'
-  @voto  = params['voto']
-  @store = YAML::Store.new 'votes.yml'
+  @votos  = params['voto']
+  @store = YAML::Store.new 'votos.yml'
   @store.transaction do
     @store['votes'] ||= {}
     @store['votes'][@vote] ||= 0
@@ -257,7 +257,7 @@ end
 
 get '/results' do
   @titulo = 'Resultados até agora:'
-  @store = YAML::Store.new 'votes.yml'
+  @store = YAML::Store.new 'votos.yml'
   @votes = @store.transaction { @store['votes'] }
   erb :results
 end
@@ -268,7 +268,7 @@ __COACH__: Explique o que é YAML.
 
 ### Veja como o arquivo YAML muda quando votos são salvos
 
-Vamos abrir `votes.yml`. e votar. e checar novamente.
+Vamos abrir `votos.yml`. E votar. E checar novamente.
 
 __COACH__: Vai ter situações onde um ou mais estudantes vão
 esquecer de pausar o servidor antes de rodá-lo novamente. É uma boa
