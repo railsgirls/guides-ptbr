@@ -145,7 +145,7 @@ Agora vamos ver o que o navegador enviou ao servidor quando você submeteu o for
 GET /?cafe=flat+white&valor=3.50 HTTP/1.1
 {% endhighlight %}
 
-**Instrutor:** Falar sobre de onde ve os nomes dos parâmetros e o que faz o ponto de interrogação.
+**Instrutor(a):** Falar sobre de onde ve os nomes dos parâmetros e o que faz o ponto de interrogação.
 
 Se não deu muito certo, certifique-se de que o seu código parece com [esse código](http://tjmcewan.github.io/coffeecalc/snippets/html_form.rb.txt).
 
@@ -166,7 +166,7 @@ Accept-Encoding: gzip,deflate,sdch
 Accept-Language: en-US,en;q=0.8
 {% endhighlight %}
 
-**Instrutor:** Explicar o que são os cabeçalhos (headers) HTTP e o que eles significam.
+**Instrutor(a):** Explicar o que são os cabeçalhos (headers) HTTP e o que eles significam.
 
 A parte mais importante está na primeira linha, que separa o verbo HTTP da URL que foi chamada.
 
