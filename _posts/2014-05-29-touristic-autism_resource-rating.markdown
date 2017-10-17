@@ -66,7 +66,7 @@ Há um método auxiliar chamado `rating_for` para adicionar as estrelas de avali
 
 Abra `app/views/places/show.html.erb` e adicione
 
-{% highlight html %}
+{% highlight erb %}
 <p>
 <strong>Votos:</strong><br />
 Autismo amigável : <%= rating_for @local, "autismo_amigavel" %> <br />
