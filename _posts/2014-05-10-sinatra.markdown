@@ -19,10 +19,10 @@ O sinatra é diferente do Rails. Os dois são frameworks que nos ajudam a escrev
 
 ## Introdução
 
-HTTP é usado para enviar informação através de uma aplicação (como o seu app do Rails Girls) e um browser.
-O básico de uma cominicação com HTTP é o par requisição/resposta. Requisições são enviadas do browser para o servidor (ex. o seu app) e a resposta é enviada de volta para o servidor para o seu browser para um usuário ver.
+HTTP é usado para enviar informação através de uma aplicação (como o seu app do Rails Girls) e um navegador.
+O básico de uma cominicação com HTTP é o par requisição/resposta. Requisições são enviadas do navegador para o servidor (ex. o seu app) e a resposta é enviada de volta para o servidor para o seu navegador para um usuário ver.
 
-Para fazer uma requisição no browser, você precisa usar uma URL. Uma URL contém várias informações sobre qual informação você está requisitando então o servidor poderá te enviar a resposta correta.
+Para fazer uma requisição no navegador, você precisa usar uma URL. Uma URL contém várias informações sobre qual informação você está requisitando então o servidor poderá te enviar a resposta correta.
 
 Uma URL contém:
 
@@ -48,9 +48,9 @@ Você deve ter usado todos esses verbos no seu app do Rails Girls quando você f
 
 Um request para um servidor precisa incluir tanto a URL e o verbo HTTP.
 
-Nos exercícios seguintes você irá construir uma pequena aplicação de um café que usa uma combinação de pastas de recursos e verbos HTTP para demostrar como os browser se comunicam com a sua aplicação.
+Nos exercícios seguintes você irá construir uma pequena aplicação de um café que usa uma combinação de pastas de recursos e verbos HTTP para demostrar como os navegador se comunicam com a sua aplicação.
 
-O seu app vai ficar parecido com esse no browser:
+O seu app vai ficar parecido com esse no navegador:
 
 <img src="../images/coffee-app.png" alt="Sinatra Coffee App" />
 
@@ -85,11 +85,11 @@ ruby app.rb
 
 Veja o seu site em: [http://localhost:4567](http://localhost:4567)
 
-A informação aparecendo no seu browser é a resposta de uma requisição GET.
+A informação aparecendo no seu navegador é a resposta de uma requisição GET.
 
 Quando você digita http://localhost:4567 você está enviando uma requisição GET para o seu servidor Sinatra.
 
-O que você vê no browser é a resposta do seu servidor Sinatra.
+O que você vê no navegador é a resposta do seu servidor Sinatra.
 
 Quando você escreve "/", você só está especificando a url raiz, mas você pode criar qualquer caminho que você queira.
 
@@ -137,9 +137,9 @@ end
 
 Para simplificação, esse formulário envia a informação para a mesma URL ("/").
 
-Atualize o seu browser e veja o formulário que você acabou de criar.
+Atualize o seu navegador e veja o formulário que você acabou de criar.
 
-Agora vamos ver o que o browser enviou ao servidor quando você submeteu o formulário. Coloque um pouco de texto no formulário e clique no botão 'Adicionar café'. Verifique os logs do Sinatra no seu terminal e você deve ver algo assim:
+Agora vamos ver o que o navegador enviou ao servidor quando você submeteu o formulário. Coloque um pouco de texto no formulário e clique no botão 'Adicionar café'. Verifique os logs do Sinatra no seu terminal e você deve ver algo assim:
 
 {% highlight HTTP %}
 GET /?cafe=flat+white&valor=3.50 HTTP/1.1
@@ -151,9 +151,9 @@ Se não deu muito certo, certifique-se de que o seu código parece com [esse có
 
 ## *4.*Inspetor Web - Cabeçalho de requisição
 
-No seu browser, abra o console web. (Para a maioria dos browser, o console pode ser acessado assim: *clique com o botão direito em qualquer lugar da página e selecione "Inpecionar Elemento"*.) Eu recomendo que você use o Chrome para isso; se você estiver usando o Chrome, olhe a aba 'Network'.
+No seu navegador, abra o console web. (Para a maioria dos navegador, o console pode ser acessado assim: *clique com o botão direito em qualquer lugar da página e selecione "Inpecionar Elemento"*.) Eu recomendo que você use o Chrome para isso; se você estiver usando o Chrome, olhe a aba 'Network'.
 
-Atualize o seu browser, então clique na linha `localhost` no inspetor web, e então na aba cabeçalhos, clique em `ver código fonte`. Você deve ver algo similar a isso:
+Atualize o seu navegador, então clique na linha `localhost` no inspetor web, e então na aba cabeçalhos, clique em `ver código fonte`. Você deve ver algo similar a isso:
 
 {% highlight HTTP %}
 GET / HTTP/1.1
@@ -198,7 +198,7 @@ O Sinatra captura essa informação do final da URL e a torna disponível como u
  params = {cafe = 'cafe com leite', valor ='2'}
 {% endhighlight %}
 
-Você vai precisar escrever um pouco de código para retirar a informação do hash de params e adicioná-los a sua variável $cafes.
+Você vai precisar escrever um pouco de código para retirar a informação do hash de params e adicioná-los a sua variável `$cafes`.
 
 Antes de começarmos, primeiro substitua `<!-- cafes vao aqui -->` no seu formulário por:
 
@@ -206,7 +206,7 @@ Antes de começarmos, primeiro substitua `<!-- cafes vao aqui -->` no seu formul
 #{ $cafes.inspect }
 {% endhighlight %}
 
-Isso irá mostrar a variável `$cafes` no HTML do seu browser para podermos dizer se os café estão sendo adicionados a sua variável $cafes (i.e. que o seu código está funcionando).
+Isso irá mostrar a variável `$cafes` no HTML do seu navegador para podermos dizer se os café estão sendo adicionados a sua variável `$cafes` (i.e. que o seu código está funcionando).
 
 **Dica**
 Sua variável global é um array, então se você não souber o que fazer, olhe a [Documentação de array do Ruby](http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-3C-3C) para buscar mais informações sobre como adicionar informações para um array.
@@ -243,7 +243,7 @@ Isso também tornará fácil reusar o formulário, caso a gente precise depois.
 
 ## *7.* Indo além do GET
 
-Como você viu na seção de salvar cafés, se você atualizar o seu browser, o seu app adiciona a informação na variável global `$cafes` repetidamente. Isso acontece porque estamos guardando os parâmetros da URL cada vez que o nosso código `get` é requisitado.
+Como você viu na seção de salvar cafés, se você atualizar o seu navegador, o seu app adiciona a informação na variável global `$cafes` repetidamente. Isso acontece porque estamos guardando os parâmetros da URL cada vez que o nosso código `get` é requisitado.
 
 Precisamos mencionar que as requisições `GET` não devem fazer coisas que adicionem informação ao nosso app - mesmo que funcione, como nessa instância, é muito fácil que efeitos colaterais não intencionados ocorram. Nesse caso é melhor usar uma requisição POST.
 
@@ -252,7 +252,7 @@ Lembre-se que as requisições `GET` estão querendo buscar um recurso, enquanto
 Então armados com esse conhecimento, vamos mudar o método do nosso formulário para `POST`:
 
 * Localize a seção no formulário que especifica o método como `get` e mude para `post`.
-* Agora atualize o seu browser e adicione um novo café.
+* Agora atualize o seu navegador e adicione um novo café.
 
 **Uh oh!** Bem vindo a adorável página de erro do Sinatra, se você ainda não a viu hoje. A mensagem no final deve dizer algo assim:
 
@@ -275,7 +275,7 @@ Vamos **adicionar** o nosso código `post` no Sinatra (não remove o código de 
 
 Como usual, você pode verificar o seu progresso [por aqui](http://tjmcewan.github.io/coffeecalc/snippets/get_vs_post.rb.txt).
 
-Agora se você atualizar a página depois de submeter um café, você deverá ver um aviso do browser avisando que ele precisa resubmeter o formulário para carregar a página:
+Agora se você atualizar a página depois de submeter um café, você deverá ver um aviso do navegador avisando que ele precisa resubmeter o formulário para carregar a página:
 
 <img src="../images/chrome-confirm-resubmission.png" alt="Chrome's confirm resubmission dialog" />
 
@@ -283,13 +283,13 @@ Você já deve ter visto isso algumas vezes quando você submteu formulários on
 
 Lembre-se que as requisições GET querem buscar um recurso, enquanto as requisições POST querem criar um recurso. Se você atualizar a página em uma requisição GET, você está simplesmente pedindo para ver a mesma página várias vezes, o que normalmente não será um problema.
 
-Contudo, se você atualizar a página em uma requisição POST, isso significa que você está reenviando a requisição POST, e pode estar criando um novo recurso cada vez que você atualiza. É por isso que o browser te dá um aviso antes de permitir que você faça isso.
+Contudo, se você atualizar a página em uma requisição POST, isso significa que você está reenviando a requisição POST, e pode estar criando um novo recurso cada vez que você atualiza. É por isso que o navegador te dá um aviso antes de permitir que você faça isso.
 
 ## *9.* Adicionando um redirect
 
-Para contornar esse problema de resubmissão de formulário, vamos avisar o browser para carregar uma página diferente assim que ele receber a resposta do nosso `POST`. Nós faremos isso usando uma resposta HTTP especial conhecida como "redirect".
+Para contornar esse problema de resubmissão de formulário, vamos avisar o navegador para carregar uma página diferente assim que ele receber a resposta do nosso `POST`. Nós faremos isso usando uma resposta HTTP especial conhecida como "redirect".
 
-Ao invés de outra chamada ao nosso método `teplate`, nós podemos redirecionar o browser para outro lugar.
+Ao invés de outra chamada ao nosso método `teplate`, nós podemos redirecionar o navegador para outro lugar.
 
 No Sinatra é algo assim:
 
@@ -299,7 +299,7 @@ redirect "/"
 
 Tente primeiro, e depois [clique aqui](http://tjmcewan.github.io/coffeecalc/snippets/post_redirect.rb.txt).
 
-Isso enviará uma resposta de redirect especial (HTTP 303) com um cabeçalho de `location` que especifica para onde o browser deve ir:
+Isso enviará uma resposta de redirect especial (HTTP 303) com um cabeçalho de `location` que especifica para onde o navegador deve ir:
 
 {% highlight HTML %}
 HTTP/1.1 303 See Other
@@ -311,9 +311,9 @@ Para ver isso em ação, você pode ver o Inspetor web do Chrome (na aba Rede) e
 
 <img src="../images/chrome-post-redirect.png" alt="Chrome's network tab showing a post/redirect/get" />
 
-A primeira linha mostra o browser enviando o formulário usando a requisição POST. A resposta que ele recebe é um HTTP 303, contendo o cabeçalho `Location`. Ele então dispara uma requisição GET para aquela localização (que corresponde a nossa rota raiz, "/") e renderiza a resposta que ele pega de lá - que é o nosso template HTML.
+A primeira linha mostra o navegador enviando o formulário usando a requisição POST. A resposta que ele recebe é um HTTP 303, contendo o cabeçalho `Location`. Ele então dispara uma requisição GET para aquela localização (que corresponde a nossa rota raiz, "/") e renderiza a resposta que ele pega de lá - que é o nosso template HTML.
 
-Agora você pode atualizar tudo o que quiser e o que você está fazendo é requisitando usando `GET`, não `POST`. O seu browser não precisa ter mais ter que reenviar o formulário para aparecer aquela página.
+Agora você pode atualizar tudo o que quiser e o que você está fazendo é requisitando usando `GET`, não `POST`. O seu navegador não precisa ter mais ter que reenviar o formulário para aparecer aquela página.
 
 Esse é o fim do tutorial - você fez um excelente trabalho!
 
