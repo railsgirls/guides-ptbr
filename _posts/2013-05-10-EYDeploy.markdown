@@ -56,7 +56,7 @@ aplicação. Siga estas instruções em [GitHub](https://help.github.com/article
 
 ### Registre-se para uma conta de teste gráris na Engine Yard
 
-Navegue até o [site](https://www.engineyard.com/) da Engine Yard e clique em "GET STARTED FREE" para obter suas 500 horas de teste grátis. O registro lhe enviará um e-mail de confirmação; verifique seu e-mail, clique no link e entre em sua conta. Clique no link sob "Your available applications" que diz "Engine Yard Cloud". Isto leva ao seu painel.
+Navegue até o [site](https://www.engineyard.com/) da Engine Yard e clique em "GET STARTED FREE" ("inicie gratuitamente") para obter suas 500 horas de teste grátis. O registro lhe enviará um e-mail de confirmação; verifique seu e-mail, clique no link e entre em sua conta. Clique no link sob "Your available applications" ("Suas aplicações disponíveis") que diz "Engine Yard Cloud". Isto leva ao seu painel.
 
 ### Crie sua conta Engine Yard Cloud
 
@@ -64,7 +64,7 @@ Navegue até o [site](https://www.engineyard.com/) da Engine Yard e clique em "G
 
 2. 	Fique à vontade para explorar os menus, mas vamos usar os padrões por ora, já que eles estão alinhados com uma aplicação Rails básica.
 
-3. 	No campo com o nome "Git Repository URI", cole o endereço de seu repositório GitHub. Assegure-se de utilizar o endereço da versão SSH de sua aplicação. DICA: O formato deve ser como o do texto em sua página da aplicação Engine Yard (ou como este: "git@github.com:mfjenn/blogotron.git")
+3. 	No campo com o nome "Git Repository URI" ("URI do repositório Git"), cole o endereço de seu repositório GitHub. Assegure-se de utilizar o endereço da versão SSH de sua aplicação. DICA: O formato deve ser como o do texto em sua página da aplicação Engine Yard (ou como este: "git@github.com:mfjenn/blogotron.git")
 
 
 ### Colocando sua chave de deploy
@@ -74,21 +74,21 @@ seu repositório privado".
 
 1.	Copie o bloco de texto da caixa e navegue até a página de configurações do GitHub;
 2.	Vá até a página "SSH";
-3.	Clique no botão que diz "adicionar uma chave";
+3.	Clique no botão que diz "add a key" ("adicionar uma chave");
 4.	Cole o bloco de texto de sua página da Engine Yard no campo e salve;
-5.	Volte à sua página na Engine Yard e clique no botão que diz "My deploy key is in place".
+5.	Volte à sua página na Engine Yard e clique no botão que diz "My deploy key is in place" ("minha chave de deploy está correta").
 
 __TREINADORA__: Explique a diferença entre repositórios públicos e privados e quando utilizá-los.
 
 ### Criando e configurando seu ambiente
 
-Assim que você clicar no botão "My deploy key is in place", você será levada a uma página que diz "Create New Environment for (Your Account Name) App". É aqui onde vamos configurar sua aplicação. Fique à vontade para explorar todas as opções nos menus, mas vamos usar as opções padrão por ora. Você não precisa escolher um domínio.
-*	Clique no botão que diz "Create Environment".
+Assim que você clicar no botão "My deploy key is in place" ("minha chave de deploy está correta"), você será levada a uma página que diz "Create New Environment for (Your Account Name) App" ("Criar um ambiente para a aplicação (sua conta)"). É aqui onde vamos configurar sua aplicação. Fique à vontade para explorar todas as opções nos menus, mas vamos usar as opções padrão por ora. Você não precisa escolher um domínio.
+*	Clique no botão que diz "Create Environment" ("Criar ambiente").
 
 #### Configuração de Ambiente
 
 Nesta página, vamos selecionar a configuração de homologação (staging).
-*	Clique em "Boot This Configuration". Você será levada a uma nova página onde verá várias barras de progresso se movendo. Nossa plataforma estará provisionando suas instâncias. Nós precisamos esperar até que tudo vire pontinhos verdes. Isso normalmente leva uns 10 minutos, então, alguém precisa fazer um intervalo? É uma boa hora para um café ou água.
+*	Clique em "Boot This Configuration" ("Inicie esta configuração"). Você será levada a uma nova página onde verá várias barras de progresso se movendo. Nossa plataforma estará provisionando suas instâncias. Nós precisamos esperar até que tudo vire pontinhos verdes. Isso normalmente leva uns 10 minutos, então, alguém precisa fazer um intervalo? É uma boa hora para um café ou água.
 
 __TREINADORA__: Fale sobre homologação (staging) vs. produção (production), e porque é importante ter réplicas. Fale sobre principal (master) e secundário (slave). Como o Failover da Engine Yard funciona? Por que isso é importante?
 
@@ -96,14 +96,14 @@ __TREINADORA__: Fale sobre homologação (staging) vs. produção (production), 
 #### Colocando sua aplicação no ar
 
 1.	Assim que todos os pontinhos estiverem verdes, clique em "Deploy".
-2.	Assim que vir a frase "SEU NOME successfully deployed HEAD", você saberá que seu código está no ar! Parabéns!
-3.	Clique no link que diz "View your application" para visitar sua aplicação;
+2.	Assim que vir a frase "SEU NOME successfully deployed HEAD" ("SEU NOME fez o deploy de HEAD"), você saberá que seu código está no ar! Parabéns!
+3.	Clique no link que diz "View your application" ("Visualize sua aplicação") para visitar sua aplicação;
 4.	Se você receber uma notificação vermelha que diz que seu deploy falhou, nós só teremos alguma depuração a fazer. Levante a mão e uma treinadora te ajudará com isso.
 
 
 #### Parando suas instâncias para economizar suas horas de teste grátis
 
-Assim que você tiver sua aplicação rodando, certifique-se de clicar no botão "stop" para parar suas instâncias, assim você não usa suas horas em vão. Você sempre pode reiniciá-las.
+Assim que você tiver sua aplicação rodando, certifique-se de clicar no botão "stop" ("parar") para parar suas instâncias, assim você não usa suas horas em vão. Você sempre pode reiniciá-las.
 
 ### Recursos adicionais
 *	[Um tutorial em vídeo (em inglês)](https://support.cloud.engineyard.com/entries/21009937-Video-Tutorial-Set-up-an-Account-and-Deploy-an-Application)
