@@ -7,11 +7,12 @@ permalink: touristic-autism_image-upload
 # Upload de imagens e miniaturas
 
 *Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+
 *for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 Os guias básicos que foram mesclados e adaptados são os  [Ruby on Rails Tutorial](http://www.railstutorial.org/book), o [basic RailsGirls app](http://guides.railsgirls.com/app/) e os tutoriais são: [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) e [adding comments](http://guides.railsgirls.com/commenting).
 
 
-Nós precisamos instalar uma nova Gem para que tenhamos a permissão de fazer upload de arquivos no Rails.
+Nós precisamos instalar uma nova Gem que nos permita fazer upload de arquivos no Rails.
 
 Abra `Gemfile` na sua pasta do projeto usando seu editor de texto e adicione:
 
@@ -33,7 +34,7 @@ rails generate uploader Picture
 
 Nesse momento você irá **precisar reiniciar o servidor do Rails** no terminal.
 
-Precione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servidor. Uma vez parado, você pode apertar a seta pra cima no seu teclado para pegar o ultimo comando executado, entao aperte o enter para iniciar o servidor novamente.
+Precione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servidor. Uma vez parado, você pode apertar a seta pra cima no seu teclado para encontrar o último comando executado, então pressione o enter para iniciar o servidor novamente.
 
 
 Isso é necessário para que o app carregue a biblioteca adicionada.
@@ -85,7 +86,7 @@ para:
 <%= image_tag(@place.picture_url, :width => 600) if @place.picture.present? %>
 ```
 
-Agora recarregue seu navegador para ver a mudança
+Agora recarregue seu navegador para ver a mudança.
 
 **Coach:** Fale um pouco sobre HTML.
 
@@ -94,9 +95,9 @@ __Coach__: Explique o que especifica a largura da imagem em HTML no final da eta
 
 ## Instalando ImageMagick
 
-* OS X: Execute `brew install imagemagick`. Se você nao tiver o comando brew, você pode [instalar aqui][in-homebrew].
+* OS X: Execute `brew install imagemagick`. Se você não tiver o comando brew, você pode [instalar aqui][in-homebrew].
 * Windows: Baixe e execute [ImageMagick installer][im-win] (use o primeiro
-  *download* link). Depois reabra o Shell de comando do Rails.
+  *download* link de download). Depois reabra o Shell de comando do Rails.
 * Linux: No Ubuntu e Debian, execute `sudo apt-get install imagemagick`. Use o gerenciador de pacote apropriado ao invés de usar `apt-get` para outras distribuições.
 
   [im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
@@ -135,13 +136,12 @@ version :thumb do
   process :resize_to_fill => [50, 50]
 end
 ```
-As imagens carregadas a partir de agora serão redimencionadas, mas as imagens que ja foram feitas nao serão afetadas.
-The images uploaded from now on should be resized, but the ones we already
-have weren't affected. Então, edite um dos lugares existentes e volte a adicionar uma imagem.
+As imagens carregadas a partir de agora serão redimencionadas, mas as imagens que já foram feitas não serão afetadas.
+Então, edite um dos lugares existentes e volte a adicionar uma imagem.
 
 ## Mostrando as thumbnails
 
-Para ver se a imagem carregado foi redimencionada abra
+Para ver se a imagem carregada foi redimencionada abra,
 `app/views/places/index.html.erb`. Mude a linha:
 
 ```
@@ -154,5 +154,5 @@ para:
 <td><%= image_tag place.picture_url(:thumb) if place.picture? %></td>
 ```
 
-De uma olhada no seu browser para ver se a miniatura está la.
+Dê uma olhada no seu navegador para ver se a miniatura está lá.
 
