@@ -7,10 +7,11 @@ permalink: touristic-autism_google-map
 # Mostrar todos os lugares em um mapa do Google
 
 *Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+
 *para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 Os guias básicos que foram mesclados e adaptados são os [Ruby on Rails Tutorial](http://www.railstutorial.org/book), [basic RailsGirls app](http://guides.railsgirls.com/app/) e os tutoriais são [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) e [adding comments](http://guides.railsgirls.com/commenting).
 
-Nós precisamos instalar um software para que nos de a permissão de exibir e interagir com o Google Maps.
+Nós precisamos instalar um software que nos permita exibir e interagir com o Google Maps.
 
 Abra `Gemfile` na sua pasta do projeto usando seu editor de texto e adicione:
 
@@ -66,7 +67,7 @@ end
 Crie seu view/google/index.html.erb:
 
 
-<h1>Veja alguns indicadores defaults no seu mapa</h1>
+<h1>Veja alguns indicadores padrões no seu mapa</h1>
 <div class="google_map"></div>
 
 ```
