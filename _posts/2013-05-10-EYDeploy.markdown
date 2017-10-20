@@ -60,7 +60,7 @@ Navegue até o [site](https://www.engineyard.com/) da Engine Yard e clique em "G
 
 ### Crie sua conta Engine Yard Cloud
 
-1. 	Escolha um nome para sua conta. Sugerimos escolher algo relevante a quem você é, seja como desenvolvedora ou uma organização, se você tem colaboradores. Clique no botão "Start Trial".
+1. 	Escolha um nome para sua conta. Sugerimos escolher algo relevante a quem você é, seja como desenvolvedora ou uma organização, se você tem colaboradores. Clique no botão "Start Trial" ("Começar Teste Grátis").
 
 2. 	Fique à vontade para explorar os menus, mas vamos usar os padrões por ora, já que eles estão alinhados com uma aplicação Rails básica.
 
