@@ -1,28 +1,31 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App
+title: App para turismo de autismo amigável
 permalink: touristic-autism_static-pages-tdd
 ---
 
-# Test-Driven Development
+# Desenvolvimento Guiado por Teste - TDD (Test-Driven Development)
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/), [adding comments](http://guides.railsgirls.com/commenting) and [Mark McDonnell's tutorial] (http://code.tutsplus.com/tutorials/testing-your-ruby-code-with-guard-rspec-pry--cms-19974).
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 
-Rails includes a default Test::Unit framework used to test your code. We will use a more advanced testing framework called RSpec to write a thorough test suite. We need to be able to write tests that are fast and give us instant feedback on problems with our code.
+*Traduzido por Beatriz Rezener, [@beatrizrezener](https://github.com/beatrizrezener)*
 
-We will use Guard and RSpec to monitor some of our files and run tests over them as soon as they get modified, so to be sure that the latest changes are not breaking the app anywhere.
+Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e os tutoriais para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando design](http://guides.railsgirls.com/design), [implantando com o OpenShift](http://guides.railsgirls.com/openshift/), [adicionando comentários](http://guides.railsgirls.com/commenting) e [tutorial do Mark McDonnell](http://code.tutsplus.com/tutorials/testing-your-ruby-code-with-guard-rspec-pry--cms-19974).
 
-If any error is found, then we are going to dig into it so to understand the cause and fix it, by using Pry.
+O Rails inclui um framework Test::Unit padrão usado para testar seu código. Usaremos um framework de testes mais avançado, chamado `RSpec`, para escrever um conjunto de testes. Precisamos ser capazes de escrever testes que sejam rápidos e que nos dê feedback intantâneo sobre os problemas com o nosso código.
 
-Finally, since we are assuming to be developing in collaboration with other via GitHub, we will also make sure that each contribution does not conflict when integrating with the others' ones. For this very reason, we will also commit, push and test the integration often, in a process called "Continuous Integration". We will use Travis-CI to support us.
+Usaremos o `Guard` e o `RSpec` para monitorar alguns de nossos arquivos e executar testes sobre eles assim que eles forem modificados, para termos certeza de que as últimas mudanças não estão quebrando a aplicação.
 
-##Continuous testing with Guard
+Se algum erro for encontrado, então iremos nos aprofundar nele para entender a causa e consertá-lo, usando o `Pry`.
 
-In your Gemfile, add
+Finalmente, dado que estamos assumindo que estamos desenvolvendo em colaboração com outros por meio do GitHub, também faremos com que cada contribuição não entre em conflito quando integrada com as demais. Por esse motivo, também realizaremos commits, push e testes de integração com frequência, em um processo chamado "Integração Contínua". Usaremos a `Travis-CI` para nos apoiar.
 
-{% highlight sh %}
+##Teste contínuo com `Guard`
+
+Em seu `Gemfile`, adicione
+
+{% highlight ruby %}
 group :test do
   gem 'rspec'
 end
@@ -33,9 +36,17 @@ group :development do
 end
 {% endhighlight %}
 
-Then run "bundle install". Then create a file called Rakefile in your main project directory and add
+e execute
 
 {% highlight sh %}
+bundle install
+{% endhighlight %}
+
+para instalar as gems.
+
+Então, crie um arquivo chamado `Rakefile` em seu diretório principal do projeto e adicione
+
+{% highlight ruby %}
 require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new do |task|
@@ -43,69 +54,69 @@ RSpec::Core::RakeTask.new do |task|
 end
 {% endhighlight %}
 
-When you install RSpec, it gives you access to a built in Rake task and that's what we're using here. We create a new instance of RakeTask which by default creates a task called spec that will look for a folder called spec and will run all the test files within that folder, using the configuration options we've defined (here color and format of the test output on the command line).
+Quando você instala o `RSpec`, ele dá acesso a uma tarefa construída em `Rake` e é isso que estamos usando aqui. Nós criamos uma nova instância de `RakeTask` que, por padrão, cria uma tarefa chamada `spec` que procurará uma pasta chamada `spec` e executará todos os arquivos de teste dentro dessa pasta, usando as opções de configuração que definimos (aqui cor e formato da saída de teste na linha de comando)
 
-Note: to run the tests just enter "rake spec" in your command line. You'll get zero failures because we haven't written either any test or any code, yet.
+*Nota:* para executar os testes, basta digitar `rake spec` na sua linha de comando. Você receberá zero falhas porque ainda não escrevemos qualquer teste ou qualquer código.
 
-Now add the following to a new file (in your main project directory) called "Guardfile":
+Agora, adicione o seguinte a um novo arquivo (no diretório principal do projeto) chamado `Guardfile`:
 
-{% highlight sh %}
+{% highlight ruby %}
 guard 'rspec' do
-  # watch /app/views files
+  # observe os arquivos da pasta /app/views
   watch(%r{^app/views/(.+).html.rb$}) do |m|
     "spec/features/#{m[1]}_spec.rb"
   end
 
-# watch /spec/ files
+  # observe os arquivos da oasta /spec/features
   watch(%r{^spec/features/(.+).rb$}) do |m|
     "spec/features/#{m[1]}.rb"
   end
 end
 {% endhighlight %}
 
-The contents of this file tells Guard what to do when we run the guard command.
+O conteúdo deste arquivo diz ao `Guard` o que fazer quando executamos o comando `guard`.
 
-If we ran guard rspec then Guard would watch the specified files and execute the specified commands once any changes to those files had occurred. Note: because we only have one guard task, rspec, then that is run by default if we ran the command guard.
+Se executássemos `guard rspec`, o `Guard` observaria os arquivos especificados e executaria os comandos definidos assim que alguma alteração desses arquivos tivesse ocorrido. *Nota:* como nós só temos uma tarefa `guard`, o `rspec`, isso é executado por padrão se executarmos o comando `guard`.
 
-In this instance, we're telling Guard to watch all the files within our app/views and spec/features folders and if any changes occur to any of those files then to execute the test files within our spec/features folder to make sure no changes we made broke our tests (and subsequently didn't break our code).
+Neste caso, estamos dizendo ao `Guard` que observe todos os arquivos dentro de nossas pastas `app/views` e `spec/features` e, se ocorrer alguma alteração em qualquer desses arquivos, então execute os arquivos de teste dentro da nossa pasta `spec/features` para garantir que as mudanças que fizemos não quebraram nossos testes (e, consequentemente, não quebraram nosso código).
 
-Now, as in proper Test-Driven Development(TDD), let's create a test for our static "Home" page, before we even create the Home page.
+Agora, como é apropriado no Desenvolvimento Guiado por Teste (TDD), vamos criar um teste para a nossa página estática "Home", antes mesmo de criá-la.
 
-We're going to create a file titled home_spec.rb and place it in the spec/feature folder (as this is what we told Guard to expect). The purpose of this file is to become our specification file (in other words, this is going to be our test code and will represent the expected functionality).
+Nós vamos criar um arquivo intitulado `home_spec.rb` e colocá-lo na pasta `spec/feature` (a qual o `Guard` está observando). O objetivo deste arquivo é tornar-se nosso arquivo de especificação (em outras palavras, este será o nosso código de teste e representará a funcionalidade esperada).
 
-Note: in Ruby the words "test" and "specification" are often considered interchangeable.
+*Nota:* em Ruby, as palavras "teste" e "especificação" são muitas vezes consideradas intercambiáveis.
 
-###TDD: Writing Test Code Before Application Code
+###TDD: Escrevendo Código de Teste antes do Código da Aplicação
 
-Typically, if you write your application code first (so you're not doing TDD), then you will find yourself writing code that at some point in the future is over engineered and potentially obsolete. Through the process of refactoring or changing requirements, you may find that some functions will fail to ever be called.
+Normalmente, se você escreve o código da aplicação primeiro (então você não está fazendo o TDD), então você se encontrará escrevendo um código que, em algum momento do futuro, será desnecessariamente complicado e potencialmente obsoleto. Por meio do processo de refatoração ou alteração de requisitos, você poderá descobrir que algumas funções nunca serão chamadas.
 
-This is why TDD is considered the better practice and the preferred development method to use, because every line of code you will produce has been produced for a reason: to get a failing specification (your actual business requirement) to pass.
+É por isso que o TDD é considerado a melhor prática e o método de desenvolvimento favorito, porque cada linha de código que você produzirá foi produzida por um motivo: corrigir especificações (os requisitos do seu negócio) que estão falhando.
 
-Let's write the test "home.html.erb_spec.rb as:
+Vamos escrever o teste `home.html.erb_spec.rb` como:
 
-{% highlight sh %}
+{% highlight ruby %}
 require 'spec_helper'
 
-describe "test for the static page Home" do
-  it "displays the text attribute of the message" do
+describe "teste para a página estática Home" do
+  it "exibe o atributo de texto da mensagem" do
     render
-    rendered.should contain("Hello world!")
+    rendered.should contain("Olá mundo!")
   end
 end
 {% endhighlight %}
 
 
-To help us reduce the boilerplate code, we'll place it inside of a special helper file that we'll load from our specification files. This file will be titled spec_helper.rb.
+Para nos ajudar a reduzir o código clichê, o colocamos dentro de um arquivo especial auxiliar que vamos carregar nos nossos arquivos de especificação. Este arquivo será intitulado `spec_helper.rb`.
 
-This file will do a couple of things:
+Este arquivo irá fazer o seguinte:
 
-*    tell Ruby where our main application code is located
-*    load our application code (for the tests to run against)
-*    load the pry gem (helps us debug our code; if we need to).
+*    dizer ao Ruby onde o nosso código da aplicação principal está localizado
+*    carregar o código do nosso aplicativo (para que os testes sejam executados)
+*    carregar a gem `pry` (nos ajuda a depurar nosso código, se precisarmos).
 
-Here is the code:
+Aqui está o código:
 
-{% highlight sh %}
+{% highlight ruby %}
 $ << File.join(File.dirname(FILE), '..', 'app/views')
 
 require 'pry'
@@ -113,21 +124,19 @@ require 'home'
 {% endhighlight %}
 
 
-Let's open a new command line, enter "guard" and leave it running: it will monitor our views in app/views and run tests from spec/features against them. If we now create an empty file "app/views/home.html.erb" guard will run the test and the test will unsurprisingly fail.
+Vamos abrir uma nova linha de comando, insira `guard` e deixe-o em execução: ele irá monitorar nossas páginas em `app/views` e executar testes da `spec/features` para elas. Se agora criarmos um arquivo vazio, o `app/views/home.html.erb` o `Guard` irá executar o teste e, sem supresa, o teste falhará.
 
-The point of TDD is to have a tight feedback loop, also known as 'red, green, refactor'). What this means in practice is:
+O ponto de TDD é ter um loop de feedback estreito, também conhecido como 'red, green, refactor' (vermelho, verde, refatorar). Na prática, isso significa:
 
-* write a failing test
-* write the least amount of code to get it to pass
-* refactor the code
-
-The error is telling us that...
+* escrever um teste que falha
+* escrever o código mais simples possível para que ele passe
+* refatorar o código
 
 
 
-Then let's create our static page Home. We create a PagesController whose purpose is to deal with static pages (e.g., Home, About, Help). Each page is represented by one action in the controller "pages_controller.rb".
+Então vamos criar nossa página estática "Home". Criamos um `PagesController` cujo objetivo é lidar com páginas estáticas (por exemplo, Home, About, Help). Cada página é representada por uma ação no controlador `pages_controller.rb`.
 
-{% highlight sh %}
+{% highlight ruby %}
 class PagesController < ApplicationController
   def home
   end
@@ -140,7 +149,7 @@ class PagesController < ApplicationController
 end
 {% endhighlight %}
 
-Now we have to tell the server to match the browser requests for each different page to our actions:
+Agora temos que dizer ao servidor que combine as requisições do navegador para cada página diferente de nossas ações:
 
 {% highlight sh %}
 match '/home' => 'pages#home'
@@ -148,39 +157,39 @@ match '/about' => 'pages#about'
 match '/help' => 'pages#help'
 {% endhighlight %}
 
-We then create home.html.erb, about.html.erb, and hrlp.html.erb views under app/views/pages. These views contain whatever content you want on your static pages. They'll by default use your app's application.html.erb layout.
+Em seguida, criamos as páginas `home.html.erb`, `about.html.erb` e `help.html.erb` em `app/views/pages`. Esses arquivos contêm qualquer conteúdo que você deseja em suas páginas estáticas. Eles usarão, por padrão, o layout `application.html.erb` do seu aplicativo.
 
-For now, we'll leave them empty and only add the following to home.html.erb, in order to satisfy our test.
+Por enquanto, vamos deixá-los vazios e apenas adicionar o seguinte a `home.html.erb`, para satisfazer nosso teste
 
-{% highlight sh %}
-Hello world!
+{% highlight erb %}
+Olá mundo!
 {% endhighlight %}
 
-Now, if we check the command line window where "guard" was running, we'll see it automatically did run our test as soon as we saved the changes to our home.html.erb file, and that the test is now succeeding.
+Agora, se verificarmos a janela de linha de comando onde o `guard` estava em execução, veremos que ele executou automaticamente nosso teste assim que salvamos as alterações em nosso arquivo `home.html.erb` e que o teste agora está sendo bem-sucedido.
 
-*Note:* if we wanted to run the test manually rather than via Guard, we would have had to run "rspec spec/features/home.html.erb_spec.rb"
+*Nota:* se quisermos executar manualmente os testes em vez de usar o `Guard`, teríamos que executar `rspec spec/features/home.html.erb_spec.rb`.
 
 
-## Debugging with Pry
+## Depuração com `Pry`
 
-For the purpose of demonstrating Pry we are going to add more code to our controller (this extra code doesn't effect our test in any way).
+Com o intuito de demonstrar o Pry, vamos adicionar mais código ao nosso controlador (este código extra não afeta nosso teste).
 
-{% highlight sh %}
+{% highlight ruby %}
 class PagesController < ApplicationController
 attr_accessor :test
 
-  @@class_property = "I'm a class property"
+  @@class_property = "Sou uma propriedade de classe"
 
   def home
     binding.pry
-    @instance_property = "I'm an instance property"
+    @instance_property = "Sou uma propriedade de instância"
     pubs
     privs
-    "Hello RSpec!"
+    "Olá RSpec!"
   end
 
   def about
-    test_var = "I'm a test variable"
+    test_var = "Sou uma variável de teste"
     test_var
   end
 
@@ -190,34 +199,34 @@ attr_accessor :test
   private
 
   def privs
-    puts "I'm private"
+    puts "Sou privado"
   end
 end
 {% endhighlight %}
 
-A break-point is a place within your code where execution will stop.
-You can have multiple break-points set within your code and you create them using "binding.pry" (note it's been included above).
+Um "break-point" é um lugar dentro do seu código onde a execução irá parar.
+Você pode ter vários "break-points" definidos no seu código e você os cria usando `binding.pry` (observe que foi incluído acima).
 
-When you run your code you'll notice that the terminal will stop and place you inside your application's code at the exact spot your binding.pry was placed.
+Quando você executar o seu código, você notará que o terminal irá parar e colocá-lo dentro do código do seu aplicativo no local exato em que o `binding.pry` foi colocado.
 
-From this point Pry has access to the local scope. You can type "exit" to exit Pry and for your code to continue executing.
+A partir deste ponto, o `Pry` tem acesso ao escopo local. Você pode digitar `exit` para sair do `Pry` e para o seu código continuar executando.
 
-**Note:** Try finding where you are: (by typying) whereami; Stack Trace: wtf; Inspecting (available methods and properties): ls; Changing Scope: cd.
+**Nota:** Você pode tentar encontrar onde você está, digitando: `whereami`; Rastrear a pilha de execução: `wtf`; Inspecionar os métodos e propriedades disponíveis: `ls`; Mudar o Escopo: `cd`.
 
-##Continuous Integration (CI) with Travis-CI
+##Integração Contínua (CI) com Travis-CI
 
-The principle of CI is to commit/push early and often to avoid conflicts between your code and the master branch. When you do (in this case we're committing to GitHub) then that should kick off a 'build' on your CI server which runs the relevant tests to ensure all is working as it should be.
+O princípio da IC é realizar "commit/push" o quanto antes e muitas vezes para evitar conflitos entre seu código e a "branch" principal. Quando você faz isso (neste caso, estamos realizando commits para o GitHub), é iniciada uma "build" no seu servidor CI, que executa os testes relevantes para garantir que tudo esteja funcionando como deve ser.
 
-Travis CI is a hosted continuous integration service for the open source community. It offers free CI services for open-source projects and also has a paid model for businesses. We'll be using the free open-source model on our GitHub repository.
+O Travis CI é um serviço de integração contínua hospedado para a comunidade de código aberto. Oferece serviços de CI gratuitos para projetos de código aberto e também tem um modelo pago para empresas. Usaremos o modelo de código aberto gratuito em nosso repositório GitHub.
 
-The process is this:
+O processo é o seguinte:
 
-*   Sign into Travis-CI using your GitHub account
-*    Go to your "Accounts" page
-*    Turn "on" any repositories you want to run CI on
-*    Create a .travis.yml file within the root directory of your project and commit it to your GitHub repository
+*    Inscreva-se no Travis-CI usando sua conta GitHub
+*    Vá para a página "Accounts"
+*    Habilite o CI em todos os repositórios que deseja executá-lo
+*    Crie um arquivo `.travis.yml` dentro do diretório raiz do seu projeto e realize commit dele ao seu depósito GitHub
 
-The .travis.yml file determines the configuration settings for Travis-CI so it knows how to handle running the tests for your project. Let's create it as follows:
+O arquivo `.travis.yml` determina as configurações do Travis-CI para que ele saiba como gerenciar a execução dos testes em seu projeto. Vamos criá-lo da seguinte maneira:
 
 {% highlight sh %}
 language: ruby
@@ -239,16 +248,16 @@ notifications:
     - you@example.com
 {% endhighlight %}
 
-We need to add "gem 'rake'" to our Gemfile within the ":test" group, as this is a requirement of Travis-CI.
+Precisamos adicionar `gem 'rake'` ao nosso `Gemfile` dentro do grupo `:test`, pois este é um requisito da Travis-CI.
 
-Travis-CI uses RVM (Ruby Version Manager) for installing Rubies on their servers. So we need to specify what Ruby versions we want to run our tests against.
+O Travis-CI usa RVM (Ruby Version Manager) para instalar Rubies em seus servidores. Portanto, precisamos especificar as versões do Ruby para as quais queremos executar nossos testes.
 
-Also, let's add to spec/spec_helper.rb the following:
+Além disso, vamos adicionar a `spec/spec_helper.rb` o seguinte:
 {% highlight sh %}
  require 'pry' if ENV['APP_ENV'] == 'debug'"
 {% endhighlight %}
 
-and make clear in our Gemfile which gems are required for testing and which for development:
+e deixar claro no nosso `Gemfile` quais gems são necessárias para teste e para o desenvolvimento:
 
 {% highlight sh %}
 group :test do
@@ -261,11 +270,11 @@ group :development do
   gem 'guard-rspec'
   gem 'pry'
 
-  # Adds debugging steps to Pry
+  # Adiciona passos de depuração ao Pry
   # continue, step, next
   gem 'pry-remote'
   gem 'pry-nav'
 end
 {% endhighlight %}
 
-**Note:** if you have any issues regarding Travis-CI then you can join the "#travis" channel on IRC freenode to get help answering any questions you may have.
+**Nota:** se você tiver algum problema relacionado ao Travis-CI, pode participar do canal "#travis" no IRC freenode para obter ajuda para responder qualquer dúvida que você possa ter.
