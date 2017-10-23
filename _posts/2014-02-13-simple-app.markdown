@@ -39,16 +39,16 @@ Interface onde você vai iniciar o servidor rails e executar comandos.
 
 ### Importante
 
-É importante que você siga as instruções especificas ao seu sistema operacional. Os comandos que você precisará exectuar em um computador rodando Windows são um pouco diferentes daqueles executados no Mac ou no Linux. Se você estiver com dificuldades, clique no alternador de comandos para diferentes sistemas operacionais disponível ao final de cada comando.
+É importante que você siga as instruções especificas ao seu sistema operacional. Os comandos que você precisará executar em um computador rodando Windows são um pouco diferentes daqueles executados no Mac ou no Linux. Se você estiver com dificuldades, clique no alternador de comandos para diferentes sistemas operacionais disponível ao final de cada comando.
 
 ## *1.*Criando a aplicação
 
-Vamos criar uma nova app Rails chamada *railsgirls*.
+Vamos criar uma nova aplicação Rails chamada *railsgirls*.
 
 Primeiro, vamos abrir um terminal:
 
-* Mac OS X: Abra o Spotlight, digite *Terminal* e clicque na aplicação *Terminal*.
-* Windows: Clicque em Iniciar (Start) e procure o *Prompt de Comandos* (*Command Prompt*), e então clique em *Prompt de Comandos com Ruby e Rails* (*Command Prompt with Ruby and Rails*).
+* Mac OS X: Abra o Spotlight, digite *Terminal* e clique na aplicação *Terminal*.
+* Windows: Clique em Iniciar (Start) e procure o *Prompt de Comandos* (*Command Prompt*), e então clique em *Prompt de Comandos com Ruby e Rails* (*Command Prompt with Ruby and Rails*).
 * Linux (Ubuntu/Fedora): Procure por *Terminal* no dash e clicque em *Terminal*.
 
 Em seguida, digite os comandos abaixo no terminal:
@@ -56,19 +56,19 @@ Em seguida, digite os comandos abaixo no terminal:
 <div class="os-specific">
   <div class="nix">
 {% highlight sh %}
-mkdir projects
+mkdir projetos
 {% endhighlight %}
 
     <div>
-Você pode checar se uma pasta chamada <code>projects</code> foi criada com o seguinte comando de listar: <code>ls</code>. Você deve ver a pasta <code>projects</code> no texto de saída (output). Agora você deve mudar de pasta e entrar na pasta <code>projects</code> com o comando:
+Você pode checar se uma pasta chamada <code>projetos</code> foi criada com o seguinte comando de listar: <code>ls</code>. Você deve ver a pasta <code>projetos</code> no texto de saída (output). Agora você deve mudar de pasta e entrar na pasta <code>projetos</code> com o comando:
     </div>
 
 {% highlight sh %}
-cd projects
+cd projetos
 {% endhighlight %}
 
     <div>
-Você pode checar que está em uma pasta vazia usando novamente o comando <code>ls</code>. Agora você deve criar umanova aplicação chamada <code>railsgirls</code> através do comando:
+Você pode checar que está em uma pasta vazia usando novamente o comando <code>ls</code>. Agora você deve criar uma nova aplicação chamada <code>railsgirls</code> através do comando:
     </div>
 
 {% highlight sh %}
@@ -76,12 +76,13 @@ rails new railsgirls -m http://railsgirls.com/simple_scaffold.rb
 {% endhighlight %}
 
     <div>
-        <code>rails new railsgirls</code> diz ao Rails que crie um novo projeto chamado railsgirls, com todos os arquivos de que nossa aplicação precisa.
+        <code>rails new railsgirls</code> diz ao Rails que crie um novo projeto chamado ```railsgirls```, com todos os arquivos de que nossa aplicação precisa.
     </div>
     <div>
         <code>-m http://railsgirls.com/simple_scaffold.rb</code> diz ao Rails que baixe um modelo especial a partir de railsgirls.com, o qual deixa os arquivos um pouco mais simples e fáceis para iniciantes entenderem.
     </div>
     <div>
+
 Isso cria uma nova aplicação na pasta <code>railsgirls</code>. Nós devemos, então, novamente mudar de pasta, para entrar na nossa aplicação rails, usando o comando:
     </div>
 
@@ -100,15 +101,15 @@ rails server
 
   <div class="win">
 {% highlight sh %}
-mkdir projects
+mkdir projetos
 {% endhighlight %}
 
     <div>
-Verifique que uma pasta chamada <code>projects</code> foi criada com o comando de listar: <code>dir</code>. A pasta <code>projects</code> deve estar visível no output. Em seguida, mude de pasta, entrando na pasta <code>projects</code>, usando o comando:
+Verifique que uma pasta chamada <code>projetos</code> foi criada com o comando de listar: <code>dir</code>. A pasta <code>projetos</code> deve estar visível no output. Em seguida, mude de pasta, entrando na pasta <code>projetos</code>, usando o comando:
     </div>
 
 {% highlight sh %}
-cd projects
+cd projetos
 {% endhighlight %}
 
     <div>
@@ -147,7 +148,7 @@ ruby bin\rails server
 
 Abra o endereço [http://localhost:3000](http://localhost:3000) no seu navegador. A página "Welcome aboard" deve aparecer, o que significa que a criação da sua app funcionou corretamente.
 
-Notice in this window the command prompt is not visible because you are now in the Rails server, the command prompt looks like this:
+Note que, nessa janela, o prompt de comandos não está visível, porque você está agora no servidor Rails. O prompt de comandos se parece com isso:
 
 <div class="os-specific">
   <div class="nix">
@@ -162,9 +163,9 @@ $
   </div>
 </div>
 
-When the command prompt is not visible you cannot execute new commands. If you try running `cd` or another command it will not work. To return to the normal command prompt:
+Quando o prompt de comandos não está visível, você não consegue executar novos comandos. Se você tentar executar o comando `cd` ou qualquer outro comando, eles não vão funcionar. Para voltar ao prompt de comandos normal:
 
-Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to quit the server.
+Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal, para parar o servidor.
 
 **Instrutor:** Explique o que cada comando faz. O que foi criado? O que o servidor faz? Você pode saber mais sobre o modelo especial no [GitHub](https://github.com/Ben-M/simple_scaffold).
 
@@ -214,7 +215,7 @@ Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> para parar o servidor depois que você j�
 
 **Instrutor:** Fale um pouco sobre a relação entre HTML e Rails. Qual parte das views é HTML e qual parte é Embedded Ruby (ERB)? O que é MVC e como isso se relaciona às views e HTML? (Modelos - models - e controladores - controllers - são responsáveis pela geração das views.)
 
-A nossa app não está muito bonita ainda. Vamos resolver isso. Usaremos o projeto Bootstrap do Twitter para deixar nosso design mais bonito e de forma bem fácil.
+A nossa aplicação não está muito bonita ainda. Vamos resolver isso. Usaremos o projeto Bootstrap do Twitter para deixar nosso design mais bonito e de forma bem fácil.
 
 Abra `app/views/layouts/application.html.erb` no seu editor de texto e, acima da linha
 
@@ -352,7 +353,7 @@ para
 <%= f.file_field :picture %>
 {% endhighlight %}
 
-Pode ser que você veja um erro do tipo *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*.
+Pode ser que você veja um erro do tipo ```TypeError: can't cast ActionDispatch::Http::UploadedFile to string```.
 
 Se isso ocorrer, no arquivo `app/views/ideas/_form.html.erb`, mude a linha
 
