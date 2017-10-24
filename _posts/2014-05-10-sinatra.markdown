@@ -186,7 +186,7 @@ $cafes = []
 
 Isso criará um array vazio quando o seu app inicializar.
 
-**Dica** Essa variável global não ficará por perto por muito tempo - ela se toranará um array vazio toda vez que o servidor reiniciar. Como nós estamos usando o reloader do Sinatra, isso acontecerá toda vez que você salvar o seu arquivo `app.rb`. Não se preocupe, ele servirá aos nossos propósitos.
+**Dica** Essa variável global não ficará por perto por muito tempo - ela se toranará um array vazio toda vez que o servidor reiniciar. Como nós estamos usando o reloader (recarregador) do Sinatra, isso acontecerá toda vez que você salvar o seu arquivo `app.rb`. Não se preocupe, ele servirá aos nossos propósitos.
 
 ## *6.* Recebendo informação - Salvando cafés
 
@@ -301,7 +301,7 @@ Tente primeiro, e depois [clique aqui](http://tjmcewan.github.io/coffeecalc/snip
 
 Isso enviará uma resposta de redirect especial (HTTP 303) com um cabeçalho de `location` que especifica para onde o navegador deve ir:
 
-{% highlight HTML %}
+{% highlight sh %}
 HTTP/1.1 303 See Other
 <…>
 Location: http://localhost:4567/
