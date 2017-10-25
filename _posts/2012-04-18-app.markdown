@@ -193,8 +193,8 @@ Abra `app/views/layouts/application.html.erb` no seu editor de texto e acima da 
 acrescente o seguinte:
 
 {% highlight erb %}
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
 {% endhighlight %}
 
 agora substitua
