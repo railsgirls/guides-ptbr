@@ -313,13 +313,13 @@ mount_uploader :picture, PictureUploader
 Abra `app/views/ideas/_form.html.erb` e substitua:
 
 {% highlight erb %}
-<%= f.text_field :picture %>
+<%= form.text_field :picture %>
 {% endhighlight %}
 
 por
 
 {% highlight erb %}
-<%= f.file_field :picture %>
+<%= form.file_field :picture %>
 {% endhighlight %}
 
 Em alguns casos poderá ocorrer o erro *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*.
@@ -327,13 +327,13 @@ Em alguns casos poderá ocorrer o erro *TypeError: can't cast ActionDispatch::Ht
 Se isso acontecer, abra `app/views/ideas/_form.html.erb` e substitua a linha:
 
 {% highlight erb %}
-<%= form_for(idea) do |f| %>
+<%= form_with(model: idea, local: true) do |form|  %>
 {% endhighlight %}
 
 por
 
 {% highlight erb %}
-<%= form_for(idea, html: {multipart: true}) do |f| %>
+<%= form_for(idea, html: {multipart: true}) do |form| %>
 {% endhighlight %}
 
 No seu navegador adicione uma nova idea e nela uma imagem. Esta ação fará com que seja mostrada não a imagrm, mas o caminho para a imagem. Vamos corrigir isto.
