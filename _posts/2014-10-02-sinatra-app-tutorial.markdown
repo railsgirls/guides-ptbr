@@ -13,7 +13,7 @@ Nós vamos criar um pequeno app de votação do zero usando um framework de dese
 
 Imagine seu grupo de amigos tentando decidir o que pedir para sua maratona de filmes semanal. Com tantas opções de fast food para pedir, isso pode se tornar uma discussão e tanto. É nessa hora que entra o nosso app!
 
-__COACH__: Breve explicação sobre o que é o [Sinatra](http://www.sinatrarb.com).
+__INSTRUTOR(A)__: Breve explicação sobre o que é o [Sinatra](http://www.sinatrarb.com).
 
 ## Instalação Sinatra
 
@@ -42,7 +42,7 @@ Agora você pode visitar <a href="localhost:4567" target=_blank">localhost:4567<
 ver a página "Olá, eleitor!", o que significa que a geração do seu novo
 app está funcionando corretamente. Aperte <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servidor. Se <kbd>Ctrl</kbd>+<kbd>C</kbd> não funcionar para você significa que você provavelmente está usando Windows e <kbd>Ctrl</kbd>+<kbd>Z</kbd>/ <kbd>Ctrl</kbd>+<kbd>Pause</kbd> / <kbd>Ctrl</kbd>+<kbd>Break</kbd> deve resolver esse problema.
 
-__COACH__: Explique o método POST e GET e como eles se comunicam com o browser.
+__INSTRUTOR(A)__: Explique o método POST e GET e como eles se comunicam com o browser.
 
 
 
@@ -102,7 +102,7 @@ end
 Execute `ruby sufragista.rb`, cheque seus
 resultados e pare o servidor com <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__COACH__: Fale um pouco sobre HTML e erb. Explique
+__INSTRUTOR(A)__: Fale um pouco sobre HTML e erb. Explique
 sobre templates e sobre o que são constantes globais.
 
 
@@ -127,7 +127,7 @@ get '/' do
 end
 {% endhighlight %}
 
-__COACH__: Explique o que são instancias de variáveis
+__INSTRUTOR(A)__: Explique o que são instancias de variáveis
 e como Sinatra faz elas visíveis nas views.
 
 
@@ -163,7 +163,7 @@ e coloque lá um pouco de HTML com código Ruby junto:
 </html>
 {% endhighlight %}
 
-__COACH__: Explique como o POST funciona. Como buscar o que
+__INSTRUTOR(A)__: Explique como o POST funciona. Como buscar o que
 foi mandado no formulário? de onde veio o `params`?
 
 
@@ -191,7 +191,7 @@ Coloque o seguinte lá:
 Remova a parte acima dos outros dois templates
 (`index.erb` e `cast.erb` que estão no diretório `views`).
 
-__COACH__: Fale sobre a estrutura de documentos HTML e sobre como a construção de código comum
+__INSTRUTOR(A)__: Fale sobre a estrutura de documentos HTML e sobre como a construção de código comum
 funciona. Explique o que `yield` faz.
 
 
@@ -225,7 +225,7 @@ Crie um novo arquivo no diretório `views`, chamado `results.erb`.
 Execute `ruby sufragistat.rb`, cheque
 seus resultados e pause o servidor com <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__COACH__: Explique tabelas HTML e como os valores faltando vem como zero.
+__INSTRUTOR(A)__: Explique tabelas HTML e como os valores faltando vem como zero.
 
 
 
@@ -263,19 +263,19 @@ get '/results' do
 end
 {% endhighlight %}
 
-__COACH__: Explique o que é YAML.
+__INSTRUTOR(A)__: Explique o que é YAML.
 
 
 ### Veja como o arquivo YAML muda quando votos são salvos
 
 Vamos abrir `votos.yml`. E votar. E checar novamente.
 
-__COACH__: Vai ter situações onde um ou mais estudantes vão
+__INSTRUTOR(A)__: Vai ter situações onde um ou mais estudantes vão
 esquecer de pausar o servidor antes de rodá-lo novamente. É uma boa
 oportunidade para procurar na Internet por uma solução. Eles não tem
 que saber de tudo sobre "matar" processos para achar a solução.
 
-__COACH__: No final explique brevemente a diferença entre Sinatra e Rails.
+__INSTRUTOR(A)__: No final explique brevemente a diferença entre Sinatra e Rails.
 
 
 
