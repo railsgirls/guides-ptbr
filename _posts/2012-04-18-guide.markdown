@@ -67,79 +67,80 @@ Venha com atividades para quebrar o gelo: pergunte as meninas para escrever porq
 
 Lembre-se de fazer um [FridayHug](http://fridayhug.com)!
 
-21 -> Coach dinner
-Go through the application with the coaches during dinner.
+21 -> Jantar com os Coaches
+Examine a aplicação com os coaches durante o jantar.
 
 
-#### Saturday: Workshop
+#### Sábado: Workshop
 
-09:00 - 10:00 Registration and coffee  
-*Hint* Reserve enough time for people to mingle and to solve any problems there might be with installations. Give out workbooks, collect acronyms for the Bento exercise.
+09:00 - 10:00 Inscrição e Café
+*Dica* Reserve tempo suficiente para que as pessoas se misturem e para resolver quaisquer problemas que possam existir nas instalações. Forneça livros de trabalho, colete siglas para o exercício de Bento.
 
-10:00 - 10:10 Welcoming words  
-*Hint* Mention sponsors, show what we'll build, tell what programming is.
+10:00 - 10:10 Palavras de boas-vindas  
+* Dica * Mencionar patrocinadores, mostrar o que vamos construir, contar o que é a programação.
 
 10:30 - 11:00 UX workshop
 
-11:00 - 11:30 Introduction to programming  
-*Hint* Ask one of the coaches to do this. Explain why learning Ruby basics is important even though they'll be using Rails.
+11:00 - 11:30 Introdução à programação  
+* Dica * Peça a um dos coaches para fazer isso. Explique por que aprender os fundamentos de Ruby é importante mesmo que estejam usando o Rails.
 
-Themes to cover:
+Temas para cobrir:
 
-+ The difference between dynamic and static websites: what are web apps?
-+ What are programming languages? What is Rails?
-+ The tools we’ll be using: browser, terminal, code editor, folder structure
++ A diferença entre sites dinâmicos e estáticos: o que são aplicativos da web?
++ O que são linguagens de programação? O que é Rails?
++ As ferramentas que usaremos: navegador, terminal, editor de código, estrutura de pasta
 
-Show & tell with <a href="http://tryruby.org">tryruby.org</a>, first three-four exercises all together.
+Mostrar e contar com <a href="http://tryruby.org">tryruby.org</a>, primeiros três-quatro exercícios todos juntos.
 
-11:30 - 13:00 Workshop time
-Going (slowly!) through the curriculum at <a href="http://guides.railsgirls.com/app">guides.railsgirls.com/app</a>. Stop to explain what you’re doing and what the different concepts mean.
+11:30 - 13:00 Hora do Workshop
+Indo (lentamente!) Através do currículo em <a href="http://guides.railsgirls.com/app">guides.railsgirls.com/app</a>. Pare para explicar o que você está fazendo e o que os diferentes conceitos significam.
 
-Try to aim for simple explanations even with the cost of accuracy. You don’t need to talk about all underlying concepts. Just try to answer questions when they arise, or move on if they’re too hard or out of scope. You are not here to teach perfect coding skills but to show how to get stuff done. One has to learn how to build web apps before learning how to do it well.
+Tente apontar para explicações simples, mesmo com o custo da precisão. Você não precisa falar sobre todos os conceitos subjacentes. Apenas tente responder perguntas quando elas surgirem, ou vá em frente se elas são muito difíceis ou fora do escopo. Você não está aqui para ensinar habilidades de codificação perfeitas, mas para mostrar como fazer as coisas. É preciso aprender a construir aplicativos da web antes de aprender a fazê-lo bem.
 
-Concepts to cover:
-+ Rails Generators
-+ Scaffolds: Rails App Structure
+Conceitos para cobrir:
++ Geradores de trilhos
++ Andaimes: Estrutura da aplicação Rails
 + Gem Management
-+ MVC, REST/Resources
-+ Models and Active Record
-+ Controllers and ActionController
-+ Views and ERB
++ MVC, REST / Recursos
++ Modelos e Registro Ativo
++ Controladores e ActionController
++ Visualizações e ERB
 
-*Tips:* Coaches are people too. They are doing this for the first time too. Teaching might be hard and intimidating, so remember to be available to help coaches or groups with difficult situations or just provide support and encouragement.
+* Dicas: * Os coaches também são pessoas. Eles estão fazendo isso pela primeira vez também. O ensino pode ser difícil e intimidante, então lembre-se de estar disponível para ajudar treinadores ou grupos com situações difíceis ou apenas oferecer apoio e incentivo.
 
-13:00 - 14:00 Lunch
+13:00 - 14:00 Almoço
 
-14:00 - 14:30 Bentobox exercise
-Putting technical jargon into a context with a conceptual model called Bentobox.
+14:00 - 14:30 Exercício de Bentobox
 
-Two exercises: 1) Going through the 10 technical concepts with the physical Bentobox boards.  2) Going through the words the women have themselves submitted with the coaches.
+Colocando o jargão técnico em um contexto com um modelo conceitual denominado Bentobox.
+
+Dois exercícios: 1) Passando pelos 10 conceitos técnicos com as placas físicas do Bentobox. 2) Atravessando as palavras que as próprias mulheres apresentaram com os coaches.
 
 + [Bentobox slidedeck](http://speakerdeck.com/u/railsgirls/p/rails-girls-bentobox-exercise)
-+ [Instruction video](http://vimeo.com/39049632)
-+ [Example video from Rails Girls ATL](http://vimeo.com/54912357)
++ [Vídeo de instruções](http://vimeo.com/39049632)
++ [Exemplo de vídeo da Rails Girls ATL](http://vimeo.com/54912357)
 
-14:30 - 18:00 Workshop time.
+14:30 - 18:00 Hora do Workshop.
 
-Time to continue working on the applications. Monitor the situation: when it seems like people have a hard time concentrating, have the coaches or other speakers give quick lightning talks.
+Tempo para continuar trabalhando nas aplicações. Monitore a situação: quando parece que as pessoas têm dificuldade em se concentrar, os treinadores ou outros oradores dão uma conversa rápida.
 
-Example topics for lighting talks:
+Exemplo de tópicos para conversas de iluminação:
 
-+ Real (female) programmers telling what their career has been like.
-+ Design: UX & UI. Making mockups together either with paper or computer.
-+ Fun ways of explaining technical concepts and recent frameworks: what is CoffeeScript explained in 80s pop songs? How would you describe GitHub? What coding and creative writing have in common?
-+ Show us something real: don’t speak in abstractions, be specific and tell stories.
++ Programadores reais (femininos) que contam como foi sua carreira.
++ Design: UX & UI. Fazendo maquetes juntos com papel ou computador.
++ Divertidas maneiras de explicar conceitos técnicos e estruturas recentes: o que o CoffeeScript explicou nas músicas pop dos anos 80? Como você descreveria o GitHub? O que a codificação e a escrita criativa têm em comum?
++ Mostre-nos algo real: não fale em abstrações, seja específico e conte histórias.
 
-Once everyone has finished their app, there is time to extend the application by modifying the CSS, implementing commenting systems etc. Allow enough time for experimentation.
+Uma vez que todos tenham terminado seu aplicativo, há tempo para estender o aplicativo, modificando o CSS, implementando sistemas de comentários etc. Permita tempo suficiente para experimentação.
 
-19:00 After party  
-*Hint:*
-Invite everyone, also the local developers, boys, those who weren't accepted, to join!
+19:00 Após a festa
+* Dica: *
+Convide todos, também os desenvolvedores locais, meninos, aqueles que não foram aceitos, para se juntar!
 
-[Fork this project on GitHub][github], add yourself, and send us a pull request.
+[Fork este projeto on GitHub][github], Adicione-se e envie-nos um pull request.
 
-[self]: http://guides.railsgirls.com/ "The Rails Girls Guide"
-[github]: https://github.com/railsgirls/railsgirls.github.com "Fork on GitHub"
+[self]: http://guides.railsgirls.com/ "Guia do Rails Girls"
+[github]: https://github.com/railsgirls/railsgirls.github.com "Fork no GitHub"
 
 #### Materials
 
