@@ -13,7 +13,7 @@ permalink: touristic-autism_static-pages-tdd
 
 Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e os tutoriais para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando design](http://guides.railsgirls.com/design), [implantando com o OpenShift](http://guides.railsgirls.com/openshift/), [adicionando comentários](http://guides.railsgirls.com/commenting) e [tutorial do Mark McDonnell](http://code.tutsplus.com/tutorials/testing-your-ruby-code-with-guard-rspec-pry--cms-19974).
 
-O Rails inclui um framework Test::Unit padrão usado para testar seu código. Usaremos um framework de testes mais avançado, chamado `RSpec`, para escrever um conjunto de testes. Precisamos ser capazes de escrever testes que sejam rápidos e que nos dê feedback intantâneo sobre os problemas com o nosso código.
+O Rails inclui um framework `Test::Unit` padrão usado para testar seu código. Usaremos um framework de testes mais avançado, chamado `RSpec`, para escrever um conjunto de testes. Precisamos ser capazes de escrever testes que sejam rápidos e que nos dê feedback intantâneo sobre os problemas com o nosso código.
 
 Usaremos o `Guard` e o `RSpec` para monitorar alguns de nossos arquivos e executar testes sobre eles assim que eles forem modificados, para termos certeza de que as últimas mudanças não estão quebrando a aplicação.
 
@@ -21,7 +21,7 @@ Se algum erro for encontrado, então iremos nos aprofundar nele para entender a 
 
 Finalmente, dado que estamos assumindo que estamos desenvolvendo em colaboração com outros por meio do GitHub, também faremos com que cada contribuição não entre em conflito quando integrada com as demais. Por esse motivo, também realizaremos commits, push e testes de integração com frequência, em um processo chamado "Integração Contínua". Usaremos a `Travis-CI` para nos apoiar.
 
-##Teste contínuo com `Guard`
+## Teste contínuo com `Guard`
 
 Em seu `Gemfile`, adicione
 
@@ -86,7 +86,7 @@ Nós vamos criar um arquivo intitulado `home_spec.rb` e colocá-lo na pasta `spe
 
 *Nota:* em Ruby, as palavras "teste" e "especificação" são muitas vezes consideradas intercambiáveis.
 
-###TDD: Escrevendo Código de Teste antes do Código da Aplicação
+### TDD: Escrevendo Código de Teste antes do Código da Aplicação
 
 Normalmente, se você escreve o código da aplicação primeiro (então você não está fazendo o TDD), então você se encontrará escrevendo um código que, em algum momento do futuro, será desnecessariamente complicado e potencialmente obsoleto. Por meio do processo de refatoração ou alteração de requisitos, você poderá descobrir que algumas funções nunca serão chamadas.
 
@@ -117,7 +117,7 @@ Este arquivo irá fazer o seguinte:
 Aqui está o código:
 
 {% highlight ruby %}
-$ << File.join(File.dirname(FILE), '..', 'app/views')
+$LOAD_PATH << File.join(File.dirname(FILE), '..', 'app/views')
 
 require 'pry'
 require 'home'
@@ -213,7 +213,7 @@ A partir deste ponto, o `Pry` tem acesso ao escopo local. Você pode digitar `ex
 
 **Nota:** Você pode tentar encontrar onde você está, digitando: `whereami`; Rastrear a pilha de execução: `wtf`; Inspecionar os métodos e propriedades disponíveis: `ls`; Mudar o Escopo: `cd`.
 
-##Integração Contínua (CI) com Travis-CI
+## Integração Contínua (CI) com Travis-CI
 
 O princípio da IC é realizar "commit/push" o quanto antes e muitas vezes para evitar conflitos entre seu código e a "branch" principal. Quando você faz isso (neste caso, estamos realizando commits para o GitHub), é iniciada uma "build" no seu servidor CI, que executa os testes relevantes para garantir que tudo esteja funcionando como deve ser.
 
@@ -250,7 +250,7 @@ notifications:
 
 Precisamos adicionar `gem 'rake'` ao nosso `Gemfile` dentro do grupo `:test`, pois este é um requisito da Travis-CI.
 
-O Travis-CI usa RVM (Ruby Version Manager) para instalar Rubies em seus servidores. Portanto, precisamos especificar as versões do Ruby para as quais queremos executar nossos testes.
+O Travis-CI usa o RVM (Ruby Version Manager) para instalar versões do Ruby em seus servidores. Portanto, precisamos especificar as versões do Ruby para as quais queremos executar nossos testes.
 
 Além disso, vamos adicionar a `spec/spec_helper.rb` o seguinte:
 {% highlight sh %}
