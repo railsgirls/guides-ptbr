@@ -8,6 +8,7 @@ permalink: touristic-autism_google-map
 
 *Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
 *para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
+*Traduzido por Elaine Martins, [@astronomaelaine](https://twitter.com/astronomaelaine)*
 
 59/5000
 Os guias básicos que foram mesclados e adaptados são o [Ruby on Rails Tutorial](http://www.railstutorial.org/book), o [RailsGirls app básico](http://guides.railsgirls.com/app/) e os tutoriais para [criar thumbnails (miniaturas)](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando visual](http://guides.railsgirls.com/design), [deploying para OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
@@ -22,9 +23,9 @@ gem 'gmaps4rails'
 {% endhighlight %}
 
 
-Agrupe como o de costume. Depois, adicione as linhas abaixo a um novo arquivo app/model/marker.rb:
+Agrupe como o de costume. Depois, adicione as linhas abaixo a um novo arquivo `app/model/marker.rb`:
 
-{% highlight sh %}
+{% highlight ruby %}
 class Marker
 
   include ActiveModel::Validations
@@ -41,9 +42,9 @@ class Marker
 end
 {% endhighlight %}
 
-Depois, adicione a config/application.rb , dentro do bloco do seu projeto:
+Depois, adicione a `config/application.rb`, dentro do bloco do seu projeto:
 
-{% highlight sh %}
+{% highlight ruby %}
 config.active_support.escape_html_entities_in_json = true
 config.encoding = "utf-8"
 config.filter_parameters += [:password]
@@ -51,9 +52,9 @@ config.assets.enabled = true
 config.assets.version = '1.0'
 {% endhighlight %}
 
-Crie o seu app/controllers/google_controller.rb:
+Crie o seu `app/controllers/google_controller.rb`:
 
-{% highlight sh %}
+{% highlight ruby %}
 class GoogleController < ApplicationController
   def index; end
 
@@ -69,9 +70,9 @@ class GoogleController < ApplicationController
 end
 {% endhighlight %}
 
-Crie o seu view/google/index.html.erb:
+Crie o seu `view/google/index.html.erb`:
 
-{% highlight sh %}
+{% highlight erb %}
 <h1>Veja algum marcador no seu mapa por padrao</h1>
 <div class="google_map"></div>
 <%= gmaps("markers" => {"data" => markers},
@@ -91,15 +92,15 @@ Crie o seu view/google/index.html.erb:
   "provider" => "openlayers", :id => 'openlayer_map'}) %>
 {% endhighlight %}
 
-Adicione as linhas abaixo em app/views/application.html.erb depois de "<%= yield %>":
+Adicione as linhas abaixo em `app/views/application.html.erb` depois de `<%= yield %>`:
 
-{% highlight sh %}
+{% highlight erb %}
 <%= yield :scripts %>
 {% endhighlight %}
 
-Para finalizar, adicione as linhas abaixo em config/routes.rb:
+Para finalizar, adicione as linhas abaixo em `config/routes.rb`:
 
-{% highlight sh %}
+{% highlight ruby %}
   get '/google' => 'google#index'
   root :to => 'google#index'
 {% endhighlight %}
