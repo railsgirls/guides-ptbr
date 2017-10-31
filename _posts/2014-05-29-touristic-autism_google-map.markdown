@@ -1,28 +1,31 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App 
+title: Aplicativo de Pontos Turísticos amigável para autistas
 permalink: touristic-autism_google-map
 ---
 
-# Show All Places in a Google Map
+# Mostrar todo os lugares no Google Map
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
+*Traduzido por Elaine Martins, [@astronomaelaine](https://twitter.com/astronomaelaine)*
+
+59/5000
+Os guias básicos que foram mesclados e adaptados são o [Ruby on Rails Tutorial](http://www.railstutorial.org/book), o [RailsGirls app básico](http://guides.railsgirls.com/app/) e os tutoriais para [criar thumbnails (miniaturas)](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando visual](http://guides.railsgirls.com/design), [deploying para OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
 
-We need to install a piece of software to let us display and interact with Google Maps.
+É preciso instalar um software que permite visualizar e interagir com o Google Maps.
 
-Open `Gemfile` in the project directory using your text editor and add
+Abra `Gemfile`  no diretório do projeto utilizando o editor de texto de sua preferência e adicione as linhas
 
 {% highlight ruby %}
 gem 'gmaps4rails'
 {% endhighlight %}
 
 
-Bundle as usual. Then add to a new app/model/marker.rb file:
+Agrupe como o de costume. Depois, adicione as linhas abaixo a um novo arquivo `app/model/marker.rb`:
 
-{% highlight sh %}
+{% highlight ruby %}
 class Marker
 
   include ActiveModel::Validations
@@ -39,11 +42,9 @@ class Marker
 end
 {% endhighlight %}
 
+Depois, adicione a `config/application.rb`, dentro do bloco do seu projeto:
 
-
-Then add to config/application.rb within your project block:
-
-{% highlight sh %}
+{% highlight ruby %}
 config.active_support.escape_html_entities_in_json = true
 config.encoding = "utf-8"
 config.filter_parameters += [:password]
@@ -51,9 +52,9 @@ config.assets.enabled = true
 config.assets.version = '1.0'
 {% endhighlight %}
 
-Create your app/controllers/google_controller.rb:
+Crie o seu `app/controllers/google_controller.rb`:
 
-{% highlight sh %}
+{% highlight ruby %}
 class GoogleController < ApplicationController
   def index; end
 
@@ -69,10 +70,10 @@ class GoogleController < ApplicationController
 end
 {% endhighlight %}
 
-Create your view/google/index.html.erb:
+Crie o seu `view/google/index.html.erb`:
 
-{% highlight sh %}
-<h1>See some marker on your map by default</h1>
+{% highlight erb %}
+<h1>Veja algum marcador no seu mapa por padrao</h1>
 <div class="google_map"></div>
 <%= gmaps("markers" => {"data" => markers},
           'last_map' => false,
@@ -81,7 +82,7 @@ Create your view/google/index.html.erb:
             "detect_location" => true,
             "provider" => "google", :id => 'google_map'}) %>
 
-<h1>See on OpenLayer</h1>
+<h1>Veja no OpenLayer</h1>
 <div class="openlayer_map"></div>
 
 <%= gmaps("markers" => {"data" => markers},
@@ -91,15 +92,15 @@ Create your view/google/index.html.erb:
   "provider" => "openlayers", :id => 'openlayer_map'}) %>
 {% endhighlight %}
 
-Add the following in app/views/application.html.erb after "<%= yield %>":
+Adicione as linhas abaixo em `app/views/application.html.erb` depois de `<%= yield %>`:
 
-{% highlight sh %}
+{% highlight erb %}
 <%= yield :scripts %>
 {% endhighlight %}
 
-Finally add the following to your config/routes.rb:
+Para finalizar, adicione as linhas abaixo em `config/routes.rb`:
 
-{% highlight sh %}
+{% highlight ruby %}
   get '/google' => 'google#index'
   root :to => 'google#index'
 {% endhighlight %}
