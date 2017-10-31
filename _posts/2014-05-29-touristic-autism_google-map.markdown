@@ -1,27 +1,28 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App 
+title: App para turismo de autismo amigável
 permalink: touristic-autism_google-map
 ---
 
-# Show All Places in a Google Map
+# Mostrar todos os lugares no Google Maps
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)* *para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
 
+*Traduzido por [@MADPT](https://github.com/MADPT) aka [Miguel Ângelo](http://www.miguelangelo.io)*.
 
-We need to install a piece of software to let us display and interact with Google Maps.
+Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e o tutorial para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando um design](http://guides.railsgirls.com/design), [implementando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
-Open `Gemfile` in the project directory using your text editor and add
+É necessário instalar um software que nos permita exibir e interagir com o Google Maps.
 
+Abra `Gemfile` no diretório do projeto usando o editor de texto e adicione
+```
 {% highlight ruby %}
 gem 'gmaps4rails'
 {% endhighlight %}
+```
 
-
-Bundle as usual. Then add to a new app/model/marker.rb file:
-
+Bundle como de costume. Em seguida, adicione a um novo arquivo `app/model/marker.rb`:
+```
 {% highlight sh %}
 class Marker
 
@@ -38,11 +39,10 @@ class Marker
 
 end
 {% endhighlight %}
+```
 
-
-
-Then add to config/application.rb within your project block:
-
+Em seguida, adicione ao arquivo `config/application.rb` dentro do bloco do projeto:
+```
 {% highlight sh %}
 config.active_support.escape_html_entities_in_json = true
 config.encoding = "utf-8"
@@ -50,9 +50,10 @@ config.filter_parameters += [:password]
 config.assets.enabled = true
 config.assets.version = '1.0'
 {% endhighlight %}
+```
 
-Create your app/controllers/google_controller.rb:
-
+Crie o arquivo `app/controllers/google_controller.rb`:
+```
 {% highlight sh %}
 class GoogleController < ApplicationController
   def index; end
@@ -68,9 +69,11 @@ class GoogleController < ApplicationController
 
 end
 {% endhighlight %}
+```
 
-Create your view/google/index.html.erb:
 
+Crie o arquivo `view/google/index.html.erb`:
+```
 {% highlight sh %}
 <h1>See some marker on your map by default</h1>
 <div class="google_map"></div>
@@ -90,16 +93,21 @@ Create your view/google/index.html.erb:
   "detect_location" => true,
   "provider" => "openlayers", :id => 'openlayer_map'}) %>
 {% endhighlight %}
+```
 
-Add the following in app/views/application.html.erb after "<%= yield %>":
 
+Adicione o seguinte código no arquivo `app/views/application.html.erb` depois de `"<%= yield %>"`:
+```
 {% highlight sh %}
 <%= yield :scripts %>
 {% endhighlight %}
+```
 
-Finally add the following to your config/routes.rb:
 
+Finalmente, adicione o seguinte ao arquivo `config/routes.rb`:
+```
 {% highlight sh %}
   get '/google' => 'google#index'
   root :to => 'google#index'
 {% endhighlight %}
+```
