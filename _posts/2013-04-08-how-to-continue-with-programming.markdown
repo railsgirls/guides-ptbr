@@ -6,7 +6,7 @@ permalink: how-to-continue-with-programming
 
 # Pós-evento: Como Continuar Programando
 
-*Criado por Daniel Puglisi, [@danielpuglisi](http://twitter.com/danielpuglisi)*  
+*Criado por Daniel Puglisi, [@danielpuglisi](http://twitter.com/danielpuglisi)*
 *Traduzido por Joana Souza, [@sspjoana](https://www.twitter.com/sspjoana)*
 
 *Este guia foi escrito originalmente para o evento [Rails Girls Basel](http://railsgirls.com/basel) e publicado no
@@ -90,6 +90,9 @@ Por exemplo: perguntar a alguns dos treinadores que participaram do evento.
 Se você não tiver tempo de sediar um meetup, tudo bem.
 Há alguns grupos que você pode participar:
 
+* [Meetup](https://www.meetup.com/) - Na plataforma do meetup você pode procurar eventos próximos a você! Busque por 'Ruby' ou 'Programação' para encontrar eventos próximos da sua cidade que você pode participar.</li>
+* [WoMakersCode](https://www.meetup.com/WoMakersCode/) - O WoMakersCode realiza vários eventos online, permitindo que você possa vê-los de qualquer lugar do Brasil! Quando o meetup é gravado elas avisam e é só acompanhar pelo canal do WoMakersCode no youtube
+* [Codamos](https://www.codamos.club/eventos) - O Codamos concentra várias informações de eventos, workshops, palestras cursos e oportunidades de networking em todo o Brasil. Lá você consegue ver várias detalhes do evento, se ele é gratuito ou se possui incentivo para mulheres, por exemplo. Você também pode encontrar palestrantes para o seu evento - e também se cadastrar na plataforma como palestrante!</li>
 * [Ruvetia](http://ruvetia.org/) - Ruvetia é um meetup (or drinkup) onde nós iremos nos reunir e, em seguida, apenas socializar. Esse meetup não é sobre conteúdo, e sim sobre conhecer as pessoas da comunidade. Cada meetup acontece em uma cidade diferente, então cheque o site da Ruvetia de tempos em tempos para acompanhar onde o próximo meetup irá acontecer.
 * [Railshöck](http://www.meetup.com/rubyonrails-ch/events/80098992/) - Meetup de Rails em Zurique.
 * [Geneva Ruby Brigade](http://genevarb.com/) - Grupo de Ruby baseado em Geneva.
