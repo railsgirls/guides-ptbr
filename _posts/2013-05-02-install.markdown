@@ -15,11 +15,11 @@ Para construir apps e outras coisas com Ruby on Rails, precisamos configurar alg
 
 Siga as instruições para seu sistema operacional (SO). Se você tiver algum problema, não entre em pânico. Avise-nos e vamos resolver juntos.
 
-* [Instalação para OS X](#instalacao-para-os-x)
-* [Instalação para Windows](#instalacao-para-windows)
-* [Instalação para Linux](#instalacao-para-linux)
-* [Utilização da Máquina Virtual](#utilizacao-da-maquina-virtual)
-* [Utilização de Serviço em Nuvem - Não é necessária qualquer instalação](#utilizacao-de-servico-em-nuvem)
+* [Instalação para OS X](#instalação-para-os-x)
+* [Instalação para Windows](#instalação-para-windows)
+* [Instalação para Linux](#instalação-para-linux)
+* [Utilização da Máquina Virtual](#utilização-da-máquina-virtual)
+* [Utilização de Serviço em Nuvem - Não é necessária qualquer instalação](#utilização-de-serviço-em-nuvem)
 
 <hr />
 
