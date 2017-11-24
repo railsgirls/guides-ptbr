@@ -82,10 +82,15 @@ header #logo {
   width: 410px;
   float: left;
 }
-
+/*
 nav {
   margin: 0 0 0 250px;
   padding-top: 12px;
+}
+*/
+nav {
+  float: right;
+  padding-top: 20px;
 }
 
 nav a {
