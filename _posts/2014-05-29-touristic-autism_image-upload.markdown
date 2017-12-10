@@ -4,133 +4,131 @@ title: Touristic Autism-friendly Spots App
 permalink: touristic-autism_image-upload
 ---
 
-# Image Upload and Thumbnails
+# Upload de imagens e miniaturas
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)* *para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 
+*Traduzido por Rafael Vianna, [@RFerreiraVianna](https://twitter.com/rferreiravianna)
 
-We need to install a piece of software to let us upload files in Rails.
+Os guias básicos que foram mesclados e adaptados são os  [Ruby on Rails Tutorial](http://www.railstutorial.org/book), o [basic RailsGirls app](http://guides.railsgirls.com/app/) e os tutoriais são: [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) e [adding comments](http://guides.railsgirls.com/commenting).
 
-Open `Gemfile` in the project directory using your text editor and add
+Nós precisamos instalar uma nova Gem que nos permita fazer upload de arquivos no Rails.
+
+Abra `Gemfile` na sua pasta do projeto usando seu editor de texto e adicione:
 
 {% highlight ruby %}
 gem 'carrierwave'
 {% endhighlight %}
 
-
-In the terminal run:
+No terminal execute:
 
 {% highlight sh %}
 bundle
 {% endhighlight %}
 
-Now we can generate the code for handling uploads. In the terminal run:
+Agora podemos gerar o código para a execução do upload. No terminal, execute:
 
 {% highlight sh %}
 rails generate uploader Picture
 {% endhighlight %}
 
-At this point you need to **restart the Rails server process** in the terminal.
+Nesse momento você irá **precisar reiniciar o servidor do Rails** no terminal.
 
-Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to quit the server. Once it has stopped, you can press the up arrow to get to the last command entered, then hit enter to start the server again.
+Precione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servidor. Uma vez parado, você pode apertar a seta pra cima no seu teclado para encontrar o último comando executado, então pressione o enter para iniciar o servidor novamente.
 
-This is needed for the app to load the added library.
+Isso é necessário para que o app carregue a biblioteca adicionada.
 
-Open `app/models/place.rb` and add
+Abra `app/models/place.rb` e adicione:
 
-{% highlight ruby %}
+{% highlight erb %}
 mount_uploader :picture, PictureUploader
 {% endhighlight %}
 
-Open `app/views/places/_form.html.erb` and change
+Abra `app/views/places/_form.html.erb` e mude:
 
 {% highlight erb %}
 <%= f.text_field :picture %>
 {% endhighlight %}
 
-to
+para:
 
 {% highlight erb %}
 <%= f.file_field :picture %>
 {% endhighlight %}
 
-Sometimes, you might get an *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*.
 
-If this happens, in file `app/views/places/_form.html.erb` change the line
+Algumas vezes você pode obter um *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*.
+
+Se isso acontecer, no arquivo `app/views/places/_form.html.erb` mude a linha:
 
 {% highlight erb %}
 <%= form_for(@place) do |f| %>
 {% endhighlight %}
 
-to
+para:
 
 {% highlight erb %}
 <%= form_for @place, :html => {:multipart => true} do |f| %>
 {% endhighlight %}
 
-Now if you run your server, and try adding a new place with a picture, you'll notice that the picture doesn't look nice because it only shows a path to the file. Let's fix that.
+Agora, se você executar o seu servidor e tentar adicionar um novo local com uma imagem, você notará que a imagem não parece bonita porque mostra apenas um caminho para o arquivo. Vamos consertar isso.
 
-Open `app/views/places/show.html.erb` and change
+Abra `app/views/places/show.html.erb` e mude:
 
 {% highlight erb %}
 <%= @place.picture %>
 {% endhighlight %}
 
-to
+para:
 
 {% highlight erb %}
 <%= image_tag(@place.picture_url, :width => 600) if @place.picture.present? %>
 {% endhighlight %}
 
-Now refresh your browser to see what changed.
+Agora recarregue seu navegador para ver a mudança.
 
-**Coach:** Talk a little about HTML.
+**Instrutor(a):** Fale um pouco sobre HTML.
 
-__Coach__: Explain what specifying the image width in HTML at the end of Step
-4 does and how it differs from resizing images on the server.
+__Instrutor(a)__: Explique o que especifica a largura da imagem em HTML no final da etapa
+4 e como ele difere do redimensionamento de imagens no servidor.
 
-## Installing ImageMagick
+## Instalando ImageMagick
 
-* OS X: run `brew install imagemagick`. If you don't have the brew command, you can [install Homebrew here][in-homebrew].
-* Windows: download and run the [ImageMagick installer][im-win] (use the first
-  *download* link). Reopen your Rails Command Shell afterwards.
-* Linux: On Ubuntu and Debian, run `sudo apt-get install imagemagick`. Use the
-  appropriate package manager instead of `apt-get` for other distributions.
+* OS X: Execute `brew install imagemagick`. Se você não tiver o comando brew, você pode [instalar aqui][in-homebrew].
+* Windows: Baixe e execute [ImageMagick installer][im-win] (use o primeiro
+  *download* link de download). Depois reabra o Shell de comando do Rails.
+* Linux: No Ubuntu e Debian, execute `sudo apt-get install imagemagick`. Use o gerenciador de pacote apropriado ao invés de usar `apt-get` para outras distribuições.
 
   [im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
   [in-homebrew]: http://mxcl.github.io/homebrew/
 
-__Coach__: What is ImageMagick and how is it different from libraries/gems we
-used before?
+__Instrutor(a)__: O que é ImageMagick e o que difere das bibliotecas usadas anteriormente?
 
-Open `Gemfile` in the project and add
+Abra `Gemfile` no projeto e adicione:
 
 {% highlight ruby %}
 gem 'mini_magick', '3.5.0'
 {% endhighlight %}
 
-In the Terminal run:
+No terminal execute:
 
 {% highlight sh %}
 bundle
 {% endhighlight %}
 
-## Telling our app to create thumbnails when an image is uploaded
+## Fazendo nosso app criar miniaturas quando uma imagem é adicionada
 
-Open `app/uploaders/picture_uploader.rb` and find the line that looks like
-this:
+Abra `app/uploaders/picture_uploader.rb` e ache a seguinte linha:
 
 {% highlight ruby %}
-  # include CarrierWave::MiniMagick
+# include CarrierWave::MiniMagick
 {% endhighlight %}
 
-Remove the `#` sign.
+Remova o `#`.
 
-__Coach__: Explain the concept of comments in code.
+__Instrutor(a)__: Explique o conceito de comentários no código..
 
-Below the line you just changed, add:
+Abaixo da linha que você acabou de alterar, adicione:
 
 {% highlight ruby %}
 version :thumb do
@@ -138,24 +136,22 @@ version :thumb do
 end
 {% endhighlight %}
 
-The images uploaded from now on should be resized, but the ones we already
-have weren't affected. So edit one of the existing places and re-add a picture.
+As imagens carregadas a partir de agora serão redimencionadas, mas as imagens que já foram feitas não serão afetadas.
+Então, edite um dos lugares existentes e volte a adicionar uma imagem.
 
-## Displaying the thumbnails
+## Mostrando as thumbnails
 
-To see if the uploaded picture was resized open
-`app/views/places/index.html.erb`. Change the line
+Para ver se a imagem carregada foi redimencionada abra,
+`app/views/places/index.html.erb`. Mude a linha:
 
 {% highlight erb %}
 <td><%= place.picture %></td>
 {% endhighlight %}
 
-to
+para:
 
 {% highlight erb %}
 <td><%= image_tag place.picture_url(:thumb) if place.picture? %></td>
 {% endhighlight %}
 
-Take a look at the list of ideas in the browser to see if the thumbnail is
-there.
-
+Dê uma olhada no seu navegador para ver se a miniatura está lá.
