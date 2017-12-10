@@ -15,14 +15,12 @@ Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Ra
 É necessário instalar um software que nos permita exibir e interagir com o Google Maps.
 
 Abra `Gemfile` no diretório do projeto usando o editor de texto e adicione
-```
 {% highlight ruby %}
 gem 'gmaps4rails'
 {% endhighlight %}
-```
+
 
 Bundle como de costume. Em seguida, adicione a um novo arquivo `app/model/marker.rb`:
-```
 {% highlight sh %}
 class Marker
 
@@ -39,10 +37,8 @@ class Marker
 
 end
 {% endhighlight %}
-```
 
 Em seguida, adicione ao arquivo `config/application.rb` dentro do bloco do projeto:
-```
 {% highlight sh %}
 config.active_support.escape_html_entities_in_json = true
 config.encoding = "utf-8"
@@ -50,10 +46,8 @@ config.filter_parameters += [:password]
 config.assets.enabled = true
 config.assets.version = '1.0'
 {% endhighlight %}
-```
 
 Crie o arquivo `app/controllers/google_controller.rb`:
-```
 {% highlight sh %}
 class GoogleController < ApplicationController
   def index; end
@@ -69,11 +63,9 @@ class GoogleController < ApplicationController
 
 end
 {% endhighlight %}
-```
-
 
 Crie o arquivo `view/google/index.html.erb`:
-```
+
 {% highlight sh %}
 <h1>See some marker on your map by default</h1>
 <div class="google_map"></div>
@@ -93,21 +85,14 @@ Crie o arquivo `view/google/index.html.erb`:
   "detect_location" => true,
   "provider" => "openlayers", :id => 'openlayer_map'}) %>
 {% endhighlight %}
-```
-
 
 Adicione o seguinte código no arquivo `app/views/application.html.erb` depois de `"<%= yield %>"`:
-```
 {% highlight sh %}
 <%= yield :scripts %>
 {% endhighlight %}
-```
-
 
 Finalmente, adicione o seguinte ao arquivo `config/routes.rb`:
-```
 {% highlight sh %}
   get '/google' => 'google#index'
   root :to => 'google#index'
 {% endhighlight %}
-```
