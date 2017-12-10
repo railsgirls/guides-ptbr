@@ -8,27 +8,30 @@ permalink: engineyard
 
 *Criado por Mary Jenn, [@mfjenn](https://twitter.com/mfjenn)*
 
+*Traduzido por Letícia, [@_leticia](https://twitter.com/_leticia)*
+
 #### Certifique-se que você está utilizando PostgreSQL como banco de dados
 
 Você precisará fazer com que seu banco de dados funcione no Engine Yard, que
 utiliza um banco diferente do padrão do Rails. Por favor, substitua o seguinte
 código no arquivo `Gemfile`:
 
-
-		gem 'sqlite3'
-
+{% highlight ruby %}
+gem 'sqlite3'
+{% endhighlight %}
 
 para
 
-		group :development do
-			gem 'sqlite3'
-		end
+{% highlight ruby %}
+group :development do
+  gem 'sqlite3'
+end
 
 
-		group :production do
-			gem 'pg'
-		end
-
+group :production do
+  gem 'pg'
+end
+{% endhighlight %}
 
 
 Execute `bundle install --without production` para configurar suas
@@ -39,13 +42,17 @@ dependências.
 Você precisa adicionar sua aplicação ao seu repositório Git. Você pode fazer
 isso executando o seguinte no seu terminal:
 
+{% highlight sh %}
+git init
+{% endhighlight %}
 
->	`git init`
+{% highlight sh %}
+git add .
+{% endhighlight %}
 
->	`git add .`
-
->	`git commit -m "initial commit"`
-
+{% highlight sh %}
+git commit -m "initial commit"
+{% endhighlight %}
 
 __TREINADORA__: Esta seria uma boa hora para falar sobre sistemas de versionamento e Git.
 
