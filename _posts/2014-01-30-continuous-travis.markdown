@@ -4,21 +4,43 @@ title: Continuous Deployment - cuz less hassle
 permalink: continuous-travis
 ---
 
-# Entrega Contínua com Travis
+# Entrega Contínua com TravisCI
 
 *Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)*
 
 *Traduzido por Joana Souza, [@sspjoana](https://twitter.com/sspjoana)*
 
-### O que é Implantação Contínua ?
+### O que é Implantação Contínua?
+
+<!--
+N.T.: Existe diferença entre, conforme "Continuous Integration",
+  "Continuous Delivery" e "Continuous Deployment" http://stackoverflow.com/questions/28608015/continuous-integration-vs-continuous-delivery-vs-continuous-deployment
+  Creio que tende a ser interessante essa tradução ser revisada
+  por pessoa que trabalhe focada na área, para ter certeza de que
+é tecnicamente precisa. (@fititnt, 2016-10-08 23:01)
+  N.T.: Vou assumir, com ajuda da tradução da documentação oficial da AWS
+  de https://aws.amazon.com/devops/continuous-delivery/?nc1=h_ls e
+  https://aws.amazon.com/pt/devops/continuous-delivery/ que:
+  Continuous Integration = Integração Contínua
+  Continuous Delivery = Entrega Contínua
+  Continuous Deployment = Implantação Contínua
+  Se estas afirmações estiverem erradas, o texto deverá ser revisto
+(@fititnt, 2016-10-08 23:13)
+  N.T.: Vou usar o neologismo "commitado" por "committed", tal qual usaria
+  "commit" em inglês" (@fititnt, 2016-10-08 23:23)
+  N.T.: Todos os termos que deveriam ser lidos em inglês, recomendo adição
+  do atributo lang="en", conforme especificação de como lidar com
+  internacionalização de documentos HTML. Recomendo a leitura em
+  http://i18n-html-tech-lang.pt.webiwg.org/ (@fititnt, 2016-10-08 23:36)
+  -->
 
 Implantação contínua é parte do movimento de entrega contínua. A ideia por detrás da implantação contínua é automatizar o processo de entrega de software o mais rápido possível.
 
 Trabalhando em um lugar com uma cadeia de implantação contínua, você irá fortificar o processo de deploys no Git (tudo deve ser comitado para ser testado e tudo deve ser testado para ser implantado), tornando a colaboração mais fácil e o desenvolvimento mais rápido. Assim, você poderá focar em fazer um app mais incrível!
 
-Há algumas grandes empresas que navegam na onda contínua, neste guia vamos configurar a implantação contínua para o nosso aplicativo Ruby on Rails do GitHub para o *anynines*, usando Travis-ci.
+Há algumas grandes empresas que navegam na onda contínua, neste guia vamos configurar a implantação contínua para o nosso aplicativo Ruby on Rails do GitHub para o *anynines*, usando TravisCI.
 
-__COACH__: Fale sobre os benefícios da implantação contínua.
+__Instrutor(a)__: Fale sobre os benefícios da implantação contínua.
 
 ### Github, Travis CI e anynines
 
@@ -50,8 +72,8 @@ Seu aplicativo agora contém a configuração do Travis, mas como o Travis deve 
 Comite e envie as mudanças do seu código para o seu repositório e cheque o travis-ci.org para ver se o seu conjunto de testes está sendo executado. Você deve também receber um email de que a sua build foi bem sucedida.
 
 {% highlight sh %}
-git add .  
-git commit -m "test Travis integration"  
+git add .
+git commit -m "test Travis integration"
 git push origin master
 {% endhighlight %}
 
@@ -73,7 +95,7 @@ cf target
 
 para reunir todas as informações necessárias para a configuração do Travis. Isso inclui URL de destino, nome de usuário, a organização e espaço que você está usando atualmente. Você pode também dar uma olhada no email de boas vindas que você deve ter recebido após se inscrever no anynines.com.
 
-Após o comando `travis` ter finalizado, seu ``.travis.yml``deve parecer algo como isso:
+Após o comando `travis` ter finalizado, seu ``.travis.yml`` deve parecer algo como isso:
 {% highlight sh %}
 language: ruby
 script: 'true'
