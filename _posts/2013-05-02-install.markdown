@@ -130,17 +130,7 @@ Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso 
 
 ### *1.* Instalar Rails
 
-Baixar o [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.0.exe) e executá-lo. Utilize as configurações padrões durante a instalação.
-
-Abra o `Command Prompt with Ruby and Rails` e execute os comandos abaixo para resolver problemas com o RailsInstaller3.2.0.
-
-**Coach:** O erro **No such file or directory** ocorre quando o comando `rails` é utilizado no RailsInstaller3.2.0. Esse problema acontece devido a um erro no caminho do arquivo `rails.bat` e `bundle.bat`. Podemos resolvê-lo copiando o arquivo `rake.bat` para `rails.bat` e `bundle.bat`. ([github issue page](https://github.com/railsinstaller/railsinstaller-windows/issues/76))
-
-{% highlight sh %}
-cd C:\RailsInstaller\Ruby2.2.0\bin
-copy rake.bat rails.bat
-copy rake.bat bundle.bat
-{% endhighlight %}
+Baixar o [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.4.0.exe) e executá-lo. Utilize as configurações padrões durante a instalação.
 
 Abra o `Command Prompt with Ruby and Rails` e execute o seguinte comando:
 
