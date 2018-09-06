@@ -6,7 +6,8 @@ permalink: app
 
 # Tutorial para criação da app Rails Girls
 
-*Criado por Vesa Vänskä, [@vesan](https://twitter.com/vesan)*  
+*Criado por Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
+
 *Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
 
 **Você deverá ter Rails instalado.** [**Consulte o guia de instalação se você ainda não instalou.**](install)
@@ -35,11 +36,26 @@ permalink: app
 
 </div>
 
+Ao longo deste guia, você verá pedaços de código formatados da seguinte forma:
+
+{% highlight sh %}
+exemplo de código
+{% endhighlight %}
+
+<div>
+
+
+<p>Isso significa que o texto destacado é um código e provavelmente precisa ser executado ou inserido em um dos seus arquivos de projeto. O ícone ao lado do texto destacado permitirá que você saiba qual ferramenta usar.</p>
+<p>Por exemplo, se você ver um ícone de terminal ao lado do código formatado, como no exemplo acima, será necessário copiar o código e colá-lo no Terminal (Mac) / Prompt de Comando (Windows).</p>
+</div>
+
+Precisa de alguns lembretes pelo caminho? Leia [Cola útil para Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/) (em inglês)
+
 ### Importante
 
 É importante que você conheça a sintaxe de comandos específica para seu Sistema Operacional - os comandos a executar em computadores rodando Windows podem apresentar pequenas diferenças sintáticas em relação àqueles usados em ambientes Mac ou Linux.  Se você não estiver seguro com a sintaxe dos comandos use o link para o sistema operacional, que está localizado  após os comandos mostrados neste tutorial. Se você estiver usando um serviço na nuvem  (por exemplo: Codenvy), você deverá executar os comandos conforme a sintaxe Linux ainda que esteja em ambiente Windows.
 
-## *1.*Criando a aplicação
+## *1.* Criando a aplicação
 
 Vamos criar uma app Rails a partir do zero denominada *railsgirls* destinada a compartilhar ideias.
 
@@ -67,7 +83,7 @@ cd projetos
 {% endhighlight %}
 
     <div>
-<p>Verifique se você está em um diretório vazio executando novamente o comando  <code>ls</code>. Vamos criar nossa nova app denominada  <code>railsgirls</code> executando o seguinte comando:</p>
+<p>Verifique se você está em um diretório vazio executando novamente o comando  <code>ls</code>. Vamos criar nossa nova app denominada <code>railsgirls</code> executando o seguinte comando:</p>
     </div>
 
 {% highlight sh %}
@@ -132,7 +148,7 @@ rails server
 
 Abra <http://localhost:3000> no navegador. Se você estiver usando um serviço na nuvem (por exemplo: Codenvy), use a funcionalidade preview do serviço (ver [guia de instalação](/install#utilizao-de-servio-em-nuvem) para detalhes).
 
-Se você ver a página denominada  "Welcome aboard" é porque tudo deu certo e sua nova app está funcionando corretamente.
+Se você ver a página denominada  "Yay! You’re on Rails!" é porque tudo deu certo e sua nova app está funcionando corretamente.
 
 Note que nesta nova janela o prompt de comando não é visível, pois você se encontra no servidor Rails e o prompt de comando tem o seguinte aspecto:
 
@@ -144,10 +160,13 @@ $
   </div>
   <div class="win">
 {% highlight sh %}
->
+
 {% endhighlight %}
   </div>
 </div>
+
+**Dica:** Às vezes, tanto neste guia quanto em outros guias on-line, você verá comandos escritos com o símbolo `$` no início. Esta é uma convenção que significa o início de uma linha que precisa ser inserida em seu terminal / prompt de comando.
+Você não precisa digitar este símbolo no início de seus comandos. Seu prompt específico pode não ter um símbolo `$` no início dele.
 
 Quando o prompt de comando não é visível você não poderá executar comandos. Se você tentar executar o comando `cd` ou qualquer outro comando eles não terão efeito algum. Para parar o servidor e retornar ao prompt de comando normal:
 
@@ -156,10 +175,9 @@ Pressione as teclas <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servid
 **Coach:**  Explicar a finalidade de cada comando. O que foi criado? O que o servidor fez?
 
 
-## *2.*Criar o Scaffold para as ideias
+## *2.* Criar o Scaffold para as ideias
 
 Vamos usar uma funcionalidade do Rails denominada scaffold para criar um ponto de partida que nos permitirá listar, adicionar, remover, editar e ver as "coisas"; no nosso caso as "coisas" serão as ideias.
-
 
 **Coach:** O que é Rails scaffolding? (Explicar o comando, o nome do modelo, as tabelas de banco de dados relacionadas, as convenções de nomes, atributos, tipos, etc.) O que é migração e porquê são necessárias?
 
@@ -174,11 +192,11 @@ rake db:migrate
 rails server
 {% endhighlight %}
 
-Abra <http://localhost:3000/ideas> no navegador. Para serviços na nuvem (por exemplo: Codenvy) acrescente '/ideas' na url do preview (ver [guia de instalação](/install#using-a-cloud-service).
+Abra <http://localhost:3000/ideas> no navegador. Para serviços na nuvem (por exemplo: Codenvy) acrescente '/ideas' na url do preview (ver [guia de instalação](/install#using-a-cloud-service)).
 
 Teste o que você tem rodando estes comandos no terminal.
 
-## *3.*Design
+## *3.* Design
 
 **Coach:** Fale sobre o relacionamento entre HTML e Rails. Quais são as visualizações geradas por HTML e quais são as geradas por Embedded Ruby (ERB)? O que é MVC é como ele se relaciona no contexto? (Modelos e controllers são responsáveis por gerar visualizações com HTML.)
 
@@ -223,11 +241,11 @@ Vamos criar uma barra de navegação e um rodapé para nosso layout. No mesmo ar
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">The Idea app</a>
+      <a class="navbar-brand" href="/">Aplicativo de Ideias</a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/ideas">Ideias</a></li>
+        <li><a href="/ideas">Ideias</a></li>
       </ul>
     </div>
   </div>
@@ -236,12 +254,13 @@ Vamos criar uma barra de navegação e um rodapé para nosso layout. No mesmo ar
 
 antes da tag de fechamento `</body>` acrescente
 
-{% highlight html %}
+{% highlight erb %}
 <footer>
   <div class="container">
-    Rails Girls 2016
+    Rails Girls <%= Time.now.year %>
   </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.js"></script>
 {% endhighlight %}
 
@@ -254,13 +273,15 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
-A seguir, após salvar os arquivos e dar um "refresh" no navegador observe as alterações no layout. Você poderá fazer outras modificações na marcação HTML e criar novas regras de estilização.
+Agora, verifique se salvou seus arquivos e atualize o navegador para ver o que foi alterado. Nada mudou? Pode ser que você não esteja mais conectado ao Wi-Fi.
+Você pode alterar o HTML e CSS ainda mais, adicionando regras de estilização ao arquivo `app/assets/stylesheets/application.css`.
+
 
 Se o Terminal mostrar uma mensagem de erro informando que há algo errado com a JavaScript ou com CoffeeScript, instale [nodejs](http://nodejs.org/download/). Isto não deverá acontecer se você usou RailsInstaller (mas sim, quando você instalou Rails via ```gem install rails```).
 
 **Coach:** Fale um pouco sobre CSS e layouts.
 
-## *4.*Criando mecanismo para upload de imagens
+## *4.* Criando mecanismo para upload de imagens
 
 Vamos instalar um software que nos permita fazer upload de imagens com Rails.
 
@@ -292,6 +313,17 @@ Agora estamos em condições de gerar o código para gerenciar uploads. Execute 
 rails generate uploader Picture
 {% endhighlight %}
 
+Se um erro for mostrado, falando que o uploader não pode ser encontrado, adicione também a seguinte linha:
+{% highlight ruby %}
+gem 'net-ssh'
+{% endhighlight %}
+
+Se você adicionou esta gem, por favor, execute em seu terminal novamente:
+
+{% highlight sh %}
+bundle
+{% endhighlight %}
+
 Inicie o servidor.
 
 Nota: Alguns preferem usar uma segunda instância do terminal para manter o servidor rails rodando continuamente.
@@ -313,16 +345,16 @@ mount_uploader :picture, PictureUploader
 Abra `app/views/ideas/_form.html.erb` e substitua:
 
 {% highlight erb %}
-<%= form.text_field :picture %>
+<%= form.text_field :picture, id: :idea_picture  %>
 {% endhighlight %}
 
 por
 
 {% highlight erb %}
-<%= form.file_field :picture %>
+<%= form.file_field :picture, id: :idea_picture %>
 {% endhighlight %}
 
-Em alguns casos poderá ocorrer o erro *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*.
+Em alguns casos poderá ocorrer o erro `TypeError: can't cast ActionDispatch::Http::UploadedFile to string.
 
 Se isso acontecer, abra `app/views/ideas/_form.html.erb` e substitua a linha:
 
@@ -336,7 +368,7 @@ por
 <%= form_for(idea, html: {multipart: true}) do |form| %>
 {% endhighlight %}
 
-No seu navegador adicione uma nova idea e nela uma imagem. Esta ação fará com que seja mostrada não a imagrm, mas o caminho para a imagem. Vamos corrigir isto.
+No seu navegador adicione uma nova ideia e junto com isso adicione uma imagem. Esta ação fará com que seja mostrada não a imagem, mas o caminho para a imagem. Vamos corrigir isto.
 
 Abra `app/views/ideas/show.html.erb` e substitua:
 
@@ -352,12 +384,29 @@ por
 
 Dê um "refresh" no navegador e constate a renderização da imagem.
 
+
+Para garantir que a imagem também seja mostrada na página inicial de ideias, abra `app/views/ideas/index.html.erb`.
+
+Mude a linha:
+
+{% highlight erb %}
+<%= idea.picture %>
+{% endhighlight %}
+
+para
+
+{% highlight erb %}
+<%= image_tag idea.picture_url, width: '100%' if idea.picture.present? %>
+{% endhighlight %}
+
+Vá para <http://localhost:3000/ideas> para ver o que mudou.
+
 **Coach:** Fale um pouco sobre marcação HTML.
 
 
-## *5.*Acertos finais nas rotas
+## *5.* Acertos finais nas rotas
 
-Abra <http://localhost:3000> (ou o preview da url, caso você esteja usando um serviço na nuvem). Ainda é mostrada a página "Welcome aboard". Vamos fazer o redirecionamento para a página ideas da app.
+Abra <http://localhost:3000> (ou o preview da url, caso você esteja usando um serviço na nuvem). Ainda é mostrada a página "Yay! You’re on Rails!". Vamos fazer o redirecionamento para a página ideas da app.
 
 Abra `config/routes.rb` e logo após a primeira linha acrescente:
 
@@ -387,7 +436,25 @@ get "pages/info"
 
 Abra  `app/views/pages/info.html.erb` e acrescente informações sobre você na marcação HTML. Para visualizar a nova página de informações sobre o autor digite <http://localhost:3000/pages/info> na barra de endereços do navegador ou se você usa um serviço na nuvem acrescente '/pages/info' na URL do preview.
 
-## *6.*O que vem a seguir?
+## *7.* Adicione um botão à sua barra de navegação
+
+Agora que sabemos que sua nova página estática funciona, vamos garantir que as pessoas possam visitá-la criando um botão para ela na barra de navegação.
+
+Abra `app/views/layouts/application.html.erb` no seu editor de texto e sobre a linha
+
+{% highlight html %}
+<li><a href="/ideas">Ideas</a></li>
+{% endhighlight %}
+
+adiciona
+
+{% highlight html %}
+<li><a href="/pages/info">Info</a></li>
+{% endhighlight %}
+
+Atualize a página no seu navegador e clique no link recém criado para ver se funciona!
+
+## *8.* O que vem a seguir?
 
 * Incrementando o design com HTML &amp; CSS
 * Adicionando sistema de avaliação
@@ -396,14 +463,22 @@ Abra  `app/views/pages/info.html.erb` e acrescente informações sobre você na 
 
 ## Outros Guias
 
-* Guia 0: [Handy cheatsheet for Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guia 1: [Área de comentários para a app Rails Girls por Janika Liiv](/commenting)
-* Guia 2: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift) / [Put your app online with anynines](/anynines) / [Put your app online with Trucker.io](/trucker)
-* Guia 3: [Criando thumbnails com Carrierwave por Miha Filej](/thumbnails)
-* Guia 4: [Add design using HTML &amp; CSS by Alex Liao](/design)
-* Guia 5: [Add Authentication (user accounts) with Devise by Piotr Steininger](/devise)
-* Guia 6: [Adding profile pictures with Gravatar](/gravatar)
-* Guia 7: [Test your app with RSpec](/testing-rspec)
-* Guia 8: [Continuous Deployment with Travis-CI](/continuous-travis) / [Continuous Deployment with Codeship](/continuous) / [Continuous Deployment with Snap CI](/continuous-snap-ci)
-* Guia 9: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
-* Guia 10: [Adding a back-end with Active Admin](/backend-with-active-admin)
+
+* [Handy cheatsheet for Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
+* Guia 1: [Tutorial de Instalação para Rails Girls](/install) (You probably already did this one!)
+* Guia 2: [Tutorial para criação da app Rails Girls](/app) (This current page!)
+* Guia 3: [Como enviar para o GitHub](/github)
+* Guia 4: Colocando seu app online em...
+    * [Heroku](/heroku) / [OpenShift](/openshift) / [anynines](/anynines) / [Engine Yard](/engineyard)
+* Guia 5: [Funcionalidades de uma área de comentários para a app Rails Girls](/commenting)
+* Guia 6: [Adicione design à sua aplicação com HTML e CSS](/design)
+* Guia 7: [Thumbnails em listas de ideas](/thumbnails)
+* Guia 8: [Autenticação (para usuários) com Devise](/devise)
+* Guia 9: [Adicionando Gravatar para a aplicação](/gravatar)
+* Guia 10: [Melhorando seu design da sua aplicação com HTML e CSS](/dexign-html-css)
+* Guia 11: Continuous Deployment
+    * [Testando seu app com RSpec](testing-rspec) / [CD with Travis-CI](/continuous-travis) / [CD with Codeship](/continuous)
+* Guia 12: [Construindo um aplicativo de votação em Sinatra](/sinatra-app)
+* Guia 13: [Construa um diário em Ruby on Rails](diary-app)
+* Guia 14: [Adicione back-end ao seu aplicativo (páginas de administração)](/backend-with-active-admin)
+
