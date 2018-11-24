@@ -179,7 +179,7 @@ Pressione as teclas <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servid
 
 Vamos usar uma funcionalidade do Rails denominada scaffold para criar um ponto de partida que nos permitirá listar, adicionar, remover, editar e ver as "coisas"; no nosso caso as "coisas" serão as ideias.
 
-**Coach:** O que é Rails scaffolding? (Explicar o comando, o nome do modelo, as tabelas de banco de dados relacionadas, as convenções de nomes, atributos, tipos, etc.) O que é migração e porquê são necessárias?
+**Coach:** O que é Rails scaffolding? (Explicar o comando, o nome do modelo, as tabelas de banco de dados relacionadas, as convenções de nomes, atributos, tipos, etc.) O que é migração e por que são necessárias?
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
@@ -198,7 +198,7 @@ Teste o que você tem rodando estes comandos no terminal.
 
 ## *3.* Design
 
-**Coach:** Fale sobre o relacionamento entre HTML e Rails. Quais são as visualizações geradas por HTML e quais são as geradas por Embedded Ruby (ERB)? O que é MVC é como ele se relaciona no contexto? (Modelos e controllers são responsáveis por gerar visualizações com HTML.)
+**Coach:** Fale sobre o relacionamento entre HTML e Rails. Quais são as visualizações geradas por HTML e quais são as geradas por Embedded Ruby (ERB)? O que é MVC e como ele se relaciona no contexto? (Modelos e controllers são responsáveis por gerar visualizações com HTML.)
 
 Nossa app apresenta um design bem pobre por enquanto. Vamos providenciar melhorias nesse visual. Vamos usar o projeto Twitter Bootstrap para estilizar de uma maneira fácil nossa app.
 
@@ -274,7 +274,7 @@ th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
 Agora, verifique se salvou seus arquivos e atualize o navegador para ver o que foi alterado. Nada mudou? Pode ser que você não esteja mais conectado ao Wi-Fi.
-Você pode alterar o HTML e CSS ainda mais, adicionando regras de estilização ao arquivo `app/assets/stylesheets/application.css`.
+Você pode alterar o HTML e CSS, e personalizar ainda mais sua página, adicionando regras de estililização ao arquivo `app/assets/stylesheets/application.css`.
 
 
 Se o Terminal mostrar uma mensagem de erro informando que há algo errado com a JavaScript ou com CoffeeScript, instale [nodejs](http://nodejs.org/download/). Isto não deverá acontecer se você usou RailsInstaller (mas sim, quando você instalou Rails via ```gem install rails```).
@@ -313,7 +313,7 @@ Agora estamos em condições de gerar o código para gerenciar uploads. Execute 
 rails generate uploader Picture
 {% endhighlight %}
 
-Se um erro for mostrado, falando que o uploader não pode ser encontrado, adicione também a seguinte linha:
+Se um erro for mostrado, falando que o uploader não pôde ser encontrado, adicione também a seguinte linha:
 {% highlight ruby %}
 gem 'net-ssh'
 {% endhighlight %}
@@ -354,7 +354,7 @@ por
 <%= form.file_field :picture, id: :idea_picture %>
 {% endhighlight %}
 
-Em alguns casos poderá ocorrer o erro `TypeError: can't cast ActionDispatch::Http::UploadedFile to string.
+Em alguns casos poderá ocorrer o erro `TypeError: can't cast ActionDispatch::Http::UploadedFile` to string.
 
 Se isso acontecer, abra `app/views/ideas/_form.html.erb` e substitua a linha:
 
@@ -368,7 +368,7 @@ por
 <%= form_for(idea, html: {multipart: true}) do |form| %>
 {% endhighlight %}
 
-No seu navegador adicione uma nova ideia e junto com isso adicione uma imagem. Esta ação fará com que seja mostrada não a imagem, mas o caminho para a imagem. Vamos corrigir isto.
+No seu navegador adicione uma nova ideia e junto com isso adicione uma imagem. Esta ação fará com que seja mostrada, não a imagem, mas o caminho para a imagem. Vamos corrigir isto.
 
 Abra `app/views/ideas/show.html.erb` e substitua:
 
