@@ -8,7 +8,7 @@ permalink: backend-with-active-admin
 
 _Criado por [Rasmus Kjellberg](https://www.rasmuskjellberg.se)_
 
-**Este guia pressupõe que você já tenha criado um aplicativo Rails Girls** [**seguindo o guia de desenvolvimento de desenvolvimento**](/app).
+**Este guia pressupõe que você já tenha criado um aplicativo Rails Girls** [**seguindo o guia de desenvolvimento**](/app).
 
 O Active Admin é um plugin do Ruby on Rails para gerar interfaces de estilo de administração. Ele abstrai padrões comuns de aplicativos de negócios para simplificar a implementação de interfaces bonitas e elegantes com muito pouco esforço. Você pode ler mais sobre o Active Admin [aqui](http://activeadmin.info/).
 
