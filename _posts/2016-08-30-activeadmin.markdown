@@ -7,7 +7,6 @@ permalink: backend-with-active-admin
 # Adicionando back-end com Active Admin
 
 _Criado por [Rasmus Kjellberg](https://www.rasmuskjellberg.se)_
-_Traduzido por [Frankyston Lins](https://github.com/frankyston)_
 
 **Este guia pressupõe que você já tenha criado um aplicativo Rails Girls** [**seguindo o guia de desenvolvimento de desenvolvimento**](/app).
 
