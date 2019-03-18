@@ -76,7 +76,7 @@ Para registrar seu model `Ideas` com Active Admin, rode:
 {% highlight sh %}
 \$ rails generate active_admin:resource Ideas
 {% endhighlight %}
-Atualize sua página de admin e você encontrará [Ideas](http://localhost:3000/admin/Ideas) na navegação.
+Atualize sua página de admin e você encontrará [Ideas](http://localhost:3000/admin/ideas) na navegação.
 
 _Você pode substituir "Ideas" por qualquer model que você quiser registrar com o Active Admin._
 
