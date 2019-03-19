@@ -72,13 +72,13 @@ Voila! Você está no seu novo painel de controle do Active Admin.
 
 ## Adicione "Ideas" ao back-end
 
-Para registrar seu model `Ideia` com Active Admin, rode:
+Para registrar seu model `Ideas` com Active Admin, rode:
 {% highlight sh %}
-\$ rails generate active_admin:resource Ideia
+\$ rails generate active_admin:resource Ideas
 {% endhighlight %}
-Atualize sua página de admin e você encontrará [Ideias](http://localhost:3000/admin/ideias) na navegação.
+Atualize sua página de admin e você encontrará [Ideas](http://localhost:3000/admin/ideas) na navegação.
 
-_Você pode substituir "Ideia" por qualquer model que você quiser registrar com o Active Admin._
+_Você pode substituir "Ideas" por qualquer model que você quiser registrar com o Active Admin._
 
 ### Configurando Strong Parameters
 
