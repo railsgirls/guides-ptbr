@@ -15,7 +15,7 @@ _Traduzido por Frankyston Lins, [@frankyston](https://twitter.com/frankyston)_
 
 [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) é uma gem de teste Ruby, que fornece linhas de comandos compatíveis com RSpec e Minitest que testam a funcionalidade comum do Rails. Esses testes seriam, de outro modo, muito mais longos, mais complexos e propensos a erros.
 
-**COACH**: Fale sobre testes e Desenvolvimento Orientado a Comportamento.
+**Instrutor(a)**: Fale sobre testes e Desenvolvimento Orientado a Comportamento.
 
 ## _1._ Adicione a gem Shoulda Matchers
 
@@ -45,7 +45,7 @@ bundle install
 {% endhighlight %}
 para instalar a gem.
 
-**COACH**: Fale sobre a saída do terminal de googling.
+**Instrutor(a)**: Fale sobre a saída do terminal de googling.
 
 ## _2._ Ajuste seu `rails_helper.rb`
 
@@ -60,7 +60,7 @@ end
 end
 {% endhighlight %}
 
-**COACH**: Fale sobre porque estamos ajustando a gem dentro de `rails_helper.rb`.
+**Instrutor(a)**: Fale sobre porque estamos ajustando a gem dentro de `rails_helper.rb`.
 
 No seu terminal execute
 {% highlight sh %}
@@ -84,11 +84,11 @@ end
 
 Este é um teste de associação.
 
-**COACH**: Fale sobre testes de associação.
+**Instrutor(a)**: Fale sobre testes de associação.
 
 ## _4._ Desenvolvimento Orientado a Testes
 
-**COACH**: Fale sobre o TDD e como começamos a adicionar recursos ao nosso aplicativo testando-o primeiro.
+**Instrutor(a)**: Fale sobre o TDD e como começamos a adicionar recursos ao nosso aplicativo testando-o primeiro.
 
 Outro recurso que podemos adicionar ao nosso aplicativo é criar ideias sempre nomeadas. Como poderíamos fazer isso? Vamos começar dizendo que as idéias sempre devem ter um nome.
 
