@@ -59,7 +59,7 @@ O lado esquerdo é o nome do projeto e branch e o lado direito é o seu projeto 
 ## Algumas regras para seguir quando for efetuar as traduções
 
 - Tudo o que não for palavra reservada (e.g. variáveis, nomes de classes), traduzir para o português;
-- As referências a COACH serão traduzidos como INSTRUTOR(A);
+- As referências a `COACH` serão traduzidos como `INSTRUTOR(A)`;
 - Se existir algum problema de clareza e compreensão a cerca do que está na versão original, corrigir no momento da tradução (é legal abrir um PR no guia em EN pra corrigir lá também);
 
 Para entender melhor acesse essa [issue](https://github.com/railsgirls/guides-ptbr/issues/24).
