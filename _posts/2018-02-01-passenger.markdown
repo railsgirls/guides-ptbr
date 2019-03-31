@@ -16,7 +16,7 @@ Certifique-se de seguir o [Coloque seu App no GitHub][github-guide] antes de con
 
 Este guia é para facilitar o desenvolvimento de seu aplicativo (você sabe, a funcionalidade de adição e, em seguida vamos verificar se ele realmente funciona), com o Passenger. O framework Ruby on Rails fornece uma ferramenta de servidor embutida, que você pode acessar com o comando `rails server`. O "servidor rails" não é um servidor de aplicativos sozinho, mas apenas um pequeno wrapper que inicia seu aplicativo em um servidor de aplicativos. As pessoas não usam o "servidor rails" em produção (onde outras pessoas podem acessar e usar seu aplicativo). Eles usam um servidor de aplicativos, como o Passenger.
 
-**COACH**:O Passenger é um servidor de aplicativos da Web de software livre. Ele lida com solicitações HTTP, gerencia processos e recursos e permite administração, monitoramento e diagnóstico de problemas. Para os grandes desenvolvedores, também há uma edição empresarial.
+**INSTRUTOR(A)**:O Passenger é um servidor de aplicativos da Web de software livre. Ele lida com solicitações HTTP, gerencia processos e recursos e permite administração, monitoramento e diagnóstico de problemas. Para os grandes desenvolvedores, também há uma edição empresarial.
 
 [github-guide]: http://guides.railsgirls.com/github
 
@@ -53,7 +53,7 @@ Your bundle is complete!
 
 O Nginx e o Apache são servidores da web. Eles fornecem manipulação de transações HTTP e servem arquivos estáticos. Os servidores de aplicativos possibilitam que aplicativos Ruby falem HTTP. Aplicativos Ruby (e frameworks como o Rails) não podem fazer isso sozinhos. Em uma pilha de produção típica, seria usado o Nginx ou o Apache como o servidor da Web, o Passenger como servidor de aplicativos, e o Capistrano como ferramenta de automação de lançamento. O Passenger integra-se ao Nginx ou ao Apache e gerencia o aplicativo e seus recursos.
 
-**COACH**: Às vezes você precisará especificar a versão da gem: `gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"`
+**INSTRUTOR(A)**: Às vezes você precisará especificar a versão da gem: `gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"`
 
 #### Vamos checar se isso funcionou
 
@@ -96,7 +96,7 @@ Desative o mecanismo removendo o arquivo:
 rm tmp/always_restart.txt
 {% endhighlight %}
 
-**COACH**: Ás vezes a gem carrierwave gem causa problemas. Adicionando `require 'carrierwave/orm/activerecord'` ao arquivo `environment.rb` muitas vezes será suficiente.
+**INSTRUTOR(A)**: Ás vezes a gem carrierwave gem causa problemas. Adicionando `require 'carrierwave/orm/activerecord'` ao arquivo `environment.rb` muitas vezes será suficiente.
 
 ### Implantando seu app
 
