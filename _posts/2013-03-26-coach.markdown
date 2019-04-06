@@ -4,22 +4,22 @@ title: Guides
 permalink: coach
 ---
 
-# Como ser um Rails Girls coach
+# Como ser um(a) Instrutor(a) Rails Girls
 
 *Traduzido por Daniel Lopes, [@dannyeuu](https://www.twitter.com/dannyeuu)*
 
 *Todas as suas perguntas básicas respondidas em um só lugar*
 
-### O que eu preciso ser para ser uma Rails Girls coach?
+### O que eu preciso ser para ser um(a) instrutor(a) Rails Girls?
 
-Então, você já ouviu falar sobre [Rails Girls](http://railsgirls.com) e está se perguntando se você tem o que é preciso para ser um coach em um dos workshops? Fantástico! Seu interesse em ajudar iniciantes começar na programação web já é um grande pré-requisito! O que mais você precisa?
+Então, você já ouviu falar sobre [Rails Girls](http://railsgirls.com) e está se perguntando se você tem o que é preciso para ser um instrutor(a) em um dos workshops? Fantástico! Seu interesse em ajudar iniciantes começar na programação web já é um grande pré-requisito! O que mais você precisa?
 
 - Paciência, vontade de ajudar, e uma atitude amigável :)
 - Ser capaz de responder a todos os tipos de perguntas de uma forma iniciante e amigável (mesmo que a explicação não seja *tecnicamente* totalmente exata) durante toda a duração do workshop.
 - Experiência com programação web (você sabe o que significa MVC, certo?), não necessariamente em Rails.
 - Algum tempo para visitar o [tutorial app básico](app) antes do evento.
 
-### Por que eu deveria ser um Rails Girls coach?
+### Por que eu deveria ser um(a) instrutor(a) Rails Girls?
 
 Quer dizer, além de incrivelmente bom karma? Aqui estão alguns resultados muito prováveis:
 
@@ -40,19 +40,19 @@ Há grande quantidade de tempo para concluir o aplicativo, e por isso é mais im
 Acredite ou não, para a maioria, é realmente importante. Isso torna o ambiente diferente. Você decide como, mas pequenas coisas (fazer bottons), etiquetas, cupcakes, balões, cartazes, ou qualquer coisa que você pode trazer faz toda a diferença.
 
 ### Inclusão
-Rails Girls é uma experiência inclusiva, segura e acolhedora para todos. Os workshops são destinados principalmente para mulheres iniciantes e trabalha para este grupo de usuários específico, mas sempre fomos abertos a incluir outros de habilidades níveis e gêneros. Rails Girls coaches são do sexo masculino e feminino. O objetivo final do Rails Girls é enriquecer toda a comunidade Rails, incentivando mais diversas pessoas para participar. Se você quiser fazer um currículo ou grupo diferente, todo o material está online e você está convidado a usá-lo com outro nome e marca.
+Rails Girls é uma experiência inclusiva, segura e acolhedora para todos. Os workshops são destinados principalmente para mulheres iniciantes e trabalha para este grupo de usuários específico, mas sempre fomos abertos a incluir outros de habilidades níveis e gêneros. Instrutoras(es) Rails Girls são do sexo masculino e feminino. O objetivo final do Rails Girls é enriquecer toda a comunidade Rails, incentivando mais diversas pessoas para participar. Se você quiser fazer um currículo ou grupo diferente, todo o material está online e você está convidado a usá-lo com outro nome e marca.
 
 ### E se eu nunca fiz nada no Rails?
-Por que não fez ainda? Só brincando. Isso não é um problema, nós tivemos um monte de coaches como você e eles foram *incríveis*. Contanto que você esteja confortável com qualquer outra estrutura similar, você vai ficar bem. Dê uma olhada no [tutorial app básico](app) e você provavelmente vai ser capaz de descobrir o que está acontecendo em breve. Preste atenção às "** Coach **" que te informam o que você deve ser capaz de explicar.
+Por que não fez ainda? Só brincando. Isso não é um problema, nós tivemos um monte de instrutoras(es) como você e eles foram *incríveis*. Contanto que você esteja confortável com qualquer outra estrutura similar, você vai ficar bem. Dê uma olhada no [tutorial app básico](app) e você provavelmente vai ser capaz de descobrir o que está acontecendo em breve. Preste atenção às "** Instrutor(a) **" que te informam o que você deve ser capaz de explicar.
 
 Normalmente, haverá pelo menos alguém no evento que trabalha com Rails regularmente, por isso não tenha medo de pedir ajuda quando `bundle install` parecer estranho pra você. Além disso, se você se deparar com algo incomum, apenas pesquise no Google com o seu grupo! É ok para admitir que você não sabe tudo e mostrar as meninas como você usa o Google para resolver seus dilemas de programação diárias.
 
-### O que exatamente eu estarei fazendo como coach?
+### O que exatamente eu estarei fazendo como instrutor(a)?
 
-A estrutura do workshop varia um pouco de cidade para cidade, de modo que o seu grupo local será capaz guiá-lo através dos detalhes. Normalmente, há uma reunião pré-evento ou jantar com os coaches onde você pode fazer tudo o que você perguntas.
+A estrutura do workshop varia um pouco de cidade para cidade, de modo que o seu grupo local será capaz guiá-lo através dos detalhes. Normalmente, há uma reunião pré-evento ou jantar com os instrutoras(es) onde você pode fazer tudo o que você perguntas.
 
 ### Respondendo a perguntas
-Muitas vezes, os coaches que estão apenas um passo à frente das participantes são os melhor em explicar :) Use metáforas da vida real e explique bem alto nível. Explicando muitos detalhes fará uma enxurrada de informações que não é necessário no início.
+Muitas vezes, os instrutores(as) que estão apenas um passo à frente das participantes são os melhor em explicar :) Use metáforas da vida real e explique bem alto nível. Explicando muitos detalhes fará uma enxurrada de informações que não é necessário no início.
 
 #### Festa de instalação
 
@@ -66,7 +66,7 @@ Fazer o tutorial em casa provavelmente será toda a preparação que você preci
 
 Além disso, não desanime se você às vezes precisar tentar algumas explicações diferentes. A maioria das meninas serão iniciantes, então elas não possuem muitas referências (bônus: nem terão quaisquer maus hábitos que alguns programadores tendem a pegar ao longo do caminho). Se você chegar ao final do tutorial app básico, você pode explorar guias adicionais no final ou trabalhar em qualquer outra coisa que grupo esteja mais interessado; design é geralmente uma escolha popular, mas algumas meninas vão querer experimentar a construção de outro aplicativo. Você também pode preparar seus próprios desafios para as meninas ou explorar recursos úteis (documentação etc).
 
-Se precisar de ajuda com qualquer coisa, não tenha medo de usar o Google ou pedir a outro coach para ajudá-lo. E não tenha medo de pedir uma pausa se você precisar, vai ser um longo dia, mas podemos prometer que você vai chegar em casa com um grande sorriso e um coração quente :)
+Se precisar de ajuda com qualquer coisa, não tenha medo de usar o Google ou pedir a outro instrutor(a) para ajudá-lo. E não tenha medo de pedir uma pausa se você precisar, vai ser um longo dia, mas podemos prometer que você vai chegar em casa com um grande sorriso e um coração quente :)
 
 * Dê uma olhada nas [notas de ensino para o app](https://github.com/lbain/railsgirls) da Lucy Bain.
 
@@ -74,9 +74,9 @@ Se precisar de ajuda com qualquer coisa, não tenha medo de usar o Google ou ped
 
 Bom, estamos felizes em tê-lo a bordo! Entre em contato com as organizadoras do seu evento local (se você já não estiver feito) e elas vão responder a todas as outras perguntas que você possa ter. Normalmente você pode encontrar as informações de contato na página do evento.
 
-Se você estiver viajando no exterior no momento de um workshop Rails Girls, não hesite em entrar em contato com as organizadoras da cidade que você estará visitando; estamos sempre felizes em receber coaches adicionais! Para não mencionar que um workshop Rails Girls é uma ótima desculpa para visitar uma nova cidade ;)
+Se você estiver viajando no exterior no momento de um workshop Rails Girls, não hesite em entrar em contato com as organizadoras da cidade que você estará visitando; estamos sempre felizes em receber instrutoras(es) adicionais! Para não mencionar que um workshop Rails Girls é uma ótima desculpa para visitar uma nova cidade ;)
 
-Algumas outras ótimas dicas de primeira mão para Rails Girls coaches:
+Algumas outras ótimas dicas de primeira mão para Instrutoras(es) Rails Girls:
 
 - [4 lições aprendidas com o ensino do Rails Girls Berlin](http://pragtob.wordpress.com/2012/08/14/4-lessons-learned-from-teaching-at-rails-girls-berlin/)
 - [Eu infiltrada #railsgirlslj, aqui está como foi](http://swizec.com/blog/i-infiltrated-railsgirlsj-heres-what-it-was-like/swizec/5717)

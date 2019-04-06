@@ -101,7 +101,7 @@ pessoa esteja no comando. Os passos abaixo explicam quando fazer isso.
 - Escolha alguém para começar no comando. Aquela pessoa deverá seguir todas os passos
 até que a troca de assentos seja mencionada.
 
-**Coach:** Explique como programação em par pode ser útil.
+**Instrutor(a):** Explique como programação em par pode ser útil.
 
 ## *1.* Código inicial
 
@@ -152,7 +152,7 @@ assertions, 1 failures, 0 errors, 0 skips`.
 
 **Levante-se** e de o comando a próxima pessoa.
 
-**Coach:** Explique como TDD pode ser útil
+**Instrutor(a):** Explique como TDD pode ser útil
 
 ## *2.* Faça o teste passar
 
@@ -185,7 +185,7 @@ pode também refatorar os testes.
 Rode seus testes após refatorar. Se eles falharem, você acidentalmente quebrou alguma coisa.
 
 
-**Coach:** Explique como focar em algo pequeno o suficiente para testar pode ser útil.
+**Instrutor(a):** Explique como focar em algo pequeno o suficiente para testar pode ser útil.
 
 ## *4.* Escreva um novo teste que falha
 

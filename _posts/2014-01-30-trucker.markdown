@@ -39,7 +39,7 @@ Neste ponto, o cliente Trucker vai exigir que você escolha um espaço para trab
 Space>
 {% endhighlight %}
 
-__COACH__: Fale sobre os benefícios da implantação de Trucker.io (e ter datacenters na Europa, em vez de os EUA).
+__INSTRUTOR(A)__: Fale sobre os benefícios da implantação de Trucker.io (e ter datacenters na Europa, em vez de os EUA).
 
 ### Controle de Versão
 
@@ -51,7 +51,7 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__COACH__: Este seria um grande momento para falar sobre os sistemas de controle de versão e git.
+__INSTRUTOR(A)__: Este seria um grande momento para falar sobre os sistemas de controle de versão e git.
 
 ### Publicando sua aplicação para o Trucker
 
@@ -106,7 +106,7 @@ Creating service rds-mysql-aa0d6... OK
 Binding rds-mysql-aa0d6 to trucker-rails... OK
 {% endhighlight %}
 
-__COACH__: Fale sobre MySQL.
+__INSTRUTOR(A)__: Fale sobre MySQL.
 
 
 Nós não queremos adicionar outros serviços, você pode responder às seguintes perguntas com `n`:

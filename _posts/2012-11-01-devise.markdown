@@ -77,7 +77,7 @@ Usaremos um script gerador de empacotamento para criar o modelo de usuários.
    rake db:migrate
 {% endhighlight %}
 
-**Coach:** Explicar qual foi o modelo de usuário criado. Qual a finalidade dos campos?
+**Instrutor(a):** Explicar qual foi o modelo de usuário criado. Qual a finalidade dos campos?
 
 ## *5.*Criando o primeiro usuário
 
@@ -118,7 +118,7 @@ depois de `protect_from_forgery with: :exception`.
 
 Abra seu navegador e execute as ações de login e logout.
 
-**Coach:** Falar sobre `user_signed_in?` e `current_user` helpers. Qual é a utilidade destas funcionalidades?
+**Instrutor(a):** Falar sobre `user_signed_in?` e `current_user` helpers. Qual é a utilidade destas funcionalidades?
 
 ## O que vem a seguir?
 

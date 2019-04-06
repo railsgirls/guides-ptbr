@@ -87,5 +87,5 @@ $ git push -u origin master
 O resultado é uma página no GitHub (por exemplo, [aqui está o meu](https://github.com/iammyr/railsgirls-galway-2014)) para o repositório da nossa aplicação, que fornece renderização agradável, compartilhando funcionalidades e estatísticas. Veja aqui: https://github.com/<your username>/railsgirls-galway
 </div>
 
-**Coach:** Explique como funciona o branch, edit, commit e merge no GitHub: altere seu projeto adicionando uma descrição no README.
+**Instrutor(a):** Explique como funciona o branch, edit, commit e merge no GitHub: altere seu projeto adicionando uma descrição no README.
 ([Slides por Myriam Leggieri @iammyr]())

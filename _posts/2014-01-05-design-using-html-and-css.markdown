@@ -22,7 +22,7 @@ permalink: design-html-css
 
   Agora atualize a página e verifique as mudanças. Você pode tentar alterar a cor ou fonte do cabeçalho. Você pode verificar a referência de cor aqui [http://color.uisdc.com/](http://color.uisdc.com/).
 
-    **Coach:** fale sobre a propriedade `display`, `inline` e `block`.
+    **Instrutor(a):** fale sobre a propriedade `display`, `inline` e `block`.
 
 + Em seguida, coloque estas linhas na parte inferior:
 
@@ -35,7 +35,7 @@ permalink: design-html-css
     }
     ```
 
-    **Coach:** explique os 4 estados de um link
+    **Instrutor(a):** explique os 4 estados de um link
 
 
 2.Desenhe a tabela
@@ -101,4 +101,4 @@ permalink: design-html-css
     }
    ```
 
-   **Coach** explique como usar `border` em css, tente modificar o estilo do botão como em volta da esquina, adicione sombra ou cor, etc.
+   **Instrutor(a)** explique como usar `border` em css, tente modificar o estilo do botão como em volta da esquina, adicione sombra ou cor, etc.

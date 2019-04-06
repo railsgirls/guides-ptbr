@@ -14,7 +14,7 @@ permalink: heroku
 Siga os passos intitulados "Introduction" e "Set up" constantes na página
 [Getting Started on Heroku with Ruby][heroku-guide] para se cadastrar, instalar Heroku CLI e fazer login.
 
-__COACH__: Fale sobre os benefícios do uso da plataforma Heroku para publicação vs uso de servidores tradicionais.
+__INSTRUTOR(A)__: Fale sobre os benefícios do uso da plataforma Heroku para publicação vs uso de servidores tradicionais.
 
 [heroku-guide]: https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction
 
@@ -44,7 +44,7 @@ Rode `bundle install --without production` para configurar suas dependências.
 Não se esqueça de fazer `git add .` e `git commit -m "Utilizando postgres como banco de dados de producao"`
 para adicionar esta mudança ao seu branch master antes de enviar ao heroku mais tarde.
 
-__COACH__: Você pode falar sobre RDBMS e as diferenças para outros sistemas de gerenciamento bem como  apresentar alguns detalhes das dependências em Heroku no PostgreSQL.
+__INSTRUTOR(A)__: Você pode falar sobre RDBMS e as diferenças para outros sistemas de gerenciamento bem como  apresentar alguns detalhes das dependências em Heroku no PostgreSQL.
 
 #### Sistema de controle de versão
 
@@ -56,7 +56,7 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__COACH__: Agora é uma ótima oportunidade para falar sobre sistemas de controle de versão e git.
+__INSTRUTOR(A)__: Agora é uma ótima oportunidade para falar sobre sistemas de controle de versão e git.
 
 ### Publicando sua app
 
@@ -151,4 +151,4 @@ Não é do escopo deste tutorial detalhar a hospedagem 'na nuvem', mas se você 
 * [How to: Make Carrierwave work on Heroku](https://github.com/carrierwaveuploader/carrierwave/wiki/How-to%3A-Make-Carrierwave-work-on-Heroku)
 * [Amazon S3 – The Beginner’s Guide](http://www.hongkiat.com/blog/amazon-s3-the-beginners-guide/)
 
-Como sempre, se você precisar de mais informações ou assistência pergunte aos seus coaches.
+Como sempre, se você precisar de mais informações ou assistência pergunte aos seus instrutoras(es).

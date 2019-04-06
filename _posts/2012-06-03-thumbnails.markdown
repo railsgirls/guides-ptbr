@@ -9,7 +9,7 @@ permalink: thumbnails
 *Criado por Miha Filej, [@mfilej](https://twitter.com/mfilej)*  
 *Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
 
-__Coach__: Explicar qual o efeito de se definir a largura de uma imagem na marcação HTML como explicado no final do passo 4, constante do tutorial *Tutorial para criação da app Rails Girls*.
+__INSTRUTOR(A)__: Explicar qual o efeito de se definir a largura de uma imagem na marcação HTML como explicado no final do passo 4, constante do tutorial *Tutorial para criação da app Rails Girls*.
 
 ## *1.*Instalando ImageMagick
 
@@ -20,7 +20,7 @@ __Coach__: Explicar qual o efeito de se definir a largura de uma imagem na marca
   [im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
   [in-homebrew]: http://mxcl.github.io/homebrew/
 
-__Coach__: O que é ImageMagick e qual a diferença para outras bibliotecas/gems que já usamos anteriormente?
+__INSTRUTOR(A)__: O que é ImageMagick e qual a diferença para outras bibliotecas/gems que já usamos anteriormente?
 
 Abra `Gemfile` no seu projeto e acrescente o seguinte:
 
@@ -50,7 +50,7 @@ Abra `app/uploaders/picture_uploader.rb` e encontre a linha conforme mostrada a 
 
 Remova o sinal `#`.
 
-__Coach__: Explicar o uso e finalidades da inserção de comentários nos códigos.
+__INSTRUTOR(A)__: Explicar o uso e finalidades da inserção de comentários nos códigos.
 
 Logo após a linha que você acabou de descomentar acrescente o seguinte:
 

@@ -110,4 +110,4 @@ A lista de e-mails de caráter global para os eventos de Rails Girls encontra-se
 * Vesa Vänskä / [@vesan](https://twitter.com/vesan) / [github](http://github.com/vesan)
 * Terence Lee / [@hone02](https://twitter.com/hone02) / [github](http://github.com/hone)
 
-..e todos os coaches e pessoas envolvidas com o maravilhoso universo de Rails Girls. Seja mais um de nós!
+..e todos os instrutores(as) e pessoas envolvidas com o maravilhoso universo de Rails Girls. Seja mais um de nós!
