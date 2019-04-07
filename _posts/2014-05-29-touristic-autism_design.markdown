@@ -10,7 +10,7 @@ permalink: touristic-autism_design
 *for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
 
-**Coach:** Talk about the relationship between HTML and Rails. What part of views is HTML and what is Embedded Ruby (ERB)? What is MVC and how does this relate to it? (Models and controllers are responsible for generating the HTML views.)
+**Instrutor(a):** Talk about the relationship between HTML and Rails. What part of views is HTML and what is Embedded Ruby (ERB)? What is MVC and how does this relate to it? (Models and controllers are responsible for generating the HTML views.)
 
 The app doesn't look very nice yet. Let's do something about that. We'll use the Twitter Bootstrap project to give us nicer styling really easily.
 
@@ -88,7 +88,7 @@ Now make sure you saved your files and refresh the browser to see what was chang
 
 In case your Terminal shows you an error message that *sort of* implies there is something wrong with your JavaScript or CoffeeScript, install [nodejs](http://nodejs.org/download/). This issue should not appear when you've used the RailsInstaller (but when you've installed Rails via ```gem install rails```).
 
-**Coach:** Talk a little about CSS and layouts.
+**Instrutor(a):** Talk a little about CSS and layouts.
 
 
 1.Design your header
@@ -106,7 +106,7 @@ In case your Terminal shows you an error message that *sort of* implies there is
     color or font of the header. You can check the color reference
     from [http://color.uisdc.com/](http://color.uisdc.com/).
 
-    **Coach: ** talk about the property `display`, inline and block element.
+    **Instrutor(a): ** talk about the property `display`, inline and block element.
 
 + Then put these lines at the bottom：
 
@@ -119,7 +119,7 @@ In case your Terminal shows you an error message that *sort of* implies there is
     }
     ```
 
-    **Coach: ** explain the 4 states of a link
+    **Instrutor(a): ** explain the 4 states of a link
 
 
 2.Design your table
@@ -194,7 +194,7 @@ In case your Terminal shows you an error message that *sort of* implies there is
     }
    ```
 
-   **Coach** explain how to use `border` in css, try modify the style
+   **Instrutor(a)** explain how to use `border` in css, try modify the style
      of button like round the corner, add shadow or color etc.
 
 
@@ -245,7 +245,7 @@ add
 
 Now it's time to make the place list page look professional. For that, we are going to replace the table layout with a div layout.
 
-**Coach:** Talk a little about table vs div.
+**Instrutor(a):** Talk a little about table vs div.
 
 Open `app/views/places/index.html.erb` in your text editor and replace the table with
 
@@ -284,7 +284,7 @@ Open `app/views/places/index.html.erb` in your text editor and replace the table
 <% end %>
 {% endhighlight %}
 
-**Coach:** Explain what the new code means line by line, and talk a little about Bootstrap 12 grids layout.
+**Instrutor(a):** Explain what the new code means line by line, and talk a little about Bootstrap 12 grids layout.
 
 Refresh it! We get a nice looking idea list. Click the "New Idea" button, and create more ideas with real text and pretty pictures - the page will look much better with content. There is a principle of contemporary web design: content is the best decoration.
 

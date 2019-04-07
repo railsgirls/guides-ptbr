@@ -120,6 +120,6 @@ Enquanto o prompt de comando não estiver visível, você não poderá executar 
 
 Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para sair do servidor.
 
-**COACH:** Explique o que cada comando faz.
+**Instrutor(a):** Explique o que cada comando faz.
 [O que é um servidor e uma aplicação web - Slides por @]()
 O esqueleto gerado por "rails new" reflete o padrão de arquitetura [Model-View-Controller(MVC) - Slides por @]().

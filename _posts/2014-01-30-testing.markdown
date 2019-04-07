@@ -14,7 +14,7 @@ permalink: testing-rspec
 
 [RSpec](https://github.com/rspec/rspec-rails) é um framework para testes em Ruby, que descreve o comportamento da nossa aplicação em uma sintaxe que não se parece muito com Ruby. Ele irá mostrar o resultado dos testes no seu terminal, então você testará suas habilidades de leitura também.
 
-__COACH__: Fale sobre testes e Desenvolvimento Guiado por Comportamento (Behavior Driven Development).
+__INSTRUTOR(A)__: Fale sobre testes e Desenvolvimento Guiado por Comportamento (Behavior Driven Development).
 
 ## *1.* Adicione a gem RSpec
 
@@ -88,7 +88,7 @@ rspec spec/models/idea_spec.rb
 
 qual será o resultado que seu teste está pendente, pois ainda não está implementado.
 
-__COACH__: Fale sobre 'goglear' a saída do terminal
+__INSTRUTOR(A)__: Fale sobre 'goglear' a saída do terminal
 
 Vamos fazer algo sobre isso!
 
@@ -123,7 +123,7 @@ end
 
 que testa mais coisas.
 
-__COACH__: Fale um pouco sobre a refatoração.
+__INSTRUTOR(A)__: Fale um pouco sobre a refatoração.
 
 ## *4.* Marcando os testes como a fazer
 
@@ -142,7 +142,7 @@ Você consegue completar este teste? Você consegue pensar em outros testes?
 
 ## *5.* Desenvolvimento Guiado por Comportamento (BDD)
 
-__COACH__: Fale um pouco sobre Desenvolvimento Guiado por Comportamento (BDD).
+__INSTRUTOR(A)__: Fale um pouco sobre Desenvolvimento Guiado por Comportamento (BDD).
 
 Agora você pode criar mais testes sozinho.
 Sinta-se à vontade para falar com o seu treinador para fazer isso ou maneiras de criar mais testes.

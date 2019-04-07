@@ -13,7 +13,7 @@ Esta prática se destina a ensinar como usar o widget do Twitter e como para [ht
 
 Há duas maneiras de fazer isto, se você quiser fazer rápido para já ir adicionando um código preparado, vá para o 2º parágrafo.
 
-**Coach** Explique o que é widget.
+**Instrutor(a)** Explique o que é widget.
 
 
 1. Configuração do widget do Twitter 

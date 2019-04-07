@@ -49,7 +49,7 @@ adicione
 
 Agora é hora de fazer a página de listar ideias parecer mais profissional. Para isso, vamos substituir o layout da tabela com um layout div.
 
-**Coach:** Fale um pouco sobre a tabela vs div.
+**Instrutor(a):** Fale um pouco sobre a tabela vs div.
 
 Abra `app/views/ideas/index.html.erb` em seu editor de texto e substitua todas as linhas com
 
@@ -69,7 +69,7 @@ Abra `app/views/ideas/index.html.erb` em seu editor de texto e substitua todas a
 <% end %>
 {% endhighlight %}
 
-**Coach:** Explique o que o novo código significa linha por linha, e fale um pouco sobre o grid do Bootstrap
+**Instrutor(a):** Explique o que o novo código significa linha por linha, e fale um pouco sobre o grid do Bootstrap
 
 Atualize! Nós ficamos com uma boa lista de ideias com design bonito. Clique no botão "New Idea", e crie mais idéias com o texto real e imagens bonitas, a página ficará muito melhor com o conteúdo. Há um princípio de web design contemporâneo: o conteúdo é a melhor decoração.
 
@@ -100,7 +100,7 @@ Abra `app/views/ideas/show.html.erb` em seu editor de texto e substitua todas as
 {% endhighlight %}
 
 
-**Coach:** Explique o que o novo código significa linha por linha.
+**Instrutor(a):** Explique o que o novo código significa linha por linha.
 
 ## E agora?
 

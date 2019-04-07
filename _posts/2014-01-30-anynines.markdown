@@ -10,7 +10,7 @@ permalink: anynines
 
 *Traduzido por [Júlio Fortunato](https://github.com/JulioFortunato)*
 
-__COACH__: Fale sobre os benefícios de fazer o deploy para o anynines vs utilizar outros data centers.
+__INSTRUTOR(A)__: Fale sobre os benefícios de fazer o deploy para o anynines vs utilizar outros data centers.
 
 ### Pegue um pouco de anynines para você
 
@@ -78,7 +78,7 @@ git add .
 git commit -m "add anynines deployment"
 {% endhighlight %}
 
-__COACH__: Este será um ótimo momento para falar sobre sistemas de controle de versão e git, se ainda não o fez.
+__INSTRUTOR(A)__: Este será um ótimo momento para falar sobre sistemas de controle de versão e git, se ainda não o fez.
 
 ### Ajuda
 

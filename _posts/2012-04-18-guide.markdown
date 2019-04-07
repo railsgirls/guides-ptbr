@@ -299,7 +299,7 @@ Pergunte onde encontros de desenvolvedores locais geralmente acontecem. Frequent
 
 #### O que é esperado dos(as) instrutores(as)?
 
-Eventos Rails Girls são organizados em pequenos grupos, um máximo de quatro a cinco pessoas por coach. Se possível, tente ter grupos de três mulheres para cada coach. Por exemplo, se o seu evento terá 30 mulheres, tente ter dez instrutores(as) (alguns a mais por precaução não faz mal). Nós sabemos que nem sempre isto é possível, mas tente não ter grupo de mais de cinco mulheres, para que o coach ainda consiga responder a todas as dúvidas dentro do grupo.
+Eventos Rails Girls são organizados em pequenos grupos, um máximo de quatro a cinco pessoas por instrutor(a). Se possível, tente ter grupos de três mulheres para cada instrutor(a). Por exemplo, se o seu evento terá 30 mulheres, tente ter dez instrutores(as) (alguns a mais por precaução não faz mal). Nós sabemos que nem sempre isto é possível, mas tente não ter grupo de mais de cinco mulheres, para que o instrutor(a) ainda consiga responder a todas as dúvidas dentro do grupo.
 
 Não é obrigatório que instrutores(as) sejam super especialistas em Rails - conhecimento básico e disposição para ensinar valem mais que expertise. Então, se a sua comunidade Rails local não é muito forte, fique à vontade para expandir sua busca. Você pode ter uma mistura de especialistas em Rails e pessoas com experiência em desenvolvimento Web com outros frameworks. Nós procuramos por pessoas que gostam de responder perguntas e que são capazes de manter uma atmosfera positiva e acolhedora durante oito horas!
 
@@ -324,7 +324,7 @@ Pergunte por aí, pergunte a patrocinadores (empresas de tecnologia), peça para
 
 Nós queremos convidá-la a tomar parte no evento Rails Girls que será realizado nos dias (coloque a data). O evento é focado em mulheres de todas as idades sem nenhuma experiência de programação prévia, mas com muita paixão por criar coisas. Rails Girls é um workshop internacional sem fins lucrativos, baseado no trabalho voluntário. Nós já tivemos eventos em Shanghai, Berlin, Helsinki e Singapura. Nós esperamos receber cerca de 100 inscrições.
 
-Além de oferecermos uma primeira experiência segura e divertida na programação para mulheres nós também queremos envolvê-las com desenvolvedores locais, movimento open source e a cena startup. Nós anexamos algumas informações sobre o que é necessário na prática para ser coach. Adicionalmente, nós temos espaços para palestras curtas (lightning talks) em tópicos técnicos. Se você tem algum tema sobre o qual gostaria de palestrar, nos avise.
+Além de oferecermos uma primeira experiência segura e divertida na programação para mulheres nós também queremos envolvê-las com desenvolvedores locais, movimento open source e a cena startup. Nós anexamos algumas informações sobre o que é necessário na prática para ser instrutor(a). Adicionalmente, nós temos espaços para palestras curtas (lightning talks) em tópicos técnicos. Se você tem algum tema sobre o qual gostaria de palestrar, nos avise.
 
 Para mais informações sobre o evento sem fins-lucrativos, acesse [railsgirls.com](http://railsgirls.com) ou [guides.railsgirls.com/guides-ptbr/](http://guides.railsgirls.com/guides-ptbr/).
 
@@ -461,7 +461,7 @@ Esta é uma pequena checklist para seu evento. Um evento Rails Girls pode ser or
 * Preencha a [inscrição](http://railsgirls.com/inyourcity) e o time vai entrar em contato com você!
 * Comece a trabalhar com o template do planejamento do projeto no Google Docs
 * Decida datas e local
-* Aborde coachs locais - tente encontrar cinco pessoas que se comprometam a participar
+* Aborde instrutores locais - tente encontrar cinco pessoas que se comprometam a participar
 * Lance o website: escreva a cópia e sugira um tema
   1. Datas e local.
   2. Prazos para inscrição.

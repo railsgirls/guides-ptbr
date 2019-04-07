@@ -250,7 +250,7 @@ Acesse [http://localhost:3000](http://localhost:3000) em seu navegador. Você de
 
 **Parabéns, seu ambiente de desenvolvimento Ruby on Rail está pronto!**
 
-**Coach:** Recomendamos verificar o procedimento executando o comando scaffold e adicionando dados com a página gerada pelos coaches para assegurar que tudo está funcionando bem.
+**Instrutor(a):** Recomendamos verificar o procedimento executando o comando scaffold e adicionando dados com a página gerada pelos instrutores(as) para assegurar que tudo está funcionando bem.
 
 <hr />
 
