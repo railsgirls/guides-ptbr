@@ -84,11 +84,17 @@ https://docs.google.com/spreadsheets/d/1Gn1BHxwdX3nHyiIDnY1L8ZdNuRJuNhPKli-uG9XW
 
 ## Como posso me candidatar a realizar uma tradução?
 
-Basta enviar um e-mail para marinaflessa@gmail.com com cópia para maujor@maujor.com constando o seu nome, qual a página que você pretende traduzir, entre aquelas listadas na planilha citada anteriormente, e a previsão de término.
-
-Aguarde a resposta ao seu e-mail informando que a tradução está liberada (ou não em raríssimos casos).
+Basta conferir a aba de `Issues` de repositório, se encontrar alguma tradução que interesse, adicione um comentário que começou a trabalhar nessa tradução. Será feito o máximo possível para manter a aba atualizada :)
 
 **Contamos com a colaboração de todos pois o sucesso deste projeto depende de todos nós que gostamos de compartilhar conhecimentos**
+
+## Regras de tradução!
+
+* Tudo o que não for palavra reservada (e.g. variáveis, nomes de classes), traduzir para o português;
+
+* As referências a `COACH` serão traduzidos como `INSTRUTOR(A)`;
+
+* Se existir algum problema de clareza e compreensão a cerca do que está na versão original, corrigir no momento da tradução (é legal abrir um PR no guia em EN pra corrigir lá também);
 
 ## Como atualizar meu fork com as novas atualizações deste repositório?
 
