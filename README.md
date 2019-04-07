@@ -1,6 +1,72 @@
+# PARTE 0
+
+# Como forkar o projeto
+
+No projeto Guides-ptbr clique no botão fork para fazer uma cópia do projeto para sua conta do github.
+
+![GitHub Fork](/images/fork1.jpg)
+
+Logo depois de forkar você deve clicar no botão Clone or download e escolha se deseja clonar por SSH ou HTTPS.
+
+![Clone Project](/images/cloneordownload.png)
+
+e no terminal digite `git clone` e cole a url do seu repositório fork.
+
+```bash
+$ git clone git@github.com:YOUR-USERNAME/guides-ptbr.git
+```
+
+## Como rodar o projeto
+
+Dentro do diretório `guides-ptbr` execute o camando abaixo para instalar todas as gems que o projeto precisa.
+
+```bash
+$ bundle install
+```
+
+Depois de terminado de instalar todas as dependências basta executar
+
+```bash
+$ bundle exec jekyll serve --watch
+```
+
+para iniciar o servidor e abrir no navegador com o endereço [http://localhost:4000](http://localhost:4000)
+
+## Como abrir um Pull Request
+
+Primeiro você deve está na branch `master`, execute o comando abaixo e verifique se está na `master`
+
+```bash
+$ git branch
+```
+
+Conferido, agora crie uma nova branch para começar a fazer sua contribuição
+
+```bash
+$ git checkout -b nome_da_sua_branch
+```
+
+Depois de terminar a sua contribuição crei o seu commit `git commit ...` e depois envie para o seu repositório `git push origin nome_da_sua_branch`
+
+Agora entre na github, vá até o seu repositório forkado e acesse a aba Pull Requests
+
+Na página de Pull Requests clique no botão Novo Pull Request, na página que vai aparecer você deve escolher qual a sua branch vai ser mergeada com a branch do projeto original.
+
+![Criando Pull Request](/images/pull_request.png)
+
+O lado esquerdo é o nome do projeto e branch e o lado direito é o seu projeto e branch, basta escolher a branch você criou, colocar um título e descrição e seu Pull Request vai ser enviado.
+
+## Algumas regras para seguir quando for efetuar as traduções
+
+- Tudo o que não for palavra reservada (e.g. variáveis, nomes de classes), traduzir para o português;
+- As referências a `COACH` serão traduzidos como `INSTRUTOR(A)`;
+- Se existir algum problema de clareza e compreensão a cerca do que está na versão original, corrigir no momento da tradução (é legal abrir um PR no guia em EN pra corrigir lá também);
+
+Para entender melhor acesse essa [issue](https://github.com/railsgirls/guides-ptbr/issues/24).
+
 # PARTE 1
 
-#  Instruções para tradução da documentação do Rails Girls
+# Instruções para tradução da documentação do Rails Girls
 
 ## Como fazer para colaborar?
 
@@ -30,7 +96,7 @@ Aguarde a resposta ao seu e-mail informando que a tradução está liberada (ou 
     git pull upstream gh-pages (nome do branch)
     git push
 
-_____
+---
 
 # PARTE 2
 
@@ -38,7 +104,7 @@ _____
 
 Nosso objetivo é fornecer ferramentas para que mulheres estudem e entendam a tecnologia Rails. Os eventos Rails Girls foram criados com a finalidade de proporcionar uma primeira experiência com as técnicas Rails de criação para a Internet.
 
-Rails Girls foi criado na cidade de Helsinki no final do ano 2010. A intenção inicial foi a de criar um único evento local e nós jamais imaginamos que a ideia atingisse a proporção atual com a proliferação de vários eventos pelo mundo inteiro.  Estes tutoriais foram criados para ajudá-lo a iniciar seus estudos de Rails.
+Rails Girls foi criado na cidade de Helsinki no final do ano 2010. A intenção inicial foi a de criar um único evento local e nós jamais imaginamos que a ideia atingisse a proporção atual com a proliferação de vários eventos pelo mundo inteiro. Estes tutoriais foram criados para ajudá-lo a iniciar seus estudos de Rails.
 
 Você pode usar nosso material para criar seu próprio workshop na sua cidade, no seu ambiente de trabalho ou mesmo na sua cozinha! Saiba mais sobre Rails Girls em http://railsgirls.com
 
@@ -97,7 +163,7 @@ Para acompanhar atualizações e informações em geral siga [@railsgirls](https
 
 ## Website e Blog
 
-O website e o blog de Rails Girls encontra-se hospedado em  http://railsgirls.com
+O website e o blog de Rails Girls encontra-se hospedado em http://railsgirls.com
 
 ## Lista de e-mail
 
@@ -105,9 +171,9 @@ A lista de e-mails de caráter global para os eventos de Rails Girls encontra-se
 
 ## Créditos
 
-* Karri Saarinen / [@karrisaarinen](https://twitter.com/karrisaarinen) / [github](http://github.com/ksaa)
-* Linda Liukas / [@lindaliukas](https://twitter.com/lindaliukas) / [github](http://github.com/lindaliukas)
-* Vesa Vänskä / [@vesan](https://twitter.com/vesan) / [github](http://github.com/vesan)
-* Terence Lee / [@hone02](https://twitter.com/hone02) / [github](http://github.com/hone)
+- Karri Saarinen / [@karrisaarinen](https://twitter.com/karrisaarinen) / [github](http://github.com/ksaa)
+- Linda Liukas / [@lindaliukas](https://twitter.com/lindaliukas) / [github](http://github.com/lindaliukas)
+- Vesa Vänskä / [@vesan](https://twitter.com/vesan) / [github](http://github.com/vesan)
+- Terence Lee / [@hone02](https://twitter.com/hone02) / [github](http://github.com/hone)
 
 ..e todos os coaches e pessoas envolvidas com o maravilhoso universo de Rails Girls. Seja mais um de nós!
