@@ -116,7 +116,7 @@ Após a aplicação ser criada, entre na pasta e inicie o servidor Rails.
 <pre>cd railsgirls</pre>
 <pre>rails s -b 0.0.0.0</pre>
 
-Agora é só acessar o navegador no endereço localhost indicando a porta para qual foi mapeada a porta 3000. Podendo ser http://localhost:32784 (Docker CE) ou http://192.168.99.100:32784 (Docker Toolbox).
+Agora é só acessar o navegador indicando a porta para qual foi mapeada a porta 3000. Podendo ser http://localhost:32784 (Docker CE) ou http://192.168.99.100:32784 (Docker Toolbox).
 
 ## Alguns erros que podem acontecer:
 
@@ -125,7 +125,7 @@ Na sua máquina virtual execute os seguintes comandos: <pre>bundle install</pre>
 
 2. Ao acessar por ssh a máquina, caso receba a mensagem de <i>“connection refused”</i>, execute o comando <pre>docker-machine ip</pre> para descobrir o IP da máquina virtual. Troque o localhost pelo IP correspondente.
 
-3. Ao executar o comando <pre>rails new railsgirls</pre> caso mostre a mensagem <i>“permission denied”</i> acesse a pasta <i>projects</i> e execute o seguinte <pre>sudo mkdir railsgirls</pre> posteriormente <pre>sudo chmod 777 railsgirls</pre> Execute novamente o comando <pre>rails new railsgirls</pre> sem problemas, pois o diretório já foi criado com a permissão certa de escrita.
+3. Ao executar o comando <pre>rails new railsgirls</pre> caso mostre a mensagem <i>“permission denied”</i> acesse a pasta <i>projects</i> e execute o seguinte <pre>sudo mkdir railsgirls</pre> posteriormente <pre>sudo chmod 777 railsgirls</pre> Execute novamente o comando <pre>rails new railsgirls</pre> agora sem problemas, pois o diretório já foi criado com a permissão certa de escrita.
 
 ## Comandos Docker úteis:
 
