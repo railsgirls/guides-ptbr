@@ -22,36 +22,38 @@ Abra o prompt de comando do seu sistema operacional e execute este comando para 
 
 <pre>docker --version</pre>
 
-Estando tudo certo vamos prosseguir com a configuração. O próximo passo é fazer o download da “máquina virtual” para a nossa real.
+Caso não mostre a versão do Docker como esperado, refaça o processo de instalação.
+
+Estando tudo certo vamos prosseguir com a configuração. O próximo passo é fazer o download da “máquina virtual”.
 
 <pre>docker pull jacksonpires/ubuntu-rails-ssh</pre>
 
-O comando acima fará o download da imagem jacksonpires/ubuntu-rails-ssh, criada pelo professor de Ruby on Rails chamado Jackson Pires. Esta imagem ficará disponível em seu computador logo depois que finalizado. Na sequência rode o seguinte comando:
+O comando acima fará o download da imagem <i>jacksonpires/ubuntu-rails-ssh</i>, que é uma máquina virtual criada pelo professor Jackson Pires. Na sequência rode o comando:
 
 <pre>docker run -d -P -v $(pwd):/projects --name railscontainer jacksonpires/ubuntu-rails-ssh</pre>
 
-Esse comando inicializará uma “máquina virtual” baseada na imagem que baixamos e também mapeará a pasta na qual você estiver para dentro do container. Sendo “$(pwd)” o caminho da pasta onde você criará seu projeto.  
+Esse comando inicializará uma “máquina virtual” baseada na imagem que baixamos e também mapeará a pasta na qual você estiver para dentro do container.  
 
-Lembrando que o primeiro caminho é da pasta na sua máquina real e o segundo é o caminho na “máquina virtual”.  
+Não é preciso alterar nada no comando, sendo o primeiro caminho o da pasta na sua máquina real e o segundo o caminho na “máquina virtual”.  
 
-Para que possamos acessar esta “máquina virtual” por SSH (porta 22) é necessário verificar qual a porta correspondente na máquina real. Para isso execute o seguinte comando:
+Para que possamos acessar esta “máquina virtual” por SSH (porta 22) é necessário verificar qual a porta correspondente na sua máquina. Para isso execute o seguinte comando:
 
 <pre>docker port railscontainer</pre>
 
-O retorno será algo como este do exemplo:
+O retorno será algo como este do exemplo, com exceção do número das portas em negrito que poderá sofrer alteração:
 
 <pre>
 22/tcp -> 0.0.0.0:<b>32785</b>
-3000/tcp -> 0.0.0.0:32784
+3000/tcp -> 0.0.0.0:<b>32784</b>
 </pre>
 
-Para acessar a máquina virtual, que é Ubuntu, você poderá utilizar o Git Bash e rodará o seguinte comando:
+Para acessar a máquina virtual, que é Ubuntu, você deverá sair do prompt de comando e abrir o Git Bash para executar o seguinte comando:
 
 <pre>ssh app@localhost -p <b>32785</b></pre>
 
-Perceba que o número da porta (em negrito) é o mesmo do equivalente a porta 22 na sua máquina (do comando anterior). Após a execução deste comando será solicitada uma senha e você deverá digitar “app” que é a senha padrão para esta máquina virtual.  
+Perceba que o número da porta (em negrito) é o mesmo do equivalente a porta 22 na sua máquina (do comando anterior). Após a execução deste comando será solicitada uma senha e você deverá digitar “app” que é a senha padrão para esta máquina virtual.
 
-Caso não tenha Git Bash instalado, poderá utilizar o [Putty](https://www.putty.org/) para fazer a conexão.  
+Para este último comando, caso não tenha Git Bash instalado, poderá utilizar o [Putty](https://www.putty.org/) para fazer a conexão.  
 
 ## Instruções Docker Toolbox
 
@@ -59,11 +61,13 @@ Abra o Docker Quickstart Terminal e execute o seguinte comando para verificar se
 
 <pre>docker --version</pre>
 
-Estando tudo certo vamos prosseguir com a configuração. O próximo passo é fazer o download da “máquina virtual” para a nossa real. Ainda neste terminal execute o seguinte comando:
+Caso não mostre a versão do Docker como esperado, refaça o processo de instalação.
+
+Estando tudo certo vamos prosseguir com a configuração. O próximo passo é fazer o download da “máquina virtual”.  
 
 <pre>docker pull jacksonpires/ubuntu-rails-ssh</pre>
 
-O comando acima fará o download da imagem jacksonpires/ubuntu-rails-ssh, criada pelo professor de Ruby on Rails chamado Jackson Pires. Esta imagem ficará disponível em seu computador logo depois que finalizado.  
+O comando acima fará o download da imagem <i>jacksonpires/ubuntu-rails-ssh</i>, que é uma máquina virtual criada pelo professor Jackson Pires.  
 
 Acesse pelo terminal a pasta em que deseja salvar seus projetos e execute o seguinte comando:
 
@@ -71,22 +75,24 @@ Acesse pelo terminal a pasta em que deseja salvar seus projetos e execute o segu
 
 Esse comando inicializará uma “máquina virtual” baseada na imagem que baixamos e também mapeará a pasta na qual você estiver para dentro do container.  
 
+Não é preciso alterar nada no comando, sendo o primeiro caminho o da pasta na sua máquina real e o segundo o caminho na “máquina virtual”.   
+
 Para que possamos acessar esta “máquina virtual” por SSH (porta 22) é necessário verificar qual a porta correspondente na máquina real. Para isso execute o seguinte comando:
 
 <pre>docker port railscontainer</pre>
 
-O retorno será algo como este do exemplo:
+O retorno será algo como este do exemplo, com exceção do número das portas em negrito que poderá sofrer alteração:
 
 <pre>
 22/tcp -> 0.0.0.0:<b>32785</b>
-3000/tcp -> 0.0.0.0:32784
+3000/tcp -> 0.0.0.0:<b>32784</b>
 </pre>
 
-Para acessar a máquina virtual, que é Ubuntu, você executará o seguinte comando:
+Para acessar a máquina virtual, que é Ubuntu, você executará o seguinte comando, alterando o número em negrito de acordo com os dados acima:
 
 <pre>ssh app@192.168.99.100 -p <b>32785</b></pre>
 
-Após a execução do comando acima será solicitada uma senha e você deverá digitar “app” que é a senha padrão para esta máquina virtual.
+Após a execução deste último comando será solicitada uma senha e você deverá digitar “app” que é a senha padrão para esta máquina virtual.
 
 ## Dentro da máquina virtual
 
