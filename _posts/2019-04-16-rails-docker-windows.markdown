@@ -7,8 +7,8 @@ permalink: rails-docker-windows
 # Tutorial de instalação do Rails com Docker no Windows
 
 Para desenvolver com Ruby on Rails é necessário configurar o ambiente de desenvolvimento em nosso computador. Se você usa Windows este processo pode se tornar complexo e desanimador.
-Este tutorial tem como objetivo tornar o processo de configuração mais rápido e fácil com a utilização de Docker.
-Já ouviu falar em Docker? Docker é tipo uma máquina virtual dentro da sua máquina real. Dessa forma você pode ter qualquer ambiente de desenvolvimento na sua máquina sem conflitos e horas de instalações.  
+Este tutorial tem como objetivo tornar o processo de configuração mais rápido e fácil com a utilização de Docker.  
+Já ouviu falar em Docker? Docker é tipo uma máquina virtual dentro da sua máquina real. Dessa forma você pode ter qualquer ambiente de desenvolvimento na sua máquina sem conflitos e dor de cabeça.  
 E como faço essa mágica acontecer? Primeiramente você precisará instalar o software do Docker na sua máquina. Existem duas versões, uma para Windows 10 (Pro ou Enterprise) e outra para Windows 10 Basic e Windows 8.  
 Utilize os links abaixo para efetuar o download de acordo com o seu sistema operacional:
 
