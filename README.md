@@ -68,12 +68,19 @@ Para entender melhor acesse essa [issue](https://github.com/railsgirls/guides-pt
 
 # Instruções para tradução da documentação do Rails Girls
 
+## Como fazer para colaborar?
+
+Primeiramente, você deve dar um [fork](http://help.github.com/fork-a-repo/) no projeto para a sua conta. Com isso, você estará livre para fazer as traduções para o português.
+
+Quando finalizar algo, você deve dar um [pull request](http://help.github.com/pull-requests/) neste repositório para o seu conteúdo ser revisado e aprovado. Com isso, a sua tradução estará no repositório principal e com os seus devidos créditos.
+
+No final do projeto, será lançado oficialmente o site Rails Girls Brasil e divulgado. Todos os colaboradores serão citados e terão seus créditos mantidos.
+
 ## Como posso me candidatar a realizar uma tradução?
 
 Basta conferir a aba de `Issues` de repositório, se encontrar alguma tradução que interesse, adicione um comentário que começou a trabalhar nessa tradução. Será feito o máximo possível para manter a aba atualizada :)
 
 **Contamos com a colaboração de todos pois o sucesso deste projeto depende de todos nós que gostamos de compartilhar conhecimentos**
-
 
 ## Como atualizar meu fork com as novas atualizações deste repositório?
 
@@ -85,7 +92,7 @@ Basta conferir a aba de `Issues` de repositório, se encontrar alguma tradução
 
 # PARTE 2
 
-# Rails Girls &#8212; Tutoriais
+# Rails Girls Tutoriais
 
 Nosso objetivo é fornecer ferramentas para que mulheres estudem e entendam a tecnologia Rails. Os eventos Rails Girls foram criados com a finalidade de proporcionar uma primeira experiência com as técnicas Rails de criação para a Internet.
 
