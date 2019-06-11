@@ -28,6 +28,8 @@ _Traduzido por Maujor, [site do Maujor](http://www.maujor.com)_
 
 - Interface onde você vai iniciar o servidor rails e executar comandos.
 
+- Este é um programa em seu computador que você pode acessar através de sua pesquisa Spotlight no Mac (procure por "Terminal"), ou procurando o "Prompt de comando" em seus programas no Windows.
+
 <h3><i class="icon-browser">&nbsp;</i></h3>
 
 ### Navegador web
@@ -357,13 +359,13 @@ mount_uploader :picture, PictureUploader
 Abra `app/views/ideas/_form.html.erb` e substitua:
 
 {% highlight erb %}
-<%= form.text_field :picture, id: :idea_picture %>
+<%= form.text_field :picture %>
 {% endhighlight %}
 
 por
 
 {% highlight erb %}
-<%= form.file_field :picture, id: :idea_picture %>
+<%= form.file_field :picture %>
 {% endhighlight %}
 
 Em alguns casos poderá ocorrer o erro `TypeError: can't cast ActionDispatch::Http::UploadedFile` to string.
@@ -438,7 +440,7 @@ rails generate controller pages info
 
 Este comando criará um novo diretório em `app/views` denominado `/pages` e dentro deste diretório um arquivo denominado `info.html.erb` que será a página de informações sobre você, o autor da aplicação.
 
-É também adicionado um novo caminho em routes.rb.
+É também adicionado um novo caminho em `config/routes.rb`.
 
 {% highlight ruby %}
 get "pages/info"
