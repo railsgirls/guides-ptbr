@@ -76,25 +76,12 @@ Quando finalizar algo, você deve dar um [pull request](http://help.github.com/p
 
 No final do projeto, será lançado oficialmente o site Rails Girls Brasil e divulgado. Todos os colaboradores serão citados e terão seus créditos mantidos.
 
-## Como saber se o que eu estou traduzindo não está sendo traduzido por alguém?
-
-A planilha com as traduções em aberto e aquelas sendo traduzidas, bem como os responsáveis está disponível no link a seguir:
-
-https://docs.google.com/spreadsheets/d/1Gn1BHxwdX3nHyiIDnY1L8ZdNuRJuNhPKli-uG9XWo9c/edit?usp=sharing
 
 ## Como posso me candidatar a realizar uma tradução?
 
 Basta conferir a aba de `Issues` de repositório, se encontrar alguma tradução que interesse, adicione um comentário que começou a trabalhar nessa tradução. Será feito o máximo possível para manter a aba atualizada :)
 
 **Contamos com a colaboração de todos pois o sucesso deste projeto depende de todos nós que gostamos de compartilhar conhecimentos**
-
-## Regras de tradução!
-
-* Tudo o que não for palavra reservada (e.g. variáveis, nomes de classes), traduzir para o português;
-
-* As referências a `COACH` serão traduzidos como `INSTRUTOR(A)`;
-
-* Se existir algum problema de clareza e compreensão a cerca do que está na versão original, corrigir no momento da tradução (é legal abrir um PR no guia em EN pra corrigir lá também);
 
 ## Como atualizar meu fork com as novas atualizações deste repositório?
 
@@ -106,7 +93,7 @@ Basta conferir a aba de `Issues` de repositório, se encontrar alguma tradução
 
 # PARTE 2
 
-# Rails Girls &#8212; Tutoriais
+# Rails Girls Tutoriais
 
 Nosso objetivo é fornecer ferramentas para que mulheres estudem e entendam a tecnologia Rails. Os eventos Rails Girls foram criados com a finalidade de proporcionar uma primeira experiência com as técnicas Rails de criação para a Internet.
 
