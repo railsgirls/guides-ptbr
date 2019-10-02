@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Continuous Deployment - cuz less hassle
+title: Deploy Contínuo com Snap CI
 permalink: continuous-snap-ci
 ---
 
@@ -8,7 +8,9 @@ permalink: continuous-snap-ci
 
 *Criado por Akshay Karle, [@akshay_karle](https://twitter.com/akshay_karle)*
 
-### O que é essa coisa de Deploy Contínuo?
+Traduzido por Giovana Morais, [@ohshitgi](https://twitterl.com/ohshitgi)
+
+### O que é Deploy Contínuo?
 
 O deploy contínuo, ou melhor, implantação contínua é parte do "movimento" de
 entrega contínua. A ideia por trás da entrega contínua é a de automatizar o
@@ -30,7 +32,7 @@ __INSTRUTOR(A)__: Fale sobre os benefícios da implantação contínua.
 
 Primeiro, você vai precisar de [uma conta do Snap CI](https://snap-ci.com/).
 Se inscreva no Snap CI com sua conta do GitHub. O Snap CI precisa ter acesso aos seus
-repositórios para conseguir arrumar os ambientes, então certifique-se de que
+repositórios para conseguir configurar os ambientes, então certifique-se de que
 você está permitindo isso.
 
 De volta ao Snap CI, vamos criar nosso primeiro pipeline. O primeiro passo é
@@ -50,22 +52,22 @@ Snap CI pra ver que tipo de comandos ele roda.
 
 Existe, contudo, a possiblidade de o Snap CI não conseguir detectar os comandos
 certos pra fazer o <em lang="en">build</em> e testar o seu repositório. Nesses casos, você pode editar
-as configurações do seu pipeline visitando a página de Configurations
-(Configurações) na página de Builds do seu recém-criado pipeline, por fim
-acessando a opção "Edit" (Editar). Nessa opção, você pode adicionar ou editar
+as configurações do seu pipeline visitando a página de configurações
+(Configurations) na página de Builds do seu recém-criado pipeline, por fim
+acessando a opção de edição (Edit). Nessa opção, você pode adicionar ou editar
 um estágio existente que vai fazer o <em lang="en">build</em> rodar todos os testes da sua
 aplicação.
 
 Se você não tem certeza dos estágios que deve adicionar, você pode dar uma
-olhada nas diferentes receitas de Build que ficam na sub-categoria Ruby quando
-você vai adicionar um estágio. Essas receitas podem te ajudar a entender que
+olhada nas diferentes configurações de Build que ficam na sub-categoria Ruby quando
+você vai adicionar um estágio. Essas configurações podem te ajudar a entender que
 tipo de comando devem ser rodados para fazer o <em lang="en">build</em> e testar sua aplicação
 corretamente. Você também pode checar o
 [getting started guide](https://docs.snap-ci.com/getting-started/) (guia para
 começar) na documentação do Snap CI.
 
 Uma vez que você terminou de editar a sua configuração de pipeline, clique em
-"Save". Isso vai salvar suas configurações e automaticamente iniciar um novo
+Salvar (Save). Isso vai salvar suas configurações e automaticamente iniciar um novo
 <em lang="en">build</em>. Se todos os seus testes passaram corretamente, você agora deve ter um
 <em lang="en">build</em> verde.
 
@@ -89,7 +91,7 @@ realizar essa tarefa, mas, por agora, vamos focar em como implantar no
 
 Vá até a página de edição de configuração do seu pipeline e adicione um novo
 estágio (Stage). Dessa vez, selecione a categoria "Deploy" disponível nas
-receitas à esquerda. Depois, selecione a receite "Basic" na sub-categoria
+configurações à esquerda. Depois, selecione a receite "Basic" na sub-categoria
 "Heroku".
 
 Escolha e digite um nome de estágio de sua escolha (ex: deploy, implantacao,
