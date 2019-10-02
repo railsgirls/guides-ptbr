@@ -15,7 +15,7 @@ Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Ra
 
 **Instrutor(a):** Falar sobre a relação entre HTML e Rails. Qual parte dos views é HTML e qual é Embedded Ruby (ERB)? O que é MVC e como se relaciona com isso? (Models e controllers são responsáveis em gerar os views em HTML.)
 
-O App ainda não está com uma aparência boa. Vamos fazer algo sobre isso. Nós usaremos o projeto Twitter Bootstrap para nos fornecer um estilo melhor com muita facilidade.
+A aplicação ainda não está com uma aparência boa. Vamos fazer algo sobre isso. Nós usaremos o projeto Twitter Bootstrap para nos fornecer um estilo melhor com muita facilidade.
 
 Abra o arquivo `app/views/layouts/application.html.erb` no seu editor de texto e acima desta linha
 
@@ -97,12 +97,12 @@ Caso seu Terminal mostre uma mensagem de erro que _mais ou menos_ insinua que h�
 
 - coloque o seguinte código no final do `app/assets/stylesheets/application.css`:
 
-  ```css
-    .navbar {
-      min-height: 38px;
-      background-color: #f55e55;
-    }
-  ```
+{% highlight css %}
+.navbar {
+  min-height: 38px;
+  background-color: #f55e55;
+}
+{% endhighlight %}
 
   Agora atualize a página e confira as mudanças. Você pode tentar mudar a cor ou a fonte do header. Você pode verificar a referência de cores do [http://color.uisdc.com/](http://color.uisdc.com/).
 
@@ -110,48 +110,48 @@ Caso seu Terminal mostre uma mensagem de erro que _mais ou menos_ insinua que h�
 
 - Em seguida, coloque estas linhas no final:
 
-  ```css
-    .navbar a.brand { font-size: 18px; }
-    .navbar a.brand:hover {
-      color: #fff;
-      background-color: transparent;
-      text-decoration: none;
-    }
-  ```
+{% highlight css %}
+.navbar a.brand { font-size: 18px; }
+.navbar a.brand:hover {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+}
+{% endhighlight %}
 
   **Instrutor(a):** explique os 4 estados de um link
 
 2.Eslitize sua tabela
 
-- Simplesmente usaremos o Twitter [Bootstrap](http://getbootstrap.com/) para aperfeiçoar nossa tabela, ache esta linha do `app/views/places/index.html.erb` e substitua:
+- Novamente usaremos o Twitter [Bootstrap](http://getbootstrap.com/) para aperfeiçoar nossa tabela, ache esta linha do `app/views/places/index.html.erb` e substitua:
 
-  ```html
-  <table>
-  ```
+{% highlight html %}
+<table>
+{% endhighlight %}
 
   com
 
-  ```html
-  <table class="table">
-  ```
+{% highlight html %}
+<table class="table">
+{% endhighlight %}
 
 - Modifique o tamanho da imagem utilizando as seguintes linhas
 
-  ```erb
-  <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
-  ```
+{% highlight erb %}
+<%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
+{% endhighlight %}
 
   tente mudar a largura (width) e veja o que vai acontecer
 
 * adicione as seguintes linhas no final do arquivo `app/assets/stylesheets/places.css.scss`:
 
-  ```css
-    .container a:hover {
-      color: #f55e55;
-      text-decoration: none;
-      background-color: rgba(255, 255, 255, 0);
-    }
-  ```
+{% highlight css %}
+.container a:hover {
+  color: #f55e55;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+{% endhighlight %}
 
 - tente adicionar algum estilo de fundo com a propriedade `background-image`, use como referência o [http://subtlepatterns.com/](http://subtlepatterns.com/) para algumas texturas.
 
@@ -159,14 +159,14 @@ Caso seu Terminal mostre uma mensagem de erro que _mais ou menos_ insinua que h�
 
 - adicione estas linhas no final do `app/assets/stylesheets/application.css`
 
-  ```css
-    footer {
-      background-color: #ebebeb;
-      padding: 30px 0;
-    }
-  ```
+{% highlight css %}
+footer {
+  background-color: #ebebeb;
+  padding: 30px 0;
+}
+{% endhighlight %}
 
-  tente colocar mais coisas no `footer` e ajuste sua posição
+  tente colocar mais informações no `footer` e ajuste sua posição
 
 4.Adicione estilo no botão
 
@@ -174,15 +174,15 @@ Caso seu Terminal mostre uma mensagem de erro que _mais ou menos_ insinua que h�
 
   adicione estas linhas no `app/assets/stylesheets/places.css.scss`
 
-  ```css
-  .container input[type="submit"] {
-    height: 30px;
-    font-size: 13px;
-    background-color: #f55e55;
-    border: none;
-    color: #fff;
-  }
-  ```
+{% highlight css %}
+.container input[type="submit"] {
+  height: 30px;
+  font-size: 13px;
+  background-color: #f55e55;
+  border: none;
+  color: #fff;
+}
+{% endhighlight %}
 
   **Instrutor(a):** explicar como usar `border` em css, tente modificar o estilo do botão como arredondar cantos, adicionar sombra ou cor, etc.
 
@@ -265,7 +265,7 @@ Abra `app/views/places/index.html.erb` no seu editor de texto e substitua a tabl
 
 **Instrutor(a):** Explica o que o novo código faz linha por linha, e fale um pouco sobre o grids layout do Bootstrap 12.
 
-Atualize! Nós temos uma lista de ideias bonita. Clique no botão "Nova Ideia" e cria mais ideias com texto reais imagens bonitas - a página vai parecer muito melhor com conteúdo. Existe um princípo de web design contemporâne: conteúdo é a melhor decoração.
+Atualize novamente a página! Nós temos uma lista de ideias bonita. Clique no botão "Nova Ideia" e cria mais ideias com texto reais imagens bonitas - a página vai parecer muito melhor com conteúdo. Existe um princípo de web design contemporâneo: conteúdo é a melhor decoração.
 
 Clique no título do lugar e você será direcionado para a página de detalhes do lugar. Agora ainda é um scaffold gerado pelo Rails, portanto vamos fazer isso melhor.
 
