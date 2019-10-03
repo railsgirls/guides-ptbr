@@ -10,6 +10,8 @@ permalink: testing-rspec
 
 *Traduzido por Marina Limeira, [@marinalimeira_](https://www.twitter.com/marinalimeira_)*
 
+*Atualizado por Ana Schwendler, [@anaschwendler](https://twitter.com/anaschwendler)*
+
 **Esse guia assume que você já criou a app RailsGirls como mostrado no** [**tutorial para criação da app Rails Girls**](/app).
 
 [RSpec](https://github.com/rspec/rspec-rails) é um framework para testes em Ruby, que descreve o comportamento da nossa aplicação em uma sintaxe que não se parece muito com Ruby. Ele irá mostrar o resultado dos testes no seu terminal, então você testará suas habilidades de leitura também.
@@ -18,35 +20,20 @@ __INSTRUTOR(A)__: Fale sobre testes e Desenvolvimento Guiado por Comportamento (
 
 ## *1.* Adicione a gem RSpec
 
-Abra o seu `Gemfile` e adicione esta linha aos grupos`: development` e `: test`, acima da tag final:
+Abra o seu `Gemfile` e adicione esta linha aos grupos`:development` e `:test`, acima da tag final:
 
-{% highlight sh %}
+{% highlight ruby %}
 group :development, :test do
   ...
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 3.8'
 end
 {% endhighlight %}
 
-e rode
-
-{% highlight sh %}
-bundle install
-{% endhighlight %}
-
-para instalar a gem.
-
-Em seguida, crie o diretório `spec /` dentro do seu aplicativo:
-
-{% highlight sh %}
-mkdir spec/
-{% endhighlight %}
-
-O diretório `spec /` é onde seus testes irão ficar. Finalmente, execute o seguinte comando:
+Em seguida, rode o seguinte comando, para gerar as pastas do rspec:
 
 {% highlight sh %}
 rails generate rspec:install
 {% endhighlight %}
-
 
 Isso adiciona os seguintes arquivos usados para configuração:
 
@@ -61,7 +48,7 @@ Para fazer isso, execute as seguintes passos:
 
 Vamos criar um teste para o nosso modelo `idea`, para fazer isso de maneira elegante em Rails:
 
-* Crie uma pasta `models` na sua pasta` spec`, rodando no terminal:
+* Crie uma pasta `models` na sua pasta `spec`, rodando no terminal:
 {% highlight sh %}
 mkdir spec/models
 {% endhighlight %}
@@ -145,6 +132,6 @@ Você consegue completar este teste? Você consegue pensar em outros testes?
 __INSTRUTOR(A)__: Fale um pouco sobre Desenvolvimento Guiado por Comportamento (BDD).
 
 Agora você pode criar mais testes sozinho.
-Sinta-se à vontade para falar com o seu treinador para fazer isso ou maneiras de criar mais testes.
+Sinta-se à vontade para falar com o seu instrutor para fazer isso ou maneiras de criar mais testes.
 
 Feliz testes!
