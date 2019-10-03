@@ -29,7 +29,7 @@ group :development, :test do
 end
 {% endhighlight %}
 
-Em seguida, rode o seguinte comando, para gerar as pastas do rspec:
+Em seguida, rode o comando abaixo para gerar as pastas do rspec:
 
 {% highlight sh %}
 rails generate rspec:install
