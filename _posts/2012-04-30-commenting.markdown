@@ -21,14 +21,14 @@ rails g scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
 Esta ação criará um arquivo de migração que permitirá ao banco de dados conhecer a nova tabela de comentários.  A seguir migre as alterações feitas no banco de dados digitando no terminal o seguinte:
 {% highlight sh %}
-rake db:migrate
+rails db:migrate
 {% endhighlight %}
 
 ## *2.*Adicione relacionamentos aos modelos
 
-Você precisa assegurar que Rails seja capaz de identificar a conexão entre objetos (ideas e comentários). De vez que uma idea pode ter vários comentários precisamos assegurar que o modelo ideas sabe disso. Abra app/models/idea.rb e logo após a linha:
+Você precisa assegurar que Rails seja capaz de identificar a conexão entre objetos (ideas e comentários). De vez que uma idea pode ter vários comentários precisamos assegurar que o modelo ideas sabe disso. Abra `app/models/idea.rb` e logo após a linha:
 {% highlight ruby %}
-class Idea &lt; ActiveRecord::Base
+class Idea < ApplicationRecord
 {% endhighlight %}
 acrescente o seguinte:
 {% highlight ruby %}
@@ -37,7 +37,7 @@ has_many :comments
 
  Um comentário precisa saber que ele pertence a uma idea. Assim, abra `app/models/comment.rb` e logo após a linha:
 {% highlight ruby %}
-class Comment < ActiveRecord::Base
+class Comment < ApplicationRecord
 {% endhighlight %}
 
 acrescente a seguinte linha:
@@ -47,7 +47,7 @@ belongs_to :idea
 
 ## *3.*Mostrar o formulário de comentários e os comentários existentes
 
-Abra app/views/ideas/show.html.erb é depois da tag de imagem (image_tag)
+Abra `app/views/ideas/show.html.erb` é depois da tag de imagem (image_tag)
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 {% endhighlight %}
@@ -58,12 +58,12 @@ acrescente a seguinte linha:
 <% @comments.each do |comment| %>
   <div>
     <strong><%= comment.user_name %></strong>
-    <br />
+    <br>
     <p><%= comment.body %></p>
     <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Tem certeza?' } %></p>
   </div>
 <% end %>
-<%= render 'comments/form' %>
+<%= render partial: 'comments/form', locals: { comment: @comment } %>
 {% endhighlight %}
 
 Em `app/controllers/ideas_controller.rb` acrescente a ação mostrar logo após a linha:
@@ -75,21 +75,21 @@ Em `app/controllers/ideas_controller.rb` acrescente a ação mostrar logo após 
 Abra `app/views/comments/_form.html.erb` e logo após a linha:
 {% highlight erb %}
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= form.label :body %><br>
+    <%= form.text_area :body, id: :comment_body %>
   </div>
 {% endhighlight %}
 
 acrescente a seguinte linha:
 {% highlight erb %}
-<%= f.hidden_field :idea_id %>
+<%= form.hidden_field :idea_id %>
 {% endhighlight %}
 
 a seguir remova
 {% highlight erb %}
 <div class="field">
-  <%= f.label :idea_id %><br>
-  <%= f.number_field :idea_id %>
+  <%= form.label :idea_id %><br>
+  <%= form.number_field :idea_id %>
 </div>
 {% endhighlight %}
 
