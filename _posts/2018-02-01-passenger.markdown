@@ -14,9 +14,9 @@ _Traduzido por Frankyston Lins, [@frankyston](https://twitter.com/frankyston)_
 
 Certifique-se de seguir o [Coloque seu App no GitHub][github-guide] antes de continuar.
 
-Este guia é para facilitar o desenvolvimento de seu aplicativo (você sabe, a funcionalidade de adição e, em seguida vamos verificar se ele realmente funciona), com o Passenger. O framework Ruby on Rails fornece uma ferramenta de servidor embutida, que você pode acessar com o comando `rails server`. O "servidor rails" não é um servidor de aplicativos sozinho, mas apenas um pequeno wrapper que inicia seu aplicativo em um servidor de aplicativos. As pessoas não usam o "servidor rails" em produção (onde outras pessoas podem acessar e usar seu aplicativo). Eles usam um servidor de aplicativos, como o Passenger.
+Este guia é para facilitar o desenvolvimento de seu aplicativo (você sabe, a funcionalidade de adição e, em seguida vamos verificar se ele realmente funciona), com o Passenger. O framework Ruby on Rails fornece uma ferramenta de servidor embutida, que você pode acessar com o comando `rails server`. O "servidor rails" não é um servidor de aplicativos sozinho, mas apenas um pequeno wrapper que inicia seu aplicativo em um servidor de aplicativos. As pessoas não usam o "servidor rails" em produção (onde outras pessoas podem acessar e usar seu aplicativo) e sim um servidor de aplicativos, como o Passenger.
 
-**INSTRUTOR(A)**:O Passenger é um servidor de aplicativos da Web de software livre. Ele lida com solicitações HTTP, gerencia processos e recursos e permite administração, monitoramento e diagnóstico de problemas. Para os grandes desenvolvedores, também há uma edição empresarial.
+**INSTRUTOR(A)**: O Passenger é um servidor de aplicativos da Web de código aberto. Ele lida com solicitações HTTP, gerencia processos e recursos e permite administração, monitoramento e diagnóstico de problemas. Para os grandes desenvolvedores, também há uma edição empresarial.
 
 [github-guide]: http://guides.railsgirls.com/github
 
@@ -30,8 +30,9 @@ Abra o `Gemfile` do seu app e adicione o "passenger":
 gem "passenger"
 {% endhighlight %}
 
-By adding Passenger to your Gemfile, `rails server` will launch Passenger instead of Puma.
-You get virtual bonus points from the Phusion Passenger team for deleting the following lines (if present at all in your Gemfile):
+Adicionando o Passenger no Gemfile, o comando `rails server` iniciará o Passenger no lugar do Puma. 
+
+Você recebe pontos de bônus virtuais da equipe do Phusion Passenger por excluir as seguintes linhas (caso estejam presentes no seu Gemfile):
 
 {% highlight ruby %}
 gem "unicorn"
