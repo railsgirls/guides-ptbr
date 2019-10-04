@@ -9,11 +9,13 @@ permalink: commenting
 
 *Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
 
+*Atualizado por Tayllan, [@mtayllan](https://github.com/mtayllan)*
+
 Vamos aprender como criar uma área de comentários para nossa app *railsgirls* ideas.
 
 As instruções para criar a app foram descritas [neste documento](/app).
 
-## *1.*Criando o scaffold para a área de comentários
+## _1._ Criando o scaffold para a área de comentários
 
 Crie o scaffold para a área de comentários fazendo nele constar o nome de quem comenta, o corpo do comentário (conteúdo do comentário) e uma referência para a tabela ideas (`idea_id`).
 {% highlight sh %}
@@ -24,7 +26,7 @@ Esta ação criará um arquivo de migração que permitirá ao banco de dados co
 rails db:migrate
 {% endhighlight %}
 
-## *2.*Adicione relacionamentos aos modelos
+## _2._ Adicione relacionamentos aos modelos
 
 Você precisa assegurar que Rails seja capaz de identificar a conexão entre objetos (ideas e comentários). De vez que uma idea pode ter vários comentários precisamos assegurar que o modelo ideas sabe disso. Abra `app/models/idea.rb` e logo após a linha:
 {% highlight ruby %}
@@ -45,7 +47,7 @@ acrescente a seguinte linha:
 belongs_to :idea
 {% endhighlight %}
 
-## *3.*Mostrar o formulário de comentários e os comentários existentes
+## _3._ Mostrar o formulário de comentários e os comentários existentes
 
 Abra `app/views/ideas/show.html.erb` é depois da tag de imagem (image_tag)
 {% highlight erb %}
