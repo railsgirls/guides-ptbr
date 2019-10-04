@@ -1,6 +1,6 @@
 ---
 layout: default
-título: App para turismo de autismo amigável
+title: App para turismo de autismo amigável
 permalink: touristic-autism_continuous-deployment
 ---
 
@@ -22,16 +22,15 @@ OpenShift é um dos serviços de deploy em nuvem que oferecem tais ferramentas. 
 
 [Criar uma conta no OpenShift](https://openshift.redhat.com/app/account/new?web_user[promo_code]=railsgirls), nos permite colocar 3 aplicações online de graça. Após entrar com sua conta, instale o OpenShift RHC Client Tools (Ferramentas do Cliente RHC OpenShift) adicionando a gema rhc no ambiente de produção. Adicione o seguinte código para o arquivo Gemfiile (que é escrito em Ruby ndr):
 
-<div class="os-specific">
+{% highlight ruby %}
   <div class="nix">
-    {% highlight sh %}
-      group :production do
-        gem 'rhc'
-      end
-    {% endhighlight %}
+        group :production do
+          gem 'rhc'
+        end
+  {% endhighlight %}
   </div>
-  
-</div>
+
+
 Se você não está usando o RVM ou o RailsInstaller então siga [esse guia](https://www.openshift.com/developers/rhc-client-tools-install)
 (você talvez precise executar o comando `sudo gem install rhc`).
 
@@ -92,7 +91,7 @@ gem 'rails_12factor', :group => [:production]
 </div>
 Agora faça um bundle excluíndo as gemas em produção.
 
-Em algumas plataformas, isso pode gerar versões de plataformas específicas das suas Gems o que pode causar problemas quando você colocar seu app na nuvem. Para prevenir isso, abra o seu arquivo Gemfile.lock e cheque as versões das Gems `sqlite3` e `pg`. Se elas possuem um sufixo específico de plataforma como -x86mingw32, remova-os (por exemplo troque pg (0.16.0-x86-mingw32) para pg (0.16.0) e sqlite3 (1.3.8-x86-mingw32) para sqlite3 (1.3.8)).
+Em algumas plataformas, isso pode gerar versões de plataformas específicas das suas Gems o que pode causar problemas quando você colocar seu app na nuvem. Para prevenir isso, abra o seu arquivo Gemfile.lock e cheque as versões das Gems `sqlite3` e `pg`. Se elas possuem um sufixo específico de plataforma como `-x86mingw32`, remova-os (por exemplo troque `pg (0.16.0-x86-mingw32)` para `pg (0.16.0)` e `sqlite3 (1.3.8-x86-mingw32)` para `sqlite3 (1.3.8)`).
 Salve e feche o arquivo, então rode o comando de bundle novamente antes de prosseguir.
 
 Adicione e realize o commit dessas mudanças no Git!
