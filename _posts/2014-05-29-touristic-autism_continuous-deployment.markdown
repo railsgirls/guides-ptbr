@@ -1,38 +1,40 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App 
+title: App para turismo de autismo amigável
 permalink: touristic-autism_continuous-deployment
 ---
 
-# Continuous Deployment
+# Deploy Contínuo
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
-
-
-
-We’re going to deploy our (still-empty) Rails application to production. Deploying early and often allows us to catch any deployment problems early in our development cycle or else there could be troubles during the integration phases.
-Several shared hosts, virtual private servers, full-service deployment companies and cloud deployment services all provide facilities that makes it very easy to deploy Rails applications.
-
-OpenShift is one of the cloud deployment services offering such facilities. It is a cloud computing Platform as a Service (PaaS) that makes it easy to deploy apps online. It is open source and written in Ruby.
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+Os guias básicos que foram unidos e adaptados são o [Tutorial de Ruby on Rails](http://www.railstutorial.org/book), o [RailsGirls app básico](http://guides.railsgirls.com/app/) e os tutorias para [criar thumbnails](http://guides.railsgirls.com/thumbnails), [autenticar usuários](http://guides.railsgirls.com/devise/), [adicionar design](http://guides.railsgirls.com/design), [deploy ao OpenShift](http://guides.railsgirls.com/openshift/) e [adicionar comentários](http://guides.railsgirls.com/commenting).
+Traduzido por Renan Muliterno, [rmuliterno](https://github.com/rmuliterno).
 
 
 
-[Create an OpenShift Online account](https://openshift.redhat.com/app/account/new?web_user[promo_code]=railsgirls), which allows you to put three apps online for free. Once you are signed up, install the OpenShift RHC Client Tools by adding the rhc gem in the production environment. Add the following to the Gemfiile (which is written in Ruby ndr):
+Nós iremos realizar o deploy da nossa(ainda vazia) aplicação Rails, para produção. Realizar o deploy cedo e com frequência nos permite captar problemas de deploy no começo do nosso ciclo de desenvolvimento, caso contrário podemos ter problemas durante a fase de integração.
+Vários hosts compartilhados, servidores virtuais privados, empresas de deploy de serviços inteiros e serviços de deploy em nuvem, todos fornecem ferramentas que facilitam o deploy de aplicações Rails.
 
-<div class="os-specific">
+OpenShift é um dos serviços de deploy em nuvem que oferecem tais ferramentas. É uma plataforma de computação em nuvem como um serviço (Paas) que facilita o deploy de aplicativos online. É de código aberto e escrito em Ruby.
+
+
+
+[Criar uma conta no OpenShift](https://openshift.redhat.com/app/account/new?web_user[promo_code]=railsgirls), nos permite colocar 3 aplicações online de graça. Após entrar com sua conta, instale o OpenShift RHC Client Tools (Ferramentas do Cliente RHC OpenShift) adicionando a gema rhc no ambiente de produção. Adicione o seguinte código para o arquivo Gemfiile (que é escrito em Ruby ndr):
+
+{% highlight ruby %}
   <div class="nix">
-    {% highlight sh %}
-      group :production do
-        gem 'rhc'
-      end
-{% endhighlight %}
+        group :production do
+          gem 'rhc'
+        end
+  {% endhighlight %}
   </div>
-If you are not using RVM or RailsInstaller then follow [this guide](https://www.openshift.com/developers/rhc-client-tools-install) (you may need to do "sudo gem install rhc").
-</div>
 
-Then run in the terminal:
+
+Se você não está usando o RVM ou o RailsInstaller então siga [esse guia](https://www.openshift.com/developers/rhc-client-tools-install)
+(você talvez precise executar o comando `sudo gem install rhc`).
+
+Então rode no terminal:
 
 <div class="os-specific">
   <div class="nix">
@@ -41,17 +43,17 @@ Then run in the terminal:
   rhc setup
 {% endhighlight %}
   </div>
-The --without production option prevents the local installation of any production gems. 
-
-If Bundler complains about a readline error, try adding gem ’rb-readline’ to your Gemfile.
-
-Because the only gems we’ve added are restricted to a production environment, right now this command doesn’t actually install any additional local gems, but it’s needed to update Gemfile.lock. Now, let's commit these changes to GitHub!
 </div>
+A opção `--without production` previne a instalação local de alguma gema de produção.
 
-**Instrutor(a):** Explain the benefits of deploying to a PaaS such as OpenShift, as opposed to traditional servers. What "production" means. Discuss SSH and why we need to upload a public key to communicate securely.
-[Slides by Gerry Kavanagh @gerryk]()
+Se o Bundler mostrar algum erro na leitura, tente adicionar gem `rb-readline` para o seu Gemfile.
 
-Navigate to the "projects" folder. Run in the prompt:
+Como as únicas gemas que nós adicionamos estão restritas à um ambiente de produção, no momento esse comando não instala nenhuma gema local adicional, mas esse comando é necessário para atualizar o arquivo `Gemfile.lock`. Agora, vamos realizar o commit dessas alterações ao GitHub!
+
+**Instrutor(a):** Explique os benefícios do deploy em um PaaS, como o OpenShift, ao invés de servidores tradicionais. O que "produção" quer dizer. Falar sobre SSH e por quê temos que subir uma chave pública para realizar comunicações com segurança.
+[Slides por Gerry Kavanagh @gerryk]()
+
+Navegue para a pasta `projects`. Rode no prompt:
 
 <div class="os-specific">
   <div class="nix">
@@ -61,7 +63,8 @@ rhc app create openshiftapp ruby-1.9 postgresql-9.2 --from-code=https://github.c
   </div>
 </div>
 
-We need the .openshift directory and config/database.yml file from the sample application in order for our Rails app to run on OpenShift. Copy these from the openshiftapp directory to the railsgirls directory.
+Precisamos do diretório `.openshift` e do arquivo `config/database.yml` da aplicação de exemplo para o nosso app em Rails rodar no OpenShift.
+Copie isso do diretório `openshiftapp` para o diretório `railsgirls`.
 
 <div class="os-specific">
   <div class="nix">
@@ -71,10 +74,11 @@ cp -r ../openshiftapp/.openshift .
 cp ../openshiftapp/config/database.yml config
 {% endhighlight %}
   </div>
-Now add and commit in Git the new changes!
+Agora adicione e realize o commit dessas mudanças no Git!
 </div>
 
-OpenShift uses the PostgreSQL database, which means that we need to add the pg gem in the production environment to allow Rails to talk to Postgres. Note also the addition of the rails_12factor gem, which is used to serve static assets such as images and stylesheets. Substitute "gem sqlite" in Gemfile with the following:
+OpenShift usa o banco de dados PostgresSQL, o que significa que devemos adicionar a gema `pg` no ambiente de produção para permitir que o Rails se comunique com o Postgres. Note, também, a adição da gema `rails_12factor`, que é usada para servir recursos estáticos como imagens e folhas de estilo.
+Substitua `gem sqlite` no Gemfile com o seguinte código:
 
 <div class="os-specific">
   <div class="nix">
@@ -84,17 +88,18 @@ gem 'pg', :group => [:production]
 gem 'rails_12factor', :group => [:production]
 {% endhighlight %}
   </div>
-Now do a bundle excluding the gems in production. 
-
-On some platforms, this may generate platform-specific versions of your Gems that cause issues when you push your app to the cloud. To prevent this, open your Gemfile.lock file and check the versions of the ‘sqlite3’ and ‘pg’ Gems. If they have a platform-specific suffix, such as -x86-mingw32, remove this (eg. change pg (0.16.0-x86-mingw32) to pg (0.16.0) and sqlite3 (1.3.8-x86-mingw32) to sqlite3 (1.3.8)). Save and close the file, and run the above bundle command again before continuing.
-
-Add and commit your changes in Git
 </div>
+Agora faça um bundle excluíndo as gemas em produção.
 
-**Instrutor(a):** Talk about relational databases and the differences between SQLite and PostgreSQL.
+Em algumas plataformas, isso pode gerar versões de plataformas específicas das suas Gems o que pode causar problemas quando você colocar seu app na nuvem. Para prevenir isso, abra o seu arquivo Gemfile.lock e cheque as versões das Gems `sqlite3` e `pg`. Se elas possuem um sufixo específico de plataforma como `-x86mingw32`, remova-os (por exemplo troque `pg (0.16.0-x86-mingw32)` para `pg (0.16.0)` e `sqlite3 (1.3.8-x86-mingw32)` para `sqlite3 (1.3.8)`).
+Salve e feche o arquivo, então rode o comando de bundle novamente antes de prosseguir.
+
+Adicione e realize o commit dessas mudanças no Git!
+
+**Instrutor(a):** Fale sobre banco de dados relacionais e as diferenças entre o SQLite e o PostgreSQL
 
 
-We are now ready to deploy the Rails Girls app to OpenShift. We need to tell our Git repository where to push the code. To get the location of your OpenShift code repository, run the following command, and copy the Git URL from the output.
+Agora estamos prontos para fazer o deploy do app Rails Girls para o OpenShift. Nós precisamos especificar para o nosso repositório Git aonde enviar o código. Para pegar a localização do seu repositório OpenShift, rode o seguinte comando e copie a URL do Git da resposta.
 
 <div class="os-specific">
   <div class="nix">
@@ -104,7 +109,7 @@ We are now ready to deploy the Rails Girls app to OpenShift. We need to tell our
   </div>
 </div>
 
-Now run the following commands, replacing the SSH string with your Git URL. We are using ‘-f’ for force here because we are happy to wipe away the history of the current OpenShift repository, which contains the sample Rails app. When you are pushing future changes, you can just use ‘git push’.
+Agora rode os seguintes comandos, trocando a string SSH com o seu URL do Git. Estamos usando `-f` para forçar porque é bom limpar o histórico do atual repositório OpenShift, que contém o app Rails de exemplo. Ao enviar mudanças futuras, poderá apenas usar um `git push`.
 
 <div class="os-specific">
   <div class="nix">
@@ -113,10 +118,13 @@ git remote add openshift ssh://5387bff65973cadf3c000323@openshiftapp-railsgirlsg
 git push -f --set-upstream openshift master
 {% endhighlight %}
   </div>
-Refresh the app in your browser to see the result.
-If the app fails to visualize (500 Internal Server Error) often (error from the rhc tail openshiftapp : "Missing `secret_key_base` for 'production' environment, set this value in `config/secrets.yml`") the following solves. 
-Get a secret with "rake secret" assign it to the environment variable 'SECRET_KEY_BASE' and export the variable to ~/.bash_profile.
-OpenShift (but also Heroku) needs to serve static assets like images and CSS:
+</div>
+Reinicie o app no seu navegador para ver o resultado.
+Se o app falhar (500 Internal Server Error) ou, geralmente (error from the rhc tail openshiftapp : "Missing `secret_key_base` for 'production' environment, set this value in `config/secrets.yml`").
+
+O seguinte vai resolver:
+Pegue um segredo com o `rake secret` e o designe para a variável de ambiente `SECRET_KEY_BASE` e exporte a variável para `~/.bash_profile`.
+O OpenShift (o Heroku também) precisa servir recursos estáticos como imagens e CSS:
 
 <div class="os-specific">
   <div class="nix">
@@ -127,13 +135,13 @@ $ git commit -am "Add precompiled assets for OpenShift"
 git push -f --set-upstream openshift master
 {% endhighlight %}
   </div>
-To be used only if OpenShift fails without it. We'll cover "rake" and "assets" later on.
-</div>
-</div>
 
-When we push a new version of the application, anything stored within OpenShift’s copy of the repo will be wiped to make way for the new files. This includes some log files and the images uploaded by users. To fix this, we can store these files in persistent directories on OpenShift instead; the filepaths of the locations we need are stored in environment variables.
+</div>
+Apenas use isso se o OpenShift falhar. Iremos falar sobre `rake` e `assets` mais pra frente.
 
-To change the location of the production log, open config/environments/production.rb. Beneath the comment line:
+Quando enviamos uma nova versão da aplicação, qualquer coisa armazenada na cópia do repositório OpenShift será limpada para liberar espaço para os novos arquivos. Isso inclui alguns arquivos de registros e imagens subidas por usuários. Para consertar isso, podemos armazenar esses arquivos em diretórios persistentes no OpenShift; o caminho das localizações que precisamos estão armazenadas em variáveis de ambiente.
+
+Para trocar a localização do registro de produção, abra `config/environments/production.rb`. Logo abaixo da linha de comentário:
 
 <div class="os-specific">
   <div class="nix">
@@ -143,7 +151,7 @@ config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
   </div>
 </div>
 
-Add the line:
+Adicione a linha:
 
 <div class="os-specific">
   <div class="nix">
@@ -151,9 +159,9 @@ Add the line:
 config.logger = ActiveSupport::Logger.new(File.join(ENV['OPENSHIFT_RUBY_LOG_DIR'], "production.log"))
 {% endhighlight %}
   </div>
-Rails 3 users: Change ‘ActiveSupport::Logger’ to ‘ActiveSupport::BufferedLogger’.
 </div>
+Usuários do Rails 3: Trocar `ActiveSupport::Logger` por `ActiveSupport::BufferedLogger`.
 
-You can tail your application’s logs with the command rhc tail openshiftapp (the output from the change you just made won’t show up until the new file has been committed and pushed to OpenShift).
+Você pode monitorar os registros de sua aplicação com o comando `rhc tail openshiftapp` (o retorno da mudança que você acabou de fazer não será exibido até que o novo arquivo seja commitado e enviado para o OpenShift).
 
-**Instrutor(a):** Discuss the value of application logging.
+**Instrutor(a):** Discutir a importância de registros da aplicação.
