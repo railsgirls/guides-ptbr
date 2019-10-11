@@ -1,39 +1,42 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App
+title: App para turismo de autismo amigável
 permalink: touristic-autism_design
 ---
 
 # Design
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+_Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)_
+_para o projeto [Rails Girls Galway](https://github.com/RailsGirlsGalway)_
 
-**Instrutor(a):** Talk about the relationship between HTML and Rails. What part of views is HTML and what is Embedded Ruby (ERB)? What is MVC and how does this relate to it? (Models and controllers are responsible for generating the HTML views.)
+_Traduzido por Thaís Falbo, [@thaisfalbo](https://github.com/thaisfalbo)_
 
-The app doesn't look very nice yet. Let's do something about that. We'll use the Twitter Bootstrap project to give us nicer styling really easily.
+Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e o tutorial para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando um design](http://guides.railsgirls.com/design), [implementando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
-Open `app/views/layouts/application.html.erb` in your text editor and above the line
+**Instrutor(a):** Falar sobre a relação entre HTML e Rails. Qual parte dos views é HTML e qual é Embedded Ruby (ERB)? O que é MVC e como se relaciona com isso? (Models e controllers são responsáveis em gerar os views em HTML.)
+
+A aplicação ainda não está com uma aparência boa. Vamos fazer algo sobre isso. Nós usaremos o projeto Twitter Bootstrap para nos fornecer um estilo melhor com muita facilidade.
+
+Abra o arquivo `app/views/layouts/application.html.erb` no seu editor de texto e acima desta linha
 
 {% highlight erb %}
 <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 {% endhighlight %}
 
-add
+adicione
 
 {% highlight erb %}
 <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css" />
 <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css" />
 {% endhighlight %}
 
-and replace
+e substitua
 
 {% highlight erb %}
 <%= yield %>
 {% endhighlight %}
 
-with
+com
 
 {% highlight erb %}
 <div class="container">
@@ -41,30 +44,30 @@ with
 </div>
 {% endhighlight %}
 
-Let's also add a navigation bar and footer to the layout. In the same file, above `<div class="container">` add
+Vamos também adicionar uma barra de navegação e um rodapé (footer) no layout. No mesmo arquivo, acima de `<div class="container">` adicione
 
 {% highlight html %}
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Habilitar navegação</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">The Places app</a>
+      <a class="navbar-brand" href="/">App de lugares</a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/places">Places</a></li>
+        <li class="active"><a href="/places">Lugares</a></li>
       </ul>
     </div>
   </div>
 </nav>
 {% endhighlight %}
 
-and before `</body>` add
+e antes do `</body>` adicione
 
 {% highlight html %}
 <footer>
@@ -75,7 +78,7 @@ and before `</body>` add
 <script src="//railsgirls.com/assets/bootstrap.js"></script>
 {% endhighlight %}
 
-Now let's also change the styling of the places table. Open `app/assets/stylesheets/application.css` and at the bottom add
+Agora vamos também mudar os estilos da tabela de lugares. Abra o arquivo `app/assets/stylesheets/application.css` e no final adicione
 
 {% highlight css %}
 body { padding-top: 100px; }
@@ -84,199 +87,175 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
-Now make sure you saved your files and refresh the browser to see what was changed. You can also change the HTML & CSS further.
+Verifique agora que você salvou seus arquivos e atualize o navegador para verificar o que mudou. Você também pode modificar o HTML e o CSS ainda mais.
 
-In case your Terminal shows you an error message that *sort of* implies there is something wrong with your JavaScript or CoffeeScript, install [nodejs](http://nodejs.org/download/). This issue should not appear when you've used the RailsInstaller (but when you've installed Rails via ```gem install rails```).
+Caso seu Terminal mostre uma mensagem de erro que _mais ou menos_ insinua que há algo de errado com seu JavaScript ou CoffeeScript, instale o [nodejs](http://nodejs.org/download/). Este problema não irá aparecer se você utilizou o RailsInstaller (mas quando você instalou Rails através do `gem install rails`)
 
-**Instrutor(a):** Talk a little about CSS and layouts.
+**Instrutor(a):** Fale um pouco sobre CSS e layouts.
 
+1.Estilize seu header
 
-1.Design your header
+- coloque o seguinte código no final do `app/assets/stylesheets/application.css`:
 
-+ put the following code to the bottom of `app/assets/stylesheets/application.css`:
+{% highlight css %}
+.navbar {
+  min-height: 38px;
+  background-color: #f55e55;
+}
+{% endhighlight %}
 
-    ```
-    .navbar {
-        min-height: 38px;
-      background-color: #f55e55;
-    }
-    ```
+  Agora atualize a página e confira as mudanças. Você pode tentar mudar a cor ou a fonte do header. Você pode verificar a referência de cores do [http://color.uisdc.com/](http://color.uisdc.com/).
 
-  Now refresh the page and check the changes. You can try change the
-    color or font of the header. You can check the color reference
-    from [http://color.uisdc.com/](http://color.uisdc.com/).
+  **Instrutor(a):** fale sobre a propriedade `display`, elementos inline e block.
 
-    **Instrutor(a): ** talk about the property `display`, inline and block element.
+- Em seguida, coloque estas linhas no final:
 
-+ Then put these lines at the bottom：
+{% highlight css %}
+.navbar a.brand { font-size: 18px; }
+.navbar a.brand:hover {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+}
+{% endhighlight %}
 
-    ```
-    .navbar a.brand { font-size: 18px; }
-    .navbar a.brand:hover {
-     color: #fff;
-     background-color: transparent;
-     text-decoration: none;
-    }
-    ```
+  **Instrutor(a):** explique os 4 estados de um link
 
-    **Instrutor(a): ** explain the 4 states of a link
+2.Eslitize sua tabela
 
+- Novamente usaremos o Twitter [Bootstrap](http://getbootstrap.com/) para aperfeiçoar nossa tabela, ache esta linha do `app/views/places/index.html.erb` e substitua:
 
-2.Design your table
+{% highlight html %}
+<table>
+{% endhighlight %}
 
- + We simply use the twitter [Bootstrap](http://getbootstrap.com/) to
-   polish our table。find this line from
-   app/views/places/index.html.erb and replace:
+  com
 
-   ```
-   <table>
-   ```
+{% highlight html %}
+<table class="table">
+{% endhighlight %}
 
-   with
+- Modifique o tamanho da imagem utilizando as seguintes linhas
 
-   ```
-   <table class="table">
-   ```
+{% highlight erb %}
+<%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
+{% endhighlight %}
 
- + Modify size of the picture using the following lines
+  tente mudar a largura (width) e veja o que vai acontecer
 
-     ```
-     <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
-     ```
+* adicione as seguintes linhas no final do arquivo `app/assets/stylesheets/places.css.scss`:
 
-     try to change the width and see what's gonna happen
+{% highlight css %}
+.container a:hover {
+  color: #f55e55;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+{% endhighlight %}
 
+- tente adicionar algum estilo de fundo com a propriedade `background-image`, use como referência o [http://subtlepatterns.com/](http://subtlepatterns.com/) para algumas texturas.
 
- + add the following lines to the bottom of file app/assets/stylesheets/places.css.scss:
+3.Adicione estilo no footer
 
-  ```
-  .container a:hover {
-    color: #f55e55;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  ```
+- adicione estas linhas no final do `app/assets/stylesheets/application.css`
 
+{% highlight css %}
+footer {
+  background-color: #ebebeb;
+  padding: 30px 0;
+}
+{% endhighlight %}
 
- + try add some background style with property `background-image`,
-   reference to
-   [http://subtlepatterns.com/](http://subtlepatterns.com/) for some patterns.
+  tente colocar mais informações no `footer` e ajuste sua posição
 
+4.Adicione estilo no botão
 
-3.add style to footer
+  - Abra [http://localhost:3000/places/new](http://localhost:3000/places/new) e procure o botão `Criar Lugar` .
 
-+ add the lines to bottom of  app/assets/stylesheets/application.css:
+  adicione estas linhas no `app/assets/stylesheets/places.css.scss`
 
-    ```
-    footer {
-      background-color: #ebebeb;
-      padding: 30px 0;
-    }
-    ```
+{% highlight css %}
+.container input[type="submit"] {
+  height: 30px;
+  font-size: 13px;
+  background-color: #f55e55;
+  border: none;
+  color: #fff;
+}
+{% endhighlight %}
 
-    try put more things into `footer`, then adjust it's position.
+  **Instrutor(a):** explicar como usar `border` em css, tente modificar o estilo do botão como arredondar cantos, adicionar sombra ou cor, etc.
 
-4.add style to button
-
-  + open
-    [http://localhost:3000/places/new](http://localhost:3000/places/new)
-    and find the `Create Place` button.
-
-   add these lines to app/assets/stylesheets/places.css.scss
-
-   ```
-   .container input[type="submit"] {
-      height: 30px;
-      font-size: 13px;
-      background-color: #f55e55;
-      border: none;
-      color: #fff;
-    }
-   ```
-
-   **Instrutor(a)** explain how to use `border` in css, try modify the style
-     of button like round the corner, add shadow or color etc.
-
-
-
-Open `app/views/layouts/application.html.erb` in your text editor and replace the line
+Abra `app/views/layouts/application.html.erb` no seu editor de texto e substitua a linha
 
 {% highlight html %}
 <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
 {% endhighlight %}
 
-with
+com
 
 {% highlight html %}
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
 {% endhighlight %}
 
-Open `app/assets/stylesheets/application.css`, replace the line
+Abra `app/assets/stylesheets/application.css`, substitua a linha
 
-{% highlight html %}
+{% highlight css %}
 body { padding-top: 100px; }
 {% endhighlight %}
 
-with
+com
 
-{% highlight html %}
+{% highlight css %}
 body { padding-top: 60px; }
 {% endhighlight %}
 
-Finally, delete the file `app/assets/stylesheets/scaffolds.css.scss` because we don't really need the default style generated by Rails.
+Por último, remova o arquivo `app/assets/stylesheets/scaffolds.css.scss` por que realmente não precisaremos dos estilos padrões gerados pelo Rails
 
-Now refresh the page at [http://localhost:3000/places](http://localhost:3000/places). You will not find much change but it's good preparation for the following steps.
+Agora, atualize a página no [http://localhost:3000/places](http://localhost:3000/places). Você não encontrará muita mudança porém é uma boa preparação para as próximas etapas.
 
+Considerando que "lugar" é um dos objetos mais importantes do seu app, nós colocaremos o botão "Novo Lugar" na barra de navegação para deixar sempre disponível.
 
-Considering "place" is the most important object in your app, we are going to put the "New Place" button on the navigation bar to make it always available.
-
-Open `app/views/layouts/application.html.erb`, under the line
+Abra `app/views/layouts/application.html.erb`, abaixo da linha
 
 {% highlight erb %}
 <li class="active"><a href="/places">Places</a></li>
 {% endhighlight %}
 
-add
+adicione
+
 {% highlight erb %}
 <li ><%= link_to 'New Place', new_place_path %></li>
 {% endhighlight %}
 
+Agora é hora de fazer a página de listar lugares parecer profissional. Para isso, vamos substituir o layout da tabela com layout de div.
 
+**Instrutor(a):** Fale um pouco sobre table vs div.
 
-Now it's time to make the place list page look professional. For that, we are going to replace the table layout with a div layout.
-
-**Instrutor(a):** Talk a little about table vs div.
-
-Open `app/views/places/index.html.erb` in your text editor and replace the table with
+Abra `app/views/places/index.html.erb` no seu editor de texto e substitua a table com
 
 {% highlight erb %}
 <% @places.in_groups_of(3) do |group| %>
   <div class="row">
     <% group.compact.each do |place| %>
       <div class="span4">
-
-
-       <%= image_tag(place.picture_url, :width => '20%') if place.picture.present? %>
+        <%= image_tag(place.picture_url, :width => '20%') if place.picture.present? %>
         <h4><%= link_to place.name, place %></h4>
         <%= place.description %>
 
+        <%= place.address %>
+        <%= place.latitude %>
+        <%= place.longitude %>
 
-  <%= place.address %>
-  <%= place.latitude %>
-<%= place.longitude %>
+        <%= place.user_id %>
+        <%= link_to 'Mostrar', place %> |
 
-<%= place.user_id %>
-<%= link_to 'Show', place %> |
-
- <% if user_signed_in? %>
-	  <% if current_user.id == place.user_id %></strong>.
-
-<%= link_to 'Edit', edit_place_path(place) %> |
-<%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-
-	    <% end %>
-	<% end %>
+        <% if user_signed_in? %>
+          <% if current_user.id == place.user_id %>
+            <%= link_to 'Editar', edit_place_path(place) %> |
+            <%= link_to 'Destruir', place, method: :delete, data: { confirm: 'Você tem certeza?' } %>
+          <% end %>
+        <% end %>
 
       </div>
     <% end %>
@@ -284,16 +263,16 @@ Open `app/views/places/index.html.erb` in your text editor and replace the table
 <% end %>
 {% endhighlight %}
 
-**Instrutor(a):** Explain what the new code means line by line, and talk a little about Bootstrap 12 grids layout.
+**Instrutor(a):** Explica o que o novo código faz linha por linha, e fale um pouco sobre o grids layout do Bootstrap 12.
 
-Refresh it! We get a nice looking idea list. Click the "New Idea" button, and create more ideas with real text and pretty pictures - the page will look much better with content. There is a principle of contemporary web design: content is the best decoration.
+Atualize novamente a página! Nós temos uma lista de ideias bonita. Clique no botão "Nova Ideia" e cria mais ideias com texto reais imagens bonitas - a página vai parecer muito melhor com conteúdo. Existe um princípo de web design contemporâneo: conteúdo é a melhor decoração.
 
-Click the title of a place, and you will be brought to the details page of the place. Now it is still scaffold generated by Rails, so let's make it better.
+Clique no título do lugar e você será direcionado para a página de detalhes do lugar. Agora ainda é um scaffold gerado pelo Rails, portanto vamos fazer isso melhor.
 
-Open `app/views/places/show.html.erb` in your text editor and replace all lines with
+Abra `app/views/places/show.html.erb` no seu editor de texto e substitua todas as linhas com
 
 {% highlight erb %}
-<h3>Places created</h3>
+<h3>Lugares criados</h3>
 
 <div class="row">
   <div class="span9">
@@ -301,45 +280,41 @@ Open `app/views/places/show.html.erb` in your text editor and replace all lines 
   </div>
 
   <div class="span3">
-    <p><b>Name: </b><%= @place.name %></p>
+    <p><b>Nome: </b><%= @place.name %></p>
 
-    <p><b>User Rating as Autism-friendly: </b><%= rating_for @place, "autism_friendly" %></p>
-    <p><b>User Overall Rating: </b><%= rating_for @place, "overall" %></p>
-    <p>Your <b>Vote as Autism-friendly: </b><%= rating_for_user @place, current_user, "autism_friendly", :star => 7 %></p>
-    <p>Your <b>Overall Vote: </b><%= rating_for_user @place, current_user, "autism_friendly", :star => 7 %></p>
+    <p><b>Avaliação usuário como autismo amigável: </b><%= rating_for @place, "autismo_amigavel" %></p>
+    <p><b>Avaliação geral do usuário: </b><%= rating_for @place, "geral" %></p>
+    <p>Seu <b>Voto como autismo amigável: </b><%= rating_for_user @place, current_user, "autismo_amigavel", :star => 7 %></p>
+    <p>Seu <b>Voto total: </b><%= rating_for_user @place, current_user, "autismo_amigavel", :star => 7 %></p>
 
-    <p><b>Description: </b><%= @place.description %></p>
-    <p><b>Address: </b><%= @place.address %></p>
+    <p><b>Descrição: </b><%= @place.description %></p>
+    <p><b>Endereço: </b><%= @place.address %></p>
     <p><b>Latitude: </b><%= @place.latitude %></p>
     <p><b>Longitude: </b><%= @place.longitude %></p>
-    <p><b>Creator ID: </b><%= @place.user_id %></p>
+    <p><b>ID do criador: </b><%= @place.user_id %></p>
 
-  <p>
-      <%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
+    <p>
+      <%= link_to 'Editar lugar', edit_place_path(@place) %> | <%= link_to 'Voltar', places_path %>
     </p>
   </div>
 </div>
 
-<h3>Comments</h3>
+<h3>Commentários</h3>
 <% @comments.each do |comment| %>
   <div>
     <strong><%= comment.user_id %></strong>
     <br />
     <p><%= comment.body %></p>
 
- <% if user_signed_in? %>
-	  <% if current_user.id == comment.user_id %>
-
-    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-
-  <% end %>
-	<% end %>
-
+    <% if user_signed_in? %>
+      <% if current_user.id == comment.user_id %>
+        <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Você tem certeza?' } %></p>
+      <% end %>
+    <% end %>
   </div>
 <% end %>
-<%= render 'comments/form' %>
 
+<%= render 'comments/form' %>
 {% endhighlight %}
 
-Continue experimenting with Design changes! ;)
+Continue experimentando com mudanças de Design! ;)

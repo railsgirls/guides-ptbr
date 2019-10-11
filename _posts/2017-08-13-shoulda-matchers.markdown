@@ -7,6 +7,7 @@ permalink: testing-shoulda-matchers
 # Simplificando seus testes com os Shoulda Matchers
 
 _Criado por Ana Schwendler, [@anaschwendler](https://twitter.com/anaschwendler)_
+
 _Traduzido por Frankyston Lins, [@frankyston](https://twitter.com/frankyston)_
 
 **Este guia pressupõe que você já tenha criado um aplicativo Rails Girls** [**seguindo o guia de desenvolvimento**](/app).
@@ -15,27 +16,16 @@ _Traduzido por Frankyston Lins, [@frankyston](https://twitter.com/frankyston)_
 
 [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) é uma gem de teste Ruby, que fornece linhas de comandos compatíveis com RSpec e Minitest que testam a funcionalidade comum do Rails. Esses testes seriam, de outro modo, muito mais longos, mais complexos e propensos a erros.
 
-**Instrutor(a)**: Fale sobre testes e Desenvolvimento Orientado a Comportamento.
+**INSTRUTOR(A)**: Fale sobre testes e Desenvolvimento Orientado a Comportamento.
 
 ## _1._ Adicione a gem Shoulda Matchers
 
 Abra seu `Gemfile` e adicione esta linha ao grupo `:test` acima da tag end:
 
-Para Rails 4.x:
-
 {% highlight ruby %}
 group :test do
-...
-gem 'shoulda-matchers', '~> 3.1'
-end
-{% endhighlight %}
-
-Para Rails 5.0:
-
-{% highlight ruby %}
-group :test do
-...
-gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+  ...
+  gem 'shoulda-matchers'
 end
 {% endhighlight %}
 
@@ -45,22 +35,25 @@ bundle install
 {% endhighlight %}
 para instalar a gem.
 
-**Instrutor(a)**: Fale sobre a saída do terminal de googling.
+**INSTRUTOR(A)**: Fale sobre 'googlear' a saída do terminal.
 
 ## _2._ Ajuste seu `rails_helper.rb`
 
 No nosso caso, estaremos usando o RSpec para testar nosso projeto, então precisamos dizer ao nosso `rails_helper.rb` que estamos usando o Shoulda Matchers:
+
 Coloque acima da tag end (verifique o recuo):
+
 {% highlight ruby %}
 Shoulda::Matchers.configure do |config|
-config.integrate do |with| # Choose a test framework:
-with.test_framework :rspec
-with.library :rails
-end
+  config.integrate do |with|
+  # Escolha um framework de teste:
+  with.test_framework :rspec
+  with.library :rails
+  end
 end
 {% endhighlight %}
 
-**Instrutor(a)**: Fale sobre porque estamos ajustando a gem dentro de `rails_helper.rb`.
+**INSTRUTOR(A)**: Fale sobre porque estamos ajustando a gem dentro de `rails_helper.rb`.
 
 No seu terminal execute
 {% highlight sh %}
@@ -78,17 +71,17 @@ Para testar se isso está funcionando corretamente, podemos adicionar as linhas 
 
 {% highlight ruby %}
 describe "associations" do
-it{ is_expected.to have_many(:comments) }
+  it{ is_expected.to have_many(:comments) }
 end
 {% endhighlight %}
 
 Este é um teste de associação.
 
-**Instrutor(a)**: Fale sobre testes de associação.
+**INSTRUTOR(A)**: Fale sobre testes de associação.
 
 ## _4._ Desenvolvimento Orientado a Testes
 
-**Instrutor(a)**: Fale sobre o TDD e como começamos a adicionar recursos ao nosso aplicativo testando-o primeiro.
+**INSTRUTOR(A)**: Fale sobre o TDD e como começamos a adicionar recursos ao nosso aplicativo testando-o primeiro.
 
 Outro recurso que podemos adicionar ao nosso aplicativo é criar ideias sempre nomeadas. Como poderíamos fazer isso? Vamos começar dizendo que as idéias sempre devem ter um nome.
 
@@ -96,7 +89,7 @@ Vamos começar criando um teste para isso. Podemos fazer isso adicionando as seg
 
 {% highlight ruby %}
 describe "validations" do
-it{ is_expected.to validate_presence_of :name }
+  it{ is_expected.to validate_presence_of :name }
 end
 {% endhighlight %}
 
