@@ -1,62 +1,63 @@
 ---
 layout: default
-title: Touristic Autism-friendly Spots App 
+title: App para turismo de autismo amigável 
 permalink: touristic-autism_resource-modeling
 ---
 
-# Resource Modeling
+# Modelagem de Recursos
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+Os guias básicos que foram mergeados e adaptados são [Tutorial de Ruby on Rails](http://www.railstutorial.org/book), o [RailsGirls app básico](http://guides.railsgirls.com/app/) e os tutorias para [criar thumbnails](http://guides.railsgirls.com/thumbnails), [autenticar usuários](http://guides.railsgirls.com/devise/), [adicionar design](http://guides.railsgirls.com/design), [deploy ao OpenShift](http://guides.railsgirls.com/openshift/) e [adicionar comentários](http://guides.railsgirls.com/commenting).
+Traduzido por Elaine Mattos, [elainemattos](https://github.com/elainemattos).
 
-What do we want our app to do? As a first thing, we would like to 
-* authenticate **users**
-* allow authenticated users to create a new touristic **place** description
-* allow authenticated users to **comment** those places
-* allow authenticated users to **rate** up to which extent those places are autism-friendly or not.
+O que nós queremos que nossa aplicação faça? Primeiramente, nós gostariamos de
+* autenticar **users** (usuários)
+* permitir que users autenticados criem uma nova descrição turística do **place** (local)  
+* permitir que user autenticados possam **comment** (comentar) nestes locais
+* permitir que users autenticados **rate** (classifiquem) os locais que sejam amigáveis ​​ao autismo ou não.
 
-Note that these requirements help us identify 4 different resources: user, place, comment, rating. We are now going to model them specifying their properties and their associations with each other.
+Observe que esses requisitos nos ajudam a identificar quatro recursos diferentes: usuário (users), local (place), comentário (comment), classificação (rate). Agora vamos modelar suas propriedades e suas associações entre si.
 
-We will enable the rating in the next tutorial.
+Iremos permitir classificações no próximo tutorial.
 
+## Tourists/Users Autenticados
 
-## Authenticated Tourists/Users
+Vamos gerar nosso primeiro recurso: usuários e requerer a sua autenticação.
 
-Let's generate our first resource: user and require its authentication.
+## Passo 0: Adicionar a gem devise
 
-## Step 0: Add devise gem
-
-Open up your `Gemfile` and add this line
+Abra a sua `Gemfile` e adicione esta linha
 
 {% highlight ruby %}
 gem 'devise'
 {% endhighlight %}
-and run
+e rode
 {% highlight sh %}
 bundle install
 {% endhighlight %}
-to install the gem. **Also remember to restart the Rails server**.
 
-## Step 1: Set up devise in your app
+para instalar a gem. **Lembre-se de reiniciar o servidor Rails**.
 
-Run the following command in the terminal.
+## Passo 1: Configurar o devise na sua aplicação
+
+Rode o seguinte comando no terminal.
 
 {% highlight sh %}
 rails g devise:install
 {% endhighlight %}
 
+## Passo 2: Configurar o Devise
 
-## Step 2: Configure Devise
+Verifique se você definiu opções de URL padrão nos arquivos dos ambientes. Abra `config/environment/development.rb` e adicione esta linha:
 
-Ensure you have defined default url options in your environments files. Open up `config/environments/development.rb` and add this line:
 {% highlight ruby %}
    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 {% endhighlight %}
 
-before the `end` keyword.
+antes da palavra `end`.
 
-Open up `app/views/layouts/application.html.erb` and add:
+Abra `app/views/layouts/application.html.erb` e adicione:
 
 {% highlight erb %}
 <% if notice %>
@@ -66,38 +67,39 @@ Open up `app/views/layouts/application.html.erb` and add:
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 {% endhighlight %}
-right above
+
+logo acima de
 {% highlight ruby %}
    <%= yield %>
 {% endhighlight %}
 
+## Passo 3: Configurar User model
 
+Usaremos um script de geração de código para criar a User model.
 
-## Step 3: Setup the User model
-
-We'll use a bundled generator script to create the User model.
 {% highlight sh %}
    rails g devise user
    rake db:migrate
 {% endhighlight %}
 
-**Instrutor(a):** Explain what user model has been generated. What are the fields? Note that a model inherits abilities to interact with the DB from its ActiveRecord::Base super-class (ref. MVC). 
+**Instrutor(a):** Explique qual user model foi gerada. O que são os campos? Observe que a model herda habilidades para interagir com o BD através do `ActiveRecord::Base` super-class (ref. MVC).
 
-## Step 4: Create your first user
+## Passo 4: Crie seu primeiro usuário
 
-Now that you have set everything up you can create your first user. Devise creates all the code and routes required to create accounts, log in, log out, etc.
+Agora que você configurou tudo já pode criar seu primeiro user. Devise criará todo o código e rotas necessárias para criação de contas, log in, log out, etc.
 
-Make sure your rails server is running, open [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) and create your user account.
+Certifique-se de que seu servidor rails está rodando, abra [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) e crie a sua conta de user (usuário). 
 
-## Step 5: Add sign-up and login links
+## Passo 5: Adicione links de sign-up e login
 
-All we need to do now is to add appropriate links or notice about the user being logged in in the top right corner of the navigation bar.
+Tudo que precisamos fazer agora é adicionar os links apropriados e notificar sobre o user estar logado no topo direito da barra de navegação.
 
-In order to do that, edit `app/views/layouts/application.html.erb` by adding at the beginning of the body:
+Para fazer isso, edite `app/views/layouts/application.html.erb` adicionando no começo do body:
+
 {% highlight erb %}
 <p class="navbar-text pull-right">
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
+  Logado como <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
@@ -106,36 +108,42 @@ In order to do that, edit `app/views/layouts/application.html.erb` by adding at 
 <% end %></p>
 {% endhighlight %}
 
-
-Finally, force the user to redirect to the login page if the user was not logged in. Open up `app/controllers/application_controller.rb` and add:
+Finalmente, force o user para redirecionar para a página de login se o usuário não estiver logado. Abra `app/controllers/application_controller.rb` e adicione:
 
 {% highlight ruby %}
   before_action :authenticate_user!
 {% endhighlight %}
 
-after `protect_from_forgery with: :exception`.
+após `protect_from_forgery with: :exception`.
 
-Open your browser and try logging in and out from.
+Abra seu navegador e tente logar e deslogar.
 
-**Instrutor(a):** Talk about the `user_signed_in?` and `current_user` helpers. Why are they useful?
+**Instrutor(a):** Fale sobre os helpers `user_signed_in?` e `current_user`. Por que eles são úteis?
 
-Let's add-commit-push to your GitHub repo! See how nicely all the changes are now on your GitHub profile? :)
+Vamos add-commit-push para o seu repositório no Github! Veja que todas as alterações agora estão no seu perfil no Github? :) 
 
-## Touristic Places
+## Locais Turísticos
 
-We now use Rails' scaffold functionality to generate and set up all that is necessary to list, add, remove, edit, and view our second resource: "touristic places".
+Agora vamos usar a funcionalidade de scaffold do Rails para gerar e configurar tudo que é necessário para listar, adicionar, remover, editar e visualizar nosso segundo recurso: "locais turísticos".
 
 <div class="os-specific">
   <div class="nix">
 {% highlight sh %}
 rails generate scaffold place name:string address:string latitude:decimal longitude:decimal description:text picture:string user_id:integer
 {% endhighlight %}
-</div>
-Note the column user:references that is created to support the 1-to-many association with Users.
+  </div>
+
+  <div class="win">
+{% highlight sh %}
+rails generate scaffold place name:string address:string latitude:decimal longitude:decimal description:text picture:string user_id:integer
+{% endhighlight %}
+  </div>
 </div>
 
-The scaffold creates new files in your project directory. However, we have defined (modeled) a "structure" for our "place" resource and we want all the future instances of this resource to stick to this structure and get stored somewhere, i.e., in a database. 
-We are already using a database (see `gem 'sqlite'` in your Gemfile). Let's add the structure of "place" as a table to our database with the following.
+Observe que a coluna `user:references` que é criada para suportar a associação 1-para-muitos com usuários.
+
+O scaffold cria novos arquivos diretório do seu projeto. No entanto, nós definimos uma "estrutura" (modelada) para o nosso recurso "place" e queremos que todas as instâncias futuras desse recurso atinjam essa estrutura e sejam armazenadas em algum lugar, ou seja, em um banco de dados. 
+Nós já estamos usando um banco de dados (veja `gem 'sqlite'` na sua Gemfile). Vamos adicionar a estrutura de "place" como uma tabela para nosso banco de dados com o seguinte.
 
 <div class="os-specific">
   <div class="nix">
@@ -149,72 +157,74 @@ bin/rake db:migrate
 ruby bin/rake db:migrate
 {% endhighlight %}
   </div>
-
-
-Then start the server again. Open [http://localhost:3000/places](http://localhost:3000/places) in your browser and check out all the new functionalities that our web application is now providing to handle "place" resources. All thanks to what Ruby on Rails automatically generates with `generate scaffold`.
-Each new instance of "place" that will be stored in the database, will be automatically assigned a unique identifier called "primary key", with no need for us to specify it as one of the fields (along with picture, name, etc.)
 </div>
 
+Então inicie o servidor novamente. Abra [http://localhost:3000/places](http://localhost:3000/places) no seu navegador e veja todas as novas funcionalidades que a nossa aplicação web está agora suportando o recurso de "places". Tudo graças ao que o Ruby on Rails automaticamente gera com `generate scaffold`.
+Cada nova instância de "place" que será salva no banco de dados, irá automaticamente atribuir um identificador único chamado "chave primária", sem a necessidade de especificá-lo como um dos campos (junto com imagem, nome etc.)  
+  
 
-**Instrutor(a):** What is Rails scaffolding? What are migrations and why do you need them?
-Note the pages that have been created to manipulate the "place" resources and their naming convention.
-Look at the server logging and explain it as a report of the following interaction (in the context of the MVC pattern):
-* The browser issues a request for the /places URL.
-* Rails routes /places to the index action in the Places controller.
-* The index action asks the Place model to retrieve all places (Place.all).
-* The Place model pulls all the places from the database.
-* The Place model returns the list of places to the controller.
-* The controller captures the users in the @users variable, which is passed to the index view.
-* The view uses embedded Ruby to render the page as HTML.
-* The controller passes the HTML back to the browser
+**Instrutor(a):** O que é o scaffolding do Rails? O que são as migrations e por que você precisa delas? 
+Observe as páginas que foram criadas para manipular o recurso de "place" e suas convenções de nomeclatura.
+Olhe os logs do servidor e explique-o como um relatório das seguintes interações (no contexto do padrão MVC): 
+* o navegador emite uma solicitação para o URL /places.
+* Rails roteia /places para o ação de index em Places controller.
+* A ação de index requisita a model Place para receber todos os places (Place.all).
+* A model Place extraí todos os places do banco de dados.
+* A model Place retorna a lista de places para a controlller.
+* A controller captura os users na variável `@users`, na qual é passada para a index view.
+* A view utiliza o Ruby incorporado para renderizar a página como HTML.
+* A controller passa o HTML para o navegador.
 
-Note that the controller created is RESTful (explain)
+Observe que a controller criada é RESTful (explique)
 
-Note that the controller inherits abilities (large amount of functionality, such as the ability to manipulate model objects, filter inbound HTTP requests, and render views as HTML) from its ApplicationController super-class (ref. MVC).
+Note que a controller herda habilidades (grande número de funcionalidade, como a possibilidade de manipular model objects, filtrar requisições HTTP, e renderizar views como HTML) oriunda da `ApplicationController` super-class (ref. MVC).
 
-Open up `app/views/places/show.html.erb` and remove the line that says:
+Abra `app/views/places/show.html.erb` e remova a linha que diz:
 
 {% highlight erb %}
 <p id="notice"><%= notice %></p>
 {% endhighlight %}
 
-This line is not necessary as we've already put the authenticated user notice in the `app/views/layouts/application.html.erb` file.
+Essa linha não é necessária pois nós já colocamos o aviso de user no arquivo `app/views/layouts/application.html.erb`.
 
+Vamos add-commit-push para o repositório do Github!
 
-Let's add-commit-push to your GitHub repo! 
+### Associações de Recursos
 
-### Resource Associations
+Observe que places ainda não estão associados corretamente aos users. Por exemplo, ao criar um novo place, o campo "User" deverá ser preenchido por nós mesmos e, ao visualizar um perfil de user, não haverá lista de places criados por ele e vice-versa. Além disso, ao excluir uma conta de user, todos os places que ele criou não são excluídos automaticamente.
 
-Note that places aren't yet properly associated with users. For instance, when creating a new place the field "User" is expected to be filled by ourselves and when viewing a user profile there isn't any list of places created by him/her and viceversa. Also, when deleting a user account all the places he/she created do not get deleted automatically. 
+Vamos apropriadamente criar a associação 1-para-muitos entre User e Places. 
 
-Let's properly create the 1-to-many association between User and Places.
+#### Passo 1. Adicionar Associação 1-para-muitos  
 
-#### Step 1. Add 1-to-many association 
+Você precisa ter certeza que o Rails sabe a relação entre o recurso de User e Place.
+Como um user pode criar muitos places, precisamos ter certeza de que a user model sabe disso. 
+Abra `app/models/user.rb` e depois da linha
 
-You need to make sure that Rails knows the relation between the User and Place resources. 
-As one user can create many places we need to make sure the user model knows that. 
-Open app/models/user.rb and after the row
 {% highlight ruby %}
 class User < ActiveRecord::Base
 {% endhighlight %}
-add
+Adicione
+
 {% highlight ruby %}
 has_many :places
 {% endhighlight %}
 
-The place also has to know that it belongs to a user. So open app/models/place.rb and after
+O place também tem que saber que ela pertence a um user. Então, abra `app/models/place.rb` e depois 
+
 {% highlight ruby %}
 class Place < ActiveRecord::Base
 {% endhighlight %}
+adicione a linha
 
-add the row
 {% highlight ruby %}
 belongs_to :user
 {% endhighlight %}
 
-#### Step 2: Render the views
+#### Passo 2: Renderizar as views
 
-Open app/views/places/_form.html and after
+Abra `app/views/places/_form.html` e depois
+
 {% highlight erb %}
 <div class="field">
   <%= f.label :user_id %><br>
@@ -222,12 +232,14 @@ Open app/views/places/_form.html and after
 </div>
 {% endhighlight %}
 
-add the row
+adicione a linha
+
 {% highlight erb %}
 <%= f.hidden_field :user_id, :value => current_user.id %>
 {% endhighlight %}
 
-next, remove
+agora, remova
+
 {% highlight erb %}
 <div class="field">
   <%= f.label :user_id %><br>
@@ -235,39 +247,33 @@ next, remove
 </div>
 {% endhighlight %}
 
-## Step 3: Set edit/delete permissions
+## Passo 3: Coloque permissões para editar/deletar 
 
-Allow only the place creator to edit/delete a place.
+Permita que apenas o criador de place possa editar/deletar um place.
 
-Open app/views/places/index.html.erb and substitute
-
+Abra `app/views/places/index.html.erb` e substitua
 
 {% highlight sh %}
 <td><%= link_to 'Edit', edit_place_path(place) %></td>
-		<td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
 {% endhighlight %}
 
-with
-
+por
 
 {% highlight sh %}
  <% if user_signed_in? %>
 	  <% if current_user.id == place.user_id %>
-
-		<td><%= link_to 'Edit', edit_place_path(place) %></td>
-		<td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	    <% end %>
+		  <td><%= link_to 'Edit', edit_place_path(place) %></td>
+		  <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+	  <% end %>
 	<% end %>
 {% endhighlight %}
 
-That's it. Now view a user you have inserted to your application and there you should see the form for creating a place as well as deleting older places.
+É isso aí. Agora veja um user que você inseriu na sua aplicação e você deverá ver o formulário para criar um place e excluir places mais antigos.
 
+## Comentários de Place
 
-
-
-## Place's Comments
-
-Just as well as we created a "place" resource and associated it with users, we can create a "comment" resource and associate it with places 9and with its author).
+Assim como nós criamos um recurso "place" e os associamos com users, nós podemos criar um recurso de "comment" e associá-lo com places e seu autor.
 
 <div class="os-specific">
   <div class="nix">
@@ -276,40 +282,43 @@ rails generate scaffold comment body:text user_id:integer place_id:integer
 bin/rake db:migrate
 {% endhighlight %}
   </div>
-Start the server, check out the new service in your browser. Then, add-commit-push to github.
+Inicie o servidor, veja o novo serviço no seu navegador. E então, add-commit-push para o github.
 </div>
 
+**Instrutor(a):** mostre que o scaffold atualizou os arquivos de rotas do Rails com uma regra para o recurso de Review 
 
-**Instrutor(a):** show that the scaffold generator has updated the Rails routes file with a rule for the Review resource
+##Associação de Recursos
 
+#### Passo 1. Adicione Associação de 1-para-muitos
 
-##Resource Association
+Abra `app/models/place.rb` e depois da linha
 
-#### Step 1. Add 1-to-many association 
-
-Open app/models/place.rb and after the row
 {% highlight ruby %}
 belongs_to :user
 {% endhighlight %}
-add
+adicione
+
 {% highlight ruby %}
 has_many :comments
 {% endhighlight %}
 
-Open app/models/comment.rb and after
+Abra `app/models/comment.rb` e após
+
 {% highlight ruby %}
 class Comment < ActiveRecord::Base
 {% endhighlight %}
 
-add the rows
+adicione a linha
+
 {% highlight ruby %}
 belongs_to :user
 belongs_to :place
 {% endhighlight %}
 
-#### Step 2: Render the views
+#### Passo 2: Renderize as views
 
-Open app/views/comments/_form.html and substitute
+Abra `app/views/comments/_form.html` e substitua
+
 {% highlight erb %}
 <div class="field">
   <%= f.label :user_id %><br>
@@ -317,12 +326,13 @@ Open app/views/comments/_form.html and substitute
 </div>
 {% endhighlight %}
 
-with the row
+com a linha
+
 {% highlight erb %}
 <%= f.hidden_field :user_id, :value => current_user.id %>
 {% endhighlight %}
 
-next, substitute
+então, substitua
 {% highlight erb %}
   <div class="field">
     <%= f.label :place_id %><br>
@@ -330,79 +340,67 @@ next, substitute
   </div>
 {% endhighlight %}
 
-with the row
+com a linha
+
 {% highlight erb %}
 <%= f.hidden_field :place_id%>
 {% endhighlight %}
 
+Abra `app/views/places/show.html.erb` e antes últimos links adicione
 
-
-
-
-Open app/views/places/show.html.erb and just before the bottom links add
 {% highlight erb %}
-<h3>Comments</h3>
+<h3>Comentários</h3>
+
 <% @comments.each do |comment| %>
   <div>
     <strong><%= comment.user_id %></strong>
     <br />
     <p><%= comment.body %></p>
-    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Tem certeza?' } %></p>    
   </div>
 <% end %>
 <%= render 'comments/form' %>
 {% endhighlight %}
 
-In app/controllers/places_controller.rb add to show action after the row
+Em `app/controllers/places_controller.rb` adicione para ter a ação de mostrar após a linha
 {% highlight ruby %}
 @place = Place.find(params[:id])
 {% endhighlight %}
 
-this
+este
+
 {% highlight ruby %}
 @comments = @place.comments.all
 @comment = @place.comments.build
 {% endhighlight %}
 
+## Passo 3: Colocar Permissões para editar/deletar
 
+Permita que apenas o criador do comment (comentário) possa editar/deletar um comentário.
 
-
-
-## Step 3: Set edit/delete permissions
-
-Allow only the comment creator to edit/delete a comment.
-
-Open app/views/places/show.html.erb and substitute
-
+Abra `app/views/places/show.html.erb` e substitua
 
 {% highlight sh %}
-<p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Tem certeza?' } %></p>
 {% endhighlight %}
 
-with
-
+com
 
 {% highlight sh %}
  <% if user_signed_in? %>
 	  <% if current_user.id == comment.user_id %>
-
-    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-
-  <% end %>
+      <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Tem certeza?' } %></p>
+    <% end %>
 	<% end %>
 {% endhighlight %}
 
+## Recurso de Validação de Campos
 
+No momento, commets, places e users são caracterizados por informações que nunca são validadas por sua retificação. Ainda assim, por exemplo, deve haver um limite na tamanho dos comments no review ou no formato do endereço de e-mail de um usuário.
 
+Então vamos adicionar uma restrição sobre o tamanho do corpo do campo de comentário (vamos usar a palavra 'validates')
 
-
-## Resource Field Validation
-
-At the moment comments, places and users are characterized by information that is never validated for its correctness. Still, for instance, there should be a limit on the length of comments in review or on the format of a user's email address.
-
-
-Then let's add a constraint over the length of the comment's body field (we'll use the 'validates' keyword).
-Open app/models/comment.rb and add between 'class' and 'end':
+Abra `app/models/comment.rb` e entre 'class' e 'end':
 
 <div class="os-specific">
   <div class="nix">
@@ -410,24 +408,20 @@ Open app/models/comment.rb and add between 'class' and 'end':
   validates :body, length: { maximum: 140 }
 {% endhighlight %}
   </div>
-If we now try to enter more than 140 characters we'll get an error. (try it out! ;) )
+Se nós agora tentarmos enviar mais de 140 caracteres, teremos um erro (veja só! ;) ) 
 </div>
 
-## Finetune the routes
+## Ajuste as rotas
 
-If you try to open [http://localhost:3000](http://localhost:3000) it still shows the "Welcome aboard" page. Let's make it redirect to the places page.
+Se você tentar abrir [http://localhost:3000](http://localhost:3000) ainda mostrará a página "Bem-vindo a bordo". Vamos fazer ela redirecionar para a página de places.
 
-Open `config/routes.rb` and after the first line add
+Abra `config/routes.rb` e após a primeira linha adicione
 
 {% highlight ruby %}
 root :to => redirect('/places')
 {% endhighlight %}
 
-Test the change by opening the root path (that is, http://localhost:3000/) in your browser.
+Teste a alteração abrindo o caminho raiz (que é, http://localhost:3000/) no seu navegador.
 
-**Instrutor(a):** Talk about routes, and include details on the order of routes and their relation to static files.
-
-**Rails 3 users:** You will need to delete the index.html from the `/public/` folder for this to work.
-
-
-
+**Instrutor(a):** Fale sobre as rotas, e inclua detalhes sobre as rotas e sua relação com arquivos estáticos.
+**Usuários do Rails 3:** Você precisará deletar o index.html da pasta `/public/` para que funcione corretamente.
