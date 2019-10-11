@@ -11,7 +11,7 @@ permalink: touristic-autism_resource-modeling
 Os guias básicos que foram mergeados e adaptados são [Tutorial de Ruby on Rails](http://www.railstutorial.org/book), o [RailsGirls app básico](http://guides.railsgirls.com/app/) e os tutorias para [criar thumbnails](http://guides.railsgirls.com/thumbnails), [autenticar usuários](http://guides.railsgirls.com/devise/), [adicionar design](http://guides.railsgirls.com/design), [deploy ao OpenShift](http://guides.railsgirls.com/openshift/) e [adicionar comentários](http://guides.railsgirls.com/commenting).
 Traduzido por Elaine Mattos, [elainemattos](https://github.com/elainemattos).
 
-O que nós queremos que nosso App faça? Primeiramente, nós gostariamos de
+O que nós queremos que nossa aplicação faça? Primeiramente, nós gostariamos de
 * autenticar **users** (usuários)
 * permitir que users autenticados criem uma nova descrição turística do **place** (local)  
 * permitir que user autenticados possam **comment** (comentar) nestes locais
@@ -23,7 +23,7 @@ Iremos permitir classificações no próximo tutorial.
 
 ## Tourists/Users Autenticados
 
-Vamos gerar nosso primeiro recurso: user e requerer a sua autenticação.
+Vamos gerar nosso primeiro recurso: usuários e requerer a sua autenticação.
 
 ## Passo 0: Adicionar a gem devise
 
@@ -68,7 +68,7 @@ Abra `app/views/layouts/application.html.erb` e adicione:
 <% end %>
 {% endhighlight %}
 
-logo acima
+logo acima de
 {% highlight ruby %}
    <%= yield %>
 {% endhighlight %}
@@ -82,11 +82,11 @@ Usaremos um script de geração de código para criar a User model.
    rake db:migrate
 {% endhighlight %}
 
-**Instrutor(a):** Explique qual user model foi gerada. O que são os campos? Observe que a model herda habilidades para interagir com o BD através do ActiveRecord::Base super-class (ref. MVC).
+**Instrutor(a):** Explique qual user model foi gerada. O que são os campos? Observe que a model herda habilidades para interagir com o BD através do `ActiveRecord::Base` super-class (ref. MVC).
 
-## Passo 4: Crie seu primeiro user
+## Passo 4: Crie seu primeiro usuário
 
-Agora que você configurou tudo já pode criar seu primeiro user. Devise criará todo o código e rotas necessários para criação de contas, log in, log out, etc.
+Agora que você configurou tudo já pode criar seu primeiro user. Devise criará todo o código e rotas necessárias para criação de contas, log in, log out, etc.
 
 Certifique-se de que seu servidor rails está rodando, abra [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) e crie a sua conta de user (usuário). 
 
@@ -116,7 +116,7 @@ Finalmente, force o user para redirecionar para a página de login se o usuário
 
 após `protect_from_forgery with: :exception`.
 
-Abra seu browser e tente logar e deslogar.
+Abra seu navegador e tente logar e deslogar.
 
 **Instrutor(a):** Fale sobre os helpers `user_signed_in?` e `current_user`. Por que eles são úteis?
 
@@ -131,9 +131,16 @@ Agora vamos usar a funcionalidade de scaffold do Rails para gerar e configurar t
 {% highlight sh %}
 rails generate scaffold place name:string address:string latitude:decimal longitude:decimal description:text picture:string user_id:integer
 {% endhighlight %}
+  </div>
+
+  <div class="win">
+{% highlight sh %}
+rails generate scaffold place name:string address:string latitude:decimal longitude:decimal description:text picture:string user_id:integer
+{% endhighlight %}
+  </div>
 </div>
-Observe que a coluna user:references que é criada para suportar a associação 1-para-muitos com Users.
-</div>
+
+Observe que a coluna `user:references` que é criada para suportar a associação 1-para-muitos com usuários.
 
 O scaffold cria novos arquivos diretório do seu projeto. No entanto, nós definimos uma "estrutura" (modelada) para o nosso recurso "place" e queremos que todas as instâncias futuras desse recurso atinjam essa estrutura e sejam armazenadas em algum lugar, ou seja, em um banco de dados. 
 Nós já estamos usando um banco de dados (veja `gem 'sqlite'` na sua Gemfile). Vamos adicionar a estrutura de "place" como uma tabela para nosso banco de dados com o seguinte.
@@ -150,26 +157,27 @@ bin/rake db:migrate
 ruby bin/rake db:migrate
 {% endhighlight %}
   </div>
-
-Então inicie o servidor novamente. Abra [http://localhost:3000/places](http://localhost:3000/places) no seu browser e veja todas as novas funcionalidades que a nossa aplicação web está agora suportando o recurso de "places". Tudo graças ao que o Ruby on Rails automaticamente gera com `generate scaffold`.
-Cada nova instância de "place" que será salva no banco de dados, irá automaticamente atribuir um identificador único chamado "chave primária", sem a necessidade de especificá-lo como um dos campos (junto com imagem, nome etc.)  
 </div>
+
+Então inicie o servidor novamente. Abra [http://localhost:3000/places](http://localhost:3000/places) no seu navegador e veja todas as novas funcionalidades que a nossa aplicação web está agora suportando o recurso de "places". Tudo graças ao que o Ruby on Rails automaticamente gera com `generate scaffold`.
+Cada nova instância de "place" que será salva no banco de dados, irá automaticamente atribuir um identificador único chamado "chave primária", sem a necessidade de especificá-lo como um dos campos (junto com imagem, nome etc.)  
+  
 
 **Instrutor(a):** O que é o scaffolding do Rails? O que são as migrations e por que você precisa delas? 
 Observe as páginas que foram criadas para manipular o recurso de "place" e suas convenções de nomeclatura.
 Olhe os logs do servidor e explique-o como um relatório das seguintes interações (no contexto do padrão MVC): 
-* o browser emite uma solicitação para o URL /places.
+* o navegador emite uma solicitação para o URL /places.
 * Rails roteia /places para o ação de index em Places controller.
 * A ação de index requisita a model Place para receber todos os places (Place.all).
 * A model Place extraí todos os places do banco de dados.
 * A model Place retorna a lista de places para a controlller.
-* A controller captura os users na variável @users, na qual é passada para a index view.
+* A controller captura os users na variável `@users`, na qual é passada para a index view.
 * A view utiliza o Ruby incorporado para renderizar a página como HTML.
-* A controller passa o HTML para o browser.
+* A controller passa o HTML para o navegador.
 
 Observe que a controller criada é RESTful (explique)
 
-Note que a controller herda habilidades (grande número de funcionalidade, como a possibilidade de manipular model objects, filtrar requisições HTTP, e renderizar views como HTML) oriunda da ApplicationController super-class (ref. MVC).
+Note que a controller herda habilidades (grande número de funcionalidade, como a possibilidade de manipular model objects, filtrar requisições HTTP, e renderizar views como HTML) oriunda da `ApplicationController` super-class (ref. MVC).
 
 Abra `app/views/places/show.html.erb` e remova a linha que diz:
 
@@ -274,7 +282,7 @@ rails generate scaffold comment body:text user_id:integer place_id:integer
 bin/rake db:migrate
 {% endhighlight %}
   </div>
-Inicie o servidor, veja o novo serviço no seu browser. E então, add-commit-push para o github.
+Inicie o servidor, veja o novo serviço no seu navegador. E então, add-commit-push para o github.
 </div>
 
 **Instrutor(a):** mostre que o scaffold atualizou os arquivos de rotas do Rails com uma regra para o recurso de Review 
@@ -413,7 +421,7 @@ Abra `config/routes.rb` e após a primeira linha adicione
 root :to => redirect('/places')
 {% endhighlight %}
 
-Teste a alteração abrindo o caminho raiz (que é, http://localhost:3000/) no seu browser.
+Teste a alteração abrindo o caminho raiz (que é, http://localhost:3000/) no seu navegador.
 
 **Instrutor(a):** Fale sobre as rotas, e inclua detalhes sobre as rotas e sua relação com arquivos estáticos.
 **Usuários do Rails 3:** Você precisará deletar o index.html da pasta `/public/` para que funcione corretamente.
