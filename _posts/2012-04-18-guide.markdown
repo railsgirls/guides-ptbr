@@ -126,7 +126,6 @@ Dois exercícios: 1) Abordar os dez conceitos técnicos com os tabuleiros Bentob
 
 + [Bentobox slidedeck](http://speakerdeck.com/u/railsgirls/p/rails-girls-bentobox-exercise)
 + [Vídeo de instrução](http://vimeo.com/39049632)
-+ [Vídeo de exemplo do Rails Girls ATL](http://vimeo.com/54912357)
 
 14:30 - 18:00 Hora do Workshop
 
