@@ -12,21 +12,9 @@ permalink: design
 
 Agora o aplicativo está funcionando bem, mas ainda se parece com scaffold. Vamos adicionar algum design para torná-lo parecido com um site profissional. Quando terminar este tutorial, o aplicativo será parecido com [esse](http://railsgirlsapp.herokuapp.com/ideas).
 
-## *1.*Ajuste o layout da aplicação
+## *1.*Delete CSS scaffold indesejado
 
-Abra `app/assets/stylesheets/application.css`, e substitua a linha
-
-{% highlight html %}
-body { padding-top: 100px; }
-{% endhighlight %}
-
-com
-
-{% highlight html %}
-body { padding-top: 60px; }
-{% endhighlight %}
-
-Finalmente, exclua o arquivo `app/assets/stylesheets/scaffolds.scss` porque nós realmente não precisamos do estilo padrão gerado pelo Rails.
+Exclua o arquivo `app/assets/stylesheets/scaffolds.scss` porque nós realmente não precisamos do estilo padrão gerado pelo Rails.
 
 Agora vamos atualizar a página na url [http://localhost:3000/ideas](http://localhost:3000/ideas). Você não vai encontrar muita mudança, mas é uma boa preparação para as etapas seguintes.
 
@@ -37,12 +25,16 @@ Considerando que "ideia" é o objeto mais importante na sua aplicação, nós va
 Abra `app/views/layouts/application.html.erb`, e abaixo da linha
 
 {% highlight erb %}
-<li class="active"><a href="/ideas">Ideas</a></li>
+<li class="nav-item active">
+  <a class="nav-link" href="/ideas">Ideas</a>
+</li>
 {% endhighlight %}
 
 adicione
 {% highlight erb %}
-<li ><%= link_to 'New Idea', new_idea_path %></li>
+<li class="nav-item">
+  <%= link_to 'New Idea', new_idea_path, class: "nav-link" %>
+</li>
 {% endhighlight %}
 
 ## *3.*Design para a lista de ideias
