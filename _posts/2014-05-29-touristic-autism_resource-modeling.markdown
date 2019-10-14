@@ -52,7 +52,7 @@ rails g devise:install
 Verifique se você definiu opções de URL padrão nos arquivos dos ambientes. Abra `config/environment/development.rb` e adicione esta linha:
 
 {% highlight ruby %}
-   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 {% endhighlight %}
 
 antes da palavra `end`.
@@ -70,7 +70,7 @@ Abra `app/views/layouts/application.html.erb` e adicione:
 
 logo acima de
 {% highlight ruby %}
-   <%= yield %>
+  <%= yield %>
 {% endhighlight %}
 
 ## Passo 3: Configurar User model
@@ -78,8 +78,8 @@ logo acima de
 Usaremos um script de geração de código para criar a User model.
 
 {% highlight sh %}
-   rails g devise user
-   rake db:migrate
+rails g devise user
+rake db:migrate
 {% endhighlight %}
 
 **Instrutor(a):** Explique qual user model foi gerada. O que são os campos? Observe que a model herda habilidades para interagir com o BD através do `ActiveRecord::Base` super-class (ref. MVC).
@@ -88,7 +88,7 @@ Usaremos um script de geração de código para criar a User model.
 
 Agora que você configurou tudo já pode criar seu primeiro user. Devise criará todo o código e rotas necessárias para criação de contas, log in, log out, etc.
 
-Certifique-se de que seu servidor rails está rodando, abra [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) e crie a sua conta de user (usuário). 
+Certifique-se de que seu servidor rails está rodando, abra [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) e crie a sua conta de user (usuário).
 
 ## Passo 5: Adicione links de sign-up e login
 
@@ -98,20 +98,21 @@ Para fazer isso, edite `app/views/layouts/application.html.erb` adicionando no c
 
 {% highlight erb %}
 <p class="navbar-text pull-right">
-<% if user_signed_in? %>
-  Logado como <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %></p>
+  <% if user_signed_in? %>
+    Logado como <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <% end %>
+</p>
 {% endhighlight %}
 
 Finalmente, force o user para redirecionar para a página de login se o usuário não estiver logado. Abra `app/controllers/application_controller.rb` e adicione:
 
 {% highlight ruby %}
-  before_action :authenticate_user!
+before_action :authenticate_user!
 {% endhighlight %}
 
 após `protect_from_forgery with: :exception`.
@@ -120,7 +121,7 @@ Abra seu navegador e tente logar e deslogar.
 
 **Instrutor(a):** Fale sobre os helpers `user_signed_in?` e `current_user`. Por que eles são úteis?
 
-Vamos add-commit-push para o seu repositório no Github! Veja que todas as alterações agora estão no seu perfil no Github? :) 
+Vamos add-commit-push para o seu repositório no Github! Veja que todas as alterações agora estão no seu perfil no Github? :)
 
 ## Locais Turísticos
 
@@ -253,20 +254,20 @@ Permita que apenas o criador de place possa editar/deletar um place.
 
 Abra `app/views/places/index.html.erb` e substitua
 
-{% highlight sh %}
+{% highlight erb %}
 <td><%= link_to 'Edit', edit_place_path(place) %></td>
-		<td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+<td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
 {% endhighlight %}
 
 por
 
-{% highlight sh %}
- <% if user_signed_in? %>
-	  <% if current_user.id == place.user_id %>
-		  <td><%= link_to 'Edit', edit_place_path(place) %></td>
-		  <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
-	  <% end %>
-	<% end %>
+{% highlight erb %}
+<% if user_signed_in? %>
+  <% if current_user.id == place.user_id %>
+    <td><%= link_to 'Edit', edit_place_path(place) %></td>
+    <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+  <% end %>
+<% end %>
 {% endhighlight %}
 
 É isso aí. Agora veja um user que você inseriu na sua aplicação e você deverá ver o formulário para criar um place e excluir places mais antigos.
@@ -380,18 +381,18 @@ Permita que apenas o criador do comment (comentário) possa editar/deletar um co
 
 Abra `app/views/places/show.html.erb` e substitua
 
-{% highlight sh %}
+{% highlight erb %}
 <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Tem certeza?' } %></p>
 {% endhighlight %}
 
 com
 
-{% highlight sh %}
- <% if user_signed_in? %>
-	  <% if current_user.id == comment.user_id %>
-      <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Tem certeza?' } %></p>
-    <% end %>
-	<% end %>
+{% highlight erb %}
+<% if user_signed_in? %>
+  <% if current_user.id == comment.user_id %>
+    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Tem certeza?' } %></p>
+  <% end %>
+<% end %>
 {% endhighlight %}
 
 ## Recurso de Validação de Campos
@@ -404,8 +405,8 @@ Abra `app/models/comment.rb` e entre 'class' e 'end':
 
 <div class="os-specific">
   <div class="nix">
-{% highlight sh %}
-  validates :body, length: { maximum: 140 }
+{% highlight ruby %}
+validates :body, length: { maximum: 140 }
 {% endhighlight %}
   </div>
 Se nós agora tentarmos enviar mais de 140 caracteres, teremos um erro (veja só! ;) ) 

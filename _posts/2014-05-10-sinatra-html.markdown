@@ -4,6 +4,8 @@ title: Mostrando a lista de Café
 permalink: sinatra-html
 ---
 
+# Mostrando a lista de Café
+
 *Criado por Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*
 
 *Traduzido por Marina Limeira, [@marinalimeira_](http://twitter.com/marinalimeira_)*

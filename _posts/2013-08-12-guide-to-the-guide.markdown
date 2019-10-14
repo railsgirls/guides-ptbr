@@ -59,7 +59,7 @@ Rails scaffolding é um comando (`rails generate scaffold`) para a introdução 
 
 No Rails, um model representa uma definição de um recurso em sua aplicação, e como ele deve interagir com outras partes da aplicação. Dependendo da natureza do site, estes recursos poderiam ser usuários, mensagens, grupos etc. Quando um model é gerado, uma *tabela de banco de dados* correspondente é criada. Esta tabela de banco de dados contém informações que representam atributos específicos do model, por exemplo, para um modelo de usuário, pode haver uma coluna ‘nome’ e uma coluna de ‘e-mail’, e haverá linhas para cada usuário subsequente criado. Na aplicação que você está criando, esses recursos são ideias e o model é ‘Ideia’.
 
-{% highlight rb %}
+{% highlight sh %}
 rails generate scaffold ideia nome:string descricao:text imagem:string
 {% endhighlight %}
 
@@ -301,7 +301,7 @@ Em uma aplicação Rails funcional, existe um sistema embutido no lugar para tra
 Se você olhar no arquivo `ideas_controller.rb` você pode ver essas ações e o comportamento associado, e o método HTTP que corresponde com cada ação:
 
 
-{% highlight rb %}
+{% highlight ruby %}
 def show
     @idea = Idea.find(params[:id])
 
@@ -317,7 +317,7 @@ def show
 
 `show` - a ação do controlador
 
-{% highlight rb %}
+{% highlight ruby %}
 respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @idea }

@@ -51,13 +51,13 @@ Você deve adicionar a função `letsrate_rateable`, com sua opção de dimensõ
 Em `app/models/place.rb` adicione
 
 {% highlight ruby %}
-  letsrate_rateable "autismo_amigavel", "geral"
+letsrate_rateable "autismo_amigavel", "geral"
 {% endhighlight %}
 
 Então você precisa adicionar uma chamada a `letsrate_rater` no modelo de usuário:
 
 {% highlight ruby %}
-  letsrate_rater
+letsrate_rater
 {% endhighlight %}
 
 ## Step 3: Render the Views
@@ -68,15 +68,15 @@ Abra `app/views/places/show.html.erb` e adicione
 
 {% highlight erb %}
 <p>
-<strong>Votos:</strong><br />
-Autismo amigável : <%= rating_for @local, "autismo_amigavel" %> <br />
-Geral : <%= rating_for @local, "geral" %>
+  <strong>Votos:</strong><br />
+  Autismo amigável : <%= rating_for @local, "autismo_amigavel" %> <br />
+  Geral : <%= rating_for @local, "geral" %>
 </p>
 <hr />
 <p>
-<strong>Seus votos:</strong><br />
-Autismo amigável : <%= rating_for_user @local, current_user, "autismo_amigavel", :star => 7 %>
-Geral : <%= rating_for_user @local, current_user, "geral", :star => 7 %>
+  <strong>Seus votos:</strong><br />
+  Autismo amigável : <%= rating_for_user @local, current_user, "autismo_amigavel", :star => 7 %>
+  Geral : <%= rating_for_user @local, current_user, "geral", :star => 7 %>
 </p>
 <hr />
 {% endhighlight %}

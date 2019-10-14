@@ -16,13 +16,13 @@ Agora o aplicativo está funcionando bem, mas ainda se parece com scaffold. Vamo
 
 Abra `app/assets/stylesheets/application.css`, e substitua a linha
 
-{% highlight html %}
+{% highlight css %}
 body { padding-top: 100px; }
 {% endhighlight %}
 
 com
 
-{% highlight html %}
+{% highlight css %}
 body { padding-top: 60px; }
 {% endhighlight %}
 

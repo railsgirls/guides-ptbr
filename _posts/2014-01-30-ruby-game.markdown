@@ -31,7 +31,7 @@ ou: `ruby Tutorial.rb`
 
 ### Já tive o suficiente desses exemplos!
 
-Copie o repositório através de uma nova aba do seu terminal. Se você esteve trabalhando no aplicativo do Rails Girls nesse meio tempo, tenha certeza que você está no seu diretório home rodando ```cd```.
+Copie o repositório através de uma nova aba do seu terminal. Se você esteve trabalhando no aplicativo do Rails Girls nesse meio tempo, tenha certeza que você está no seu diretório home rodando `cd`.
 
 Agora execute
 {% highlight sh %}

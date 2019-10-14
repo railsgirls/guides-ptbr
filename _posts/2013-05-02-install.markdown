@@ -190,18 +190,24 @@ O erro irá mencionar [bit.ly/ruby-ssl](http://bit.ly/ruby-ssl). O que é releva
 
 Algumas vezes você pode se deparar com o seguinte erro quando executar `rails server`:
 
-`'x64_mingw' is not a valid platform`
+{% highlight sh %}
+'x64_mingw' is not a valid platform
+{% endhighlight %}
 
 Se você encontrar esse erro após utilizar o **RailsInstaller**, você terá que editar o arquivo `Gemfile`. Para isso, siga os passos abaixo:
 
 No final do arquivo verifique se as últimas linhas possuem as seguintes informações:
 
-`gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]`.
+{% highlight ruby %}
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+{% endhighlight %}
 
 Se a linha possui `:x64_mingw`, então apague a parte `:x64_mingw`.
 
 O final deverá ser da seguinte maneira:
-`gem 'tzinfo-data', platforms: [:mingw, :mswin]`.
+{% highlight ruby %}
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+{% endhighlight %}
 
 Após fazer o procedimento, favor usar seu prompt de comando novamente e executar `bundle update`.
 

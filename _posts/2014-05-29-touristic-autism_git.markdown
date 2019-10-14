@@ -18,8 +18,8 @@ Navegue até o diretório principal do primeiro app e inicialize um novo reposit
 <div class="os-specific">
   <div class="nix">
     {% highlight sh %}
-      $ git init
-    {% endhighlight %}
+$ git init
+{% endhighlight %}
   </div>
 </div>
 
@@ -40,7 +40,7 @@ doc/
 .DS_Store
 .idea
 .secret
-  {% endhighlight %}
+{% endhighlight %}
   </div>
 </div>
 
@@ -49,7 +49,7 @@ Adicione as alterações (recursivamente, adicionando todos os sub-diretórios).
   <div class="nix">
     {% highlight sh %}
 git add .
-  {% endhighlight %}
+{% endhighlight %}
   </div>
 </div>
 
@@ -59,7 +59,7 @@ O comando `git add`, adiciona os arquivos do projeto área de stage, onde conté
   <div class="nix">
     {% highlight sh %}
 $ git status
-  {% endhighlight %}
+{% endhighlight %}
   </div>
 </div>
 
@@ -68,7 +68,7 @@ Agora, faça o commit justificando o motivo de tal ação:
   <div class="nix">
     {% highlight sh %}
 $ git commit -m "Inicializando Repositório"
-  {% endhighlight %}
+{% endhighlight %}
   </div>
 Os commits do Git são locais. Eles são gravados apenas na máquina utilizada, na máquina em que os commits ocorrem. Você pode ver a lista com todos os commits com o `git log`, digitando `q` para sair.
 </div>
@@ -82,7 +82,7 @@ Envie as alterações locais para o repositório remoto desta forma:
     {% highlight sh %}
 $ git remote add origin https://github.com/<username>/railsgirls-galway.git
 $ git push -u origin master
-  {% endhighlight %}
+{% endhighlight %}
   </div>
 O resultado é uma página no GitHub (por exemplo, [aqui está o meu](https://github.com/iammyr/railsgirls-galway-2014)) para o repositório da nossa aplicação, que fornece renderização agradável, compartilhando funcionalidades e estatísticas. Veja aqui: https://github.com/<your username>/railsgirls-galway
 </div>
