@@ -20,12 +20,12 @@ __INSTRUTOR(A)__: Explicar qual o efeito de se definir a largura de uma imagem n
   [im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
   [in-homebrew]: http://mxcl.github.io/homebrew/
 
-__INSTRUTOR(A)__: O que é ImageMagick e qual a diferença para outras bibliotecas/gems que já usamos anteriormente?
+__INSTRUTOR(A)__: Explique o que é ImageMagick e qual a diferença para outras bibliotecas/gems que já usamos anteriormente?
 
 Abra `Gemfile` no seu projeto e acrescente o seguinte:
 
 {% highlight ruby %}
-gem 'mini_magick', '3.8.0'
+gem 'mini_magick'
 {% endhighlight %}
 
 logo após a linha
@@ -56,7 +56,7 @@ Logo após a linha que você acabou de descomentar acrescente o seguinte:
 
 {% highlight ruby %}
 version :thumb do
-  process :resize_to_fill => [50, 50]
+  process :resize_to_fit => [50, 50]
 end
 {% endhighlight %}
 
