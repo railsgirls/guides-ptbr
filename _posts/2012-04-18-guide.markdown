@@ -78,7 +78,7 @@ Repassar a aplicação com instrutores(as) durante jantar.
 
 09:00 - 10:00 Credenciamento e café 
 
-*Dica*: Reserve tempo suficiente para que as pessoas possam interagir e resolver quaisquer problemas que possam haver com as instalações. Distribua workbooks, colete acrônimos para o exercício Bento.
+*Dica*: Reserve tempo suficiente para que as pessoas possam interagir e resolver quaisquer problemas que possam haver com as instalações. Distribua cópia do material impresso ou link do Tutorial do Rails Girls, incetive as sugestões para realizar os exercícios.
 
 10:00 - 10:10 Boas-vindas
  
