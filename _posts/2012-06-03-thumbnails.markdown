@@ -11,7 +11,7 @@ permalink: thumbnails
 
 __INSTRUTOR(A)__: Explicar qual o efeito de se definir a largura de uma imagem na marcação HTML como explicado no final do passo 4, constante do tutorial *Tutorial para criação da app Rails Girls*.
 
-## *1.*Instalando ImageMagick
+## *1.* Instalando ImageMagick
 
 * OS X: rode `brew install imagemagick`. Se o comando brew não estiver disponível no seu terminal, instale [install Homebrew here][in-homebrew].
 * Windows: faça o download e rode o [ImageMagick installer][im-win] (use o primeiro link do  *download* ).
@@ -40,7 +40,7 @@ No Terminal rode:
 bundle
 {% endhighlight %}
 
-## *2.*Dizendo para a app criar um thumbnail quando uma imagem for enviada ao servidor
+## *2.* Dizendo para a app criar um thumbnail quando uma imagem for enviada ao servidor
 
 Abra `app/uploaders/picture_uploader.rb` e encontre a linha conforme mostrada a seguir:
 
@@ -62,7 +62,7 @@ end
 
 A partir de agora as imagens enviadas ao servidor serão redimensionadas para criar thumbnails, contudo aquelas já existentes no servidor não serão afetadas. Edite uma das ideas já existentes e reenvie a imagem para o servidor.
 
-## *3.*Mostrando thumbnails
+## *3.* Mostrando thumbnails
 
 Para verificar se uma imagem enviada ao servidor foi redimensionada abra
 `app/views/ideas/index.html.erb`. Altere a linha
@@ -78,6 +78,3 @@ para
 {% endhighlight %}
 
 Dê uma olhada na lista das ideas, no navegador, para verificar se o thumbnail está ali.
-
-
-
