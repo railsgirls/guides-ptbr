@@ -19,7 +19,9 @@ __INSTRUTOR(A)__: Breve explicação sobre o que é o [Sinatra](http://www.sinat
 
 Lembra como nós precisávamos instalar Ruby on Rails? Da mesma maneira precisamos instalar o Sinatra:
 
-`gem install sinatra`
+{% highlight sh %}
+gem install sinatra
+{% endhighlight %}
 
 ### Crie sua primeira aplicação Sinatra
 
@@ -33,12 +35,12 @@ get '/' do
 end
 {% endhighlight %}
 
-Você pode chamar seu arquivo Ruby do que preferir. `voto.rb` por exemplo funcionaria bem também. Mas [Sufragista] (http://www.vocabulary.com/dictionary/suffragist) é uma referencia a um evento super importante no movimento a favor do direito das mulheres, então vamos usar este por agora!
+Você pode chamar seu arquivo Ruby do que preferir. `voto.rb` por exemplo funcionaria bem também. Mas [Sufragista](http://www.vocabulary.com/dictionary/suffragist) é uma referencia a um evento super importante no movimento a favor do direito das mulheres, então vamos usar este por agora!
 
 ### Rode sua app
 
 Vá para o diretório onde você colocou sua app e execute `ruby sufragista.rb`
-Agora você pode visitar <a href="localhost:4567" target=_blank">localhost:4567</a>. Onde você deverá
+Agora você pode visitar <a href="localhost:4567" target="_blank">localhost:4567</a>. Onde você deverá
 ver a página "Olá, eleitor!", o que significa que a geração do seu novo
 app está funcionando corretamente. Aperte <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servidor. Se <kbd>Ctrl</kbd>+<kbd>C</kbd> não funcionar para você significa que você provavelmente está usando Windows e <kbd>Ctrl</kbd>+<kbd>Z</kbd>/ <kbd>Ctrl</kbd>+<kbd>Pause</kbd> / <kbd>Ctrl</kbd>+<kbd>Break</kbd> deve resolver esse problema.
 

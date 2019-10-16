@@ -6,7 +6,7 @@ permalink: touristic-autism_basic-app
 
 # Aplicação Web Básica
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
 *para o projeto [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 
 *Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*
@@ -61,34 +61,42 @@ Próximo, digite estes comandos no terminal:
 mkdir projetos
 {% endhighlight %}
 
-<div>
-  <p>Você pode verificar o diretório `projetos` (que acabou de ser criado), utilizando o comando: `ls`. Se tudo ocorreu bem, você deverá ver o diretório `projetos` na listagem. Agora, devemos acessar o conteúdo do diretório `projetos` que acabamos de criar, utilizando o seguinte comando:</p>
-</div>
+<!-- <div>
+  <p>-->
+Você pode verificar o diretório `projetos` (que acabou de ser criado), utilizando o comando: `ls`. Se tudo ocorreu bem, você deverá ver o diretório `projetos` na listagem. Agora, devemos acessar o conteúdo do diretório `projetos` que acabamos de criar, utilizando o seguinte comando:
+<!--  </p>
+</div>-->
 
 {% highlight sh %}
 cd projetos
 {% endhighlight %}
 
-    <div>
-<p>Você pode verificar se está em um diretório vazio utilizando o comando `ls`. Agora, você pode criar uma nova aplicação chamada  `railsgirls-galway` com o comando:</p>
-    </div>
+<!-- <div>
+  <p>-->
+Você pode verificar se está em um diretório vazio utilizando o comando `ls`. Agora, você pode criar uma nova aplicação chamada  `railsgirls-galway` com o comando:
+<!--  </p>
+</div>-->
 
 {% highlight sh %}
 rails new railsgirls-galway
 {% endhighlight %}
 
-    <div>
-<p>Este comando irá criar uma nova aplicação na pasta `railsgirls`. Então, nós devemos sair do diretório atual para entrarmos no diretório principal da nossa aplicação. Podemos fazer isso com o seguinte código:</p>
-    </div>
+<!-- <div>
+  <p>-->
+Este comando irá criar uma nova aplicação na pasta `railsgirls`. Então, nós devemos sair do diretório atual para entrarmos no diretório principal da nossa aplicação. Podemos fazer isso com o seguinte código:
+<!--  </p>
+</div>-->
 
 {% highlight sh %}
 rvm rubygems latest
 cd railsgirls-galway
 {% endhighlight %}
 
-    <div>
-<p>Se você digitar o comando `ls` dentro do diretório, você deverá ver as pastas `app` e `config`. Então, você pode iniciar o servidor Rails com o comando:</p>
-    </div>
+<!-- <div>
+  <p>-->
+Se você digitar o comando `ls` dentro do diretório, você deverá ver as pastas `app` e `config`. Então, você pode iniciar o servidor Rails com o comando:
+<!--   </p>
+</div>-->
 
 {% highlight sh %}
 rails server
@@ -122,4 +130,4 @@ Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para sair do servidor.
 
 **Instrutor(a):** Explique o que cada comando faz.
 [O que é um servidor e uma aplicação web - Slides por @]()
-O esqueleto gerado por "rails new" reflete o padrão de arquitetura [Model-View-Controller(MVC) - Slides por @]().
+O esqueleto gerado por `rails new reflete o padrão de arquitetura [Model-View-Controller(MVC) - Slides por @]().

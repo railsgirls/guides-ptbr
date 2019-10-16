@@ -23,13 +23,13 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 {% endhighlight %}
 e rode
 {% highlight sh %}
-\$ bundle install
+$ bundle install
 {% endhighlight %}
 para instalar as gems.
 
 Depois de atualizar sem bundle, rode o instalador
 {% highlight sh %}
-\$ rails generate active_admin:install
+$ rails generate active_admin:install
 {% endhighlight %}
 
 O instalador cria um inicializador utilizado para configurar os padrões utilizados pelo Active Admin e uma nova pasta em `app/admin` para colocar todas as suas configrações de administrador.
@@ -44,7 +44,7 @@ $ rails server
 
 Abra o Rails console e crie seu novo usuário utilizando o model `AdminUser`:
 {% highlight sh %}
-\$ rails console
+$ rails console
 irb(main):001:0> AdminUser.create(:email => 'admin@railsgirls.com', :password => 'password123', :password_confirmation => 'password123')
 {% endhighlight %}
 
@@ -74,7 +74,7 @@ Voila! Você está no seu novo painel de controle do Active Admin.
 
 Para registrar seu model `Ideas` com Active Admin, rode:
 {% highlight sh %}
-\$ rails generate active_admin:resource Ideas
+$ rails generate active_admin:resource Ideas
 {% endhighlight %}
 Atualize sua página de admin e você encontrará [Ideas](http://localhost:3000/admin/ideas) na navegação.
 

@@ -56,7 +56,7 @@ Abra `app/views/layouts/application.html.erb` e adicione o seguinte:
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 {% endhighlight %}
-right above
+acima de
 {% highlight ruby %}
    <%= yield %>
 {% endhighlight %}
@@ -101,7 +101,9 @@ Para fazer isso edite `app/views/layouts/application.html.erb` e acrescente as s
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 {% endhighlight %}
+
 logo após
+
 {% highlight erb %}
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">

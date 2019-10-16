@@ -6,7 +6,7 @@ permalink: sinatra
 
 # Tutorial de fundamentos web
 
-*Created by Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*
+*Criado por Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*
 *Traduzido por Bárbara Barbosa, [@bahbbc](https://twitter.com/bahbbc)*
 
 ## Objetivo
