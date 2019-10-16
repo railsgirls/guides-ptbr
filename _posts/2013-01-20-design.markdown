@@ -12,7 +12,8 @@ permalink: design
 
 Agora o aplicativo está funcionando bem, mas ainda se parece com scaffold. Vamos adicionar algum design para torná-lo parecido com um site profissional. Quando terminar este tutorial, o aplicativo será parecido com [esse](http://railsgirlsapp.herokuapp.com/ideas).
 
-## *1.*Ajuste o layout da aplicação
+## *1.* Delete CSS scaffold indesejado
+
 
 Abra `app/assets/stylesheets/application.css`, e substitua a linha
 
@@ -30,22 +31,26 @@ Finalmente, exclua o arquivo `app/assets/stylesheets/scaffolds.scss` porque nós
 
 Agora vamos atualizar a página na url [http://localhost:3000/ideas](http://localhost:3000/ideas). Você não vai encontrar muita mudança, mas é uma boa preparação para as etapas seguintes.
 
-## *2.*Refinar a navegação
+## *2.* Refinar a navegação
 
 Considerando que "ideia" é o objeto mais importante na sua aplicação, nós vamos colocar o botão "New Idea" na barra de navegação para torná-lo sempre disponível.
 
 Abra `app/views/layouts/application.html.erb`, e abaixo da linha
 
 {% highlight erb %}
-<li class="active"><a href="/ideas">Ideas</a></li>
+<li class="nav-item active">
+  <a class="nav-link" href="/ideas">Ideas</a>
+</li>
 {% endhighlight %}
 
 adicione
 {% highlight erb %}
-<li ><%= link_to 'New Idea', new_idea_path %></li>
+<li class="nav-item">
+  <%= link_to 'New Idea', new_idea_path, class: "nav-link" %>
+</li>
 {% endhighlight %}
 
-## *3.*Design para a lista de ideias
+## *3.* Design para a lista de ideias
 
 Agora é hora de fazer a página de listar ideias parecer mais profissional. Para isso, vamos substituir o layout da tabela com um layout div.
 
@@ -73,7 +78,7 @@ Abra `app/views/ideas/index.html.erb` em seu editor de texto e substitua todas a
 
 Atualize! Nós ficamos com uma boa lista de ideias com design bonito. Clique no botão "New Idea", e crie mais idéias com o texto real e imagens bonitas, a página ficará muito melhor com o conteúdo. Há um princípio de web design contemporâneo: o conteúdo é a melhor decoração.
 
-## *4.*Design para a página de detalhes da ideia
+## *4.* Design para a página de detalhes da ideia
 
 Clique no título de uma idéia, e você será levado para a página de detalhes da idéia. Agora ainda  é scaffold gerado pelo Rails, então vamos melhorar a página.
 
@@ -107,4 +112,3 @@ Abra `app/views/ideas/show.html.erb` em seu editor de texto e substitua todas as
 * Use o seu novo conhecimento para projetar um novo formulário para ideia
 * Adicione mais design para as páginas como você deseja
 * Siga os outros guias para aprender mais sobre Rails
-

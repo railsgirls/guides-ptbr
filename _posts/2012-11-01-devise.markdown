@@ -15,7 +15,7 @@ permalink: devise
 **Esse guia assume que você já criou a app RailsGirls como mostrado no** [**tutorial para criação da app Rails Girls**](/app).
 
 
-## *1.*Adicione a gem Devise
+## *1.* Adicione a gem Devise
 
 Abra sua `Gemfile` e acrescente a seguinte linha de código:
 
@@ -28,7 +28,7 @@ bundle install
 {% endhighlight %}
 para instalar a gem. **Não se esqueça de restartar o servidor Rails**.
 
-## *2.*Configure devise na sua app
+## *2.* Configure devise na sua app
 
 Execute o seguinte comando no terminal:
 
@@ -37,7 +37,7 @@ rails g devise:install
 {% endhighlight %}
 
 
-## *3.*Configure Devise
+## *3.* Configure Devise
 
 Assegure-se de ter definido as opções default para URL no ambiente dos seus arquivos. Abra `config/environments/development.rb` e adicione a seguinte linha de código:
 {% highlight ruby %}
@@ -69,7 +69,7 @@ Abra `app/views/ideas/show.html.erb` e remova a seguinte linha:
 
 Faça o mesmo em `app/views/comments/show.html.erb`. Aquelas linhas não são necessárias, pois nós acrescentamos notice no arquivo `app/views/layouts/application.html.erb`.
 
-## *4.*Configure o modelo de usuários
+## *4.* Configure o modelo de usuários
 
 Usaremos um script gerador de empacotamento para criar o modelo de usuários.
 {% highlight sh %}
@@ -79,19 +79,19 @@ Usaremos um script gerador de empacotamento para criar o modelo de usuários.
 
 **Instrutor(a):** Explicar qual foi o modelo de usuário criado. Qual a finalidade dos campos?
 
-## *5.*Criando o primeiro usuário
+## *5.* Criando o primeiro usuário
 
 Agora que está tudo devidamente configurado podemos criar nosso primeiro usuário. Devise gera todos os códigos e caminhos necessários para criar contas, log in, log out, etc.
 
 Certifique-se de que o servidor rails está rodando, abra [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) e crie uma conta de usuário.
 
-## *6.*Crie links para cadastramento e login
+## *6.* Crie links para cadastramento e login
 
 Agora só nos resta criar links e notificação de usuário logado no canto superior direito da barra de navegação.
 
 Para fazer isso edite `app/views/layouts/application.html.erb` e acrescente as seguintes linhas:
 {% highlight erb %}
-<p class="navbar-text pull-right">
+<p class="navbar-text float-right">
 <% if user_signed_in? %>
   Logado como: <strong><%= current_user.email %></strong>.
   <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -101,11 +101,16 @@ Para fazer isso edite `app/views/layouts/application.html.erb` e acrescente as s
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 {% endhighlight %}
-abaixo de
+
+logo após
+
 {% highlight erb %}
-<ul class="nav">
-  <li class="active"><a href="/ideas">Ideas</a></li>
-</ul>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="/ideas">Ideas</a>
+    </li>
+    ...
+  </ul>
 {% endhighlight %}
 
 Para finalizar force o usuário a ser redirecionado para a página de login se ele não estiver logado. Abra `app/controllers/application_controller.rb` e adicione a seguinte linha:
@@ -126,5 +131,3 @@ Abra seu navegador e execute as ações de login e logout.
 * Adicione relacionamentos entre usuários e ideas
 * Crie restrições de modo a permitir que usuários editem somente suas próprias ideas e apague seus próprios comentários
 * Permita expandir roles ou permissões para usuários (use uma das gem populares, tal como like CanCan)
-
-
