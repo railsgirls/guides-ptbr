@@ -7,51 +7,58 @@ permalink: bundlerfordevelopment
 *Traduzido por Roberta Schmitz Mayer, [@robsmayer](https://github.com/robsmayer)*
 
 
-# Como configurar o <em lang="en">Bundler</em> para Desenvolvimento
+# Como configurar o _Bundler_ para Desenvolvimento
 
-1. Fork do <em lang="en">Bundler</em>
+1. Fork do _Bundler_
 
-    Vá para o Github do <em lang="en">Bundler</em> [https://github.com/bundler/bundler](https://github.com/bundler/bundler)
+    Vá para o Github do _Bundler_ [https://github.com/bundler/bundler](https://github.com/bundler/bundler)
 
     Clique no botão Fork.
 
-    Fork <em lang="en">Bundler</em> para que possa criar <em lang="en">pull requests</em> com suas mudanças
+    Fork _Bundler_ para que possa criar _pull requests_ com suas mudanças
+    <!--
+      N.T.: Adicionado alt em imagem. Não estava presente no original. (@robsmayer, 2016-10-12 22:06)
+    -->
 
-<p>
+    ![exibe botão Fork na interface do Github](../images/fork1.jpg)
 
 <!--
-  N.T.: Adicionado alt em imagem. Não estava presente no original. (@robsmayer, 2016-10-12 22:06)
--->
+  O &nbsp; antes da numeração conserta um bug no qual o highlight quebra a numeração de listas
+  https://github.com/jekyll/jekyll/issues/588
+ -->
+&nbsp;2. Faça Download de uma cópia do seu fork do _Bundler_
 
-<img src="../images/fork1.jpg" alt="exibe botão Fork na interface do Github" />
-<br />
-</p>
+  {% highlight sh %}
+  $ git clone https://github.com/user_name/bundler.git
+{% endhighlight %}
 
-2. Faça Download de uma cópia do seu fork do <em lang="en">Bundler</em>
+&nbsp;3. Mude para o diretório do _Bundler_
 
-    `$ git clone https://github.com/user_name/bundler.git`
+{% highlight sh %}
+$ cd bundler
+{% endhighlight %}
 
+&nbsp;4. Configure o remote
 
-3. Mude para o diretório do <em lang="en">Bundler</em> 
+{% highlight sh %}
+$ git remote add upstream https://github.com/bundler/bundler.git
+{% endhighlight %}
 
-    `$ cd bundler`
+  Isto conecta seu repositório local com o repósitorio __upstream__ no  Github.
 
-4. Configure o remote
+&nbsp;5. Instale as dependências de desenvolvimento do  _Bundler_
 
-    `$ git remote add upstream https://github.com/bundler/bundler.git`
+{% highlight sh %}
+$ rake spec:deps
+{% endhighlight %}
 
-    Isto conecta seu repositório local com o repósitorio __upstream__ no  Github.
+  O que é rake? [http://rake.rubyforge.org/](http://rake.rubyforge.org/)
 
+&nbsp;6. Rode o teste de validação do _Bundler_
 
-5. Instale as dependências de desenvolvimento do  <em lang="en">Bundler</em> 
+{% highlight sh %}
+$ rake spec
+{% endhighlight %}
 
-    `$ rake spec:deps`
-
-    O que é rake? [http://rake.rubyforge.org/](http://rake.rubyforge.org/)
-
-6. Rode o teste de validação do <em lang="en">Bundler</em> 
-
-    `$ rake spec`
-
-    Isto deve demorar uns 15 minutos.
+  Isto deve demorar uns 15 minutos.
 

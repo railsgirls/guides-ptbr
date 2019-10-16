@@ -14,7 +14,20 @@ Agora o aplicativo está funcionando bem, mas ainda se parece com scaffold. Vamo
 
 ## *1.* Delete CSS scaffold indesejado
 
-Exclua o arquivo `app/assets/stylesheets/scaffolds.scss` porque nós realmente não precisamos do estilo padrão gerado pelo Rails.
+
+Abra `app/assets/stylesheets/application.css`, e substitua a linha
+
+{% highlight css %}
+body { padding-top: 100px; }
+{% endhighlight %}
+
+com
+
+{% highlight css %}
+body { padding-top: 60px; }
+{% endhighlight %}
+
+Finalmente, exclua o arquivo `app/assets/stylesheets/scaffolds.scss` porque nós realmente não precisamos do estilo padrão gerado pelo Rails.
 
 Agora vamos atualizar a página na url [http://localhost:3000/ideas](http://localhost:3000/ideas). Você não vai encontrar muita mudança, mas é uma boa preparação para as etapas seguintes.
 

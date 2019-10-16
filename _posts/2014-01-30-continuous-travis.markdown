@@ -95,7 +95,7 @@ cf target
 
 para reunir todas as informações necessárias para a configuração do Travis. Isso inclui URL de destino, nome de usuário, a organização e espaço que você está usando atualmente. Você pode também dar uma olhada no email de boas vindas que você deve ter recebido após se inscrever no anynines.com.
 
-Após o comando `travis` ter finalizado, seu ``.travis.yml`` deve parecer algo como isso:
+Após o comando `travis` ter finalizado, seu `.travis.yml` deve parecer algo como isso:
 {% highlight sh %}
 language: ruby
 script: 'true'
@@ -111,7 +111,7 @@ deploy:
     repo: jane/railsgirls
 {% endhighlight %}
 
-Não esqueça de comitar e enviar suas mudanças para ``.travis.yml`` uma vez que será necessário em seu repositório Github para fazer efeito.
+Não esqueça de comitar e enviar suas mudanças para `.travis.yml` uma vez que será necessário em seu repositório Github para fazer efeito.
 
 De agora em diante, sempre que você cometer alterações ao seu repositório GitHub, os testes serão executados e sua aplicação será implantada. O Travis irá então mostrar uma saída de log semelhante a esta:
 

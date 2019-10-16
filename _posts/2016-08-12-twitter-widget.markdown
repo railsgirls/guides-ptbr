@@ -31,15 +31,16 @@ Há duas maneiras de fazer isto, se você quiser fazer rápido para já ir adici
 
 2. Adicione o código gerado pelo Twitter a sua página de informação
 
- + Você deve ter o código do Twitter copiado que deve parecer como este se você selecionou opções de```perfil``` e ```embedded timeline``` (*_seu_username_no_twitter* - você precisa mudar para seu nome no Twitter)
+ + Você deve ter o código do Twitter copiado que deve parecer como este se você selecionou opções de `perfil` e `embedded timeline` (*_seu_username_no_twitter* - você precisa mudar para seu nome no Twitter)
 
-  ```
-    <a class="twitter-timeline" href="https://twitter.com/_seu_username_no_twitter">Tweets de _seu_username_no_twitter</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-  ```
+{% highlight html %}
+<a class="twitter-timeline" href="https://twitter.com/_seu_username_no_twitter">Tweets de _seu_username_no_twitter</a>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endhighlight %}
 
  + Adicione este código para app/views/pages/info.html.erb no fim do arquivo
 
- + Salve e execute ```rails server```
+ + Salve e execute `rails server`
 
- + Abra seu browser e vá para [http://localhost:3000/pages/info](http://localhost:3000/pages/info) e cheque seu perfil no Twitter 
-  
+ + Abra seu browser e vá para [http://localhost:3000/pages/info](http://localhost:3000/pages/info) e cheque seu perfil no Twitter
+

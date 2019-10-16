@@ -22,13 +22,13 @@ OpenShift é um dos serviços de deploy em nuvem que oferecem tais ferramentas. 
 
 [Criar uma conta no OpenShift](https://openshift.redhat.com/app/account/new?web_user[promo_code]=railsgirls), nos permite colocar 3 aplicações online de graça. Após entrar com sua conta, instale o OpenShift RHC Client Tools (Ferramentas do Cliente RHC OpenShift) adicionando a gema rhc no ambiente de produção. Adicione o seguinte código para o arquivo Gemfiile (que é escrito em Ruby ndr):
 
-{% highlight ruby %}
-  <div class="nix">
-        group :production do
-          gem 'rhc'
-        end
-  {% endhighlight %}
-  </div>
+<div class="nix">
+  {% highlight ruby %}
+group :production do
+  gem 'rhc'
+end
+{% endhighlight %}
+</div>
 
 
 Se você não está usando o RVM ou o RailsInstaller então siga [esse guia](https://www.openshift.com/developers/rhc-client-tools-install)
@@ -39,8 +39,8 @@ Então rode no terminal:
 <div class="os-specific">
   <div class="nix">
     {% highlight sh %}
-  bundle install --without production
-  rhc setup
+bundle install --without production
+rhc setup
 {% endhighlight %}
   </div>
 </div>
@@ -160,6 +160,7 @@ config.logger = ActiveSupport::Logger.new(File.join(ENV['OPENSHIFT_RUBY_LOG_DIR'
 {% endhighlight %}
   </div>
 </div>
+
 Usuários do Rails 3: Trocar `ActiveSupport::Logger` por `ActiveSupport::BufferedLogger`.
 
 Você pode monitorar os registros de sua aplicação com o comando `rhc tail openshiftapp` (o retorno da mudança que você acabou de fazer não será exibido até que o novo arquivo seja commitado e enviado para o OpenShift).

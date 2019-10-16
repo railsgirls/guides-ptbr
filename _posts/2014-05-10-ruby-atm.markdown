@@ -8,7 +8,7 @@ permalink: caixa-eletronico-em-ruby
 
 *Criado por Joshua Paling, [@joshuapaling](https://twitter.com/joshuapaling)*
 
-*Traduzido por Ricardo Yasuda, [@shadowmaru](https://twitter.com/shadowmaru)
+*Traduzido por Ricardo Yasuda, [@shadowmaru](https://twitter.com/shadowmaru)*
 
 Neste exercício você vai escrever uma função para lidar com saques em um caixa eletrônico. A intenção é desafiar você! Prepare-se para fazer muitas perguntas, pesquisar, e sair um pouco do computador. Mas você aprenderá bastante!
 
