@@ -29,6 +29,14 @@ group :development, :test do
 end
 {% endhighlight %}
 
+e rode
+
+{% highlight sh %}
+bundle install
+{% endhighlight %}
+
+para instalar a gem.
+
 Em seguida, rode o comando abaixo para gerar as pastas do rspec:
 
 {% highlight sh %}
