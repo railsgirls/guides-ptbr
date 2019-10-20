@@ -36,7 +36,7 @@ doc/
 *.swp
 *~
 .project
-# Ignore (para usuários de OS X) o diretório .DS_Store criado pelo Mac Finder application
+# Ignore (para usuários de macOS) o diretório .DS_Store criado pelo Mac Finder application
 .DS_Store
 .idea
 .secret

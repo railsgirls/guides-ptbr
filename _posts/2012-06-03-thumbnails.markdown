@@ -13,7 +13,7 @@ __INSTRUTOR(A)__: Explicar qual o efeito de se definir a largura de uma imagem n
 
 ## *1.* Instalando ImageMagick
 
-* OS X: rode `brew install imagemagick`. Se o comando brew não estiver disponível no seu terminal, instale [install Homebrew here][in-homebrew].
+* macOS: rode `brew install imagemagick`. Se o comando brew não estiver disponível no seu terminal, instale [install Homebrew here][in-homebrew].
 * Windows: faça o download e rode o [ImageMagick installer][im-win] (use o primeiro link do  *download* ).
 * Linux: em Ubuntu e Debian, rode `sudo apt-get install imagemagick`. Use o gerenciador de package apropriado em lugar de `apt-get` para as demais distribuições Linux.
 
