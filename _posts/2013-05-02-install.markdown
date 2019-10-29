@@ -15,7 +15,7 @@ Para construir apps e outras coisas com Ruby on Rails, precisamos configurar alg
 
 Siga as instruições para seu sistema operacional (SO). Se você tiver algum problema, não entre em pânico. Avise-nos e vamos resolver juntos.
 
-* [Instalação para OS X](#instalação-para-os-x)
+* [Instalação para macOS](#instalação-para-os-x)
 * [Instalação para Windows](#instalação-para-windows)
 * [Instalação para Linux](#instalação-para-linux)
 * [Utilização da Máquina Virtual](#utilização-da-máquina-virtual)
@@ -23,7 +23,7 @@ Siga as instruições para seu sistema operacional (SO). Se você tiver algum pr
 
 <hr />
 
-## Instalação para OS X
+## Instalação para macOS
 
 ### *1.* Vamos checar a versão do seu sistema operacional.
 
@@ -36,7 +36,7 @@ Se a versão do seu sistema começa com 10.6, 10.7, 10.8, 10.9, 10.10 ou 10.11, 
 
 ![About this Mac dialog](images/2.png "About this Mac dialog")
 
-### *3a.* Se a versão do seu OS X é igual ou maior que 10.9:
+### *3a.* Se a versão do seu OS X/macOS é igual ou maior que 10.9:
 
 Se o número da sua versão começa com 10.9, 10.10 ou 10.11, siga os passos abaixo. Vamos instalar o *homebrew* e *rbenv*.
 
@@ -89,14 +89,14 @@ rbenv global 2.3.1
 gem install rails --no-document
 {% endhighlight %}
 
-### *3b.* Se a versão do seu OS X é 10.6, 10.7, ou 10.8:
+### *3b.* Se a versão do seu OS X/macOS é 10.6, 10.7, ou 10.8:
 
-Faça download do **RailsInstaller** para a versão do seu OS X:
+Faça download do **RailsInstaller** para a versão do seu macOS:
 
 * [RailsInstaller para 10.7 e 10.8](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
 * [RailsInstaller para 10.6](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
 
-Dê um duplo clique no arquivo baixado e ele será descompactado no diretório atual. Dê um duplo clique no arquivo descompactado **RailsInstaller-1.0.4-osx-10.7.app** ou **RailsInstaller-1.0.4-osx-10.6.app** e siga as instruções. O arquivo README será aberto com **Rails Installer OS X** no topo. Favor **IGNORAR** as instruções desse arquivo.
+Dê um duplo clique no arquivo baixado e ele será descompactado no diretório atual. Dê um duplo clique no arquivo descompactado **RailsInstaller-1.0.4-osx-10.7.app** ou **RailsInstaller-1.0.4-osx-10.6.app** e siga as instruções. O arquivo README será aberto com **Rails Installer macOS** no topo. Favor **IGNORAR** as instruções desse arquivo.
 
 Se a versão do Rails não for a mais recente, você pode atualizá-la via terminal:
 
@@ -116,7 +116,7 @@ Para esse workshop recomendamos o editor de texto Atom.
 
 * [Baixar e instalar Atom](https://atom.io/)
 
-Se você estiver usando Mac OS X 10.7 ou versões anteriores, você pode utilizar outro editor [Sublime Text 2](http://www.sublimetext.com/2).
+Se você estiver usando macOS 10.7 ou versões anteriores, você pode utilizar outro editor [Sublime Text 2](http://www.sublimetext.com/2).
 
 ### *5.* Atualizar seu navegador
 

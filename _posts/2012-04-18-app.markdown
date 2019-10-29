@@ -62,7 +62,7 @@ Vamos criar uma app Rails a partir do zero denominada _railsgirls_ destinada a c
 
 Primeiro, vamos abrir o Terminal:
 
-- Mac OS X: Abra Spotlight, digite _Terminal_ e clique na aplicação _Terminal_.
+- macOS: Abra Spotlight, digite _Terminal_ e clique na aplicação _Terminal_.
 - Windows: Clique Start e procure _Command Prompt_, clique em _Command Prompt with Ruby and Rails_.
 - Linux (Ubuntu/Fedora): Procure por _Terminal_ no dash e clique _Terminal_.
 - Serviço na nuvem (por exemplo: Codenvy): Faça login na sua conta, inicie seu projeto e vá para a IDE (ver [guia de instalação](/install#using-a-cloud-service) para detalhes). Em geral o terminal está localizado na parte inferior da janela do navegador.

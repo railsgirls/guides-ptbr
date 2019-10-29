@@ -47,7 +47,7 @@ Vamos criar uma nova aplicação Rails chamada *railsgirls*.
 
 Primeiro, vamos abrir um terminal:
 
-* Mac OS X: Abra o Spotlight, digite *Terminal* e clique na aplicação *Terminal*.
+* macOS: Abra o Spotlight, digite *Terminal* e clique na aplicação *Terminal*.
 * Windows: Clique em Iniciar (Start) e procure o *Prompt de Comandos* (*Command Prompt*), e então clique em *Prompt de Comandos com Ruby e Rails* (*Command Prompt with Ruby and Rails*).
 * Linux (Ubuntu/Fedora): Procure por *Terminal* no dash e clicque em *Terminal*.
 
