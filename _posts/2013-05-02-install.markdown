@@ -110,7 +110,7 @@ gem update rails --no-document
 brew install yarn
 {% endhighlight %}
 
-Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://yarnpkg.com/pt-BR/docs/install#mac-stable)
+Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://yarnpkg.com/lang/pt-br/docs/install#mac-stable)
 
 ### *5.* Instalar editor de texto
 
@@ -272,7 +272,7 @@ Tenha certeza que está mostrando uma versão qualquer do Node.
 
 ### *5.* Verificar o ambiente
 
-Baixe [yarn](https://yarnpkg.com/pt-BR/docs/install#mac-stable) e instale-o. Clique no instalador usando as opções padrão.
+Baixe [yarn](https://yarnpkg.com/pt-br/docs/install#mac-stable) e instale-o. Clique no instalador usando as opções padrão.
 
 ### *6.* Verificar o ambiente
 
@@ -298,7 +298,7 @@ Para instalar o ambiente de Ruby on Rails você deve apenas copiar a linha abaix
 
 ### *1.* Instalar Yarn
 
-Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://yarnpkg.com/pt-BR/docs/install#mac-stable)
+Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://yarnpkg.com/lang/pt-br/docs/install/#debian-stable)
 
 #### Para Ubuntu:
 
