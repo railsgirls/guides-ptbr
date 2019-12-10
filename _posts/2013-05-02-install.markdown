@@ -6,7 +6,7 @@ permalink: install
 
 # Tutorial de Instalação para Rails Girls
 
-Criado por Katie Ots, [site da Katie](http://www.katieots.com/)  
+Criado por Katie Ots, [site da Katie](http://www.katieots.com/)
 Traduzido por Marcela Oliveira, [@magaeu](https://twitter.com/magaeu)
 
 <span class="muted">Tempo previsto: 5min ativo / 15-30min passivo</span>
@@ -104,13 +104,15 @@ Se a versão do Rails não for a mais recente, você pode atualizá-la via termi
 gem update rails --no-document
 {% endhighlight %}
 
-Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
+### *4.* Instalar yarn
 
 {% highlight sh %}
-rails new myapp
+brew install yarn
 {% endhighlight %}
 
-### *4.* Instalar editor de texto
+Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://yarnpkg.com/lang/pt-br/docs/install#mac-stable)
+
+### *5.* Instalar editor de texto
 
 Para esse workshop recomendamos o editor de texto Atom.
 
@@ -118,11 +120,37 @@ Para esse workshop recomendamos o editor de texto Atom.
 
 Se você estiver usando macOS 10.7 ou versões anteriores, você pode utilizar outro editor [Sublime Text 2](http://www.sublimetext.com/2).
 
-### *5.* Atualizar seu navegador
+### *6.* Atualizar seu navegador
 
 Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso não tenha a versão mais recente.
 
+### *7.* Verificar o ambiente
+
+Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
+
+{% highlight sh %}
+rails -v
+{% endhighlight %}
+
+Deverá imprimir `Rails 6.0.0`(ou uma versão superior).
+
+{% highlight sh %}
+rails new myapp
+{% endhighlight %}
+
+{% highlight sh %}
+rails cd myapp
+{% endhighlight %}
+
+{% highlight sh %}
+rails server
+{% endhighlight %}
+
+Vá para `http://localhost:3000` no seu navegador, você verá a página 'Yay! You're on Rails!'.
+
 **Parabéns, seu ambiente de desenvolvimento Ruby on Rail está pronto!**
+
+**INSTRUTOR(A):** Recomendamos verificar o procedimento executando o comando scaffold e adicionando dados com a página gerada para assegurar que está tudo funcionando. Também remova o app de teste `myapp` para ter certeza que ninguém está na pasta errada, seguindo as etapas do workshop.
 
 <hr />
 
@@ -244,6 +272,10 @@ Tenha certeza que está mostrando uma versão qualquer do Node.
 
 ### *5.* Verificar o ambiente
 
+Baixe [yarn](https://yarnpkg.com/pt-br/docs/install#mac-stable) e instale-o. Clique no instalador usando as opções padrão.
+
+### *6.* Verificar o ambiente
+
 Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
 
 {% highlight sh %}
@@ -262,24 +294,55 @@ Acesse [http://localhost:3000](http://localhost:3000) em seu navegador. Você de
 
 ## Instalação para Linux
 
-### *1.* Instalar Rails
-
 Para instalar o ambiente de Ruby on Rails você deve apenas copiar a linha abaixo para sua distribuição Linux (Ubuntu ou Fedora), e colar no **Terminal** e pressionar Enter. Aproveite o texto que aparece na tela; irá levar algum tempo para o processo acabar. Nesse meio tempo, encorajamos você a pegar uma bebida refrescante antes de comecar.
+
+### *1.* Instalar Yarn
+
+Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://yarnpkg.com/lang/pt-br/docs/install/#debian-stable)
 
 #### Para Ubuntu:
 
 {% highlight sh %}
 sudo apt-get install curl
+{% endhighlight %}
+
+{% highlight sh %}
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+{% endhighlight %}
+
+{% highlight sh %}
+sudo apt update && sudo apt install yarn
+{% endhighlight %}
+
+#### Para Fedora:
+
+{% highlight sh %}
+curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+{% endhighlight %}
+
+{% highlight sh %}
+sudo yum install yarn
+{% endhighlight %}
+
+### *2.* Instalar Rails
+
+#### Para Ubuntu
+
+{% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
 Se você for usar a instalação do **RVM** com gnome-terminal, você provavelmente vai precisar mudar suas configurações padrões antes de começar a usar a versão correta do Ruby on Rails. Descubra como: [Documentação do RVM](http://rvm.io/integration/gnome-terminal).
 
-#### Para Fedora:
+
+#### Para Fedora
 
 {% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
+
 
 Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
 
@@ -287,13 +350,13 @@ Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
 rails new myapp
 {% endhighlight %}
 
-### *2.* Instalar editor de texto
+### *3.* Instalar editor de texto
 
 Para esse workshop recomendamos o editor de texto Sublime Text
 
 * [Baixar e instalar Sublime Text](http://www.sublimetext.com/2)
 
-### *3.* Atualizar seu navegador (browser)
+### *4.* Atualizar seu navegador (browser)
 
 Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso não tenha a versão mais recente.
 
