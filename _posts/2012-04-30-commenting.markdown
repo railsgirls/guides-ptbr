@@ -49,7 +49,7 @@ belongs_to :idea
 
 ## _3._ Mostrar o formulário de comentários e os comentários existentes
 
-Abra `app/views/ideas/show.html.erb` é depois da tag de imagem (image_tag)
+Abra `app/views/ideas/show.html.erb` é depois da tag de imagem (`image_tag`)
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 {% endhighlight %}

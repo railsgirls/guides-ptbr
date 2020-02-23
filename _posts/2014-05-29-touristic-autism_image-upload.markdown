@@ -94,7 +94,7 @@ __Instrutor(a)__: Explique o que especifica a largura da imagem em HTML no final
 
 ## Instalando ImageMagick
 
-* OS X: Execute `brew install imagemagick`. Se você não tiver o comando brew, você pode [instalar aqui][in-homebrew].
+* macOS: Execute `brew install imagemagick`. Se você não tiver o comando brew, você pode [instalar aqui][in-homebrew].
 * Windows: Baixe e execute [ImageMagick installer][im-win] (use o primeiro
   *download* link de download). Depois reabra o Shell de comando do Rails.
 * Linux: No Ubuntu e Debian, execute `sudo apt-get install imagemagick`. Use o gerenciador de pacote apropriado ao invés de usar `apt-get` para outras distribuições.

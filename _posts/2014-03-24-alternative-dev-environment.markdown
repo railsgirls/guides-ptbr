@@ -29,7 +29,7 @@ Criamos uma máquina virtual para você, com todos os programas e ferramentos ne
 
 ### VirtualBox
 
-VirtualBox é a plataforma de virtualização da Oracle, que pode ser baixada em todos os sistemas operacionais suportados (Windows, OS X, Linux). Vamos baixar o instalador a partir do endereço [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads), e vamos instalá-lo em seguida.
+VirtualBox é a plataforma de virtualização da Oracle, que pode ser baixada em todos os sistemas operacionais suportados (Windows, macOS, Linux). Vamos baixar o instalador a partir do endereço [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads), e vamos instalá-lo em seguida.
 
 ### Máquina virtual das Rails Girls
 
@@ -51,7 +51,7 @@ Quando você não precisa mais de uma VM, você pode desligá-la. Para isso, fec
 
 #### O mouse invisível
 
-Ao clicarmos nessa janela da VirtualBox, ela pega nosso ponteiro do mouse, e ele desaparece sem deixar vestígios. Você pode recuperar seu ponteiro: no canto inferior direito da janela você consegue ver a combinação de teclas que você tem que pressionar (no OS X é esquerda-cmd, e em outras plataformas é direita-ctrl).
+Ao clicarmos nessa janela da VirtualBox, ela pega nosso ponteiro do mouse, e ele desaparece sem deixar vestígios. Você pode recuperar seu ponteiro: no canto inferior direito da janela você consegue ver a combinação de teclas que você tem que pressionar (no macOS é esquerda-cmd, e em outras plataformas é direita-ctrl).
 
 ### Uso
 

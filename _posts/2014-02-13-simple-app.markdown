@@ -47,7 +47,7 @@ Vamos criar uma nova aplicação Rails chamada *railsgirls*.
 
 Primeiro, vamos abrir um terminal:
 
-* Mac OS X: Abra o Spotlight, digite *Terminal* e clique na aplicação *Terminal*.
+* macOS: Abra o Spotlight, digite *Terminal* e clique na aplicação *Terminal*.
 * Windows: Clique em Iniciar (Start) e procure o *Prompt de Comandos* (*Command Prompt*), e então clique em *Prompt de Comandos com Ruby e Rails* (*Command Prompt with Ruby and Rails*).
 * Linux (Ubuntu/Fedora): Procure por *Terminal* no dash e clicque em *Terminal*.
 
@@ -76,7 +76,7 @@ rails new railsgirls -m http://railsgirls.com/simple_scaffold.rb
 {% endhighlight %}
 
     <div>
-        <code>rails new railsgirls</code> diz ao Rails que crie um novo projeto chamado ```railsgirls```, com todos os arquivos de que nossa aplicação precisa.
+        <code>rails new railsgirls</code> diz ao Rails que crie um novo projeto chamado `railsgirls`, com todos os arquivos de que nossa aplicação precisa.
     </div>
     <div>
         <code>-m http://railsgirls.com/simple_scaffold.rb</code> diz ao Rails que baixe um modelo especial a partir de railsgirls.com, o qual deixa os arquivos um pouco mais simples e fáceis para iniciantes entenderem.
@@ -353,7 +353,7 @@ para
 <%= f.file_field :picture %>
 {% endhighlight %}
 
-Pode ser que você veja um erro do tipo ```TypeError: can't cast ActionDispatch::Http::UploadedFile to string```.
+Pode ser que você veja um erro do tipo `TypeError: can't cast ActionDispatch::Http::UploadedFile to string`.
 
 Se isso ocorrer, no arquivo `app/views/ideas/_form.html.erb`, mude a linha
 

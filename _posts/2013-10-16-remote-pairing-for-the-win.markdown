@@ -14,7 +14,7 @@ Traduzido por Bomfim Jr, @bomfimjr_
 Primeiro as primeiras coisas. O que me motivou a escrever este tutorial? Se você está lendo ié porque está consciente do poder do [Rails Girls](http://railsgirls.com). Mas, caso tenha dúvidas sobre este poder, vou lhe dar alguns fatos. Rails Girls é uma organização que intruduz as mulheres no desenvolvimento web com Ruby on Rails. Para muitas mulheres ao redor do mundo, isso é uma **poderosa experiência emocional** que mostra que elas podem criar algo novo para a web e que elas podem contar com a ajuda de outras mulheres que já se envolveram com a tecnologia.
 
 
-Eu disse "ao redor do mundo", não disse? Realmente, Rails Girls está em **todos os continentes** e em ** mais de 130 cidades!**  Eu sei que isso só se tornou realidade graças a generosidade do Ryan Bates ([@RBates](https://twitter.com/rbates)), eu mesmo tive a honra de distribuir cupons gratuitos  do [RailsCasts.com], durante três meses para muitas destas cidades. Isso faz parte dos objetivos do Rails Girls -- proporcionar as mulheres de todo mundo, ainda que se encontrem em circunstâncias adversas,  a  possibilidade  de estudar e com seu próprio esforço e dedicaçar alcançar o sucesso --  em um emprego bem remunerado e onde sejam **respeitadas por suas criações**.
+Eu disse "ao redor do mundo", não disse? Realmente, Rails Girls está em **todos os continentes** e em **mais de 130 cidades!**  Eu sei que isso só se tornou realidade graças a generosidade do Ryan Bates ([@RBates](https://twitter.com/rbates)), eu mesmo tive a honra de distribuir cupons gratuitos do [Railscasts](railscasts.com), durante três meses para muitas destas cidades. Isso faz parte dos objetivos do Rails Girls -- proporcionar as mulheres de todo mundo, ainda que se encontrem em circunstâncias adversas,  a  possibilidade  de estudar e com seu próprio esforço e dedicaçar alcançar o sucesso --  em um emprego bem remunerado e onde sejam **respeitadas por suas criações**.
 
 ## Mas, por que compartilhamento remoto é tão formidável?
 
@@ -26,12 +26,28 @@ Compartilhamento remoto é tão formidável porque pessoas podem contar com ajud
 * [Madeye](https://madeye.io) -- muito importante! Essa ferramenta vai possibilitar que você e suas amigas trabalhem no mesmo código e VEJAM o que a outra pessoa está alterando ASSIM QUE a alteração for feita!
 * Opcionalmente poderá usar uma conta Google Hangouts ou Skype ou qualquer outro programa para que você e suas amigas possam conversar entre si.
 
+<!--
+  O &nbsp; antes da numeração conserta um bug no qual o highlight quebra a numeração de listas
+  https://github.com/jekyll/jekyll/issues/588
+ -->
 ## Como instalar Madeye?
 1. Instale [Node.js](http://howtonode.org/how-to-install-nodejs)
-2. Se estiver usando Linux/MAC, abra o terminal e execute o comando:  `curl https://madeye.io/install | sh`.  Se estiver usando Windows abra o prompt e digite o comando:  `npm install -g madeye`.
-3. Pronto! Madeye está instalado!
-3. A seguir, no terminal, vá ao diretório que você deseja compartilhar e digite `madeye`.
-4. Madeye vai mostrar,  no terminal, o URL para compartilhamento com as suas companheiras de equipe e todas podem abrir o endereço nos seus navegadores e começar a editar o código.
+
+2. Se estiver usando Linux/MAC, abra o terminal e execute o comando:
+{% highlight sh %}
+curl https://madeye.io/install | sh
+{% endhighlight%}
+
+Se estiver usando Windows abra o prompt e digite o comando:
+{% highlight sh %}
+npm install -g madeye
+{% endhighlight%}
+
+&nbsp;3. Pronto! Madeye está instalado!
+
+&nbsp;4. A seguir, no terminal, vá ao diretório que você deseja compartilhar e digite `madeye`.
+
+&nbsp;5. Madeye vai mostrar,  no terminal, o URL para compartilhamento com as suas companheiras de equipe e todas podem abrir o endereço nos seus navegadores e começar a editar o código.
 
 Estando em modo de compartilhamento no navegador, você e seu treinador poderão ver no lado esquerdo da tela seus ícones em diretórios, sub-diretórios e arquivos. Navegando pelos arquivos você será capaz de visualizar o curso do seu treinador enquando ele edita os arquivos e vice-versa. É **muito** fácil!
 

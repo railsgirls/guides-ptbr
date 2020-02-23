@@ -6,7 +6,8 @@ permalink: install
 
 # Tutorial de Instalação para Rails Girls
 
-Criado por Katie Ots, [site da Katie](http://www.katieots.com/)  
+Criado por Katie Ots, [site da Katie](http://www.katieots.com/)
+
 Traduzido por Marcela Oliveira, [@magaeu](https://twitter.com/magaeu)
 
 <span class="muted">Tempo previsto: 5min ativo / 15-30min passivo</span>
@@ -15,7 +16,7 @@ Para construir apps e outras coisas com Ruby on Rails, precisamos configurar alg
 
 Siga as instruições para seu sistema operacional (SO). Se você tiver algum problema, não entre em pânico. Avise-nos e vamos resolver juntos.
 
-* [Instalação para OS X](#instalação-para-os-x)
+* [Instalação para macOS](#instalação-para-os-x)
 * [Instalação para Windows](#instalação-para-windows)
 * [Instalação para Linux](#instalação-para-linux)
 * [Utilização da Máquina Virtual](#utilização-da-máquina-virtual)
@@ -23,7 +24,7 @@ Siga as instruições para seu sistema operacional (SO). Se você tiver algum pr
 
 <hr />
 
-## Instalação para OS X
+## Instalação para macOS
 
 ### *1.* Vamos checar a versão do seu sistema operacional.
 
@@ -36,7 +37,7 @@ Se a versão do seu sistema começa com 10.6, 10.7, 10.8, 10.9, 10.10 ou 10.11, 
 
 ![About this Mac dialog](images/2.png "About this Mac dialog")
 
-### *3a.* Se a versão do seu OS X é igual ou maior que 10.9:
+### *3a.* Se a versão do seu OS X/macOS é igual ou maior que 10.9:
 
 Se o número da sua versão começa com 10.9, 10.10 ou 10.11, siga os passos abaixo. Vamos instalar o *homebrew* e *rbenv*.
 
@@ -89,14 +90,14 @@ rbenv global 2.3.1
 gem install rails --no-document
 {% endhighlight %}
 
-### *3b.* Se a versão do seu OS X é 10.6, 10.7, ou 10.8:
+### *3b.* Se a versão do seu OS X/macOS é 10.6, 10.7, ou 10.8:
 
-Faça download do **RailsInstaller** para a versão do seu OS X:
+Faça download do **RailsInstaller** para a versão do seu macOS:
 
 * [RailsInstaller para 10.7 e 10.8](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
 * [RailsInstaller para 10.6](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
 
-Dê um duplo clique no arquivo baixado e ele será descompactado no diretório atual. Dê um duplo clique no arquivo descompactado **RailsInstaller-1.0.4-osx-10.7.app** ou **RailsInstaller-1.0.4-osx-10.6.app** e siga as instruções. O arquivo README será aberto com **Rails Installer OS X** no topo. Favor **IGNORAR** as instruções desse arquivo.
+Dê um duplo clique no arquivo baixado e ele será descompactado no diretório atual. Dê um duplo clique no arquivo descompactado **RailsInstaller-1.0.4-osx-10.7.app** ou **RailsInstaller-1.0.4-osx-10.6.app** e siga as instruções. O arquivo README será aberto com **Rails Installer macOS** no topo. Favor **IGNORAR** as instruções desse arquivo.
 
 Se a versão do Rails não for a mais recente, você pode atualizá-la via terminal:
 
@@ -104,176 +105,230 @@ Se a versão do Rails não for a mais recente, você pode atualizá-la via termi
 gem update rails --no-document
 {% endhighlight %}
 
-Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
+### *4.* Instalar yarn
 
 {% highlight sh %}
-rails new myapp
+brew install yarn
 {% endhighlight %}
 
-### *4.* Instalar editor de texto
+Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://yarnpkg.com/lang/pt-br/docs/install#mac-stable)
+
+### *5.* Instalar editor de texto
 
 Para esse workshop recomendamos o editor de texto Atom.
 
 * [Baixar e instalar Atom](https://atom.io/)
 
-Se você estiver usando Mac OS X 10.7 ou versões anteriores, você pode utilizar outro editor [Sublime Text 2](http://www.sublimetext.com/2).
+Se você estiver usando macOS 10.7 ou versões anteriores, você pode utilizar outro editor [Sublime Text 2](http://www.sublimetext.com/2).
 
-### *5.* Atualizar seu navegador
+### *6.* Atualizar seu navegador
 
 Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso não tenha a versão mais recente.
 
-**Parabéns, seu ambiente de desenvolvimento Ruby on Rail está pronto!**
+### *7.* Verificar o ambiente
 
-<hr />
-
-## Instalação para Windows
-
-### *1.* Instalar Rails
-
-Baixar o [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.4.0.exe) e executá-lo. Utilize as configurações padrões durante a instalação.
-
-Abra o `Command Prompt with Ruby and Rails` e execute o seguinte comando:
+Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
 
 {% highlight sh %}
 rails -v
 {% endhighlight %}
 
-Se a versão do Rails for menor que 5, atualize-o utilizando o seguinte comando:
+Deverá mostrar `Rails 6.0.0`(ou uma versão superior).
 
 {% highlight sh %}
-gem update rails --no-document
+rails new myapp
 {% endhighlight %}
-
-## Possíveis erros
-
-### Gem::RemoteFetcher error
-
-Se você se deparar com o erro abaixo quando executar `rails new railsgirls` ou `gem update rails`:
 
 {% highlight sh %}
-Gem::RemoteFetcher::FetchError: SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-0.6.11.gem)
+rails cd myapp
 {% endhighlight %}
-
-Significa que você possui uma versão antiga do **Rubygems** e será necessário atualizá-lo manualmente. Primeiro, verifique a sua versão do Rubygems (via terminal):
 
 {% highlight sh %}
-gem -v
+rails server
 {% endhighlight %}
 
-Se a versão for menor que `2.6.5` você precisa atualizá-la manualmente através dos seguintes passos:
+Vá para `http://localhost:3000` no seu navegador, você verá a página 'Yay! You're on Rails!'.
 
-Primeiro baixe o [ruby-gems-update gem](https://rubygems.org/gems/rubygems-update-2.6.11.gem). Mova o arquivo para `c:\\rubygems-update-2.6.11.gem` e execute (via terminal):
+**Parabéns, seu ambiente de desenvolvimento Ruby on Rail está pronto!**
 
-{% highlight sh %}
-gem install --local c:\\rubygems-update-2.6.11.gem
-update_rubygems --no-document
-gem uninstall rubygems-update -x
-{% endhighlight %}
+**INSTRUTOR(A):** Recomendamos verificar o procedimento executando o comando scaffold e adicionando dados com a página gerada para assegurar que está tudo funcionando. Também remova o app de teste `myapp` para ter certeza que ninguém está na pasta errada, seguindo as etapas do workshop.
 
-Verifique novamente sua versão do Rubygems:
+<hr />
 
-{% highlight sh %}
-gem -v
-{% endhighlight %}
+## Instalação para Windows
 
-Tenha certeza que seja igual ou maior que `2.6.11`. Caso não, execute o procedimento acima novamente.
+Para instalar o Rails for Windows, precisamos instalar Ruby e várias ferramentas de suporte, como Git, Node.js e SQLite. Siga as etapas abaixo para instalar essas ferramentas no seu computador. Ao concluir essas etapas, você terá um aplicação Rails em execução no seu computador.
 
-Se você ainda está enfrentando problemas, você pode sempre encontrar a versão mais recente do rubygems online em [rubygems.org](https://rubygems.org/pages/download). Se você clicar em **GEM**, você terá a última versão.
+_Durante estas etapas, solicitaremos que você abra e feche o prompt de comando do Windows de vez em quando. Pode ser o aplicativo "Prompt de Comando" ou "Powershell" (dependendo do seu computador). Pedimos que você feche e abra novamente, porque quando o prompt de comando é iniciado, ele recarrega no seu ambiente. Quando instalamos um novo aplicativo, o ambiente não é atualizado automaticamente no prompt de comando. Para testar se a instalação foi bem-sucedida, precisamos reiniciar o prompt de comando e carregar o novo ambiente._
 
-### Durante bundle install
+### *1.* Instalando Ruby
 
-O erro `Gem::RemoteFetcher::FetchError: SSL_connect` pode também acontecer durante a etapa de `bundle install` ao criar um novo rails app.
+- Baixe o [RubyInstaller](https://rubyinstaller.org/downloads/) para Windows.
+  - [Link direto para instalação do Ruby 2.6.5 com Devkit](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.5-1/rubyinstaller-devkit-2.6.5-1-x86.exe) para arquitetura 32-bit.
 
-O erro irá mencionar [bit.ly/ruby-ssl](http://bit.ly/ruby-ssl). O que é relevante para usuários de Windows neste ponto é [este GitHub gist](https://gist.github.com/867550). O manual descrito se provou ser bem sucedido para resolver esse erro de `bundle install`.
+- Execute o instalador. Clique no instalador usando todas as opções padrão.
+  - Quando o instalador mostrar "MSYS2", digite `1` e pressione Enter.
+  - Quando o instalador mostrar o mesmo "MSYS2" novamente, apenas pressione Enter de novo.
 
-### Erro 'x64_mingw' não é uma plataforma válida
+### *2.* Instalando Git
 
-Algumas vezes você pode se deparar com o seguinte erro quando executar `rails server`:
+- Vá para a página de download do [Instalador de Git para Windows](https://git-scm.com/download/win).
+  - Caso a arquitetura do seu computeador seja 32-bit, "32-bit Git for Windows Setup" e baixe esta versão.
+- Execute o instalador. Clique no instalador usando todas as opções padrão.
 
-`'x64_mingw' is not a valid platform`
+### *3.* Instalando Node.js
 
-Se você encontrar esse erro após utilizar o **RailsInstaller**, você terá que editar o arquivo `Gemfile`. Para isso, siga os passos abaixo:
-
-No final do arquivo verifique se as últimas linhas possuem as seguintes informações:
-
-`gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]`.
-
-Se a linha possui `:x64_mingw`, então apague a parte `:x64_mingw`.
-
-O final deverá ser da seguinte maneira:
-`gem 'tzinfo-data', platforms: [:mingw, :mswin]`.
-
-Após fazer o procedimento, favor usar seu prompt de comando novamente e executar `bundle update`.
-
-### *2.* Instalar editor de texto
-
-Para esse workshop recomendamos o editor de texto Atom.
-* [Baixar e instalar Atom](https://github.com/atom/atom/releases/latest)
-  * Baixar um arquivo .zip do Atom para Windows e descompactá-lo.
-  * Copiar o diretório para seus Arquivos de Programas (Program Files).
-  * Abrir o Atom no diretório.
-
-Se você estiver usando Windows Vista ou versões anteriores, você pode utilizar outro editor [Sublime Text 2](http://www.sublimetext.com/2).
-
-### *3.* Atualizar seu navegador (browser)
-
-Se você utiliza **Internet Explorer**, recomendamos instalar o [Firefox](mozilla.org/firefox) ou [Google Chrome](google.com/chrome).
-
-Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso não tenha a versão mais recente.
-
-### *4.* Instalar Node
-
-O procedimento não é estritamente necessário, mas pode evitar problemas com e `ExecJS::RuntimeError` que podem ocorrer posteriormente ([ver stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial)).
-
-* Acesse [https://nodejs.org/](https://nodejs.org/) e instale o pacote node LTS
-* Reabra seu `Rails Command Shell`
-
-Verifique sua versão do Node:
+- Vá para a página de download do Node.js [nodejs.org/en/download](https://nodejs.org/en/download/).
+  - Selecione a aba da versão "LTS", que deve estar selecionada por padrão.
+  - Na linha "Windows Installer (.msi)", clique no link da arquitetura de 32 bits para baixar o arquivo.
+- Execute o instalador. Clique no instalador usando todas as opções padrão.
+- Abra o prompt de comando do Windows e execute o seguinte comando para verificar se a instalação foi bem-sucedida. Ele deve mostrar uma versão como, por exemplo, `v12.16.0` (a versão mostrada pode ser diferente, e tudo bem).
 
 {% highlight sh %}
 node --version
 {% endhighlight %}
 
-Tenha certeza que está mostrando uma versão qualquer do Node.
+- Feche o prompt de comando do Windows.
 
-### *5.* Verificar o ambiente
+#### *3a.* Instalando yarn
+
+- Vá para a [página para baixar o yarn](https://classic.yarnpkg.com/pt-BR/docs/install#windows-stable).
+- Baixe o instalador clicando no botão: "Baixar o instalador".
+- Execute o instalador. Clique no instalador usando todas as opções padrão.
+- Abra o prompt de comando do Windows e execute o seguinte comando para verificar se a instalação foi bem-sucedida. Ele deve mostrar uma versão como, por exemplo,  `1.22.0` (a versão mostrada pode ser diferente, e ainda, vai estar tudo bem).
+
+{% highlight sh %}
+yarn --version
+{% endhighlight %}
+
+- Feche o prompt de comando do Windows.
+
+### *4.* Instalando SQLite
+
+- Vá para a página [sqlite.org/download.html](https://sqlite.org/download.html)
+- Role a página até a parte "Precompiled Binaries for Windows".
+- Baixe o arquivo `sqlite-dll-win32-x86-xxxxxxx.zip` (em que `xxxxxxx` é o número da versão mais recente disponível).
+- Baixe o arquivo `sqlite-tools-win32-x86-xxxxxxx.zip` (em que `xxxxxxx` é o número da versão mais recente disponível).
+- Descompresse os arquivos.
+- No Windows Explorer, abra "Este computador" na barra lateral e abra o disco local `C:`.
+- Crie uma pasta com o nome `sqlite3`.
+- Copie os arquivos extraídos para a pasta `C:\sqlite3` (recém criada). Para ver se tudo deu certo, você deve ter os seguintes arquivos nessa pasta: `sqldiff`, `sqlite3.def`, `sqlite3.dll`, `sqlite3` e `sqlite3_analyzer`.
+- Abra o prompt de comando do Windows e execute o seguinte comando para adicionar a pasta `c:\sqlite3` ao PATH do sistema, para que seu computador saiba onde essa pasta está quando precisar.
+  - Para quem tem prompt de comando:
+    - `setx path "%path%;c:\sqlite3"`
+  - Para quem tem Powershell:
+    - `setx path "c:\sqlite3"`
+- Feche o prompt de comando do Windows.
+- Reabra o prompt de comando do Windows e execute o seguinte comando para verificar se a instalação foi bem-sucedida. Ele deve mostrar uma versão como, por exemplo, `3.31.1` (versão mostrada pode ser diferente, nada é 100% exato).
+
+{% highlight sh %}
+sqlite3 --version
+{% endhighlight %}
+
+- Feche o prompt de comando do Windows.
+
+### *5.* Instalando o Rails
+
+- Abra o prompt de comando do Windows, execute o seguinte comando. Isso instalará o Rails e as gems do bundler (gerenciador de gems) no seu computador.
+
+{% highlight sh %}
+gem install rails bundler --no-document
+{% endhighlight %}
+
+- Abra o prompt de comando do Windows e execute o seguinte comando para verificar se a instalação foi bem-sucedida. Ele deve mostrar uma versão como, por exemplo, `Rails 6.0.2.1` (a versão mostrada pode ser diferente).
+
+{% highlight sh %}
+rails --version
+{% endhighlight %}
+
+_Se você tiver algum problema durante esta etapa, verifique a parte de [Possíveis erros](#possíveis-erros-durante-a-instalação) para obter possíveis soluções._
+
+### *6.* Instalar um editor de texto
+
+Para esse workshop recomendamos o editor de texto Atom.
+
+- Vá para a [página de download do Atom](https://github.com/atom/atom/releases/latest).
+  - Clique em `AtomSetup.exe` para baixar o editor.
+  - Execute o instalador. Clique no instalador usando todas as opções padrão.
+
+Se você estiver usando o Windows Vista ou versões anteriores, poderá usar outro editor, como por exemplo [Sublime Text 2](http://www.sublimetext.com/2). Apenas garanta que você não esteja confundindo o prompt de comando com o editor de texto: altere o tema do editor, escolhendo uma das seguintes opções: "iPlastic", "Slush &amp; Poppies", or "Zenburnesque".
+
+
+### *7.* Verificando o ambiente
 
 Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
 
 {% highlight sh %}
 rails new myapp
+{% endhighlight %}
+
+{% highlight sh %}
 cd myapp
+{% endhighlight %}
+
+{% highlight sh %}
 rails server
 {% endhighlight %}
 
-Acesse [http://localhost:3000](http://localhost:3000) em seu navegador. Você deverá ver a página 'Yay! You're on Rails!'.
+Vá para `http://localhost:3000` no seu navegador, você deverá ver a página 'Yay! You're on Rails!'. Parabéns!
 
-**Parabéns, seu ambiente de desenvolvimento Ruby on Rail está pronto!**
+_Se você tiver algum problema durante esta etapa, verifique a parte de [Possíveis erros](#possíveis-erros-durante-a-instalação) para obter possíveis soluções._
 
-**Instrutor(a):** Recomendamos verificar o procedimento executando o comando scaffold e adicionando dados com a página gerada pelos instrutores(as) para assegurar que tudo está funcionando bem.
+**Instrutor(a):** Recomendamos verificar o comando scaffold e inserir dados com a página gerada com os instrutores para garantir que tudo esteja funcionando. Além disso: remova o aplicativo de teste `myapp` para garantir que ninguém esteja trabalhando na pasta errada, seguindo as etapas do workshop.
 
 <hr />
 
 ## Instalação para Linux
 
-### *1.* Instalar Rails
-
 Para instalar o ambiente de Ruby on Rails você deve apenas copiar a linha abaixo para sua distribuição Linux (Ubuntu ou Fedora), e colar no **Terminal** e pressionar Enter. Aproveite o texto que aparece na tela; irá levar algum tempo para o processo acabar. Nesse meio tempo, encorajamos você a pegar uma bebida refrescante antes de comecar.
+
+### *1.* Instalar Yarn
+
+Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://yarnpkg.com/lang/pt-br/docs/install/#debian-stable)
 
 #### Para Ubuntu:
 
 {% highlight sh %}
 sudo apt-get install curl
+{% endhighlight %}
+
+{% highlight sh %}
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+{% endhighlight %}
+
+{% highlight sh %}
+sudo apt update && sudo apt install yarn
+{% endhighlight %}
+
+#### Para Fedora:
+
+{% highlight sh %}
+curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+{% endhighlight %}
+
+{% highlight sh %}
+sudo yum install yarn
+{% endhighlight %}
+
+### *2.* Instalar Rails
+
+#### Para Ubuntu
+
+{% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
 Se você for usar a instalação do **RVM** com gnome-terminal, você provavelmente vai precisar mudar suas configurações padrões antes de começar a usar a versão correta do Ruby on Rails. Descubra como: [Documentação do RVM](http://rvm.io/integration/gnome-terminal).
 
-#### Para Fedora:
+
+#### Para Fedora
 
 {% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
+
 
 Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
 
@@ -281,13 +336,13 @@ Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
 rails new myapp
 {% endhighlight %}
 
-### *2.* Instalar editor de texto
+### *3.* Instalar editor de texto
 
 Para esse workshop recomendamos o editor de texto Sublime Text
 
 * [Baixar e instalar Sublime Text](http://www.sublimetext.com/2)
 
-### *3.* Atualizar seu navegador (browser)
+### *4.* Atualizar seu navegador (browser)
 
 Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso não tenha a versão mais recente.
 
@@ -359,3 +414,76 @@ Na tela 'New workspace', algumas configurações tem que ser feitas.
   * Abra 'Operations perspective' (1) no Codenvy, vá na aba 'Servers' (2) e selecione 'Server Address' na linha começando com 'Server-3000-tcp' (3). Ao invés de abrir http://localhost:3000, abra esta URL no seu browser.
   ![](/images/codenvy/get-workspace-ip.jpg)
   * Se, por exemplo, você for pedido para abrir http://localhost:3000/posts, abra a URL anterior no seu browser e adicione '/posts' a URL.
+
+
+## Possíveis erros durante a instalação
+
+### Gem::RemoteFetcher error
+
+Se você ver este erro ao executar `rails new railsgirls` ou` gem update rails`:
+
+{% highlight sh %}
+Gem::RemoteFetcher::FetchError: SSL_connect returned=1 errno=0 state=SSLv3 read
+server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-0.6.11.gem)
+{% endhighlight %}
+
+Isso significa que você possui uma versão mais antiga do Rubygems e precisará atualizá-la manualmente. Primeiro verifique sua versão atual do Rubygems no seu terminal:
+
+{% highlight sh %}
+gem -v
+{% endhighlight %}
+
+Se for menor que `2.6.5`, será necessário atualizá-la manualmente:
+
+Primeiramente baixe [ruby-gems-update gem](https://rubygems.org/gems/rubygems-update-2.6.11.gem). Mova este arquivo para `c:\\rubygems-update-2.6.11.gem` e execute:
+
+{% highlight sh %}
+gem install --local c:\\rubygems-update-2.6.11.gem
+{% endhighlight %}
+
+{% highlight sh %}
+update_rubygems --no-document
+{% endhighlight %}
+
+{% highlight sh %}
+gem uninstall rubygems-update -x
+{% endhighlight %}
+
+Confira novamente sua versão de ruby:
+
+{% highlight sh %}
+gem -v
+{% endhighlight %}
+
+Verifique se é igual ou superior a 2.6.11. Execute novamente o comando que estava falhando anteriormente.
+
+Se você ainda estiver com problemas, sempre poderá encontrar a versão mais recente do rubygems online em [rubygems.org] (https://rubygems.org/pages/download). Se você clicar em **GEM**, deverá ver a versão mais recente.
+
+### Durante o bundle install
+
+O erro `Gem :: RemoteFetcher :: FetchError: SSL_connect` também pode ocorrer durante a fase de `bundle install` ao criar uma aplicação nova em rails.
+
+O erro deve mencionar [bit.ly/ruby-sslingerie(http://bit.ly/ruby-ssl). O que pode ser relevante para os usuários de Windows neste momento é [esta página do GitHub] (https://gist.github.com/867550). A maneira manual descrita nesta solução provou ser bem-sucedida na solução do erro `instalação do pacote configurável`.
+
+### 'x64_mingw' is not a valid platform Error
+
+Às vezes, você pode receber o seguinte erro ao executar `rails server`:
+`'x64_mingw' is not a valid platform` Se você tiver esse erro após executar o RailsInstaller, precisará fazer uma pequena edição no arquivo `Gemfile`:
+
+Olhe para a parte inferior do arquivo. Você provavelmente verá algo assim como uma das últimas linhas do arquivo:
+`gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]`. Se você tem essa linha com  `:x64_mingw`, delete a parte `:x64_mingw`. No fim, queremos que se pareça com:
+`'tzinfo-data', platforms: [:mingw, :mswin]`
+
+Depois de fazer isso, abra seu prompt de comando novamente e digite `bundle update`.
+
+### The sqlite3 gem failed to install
+
+Ao executar `rails new myapp`, a gem `sqlite3` pode falhar na instalação. Quando isso acontecer, feche primeiro seu prompt de comando. Em seguida, abra o prompt novamente.
+
+Em seguida, instale o `sqlite3` separadamente do `rails` executando o seguinte comando no prompt de comando:
+
+{% highlight sh %}
+gem install sqlite3
+{% endhighlight %}
+
+Se isso der certo, remova o diretório `myapp` que o instalador do rails criou anteriorment e retorne às instruções de instalação para criar o app novamente (`rails new myapp`).
