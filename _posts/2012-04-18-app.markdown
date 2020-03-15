@@ -283,6 +283,7 @@ Agora vamos alterar a estilização da tabela que contém as ideias. Abra `app/a
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
+body { margin: 0; }
 {% endhighlight %}
 
 Agora, verifique se salvou seus arquivos e atualize o navegador para ver o que foi alterado. Nada mudou? Pode ser que você não esteja mais conectado ao Wi-Fi.
