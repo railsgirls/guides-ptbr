@@ -119,7 +119,7 @@ Para finalizar force o usuário a ser redirecionado para a página de login se e
   before_action :authenticate_user!
 {% endhighlight %}
 
-depois de `protect_from_forgery with: :exception`.
+depois de `class ApplicationController < ActionController::Base`.
 
 Abra seu navegador e execute as ações de login e logout.
 

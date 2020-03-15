@@ -115,7 +115,7 @@ Finalmente, force o user para redirecionar para a página de login se o usuário
 before_action :authenticate_user!
 {% endhighlight %}
 
-após `protect_from_forgery with: :exception`.
+após `class ApplicationController < ActionController::Base`.
 
 Abra seu navegador e tente logar e deslogar.
 
