@@ -1,6 +1,6 @@
 ---
 layout: default
-title: App para turismo de autismo amigável 
+title: App para turismo de autismo amigável
 permalink: touristic-autism_resource-modeling
 ---
 
@@ -115,7 +115,7 @@ Finalmente, force o user para redirecionar para a página de login se o usuário
 before_action :authenticate_user!
 {% endhighlight %}
 
-após `protect_from_forgery with: :exception`.
+após `class ApplicationController < ActionController::Base`.
 
 Abra seu navegador e tente logar e deslogar.
 
@@ -143,7 +143,7 @@ rails generate scaffold place name:string address:string latitude:decimal longit
 
 Observe que a coluna `user:references` que é criada para suportar a associação 1-para-muitos com usuários.
 
-O scaffold cria novos arquivos diretório do seu projeto. No entanto, nós definimos uma "estrutura" (modelada) para o nosso recurso "place" e queremos que todas as instâncias futuras desse recurso atinjam essa estrutura e sejam armazenadas em algum lugar, ou seja, em um banco de dados. 
+O scaffold cria novos arquivos diretório do seu projeto. No entanto, nós definimos uma "estrutura" (modelada) para o nosso recurso "place" e queremos que todas as instâncias futuras desse recurso atinjam essa estrutura e sejam armazenadas em algum lugar, ou seja, em um banco de dados.
 Nós já estamos usando um banco de dados (veja `gem 'sqlite'` na sua Gemfile). Vamos adicionar a estrutura de "place" como uma tabela para nosso banco de dados com o seguinte.
 
 <div class="os-specific">
@@ -162,11 +162,11 @@ ruby bin/rake db:migrate
 
 Então inicie o servidor novamente. Abra [http://localhost:3000/places](http://localhost:3000/places) no seu navegador e veja todas as novas funcionalidades que a nossa aplicação web está agora suportando o recurso de "places". Tudo graças ao que o Ruby on Rails automaticamente gera com `generate scaffold`.
 Cada nova instância de "place" que será salva no banco de dados, irá automaticamente atribuir um identificador único chamado "chave primária", sem a necessidade de especificá-lo como um dos campos (junto com imagem, nome etc.)  
-  
 
-**Instrutor(a):** O que é o scaffolding do Rails? O que são as migrations e por que você precisa delas? 
+
+**Instrutor(a):** O que é o scaffolding do Rails? O que são as migrations e por que você precisa delas?
 Observe as páginas que foram criadas para manipular o recurso de "place" e suas convenções de nomeclatura.
-Olhe os logs do servidor e explique-o como um relatório das seguintes interações (no contexto do padrão MVC): 
+Olhe os logs do servidor e explique-o como um relatório das seguintes interações (no contexto do padrão MVC):
 * o navegador emite uma solicitação para o URL /places.
 * Rails roteia /places para o ação de index em Places controller.
 * A ação de index requisita a model Place para receber todos os places (Place.all).
@@ -194,12 +194,12 @@ Vamos add-commit-push para o repositório do Github!
 
 Observe que places ainda não estão associados corretamente aos users. Por exemplo, ao criar um novo place, o campo "User" deverá ser preenchido por nós mesmos e, ao visualizar um perfil de user, não haverá lista de places criados por ele e vice-versa. Além disso, ao excluir uma conta de user, todos os places que ele criou não são excluídos automaticamente.
 
-Vamos apropriadamente criar a associação 1-para-muitos entre User e Places. 
+Vamos apropriadamente criar a associação 1-para-muitos entre User e Places.
 
 #### Passo 1. Adicionar Associação 1-para-muitos  
 
 Você precisa ter certeza que o Rails sabe a relação entre o recurso de User e Place.
-Como um user pode criar muitos places, precisamos ter certeza de que a user model sabe disso. 
+Como um user pode criar muitos places, precisamos ter certeza de que a user model sabe disso.
 Abra `app/models/user.rb` e depois da linha
 
 {% highlight ruby %}
@@ -211,7 +211,7 @@ Adicione
 has_many :places
 {% endhighlight %}
 
-O place também tem que saber que ela pertence a um user. Então, abra `app/models/place.rb` e depois 
+O place também tem que saber que ela pertence a um user. Então, abra `app/models/place.rb` e depois
 
 {% highlight ruby %}
 class Place < ActiveRecord::Base
@@ -248,7 +248,7 @@ agora, remova
 </div>
 {% endhighlight %}
 
-## Passo 3: Coloque permissões para editar/deletar 
+## Passo 3: Coloque permissões para editar/deletar
 
 Permita que apenas o criador de place possa editar/deletar um place.
 
@@ -286,7 +286,7 @@ bin/rake db:migrate
 Inicie o servidor, veja o novo serviço no seu navegador. E então, add-commit-push para o github.
 </div>
 
-**Instrutor(a):** mostre que o scaffold atualizou os arquivos de rotas do Rails com uma regra para o recurso de Review 
+**Instrutor(a):** mostre que o scaffold atualizou os arquivos de rotas do Rails com uma regra para o recurso de Review
 
 ##Associação de Recursos
 
@@ -409,7 +409,7 @@ Abra `app/models/comment.rb` e entre 'class' e 'end':
 validates :body, length: { maximum: 140 }
 {% endhighlight %}
   </div>
-Se nós agora tentarmos enviar mais de 140 caracteres, teremos um erro (veja só! ;) ) 
+Se nós agora tentarmos enviar mais de 140 caracteres, teremos um erro (veja só! ;) )
 </div>
 
 ## Ajuste as rotas
