@@ -161,7 +161,9 @@ Abra <http://localhost:3000> no navegador. Se você estiver usando um serviço n
 
 Se você ver a página denominada "Yay! You’re on Rails!" é porque tudo deu certo e sua nova app está funcionando corretamente.
 
-Note que nesta nova janela o prompt de comando não é visível, pois você se encontra no servidor Rails e o prompt de comando tem o seguinte aspecto:
+Note que nesta nova janela o prompt de comando não é visível, pois você se encontra no servidor Rails.
+
+O prompt de comando deve parecer com isso:
 
 <div class="os-specific">
   <div class="nix">
