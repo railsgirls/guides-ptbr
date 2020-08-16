@@ -111,7 +111,7 @@ gem update rails --no-document
 brew install yarn
 {% endhighlight %}
 
-Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://yarnpkg.com/lang/pt-br/docs/install#mac-stable)
+Se você precisa de mais informações para instalação do yarn, confira a [documentação de instalação do yarn](https://classic.yarnpkg.com/pt-BR/docs/install#mac-stable)
 
 ### *5.* Instalar editor de texto
 
