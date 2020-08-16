@@ -143,6 +143,8 @@ Para  parar o servidor pressione as teclas <kbd>Ctrl</kbd>+<kbd>C</kbd>
 
 ### Encontrou um problema?
 
+Entre em contato com a Ana, no twitter: [@anaschwendler](https://twitter.com/anaschwendler)
+
 Caso jekyll não esteja funcionando como esperado consulte [Issue 503](https://github.com/mojombo/jekyll/issues/503)
 
 ## Contribuindo com um tutorial
