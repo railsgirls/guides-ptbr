@@ -25,7 +25,7 @@ __INSTRUTOR(A)__: Para saber mais sobre a razão por trás desse tutorial para i
 
 ### Editor de Texto
 
-* [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com),  Vim e Emacs são exemplos de editores de texto que você pode usar para escrever seu código e editar arquivos. 
+* [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com),  Vim e Emacs são exemplos de editores de texto que você pode usar para escrever seu código e editar arquivos.
 
 <h3><i class="icon-prompt">&nbsp;</i></h3>
 
@@ -253,7 +253,7 @@ __INSTRUTOR(A)__: Discuta sobre o que acontece, qual é a ordem dos registros e 
 podem ser re-ordenados (por exemplo, data inversa) e onde deve acontecer essa lógica
 
 ### Crie um controlador para os registros do diário
-Agora que temos um modelo, precisamos criar um controlador para cuidar das ações relacionadas com as intancias do modelo (criar novos registros, mostrar, editar e deletar registros existentes). Execute `rails generate controller Entries` - isso deve gerar a classe `EntriesController`. Verifique `rake routes` - e note que apenas o controlador não basta, precisamos ainda apontar as URLs para as ações do controlador.
+Agora que temos um modelo, precisamos criar um controlador para cuidar das ações relacionadas com as instâncias do modelo (criar novos registros, mostrar, editar e deletar registros existentes). Execute `rails generate controller Entries` - isso deve gerar a classe `EntriesController`. Verifique `rake routes` - e note que apenas o controlador não basta, precisamos ainda apontar as URLs para as ações do controlador.
 
 Edit `config/routes.rb` e adicione a linha `resources "entries"` em algum lugar dentro do block de `Diary::Application.routes.draw`. Execute `rake routes` novamente: note que agora sua aplicação terá várias novas rotas.
 
@@ -268,11 +268,11 @@ def index
 end
 {% endhighlight %}
 
-Agora atualize o seu navegador - nós não temos mais um problema `unknow action`, temos agora um problema `template is missing`. Salve o arquivo sem nenhum conteúdo como `app/views/entries/index.html.erb` (note que é igual ao arquivo `index.html.erb` da pasta `welcome` de antes, mas desta vez será na pasta `entries`) e atualize seu navegador novamente - ele deverá agora mostrar uma página vazia. Isso é bom, pois nossa visualização está vazia no momento.
+Agora atualize o seu navegador - nós não temos mais um problema `unknown action`, temos agora um problema `template is missing`. Salve o arquivo sem nenhum conteúdo como `app/views/entries/index.html.erb` (note que é igual ao arquivo `index.html.erb` da pasta `welcome` de antes, mas desta vez será na pasta `entries`) e atualize seu navegador novamente - ele deverá agora mostrar uma página vazia. Isso é bom, pois nossa visualização está vazia no momento.
 
 __INSTRUTOR(A)__: Explique como as ações são renderizadas e relacionadas com as visualizações por padrão.
 
-Agora vá para o arquivo `app/controllers/welcome_controller.rb` e encontre o método `WelcomeController#index` (aquele que começa com `def index`). Encontre a linha que atribue a variável `@entries` (deve começar com `@entries =`) e copie-o para `ENtriesController#index` (e então para o método `index` de `EntriesController`, que pode ser encontrado em `app/controller/welcome_controller.rb`). Similarmente, vá para a visualização `app/views/welcome/index.html.erb` e copie o block `@entries.each` (todos dentro das linha indentadas inclusive o `end`) para `app/views/entries/index.html.erb`.  Atualize o navegador: ele deverá agora mostrar todos os registros do seu diário.
+Agora vá para o arquivo `app/controllers/welcome_controller.rb` e encontre o método `WelcomeController#index` (aquele que começa com `def index`). Encontre a linha que atribue a variável `@entries` (deve começar com `@entries =`) e copie-o para `EntriesController#index` (e então para o método `index` de `EntriesController`, que pode ser encontrado em `app/controller/entries_controller.rb`). Similarmente, vá para a visualização `app/views/welcome/index.html.erb` e copie o block `@entries.each` (todos dentro das linha indentadas inclusive o `end`) para `app/views/entries/index.html.erb`.  Atualize o navegador: ele deverá agora mostrar todos os registros do seu diário.
 
 __INSTRUTOR(A)__: Explique que mesmo isso pareça ter pouco progresso, existe uma mudança significativa: nós não mais estamos operando dentro do contexto da página principal, mas sim de uma lista de registro do diário apenas (sem os links para os outros sites, por exemplo).
 
@@ -283,7 +283,7 @@ Note como, quando você execute `rake routes`, a saída diz que o padrão de `/e
 __INSTRUTOR(A)__: Guie na adição da ação que falta e da visualização se necessário; tenha certeza que o processo (desde decifrar descobrir a rota certa em `rake routes`) está bem entendido.
 
 Agora, vamos descobrir como interpretar o `1` do fim da URL para mostrar o
-registro certo. Crie a ação `EntriesController#show` assim: 
+registro certo. Crie a ação `EntriesController#show` assim:
 
 {% highlight ruby %}
 def show
