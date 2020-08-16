@@ -368,20 +368,6 @@ por
 <%= form.file_field :picture %>
 {% endhighlight %}
 
-Em alguns casos poderá ocorrer o erro `TypeError: can't cast ActionDispatch::Http::UploadedFile` to string.
-
-Se isso acontecer, abra `app/views/ideas/_form.html.erb` e substitua a linha:
-
-{% highlight erb %}
-<%= form_with(model: idea, local: true) do |form| %>
-{% endhighlight %}
-
-por
-
-{% highlight erb %}
-<%= form_for(idea, html: {multipart: true}) do |form| %>
-{% endhighlight %}
-
 No seu navegador adicione uma nova ideia e junto com isso adicione uma imagem. Esta ação fará com que seja mostrada, não a imagem, mas o caminho para a imagem. Vamos corrigir isto.
 
 Abra `app/views/ideas/show.html.erb` e substitua:
