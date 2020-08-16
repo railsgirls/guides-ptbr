@@ -30,7 +30,7 @@ Abra o `Gemfile` do seu app e adicione o "passenger":
 gem "passenger"
 {% endhighlight %}
 
-Adicionando o Passenger no Gemfile, o comando `rails server` iniciará o Passenger no lugar do Puma. 
+Adicionando o Passenger no Gemfile, o comando `rails server` iniciará o Passenger no lugar do Puma.
 
 Você recebe pontos de bônus virtuais da equipe do Phusion Passenger por excluir as seguintes linhas (caso estejam presentes no seu Gemfile):
 
@@ -88,7 +88,7 @@ Ative este mecanismo criado o arquivo:
 
 {% highlight sh %}
 mkdir -p tmp
-touch tmp/always_restart.txt}
+touch tmp/always_restart.txt
 {% endhighlight %}
 
 Desative o mecanismo removendo o arquivo:
