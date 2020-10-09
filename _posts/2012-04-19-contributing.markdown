@@ -18,13 +18,13 @@ O site de tutoriais usa a tecnologia [jekyll](https://github.com/mojombo/jekyll)
 - Crie um arquivo denominado `YYYY-MM-DD-nome_do_tutorial.markdown` e salve no diretório `_posts` do seu fork.
 - No início do arquivo recém criado use a sintaxe YAML para serializar alguns dados que são padronizados para os tutoriais. Veja um exemplo destes dados que se aplica a este documento que você está visualizando:
 
-{% highlight yaml %}
+<dev>
   ---
   layout: default
   title: Contribua com um tutorial
   permalink: contributing
   ---
-{% endhighlight %}
+</dev>
 
 - A seguir escreva seu tutorial usando a sintaxe markdown.
 
