@@ -29,7 +29,7 @@ body { padding-top: 60px; }
 
 Finalmente, exclua o arquivo `app/assets/stylesheets/scaffolds.scss` porque nós realmente não precisamos do estilo padrão gerado pelo Rails.
 
-Agora vamos atualizar a página na url [http://localhost:3000/ideas](http://localhost:3000/ideas). Você não vai encontrar muita mudança, mas é uma boa preparação para as etapas seguintes.
+Agora vamos atualizar a página na url <http://localhost:3000/ideas>. Você não vai encontrar muita mudança, mas é uma boa preparação para as etapas seguintes.
 
 ## *2.* Refinar a navegação
 

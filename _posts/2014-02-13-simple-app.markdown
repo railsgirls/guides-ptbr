@@ -23,7 +23,7 @@ permalink: simpleapp
 
 <h3>Editor de Texto</h3>
 
-<p><a href="http://www.sublimetext.com">Sublime Text</a>, <a href="http://www.activestate.com/komodo-edit">Komodo Edit</a>, Vim, Emacs, e Gedit são exemplos de editores de texto que você pode usar para escrever código e editar arquivos.</p>
+[Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim, Emacs, e Gedit são exemplos de editores de texto que você pode usar para escrever código e editar arquivos.
 
 <h3><i class="icon-prompt">&nbsp;</i></h3>
 
@@ -167,13 +167,13 @@ Quando o prompt de comandos não está visível, você não consegue executar no
 
 Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal, para parar o servidor.
 
-**Instrutor:** Explique o que cada comando faz. O que foi criado? O que o servidor faz? Você pode saber mais sobre o modelo especial no [GitHub](https://github.com/Ben-M/simple_scaffold).
+**Instrutor(a):** Explique o que cada comando faz. O que foi criado? O que o servidor faz? Você pode saber mais sobre o modelo especial no [GitHub](https://github.com/Ben-M/simple_scaffold).
 
 ## *2.*Criar o Scaffold de ideias
 
 Usaremos a funcionalidade de scaffold do Rails para criar um ponto de partida que nos permitirá listar, adicionar, remover, editar e ver coisas que, no nosso caso, são ideias.
 
-**Instrutor:** O que é a scaffolding em Rails? (Explique o comando, o nome do modelo, as convenções nomenclaturais, atributos e tipos, etc.) O que são migrações e por que elas são necessárias?
+**Instrutor(a):** O que é a scaffolding em Rails? (Explique o comando, o nome do modelo, as convenções nomenclaturais, atributos e tipos, etc.) O que são migrações e por que elas são necessárias?
 
 <div class="os-specific">
   <div class="nix">
@@ -213,7 +213,7 @@ Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> para parar o servidor depois que você j�
 
 ## *3.*Design
 
-**Instrutor:** Fale um pouco sobre a relação entre HTML e Rails. Qual parte das views é HTML e qual parte é Embedded Ruby (ERB)? O que é MVC e como isso se relaciona às views e HTML? (Modelos - models - e controladores - controllers - são responsáveis pela geração das views.)
+**Instrutor(a):** Fale um pouco sobre a relação entre HTML e Rails. Qual parte das views é HTML e qual parte é Embedded Ruby (ERB)? O que é MVC e como isso se relaciona às views e HTML? (Modelos - models - e controladores - controllers - são responsáveis pela geração das views.)
 
 A nossa aplicação não está muito bonita ainda. Vamos resolver isso. Usaremos o projeto Bootstrap do Twitter para deixar nosso design mais bonito e de forma bem fácil.
 
@@ -290,7 +290,7 @@ th { border-bottom: 1px solid #DDD !important; }
 
 Em seguida certifique-se de que você salvou seus arquivos e atualize o navegador para ver o que mudou. Você também pode fazer alterações adicionais no seu HTML & CSS.
 
-**Instrutor:** Fale um pouco sobre CSS e layouts.
+**Instrutor(a):** Fale um pouco sobre CSS e layouts.
 
 
 ## *4.*Adicionando uploads de imagens
@@ -309,7 +309,7 @@ adicione
 gem 'carrierwave'
 {% endhighlight %}
 
-**Instrutor:** Explique o que são bibliotecas (libraries) e qual a sua utilidade. Descreva o que é software livre (open source software).
+**Instrutor(a):** Explique o que são bibliotecas (libraries) e qual a sua utilidade. Descreva o que é software livre (open source software).
 
 No terminal, execute:
 
@@ -383,7 +383,7 @@ para
 
 Agora atualize seu navegador para ver o que mudou.
 
-**Instrutor:** Fale um pouco sobre HTML.
+**Instrutor(a):** Fale um pouco sobre HTML.
 
 
 ## *5.*Acertos finais nas rotas
@@ -396,9 +396,9 @@ Abra `config/routes.rb` e, após a primeira linha, adicione
 root :to => redirect('/ideas')
 {% endhighlight %}
 
-Teste se houve alteração, abrindo o caminho raiz (isto é, http://localhost:3000/) no seu navegador.
+Teste se houve alteração, abrindo o caminho raiz (isto é, [http://localhost:3000](http://localhost:3000)) no seu navegador.
 
-**Instrutor:** Fale sobre rotas (routes), incluindo detalhes sobre a ordem das rotas e sua relação com arquivos estáticos.
+**Instrutor(a):** Fale sobre rotas (routes), incluindo detalhes sobre a ordem das rotas e sua relação com arquivos estáticos.
 
 **Usuários de Rails 3:** Você precisará deletar o arquivo index.html da pasta `/public/` para que isso funcione.
 

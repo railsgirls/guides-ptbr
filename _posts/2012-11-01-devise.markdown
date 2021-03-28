@@ -83,7 +83,7 @@ Usaremos um script gerador de empacotamento para criar o modelo de usuários.
 
 Agora que está tudo devidamente configurado podemos criar nosso primeiro usuário. Devise gera todos os códigos e caminhos necessários para criar contas, log in, log out, etc.
 
-Certifique-se de que o servidor rails está rodando, abra [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) e crie uma conta de usuário.
+Certifique-se de que o servidor rails está rodando, abra <http://localhost:3000/users/sign_up> e crie uma conta de usuário.
 
 ## *6.* Crie links para cadastramento e login
 

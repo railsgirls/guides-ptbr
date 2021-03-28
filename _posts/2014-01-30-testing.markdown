@@ -140,6 +140,6 @@ Você consegue completar este teste? Você consegue pensar em outros testes?
 __INSTRUTOR(A)__: Fale um pouco sobre Desenvolvimento Guiado por Comportamento (BDD).
 
 Agora você pode criar mais testes sozinho.
-Sinta-se à vontade para falar com o seu instrutor para fazer isso ou maneiras de criar mais testes.
+Sinta-se à vontade para falar com o seu instrutor(a) para fazer isso ou maneiras de criar mais testes.
 
 Feliz testes!

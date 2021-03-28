@@ -1,6 +1,3 @@
-[![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
-
-
 # PARTE 0
 
 # Como forkar o projeto
@@ -105,7 +102,7 @@ Você pode usar nosso material para criar seu próprio workshop na sua cidade, n
 
 ## Mãos à obra
 
-Leia os tutoriais em http://guides.railsgirls.com/guides-ptbr/ ou clone este repositório, instale e rode [jekyll](https://github.com/mojombo/jekyll)
+Leia os [tutoriais](http://guides.railsgirls.com/guides-ptbr/) ou clone este repositório, instale e rode [jekyll](https://github.com/mojombo/jekyll)
 
 ### Instalando jekyll
 
@@ -152,7 +149,7 @@ Caso jekyll não esteja funcionando como esperado consulte [Issue 503](https://g
 
 ## Contribuindo com um tutorial
 
-Para contribuir com um tutorial consulte as instruções em http://guides.railsgirls.com/contributing
+Para contribuir com um tutorial consulte as [instruções](http://guides.railsgirls.com/contributing) 
 
 ## Twitter
 
