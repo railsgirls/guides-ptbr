@@ -205,7 +205,7 @@ yarn --version
 
 ### *4.* Instalando SQLite
 
-- Vá para a página [sqlite.org/download.html](https://sqlite.org/download.html)
+- Vá para a página <https://sqlite.org/download.html>
 - Role a página até a parte "Precompiled Binaries for Windows".
 - Baixe o arquivo `sqlite-dll-win32-x86-xxxxxxx.zip` (em que `xxxxxxx` é o número da versão mais recente disponível).
 - Baixe o arquivo `sqlite-tools-win32-x86-xxxxxxx.zip` (em que `xxxxxxx` é o número da versão mais recente disponível).
@@ -274,7 +274,7 @@ Vá para `http://localhost:3000` no seu navegador, você deverá ver a página '
 
 _Se você tiver algum problema durante esta etapa, verifique a parte de [Possíveis erros](#possíveis-erros-durante-a-instalação) para obter possíveis soluções._
 
-**Instrutor(a):** Recomendamos verificar o comando scaffold e inserir dados com a página gerada com os instrutores para garantir que tudo esteja funcionando. Além disso: remova o aplicativo de teste `myapp` para garantir que ninguém esteja trabalhando na pasta errada, seguindo as etapas do workshop.
+**Instrutor(a):** Recomendamos verificar o comando scaffold e inserir dados com a página gerada com os instrutores(as) para garantir que tudo esteja funcionando. Além disso: remova o aplicativo de teste `myapp` para garantir que ninguém esteja trabalhando na pasta errada, seguindo as etapas do workshop.
 
 <hr />
 

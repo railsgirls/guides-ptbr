@@ -66,7 +66,7 @@ Peça por feedback e continue aprendendo.
 
 Se você ainda tiver problemas em achar algo em que possa trabalhar, eu tenho uma ideia para você:
 Contrua um site do Rails Girls para a sua cidade ou país. Na Suíça nós incentivamos as garotas para trabalhar
-no nosso site suíço do Rails Girls: [railsgirls.ch](http://railsgirls.ch/).
+no nosso site suíço do Rails Girls: <http://railsgirls.ch/>.
 
 ## 3. Entre em contato
 

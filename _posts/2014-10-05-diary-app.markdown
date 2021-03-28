@@ -89,7 +89,7 @@ Adicione o seguinte HTML entre as tags `<body>` e `</body>` (sinta-se livre para
       <p>Recebi um email falando que meu pedido foi aceito! Estarei no workshop na próxima semana!</p>
     <h2>O primeiro dia começa...</h2>
       <p>22.02.2014</p>
-      <p>Hoje é o primeiro dia do Workshop do Rails Girls. Meu instrutor é um pouco diferente mas aparentemente todos nós estamos com o Rails instalado e podemos agora começar a aprender.</p>
+      <p>Hoje é o primeiro dia do Workshop do Rails Girls. Meu instrutor(a) é um pouco diferente mas aparentemente todos nós estamos com o Rails instalado e podemos agora começar a aprender.</p>
   </div>
 {% endhighlight %}
 
