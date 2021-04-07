@@ -5,7 +5,6 @@ permalink: docker
 ---
 
 # Docker com Ruby on Rails
-*Criado por [Docker](https://docs.docker.com/compose/rails/)*  
 *Traduzido por [Hemershon Silva](https://hemershon.com/)*
 
 ## Como dockerizar sua aplicação
