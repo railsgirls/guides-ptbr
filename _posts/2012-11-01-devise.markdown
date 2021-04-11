@@ -6,11 +6,9 @@ permalink: devise
 
 # Autenticação com Devise
 
-*Criado por Piotr Steininger, [@polishprince](https://twitter.com/polishprince)*
-
-*Atualizado por Ernesto Jimenez, [@ernesto_jimenez](https://twitter.com/ernesto_jimenez)*
-
-*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
+*Criado por Piotr Steininger, [@polishprince](https://twitter.com/polishprince)*.
+*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*.
+*Atualizado por Ernesto Jimenez, [@ernesto_jimenez](https://twitter.com/ernesto_jimenez)*.
 
 **Esse guia assume que você já criou a app RailsGirls como mostrado no** [**tutorial para criação da app Rails Girls**](/app).
 
@@ -131,3 +129,5 @@ Abra seu navegador e execute as ações de login e logout.
 * Adicione relacionamentos entre usuários e ideas
 * Crie restrições de modo a permitir que usuários editem somente suas próprias ideas e apague seus próprios comentários
 * Permita expandir roles ou permissões para usuários (use uma das gem populares, tal como like CanCan)
+
+{% include other-guides.md page="devise" %}

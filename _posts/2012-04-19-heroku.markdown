@@ -6,15 +6,15 @@ permalink: heroku
 
 # Publique sua aplicação com Heroku
 
-*Criado por Terence Lee, [@hone02](https://twitter.com/hone02)*  
-*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
+*Criado por Terence Lee, [@hone02](https://twitter.com/hone02)*.
+*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*.
 
 ### Instale Heroku
 
 Siga os passos intitulados "Introduction" e "Set up" constantes na página
 [Getting Started on Heroku with Ruby][heroku-guide] para se cadastrar, instalar Heroku CLI e fazer login.
 
-__INSTRUTOR(A)__: Fale sobre os benefícios do uso da plataforma Heroku para publicação vs uso de servidores tradicionais.
+**Instrutor(a):** Fale sobre os benefícios do uso da plataforma Heroku para publicação vs uso de servidores tradicionais.
 
 [heroku-guide]: https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction
 
@@ -63,7 +63,7 @@ production:
 Não se esqueça de fazer `git add .` e `git commit -m "Utilizando postgres como banco de dados de producao"`
 para adicionar esta mudança ao seu branch master antes de enviar ao heroku mais tarde.
 
-__INSTRUTOR(A)__: Você pode falar sobre RDBMS e as diferenças para outros sistemas de gerenciamento bem como  apresentar alguns detalhes das dependências em Heroku no PostgreSQL.
+**Instrutor(a):** Você pode falar sobre RDBMS e as diferenças para outros sistemas de gerenciamento bem como apresentar alguns detalhes das dependências em Heroku no PostgreSQL.
 
 #### Sistema de controle de versão
 
@@ -75,7 +75,7 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Agora é uma ótima oportunidade para falar sobre sistemas de controle de versão e git.
+**Instrutor(a):** Agora é uma ótima oportunidade para falar sobre sistemas de controle de versão e git.
 
 ### Publicando sua app
 
@@ -89,7 +89,7 @@ Creating app... done, ⬢ young-reaches-87845
 https://young-reaches-87845.herokuapp.com/ | https://git.heroku.com/young-reaches-87845.git
 {% endhighlight %}
 
-Neste caso  "young-reaches-87845" é o nome da sua aplicação
+Neste caso "young-reaches-87845" é o nome da sua aplicação
 
 #### Fazendo o pushing do código
 
@@ -171,3 +171,5 @@ Não é do escopo deste tutorial detalhar a hospedagem 'na nuvem', mas se você 
 * [Amazon S3 – The Beginner’s Guide](http://www.hongkiat.com/blog/amazon-s3-the-beginners-guide/)
 
 Como sempre, se você precisar de mais informações ou assistência pergunte aos seus instrutoras(es).
+
+{% include other-guides.md page="heroku" %}

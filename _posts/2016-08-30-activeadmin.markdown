@@ -6,7 +6,7 @@ permalink: backend-with-active-admin
 
 # Adicionando back-end com Active Admin
 
-_Criado por [Rasmus Kjellberg](https://www.rasmuskjellberg.se)_
+*Criado por [Rasmus Kjellberg](https://www.rasmuskjellberg.se)*.
 
 **Este guia pressupõe que você já tenha criado um aplicativo Rails Girls** [**seguindo o guia de desenvolvimento**](/app).
 
@@ -105,3 +105,5 @@ Voila! Você pode agora gerenciar uas ideias do seu novo painel de administrador
 ## E agora?
 
 - Adicione outro recurso ao admin como Blog e Comentarios
+
+{% include other-guides.md page="backend-with-active-admin" %}

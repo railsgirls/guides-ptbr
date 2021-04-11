@@ -6,8 +6,8 @@ permalink: gravatar
 
 # Adicionando Gravatar para a aplicação
 
-*Criado por Catherine Jones*  
-*Traduzido por Anderson Fernandes, [@andersonfernandes](https://github.com/andersonfernandes)*
+*Criado por Catherine Jones*.
+*Traduzido por Anderson Fernandes, [@andersonfernandes](https://github.com/andersonfernandes)*.
 
 Este tutorial assume que você já construiu uma aplicação do Rails Girls seguindo este [tutorial](http://guides.railsgirls.com/app) e adicionou autenticação usando o [Devise](http://guides.railsgirls.com/devise/).
 
@@ -72,3 +72,5 @@ E coloque o código abaixo no final do arquivo `app/assets/stylesheets/applicati
 {% endhighlight %}
 
 Agora abra sua aplicação no navegador e faça login com um endereço de e-mail associado com um Gravatar. Você será capaz de ver seu Gravatar.
+
+{% include other-guides.md page="gravatar" %}

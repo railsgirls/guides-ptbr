@@ -6,9 +6,8 @@ permalink: install
 
 # Tutorial de Instalação para Rails Girls
 
-Criado por Katie Ots, [site da Katie](http://www.katieots.com/)
-
-Traduzido por Marcela Oliveira, [@magaeu](https://twitter.com/magaeu)
+*Criado por Katie Ots, [site da Katie](http://www.katieots.com/)*.
+*Traduzido por Marcela Oliveira, [@magaeu](https://twitter.com/magaeu)*.
 
 <span class="muted">Tempo previsto: 5min ativo / 15-30min passivo</span>
 
@@ -137,13 +136,9 @@ Deverá mostrar `Rails 6.0.0`(ou uma versão superior).
 
 {% highlight sh %}
 rails new myapp
-{% endhighlight %}
 
-{% highlight sh %}
 rails cd myapp
-{% endhighlight %}
 
-{% highlight sh %}
 rails server
 {% endhighlight %}
 
@@ -151,7 +146,7 @@ Vá para `http://localhost:3000` no seu navegador, você verá a página 'Yay! Y
 
 **Parabéns, seu ambiente de desenvolvimento Ruby on Rail está pronto!**
 
-**INSTRUTOR(A):** Recomendamos verificar o procedimento executando o comando scaffold e adicionando dados com a página gerada para assegurar que está tudo funcionando. Também remova o app de teste `myapp` para ter certeza que ninguém está na pasta errada, seguindo as etapas do workshop.
+**Instrutor(a):** Recomendamos verificar o procedimento executando o comando scaffold e adicionando dados com a página gerada para assegurar que está tudo funcionando. Também remova o app de teste `myapp` para ter certeza que ninguém está na pasta errada, seguindo as etapas do workshop.
 
 <hr />
 
@@ -260,13 +255,9 @@ Para ter certeza que tudo funciona bem crie uma aplicação via terminal:
 
 {% highlight sh %}
 rails new myapp
-{% endhighlight %}
 
-{% highlight sh %}
 cd myapp
-{% endhighlight %}
 
-{% highlight sh %}
 rails server
 {% endhighlight %}
 
@@ -290,14 +281,11 @@ Se você precisa de mais informações para instalação do yarn, confira a [doc
 
 {% highlight sh %}
 sudo apt-get install curl
-{% endhighlight %}
 
-{% highlight sh %}
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-{% endhighlight %}
 
-{% highlight sh %}
+
 sudo apt update && sudo apt install yarn
 {% endhighlight %}
 
@@ -306,9 +294,8 @@ sudo apt update && sudo apt install yarn
 {% highlight sh %}
 curl -sL https://rpm.nodesource.com/setup_12.x | bash -
 curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
-{% endhighlight %}
 
-{% highlight sh %}
+
 sudo yum install yarn
 {% endhighlight %}
 
@@ -439,13 +426,11 @@ Primeiramente baixe [ruby-gems-update gem](https://rubygems.org/gems/rubygems-up
 
 {% highlight sh %}
 gem install --local c:\\rubygems-update-2.6.11.gem
-{% endhighlight %}
 
-{% highlight sh %}
+
 update_rubygems --no-document
-{% endhighlight %}
 
-{% highlight sh %}
+
 gem uninstall rubygems-update -x
 {% endhighlight %}
 
@@ -487,3 +472,5 @@ gem install sqlite3
 {% endhighlight %}
 
 Se isso der certo, remova o diretório `myapp` que o instalador do rails criou anteriorment e retorne às instruções de instalação para criar o app novamente (`rails new myapp`).
+
+{% include other-guides.md page="install" %}

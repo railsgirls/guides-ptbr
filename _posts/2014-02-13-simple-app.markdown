@@ -6,11 +6,10 @@ permalink: simpleapp
 
 # Tutorial Rails Girls App 
 
-*Criado por Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
+*Criado por Vesa Vänskä, [@vesan](https://twitter.com/vesan)*.
+*Traduzido por Laura Rocha Prado, [@arbolitoloco](https://arbolitoloco.github.io)*.
+*Editado para incluir [simple_scaffold](https://github.com/Ben-M/simple_scaffold) por Ben Maraney*.
 
-*Editado para incluir [simple_scaffold](https://github.com/Ben-M/simple_scaffold) por Ben Maraney.*
-
-*Traduzido por Laura Rocha Prado, [@arbolitoloco](https://arbolitoloco.github.io)*
 
 **Certifique-se de que o Rails esteja instalado.** [**Siga as instruções no guia de instalação**](/install) para deixar tudo pronto para começar.
 
@@ -19,21 +18,21 @@ permalink: simpleapp
 
 <div class="indent" markdown="1">
 
-<h3><i class="icon-text-editor">&nbsp;</i></h3>
+  <h3><i class="icon-text-editor">&nbsp;</i></h3>
 
-<h3>Editor de Texto</h3>
+  <h3>Editor de Texto</h3>
 
-[Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim, Emacs, e Gedit são exemplos de editores de texto que você pode usar para escrever código e editar arquivos.
+  [Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim, Emacs, e Gedit são exemplos de editores de texto que você pode usar para escrever código e editar arquivos.
 
-<h3><i class="icon-prompt">&nbsp;</i></h3>
+  <h3><i class="icon-prompt">&nbsp;</i></h3>
 
-<h3>Terminal (também conhecido como Prompt de Comandos ou Command Prompt no Windows)</h3>
-Interface onde você vai iniciar o servidor rails e executar comandos.
+  <h3>Terminal (também conhecido como Prompt de Comandos ou Command Prompt no Windows)</h3>
+  Interface onde você vai iniciar o servidor rails e executar comandos.
 
-<h3><i class="icon-browser">&nbsp;</i></h3>
+  <h3><i class="icon-browser">&nbsp;</i></h3>
 
-<h3>Navegador ou browser</h3>
-(Firefox, Safari, Chrome) usados para visualizar sua aplicação.
+  <h3>Navegador ou browser</h3>
+  (Firefox, Safari, Chrome) usados para visualizar sua aplicação.
 
 </div>
 
@@ -55,12 +54,12 @@ Em seguida, digite os comandos abaixo no terminal:
 
 <div class="os-specific">
   <div class="nix">
+
 {% highlight sh %}
 mkdir projetos
 {% endhighlight %}
-
     <div>
-Você pode checar se uma pasta chamada <code>projetos</code> foi criada com o seguinte comando de listar: <code>ls</code>. Você deve ver a pasta <code>projetos</code> no texto de saída (output). Agora você deve mudar de pasta e entrar na pasta <code>projetos</code> com o comando:
+      Você pode checar se uma pasta chamada <code>projetos</code> foi criada com o seguinte comando de listar: <code>ls</code>. Você deve ver a pasta <code>projetos</code> no texto de saída (output). Agora você deve mudar de pasta e entrar na pasta <code>projetos</code> com o comando:
     </div>
 
 {% highlight sh %}
@@ -68,7 +67,7 @@ cd projetos
 {% endhighlight %}
 
     <div>
-Você pode checar que está em uma pasta vazia usando novamente o comando <code>ls</code>. Agora você deve criar uma nova aplicação chamada <code>railsgirls</code> através do comando:
+      Você pode checar que está em uma pasta vazia usando novamente o comando <code>ls</code>. Agora você deve criar uma nova aplicação chamada <code>railsgirls</code> através do comando:
     </div>
 
 {% highlight sh %}
@@ -76,14 +75,15 @@ rails new railsgirls -m http://railsgirls.com/simple_scaffold.rb
 {% endhighlight %}
 
     <div>
-        <code>rails new railsgirls</code> diz ao Rails que crie um novo projeto chamado `railsgirls`, com todos os arquivos de que nossa aplicação precisa.
+      <code>rails new railsgirls</code> diz ao Rails que crie um novo projeto chamado `railsgirls`, com todos os arquivos de que nossa aplicação precisa.
     </div>
-    <div>
-        <code>-m http://railsgirls.com/simple_scaffold.rb</code> diz ao Rails que baixe um modelo especial a partir de railsgirls.com, o qual deixa os arquivos um pouco mais simples e fáceis para iniciantes entenderem.
-    </div>
-    <div>
 
-Isso cria uma nova aplicação na pasta <code>railsgirls</code>. Nós devemos, então, novamente mudar de pasta, para entrar na nossa aplicação rails, usando o comando:
+    <div>
+      <code>-m http://railsgirls.com/simple_scaffold.rb</code> diz ao Rails que baixe um modelo especial a partir de railsgirls.com, o qual deixa os arquivos um pouco mais simples e fáceis para iniciantes entenderem.
+    </div>
+    
+    <div>
+      Isso cria uma nova aplicação na pasta <code>railsgirls</code>. Nós devemos, então, novamente mudar de pasta, para entrar na nossa aplicação rails, usando o comando:
     </div>
 
 {% highlight sh %}
@@ -91,7 +91,7 @@ cd railsgirls
 {% endhighlight %}
 
     <div>
-Se você executar o comando <code>ls</code> dentro dessa pasta, você deve ver outras pastas, como <code>app</code> e <code>config</code>. Você pode então iniciar o servidor rails com o comando:
+      Se você executar o comando <code>ls</code> dentro dessa pasta, você deve ver outras pastas, como <code>app</code> e <code>config</code>. Você pode então iniciar o servidor rails com o comando:
     </div>
 
 {% highlight sh %}
@@ -105,7 +105,7 @@ mkdir projetos
 {% endhighlight %}
 
     <div>
-Verifique que uma pasta chamada <code>projetos</code> foi criada com o comando de listar: <code>dir</code>. A pasta <code>projetos</code> deve estar visível no output. Em seguida, mude de pasta, entrando na pasta <code>projetos</code>, usando o comando:
+      Verifique que uma pasta chamada <code>projetos</code> foi criada com o comando de listar: <code>dir</code>. A pasta <code>projetos</code> deve estar visível no output. Em seguida, mude de pasta, entrando na pasta <code>projetos</code>, usando o comando:
     </div>
 
 {% highlight sh %}
@@ -113,7 +113,7 @@ cd projetos
 {% endhighlight %}
 
     <div>
-Você pode checar agora que está em uma pasta vazia, ao executar mais uma vez o comando <code>dir</code>. Então crie uma nova aplicação chamada <code>railsgirls</code> com o comando:
+      Você pode checar agora que está em uma pasta vazia, ao executar mais uma vez o comando <code>dir</code>. Então crie uma nova aplicação chamada <code>railsgirls</code> com o comando:
     </div>
 
 {% highlight sh %}
@@ -121,13 +121,15 @@ rails new railsgirls -m http://railsgirls.com/simple_scaffold.rb
 {% endhighlight %}
 
     <div>
-        <code>rails new railsgirls</code> diz ao Rails que crie um novo projeto chamado railsgirls, com todos os arquivos de que nossa aplicação precisa.
+      <code>rails new railsgirls</code> diz ao Rails que crie um novo projeto chamado railsgirls, com todos os arquivos de que nossa aplicação precisa.
     </div>
+    
     <div>
-        <code>-m http://railsgirls.com/simple_scaffold.rb</code> diz ao Rails que baixe um modelo especial a partir de railsgirls.com, o qual deixa os arquivos um pouco mais simples e fáceis para iniciantes entenderem.
+      <code>-m http://railsgirls.com/simple_scaffold.rb</code> diz ao Rails que baixe um modelo especial a partir de railsgirls.com, o qual deixa os arquivos um pouco mais simples e fáceis para iniciantes entenderem.
     </div>
+    
     <div>
-Isso cria uma nova aplicação na pasta <code>railsgirls</code>. Nós devemos, então, novamente mudar de pasta, para entrar na nossa aplicação rails, usando o comando:
+      Isso cria uma nova aplicação na pasta <code>railsgirls</code>. Nós devemos, então, novamente mudar de pasta, para entrar na nossa aplicação rails, usando o comando:
     </div>
 
 {% highlight sh %}
@@ -135,7 +137,7 @@ cd railsgirls
 {% endhighlight %}
 
     <div>
-Se você executar o comando <code>dir</code> dentro dessa pasta, você deve ver outras pastas, como <code>app</code> e <code>config</code>. Você pode então iniciar o servidor rails com o comando:
+      Se você executar o comando <code>dir</code> dentro dessa pasta, você deve ver outras pastas, como <code>app</code> e <code>config</code>. Você pode então iniciar o servidor rails com o comando:
     </div>
 
 {% highlight sh %}
@@ -427,13 +429,4 @@ Você pode abrir agora o arquivo `app/views/pages/info.html.erb` e adicionar inf
 * Use CoffeeScript (ou JavaScript) para adicionar interatividade
 * Adicione redimensionamento de imagens para que o carregamento das imagens seja mais rápido
 
-## Guias Adicionais
-
-* Guide 0: [Cheatsheet para Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guide 1: [Adicione commentários, por Janika Liiv](/commenting)
-* Guide 2: [Coloque sua app online com Heroku, by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift)
-* Guide 3: [Construa um mapa de participantes do workshop, por Rails Girls Berlin](http://railsgirlsberlin.de/apptutorial/)
-* Guide 4: [Crie miniaturas de imagens para os uploads, por Miha Filej](/thumbnails)
-* Guide 5: [Adicione design, usando HTML &amp; CSS, por Alex Liao](/design)
-* Guide 6: [Adicione Autenticação (contas de usuários) com Devise, por Piotr Steininger](/devise/)
-* Guide 7: [Veja explicações adicionais para a app, por Lucy Bain](https://github.com/lbain/railsgirls)
+{% include other-guides.md page="simpleapp" %}

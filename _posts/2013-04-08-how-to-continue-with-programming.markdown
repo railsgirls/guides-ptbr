@@ -6,11 +6,10 @@ permalink: how-to-continue-with-programming
 
 # Pós-evento: Como Continuar Programando
 
-*Criado por Daniel Puglisi, [@danielpuglisi](http://twitter.com/danielpuglisi)*
-*Traduzido por Joana Souza, [@sspjoana](https://www.twitter.com/sspjoana)*
+*Criado por Daniel Puglisi, [@danielpuglisi](http://twitter.com/danielpuglisi)*.
+*Traduzido por Joana Souza, [@sspjoana](https://www.twitter.com/sspjoana)*.
 
-*Este guia foi escrito originalmente para o evento [Rails Girls Basel](http://railsgirls.com/basel) e publicado no
- [blog pessoal da Daniel Puglisi](http://danielpuglisi.com/articles/2013/04/rails-girls-after-the-event-how-to-continue-with-programming).*
+*Este guia foi escrito originalmente para o evento [Rails Girls Basel](http://railsgirls.com/basel) e publicado no [blog pessoal da Daniel Puglisi](http://danielpuglisi.com/articles/2013/04/rails-girls-after-the-event-how-to-continue-with-programming).*
 
 Infelizmente (!) o evento já terminou e eu escrevi esse post para ajudar a encontrar a melhor maneira para continuar a aprendizagem de como aprender a programar!
 
@@ -20,7 +19,7 @@ Originalmente esse artigo foi planejado como uma palestra para o encerramento do
 
 Então aqui vai:
 
-## 1. Continue Programando
+## *1.* Continue Programando
 
 Dominar uma habilidade requer constante repetição e perserverança.
 Isso também se aplica à programação. Eu encorajo você a repetir o tutorial Rails Girls, o qual nós utilizamos no evento e tente explorá-lo um pouco mais.
@@ -52,7 +51,7 @@ Após isso, aqui estão alguns materiais gratuitos e pagos os quais irão ajudá
 
 > Se você tiver quaisquer outros bons materiais, [diga-me](mailto:daniel@codegestalt.com) para que eu possa adicioná-los na lista.
 
-## 2. Construa algo real
+## *2.* Construa algo real
 
 Construir algo real significa que você deve tentar criar algo que será útil no final.
 A parte mais difícil será achar um projeto real.
@@ -68,7 +67,7 @@ Se você ainda tiver problemas em achar algo em que possa trabalhar, eu tenho um
 Contrua um site do Rails Girls para a sua cidade ou país. Na Suíça nós incentivamos as garotas para trabalhar
 no nosso site suíço do Rails Girls: <http://railsgirls.ch/>.
 
-## 3. Entre em contato
+## *3.* Entre em contato
 
 É sempre mais fácil quando você tem alguém para perguntar.
 Com isso em mente, saia e ache alguém com quem possa conversar.
@@ -85,7 +84,7 @@ Apenas tente criar um círculo de pessoas com os mesmos interesses em programaç
 Tente também encontrar alguém como mentor.
 Programar pode ser bem intimidador em alguns momentos,
 conhecer alguém que tenha mais experiência e possa lhe ajudar nos seus problemas pode se tornar algo útil.
-Por exemplo: perguntar a alguns dos treinadores que participaram do evento.
+Por exemplo: perguntar a alguns dos instrutores(as) que participaram do evento.
 
 Se você não tiver tempo de sediar um meetup, tudo bem.
 Há alguns grupos que você pode participar:
@@ -98,10 +97,9 @@ Há alguns grupos que você pode participar:
 * [Geneva Ruby Brigade](http://genevarb.com/) - Grupo de Ruby baseado em Geneva.
 * [RoRganize.it](http://rorganize.it/) - App para encontrar grupos existentes de Ruby, especificamente na Alemanha.
 
-> Essa lista é relacionada a Suíça e foi apenas utilizada como um exemplo, peça os organizadores e treinadores do seu evento uma lista com os grupos locais e meetups.
+> Essa lista é relacionada a Suíça e foi apenas utilizada como um exemplo, peça os organizadores(as) e instrutores(as) do seu evento uma lista com os grupos locais e meetups.
 
-Uma das garotas no evento Rails Girls Basel (obrigada) [Helena](https://twitter.com/HBobbiRo)!) teve a ótima ideia de
-que poderíamos criar uma lista com todos os participantes, tutores e organizadores do evento.
+Uma das garotas no evento Rails Girls Basel (obrigada) [Helena](https://twitter.com/HBobbiRo)!) teve a ótima ideia de que poderíamos criar uma lista com todos os(as) participantes, instrutores(as) e organizadores(as) do evento.
 Nós criamos essa lista e está no [Github](https://github.com/RailsGirlsSwitzerland/attendees) agora, confira [aqui](http://railsgirlsswitzerland.github.io/attendees/site/2013_04_basel.html).
 Sinta-se a vontade de forkar o repositório e ajustá-lo para as necessidades do seu evento Rails Girls.
 
@@ -109,7 +107,7 @@ Tente configurar essa lista para o seu evento também, desse jeito fica mais fá
 apenas as pessoas que dividiram a mesma mesa que você.
 Se você não sabe como, peça a algum organizador do evento se ela/ele poderia fazê-lo.
 
-## 4. Divirta-se
+## *4.* Divirta-se
 
 Por último mas não menos importante, divirta-se.
 Se você não se diverte programando, então é bem provável que essa não seja a coisa certa para você.
@@ -126,7 +124,4 @@ Pergunte aos organizadores e tutores do seu evento pelo email deles e se eles go
 
 É isso, continue programando e vamos construir o futuro!
 
-## 5. Mais materiais
-
-- [8 maneiras de permitir que os participantes do workshop continuem aprendendo](http://pragtob.wordpress.com/2013/06/14/8-ways-to-enable-workshop-attendess-to-keep-learning/)
-
+{% include other-guides.md page="how-to-continue-with-programming" %}

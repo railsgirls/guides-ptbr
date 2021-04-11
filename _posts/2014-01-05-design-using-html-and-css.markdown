@@ -5,13 +5,13 @@ permalink: design-html-css
 ---
 
 # Adicione design à sua aplicação com HTML e CSS
-*Traduzido por [@MADPT](https://github.com/MADPT) aka [Miguel Ângelo](http://www.miguelangelo.io)*
+*Traduzido por Miguel Ângelo, [@MADPT](https://github.com/MADPT)*.
 
 **Esse guia assume que você já construiu o app do Rails Girls** [**seguindo o tutorial de desenvolvimento do app**](/app).
 
-1.Desenhe o cabeçalho
+## *1.* Desenhe o cabeçalho
 
-+ Coloque o seguinte código na parte inferior do arquivo `app/assets/stylesheets/application.css`:
+Coloque o seguinte código na parte inferior do arquivo `app/assets/stylesheets/application.css`:
 
 {% highlight css %}
 .navbar {
@@ -20,11 +20,11 @@ permalink: design-html-css
 }
 {% endhighlight %}
 
-  Agora atualize a página e verifique as mudanças. Você pode tentar alterar a cor ou fonte do cabeçalho. Você pode verificar a referência de cor aqui [http://color.uisdc.com/](http://color.uisdc.com/).
+Agora atualize a página e verifique as mudanças. Você pode tentar alterar a cor ou fonte do cabeçalho. Você pode verificar a referência de cor aqui [http://color.uisdc.com/](http://color.uisdc.com/).
 
-**Instrutor(a):** fale sobre a propriedade `display`, `inline` e `block`.
+**Instrutor(a):** Fale sobre a propriedade `display`, `inline` e `block`.
 
-+ Em seguida, coloque estas linhas na parte inferior:
+Em seguida, coloque estas linhas na parte inferior:
 
 {% highlight css %}
 .navbar a.brand { font-size: 18px; }
@@ -35,33 +35,33 @@ permalink: design-html-css
 }
 {% endhighlight %}
 
-**Instrutor(a):** explique os 4 estados de um link
+**Instrutor(a):** Explique os 4 estados de um link
 
 
-2.Desenhe a tabela
+## *2.* Desenhe a tabela
 
- + Nós simplesmente usamos o Twitter [Bootstrap](http://getbootstrap.com/) para polir a nossa tabela. Encontre esta linha no arquivo `app/views/ideas/index.html.erb` e substitua:
+Nós simplesmente usamos o Twitter [Bootstrap](http://getbootstrap.com/) para polir a nossa tabela. Encontre esta linha no arquivo `app/views/ideas/index.html.erb` e substitua:
 
 {% highlight html %}
 <table>
 {% endhighlight %}
 
-   com
+com
 
 {% highlight html %}
 <table class="table">`
 {% endhighlight %}
 
- + Modifique o tamanho da imagem usando as seguintes linhas
+Modifique o tamanho da imagem usando as seguintes linhas
 
 {% highlight erb %}
 <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
 {% endhighlight %}
 
-  Tente mudar a largura e veja o que vai acontecer
+Tente mudar a largura e veja o que vai acontecer
 
 
- + Adicione as seguintes linhas à parte inferior do arquivo `app/assets/stylesheets/ideas.css.scss`:
+Adicione as seguintes linhas à parte inferior do arquivo `app/assets/stylesheets/ideas.css.scss`:
 
 {% highlight css %}
 .container a:hover {
@@ -72,13 +72,12 @@ permalink: design-html-css
 {% endhighlight %}
 
 
- + Tente adicionar algum estilo ao fundo com a propriedade `background-image`, use como referência
-   [http://subtlepatterns.com/](http://subtlepatterns.com/) para alguns padrões.
+Tente adicionar algum estilo ao fundo com a propriedade `background-image`, use como referência [Subtle Patterns](http://subtlepatterns.com/) para alguns padrões.
 
 
-3.Adicione estilo ao rodapé
+## *3.* Adicione estilo ao rodapé
 
-+ Adicione as linhas ao fundo do ficheiro `app/assets/stylesheets/application.css`:
+Adicione as linhas ao fundo do ficheiro `app/assets/stylesheets/application.css`:
 
 {% highlight css %}
 footer {
@@ -89,11 +88,11 @@ footer {
 
 Tente adicionar mais coisas em `footer`, depois ajuste sua posição.
 
-4.Adicione estilo ao botão
+## *4.* Adicione estilo ao botão
 
-  + Abra [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new) e encontre o botão `Create Idea`.
+Abra [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new) e encontre o botão `Create Idea`.
 
-   Adicione estas linhas ao ficheiro `app/assets/stylesheets/ideas.css.scss`
+Adicione estas linhas ao ficheiro `app/assets/stylesheets/ideas.css.scss`
 
 {% highlight css %}
 .container input[type="submit"] {
@@ -105,4 +104,7 @@ Tente adicionar mais coisas em `footer`, depois ajuste sua posição.
 }
 {% endhighlight %}
 
-   **Instrutor(a)** explique como usar `border` em css, tente modificar o estilo do botão como em volta da esquina, adicione sombra ou cor, etc.
+**Instrutor(a):** Explique como usar `border` em css, tente modificar o estilo do botão como em volta da esquina, adicione sombra ou cor, etc.
+
+{% include other-guides.md page="design-html-css" %}
+

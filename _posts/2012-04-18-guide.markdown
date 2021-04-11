@@ -6,7 +6,7 @@ permalink: guide
 
 # Como organizar eventos Rails Girls
 
-*Traduzido por Maujor ([site do Maujor](http://www.maujor.com)) e [Carlos Schults](http://carlosschults.net)*
+*Traduzido por Maujor ([site do Maujor](http://www.maujor.com)) e [Carlos Schults](http://carlosschults.net)*.
 
 ## Organizando seu primeiro evento Rails Girls
 
@@ -24,14 +24,14 @@ Você está convidado a participar do [Slack de discussão dos organizadores](ht
 
 Os eventos Rails Girls não têm fins lucrativos. Nós não cobramos ingresso dos participantes e nem remuneramos instrutores(as) e palestrantes. Não existe qualquer restrição relativa a requisitos básicos e conhecimentos, bem como não há limitações quanto a idade dos participantes. Tudo o que é necessário para participar limita-se a um laptop e uma boa dose de curiosidade.
 
-Nos dois dias dedicados ao evento, os participantes serão separados em pequenos grupos de estudos que assistirão mini palestras sobre programação, design e web.  Não serão realizados painéis de discussão e nem exaustivas palestras - o ambiente de estudos deverá ser informal e os métodos de estudo do tipo "mãos na massa". Quanto menos abstrações e mais participação nas tarefas do evento tanto melhor.
+Nos dois dias dedicados ao evento, os participantes serão separados em pequenos grupos de estudos que assistirão mini palestras sobre programação, design e web. Não serão realizados painéis de discussão e nem exaustivas palestras - o ambiente de estudos deverá ser informal e os métodos de estudo do tipo "mãos na massa". Quanto menos abstrações e mais participação nas tarefas do evento tanto melhor.
 
 #### Filosofia Rails Girls
 
 * Sem perder o foco no objetivo maior, aprender Rails, transmitir conhecimentos em "doses homeopáticas".  Explicar, repetir e sempre posicionar o que está sendo ensinado no contexto mais amplo relacionado ao assunto ensinado.
 * A Internet foi criada por humanos e não será quebrada se você mexer. Enfatizar continuamente o lado humano: instrutores(as) são incentivados a falar sobre as comunidades de código aberto, seus ídolos e onde eles, instrutores(as), buscam inspiração para seu trabalho.
 * Copiar-Colar. Programação não é algo que se aprende de uma vez - você não conseguirá aprender a falar chinês em um dia e de modo similar você aprenderá somente a sintaxe básica ao estudar e praticar codificação. O objetivo de cada evento é chamar a atenção para alguns aspectos da programação Rails!
-* Meninas movem o mundo! Contudo, mulheres, senhoras e até mesmo garotos são muito bem-vindos. Mas do que em semântica nós estamos interessados em ideias.  As fundadoras do Rails Girls nasceram na era das Spice Girls, elas acreditam que o mundo feminimo é muito mais do que um simples mundo condescendente e charmoso.
+* Meninas movem o mundo! Contudo, mulheres, senhoras e até mesmo garotos são muito bem-vindos. Mas do que em semântica nós estamos interessados em ideias. As fundadoras do Rails Girls nasceram na era das Spice Girls, elas acreditam que o mundo feminimo é muito mais do que um simples mundo condescendente e charmoso.
 
 #### Código de conduta
 
@@ -46,7 +46,7 @@ Eventos Rails Girls são realizados em um ambiente inclusivo, amigável e seguro
 
 ### Exemplo de programa para o evento
 
-Todo evento Rails Girls começa com a festa de instalação onde configurações de instalação são pré-instaladas no computador das meninas.  Consulte o [tutorial de instalação](http://guides.railsgirls.com/guides-ptbr/install) para instruções. Na festa de instalação poderão ser previstas minipalestras, mas o foco principal é oferecer um vinho espumante, deixar tudo configurado para o dia seguinte e promover a integração entre as participantes. O horário para realização do evento é flexível - você conhece sua audiência e saberá escolher o horário que seja mais conveniente. Nós já realizamos eventos em finais de semana e também durante a semana. Pode ser que a realização do evento em duas tardes-noites (dàs 16:00h às 22:00h) seja a melhor solução para o seu evento.
+Todo evento Rails Girls começa com a festa de instalação onde configurações de instalação são pré-instaladas no computador das meninas. Consulte o [tutorial de instalação](http://guides.railsgirls.com/guides-ptbr/install) para instruções. Na festa de instalação poderão ser previstas minipalestras, mas o foco principal é oferecer um vinho espumante, deixar tudo configurado para o dia seguinte e promover a integração entre as participantes. O horário para realização do evento é flexível - você conhece sua audiência e saberá escolher o horário que seja mais conveniente. Nós já realizamos eventos em finais de semana e também durante a semana. Pode ser que a realização do evento em duas tardes-noites (dàs 16:00h às 22:00h) seja a melhor solução para o seu evento.
 
 #### Objetivos do workshop:
 
@@ -81,7 +81,7 @@ Repassar a aplicação com instrutores(as) durante jantar.
 *Dica*: Reserve tempo suficiente para que as pessoas possam interagir e resolver quaisquer problemas que possam haver com as instalações. Distribua cópia do material impresso ou link do Tutorial do Rails Girls, incetive as sugestões para realizar os exercícios.
 
 10:00 - 10:10 Boas-vindas
- 
+
 *Dica*: Mencione patrocinadores, mostre o que iremos construir, explique o que é programação.
 
 10:30 - 11:00 Workshop de UX
@@ -123,7 +123,7 @@ Conceitos para abordar:
 
 Colocando jargão técnico em contexto com um modelo conceitual chamado Bentobox.
 
-Dois exercícios: 
+Dois exercícios:
   1. Abordar os dez conceitos técnicos com os tabuleiros Bentobox.
   2. Abordar as palavras que as próprias mulheres submeteram aos(às) instrutores(as).
 
@@ -146,7 +146,7 @@ Sugestões de tópicos para palestras rápidas:
 Assim que todas tiverem finalizado suas aplicações, vai haver tempo para estender a aplicação modificando o CSS, implementando sistemas de comentários, etc. Permita que haja tempo suficiente para experimentação.
 
 19:00 Pós-festa
-  
+
 *Dica:* Convite todo mundo, os desenvolvedores locais, rapazes, pessoas que não foram aceito, para participar!
 
 [Fork este projeto no GitHub][github], se adicione, e nos envie um pull request.
@@ -308,8 +308,8 @@ Eventos Rails Girls são organizados em pequenos grupos, um máximo de quatro a 
 
 Não é obrigatório que instrutores(as) sejam super especialistas em Rails - conhecimento básico e disposição para ensinar valem mais que expertise. Então, se a sua comunidade Rails local não é muito forte, fique à vontade para expandir sua busca. Você pode ter uma mistura de especialistas em Rails e pessoas com experiência em desenvolvimento Web com outros frameworks. Nós procuramos por pessoas que gostam de responder perguntas e que são capazes de manter uma atmosfera positiva e acolhedora durante oito horas!
 
- 
-Você pode conhecer o nosso [guia introdutório](http://guides.railsgirls.com/guides-ptbr/app). Também sempre existe um jantar com instrutores(as) antes do evento onde nós damos algumas sugestões pedagógicas e checamos que todos estão entendendo o que está acontecendo. Evite jargão, associe exemplos com o que você está fazendo, encoraje as participantes a fazerem perguntas. As instruções de instalação podem ser encontradas neste [guia de instalação](http://guides.railsgirls.com/guides-ptbr/install). 
+
+Você pode conhecer o nosso [guia introdutório](http://guides.railsgirls.com/guides-ptbr/app). Também sempre existe um jantar com instrutores(as) antes do evento onde nós damos algumas sugestões pedagógicas e checamos que todos estão entendendo o que está acontecendo. Evite jargão, associe exemplos com o que você está fazendo, encoraje as participantes a fazerem perguntas. As instruções de instalação podem ser encontradas neste [guia de instalação](http://guides.railsgirls.com/guides-ptbr/install).
 
 Nós também entendemos que instrutores(as) são humanos e que para a maioria das pessoas esta é a primeira vez ensinando alguma coisa. Não se preocupe - as participantes sempre têm ficado muito feliz com o que quer que seja que elas aprendem e apenas a oportunidade de fazer perguntas já é o bastante.
 
@@ -319,7 +319,7 @@ Além disso, nós também encorajamos instrutores(as) a criarem exercícios adic
 
 #### Como encontrar instrutores(as)?
 
-Pergunte por aí, pergunte a patrocinadores (empresas de tecnologia), peça para qualquer pessoa lhe ajudar. Assim que você conseguir alguns instrutores(as) a bordo, elas poderão te ajudar com seus próprios contatos. Blogueiros influentes ou usuários de twitter na sua comunidade de desenvolvimento local podem ajudá-la enviando divulgando sua busca por instrutores(as). 
+Pergunte por aí, pergunte a patrocinadores (empresas de tecnologia), peça para qualquer pessoa lhe ajudar. Assim que você conseguir alguns instrutores(as) a bordo, elas poderão te ajudar com seus próprios contatos. Blogueiros influentes ou usuários de twitter na sua comunidade de desenvolvimento local podem ajudá-la enviando divulgando sua busca por instrutores(as).
 
 *Dica: Você também pode agradecer instrutores(as) por sua ajuda providenciando um lugar no workshop para suas amigas ;)*
 
@@ -502,3 +502,5 @@ Esta é uma pequena checklist para seu evento. Um evento Rails Girls pode ser or
 * Se adicione ao [Mapa Rails Girls](http://rails-girls-map.herokuapp.com/)
 * Compartilhe os números do seu evento preenchendo este pequeno [questionário](https://railsgirls.wufoo.eu/forms/rails-girls-events-all-the-numbers/)
 * Escreva um blogpost no blog global [submetendo sua história](http://blog.railsgirls.com/submit) - ou peça à alguma das participantes ou instrutores(as) para escrever uma!
+
+{% include other-guides.md page="guide" %}

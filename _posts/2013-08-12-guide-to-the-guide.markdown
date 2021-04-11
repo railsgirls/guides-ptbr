@@ -6,8 +6,7 @@ permalink: guide-to-the-guide
 
 # Seu tutorial para o Rails Girls tutorial!
 
-*Criado por H Salmon para acompanhar o [tutorial de criação da app](/app).*
-
+*Criado por H Salmon para acompanhar o [tutorial de criação da app](/app)*.
 *Traduzido por Willany Silva, @willanySilva (https://twitter.com/willanySilva).*
 
 Este tutorial é um acompanhamento para o [RailsGirls Tutorial](/app) que será utilizado para construir sua primeira aplicação
@@ -303,24 +302,24 @@ Se você olhar no arquivo `ideas_controller.rb` você pode ver essas ações e o
 
 {% highlight ruby %}
 def show
-    @idea = Idea.find(params[:id])
+  @idea = Idea.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @idea }
-    end
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @idea }
   end
+end
 
-  # GET /ideas/new
-  # GET /ideas/new.json
+# GET /ideas/new
+# GET /ideas/new.json
 {% endhighlight %}
 
 `show` - a ação do controlador
 
 {% highlight ruby %}
 respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @idea }
+  format.html # show.html.erb
+  format.json { render json: @idea }
 {% endhighlight %}
 
 (Este código é difícil de dissecar com muita clareza, nesta fase, mas se você persistir com Rails você vai obter uma melhor compreensão com o tempo.)
@@ -333,4 +332,6 @@ Assim, as requisições da URL, traduzidas em métodos HTTP, são mapeadas em a�
 
 
 Quando inserimos o código `root :to => redirect('/ideas')` em nosso `config.rb`, ele diz ao Rails para fazer como a raiz padrão da nossa aplicação [http://localhost:3000/ideas](http://localhost:3000/ideas) (perceba que Localhost está sendo usado como o domínio porque a nossa aplicação ainda está em desenvolvimento, quando você iniciar a sua aplicação domínio será diferente). Esta URL contém o caminho (`/ideas`) que, por padrão, mapeia a URL para a ação ‘index’ do nosso controlador de ideas  e renderiza a view associada; `index.html.erb`. O código `rm public/index.html` remove (`rm`) o arquivo `public/index.html`, contendo o código de “Bem-vindo a bordo”, que era a raiz padrão anterior da nossa aplicação.
+
+{% include other-guides.md page="guide-to-the-guide" %}
 

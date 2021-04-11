@@ -6,9 +6,8 @@ permalink: test-driven-development
 
 # Test Driven Development
 
-*Escrito por Gregory McIntyre, [@gregmcintyre](https://twitter.com/gregmcintyre)*
-
-*Traduzido por Marina Limeira, [@marinalimeira_](https://twitter.com/marinalimeira_)
+*Criado por Gregory McIntyre, [@gregmcintyre](https://twitter.com/gregmcintyre)*.
+*Traduzido por Marina Limeira, [@marinalimeira_](https://twitter.com/marinalimeira_)*.
 
 Este exercício objetiva em te ensinar sobre o que nós estamos falando quando dizemos
 *Test Driven Development* (TDD).
@@ -266,3 +265,5 @@ Entrada    | Saída
 `2896`     | `"MMDCCCXCVI"`
 
 [Roman numerals]: http://www.onlineconversion.com/roman_numerals_advanced.htm
+
+{% include other-guides.md page="test-driven-development" %}

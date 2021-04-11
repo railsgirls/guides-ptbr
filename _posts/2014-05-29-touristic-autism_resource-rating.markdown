@@ -6,10 +6,9 @@ permalink: touristic-autism_resource-rating
 
 # Avaliação de Recurso
 
-*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-
-*Traduzido por Beatriz Rezener, [@beatrizrezener](https://github.com/beatrizrezener)*
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*.
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+*Traduzido por Beatriz Rezener, [@beatrizrezener](https://github.com/beatrizrezener)*.
 
 Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e os tutoriais para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando design](http://guides.railsgirls.com/design), [implantando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
@@ -86,3 +85,5 @@ Você pode usar o método auxiliar `rating_for_user` para mostrar a avaliação 
 
 É isso aí! ^__^
 Experimente reiniciar o servidor, dê um add, commit e push no GitHub. Se tudo estiver funcionando, você também pode implantar ;)
+
+{% include other-guides.md page="touristic-autism_resource-rating" %}

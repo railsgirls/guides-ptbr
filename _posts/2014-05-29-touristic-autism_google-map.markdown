@@ -6,17 +6,16 @@ permalink: touristic-autism_google-map
 
 # Mostrar todo os lugares no Google Map
 
-*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-*Traduzido por Elaine Martins, [@astronomaelaine](https://twitter.com/astronomaelaine)*
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*.
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+*Traduzido por Elaine Martins, [@astronomaelaine](https://twitter.com/astronomaelaine)*.
 
-59/5000
 Os guias básicos que foram mesclados e adaptados são o [Ruby on Rails Tutorial](http://www.railstutorial.org/book), o [RailsGirls app básico](http://guides.railsgirls.com/app/) e os tutoriais para [criar thumbnails (miniaturas)](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando visual](http://guides.railsgirls.com/design), [deploying para OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
 
 É preciso instalar um software que permite visualizar e interagir com o Google Maps.
 
-Abra `Gemfile`  no diretório do projeto utilizando o editor de texto de sua preferência e adicione as linhas
+Abra `Gemfile` no diretório do projeto utilizando o editor de texto de sua preferência e adicione as linhas
 
 {% highlight ruby %}
 gem 'gmaps4rails'
@@ -27,7 +26,6 @@ Agrupe como o de costume. Depois, adicione as linhas abaixo a um novo arquivo `a
 
 {% highlight ruby %}
 class Marker
-
   include ActiveModel::Validations
   include Gmaps4rails::ActsAsGmappable
 
@@ -35,10 +33,9 @@ class Marker
 
   attr_accessor :location
 
-    def gmaps4rails_infowindow
-      'foo'
-    end
-
+  def gmaps4rails_infowindow
+    'foo'
+  end
 end
 {% endhighlight %}
 
@@ -66,7 +63,6 @@ class GoogleController < ApplicationController
     }.to_gmaps4rails
   end
   helper_method :markers
-
 end
 {% endhighlight %}
 
@@ -104,3 +100,5 @@ Para finalizar, adicione as linhas abaixo em `config/routes.rb`:
   get '/google' => 'google#index'
   root :to => 'google#index'
 {% endhighlight %}
+
+{% include other-guides.md page="touristic-autism_google-map" %}

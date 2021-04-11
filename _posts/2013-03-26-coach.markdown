@@ -6,7 +6,7 @@ permalink: coach
 
 # Como ser um(a) Instrutor(a) Rails Girls
 
-*Traduzido por Daniel Lopes, [@dannyeuu](https://www.twitter.com/dannyeuu)*
+*Traduzido por Daniel Lopes, [@dannyeuu](https://www.twitter.com/dannyeuu)*.
 
 *Todas as suas perguntas básicas respondidas em um só lugar*
 
@@ -84,3 +84,4 @@ Algumas outras ótimas dicas de primeira mão para Instrutoras(es) Rails Girls:
 - [O que aprendendi aprendendo Rails / Se tornando um melhor professor](http://floordrees.tumblr.com/post/58784746482/what-i-learned-learning-rails-becoming-a-better)
 - [Dicas para treinar um grupo de estudo de programação](http://coaching.rubymonstas.org/)
 
+{% include other-guides.md page="coach" %}

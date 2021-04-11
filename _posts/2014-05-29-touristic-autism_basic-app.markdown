@@ -6,10 +6,9 @@ permalink: touristic-autism_basic-app
 
 # Aplicação Web Básica
 
-*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*para o projeto [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-
-*Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*.
+*para o projeto [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+*Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*.
 
 Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e o tutorial para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando um design](http://guides.railsgirls.com/design), [implementando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
@@ -117,6 +116,7 @@ Perceba que nesta janela, o prompt de comando não está visível porque você e
 $
 {% endhighlight %}
   </div>
+  
   <div class="win">
 {% highlight sh %}
 >
@@ -131,3 +131,5 @@ Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para sair do servidor.
 **Instrutor(a):** Explique o que cada comando faz.
 [O que é um servidor e uma aplicação web - Slides por @]()
 O esqueleto gerado por `rails new reflete o padrão de arquitetura [Model-View-Controller(MVC) - Slides por @]().
+
+{% include other-guides.md page="touristic-autism_basic-app" %}

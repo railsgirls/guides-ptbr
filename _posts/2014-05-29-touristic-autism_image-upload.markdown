@@ -6,9 +6,9 @@ permalink: touristic-autism_image-upload
 
 # Upload de imagens e miniaturas
 
-*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)* *para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-
-*Traduzido por Rafael Vianna, [@RFerreiraVianna](https://twitter.com/rferreiravianna)
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*.
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+*Traduzido por Rafael Vianna, [@RFerreiraVianna](https://twitter.com/rferreiravianna)*.
 
 Os guias básicos que foram mesclados e adaptados são os  [Ruby on Rails Tutorial](http://www.railstutorial.org/book), o [basic RailsGirls app](http://guides.railsgirls.com/app/) e os tutoriais são: [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) e [adding comments](http://guides.railsgirls.com/commenting).
 
@@ -89,7 +89,7 @@ Agora recarregue seu navegador para ver a mudança.
 
 **Instrutor(a):** Fale um pouco sobre HTML.
 
-__Instrutor(a)__: Explique o que especifica a largura da imagem em HTML no final da etapa
+**Instrutor(a):** Explique o que especifica a largura da imagem em HTML no final da etapa
 4 e como ele difere do redimensionamento de imagens no servidor.
 
 ## Instalando ImageMagick
@@ -102,7 +102,7 @@ __Instrutor(a)__: Explique o que especifica a largura da imagem em HTML no final
   [im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
   [in-homebrew]: http://mxcl.github.io/homebrew/
 
-__Instrutor(a)__: O que é ImageMagick e o que difere das bibliotecas usadas anteriormente?
+**Instrutor(a):** O que é ImageMagick e o que difere das bibliotecas usadas anteriormente?
 
 Abra `Gemfile` no projeto e adicione:
 
@@ -126,7 +126,7 @@ Abra `app/uploaders/picture_uploader.rb` e ache a seguinte linha:
 
 Remova o `#`.
 
-__Instrutor(a)__: Explique o conceito de comentários no código..
+**Instrutor(a):** Explique o conceito de comentários no código..
 
 Abaixo da linha que você acabou de alterar, adicione:
 
@@ -155,3 +155,5 @@ para:
 {% endhighlight %}
 
 Dê uma olhada no seu navegador para ver se a miniatura está lá.
+
+{% include other-guides.md page="touristic-autism_image-upload" %}

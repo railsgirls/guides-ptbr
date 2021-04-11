@@ -6,13 +6,48 @@ permalink: videos
 
 # Rails Girls é felicidade no mundo inteiro
 
-*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
+*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*.
 
 Aqui você encontra uma seleção de vídeos da Rails Girls produzidos no mundo todo. Você tem um vídeo para compartilhar? Publique ele aqui.
 
+### Rails Girls em Joinville 2019
+
+<div>
+  <iframe width="500" height="281" src="https://www.youtube.com/embed/JpLZXnfGkXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>
+    <a href="http://railsgirls.com/joinville">Rails Girls Joinville</a> publicado por <a href="https://www.youtube.com/channel/UCMcIkyFDrFaHhClPY7VE9ng">Kauanny Mueler</a> no <a href="https://www.youtube.com/watch?v=JpLZXnfGkXo">Youtube</a>.
+  </p>
+</div>
+
+### Rails Girls Beograd 2018
+
+<div>
+  <iframe width="500" height="281" src="https://www.youtube.com/embed/U_f5HSe-lu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>
+    <a href="http://www.railsgirls.com/beograd">Rails Girls Beograd</a> publicado no <a href="https://www.youtube.com/watch?v=U_f5HSe-lu8">Youtube</a>.
+  </p>
+</div>
+
+### Rails Girls Beograd 2017
+
+<div>
+  <iframe src="http://player.vimeo.com/video/251118458" width="500" height="281" frameborder="0"></iframe> 
+  <p>
+    <a href="http://www.railsgirls.com/beograd">Rails Girls Beograd</a> publicado no <a href="http://vimeo.com/251118458">Vimeo</a>.
+  </p>
+</div>
+
 ### Rails Girls em Ljubljana 2014
 
-<div><iframe src="//player.vimeo.com/video/103805173" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/103805173">Rails Girls Ljubljana - maio 2014</a> publicado por <a href="http://vimeo.com/naisnouk">Nais Nouk</a> no <a href="https://vimeo.com">Vimeo</a>.</p></div>
+<div><iframe src="//player.vimeo.com/video/103805173" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://railsgirls.com/ljubljana">Rails Girls Ljubljana - maio 2014</a> 
+</p></div>
+
+<!-- 
+Links invalidos :(
+
+publicado por <a href="http://vimeo.com/naisnouk">Nais Nouk</a> no <a href="http://vimeo.com/103805173">Vimeo</a>.</p></div>
+
+
 
 ### Rails Girls #2 em Taipei 11/2013
 
@@ -20,7 +55,7 @@ Aqui você encontra uma seleção de vídeos da Rails Girls produzidos no mundo 
 
 ### Rails Girls #1 Taipei 09/2013
 
-<div><iframe width="500" height="375" src="http://www.youtube.com/embed/9jZTbqokELM?rel=0" frameborder="0"> </iframe><p><a href="http://railsgirls.tw">Rails Girls Taiwan</a> publicado no <a href="https://www.youtube.com/channel/UCGaidly9iC-V3P6hScH95Cw">Youtube</a>.</p></div>
+<div><iframe width="500" height="375" src="http://www.youtube.com/embed/9jZTbqokELM?rel=0" frameborder="0"> </iframe><p><a href="http://railsgirls.tw">Rails Girls Taiwan</a> publicado no <a href="https://www.youtube.com/channel/UCGaidly9iC-V3P6hScH95Cw">Youtube</a>.</p></div> -->
 
 ### Rails Girls Brno 2013
 
@@ -30,13 +65,14 @@ Aqui você encontra uma seleção de vídeos da Rails Girls produzidos no mundo 
 
 <div><iframe src="http://player.vimeo.com/video/67004430" width="500" height="281" frameborder="0"> </iframe><p><a href="http://vimeo.com/67004430">Rails Girls Summer of Code</a> publicado por <a href="http://vimeo.com/langalex">Alexander Lang</a> no <a href="https://vimeo.com">Vimeo</a>.</p></div>
 
-### Rails Girls Helsinki 2010
 
-<div><iframe src="http://player.vimeo.com/video/17752439" width="500" height="281" frameborder="0"> </iframe><p><a href="http://vimeo.com/17752439">Rails for Girls</a> publicado por <a href="http://vimeo.com/kiskolabs">Kisko Labs</a> no <a href="https://vimeo.com">Vimeo</a>.</p></div>
 
+<!-- 
+Links invalidos :(
 ### Rails Girls Beograd 2013
 
 <div><iframe src="http://player.vimeo.com/video/71897645" width="500" height="281" frameborder="0"> </iframe> <p><a href="http://vimeo.com/71897645">Rails Girls Beograd</a> from <a href="http://vimeo.com/nemanja">Nemanja Stojanović</a> on <a href="https://vimeo.com">Vimeo</a>.</p></div>
+-->
 
 ### Rails Girls Rheinland 2013
 
@@ -75,3 +111,7 @@ Aqui você encontra uma seleção de vídeos da Rails Girls produzidos no mundo 
 
 <div><iframe scrolling="no" marginheight="0" marginwidth="0" src="http://tsstartup.viidea.net/rg12_ruby_on_rails_workshop_for_girls/video/1/iframe/" frameborder="0" height="286px" width="500px"> </iframe></div>
 <p><a href="https://www.facebook.com/RailsGirlsLjubljana/app_479624635422684" target="_blank">Confira as novidadas do Rails Girls Ljubljana no FaceBook (na Eslovênia)</a></p>
+
+### Rails Girls Helsinki 2010
+
+<div><iframe src="http://player.vimeo.com/video/17752439" width="500" height="281" frameborder="0"> </iframe><p><a href="http://vimeo.com/17752439">Rails for Girls</a> publicado por <a href="http://vimeo.com/kiskolabs">Kisko Labs</a> no <a href="https://vimeo.com">Vimeo</a>.</p></div>

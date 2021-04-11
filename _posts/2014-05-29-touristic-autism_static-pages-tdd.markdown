@@ -6,10 +6,9 @@ permalink: touristic-autism_static-pages-tdd
 
 # Desenvolvimento Guiado por Teste - TDD (Test-Driven Development)
 
-*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-
-*Traduzido por Beatriz Rezener, [@beatrizrezener](https://github.com/beatrizrezener)*
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*.
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+*Traduzido por Beatriz Rezener, [@beatrizrezener](https://github.com/beatrizrezener)*.
 
 Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e os tutoriais para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando design](http://guides.railsgirls.com/design), [implantando com o OpenShift](http://guides.railsgirls.com/openshift/), [adicionando comentários](http://guides.railsgirls.com/commenting) e [tutorial do Mark McDonnell](http://code.tutsplus.com/tutorials/testing-your-ruby-code-with-guard-rspec-pry--cms-19974).
 
@@ -110,9 +109,9 @@ Para nos ajudar a reduzir o código clichê, o colocamos dentro de um arquivo es
 
 Este arquivo irá fazer o seguinte:
 
-*    dizer ao Ruby onde o nosso código da aplicação principal está localizado
-*    carregar o código do nosso aplicativo (para que os testes sejam executados)
-*    carregar a gem `pry` (nos ajuda a depurar nosso código, se precisarmos).
+* Dizer ao Ruby onde o nosso código da aplicação principal está localizado
+* Carregar o código do nosso aplicativo (para que os testes sejam executados)
+* Carregar a gem `pry` (nos ajuda a depurar nosso código, se precisarmos).
 
 Aqui está o código:
 
@@ -128,10 +127,9 @@ Vamos abrir uma nova linha de comando, insira `guard` e deixe-o em execução: e
 
 O ponto de TDD é ter um loop de feedback estreito, também conhecido como 'red, green, refactor' (vermelho, verde, refatorar). Na prática, isso significa:
 
-* escrever um teste que falha
-* escrever o código mais simples possível para que ele passe
-* refatorar o código
-
+* Escrever um teste que falha
+* Escrever o código mais simples possível para que ele passe
+* Refatorar o código
 
 
 Então vamos criar nossa página estática "Home". Criamos um `PagesController` cujo objetivo é lidar com páginas estáticas (por exemplo, Home, About, Help). Cada página é representada por uma ação no controlador `pages_controller.rb`.
@@ -221,10 +219,10 @@ O Travis CI é um serviço de integração contínua hospedado para a comunidade
 
 O processo é o seguinte:
 
-*    Inscreva-se no Travis-CI usando sua conta GitHub
-*    Vá para a página "Accounts"
-*    Habilite o CI em todos os repositórios que deseja executá-lo
-*    Crie um arquivo `.travis.yml` dentro do diretório raiz do seu projeto e realize commit dele ao seu depósito GitHub
+* Inscreva-se no Travis-CI usando sua conta GitHub
+* Vá para a página "Accounts"
+* Habilite o CI em todos os repositórios que deseja executá-lo
+* Crie um arquivo `.travis.yml` dentro do diretório raiz do seu projeto e realize commit dele ao seu depósito GitHub
 
 O arquivo `.travis.yml` determina as configurações do Travis-CI para que ele saiba como gerenciar a execução dos testes em seu projeto. Vamos criá-lo da seguinte maneira:
 
@@ -278,3 +276,5 @@ end
 {% endhighlight %}
 
 **Nota:** se você tiver algum problema relacionado ao Travis-CI, pode participar do canal "#travis" no IRC freenode para obter ajuda para responder qualquer dúvida que você possa ter.
+
+{% include other-guides.md page="touristic-autism_static-pages-tdd" %}

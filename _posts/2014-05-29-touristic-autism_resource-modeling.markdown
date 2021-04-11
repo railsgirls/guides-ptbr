@@ -6,10 +6,12 @@ permalink: touristic-autism_resource-modeling
 
 # Modelagem de Recursos
 
-*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*.
 *para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+*Traduzido por Elaine Mattos, [elainemattos](https://github.com/elainemattos)*.
+
+
 Os guias básicos que foram mergeados e adaptados são [Tutorial de Ruby on Rails](http://www.railstutorial.org/book), o [RailsGirls app básico](http://guides.railsgirls.com/app/) e os tutorias para [criar thumbnails](http://guides.railsgirls.com/thumbnails), [autenticar usuários](http://guides.railsgirls.com/devise/), [adicionar design](http://guides.railsgirls.com/design), [deploy ao OpenShift](http://guides.railsgirls.com/openshift/) e [adicionar comentários](http://guides.railsgirls.com/commenting).
-Traduzido por Elaine Mattos, [elainemattos](https://github.com/elainemattos).
 
 O que nós queremos que nossa aplicação faça? Primeiramente, nós gostariamos de
 * autenticar **users** (usuários)
@@ -127,19 +129,9 @@ Vamos add-commit-push para o seu repositório no Github! Veja que todas as alter
 
 Agora vamos usar a funcionalidade de scaffold do Rails para gerar e configurar tudo que é necessário para listar, adicionar, remover, editar e visualizar nosso segundo recurso: "locais turísticos".
 
-<div class="os-specific">
-  <div class="nix">
 {% highlight sh %}
 rails generate scaffold place name:string address:string latitude:decimal longitude:decimal description:text picture:string user_id:integer
 {% endhighlight %}
-  </div>
-
-  <div class="win">
-{% highlight sh %}
-rails generate scaffold place name:string address:string latitude:decimal longitude:decimal description:text picture:string user_id:integer
-{% endhighlight %}
-  </div>
-</div>
 
 Observe que a coluna `user:references` que é criada para suportar a associação 1-para-muitos com usuários.
 
@@ -161,7 +153,7 @@ ruby bin/rake db:migrate
 </div>
 
 Então inicie o servidor novamente. Abra [http://localhost:3000/places](http://localhost:3000/places) no seu navegador e veja todas as novas funcionalidades que a nossa aplicação web está agora suportando o recurso de "places". Tudo graças ao que o Ruby on Rails automaticamente gera com `generate scaffold`.
-Cada nova instância de "place" que será salva no banco de dados, irá automaticamente atribuir um identificador único chamado "chave primária", sem a necessidade de especificá-lo como um dos campos (junto com imagem, nome etc.)  
+Cada nova instância de "place" que será salva no banco de dados, irá automaticamente atribuir um identificador único chamado "chave primária", sem a necessidade de especificá-lo como um dos campos (junto com imagem, nome etc.)
 
 
 **Instrutor(a):** O que é o scaffolding do Rails? O que são as migrations e por que você precisa delas?
@@ -196,7 +188,7 @@ Observe que places ainda não estão associados corretamente aos users. Por exem
 
 Vamos apropriadamente criar a associação 1-para-muitos entre User e Places.
 
-#### Passo 1. Adicionar Associação 1-para-muitos  
+#### Passo 1. Adicionar Associação 1-para-muitos
 
 Você precisa ter certeza que o Rails sabe a relação entre o recurso de User e Place.
 Como um user pode criar muitos places, precisamos ter certeza de que a user model sabe disso.
@@ -276,17 +268,13 @@ por
 
 Assim como nós criamos um recurso "place" e os associamos com users, nós podemos criar um recurso de "comment" e associá-lo com places e seu autor.
 
-<div class="os-specific">
-  <div class="nix">
 {% highlight sh %}
 rails generate scaffold comment body:text user_id:integer place_id:integer
 bin/rake db:migrate
 {% endhighlight %}
-  </div>
 Inicie o servidor, veja o novo serviço no seu navegador. E então, add-commit-push para o github.
-</div>
 
-**Instrutor(a):** mostre que o scaffold atualizou os arquivos de rotas do Rails com uma regra para o recurso de Review
+**Instrutor(a):** Mostre que o scaffold atualizou os arquivos de rotas do Rails com uma regra para o recurso de Review
 
 ##Associação de Recursos
 
@@ -357,7 +345,7 @@ Abra `app/views/places/show.html.erb` e antes últimos links adicione
     <strong><%= comment.user_id %></strong>
     <br />
     <p><%= comment.body %></p>
-    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Tem certeza?' } %></p>    
+    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Tem certeza?' } %></p>
   </div>
 <% end %>
 <%= render 'comments/form' %>
@@ -403,14 +391,11 @@ Então vamos adicionar uma restrição sobre o tamanho do corpo do campo de come
 
 Abra `app/models/comment.rb` e entre 'class' e 'end':
 
-<div class="os-specific">
-  <div class="nix">
 {% highlight ruby %}
 validates :body, length: { maximum: 140 }
 {% endhighlight %}
-  </div>
+
 Se nós agora tentarmos enviar mais de 140 caracteres, teremos um erro (veja só! ;) )
-</div>
 
 ## Ajuste as rotas
 
@@ -426,3 +411,5 @@ Teste a alteração abrindo o caminho raiz (que é, http://localhost:3000/) no s
 
 **Instrutor(a):** Fale sobre as rotas, e inclua detalhes sobre as rotas e sua relação com arquivos estáticos.
 **Usuários do Rails 3:** Você precisará deletar o index.html da pasta `/public/` para que funcione corretamente.
+
+{% include other-guides.md page="touristic-autism_resource-modeling" %}

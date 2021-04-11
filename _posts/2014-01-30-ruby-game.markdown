@@ -6,8 +6,8 @@ permalink: ruby-game
 
 # Crie um jogo simples com Ruby!
 
-*Criado por Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) para o [Rails Girls The Hague](http://railsgirls.com/thehague)*  
-*Traduzido por Daniel Barreto, [@danielfsbarreto](https://github.com/danielfsbarreto)*
+*Criado por Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) para o [Rails Girls The Hague](http://railsgirls.com/thehague)*.
+*Traduzido por Daniel Barreto, [@danielfsbarreto](https://github.com/danielfsbarreto)*.
 
 [gosu](http://www.libgosu.org/) é uma biblioteca de desenvolvimento de jogos 2D. Gosu provê interfaces amigáveis e fáceis de usar para jogos com gráficos 2D e texto (acelerado por hardware 3D), amostras de áudio e música, bem como suporte a entrada de comandos através de teclado, mouse e gamepad/joystick. Também inclui demos para integração com RMagick, Chipmunk e OpenGL.
 
@@ -90,14 +90,14 @@ Acha que tem mais habilidades gráficas que Patrick (você provavelmente tem)? E
 
 {% highlight ruby %}
 def initialize
-    super(640, 480, false)
-    self.caption = "Jump 'n Run"
-    @standing, @walk1, @walk2, @jump = *Image.load_tiles(self, "sprites.png", 100, 160, false)
-    @x, @y = 400, 0
-    @vy = 0
-    @dir = :left
-    @cur_image = @standing
-  end
+  super(640, 480, false)
+  self.caption = "Jump 'n Run"
+  @standing, @walk1, @walk2, @jump = *Image.load_tiles(self, "sprites.png", 100, 160, false)
+  @x, @y = 400, 0
+  @vy = 0
+  @dir = :left
+  @cur_image = @standing
+end
 {% endhighlight %}
 
 Está vendo o código `Game.new.show`? Ele cria uma nova instância do jogo. Ela não tem memória, então quando você ficar preso em um jogo, apenas comece um novo. Divirta-se!
@@ -107,3 +107,5 @@ Está vendo o código `Game.new.show`? Ele cria uma nova instância do jogo. Ela
 Os assets utilizados em vim adventures podem ser encontrados [aqui](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
 
 Os sons utilizados você vai encontrar em [Matthew Klingensmith (www.matthewklingensmith.com)](http://opengameart.org/content/matts-creative-commons-music)
+
+{% include other-guides.md page="ruby-game" %}

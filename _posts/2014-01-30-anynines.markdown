@@ -6,11 +6,10 @@ permalink: anynines
 
 # Coloque seu app online com anynines
 
-*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)*
+*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)*.
+*Traduzido por [Júlio Fortunato](https://github.com/JulioFortunato)*.
 
-*Traduzido por [Júlio Fortunato](https://github.com/JulioFortunato)*
-
-__INSTRUTOR(A)__: Fale sobre os benefícios de fazer o deploy para o anynines vs utilizar outros data centers.
+**Instrutor(a):** Fale sobre os benefícios de fazer o deploy para o anynines vs utilizar outros data centers.
 
 ### Pegue um pouco de anynines para você
 
@@ -21,8 +20,8 @@ __INSTRUTOR(A)__: Fale sobre os benefícios de fazer o deploy para o anynines vs
 3. Agora selecione o endpoint da api do anynines como destino e autentique-se usando suas credenciais:
 
 {% highlight sh %}
-cf api https://api.de.a9s.eu  
-cf login -u [seu@email] -p [suasenha]  
+cf api https://api.de.a9s.eu
+cf login -u [seu@email] -p [suasenha]
 {% endhighlight %}
 
 Ou, se isso não funcionar para você, use:
@@ -60,10 +59,10 @@ Por fim, temos que reiniciar a aplicação para garantir que o vínculo do servi
 $> cf restart [nome-do-app-que-você-escolheu-acima]
 {% endhighlight %}
 
-Você verá isto:  
+Você verá isto:
 {% highlight sh %}
-Creating service postgresql-d2197... OK  
-Binding postgresql-d2197 to railsgirls... OK  
+Creating service postgresql-d2197... OK
+Binding postgresql-d2197 to railsgirls... OK
 {% endhighlight %}
 
 Terminando com... `Push successful! App 'railsgirls' available at railsgirls.de.a9sapp.eu`. Score!
@@ -78,7 +77,7 @@ git add .
 git commit -m "add anynines deployment"
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Este será um ótimo momento para falar sobre sistemas de controle de versão e git, se ainda não o fez.
+**Instrutor(a):** Este será um ótimo momento para falar sobre sistemas de controle de versão e git, se ainda não o fez.
 
 ### Ajuda
 
@@ -86,3 +85,5 @@ Você pode checar todos os sub-comandos do cf disponíveis digitando `cf help`.
 No caso de seu terminal não ter todas as respostas, a equipe do anynines certamente terá. Apenas envie um email para eles em support@anynines.com.
 
 Bons deploys!
+
+{% include other-guides.md page="anynines" %}

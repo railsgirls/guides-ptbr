@@ -149,7 +149,7 @@ Caso jekyll não esteja funcionando como esperado consulte [Issue 503](https://g
 
 ## Contribuindo com um tutorial
 
-Para contribuir com um tutorial consulte as [instruções](http://guides.railsgirls.com/contributing) 
+Para contribuir com um tutorial consulte as [instruções](http://guides.railsgirls.com/contributing)
 
 ## Twitter
 

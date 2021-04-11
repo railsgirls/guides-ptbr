@@ -6,7 +6,7 @@ permalink: contributing
 
 # Instruções para contribuir com um tutorial
 
-*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
+*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*.
 
 O site de tutoriais usa a tecnologia [jekyll](https://github.com/mojombo/jekyll) para renderizar suas páginas e todos os documentos do site são escritos com uso da sintaxe [markdown](http://daringfireball.net/projects/markdown/). Para contribuir com um ou mais  ( ;-) ) tutoriais siga os seguinte passos:
 
@@ -18,13 +18,13 @@ O site de tutoriais usa a tecnologia [jekyll](https://github.com/mojombo/jekyll)
 - Crie um arquivo denominado `YYYY-MM-DD-nome_do_tutorial.markdown` e salve no diretório `_posts` do seu fork.
 - No início do arquivo recém criado use a sintaxe YAML para serializar alguns dados que são padronizados para os tutoriais. Veja um exemplo destes dados que se aplica a este documento que você está visualizando:
 
-<dev>
+{% highlight ruby %}
   ---
   layout: default
   title: Contribua com um tutorial
   permalink: contributing
   ---
-</dev>
+{% endhighlight %}
 
 - A seguir escreva seu tutorial usando a sintaxe markdown.
 
@@ -40,3 +40,5 @@ Faça as mudanças no arquivo que você quer mudar! Você não precisa criar um 
 3. Finalmente abra um pull request e nele acrescente uma breve descrição do seu tutorial. Feito!
 
 Nossos mais efusivos agradecimentos por dedicar seu tempo em favor do enriquecimento dos conteúdos do site Rails Girls.
+
+{% include other-guides.md page="contributing" %}

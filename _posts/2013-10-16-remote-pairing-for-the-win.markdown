@@ -6,8 +6,8 @@ permalink: remote
 
 # Tutorial Rails Girls sobre compartilhamento remoto
 
-*Created by Ed Drain, [@SoldierCoder](https://twitter.com/soldiercoder)*  
-Traduzido por Bomfim Jr, @bomfimjr_
+*Criado por Ed Drain, [@SoldierCoder](https://twitter.com/soldiercoder)*.
+*Traduzido por Bomfim, [@bomfimjr_](https://twitter.com/bomfimjr_)*.
 
 ## Por que compartilhamento remoto é tão formidável?
 
@@ -18,7 +18,7 @@ Eu disse "ao redor do mundo", não disse? Realmente, Rails Girls está em **todo
 
 ## Mas, por que compartilhamento remoto é tão formidável?
 
-Compartilhamento remoto é tão formidável porque pessoas podem contar com ajuda de outras pessoas mais experientes sem nem menos estarem próximas a elas. Eu sei disso, porque como treinador do [Rails Girls Summer of Code](http://railsgirlssummerofcode.org), eu morava na Virginia e treinava times que moravam em Londres e na Pennsylvania. Se não existisse compartilhamento remoto eu teria que pegar um avião ou dirigir por doze horas apenas para mostrar como escrever um "hello, world!" em um exemplo de app!
+Compartilhamento remoto é tão formidável porque pessoas podem contar com ajuda de outras pessoas mais experientes sem nem menos estarem próximas a elas. Eu sei disso, porque como instrutor do [Rails Girls Summer of Code](http://railsgirlssummerofcode.org), eu morava na Virginia e treinava times que moravam em Londres e na Pennsylvania. Se não existisse compartilhamento remoto eu teria que pegar um avião ou dirigir por doze horas apenas para mostrar como escrever um "hello, world!" em um exemplo de app!
 
 ## OK, Estou convencida! O que eu preciso para participar de um compartilhamento remoto?
 * Uma conexão com a internet.
@@ -49,7 +49,7 @@ npm install -g madeye
 
 &nbsp;5. Madeye vai mostrar,  no terminal, o URL para compartilhamento com as suas companheiras de equipe e todas podem abrir o endereço nos seus navegadores e começar a editar o código.
 
-Estando em modo de compartilhamento no navegador, você e seu treinador poderão ver no lado esquerdo da tela seus ícones em diretórios, sub-diretórios e arquivos. Navegando pelos arquivos você será capaz de visualizar o curso do seu treinador enquando ele edita os arquivos e vice-versa. É **muito** fácil!
+Estando em modo de compartilhamento no navegador, você e seu(a) instrutor(a) poderão ver no lado esquerdo da tela seus ícones em diretórios, sub-diretórios e arquivos. Navegando pelos arquivos você será capaz de visualizar o curso do seu instrutor(a) enquando ele edita os arquivos e vice-versa. É **muito** fácil!
 
 ## Alternativas para Madeye
 
@@ -58,8 +58,4 @@ Eu, autor deste tutorial, acredito que Madeye é o melhor programa para comparti
 ## Considerações finais
 A comunidade Ruby é um bom exemplo de pessoas que ajudam outras pessoas. Basta olhar para as pessoas laureadas todos os anos com o título de [Ruby Heros](http://rubyheroes.com/) para constatar esta afirmação. Quão grandioso e generoso seria o mundo, se todos nós compartilhassemos um pouco do nosso conhecimento com pessoas em busca de conhecimentos. Isto seria como estar em um mundo que refletisse a palavra mais comum, que provavelmente você ira ouvir nas reuniões locais Ruby/Rails: "MINSWAN" -- Matz é bom, então nós somos bons! Vamos começar a ser boms com os outros
 
-
-
-
-
-
+{% include other-guides.md page="remote" %}

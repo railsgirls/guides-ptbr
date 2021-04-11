@@ -6,8 +6,8 @@ permalink: sinatra
 
 # Tutorial de fundamentos web
 
-*Criado por Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*
-*Traduzido por Bárbara Barbosa, [@bahbbc](https://twitter.com/bahbbc)*
+*Criado por Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*.
+*Traduzido por Bárbara Barbosa, [@bahbbc](https://twitter.com/bahbbc)*.
 
 ## Objetivo
 
@@ -74,7 +74,7 @@ require "sinatra"
 require "sinatra/reloader"
 
 get "/" do
-"Olá mundo!"
+  "Olá mundo!"
 end
 {% endhighlight %}
 
@@ -98,15 +98,15 @@ No mesmo arquivo, tente criar mais páginas para visitar, usando a mesma sintaxe
 e.g.
 {% highlight sh %}
 get "/nome-da-pagina" do
- "Esse é o texto da página"
- end
+  "Esse é o texto da página"
+end
 {% endhighlight %}
 
 Se você quiser você pode apertar <kbd>Ctrl</kbd>+<kbd>C</kbd> no seu terminal para parar o seu app. (Exatamente como o seu app Rails!), contudo você não precisa reiniciar o seu servidor para ver as mudanças.
 
 Se você ficar travada, garanta que o seu app.rb parece [com esse aqui](http://tjmcewan.github.io/coffeecalc/snippets/install_sinatra.rb.txt).
 
-## *3.* Formulário HTML - Parâmetros
+## *2.* Formulário HTML - Parâmetros
 
 Para começar a listagem de cafés no seu app, nos vamos precisar de um formulário HTML para enviar qual café nos queremos e quando ele custa.
 
@@ -118,21 +118,19 @@ Substitua o seu `get "/"` do exemplo anterior por:
 
 {% highlight ruby %}
 get "/" do
-"
-<html>
-<body>
-<form action='/' method='get'>
-Café: <input name='cafe'>
-Valor: <input name='valor'>
-<button type='submit'>Adicionar café</button>
-</form>
-<!-- cafes vao aqui -->
-</body>
-</html>
-"
+  "
+  <html>
+    <body>
+      <form action='/' method='get'>
+        Café: <input name='cafe'>
+        Valor: <input name='valor'>
+        <button type='submit'>Adicionar café</button>
+      </form>
+      <!-- cafes vao aqui -->
+    </body>
+  </html>
+  "
 end
-
-
 {% endhighlight %}
 
 Para simplificação, esse formulário envia a informação para a mesma URL ("/").
@@ -149,7 +147,7 @@ GET /?cafe=flat+white&valor=3.50 HTTP/1.1
 
 Se não deu muito certo, certifique-se de que o seu código parece com [esse código](http://tjmcewan.github.io/coffeecalc/snippets/html_form.rb.txt).
 
-## *4.*Inspetor Web - Cabeçalho de requisição
+## *3.*Inspetor Web - Cabeçalho de requisição
 
 No seu navegador, abra o console web. (Para a maioria dos navegador, o console pode ser acessado assim: *clique com o botão direito em qualquer lugar da página e selecione "Inpecionar Elemento"*.) Eu recomendo que você use o Chrome para isso; se você estiver usando o Chrome, olhe a aba 'Network'.
 
@@ -172,7 +170,7 @@ A parte mais importante está na primeira linha, que separa o verbo HTTP da URL 
 
 **Nota:** Se o Sinatra disser "backup from WEBrick", o servidor embutido do Ruby, então pode ser que você veja multiplas requisições GET a cada atualização sua. Apenas uma requisição está sendo processada, você pode ignorar a outra tranquilamente.
 
-## *5.* Variável global
+## *4.* Variável global
 
 Então, o nosso formulário está enviando a informação do café ao nosso app, mas nós não estamos fazendo nada com ela ainda. Nós devemos salvar a informação do café depois que ela for enviada para o servidor.
 
@@ -188,7 +186,7 @@ Isso criará um array vazio quando o seu app inicializar.
 
 **Dica** Essa variável global não ficará por perto por muito tempo - ela se toranará um array vazio toda vez que o servidor reiniciar. Como nós estamos usando o reloader (recarregador) do Sinatra, isso acontecerá toda vez que você salvar o seu arquivo `app.rb`. Não se preocupe, ele servirá aos nossos propósitos.
 
-## *6.* Recebendo informação - Salvando cafés
+## *5.* Recebendo informação - Salvando cafés
 
 Agora nós precisamos colocar a informação dentro do array `$cafes` quando a requisição for recebida. Quando você completa o formulário e clique no botão para enviar, lembre-se que a informação fica no final da URL, após o ?, para ser enviada de volta ao servidor.
 
@@ -223,7 +221,7 @@ Tire o formulário HTML do seu código `get` e cole em um método chamado `templ
 
 {% highlight ruby %}
 def template
-# Coloque o seu formuário HTML aqui
+  # Coloque o seu formuário HTML aqui
 end
 {% endhighlight %}
 
@@ -231,8 +229,8 @@ Agora substitua o formulário do seu código `get` por uma simples chamada ao m�
 
 {% highlight ruby %}
 get "/" do
-$cafes << params
-template
+  $cafes << params
+  template
 end
 {% endhighlight %}
 
@@ -259,7 +257,7 @@ Então armados com esse conhecimento, vamos mudar o método do nosso formulário
 {% highlight ruby %}
 Try this:
 post '/' do
- "Hello World"
+  "Hello World"
 end
 {% endhighlight %}
 
@@ -324,3 +322,5 @@ Obrigada por jogar!
 Se isso foi rápido e você quiser continuar, você pode ver:
 
 * [Renderizando a nossa listagem de cafés em HTML](/sinatra-html)
+
+{% include other-guides.md page="sinatra" %}

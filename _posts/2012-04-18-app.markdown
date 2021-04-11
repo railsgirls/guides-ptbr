@@ -6,9 +6,8 @@ permalink: app
 
 # Tutorial para criação da app Rails Girls
 
-_Criado por Vesa Vänskä, [@vesan](https://twitter.com/vesan)_
-
-_Traduzido por Maujor, [site do Maujor](http://www.maujor.com)_
+*Criado por Vesa Vänskä, [@vesan](https://twitter.com/vesan)*.
+*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*.
 
 **Você deverá ter Rails instalado.** [**Consulte o guia de instalação se você ainda não instalou.**](install)
 
@@ -56,7 +55,7 @@ Precisa de alguns lembretes pelo caminho? Leia [Cola útil para Ruby, Rails, con
 
 É importante que você conheça a sintaxe de comandos específica para seu Sistema Operacional - os comandos a executar em computadores rodando Windows podem apresentar pequenas diferenças sintáticas em relação àqueles usados em ambientes Mac ou Linux. Se você não estiver seguro com a sintaxe dos comandos use o link para o sistema operacional, que está localizado após os comandos mostrados neste tutorial. Se você estiver usando um serviço na nuvem (por exemplo: Codenvy), você deverá executar os comandos conforme a sintaxe Linux ainda que esteja em ambiente Windows.
 
-## _1._ Criando a aplicação
+## *1.* Criando a aplicação
 
 Vamos criar uma app Rails a partir do zero denominada _railsgirls_ destinada a compartilhar ideias.
 
@@ -173,7 +172,7 @@ $
   </div>
   <div class="win">
 {% highlight sh %}
-
+>
 {% endhighlight %}
 
   </div>
@@ -188,7 +187,7 @@ Pressione as teclas <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servid
 
 **Instrutor(a):** Explicar a finalidade de cada comando. O que foi criado? O que o servidor fez?
 
-## _2._ Criar o Scaffold para as ideias
+## *2.* Criar o Scaffold para as ideias
 
 Vamos usar uma funcionalidade do Rails denominada scaffold para criar um ponto de partida que nos permitirá listar, adicionar, remover, editar e ver as "coisas"; no nosso caso as "coisas" serão as ideias.
 
@@ -209,7 +208,7 @@ Abra <http://localhost:3000/ideas> no navegador. Para serviços na nuvem (por ex
 
 Teste o que você tem rodando estes comandos no terminal.
 
-## _3._ Design
+## *3.* Design
 
 **Instrutor(a):** Fale sobre o relacionamento entre HTML e Rails. Quais são as visualizações geradas por HTML e quais são as geradas por Embedded Ruby (ERB)? O que é MVC e como ele se relaciona no contexto? (Modelos e controllers são responsáveis por gerar visualizações com HTML.)
 
@@ -295,7 +294,7 @@ Se o Terminal mostrar uma mensagem de erro informando que há algo errado com a 
 
 **Instrutor(a):** Fale um pouco sobre CSS e layouts.
 
-## _4._ Criando mecanismo para upload de imagens
+## *4.* Criando mecanismo para upload de imagens
 
 Vamos instalar um software que nos permita fazer upload de imagens com Rails.
 
@@ -402,7 +401,7 @@ Vá para <http://localhost:3000/ideas> para ver o que mudou.
 
 **Instrutor(a):** Fale um pouco sobre marcação HTML.
 
-## _5._ Acertos finais nas rotas
+## *5.* Acertos finais nas rotas
 
 Abra <http://localhost:3000> (ou o preview da url, caso você esteja usando um serviço na nuvem). Ainda é mostrada a página "Yay! You’re on Rails!". Vamos fazer o redirecionamento para a página ideas da app.
 
@@ -416,7 +415,7 @@ Teste as alterações feitas abrindo o caminho para a raiz da app (ou seja, <htt
 
 **Instrutor(a):** Fale sobre rotas e os detalhes na ordenação das rotas e seus relacionamentos com arquivos estáticos.
 
-## Criando uma página estática na sua app
+## *6.* Criando uma página estática na sua app
 
 Vamos criar uma página estática na nossa app com a finalidade de fornecer informações sobre o autor da aplicação — você!
 
@@ -434,7 +433,7 @@ get "pages/info"
 
 Abra `app/views/pages/info.html.erb` e acrescente informações sobre você na marcação HTML. Para visualizar a nova página de informações sobre o autor digite <http://localhost:3000/pages/info> na barra de endereços do navegador ou se você usa um serviço na nuvem acrescente '/pages/info' na URL do preview.
 
-## _7._ Adicione um botão à sua barra de navegação
+## *7.* Adicione um botão à sua barra de navegação
 
 Agora que sabemos que sua nova página estática funciona, vamos garantir que as pessoas possam visitá-la criando um botão para ela na barra de navegação.
 
@@ -458,30 +457,11 @@ adiciona
 
 Atualize a página no seu navegador e clique no link recém criado para ver se funciona!
 
-## _8._ O que vem a seguir?
+## *8.* O que vem a seguir?
 
 - Incrementando o design com HTML &amp; CSS
 - Adicionando sistema de avaliação
 - Usando CoffeeScript (ou JavaScript) para interação
 - Usando técnicas de redimensionamento de imagens para carregamento rápido.
 
-## Outros Guias
-
-- [Handy cheatsheet for Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
-- Guia 1: [Tutorial de Instalação para Rails Girls](/install) (You probably already did this one!)
-- Guia 2: [Tutorial para criação da app Rails Girls](/app) (This current page!)
-- Guia 3: [Como enviar para o GitHub](/github)
-- Guia 4: Colocando seu app online em...
-  - [Heroku](/heroku) / [OpenShift](/openshift) / [anynines](/anynines) / [Engine Yard](/engineyard)
-- Guia 5: [Funcionalidades de uma área de comentários para a app Rails Girls](/commenting)
-- Guia 6: [Adicione design à sua aplicação com HTML e CSS](/design)
-- Guia 7: [Thumbnails em listas de ideas](/thumbnails)
-- Guia 8: [Autenticação (para usuários) com Devise](/devise)
-- Guia 9: [Adicionando Gravatar para a aplicação](/gravatar)
-- Guia 10: [Melhorando seu design da sua aplicação com HTML e CSS](/dexign-html-css)
-- Guia 11: Continuous Deployment
-  - [Testando seu app com RSpec](testing-rspec) / [CD with Travis-CI](/continuous-travis) / [CD with Codeship](/continuous)
-- Guia 12: [Construindo um aplicativo de votação em Sinatra](/sinatra-app)
-- Guia 13: [Construa um diário em Ruby on Rails](diary-app)
-- Guia 14: [Adicione back-end ao seu aplicativo (páginas de administração)](/backend-with-active-admin)
-- Guia 15: [Acesse explicações adicionais do app Rails Girls](https://github.com/lbain/railsgirls/)
+{% include other-guides.md page="app" %}

@@ -6,9 +6,8 @@ permalink: openshift
 
 # Colocar Seu App Online com OpenShift
 
-*Criado por Katie Miller, [@codemiller](https://twitter.com/codemiller)*
-
-*Traduzido por Marcela Oliveira, [@magaeu](https://twitter.com/magaeu)*
+*Criado por Katie Miller, [@codemiller](https://twitter.com/codemiller)*.
+*Traduzido por Marcela Oliveira, [@magaeu](https://twitter.com/magaeu)*.
 
 ### Utilizando o OpenShift
 
@@ -23,7 +22,7 @@ rhc setup
 
 As instruções acima presumem que você já tenha instalado o Ruby utilizando RVM ou RailsInstaller. Se você utilizou outra abordagem, há mais informações sobre como instalar o RHC em outras configurações [nesse guia](https://www.openshift.com/developers/rhc-client-tools-install) (talvez seja necessário executar `sudo gem install rhc`).
 
-__INSTRUTOR(A)__: Fale sobre os benefícios de utilizar um PaaS como o OpenShift quando comparado aos servidores tradicionais. Fale sobre SSH e o porquê é necessário fazer o upload da chave pública para que ocorra uma comunicação segura.
+**Instrutor(a):** Fale sobre os benefícios de utilizar um PaaS como o OpenShift quando comparado aos servidores tradicionais. Fale sobre SSH e o porquê é necessário fazer o upload da chave pública para que ocorra uma comunicação segura.
 
 ### Preparando sua aplicação
 
@@ -48,7 +47,7 @@ Se aparecer uma mensagem como `Tem certeza que quer continuar a conexão (sim/n�
 
 A saída do terminal deve conter a URL; abra a janela do navegador e digite a URL da aplicação para visualizar o modelo da aplicação Rails (a URL terá o seguinte formato http://openshiftapp-*yourdomain*.rhcloud.com).
 
-__INSTRUTOR(A)__: Explique o que é o Git e o porquê nós usamos sistemas de controle de versão.
+**Instrutor(a):** Explique o que é o Git e o porquê nós usamos sistemas de controle de versão.
 
 #### Adicionar controle de versão
 
@@ -74,7 +73,7 @@ git add --all
 git commit -m "First commit of Ideas app"
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Explique os comandos do Git utilizados e o .gitignore.
+**Instrutor(a):** Explique os comandos do Git utilizados e o .gitignore.
 
 #### Copiar código da aplicação modelo
 
@@ -135,7 +134,7 @@ git add --all
 git commit -m "Changed production database to PostgreSQL"
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Fale sobre banco de dados relacionais e as diferenças entre SQLite e PostgreSQL.
+**Instrutor(a):** Fale sobre banco de dados relacionais e as diferenças entre SQLite e PostgreSQL.
 
 ### Implantar a aplicação no OpenShift
 
@@ -154,7 +153,7 @@ git push -f --set-upstream openshift master
 
 Atualize a aplicação no seu navegador para ver o resultado.
 
-__INSTRUTOR(A)__: Fale sobre o Git remoto.
+**Instrutor(a):** Fale sobre o Git remoto.
 
 ### Crédito extra
 
@@ -164,7 +163,7 @@ Parabéns! Sua aplicação Rails está online para todo o mundo admirar. As segu
 
 A aplicação deve estar muito boa agora, mas existe um pequeno problema ocasionado pela natureza temporária do ambiente de implantação. Quando nós enviamos uma nova versão da aplicação, tudo o que está armazenado na cópia do repositório do OpenShift é removido para dar espaço para novos arquivos. Isso inclui as imagens carregadas pelos usuários. Para resolver esse problema, nós podemos armazenar os arquivos num diretório do OpenShift. O caminho para esse armazenamento pode ser salvo em uma variável de ambiente.
 
-__INSTRUTOR(A)__: Explique a motivação para utilizar variáveis de ambiente.
+**Instrutor(a):** Explique a motivação para utilizar variáveis de ambiente.
 
 O diretório onde as imagens são atualmente armazenadas é o diretório da aplicação, que será apagado quando refizermos a aplicação. Para mudar o diretório de armazenamento, abra `app/uploaders/picture_uploader.rb` e substitua
 
@@ -208,7 +207,7 @@ git push
 
 As imagens carregadas antes dessa mudança ser realizada não serão visualizadas, mas tudo que for carregado a partir de agora será armazenado entre as reconstruções da aplicação.
 
-__INSTRUTOR(A)__: Explique links simbólicos.
+**Instrutor(a):** Explique links simbólicos.
 
 #### Enviar o código para o GitHub
 
@@ -223,8 +222,10 @@ git push github master
 
 A branch 'master' local do seu repositório será enviada para o GitHub. Acesse o website do GitHub e verifique se está tudo certo.
 
-__INSTRUTOR(A)__: Fale sobre as branches do Git e os benefícios do código aberto.
+**Instrutor(a):** Fale sobre as branches do Git e os benefícios do código aberto.
 
 ### Conclusão
 
 Sua aplicação Rails agora está rodando em nuvem no [OpenShift](https://www.openshift.com/developers). Você pode enviar quaisquer outras mudanças que você queira e compartilhar a URL e mostrar sua aplicação para seus amigos.
+
+{% include other-guides.md page="openshift" %}

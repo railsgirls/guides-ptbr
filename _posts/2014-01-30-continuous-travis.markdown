@@ -6,9 +6,8 @@ permalink: continuous-travis
 
 # Entrega Contínua com TravisCI
 
-*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)*
-
-*Traduzido por Joana Souza, [@sspjoana](https://twitter.com/sspjoana)*
+*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)*.
+*Traduzido por Joana Souza, [@sspjoana](https://twitter.com/sspjoana)*.
 
 ### O que é Implantação Contínua?
 
@@ -40,7 +39,7 @@ Trabalhando em um lugar com uma cadeia de implantação contínua, você irá fo
 
 Há algumas grandes empresas que navegam na onda contínua, neste guia vamos configurar a implantação contínua para o nosso aplicativo Ruby on Rails do GitHub para o *anynines*, usando TravisCI.
 
-__Instrutor(a)__: Fale sobre os benefícios da implantação contínua.
+**Instrutor(a):** Fale sobre os benefícios da implantação contínua.
 
 ### Github, Travis CI e anynines
 
@@ -185,3 +184,5 @@ Logging out... OK
 {% endhighlight %}
 
 Isso quer dizer que você já terminou e está pronta para a próxima!
+
+{% include other-guides.md page="continuous-travis" %}

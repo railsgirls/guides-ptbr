@@ -6,12 +6,12 @@ permalink: diary-app
 
 # Crie seu primeiro aplicativo de diário com Ruby on Rails
 
-*Criado por Piotr Szotkowski ([chastell](http://chastell.net)) e Tomasz Stachewicz ([tomash](http://tomash.wrug.eu/about.html))*  
-*Tradução PT-BR por ([Ricardo Hiroyuki Eihara Junior](http://github.com/rhiroyuki))*
+*Criado por Piotr Szotkowski ([chastell](http://chastell.net)) e Tomasz Stachewicz ([tomash](http://tomash.wrug.eu/about.html))*.
+*Traduzido por ([Ricardo Hiroyuki Eihara Junior](http://github.com/rhiroyuki))*.
 
 Iremos criar desde o início uma pequena aplicação de votação usando o framework de desenvolvimento web para Ruby chamado Rails. Pense o que sua primeira aplicação deveria ser sobre - pode ser algo simples que inclua uma coleção de algo: por exemplo, uma lista de tarefas, um diário, etc. Usaremos o diário como base neste tutorial.
 
-__INSTRUTOR(A)__: Para saber mais sobre a razão por trás desse tutorial para iniciantes um pouco diferente, dê uma olhada em [post](http://dotclass.org/rails-girls-warsaw-programme/).
+**Instrutor(a):** Para saber mais sobre a razão por trás desse tutorial para iniciantes um pouco diferente, dê uma olhada em [post](http://dotclass.org/rails-girls-warsaw-programme/).
 
 
 **Certifique-se que você tenha o Rails instalado.** [**Siga o guia de instalação**](/install) para estar preparado.
@@ -25,7 +25,7 @@ __INSTRUTOR(A)__: Para saber mais sobre a razão por trás desse tutorial para i
 
 ### Editor de Texto
 
-* [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com),  Vim e Emacs são exemplos de editores de texto que você pode usar para escrever seu código e editar arquivos.
+* [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com), Vim e Emacs são exemplos de editores de texto que você pode usar para escrever seu código e editar arquivos.
 
 <h3><i class="icon-prompt">&nbsp;</i></h3>
 
@@ -39,7 +39,7 @@ __INSTRUTOR(A)__: Para saber mais sobre a razão por trás desse tutorial para i
 
 * (Firefox, Safari, Chrome) para ver sua aplicação.
 
-__INSTRUTOR(A)__: Ajude com a instalação; garanta que o editor de texto esteja propriamente preparado (por exemplo, verifique se o encoding é UTF-8).
+**Instrutor(a):** Ajude com a instalação; garanta que o editor de texto esteja propriamente preparado (por exemplo, verifique se o encoding é UTF-8).
 
 </div>
 
@@ -53,7 +53,7 @@ __INSTRUTOR(A)__: Ajude com a instalação; garanta que o editor de texto esteja
 
 Crie um novo diretório (pasta) e crie um arquivo com o nome de `index.html` nele. Abra o arquivo no seu editor e no navegador.
 
-__INSTRUTOR(A)__: Explique que os navegadores podem abrir arquivos locais, apenas a URL que vai ficar estranha.
+**Instrutor(a):** Explique que os navegadores podem abrir arquivos locais, apenas a URL que vai ficar estranha.
 
 ### Estrutura do HTML
 
@@ -72,7 +72,7 @@ Comece adicionando uma estrutura para o seu HTML escrevendo o que está embaixo 
 </html>
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Explique as duas partes do HTML, `<head>` e `<body>`. Explique a tag `<title>` e brevemente a tag `<meta>`, `<link>` e `<script>` se necessário.  Bootstrap está presente no projeto por isso o CSS pode ser pulado (a menos que os participantes queiram que você explique).
+**Instrutor(a):** Explique as duas partes do HTML, `<head>` e `<body>`. Explique a tag `<title>` e brevemente a tag `<meta>`, `<link>` e `<script>` se necessário.  Bootstrap está presente no projeto por isso o CSS pode ser pulado (a menos que os participantes queiram que você explique).
 
 ### Primeiro conteúdo visto
 
@@ -95,7 +95,7 @@ Adicione o seguinte HTML entre as tags `<body>` e `</body>` (sinta-se livre para
 
 Estes são seus três primeiros registros no diário. Note como são diferentes as tags mostradas e note a repetição da estrutura.
 
-__INSTRUTOR(A)__: Fale um pouco sobre as tags em HTML e sua semântica.
+**Instrutor(a):** Fale um pouco sobre as tags em HTML e sua semântica.
 
 ### Mais HTML
 
@@ -115,25 +115,25 @@ Adicione o seguinte seja antes ou depois das entradas do diário acima (denovo, 
 
 Este é uma lista não ordenada em HTML com alguns itens listados nos links com uma referência (URLs) para outras páginas. É seguido de um parágrafo contendo uma imagem - e a origem da imagem esta na URL dada.
 
-__INSTRUTOR(A)__: Explique como a Web funciona e fale um pouco sobre os elementos em HTML e seus atributos.
+**Instrutor(a):** Explique como a Web funciona e fale um pouco sobre os elementos em HTML e seus atributos.
 
 [Aqui](https://github.com/krzysztofbialek/Rails-Girls-Warsaw-App) está um link de um repositório com um estilo basico para se usar na aplicação.
 
 ## Mudando para o Rails
 
-__INSTRUTOR(A)__: Se os seus estudantes estão no Windows, considere utilizar o Nitrous.IO como base para as próximas partes.
+**Instrutor(a):** Se os seus estudantes estão no Windows, considere utilizar o Nitrous.IO como base para as próximas partes.
 
 ### Nova aplicação em Rails
 
 Abra a janela do terminal (Prompt de Comando do Windows), mude para o diretório onde os seus arquivos estão (usando o comando `cd`) e rode `rails new diary` - ele vai levar um tempo e terminará criando uma nova aplicação do Rails. Execute `cd diary` para mudar para o diretório da aplicação.
 
-__INSTRUTOR(A)__: Explique como navegar pelos diretórios e executar comandos.
+**Instrutor(a):** Explique como navegar pelos diretórios e executar comandos.
 
 ### Rodando o servidor
 
 Uma vez dentro do diretório `diary` execute `rails server` e (quando ele terminar de começar) vá para [http://localhost:3000](http://localhost:3000) no seu navegador. Você deverá ver uma página de `Bem-vindo a bordo`. Pare o servidor pressionando `ctrl-c`.
 
-__INSTRUTOR(A)__: Explique o que aconteceu e o que são as saídas da janela do terminal. Se o servidor falhar em começar por causa do JavaScript runtime, `gem install therubyracer` e descomente a linha relevante na `Gemfile`.
+**Instrutor(a):** Explique o que aconteceu e o que são as saídas da janela do terminal. Se o servidor falhar em começar por causa do JavaScript runtime, `gem install therubyracer` e descomente a linha relevante na `Gemfile`.
 
 ### Primeira rota e visão
 
@@ -143,19 +143,19 @@ Execute `rails generate controller welcome index` - ele vai gerar seu primeiro c
 
 Pare o servidor e execute `rake routes` para ver todas as rotas suportadas pela sua aplicação.
 
-__INSTRUTOR(A)__: Explique as URLs e a hierarquia da URL. Explique como o Rails mapeia as URLs e `o que acontece por debaixo dos panos`.
+**Instrutor(a):** Explique as URLs e a hierarquia da URL. Explique como o Rails mapeia as URLs e `o que acontece por debaixo dos panos`.
 
 ### Mova a visão para o topo do seu site
 
 Edite o arquivo `config/routes.rb` e descomente (remove o `#` da frente) a linha `root 'welcome#index'` (provavelmente será a sétima linha). Isso vai fazer com que a raiz da sua aplicação seja renderizada pela ação `Welcome#index`. Vá para [http://localhost:3000](http://localhost:3000) e veja que realmente a página principal da sua aplicação agora serve aquele visão (diferente da página `Bem-vindo a bordo`).
 
-__INSTRUTOR(A)__: Explique como a página principal da aplicação é a raiz da hierarquia das URLs e que é a página que as pessoas visitam quando apenas colocam o nome do hospedeiro na barra de endereço do navegador.
+**Instrutor(a):** Explique como a página principal da aplicação é a raiz da hierarquia das URLs e que é a página que as pessoas visitam quando apenas colocam o nome do hospedeiro na barra de endereço do navegador.
 
 ### Mova de um HTML existente para a visão certa
 
 Edite o arquivo `app/views/welcome/index.html.erb` e copie seu conteúdo da tag `<body>` do seu arquivo original `index.html` (a sua lista de entradas do diário e links dos sites), trocando as duas linhas (com `<h1>` e `<p>`) na visão. Atualize o navegador e veja que a página agora contém o conteúdo correto.
 
-__INSTRUTOR(A)__: Explique que a visão apenas contém o que está em `<body>` e `</body>`, e que o resto é comum para toda a aplicação definida em outro lugar.
+**Instrutor(a):** Explique que a visão apenas contém o que está em `<body>` e `</body>`, e que o resto é comum para toda a aplicação definida em outro lugar.
 
 ## Iteração
 
@@ -180,7 +180,7 @@ Troque o conteúdo da tag `<ul>` com o seguinte:
 
 Atualize o navegador para ver se a página continua com os mesmos links.
 
-__INSTRUTOR(A)__: Explique o que aconteceu - o que é um array, o que `<%` e  `<%=`
+**Instrutor(a):** Explique o que aconteceu - o que é um array, o que `<%` e  `<%=`
 tags do ERb significam (e como eles diferem), como a iteração funciona.
 
 Manter o código ou dado (como mostrado acima com o vetor `@websites`) nas visualizações é simples, mas é uma prática ruim e pode trazer problemas com o decorrer do tempo. Para iniciantes vamos mover o vetor `@websites` da visão para o controlador. Remove da visão e coloque em `app/controllers/welcome_controller.rb` no método `index` para parecer assim:
@@ -199,19 +199,19 @@ end
 
 Note que depois de atualizar o navegador nada deverá mudar - isso é por causa das variáveis que começam com @ (chamadas de variáveis de instancia de variáveis) e podem ser acessadas tanto pela visualização quanto pelo controlador.
 
-__INSTRUTOR(A)__: Explique a conexão entre a ação `WelcomeController#index` e a visualização; dê ênfase na diferença entre o @ que começa em `@websites` e puro `url` e  `nome`.
+**Instrutor(a):** Explique a conexão entre a ação `WelcomeController#index` e a visualização; dê ênfase na diferença entre o @ que começa em `@websites` e puro `url` e  `nome`.
 
 ### Crie um modelo
 
 Com os links feitos e escritos na mão, vamos fazer algo com os registros do diário. Dessa vez nós não abusaremos da estrutura do vetor do Ruby, mas com um próprio modelo que represente o dado inserido. Vamos começar gerando o modelo - execute `rails generate model Entry title:string date:date contents:text` para criar um modelo `Entry` que representará um registro com título, data de publicação e algum conteúdo.
 
-__INSTRUTOR(A)__: Explique o que são modelos e o que é a notação `field:type`; explique a diferença entre os tipos `string` e `text` se necessário.
+**Instrutor(a):** Explique o que são modelos e o que é a notação `field:type`; explique a diferença entre os tipos `string` e `text` se necessário.
 
 ### Migre o banco de dados
 
 Execute `rake db:migrate` para migrar o banco de dados para uma tabela com a mesma estrutura dos registros do diário.
 
-__INSTRUTOR(A)__: Explique o que banco de dados são (em termos abstratos, são camadas para armazenar os dados da nossa aplicação e prover as estruturas do modelo) e o porquê são necessárias. Explique que o que estiver na memória não sera persistida por padrão e é preciso explicitamente persistir para que esteja disponível na próxima requisição.
+**Instrutor(a):** Explique o que banco de dados são (em termos abstratos, são camadas para armazenar os dados da nossa aplicação e prover as estruturas do modelo) e o porquê são necessárias. Explique que o que estiver na memória não sera persistida por padrão e é preciso explicitamente persistir para que esteja disponível na próxima requisição.
 
 ### Brinque com o modelo no console do Rails
 
@@ -227,7 +227,7 @@ Agora que temos nosso modelo, podemos começar a criar instancias desse modelo -
 
 Note como o console - assim como o `rails server` - mostra para o você o log do que acontece por trás. Você pode sempre pegar um vetor de todos os registros através de `Entry.all`.
 
-__INSTRUTOR(A)__: Explique o que está acontecendo. Devagar.
+**Instrutor(a):** Explique o que está acontecendo. Devagar.
 
 ## Visualizando o conteúdo persistido
 
@@ -249,7 +249,7 @@ Edite o arquivo `app/views/welcome/index.html.erb` e substitua as linhas dos reg
 <% end %>
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Discuta sobre o que acontece, qual é a ordem dos registros e como
+**Instrutor(a):** Discuta sobre o que acontece, qual é a ordem dos registros e como
 podem ser re-ordenados (por exemplo, data inversa) e onde deve acontecer essa lógica
 
 ### Crie um controlador para os registros do diário
@@ -257,7 +257,7 @@ Agora que temos um modelo, precisamos criar um controlador para cuidar das açõ
 
 Edit `config/routes.rb` e adicione a linha `resources "entries"` em algum lugar dentro do block de `Diary::Application.routes.draw`. Execute `rake routes` novamente: note que agora sua aplicação terá várias novas rotas.
 
-__INSTRUTOR(A)__: Explique como as rotas do Rails funcionam e como ele fazem para as URLs criadas e mapeadas para as ações do controlador por padrão.
+**Instrutor(a):** Explique como as rotas do Rails funcionam e como ele fazem para as URLs criadas e mapeadas para as ações do controlador por padrão.
 
 ### Uma visão de todas os registros
 
@@ -270,17 +270,17 @@ end
 
 Agora atualize o seu navegador - nós não temos mais um problema `unknown action`, temos agora um problema `template is missing`. Salve o arquivo sem nenhum conteúdo como `app/views/entries/index.html.erb` (note que é igual ao arquivo `index.html.erb` da pasta `welcome` de antes, mas desta vez será na pasta `entries`) e atualize seu navegador novamente - ele deverá agora mostrar uma página vazia. Isso é bom, pois nossa visualização está vazia no momento.
 
-__INSTRUTOR(A)__: Explique como as ações são renderizadas e relacionadas com as visualizações por padrão.
+**Instrutor(a):** Explique como as ações são renderizadas e relacionadas com as visualizações por padrão.
 
 Agora vá para o arquivo `app/controllers/welcome_controller.rb` e encontre o método `WelcomeController#index` (aquele que começa com `def index`). Encontre a linha que atribue a variável `@entries` (deve começar com `@entries =`) e copie-o para `EntriesController#index` (e então para o método `index` de `EntriesController`, que pode ser encontrado em `app/controller/entries_controller.rb`). Similarmente, vá para a visualização `app/views/welcome/index.html.erb` e copie o block `@entries.each` (todos dentro das linha indentadas inclusive o `end`) para `app/views/entries/index.html.erb`.  Atualize o navegador: ele deverá agora mostrar todos os registros do seu diário.
 
-__INSTRUTOR(A)__: Explique que mesmo isso pareça ter pouco progresso, existe uma mudança significativa: nós não mais estamos operando dentro do contexto da página principal, mas sim de uma lista de registro do diário apenas (sem os links para os outros sites, por exemplo).
+**Instrutor(a):** Explique que mesmo isso pareça ter pouco progresso, existe uma mudança significativa: nós não mais estamos operando dentro do contexto da página principal, mas sim de uma lista de registro do diário apenas (sem os links para os outros sites, por exemplo).
 
 ### Uma visualização de um único registro
 
 Note como, quando você execute `rake routes`, a saída diz que o padrão de `/entries/:id(.:format)` mapeia para a ação do controlador de `entries#show`. Vá para [http://localhost:3000/entries/1](http://localhost:3000/entries/1) - a URL para seu primeiro registro do diário; note como nós, novamente, estamos faltando com a ação em `EntriesController`. Adicione a ação, então atualize o navegador e adicione depois também a visualização que está também faltando.
 
-__INSTRUTOR(A)__: Guie na adição da ação que falta e da visualização se necessário; tenha certeza que o processo (desde decifrar descobrir a rota certa em `rake routes`) está bem entendido.
+**Instrutor(a):** Guie na adição da ação que falta e da visualização se necessário; tenha certeza que o processo (desde decifrar descobrir a rota certa em `rake routes`) está bem entendido.
 
 Agora, vamos descobrir como interpretar o `1` do fim da URL para mostrar o
 registro certo. Crie a ação `EntriesController#show` assim:
@@ -301,7 +301,7 @@ Esta linha significa 'pegue o parametro `id` e o use para o método `Entry.find`
 
 Visite [http://localhost:3000/entries/1](http://localhost:3000/entries/1) e compare com [http://localhost:3000/entries/2](http://localhost:3000/entries/2) para ver que usando `params['id']` significa que diferentes registro do diário são mostrados.
 
-__INSTRUTOR(A)__: Explique a parte do `:id` de `rake routes` é feito para ser uma chave para o hash `params`; discuta o que mais pode ter no hash `params`.
+**Instrutor(a):** Explique a parte do `:id` de `rake routes` é feito para ser uma chave para o hash `params`; discuta o que mais pode ter no hash `params`.
 
 ### Ligando registros
 
@@ -313,7 +313,7 @@ Execute `rake routes` novamente; note como a linha da ação `entries#show` come
 
 Note como utilizamos o método `link_to` que tem dois parametros, o texto para ser mostrado (`entry.title`) e o caminho do link. Verifique a origem da página para ver o caminho dos títulos seguintes. Note como o caminha é criado pela chamado do método `entry_path` com `entry` como argumento.
 
-__INSTRUTOR(A)__: Lembre como os links de HTML se parecem. Explique a relação entre `entry_path` e o prefixo `entry` do `rake routes`. Explique como o método `entry_path` precisa do argumento `entry`. Explique o que o método `entry_url` faz (e como ele difere do método `entry_path`) se você quiser.
+**Instrutor(a):** Lembre como os links de HTML se parecem. Explique a relação entre `entry_path` e o prefixo `entry` do `rake routes`. Explique como o método `entry_path` precisa do argumento `entry`. Explique o que o método `entry_url` faz (e como ele difere do método `entry_path`) se você quiser.
 
 Agora vamos voltar para a página indice com todos os registros: edit `app/views/entries/show.html.erb` e adicione o link para os registros do indice, assim:
 
@@ -337,7 +337,7 @@ Vá para o indice de todos os registros e adicione o link para criar um novo reg
 
 Clique no link - e adicione a ação que falta e a visualização.
 
-__INSTRUTOR(A)__: Garanta que este processo é bem entendido até aqui.
+**Instrutor(a):** Garanta que este processo é bem entendido até aqui.
 
 Edite a visualização `app/views/entries/new.html.erb` e cole o abaixo:
 
@@ -354,7 +354,7 @@ Edite a visualização `app/views/entries/new.html.erb` e cole o abaixo:
 
 **Nota:** podemos pular os labels por agora
 
-__INSTRUTOR(A)__: Mostre como o HTML é produzido pelo helper `form_for` e tente explicar como ele funciona.
+**Instrutor(a):** Mostre como o HTML é produzido pelo helper `form_for` e tente explicar como ele funciona.
 
 ### Manipulando o formulário de ‘novo registro’
 
@@ -368,7 +368,7 @@ end
 
 Atualize o navegador e inspecione o que exatamente a ação recebe de params.
 
-__INSTRUTOR(A)__: Explique como preencher um campo de texto e uma area de texto e submeter o formulário acaba com todos os params sendo enviados (`post`) para a ação do controlador. Explique o que .inspect faz.
+**Instrutor(a):** Explique como preencher um campo de texto e uma area de texto e submeter o formulário acaba com todos os params sendo enviados (`post`) para a ação do controlador. Explique o que .inspect faz.
 
 ### Criando e persistindo um novo registro
 
@@ -397,7 +397,7 @@ entry_params = params["entry"].permit("title", "contents")
 
 Agora tente submeter o formulário novamente - deste vez deverá funcionar e você deverá ser redirecionado para um novo registro recém-criado.
 
-__INSTRUTOR(A)__: Tenha certeza que a parte dos parametros do novo registro está bem claro e que os campos aceitos devem ser permitidos explicitamente.
+**Instrutor(a):** Tenha certeza que a parte dos parametros do novo registro está bem claro e que os campos aceitos devem ser permitidos explicitamente.
 
 Editando pela IU
 
@@ -405,7 +405,7 @@ Editando pela IU
 
 Agora que podemos visualizar os registros criados, vamos também adicionar uma opção para editá-los. Execute `rake routes` e tente adivinhar qual rota é responsável pela edição do registro.
 
-__INSTRUTOR(A)__: Garanta que tudo está claro até aqui.
+**Instrutor(a):** Garanta que tudo está claro até aqui.
 
 Edite a visualização `app/views/entries/show.html.erb` e adicione a linha abaixo em algum lugar:
 
@@ -415,7 +415,7 @@ Edite a visualização `app/views/entries/show.html.erb` e adicione a linha abai
 
 Atualize a visualização do registro e clique no link. Adicione a ação que falta e a visualização também.
 
-__INSTRUTOR(A)__: Novamente, tenha certeza que tudo está claro.
+**Instrutor(a):** Novamente, tenha certeza que tudo está claro.
 
 Vamos primeiro garantir que nossa ação `edit` expõe o registro certo para a visualização. Garanta que a ação `edit` pareça igual a ação `show` - isto é, pegue o registro baseado no id que vem da URL:
 
@@ -439,7 +439,7 @@ Agora copie o conteúdo da visualização `app/views/entries/new.html.erb` para 
 <p><%= link_to("Back to all entries", entries_path) %></p>
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Garanta que isto esteja claro.
+**Instrutor(a):** Garanta que isto esteja claro.
 
 Agora tente submeter o formulário - que ação está faltando? Cria no controlador:
 
@@ -454,7 +454,7 @@ end
 
 Verifique se tudo isso funciona e se você pode editar os registros.
 
-__INSTRUTOR(A)__: Garanta que a ação `update` e seu conteúdo estejam claros e foram entedidos - desde permitir os parametros através dos registros até redirecionar para o caminho certo.
+**Instrutor(a):** Garanta que a ação `update` e seu conteúdo estejam claros e foram entedidos - desde permitir os parametros através dos registros até redirecionar para o caminho certo.
 
 ## Ideias para o futuro
 
@@ -470,3 +470,5 @@ Brinque com sua aplicação! Aqui estão algumas ideias que você queira adicion
 - suporte para diferente autores,
 - suporte para diferente categorias de registros,
 - upload e visualização de imagens.
+
+{% include other-guides.md page="diary-app" %}

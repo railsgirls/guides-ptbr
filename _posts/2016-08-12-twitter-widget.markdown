@@ -6,14 +6,14 @@ permalink: twitter-widget
 
 # Twitter widget
 
-*Criado por Asta Bevainyte, [@astux7](https://twitter.com/astux7)*  
-*Traduzido por Vilmar Neto, [@Dkmister](https://github.com/Dkmister)*
+*Criado por Asta Bevainyte, [@astux7](https://twitter.com/astux7)*.
+*Traduzido por Vilmar Neto, [@Dkmister](https://github.com/Dkmister)*.
 
 Esta prática se destina a ensinar como usar o widget do Twitter e como para [http://localhost:3000/pages/info](http://localhost:3000/pages/info)
 
 Há duas maneiras de fazer isto, se você quiser fazer rápido para já ir adicionando um código preparado, vá para o 2º parágrafo.
 
-**Instrutor(a)** Explique o que é widget.
+**Instrutor(a):** Explique o que é widget.
 
 
 1. Configuração do widget do Twitter 
@@ -43,4 +43,6 @@ Há duas maneiras de fazer isto, se você quiser fazer rápido para já ir adici
  + Salve e execute `rails server`
 
  + Abra seu browser e vá para [http://localhost:3000/pages/info](http://localhost:3000/pages/info) e cheque seu perfil no Twitter
+
+{% include other-guides.md page="twitter-widget" %}
 

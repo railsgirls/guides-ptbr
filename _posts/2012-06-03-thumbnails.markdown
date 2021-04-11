@@ -6,10 +6,10 @@ permalink: thumbnails
 
 # Criando thumbnails com Carrierwave
 
-*Criado por Miha Filej, [@mfilej](https://twitter.com/mfilej)*  
-*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
+*Criado por Miha Filej, [@mfilej](https://twitter.com/mfilej)*.
+*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*.
 
-__INSTRUTOR(A)__: Explicar qual o efeito de se definir a largura de uma imagem na marcação HTML como explicado no final do passo 4, constante do tutorial *Tutorial para criação da app Rails Girls*.
+**Instrutor(a):** Explicar qual o efeito de se definir a largura de uma imagem na marcação HTML como explicado no final do passo 4, constante do tutorial *Tutorial para criação da app Rails Girls*.
 
 ## *1.* Instalando ImageMagick
 
@@ -17,10 +17,10 @@ __INSTRUTOR(A)__: Explicar qual o efeito de se definir a largura de uma imagem n
 * Windows: faça o download e rode o [ImageMagick installer][im-win] (use o primeiro link do  *download* ).
 * Linux: em Ubuntu e Debian, rode `sudo apt-get install imagemagick`. Use o gerenciador de package apropriado em lugar de `apt-get` para as demais distribuições Linux.
 
-  [im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
-  [in-homebrew]: http://mxcl.github.io/homebrew/
+[im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
+[in-homebrew]: http://mxcl.github.io/homebrew/
 
-__INSTRUTOR(A)__: Explique o que é ImageMagick e qual a diferença para outras bibliotecas/gems que já usamos anteriormente?
+**Instrutor(a):** Explique o que é ImageMagick e qual a diferença para outras bibliotecas/gems que já usamos anteriormente?
 
 Abra `Gemfile` no seu projeto e acrescente o seguinte:
 
@@ -50,7 +50,7 @@ Abra `app/uploaders/picture_uploader.rb` e encontre a linha conforme mostrada a 
 
 Remova o sinal `#`.
 
-__INSTRUTOR(A)__: Explicar o uso e finalidades da inserção de comentários nos códigos.
+**Instrutor(a):** Explicar o uso e finalidades da inserção de comentários nos códigos.
 
 Logo após a linha que você acabou de descomentar acrescente o seguinte:
 
@@ -78,3 +78,5 @@ para
 {% endhighlight %}
 
 Dê uma olhada na lista das ideas, no navegador, para verificar se o thumbnail está ali.
+
+{% include other-guides.md page="thumbnails" %}

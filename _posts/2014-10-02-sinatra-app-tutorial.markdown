@@ -6,14 +6,15 @@ permalink: sinatra-app
 
 # Crie sua primeira app de votação com Sinatra
 
-*Criado por Piotr Szotkowski, [@chastell](https://twitter.com/chastell)*
-*Traduzido por Nathalia Pinheiro Mesquita, [@nathi_pinheiro](https://twitter.com/nathi_pinheiro)*
+*Criado por Piotr Szotkowski, [@chastell](https://twitter.com/chastell)*.
+*Traduzido por Nathalia Pinheiro Mesquita, [@nathi_pinheiro](https://twitter.com/nathi_pinheiro)*.
 
 Nós vamos criar um pequeno app de votação do zero usando um framework de desenvolvimento web para Ruby chamado Sinatra, e que é muito parecido com Ruby on Rails. Mas é só outra ferramenta para fazermos nosso trabalho e uma bem divertida também!
 
 Imagine seu grupo de amigos tentando decidir o que pedir para sua maratona de filmes semanal. Com tantas opções de fast food para pedir, isso pode se tornar uma discussão e tanto. É nessa hora que entra o nosso app!
 
-__INSTRUTOR(A)__: Breve explicação sobre o que é o [Sinatra](http://www.sinatrarb.com).
+**Instrutor(a):** Breve explicação sobre o que é o [Sinatra](http://www.sinatrarb.com).
+
 
 ## Instalação Sinatra
 
@@ -44,8 +45,7 @@ Agora você pode visitar <a href="localhost:4567" target="_blank">localhost:4567
 ver a página "Olá, eleitor!", o que significa que a geração do seu novo
 app está funcionando corretamente. Aperte <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para parar o servidor. Se <kbd>Ctrl</kbd>+<kbd>C</kbd> não funcionar para você significa que você provavelmente está usando Windows e <kbd>Ctrl</kbd>+<kbd>Z</kbd>/ <kbd>Ctrl</kbd>+<kbd>Pause</kbd> / <kbd>Ctrl</kbd>+<kbd>Break</kbd> deve resolver esse problema.
 
-__INSTRUTOR(A)__: Explique o método POST e GET e como eles se comunicam com o browser.
-
+**Instrutor(a):** Explique o método POST e GET e como eles se comunicam com o browser.
 
 
 ### Adicione o index view
@@ -104,9 +104,8 @@ end
 Execute `ruby sufragista.rb`, cheque seus
 resultados e pare o servidor com <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__INSTRUTOR(A)__: Fale um pouco sobre HTML e erb. Explique
+**Instrutor(a):** Fale um pouco sobre HTML e erb. Explique
 sobre templates e sobre o que são constantes globais.
-
 
 
 ### Templates
@@ -129,9 +128,8 @@ get '/' do
 end
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Explique o que são instancias de variáveis
+**Instrutor(a):** Explique o que são instancias de variáveis
 e como Sinatra faz elas visíveis nas views.
-
 
 
 ### Adicione a habilidade de fazer um POST dos resultados
@@ -165,9 +163,8 @@ e coloque lá um pouco de HTML com código Ruby junto:
 </html>
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Explique como o POST funciona. Como buscar o que
+**Instrutor(a):** Explique como o POST funciona. Como buscar o que
 foi mandado no formulário? de onde veio o `params`?
-
 
 
 ### Construa um layout comum
@@ -193,9 +190,8 @@ Coloque o seguinte lá:
 Remova a parte acima dos outros dois templates
 (`index.erb` e `cast.erb` que estão no diretório `views`).
 
-__INSTRUTOR(A)__: Fale sobre a estrutura de documentos HTML e sobre como a construção de código comum
+**Instrutor(a):** Fale sobre a estrutura de documentos HTML e sobre como a construção de código comum
 funciona. Explique o que `yield` faz.
-
 
 
 ### Adicione o resultado route e o resultado view
@@ -227,8 +223,7 @@ Crie um novo arquivo no diretório `views`, chamado `results.erb`.
 Execute `ruby sufragistat.rb`, cheque
 seus resultados e pause o servidor com <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__INSTRUTOR(A)__: Explique tabelas HTML e como os valores faltando vem como zero.
-
+**Instrutor(a):** Explique tabelas HTML e como os valores faltando vem como zero.
 
 
 ### Guarde os resultados usando YAML::Store
@@ -265,20 +260,16 @@ get '/results' do
 end
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Explique o que é YAML.
+**Instrutor(a):** Explique o que é YAML.
 
 
 ### Veja como o arquivo YAML muda quando votos são salvos
 
 Vamos abrir `votos.yml`. E votar. E checar novamente.
 
-__INSTRUTOR(A)__: Vai ter situações onde um ou mais estudantes vão
-esquecer de pausar o servidor antes de rodá-lo novamente. É uma boa
-oportunidade para procurar na Internet por uma solução. Eles não tem
-que saber de tudo sobre "matar" processos para achar a solução.
+**Instrutor(a):** Vai ter situações onde um ou mais estudantes vão esquecer de pausar o servidor antes de rodá-lo novamente. É uma boa oportunidade para procurar na Internet por uma solução. Eles não tem que saber de tudo sobre "matar" processos para achar a solução.
 
-__INSTRUTOR(A)__: No final explique brevemente a diferença entre Sinatra e Rails.
-
+**Instrutor(a):** No final explique brevemente a diferença entre Sinatra e Rails.
 
 
 ## Brinque com o app
@@ -289,3 +280,5 @@ Tente mudar algumas coisas no app como:
 * Redirecionar para os resultados.
 * Adicione outra votação; como o arquivo YAML precisaria mudar?
 * Tente estilizar o arquivo de diferente maneiras.
+
+{% include other-guides.md page="sinatra-app" %}

@@ -6,8 +6,8 @@ permalink: continuous
 
 # Deploy contínuo com _Codeship_
 
-*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)*
-*Traduzido por Bárbara Barbosa [@bahbbc](https://twitter.com/bahbbc)*
+*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)*.
+*Traduzido por Bárbara Barbosa [@bahbbc](https://twitter.com/bahbbc)*.
 
 ### O que é esse tal de deploy contínuo?
 
@@ -17,7 +17,7 @@ Com um ambiente de deploy contínuo funcionando é possível implantar Deploys v
 
 Existem algumas empresas muito legais velejando a onda do deploy contínuo, nesse guia nos iremos configurar um ambiente de deploy contínuo para um aplicativo Ruby on Rails do Github para o Heroku, usando o [_Codeship_](http://www.codeship.io).
 
-__INSTRUTOR(A)__: Falar sobre os beneficios do deploy contínuo.
+**Instrutor(a):** Falar sobre os beneficios do deploy contínuo.
 
 ### Conta no _Codeship_
 
@@ -59,3 +59,5 @@ git push
 {% endhighlight %}
 
 E imediatamente outro _build_ começará a rodar no _Codeship_. Volte ao seu projeto e você verá os comandos que nós já conhecemos do seu primeiro _build_. Bônus: A sua aplicação vai subir no Heroku e deve estar online depois de um minuto ou dois.
+
+{% include other-guides.md page="continuous" %}

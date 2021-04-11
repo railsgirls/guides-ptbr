@@ -6,10 +6,9 @@ permalink: touristic-autism_design
 
 # Design
 
-_Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)_
-_para o projeto [Rails Girls Galway](https://github.com/RailsGirlsGalway)_
-
-_Traduzido por Thaís Falbo, [@thaisfalbo](https://github.com/thaisfalbo)_
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*.
+*para o projeto [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+*Traduzido por Thaís Falbo, [@thaisfalbo](https://github.com/thaisfalbo)*.
 
 Os tutoriais básicos que foram mesclados e adaptados são: [Tutorial Ruby on Rails](http://www.railstutorial.org/book), [App RailsGirls](http://guides.railsgirls.com/app/) e o tutorial para [criação de thumbnails](http://guides.railsgirls.com/thumbnails), [autenticando usuários](http://guides.railsgirls.com/devise/), [adicionando um design](http://guides.railsgirls.com/design), [implementando com o OpenShift](http://guides.railsgirls.com/openshift/) e [adicionando comentários](http://guides.railsgirls.com/commenting).
 
@@ -141,9 +140,9 @@ Caso seu Terminal mostre uma mensagem de erro que _mais ou menos_ insinua que h�
 <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
 {% endhighlight %}
 
-  tente mudar a largura (width) e veja o que vai acontecer
+  Tente mudar a largura (width) e veja o que vai acontecer
 
-* adicione as seguintes linhas no final do arquivo `app/assets/stylesheets/places.css.scss`:
+- Adicione as seguintes linhas no final do arquivo `app/assets/stylesheets/places.css.scss`:
 
 {% highlight css %}
 .container a:hover {
@@ -170,9 +169,9 @@ footer {
 
 4.Adicione estilo no botão
 
-  - Abra [http://localhost:3000/places/new](http://localhost:3000/places/new) e procure o botão `Criar Lugar` .
+- Abra [http://localhost:3000/places/new](http://localhost:3000/places/new) e procure o botão `Criar Lugar` .
 
-  adicione estas linhas no `app/assets/stylesheets/places.css.scss`
+Adicione estas linhas no `app/assets/stylesheets/places.css.scss`
 
 {% highlight css %}
 .container input[type="submit"] {
@@ -184,7 +183,7 @@ footer {
 }
 {% endhighlight %}
 
-  **Instrutor(a):** explicar como usar `border` em css, tente modificar o estilo do botão como arredondar cantos, adicionar sombra ou cor, etc.
+**Instrutor(a):** explicar como usar `border` em css, tente modificar o estilo do botão como arredondar cantos, adicionar sombra ou cor, etc.
 
 Abra `app/views/layouts/application.html.erb` no seu editor de texto e substitua a linha
 
@@ -256,7 +255,6 @@ Abra `app/views/places/index.html.erb` no seu editor de texto e substitua a tabl
             <%= link_to 'Destruir', place, method: :delete, data: { confirm: 'Você tem certeza?' } %>
           <% end %>
         <% end %>
-
       </div>
     <% end %>
   </div>
@@ -318,3 +316,5 @@ Abra `app/views/places/show.html.erb` no seu editor de texto e substitua todas a
 {% endhighlight %}
 
 Continue experimentando com mudanças de Design! ;)
+
+{% include other-guides.md page="touristic-autism_design" %}

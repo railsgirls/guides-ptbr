@@ -6,9 +6,8 @@ permalink: design
 
 # Adicione design Usando HTML &amp; CSS
 
-*Criado por Alex Liao, [@alexliao](http://bannka.com/alex)*
-
-*Traduzido por José Viera [@NetoDevel](https://github.com/NetoDevel)*
+*Criado por Alex Liao, [@alexliao](http://bannka.com/alex)*.
+*Traduzido por José Viera [@NetoDevel](https://github.com/NetoDevel)*.
 
 Agora o aplicativo está funcionando bem, mas ainda se parece com scaffold. Vamos adicionar algum design para torná-lo parecido com um site profissional. Quando terminar este tutorial, o aplicativo será parecido com [esse](http://railsgirlsapp.herokuapp.com/ideas).
 
@@ -112,3 +111,5 @@ Abra `app/views/ideas/show.html.erb` em seu editor de texto e substitua todas as
 * Use o seu novo conhecimento para projetar um novo formulário para ideia
 * Adicione mais design para as páginas como você deseja
 * Siga os outros guias para aprender mais sobre Rails
+
+{% include other-guides.md page="design" %}

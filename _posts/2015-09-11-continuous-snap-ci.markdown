@@ -6,9 +6,8 @@ permalink: continuous-snap-ci
 
 # Deploy Contínuo com Snap CI
 
-*Criado por Akshay Karle, [@akshay_karle](https://twitter.com/akshay_karle)*
-
-Traduzido por Giovana Morais, [@ohshitgi](https://twitterl.com/ohshitgi)
+*Criado por Akshay Karle, [@akshay_karle](https://twitter.com/akshay_karle)*.
+*Traduzido por Giovana Morais, [@ohshitgi](https://twitterl.com/ohshitgi)*.
 
 ### O que é Deploy Contínuo?
 
@@ -26,7 +25,7 @@ Existem várias empresas navegando na onda da entrega contínua, mas nesse guia
 vamos usar a implantação contínua da nossa aplicação Ruby on Rails do GitHub
 para o Heroku usando o [Snap CI](https://snap-ci.com).
 
-__INSTRUTOR(A)__: Fale sobre os benefícios da implantação contínua.
+**Instrutor(a):** Fale sobre os benefícios da implantação contínua.
 
 ### Se inscrevendo no Snap CI
 
@@ -112,3 +111,4 @@ online em alguns minutos.
 A partir daqui, quaisquer mudanças que você fizer e subir para o seu GitHub vão
 ser testadas e implantadas automaticamente pelo Snap CI.
 
+{% include other-guides.md page="continuous-snap-ci" %}

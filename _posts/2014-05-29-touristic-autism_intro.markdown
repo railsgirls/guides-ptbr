@@ -6,10 +6,9 @@ permalink: touristic-autism_intro
 
 # Rails Girls Tutorial de uma aplicação turística para Autistas
 
-*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
-*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-
-*Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*
+*Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*.
+*para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
+*Traduzido por Luiz Santos, [@santosluiz](https://github.com/santosluiz)*.
 
 Este tutorial mescla, adapta e extende alguns dos guias básicos do RailsGirls **para o cenário de**: descrever, exibir e comentar locais turísticos e avaliá-los com o autismo amigável. Esta aplicação foi solicitada por [Galway Autism Partnership](http://www.galwayautismpartnership.com/) para ajudar autistas adultos em suas viagens.
 
@@ -53,13 +52,6 @@ Crie uma [conta grátis no GitHub](https://github.com/signup/free), caso você a
 
 ### [8.Teste e Integração Contínua](touristic-autism_static-pages-tdd)
 
-
-## Tutoriais Adicionais
-
-* Guia 0: [Macetes de Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guia 1: [Coloque o seu app online com o Heroku, por Terence Lee](/heroku) / [Coloque o seu app online com o OpenShift, por Katie Miller](/openshift) / [Coloque o seu app online com o anynines](/anynines) / [Coloque o seu app online com o Trucker.io](/trucker)
-* Guia 2: [Adicionando imagens de perfil com o Gravatar](/gravatar)
-* Guia 3: [Leia explicações adiciones do app, por Lucy Bain](https://github.com/lbain/railsgirls)
 
 # Anexo
 ## Desfazendo Coisas
@@ -122,3 +114,5 @@ Você pode acessar o banco de dados diretamente (caso seja sqlite3, digite ".qui
 {% highlight sh %}
   $ rails db
 {% endhighlight %}
+
+{% include other-guides.md page="touristic-autism_intro" %}

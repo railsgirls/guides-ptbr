@@ -6,7 +6,8 @@ permalink: trucker
 
 # Publique sua aplicação com Trucker.io
 
-*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees) for [Rails Girls Leiden](http://railsgirls.com/leiden)* 
+*Criado por Floor Drees, [@floordrees](https://twitter.com/floordrees)*.
+*para o projeto [Rails Girls Leiden](http://railsgirls.com/leiden)*.
 
 ### Instale o Trucker
 
@@ -22,12 +23,12 @@ $ gem install trucker-cli
 Você pode criar e gerenciar aplicativos usando o painel de controle do Trucker. No entanto, você também precisará fazer login usando o cliente de linha de comando.
 
 {% highlight sh %}
-$ truck target https://api.ie.trucker.io  
-Setting target to https://api.ie.trucker.io... OK  
+$ truck target https://api.ie.trucker.io
+Setting target to https://api.ie.trucker.io... OK
 
-$ truck login  
+$ truck login
 email>  
-password>  
+password>
 {% endhighlight %}
 
 Neste ponto, o cliente Trucker vai exigir que você escolha um espaço para trabalhar. Os espaços são ambientes cuja finalidade é organizar as suas aplicações baseadas em seu estágio do ciclo de vida. A sua conta Trucker vem equipada com os seguintes espaços:
@@ -39,7 +40,7 @@ Neste ponto, o cliente Trucker vai exigir que você escolha um espaço para trab
 Space>
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Fale sobre os benefícios da implantação de Trucker.io (e ter datacenters na Europa, em vez de os EUA).
+**Instrutor(a):** Fale sobre os benefícios da implantação de Trucker.io (e ter datacenters na Europa, em vez de os EUA).
 
 ### Controle de Versão
 
@@ -51,7 +52,7 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Este seria um grande momento para falar sobre os sistemas de controle de versão e git.
+**Instrutor(a):** Este seria um grande momento para falar sobre os sistemas de controle de versão e git.
 
 ### Publicando sua aplicação para o Trucker
 
@@ -106,7 +107,7 @@ Creating service rds-mysql-aa0d6... OK
 Binding rds-mysql-aa0d6 to trucker-rails... OK
 {% endhighlight %}
 
-__INSTRUTOR(A)__: Fale sobre MySQL.
+**Instrutor(a):** Fale sobre MySQL.
 
 
 Nós não queremos adicionar outros serviços, você pode responder às seguintes perguntas com `n`:
@@ -138,4 +139,6 @@ Checking status of app 'railsgirls'...
 Push successful! App 'railsgirls' available at http://railsgirls.ie.trucker.io
 {% endhighlight %}
 
-Sua aplicação agora está disponível em http://railsgirls.ie.trucker.io!
+Sua aplicação agora está disponível em [http://railsgirls.ie.trucker.io](http://railsgirls.ie.trucker.io)!
+
+{% include other-guides.md page="trucker" %}

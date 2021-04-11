@@ -6,17 +6,15 @@ permalink: testing-rspec
 
 # Teste sua aplicação com RSpec
 
-*Criado por Clemens Helm, [@clemenshelm](https://twitter.com/clemenshelm) e Floor Drees, [@floordrees](https://twitter.com/floordrees)*
-
-*Traduzido por Marina Limeira, [@marinalimeira_](https://www.twitter.com/marinalimeira_)*
-
-*Atualizado por Ana Schwendler, [@anaschwendler](https://twitter.com/anaschwendler)*
+*Criado por Clemens Helm, [@clemenshelm](https://twitter.com/clemenshelm) e Floor Drees, [@floordrees](https://twitter.com/floordrees)*.
+*Traduzido por Marina Limeira, [@marinalimeira_](https://www.twitter.com/marinalimeira_)*.
+*Atualizado por Ana Schwendler, [@anaschwendler](https://twitter.com/anaschwendler)*.
 
 **Esse guia assume que você já criou a app RailsGirls como mostrado no** [**tutorial para criação da app Rails Girls**](/app).
 
 [RSpec](https://github.com/rspec/rspec-rails) é um framework para testes em Ruby, que descreve o comportamento da nossa aplicação em uma sintaxe que não se parece muito com Ruby. Ele irá mostrar o resultado dos testes no seu terminal, então você testará suas habilidades de leitura também.
 
-__INSTRUTOR(A)__: Fale sobre testes e Desenvolvimento Guiado por Comportamento (Behavior Driven Development).
+**Instrutor(a):** Fale sobre testes e Desenvolvimento Guiado por Comportamento (Behavior Driven Development).
 
 ## *1.* Adicione a gem RSpec
 
@@ -83,7 +81,7 @@ rspec spec/models/idea_spec.rb
 
 qual será o resultado que seu teste está pendente, pois ainda não está implementado.
 
-__INSTRUTOR(A)__: Fale sobre 'goglear' a saída do terminal
+**Instrutor(a):** Fale sobre 'goglear' a saída do terminal
 
 Vamos fazer algo sobre isso!
 
@@ -118,7 +116,7 @@ end
 
 que testa mais coisas.
 
-__INSTRUTOR(A)__: Fale um pouco sobre a refatoração.
+**Instrutor(a):** Fale um pouco sobre a refatoração.
 
 ## *4.* Marcando os testes como a fazer
 
@@ -137,9 +135,11 @@ Você consegue completar este teste? Você consegue pensar em outros testes?
 
 ## *5.* Desenvolvimento Guiado por Comportamento (BDD)
 
-__INSTRUTOR(A)__: Fale um pouco sobre Desenvolvimento Guiado por Comportamento (BDD).
+**Instrutor(a):** Fale um pouco sobre Desenvolvimento Guiado por Comportamento (BDD).
 
 Agora você pode criar mais testes sozinho.
 Sinta-se à vontade para falar com o seu instrutor(a) para fazer isso ou maneiras de criar mais testes.
 
 Feliz testes!
+
+{% include other-guides.md page="testing-rspec" %}
