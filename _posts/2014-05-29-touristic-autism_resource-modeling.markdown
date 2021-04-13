@@ -426,3 +426,5 @@ Teste a alteração abrindo o caminho raiz (que é, http://localhost:3000/) no s
 
 **Instrutor(a):** Fale sobre as rotas, e inclua detalhes sobre as rotas e sua relação com arquivos estáticos.
 **Usuários do Rails 3:** Você precisará deletar o index.html da pasta `/public/` para que funcione corretamente.
+
+{% include other-guides.md page="touristic-autism_resource-modeling" %}

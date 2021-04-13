@@ -289,3 +289,5 @@ Tente mudar algumas coisas no app como:
 * Redirecionar para os resultados.
 * Adicione outra votação; como o arquivo YAML precisaria mudar?
 * Tente estilizar o arquivo de diferente maneiras.
+
+{% include other-guides.md page="sinatra-app" %}

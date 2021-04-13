@@ -105,3 +105,5 @@ Voila! Você pode agora gerenciar uas ideias do seu novo painel de administrador
 ## E agora?
 
 - Adicione outro recurso ao admin como Blog e Comentarios
+
+{% include other-guides.md page="backend-with-active-admin" %}

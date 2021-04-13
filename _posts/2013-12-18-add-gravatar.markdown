@@ -72,3 +72,5 @@ E coloque o código abaixo no final do arquivo `app/assets/stylesheets/applicati
 {% endhighlight %}
 
 Agora abra sua aplicação no navegador e faça login com um endereço de e-mail associado com um Gravatar. Você será capaz de ver seu Gravatar.
+
+{% include other-guides.md page="gravatar" %}

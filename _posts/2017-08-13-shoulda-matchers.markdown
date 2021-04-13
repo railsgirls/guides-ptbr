@@ -121,3 +121,5 @@ Você pode continuar este tutorial fazendo um teste para validar a presença de 
 Você consegue imaginar outros testes para fazer?
 
 Feliz testes!
+
+{% include other-guides.md page="testing-shoulda-matchers" %}

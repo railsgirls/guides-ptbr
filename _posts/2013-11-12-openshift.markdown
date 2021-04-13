@@ -228,3 +228,5 @@ __INSTRUTOR(A)__: Fale sobre as branches do Git e os benefícios do código aber
 ### Conclusão
 
 Sua aplicação Rails agora está rodando em nuvem no [OpenShift](https://www.openshift.com/developers). Você pode enviar quaisquer outras mudanças que você queira e compartilhar a URL e mostrar sua aplicação para seus amigos.
+
+{% include other-guides.md page="openshift" %}

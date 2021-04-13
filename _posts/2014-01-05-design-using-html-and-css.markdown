@@ -106,3 +106,5 @@ Tente adicionar mais coisas em `footer`, depois ajuste sua posição.
 {% endhighlight %}
 
    **Instrutor(a)** explique como usar `border` em css, tente modificar o estilo do botão como em volta da esquina, adicione sombra ou cor, etc.
+
+{% include other-guides.md page="design-html-css" %}

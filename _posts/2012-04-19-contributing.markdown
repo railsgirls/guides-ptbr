@@ -40,3 +40,5 @@ Faça as mudanças no arquivo que você quer mudar! Você não precisa criar um 
 3. Finalmente abra um pull request e nele acrescente uma breve descrição do seu tutorial. Feito!
 
 Nossos mais efusivos agradecimentos por dedicar seu tempo em favor do enriquecimento dos conteúdos do site Rails Girls.
+
+{% include other-guides.md page="contributing" %}

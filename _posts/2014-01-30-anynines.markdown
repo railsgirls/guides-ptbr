@@ -86,3 +86,6 @@ Você pode checar todos os sub-comandos do cf disponíveis digitando `cf help`.
 No caso de seu terminal não ter todas as respostas, a equipe do anynines certamente terá. Apenas envie um email para eles em support@anynines.com.
 
 Bons deploys!
+
+{% include other-guides.md page="anynines" %}
+

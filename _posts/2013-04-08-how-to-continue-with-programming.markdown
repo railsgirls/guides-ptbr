@@ -130,3 +130,4 @@ Pergunte aos organizadores e tutores do seu evento pelo email deles e se eles go
 
 - [8 maneiras de permitir que os participantes do workshop continuem aprendendo](http://pragtob.wordpress.com/2013/06/14/8-ways-to-enable-workshop-attendess-to-keep-learning/)
 
+{% include other-guides.md page="how-to-continue-with-programming" %}

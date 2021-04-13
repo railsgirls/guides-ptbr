@@ -104,3 +104,5 @@ Para finalizar, adicione as linhas abaixo em `config/routes.rb`:
   get '/google' => 'google#index'
   root :to => 'google#index'
 {% endhighlight %}
+
+{% include other-guides.md page="touristic-autism_google-map" %}

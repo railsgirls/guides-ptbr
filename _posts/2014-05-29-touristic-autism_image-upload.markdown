@@ -155,3 +155,5 @@ para:
 {% endhighlight %}
 
 Dê uma olhada no seu navegador para ver se a miniatura está lá.
+
+{% include other-guides.md page="touristic-autism_image-upload" %}

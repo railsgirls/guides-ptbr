@@ -171,3 +171,5 @@ Não é do escopo deste tutorial detalhar a hospedagem 'na nuvem', mas se você 
 * [Amazon S3 – The Beginner’s Guide](http://www.hongkiat.com/blog/amazon-s3-the-beginners-guide/)
 
 Como sempre, se você precisar de mais informações ou assistência pergunte aos seus instrutoras(es).
+
+{% include other-guides.md page="heroku" %}

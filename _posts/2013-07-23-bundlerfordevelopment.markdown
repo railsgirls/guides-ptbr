@@ -62,3 +62,4 @@ $ rake spec
 
   Isto deve demorar uns 15 minutos.
 
+{% include other-guides.md page="bundlerfordevelopment" %}

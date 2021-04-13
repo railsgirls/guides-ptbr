@@ -89,3 +89,5 @@ O resultado é uma página no GitHub (por exemplo, [aqui está o meu](https://gi
 
 **Instrutor(a):** Explique como funciona o branch, edit, commit e merge no GitHub: altere seu projeto adicionando uma descrição no README.
 ([Slides por Myriam Leggieri @iammyr]())
+
+{% include other-guides.md page="touristic-autism_git" %}

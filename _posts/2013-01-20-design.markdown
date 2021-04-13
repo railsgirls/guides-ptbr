@@ -112,3 +112,5 @@ Abra `app/views/ideas/show.html.erb` em seu editor de texto e substitua todas as
 * Use o seu novo conhecimento para projetar um novo formulário para ideia
 * Adicione mais design para as páginas como você deseja
 * Siga os outros guias para aprender mais sobre Rails
+
+{% include other-guides.md page="design" %}

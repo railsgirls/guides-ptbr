@@ -185,3 +185,5 @@ Logging out... OK
 {% endhighlight %}
 
 Isso quer dizer que você já terminou e está pronta para a próxima!
+
+{% include other-guides.md page="continuous-travis" %}

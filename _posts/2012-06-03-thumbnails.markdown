@@ -78,3 +78,5 @@ para
 {% endhighlight %}
 
 Dê uma olhada na lista das ideas, no navegador, para verificar se o thumbnail está ali.
+
+{% include other-guides.md page="thumbnails" %}

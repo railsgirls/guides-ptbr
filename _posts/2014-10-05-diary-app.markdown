@@ -470,3 +470,5 @@ Brinque com sua aplicação! Aqui estão algumas ideias que você queira adicion
 - suporte para diferente autores,
 - suporte para diferente categorias de registros,
 - upload e visualização de imagens.
+
+{% include other-guides.md page="diary-app" %}

@@ -126,3 +126,5 @@ No joelho? Rastejar através [Guia de solução de problemas do Passenger][troub
 
 [passenger-documentation]: https://www.phusionpassenger.com/library/
 [troubleshooting-guide]: https://www.phusionpassenger.com/library/admin/nginx/troubleshooting/ruby/
+
+{% include other-guides.md page="passenger" %}

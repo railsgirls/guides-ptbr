@@ -139,3 +139,5 @@ Push successful! App 'railsgirls' available at http://railsgirls.ie.trucker.io
 {% endhighlight %}
 
 Sua aplicação agora está disponível em http://railsgirls.ie.trucker.io!
+
+{% include other-guides.md page="trucker" %}

@@ -502,3 +502,5 @@ Esta é uma pequena checklist para seu evento. Um evento Rails Girls pode ser or
 * Se adicione ao [Mapa Rails Girls](http://rails-girls-map.herokuapp.com/)
 * Compartilhe os números do seu evento preenchendo este pequeno [questionário](https://railsgirls.wufoo.eu/forms/rails-girls-events-all-the-numbers/)
 * Escreva um blogpost no blog global [submetendo sua história](http://blog.railsgirls.com/submit) - ou peça à alguma das participantes ou instrutores(as) para escrever uma!
+
+{% include other-guides.md page="guide" %}

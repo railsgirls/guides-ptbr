@@ -131,3 +131,5 @@ Abra seu navegador e execute as ações de login e logout.
 * Adicione relacionamentos entre usuários e ideas
 * Crie restrições de modo a permitir que usuários editem somente suas próprias ideas e apague seus próprios comentários
 * Permita expandir roles ou permissões para usuários (use uma das gem populares, tal como like CanCan)
+
+{% include other-guides.md page="devise" %}

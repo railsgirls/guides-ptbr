@@ -58,8 +58,4 @@ Eu, autor deste tutorial, acredito que Madeye é o melhor programa para comparti
 ## Considerações finais
 A comunidade Ruby é um bom exemplo de pessoas que ajudam outras pessoas. Basta olhar para as pessoas laureadas todos os anos com o título de [Ruby Heros](http://rubyheroes.com/) para constatar esta afirmação. Quão grandioso e generoso seria o mundo, se todos nós compartilhassemos um pouco do nosso conhecimento com pessoas em busca de conhecimentos. Isto seria como estar em um mundo que refletisse a palavra mais comum, que provavelmente você ira ouvir nas reuniões locais Ruby/Rails: "MINSWAN" -- Matz é bom, então nós somos bons! Vamos começar a ser boms com os outros
 
-
-
-
-
-
+{% include other-guides.md page="remote" %}
