@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" integrity="sha384-SDFvKZaD/OapoAVqhWJM8vThqq+NQWczamziIoxiMYVNrVeUUrf2zhbsFvuHOrAh" crossorigin="anonymous" type="text/javascript"></script>
     <script src="js/jquery.cookie.js"></script>
     <script src="js/guides.js"></script>
+    <script src="/js/mobile-menu.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/bootstrap-responsive.css" rel="stylesheet" />
     <link href="css/code.css" rel="stylesheet" />
@@ -18,28 +19,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <a class="span3" href="/" id="logo">
-          <img alt="Tutoriais Rails Girls" src="images/railsgirls-guides-portugues.png" />
-        </a>
-      </div>
-    </header>
+    {% include header.html %}
     <article class="container">
       <div class="span10">
         {{ content }}
       </div>
     </article>
-    <footer>
-      <p>
-        Os conteúdos deste site estão licenciados de acordo com a
-        <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 License</a>
-      </p>
-      <p>
-        Este site é uma tradução do site <a href="http://railsgirls.com">Rails Girls</a>
-        e está hospedado no <a href="https://github.com/railsgirlsmaceio/railsgirlsguides/">GitHub</a>
-      </p>
-    </footer>
+    {% include footer.html %}
     <!-- script type="text/javascript"> ATENÇÂO: Criar ID para Google Analitics deste site
       //<![CDATA[
         var _gaq = _gaq || [];
