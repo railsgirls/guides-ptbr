@@ -116,3 +116,5 @@ Agora vamos checar, no nosso sistema operacional normal, se a pasta compartilhad
 ## Editor
 
 O editor de código é, na verdade, um editor de texto muito esperto, no qual vamos escrever todo o código da nossa aplicação. Nós gostamos muito do Sublime Text, que você pode baixar de [http://www.sublimetext.com/3](http://www.sublimetext.com/3).
+
+{% include other-guides.md page="virtual-machine" %}

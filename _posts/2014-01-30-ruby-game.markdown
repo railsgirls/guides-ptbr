@@ -107,3 +107,5 @@ Está vendo o código `Game.new.show`? Ele cria uma nova instância do jogo. Ela
 Os assets utilizados em vim adventures podem ser encontrados [aqui](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
 
 Os sons utilizados você vai encontrar em [Matthew Klingensmith (www.matthewklingensmith.com)](http://opengameart.org/content/matts-creative-commons-music)
+
+{% include other-guides.md page="ruby-game" %}

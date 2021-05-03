@@ -143,3 +143,5 @@ Agora você pode criar mais testes sozinho.
 Sinta-se à vontade para falar com o seu instrutor(a) para fazer isso ou maneiras de criar mais testes.
 
 Feliz testes!
+
+{% include other-guides.md page="testing-rspec" %}

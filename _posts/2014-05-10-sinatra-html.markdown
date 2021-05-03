@@ -43,3 +43,5 @@ Escreva alguma coisa para tornar a variável global `$coffees` em HTML que pare�
 Nós queremos iterar o array `$coffees` e transformar cada hash em uma string HTML, dentro de `<div>`s, que deveriam ser todos separados por `<br/>`s. Nós também queremos ter certeza de estar retornando uma string.
 
 Para alguma ideias de solução, [cheque isto](http://tjmcewan.github.io/coffeecalc/snippets/coffees_html.rb.txt).
+
+{% include other-guides.md page="sinatra-html" %}

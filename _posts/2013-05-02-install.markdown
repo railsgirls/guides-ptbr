@@ -487,3 +487,5 @@ gem install sqlite3
 {% endhighlight %}
 
 Se isso der certo, remova o diretório `myapp` que o instalador do rails criou anteriorment e retorne às instruções de instalação para criar o app novamente (`rails new myapp`).
+
+{% include other-guides.md page="install" %}

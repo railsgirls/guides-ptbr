@@ -266,3 +266,5 @@ Entrada    | Saída
 `2896`     | `"MMDCCCXCVI"`
 
 [Roman numerals]: http://www.onlineconversion.com/roman_numerals_advanced.htm
+
+{% include other-guides.md page="test-driven-development" %}

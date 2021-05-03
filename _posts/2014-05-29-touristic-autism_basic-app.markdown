@@ -130,4 +130,7 @@ Pressione <kbd>Ctrl</kbd>+<kbd>C</kbd> no terminal para sair do servidor.
 
 **Instrutor(a):** Explique o que cada comando faz.
 [O que é um servidor e uma aplicação web - Slides por @]()
-O esqueleto gerado por `rails new reflete o padrão de arquitetura [Model-View-Controller(MVC) - Slides por @]().
+O esqueleto gerado por `rails new` reflete o padrão de arquitetura [Model-View-Controller(MVC) - Slides por @]().
+
+{% include other-guides.md page="touristic-autism_basic-app" %}
+

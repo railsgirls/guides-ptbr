@@ -166,3 +166,5 @@ Usuários do Rails 3: Trocar `ActiveSupport::Logger` por `ActiveSupport::Buffere
 Você pode monitorar os registros de sua aplicação com o comando `rhc tail openshiftapp` (o retorno da mudança que você acabou de fazer não será exibido até que o novo arquivo seja commitado e enviado para o OpenShift).
 
 **Instrutor(a):** Discutir a importância de registros da aplicação.
+
+{% include other-guides.md page="touristic-autism_continuous-deployment" %}

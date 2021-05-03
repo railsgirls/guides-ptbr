@@ -334,3 +334,4 @@ Assim, as requisições da URL, traduzidas em métodos HTTP, são mapeadas em a�
 
 Quando inserimos o código `root :to => redirect('/ideas')` em nosso `config.rb`, ele diz ao Rails para fazer como a raiz padrão da nossa aplicação [http://localhost:3000/ideas](http://localhost:3000/ideas) (perceba que Localhost está sendo usado como o domínio porque a nossa aplicação ainda está em desenvolvimento, quando você iniciar a sua aplicação domínio será diferente). Esta URL contém o caminho (`/ideas`) que, por padrão, mapeia a URL para a ação ‘index’ do nosso controlador de ideas  e renderiza a view associada; `index.html.erb`. O código `rm public/index.html` remove (`rm`) o arquivo `public/index.html`, contendo o código de “Bem-vindo a bordo”, que era a raiz padrão anterior da nossa aplicação.
 
+{% include other-guides.md page="guide-to-the-guide" %}

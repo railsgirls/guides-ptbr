@@ -117,5 +117,4 @@ Assim que você tiver sua aplicação rodando, certifique-se de clicar no botão
 
 *	[Outro tutorial do site da Engine Yard (em inglês)](https://support.cloud.engineyard.com/entries/20996751-Tutorial-How-to-Deploy-the-ToDo-Application-on-a-Trial-Account)
 
-
-
+{% include other-guides.md page="engineyard" %}

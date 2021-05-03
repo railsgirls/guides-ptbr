@@ -324,3 +324,5 @@ Obrigada por jogar!
 Se isso foi rápido e você quiser continuar, você pode ver:
 
 * [Renderizando a nossa listagem de cafés em HTML](/sinatra-html)
+
+{% include other-guides.md page="sinatra" %}

@@ -278,3 +278,5 @@ end
 {% endhighlight %}
 
 **Nota:** se você tiver algum problema relacionado ao Travis-CI, pode participar do canal "#travis" no IRC freenode para obter ajuda para responder qualquer dúvida que você possa ter.
+
+{% include other-guides.md page="touristic-autism_static-pages-tdd" %}

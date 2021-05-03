@@ -96,3 +96,5 @@ a seguir remova
 {% endhighlight %}
 
 Pronto! Visualize uma idea que você tenha acrescentado à sua aplicação e você verá ali o formulário para inserir um comentário bem como a funcionalidade para deletar comentários.
+
+{% include other-guides.md page="commenting" %}

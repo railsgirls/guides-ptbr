@@ -59,3 +59,5 @@ git push
 {% endhighlight %}
 
 E imediatamente outro _build_ começará a rodar no _Codeship_. Volte ao seu projeto e você verá os comandos que nós já conhecemos do seu primeiro _build_. Bônus: A sua aplicação vai subir no Heroku e deve estar online depois de um minuto ou dois.
+
+{% include other-guides.md page="continuous" %}

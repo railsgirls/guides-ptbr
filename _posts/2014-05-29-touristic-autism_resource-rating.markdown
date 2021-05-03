@@ -86,3 +86,5 @@ Você pode usar o método auxiliar `rating_for_user` para mostrar a avaliação 
 
 É isso aí! ^__^
 Experimente reiniciar o servidor, dê um add, commit e push no GitHub. Se tudo estiver funcionando, você também pode implantar ;)
+
+{% include other-guides.md page="touristic-autism_resource-rating" %}

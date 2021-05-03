@@ -318,3 +318,5 @@ Abra `app/views/places/show.html.erb` no seu editor de texto e substitua todas a
 {% endhighlight %}
 
 Continue experimentando com mudanças de Design! ;)
+
+{% include other-guides.md page="touristic-autism_design" %}

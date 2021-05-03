@@ -427,13 +427,4 @@ Você pode abrir agora o arquivo `app/views/pages/info.html.erb` e adicionar inf
 * Use CoffeeScript (ou JavaScript) para adicionar interatividade
 * Adicione redimensionamento de imagens para que o carregamento das imagens seja mais rápido
 
-## Guias Adicionais
-
-* Guide 0: [Cheatsheet para Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guide 1: [Adicione commentários, por Janika Liiv](/commenting)
-* Guide 2: [Coloque sua app online com Heroku, by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift)
-* Guide 3: [Construa um mapa de participantes do workshop, por Rails Girls Berlin](http://railsgirlsberlin.de/apptutorial/)
-* Guide 4: [Crie miniaturas de imagens para os uploads, por Miha Filej](/thumbnails)
-* Guide 5: [Adicione design, usando HTML &amp; CSS, por Alex Liao](/design)
-* Guide 6: [Adicione Autenticação (contas de usuários) com Devise, por Piotr Steininger](/devise/)
-* Guide 7: [Veja explicações adicionais para a app, por Lucy Bain](https://github.com/lbain/railsgirls)
+{% include other-guides.md page="simpleapp" %}

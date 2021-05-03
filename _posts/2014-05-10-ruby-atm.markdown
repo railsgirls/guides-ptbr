@@ -329,3 +329,5 @@ end
 ## Desafio! Notas de R$50 e de R$20
 
 Até agora, nós evitamos intencionalmente o caso onde uma nota menor não encaixava em uma nota maior. Por exemplo, nós evitamos o caso de ter apenas notas de R$50 e R$20 (onde 20 não 'cabe' exatamente em 50). Você consege ver o porquê deste caso ser mais difícil? Se o seu código atual fosse incluir apenas notas de R$50 e R$20, o que aconteceria quando você tentasse sacar R$60, ou R$110? Na sua cabeça, ou no papel, você pode pensar qual lógica seria necesária para lidar com esses casos corretamente? Se estiver a fim de um desafio, tente lidar com este caso no seu código! (Você precisará escrever seus próprios testes para este passo).
+
+{% include other-guides.md page="caixa-eletronico-em-ruby" %}

@@ -112,3 +112,4 @@ online em alguns minutos.
 A partir daqui, quaisquer mudanças que você fizer e subir para o seu GitHub vão
 ser testadas e implantadas automaticamente pelo Snap CI.
 
+{% include other-guides.md page="continuous-snap-ci" %}
