@@ -18,7 +18,6 @@ Docker é um software contêiner da empresa Docker, Inc, que fornece uma camada 
 Requisitos:
 
 Docker instalado na sua maquina [Instalação do docker](https://www.edivaldobrito.com.br/docker-no-ubuntu/)
-Docker-compose instalado[Instalação do docker-compose](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-pt)
 
 
 ## Definindo um projeto
