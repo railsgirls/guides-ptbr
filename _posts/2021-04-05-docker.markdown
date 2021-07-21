@@ -18,7 +18,6 @@ Docker é um software contêiner da empresa Docker, Inc, que fornece uma camada 
 Requisitos:
 
 Docker instalado na sua maquina [Instalação do docker](https://www.edivaldobrito.com.br/docker-no-ubuntu/)
-Docker-compose instalado[Instalação do docker-compose](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-pt)
 
 
 ## Definindo um projeto
@@ -36,7 +35,7 @@ Os arquivos são:
 
 Primeiro passo vamos criar o arquivo [Dockerfile](https://www.alura.com.br/artigos/desvendando-o-dockerfile)
 
-{% highlight erb %}
+{% highlight yaml %}
 FROM ruby:3.0.0
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
@@ -75,7 +74,7 @@ touch Gemfile.lock
 
 [Docker-compose](https://imasters.com.br/banco-de-dados/docker-compose-o-que-e-para-que-serve-o-que-come#:~:text=Docker%20Compose%20%C3%A9%20o%20orquestrador,mas%20os%20maestros%20somos%20n%C3%B3s!)
 
-{% highlight erb %}
+{% highlight yaml %}
 
 version: "3.9"
 services:
@@ -96,7 +95,7 @@ services:
       - db
 {% endhighlight %}
 
-Agora vamos montar o projeto 
+Agora vamos montar o projeto
 
 {% highlight sh %}
 docker-compose run --no-deps web rails new . --force --database=postgresql
@@ -118,7 +117,7 @@ docker-compose build
 
 Configurações de Banco de dados
 
-{% highlight erb %}
+{% highlight yaml %}
 
 default: &default
   adapter: postgresql
@@ -176,10 +175,10 @@ Created database 'seuapp_development'
 Created database 'seuapp_test'
 {% endhighlight %}
 
-depois vá para o navegador e digite 
+depois vá para o navegador e digite
 {% highlight sh %}
 
-localhost:3000 
+localhost:3000
 {% endhighlight %}
 
 Referência estão nos links
