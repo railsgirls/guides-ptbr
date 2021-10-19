@@ -70,7 +70,7 @@ Coloque esse código no arquivo `index.erb` dentro do diretório `views`:
         <% Opcoes.each do |id, text| %>
           <li>
             <label class='radio'>
-              <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
+              <input type='radio' name='voto' value='<%= id %>' id='vote_<%= id %>' />
               <%= text %>
             </label>
           </li>
@@ -154,7 +154,7 @@ e coloque lá um pouco de HTML com código Ruby junto:
 <html>
   <head>
     <meta charset='UTF-8' />
-    <title>Suffragist</title>
+    <title>Sufragista</title>
     <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
   </head>
   <body class='container'>
@@ -180,7 +180,7 @@ Coloque o seguinte lá:
 <html>
   <head>
     <meta charset='UTF-8' />
-    <title>Suffragist</title>
+    <title>Sufragista</title>
     <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
   </head>
   <body class='container'>
@@ -216,15 +216,15 @@ Crie um novo arquivo no diretório `views`, chamado `results.erb`.
   <% Opcoes.each do |id, text| %>
     <tr>
       <th><%= text %></th>
-      <td><%= @voto[id] || 0 %>
-      <td><%= '#' * (@voto[id] || 0) %></td>
+      <td><%= @votos[id] || 0 %>
+      <td><%= '#' * (@votos[id] || 0) %></td>
     </tr>
   <% end %>
 </table>
 <p><a href='/'>Vote Mais!</a></p>
 {% endhighlight %}
 
-Execute `ruby sufragistat.rb`, cheque
+Execute `ruby sufragista.rb`, cheque
 seus resultados e pause o servidor com <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 __INSTRUTOR(A)__: Explique tabelas HTML e como os valores faltando vem como zero.
@@ -247,12 +247,12 @@ Adicione mais código em `sufragista.rb` – substitua
 {% highlight ruby %}
 post '/cast' do
   @titulo = 'Obrigada por votar!'
-  @votos  = params['voto']
+  @voto  = params['voto']
   @store = YAML::Store.new 'votos.yml'
   @store.transaction do
-    @store['votes'] ||= {}
-    @store['votes'][@vote] ||= 0
-    @store['votes'][@vote] += 1
+    @store['votos'] ||= {}
+    @store['votos'][@voto] ||= 0
+    @store['votos'][@voto] += 1
   end
   erb :cast
 end
@@ -260,7 +260,7 @@ end
 get '/results' do
   @titulo = 'Resultados até agora:'
   @store = YAML::Store.new 'votos.yml'
-  @votes = @store.transaction { @store['votes'] }
+  @votos = @store.transaction { @store['votos'] }
   erb :results
 end
 {% endhighlight %}
