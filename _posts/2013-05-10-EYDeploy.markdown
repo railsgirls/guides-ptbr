@@ -61,7 +61,7 @@ __TREINADORA__: Esta seria uma boa hora para falar sobre sistemas de versionamen
 Você precisará ter uma conta no GitHub e um repositório onde encontraremos sua
 aplicação. Siga estas instruções em [GitHub](https://help.github.com/articles/create-a-repo) para criar um repositório e submeter sua aplicação a ele. Se você não tem uma aplicação Rails funcionando, você pode fazer a cópia da [aplicação de exemplo da Engine Yard](https://github.com/engineyard/todo) para seu próprio repositório. Uma treinadora pode lhe ajudar se precisar.
 
-### Registre-se para uma conta de teste gráris na Engine Yard
+### Registre-se para uma conta de teste grátis na Engine Yard
 
 Navegue até o [site](https://www.engineyard.com/) da Engine Yard e clique em "GET STARTED FREE" ("inicie gratuitamente") para obter suas 500 horas de teste grátis. O registro lhe enviará um e-mail de confirmação; verifique seu e-mail, clique no link e entre em sua conta. Clique no link sob "Your available applications" ("Suas aplicações disponíveis") que diz "Engine Yard Cloud". Isto leva ao seu painel.
 
@@ -103,7 +103,7 @@ __TREINADORA__: Fale sobre homologação (staging) vs. produção (production), 
 #### Colocando sua aplicação no ar
 
 1.	Assim que todos os pontinhos estiverem verdes, clique em "Deploy".
-2.	Assim que vir a frase "SEU NOME successfully deployed HEAD" ("SEU NOME fez o deploy de HEAD"), você saberá que seu código está no ar! Parabéns!
+2.	Assim que ver a frase "SEU NOME successfully deployed HEAD" ("SEU NOME fez o deploy de HEAD"), você saberá que seu código está no ar! Parabéns!
 3.	Clique no link que diz "View your application" ("Visualize sua aplicação") para visitar sua aplicação;
 4.	Se você receber uma notificação vermelha que diz que seu deploy falhou, nós só teremos alguma depuração a fazer. Levante a mão e uma treinadora te ajudará com isso.
 

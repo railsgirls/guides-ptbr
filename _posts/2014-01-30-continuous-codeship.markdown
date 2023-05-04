@@ -17,15 +17,15 @@ Com um ambiente de deploy contínuo funcionando é possível implantar Deploys v
 
 Existem algumas empresas muito legais velejando a onda do deploy contínuo, nesse guia nos iremos configurar um ambiente de deploy contínuo para um aplicativo Ruby on Rails do Github para o Heroku, usando o [_Codeship_](http://www.codeship.io).
 
-__INSTRUTOR(A)__: Falar sobre os beneficios do deploy contínuo.
+__INSTRUTOR(A)__: Falar sobre os benefícios do deploy contínuo.
 
 ### Conta no _Codeship_
 
 Primeiramente, você vai precisar de [uma conta no _Codeship_](https://www._codeship_.io/). Inscreva-se no _Codeship_ com o Github. O _Codeship_ precisa de acesso aos seus repositórios do Github para aprontá-los, então tenha certeza de garantir o acesso.
 
-Voltando no _Codeship_, vamos criar o nosso primeiro projeto. O primeiro passo para isso é selecionar o Github como o seu providor de repositório. Na lista dos seus repositórios do Github, busque o respósitorio que você quer configurar e selecione-o. No nosso caso, é o que está escrito algo tipo "railsgirls".
+Voltando no _Codeship_, vamos criar o nosso primeiro projeto. O primeiro passo para isso é selecionar o Github como o seu providor de repositório. Na lista dos seus repositórios do Github, busque o repositório que você quer configurar e selecione-o. No nosso caso, é o que está escrito algo tipo "railsgirls".
 
-Agora o seu repositório está conectado e você pode configurar os seus comandos de teste. Nós criamos uma aplicação Ruby on Rails. Então selecione "Ruby on Rails" como o framework que usaremos. Isso configura os comandos de inicialização e os comandos de testes para você. Deletando a cerquilha (`#`) você pode descomentar os comandos de teste que você quiser usar para a sua aplicação. Por enquanto você não deve ter tester para configurar ainda, então você pode pular esse passo e voltar a ver isso depois.
+Agora o seu repositório está conectado e você pode configurar os seus comandos de teste. Nós criamos uma aplicação Ruby on Rails. Então selecione "Ruby on Rails" como o framework que usaremos. Isso configura os comandos de inicialização e os comandos de testes para você. Deletando a cerquilha (`#`) você pode descomentar os comandos de teste que você quiser usar para a sua aplicação. Por enquanto você não deve ter testes para configurar ainda, então você pode pular esse passo e voltar a ver isso depois.
 
 Agora vamos finalizar a configuração e ir para o painel de controle. Você pode ativar o chamado 'novo _build_' (new _build_) para a sua aplicação mudando alguma coisa e dando _push_ no seu repositório:
 
