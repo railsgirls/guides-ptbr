@@ -20,7 +20,7 @@ _Traduzido por Maujor, [site do Maujor](http://www.maujor.com)_
 
 ### Editor de texto
 
-- [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com), Vim e Emacs são alguns dos editores de texto que você poderá usar para escrever códigos e editar arquivos.
+- [Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com), Vim e Emacs são alguns dos editores de texto que você poderá usar para escrever códigos e editar arquivos.
 
 <h3><i class="icon-prompt">&nbsp;</i></h3>
 
@@ -161,9 +161,7 @@ Abra <http://localhost:3000> no navegador. Se você estiver usando um serviço n
 
 Se você ver a página denominada "Yay! You’re on Rails!" é porque tudo deu certo e sua nova app está funcionando corretamente.
 
-Note que nesta nova janela o prompt de comando não é visível, pois você se encontra no servidor Rails.
-
-O prompt de comando deve parecer com isso:
+Note que nesta nova janela o prompt de comando não é visível, pois você se encontra no servidor Rails. Abra uma nova aba no seu terminal para que consiga acessar o promp de comando, que deve parecer com isso:
 
 <div class="os-specific">
   <div class="nix">

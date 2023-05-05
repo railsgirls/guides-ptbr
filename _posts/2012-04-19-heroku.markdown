@@ -9,6 +9,9 @@ permalink: heroku
 *Criado por Terence Lee, [@hone02](https://twitter.com/hone02)*  
 *Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
 
+### Observação importante
+O Heroku desde agosto de 2022 não oferece mais o serviço gratuito, porém dentro da plataforma existe uma alternativa para estudantes chamada [Heroku for Github Students](https://www.heroku.com/github-students), onde é necessário se cadastrar e enviar documentos necessários para a liberação de créditos dentro da plataforma.
+
 ### Instale Heroku
 
 Siga os passos intitulados "Introduction" e "Set up" constantes na página
