@@ -16,7 +16,7 @@ __INSTRUTOR(A)__: Fale sobre os benefícios de fazer o deploy para o anynines vs
 
 1. [Crie uma conta do anynines](http://anynines.com/).
 
-2. [Faça o download e installe a Interface de Linha de Comando](https://anynines.zendesk.com/entries/60241846-How-to-install-the-CLI-v6) para interagir com o anynines.
+2. [Faça o download e instale a Interface de Linha de Comando](https://anynines.zendesk.com/entries/60241846-How-to-install-the-CLI-v6) para interagir com o anynines.
 
 3. Agora selecione o endpoint da api do anynines como destino e autentique-se usando suas credenciais:
 
@@ -42,7 +42,7 @@ Vamos enviar o código-fonte da sua máquina local para o anynines:
 $> cf push [nome-do-app-de-sua-escolha]
 {% endhighlight %}
 
-Isso falhará miseravelmente, já que a aplicação precisa de um banco de dados MySQL para iniciar. Então, vamos criar um! O comando abaixo vai criar um serviço do MySQL com o plano gratuito. Depois do nome do plano, você precisa especificar um nome para a instância do serviço. Esse nome será usado em comandos futuros para se referir à essa instância do serviço:
+Isso falhará miseravelmente, já que a aplicação precisa de um banco de dados MySQL para iniciar. Então, vamos criar um! O comando abaixo vai criar um serviço do MySQL com o plano gratuito. Depois do nome do plano, você precisa especificar um nome para a instância do serviço. Esse nome será usado em comandos futuros para se referir a essa instância do serviço:
 
 {% highlight sh %}
 $> cf create-service mysql Pluto-free [nome-do-servico-de-sua-escolha]

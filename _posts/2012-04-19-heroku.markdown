@@ -9,6 +9,9 @@ permalink: heroku
 *Criado por Terence Lee, [@hone02](https://twitter.com/hone02)*  
 *Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
 
+### Observação importante
+O Heroku desde agosto de 2022 não oferece mais o serviço gratuito, porém dentro da plataforma existe uma alternativa para estudantes chamada [Heroku for Github Students](https://www.heroku.com/github-students), onde é necessário se cadastrar e enviar documentos necessários para a liberação de créditos dentro da plataforma.
+
 ### Instale Heroku
 
 Siga os passos intitulados "Introduction" e "Set up" constantes na página
@@ -147,7 +150,7 @@ A plataforma Heroku tem suas peculiaridades. Nela os aplicativos são executados
 > usam um sistema de arquivos que são escritos em um rascunho temporário, contudo nenhum destes arquivos
 > são visíveis para processamento em qualquer outro dyno, tais arquivos serão
 > descartados no momento em que o dyno for parado ou restartado. Por exemplo, isso
-> acontece sempre que o dyno é substituido em decorrência uma implantação de aplicativos e, também,
+> acontece sempre que o dyno é substituído em decorrência uma implantação de aplicativos e, também,
 > em média uma vez por dia, pois assim está previsto pelo mecanismo de gestão nativo do dyno.
 
 No [tutorial para criação do App](app) a funcionalidade que prevê a gravação de arquivos em uma Idea, permite escrever arquivos no diretório  `public/uploads` das suas aplicações . Você pode constatar o armazenamento efêmero em Heroku seguindo os seguintes passos:
@@ -165,11 +168,11 @@ No [tutorial para criação do App](app) a funcionalidade que prevê a gravaçã
 
 O método mais comum consiste em se usar um serviço de hospedagem externo, tais como,  Amazon S3 (Simple Storage Service) ou Rackspace CloudFiles para hospedar os *assets* da aplicação. Tais serviços disponibilizam  (por um custo baixo - em geral $0.10 por GB) armazenamento 'na nuvem'  (os arquivos podem ser hospedados em qualquer lugar) proporcionando um armazenamento persistente para sua aplicação.
 
-Não é do escopo deste tutorial detalhar a hospedagem 'na nuvem', mas se você estiver interessado em mais informações à respeito seguem alguns links úteis:
+Não é do escopo deste tutorial detalhar a hospedagem 'na nuvem', mas se você estiver interessado em mais informações a respeito seguem alguns links úteis:
 
 * [How to: Make Carrierwave work on Heroku](https://github.com/carrierwaveuploader/carrierwave/wiki/How-to%3A-Make-Carrierwave-work-on-Heroku)
 * [Amazon S3 – The Beginner’s Guide](http://www.hongkiat.com/blog/amazon-s3-the-beginners-guide/)
 
-Como sempre, se você precisar de mais informações ou assistência pergunte aos seus instrutoras(es).
+Como sempre, se você precisar de mais informações ou assistência pergunte aos seus instrutores(as).
 
 {% include other-guides.md page="heroku" %}

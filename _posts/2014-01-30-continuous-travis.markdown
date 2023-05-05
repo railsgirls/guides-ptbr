@@ -52,7 +52,7 @@ Então, nós criaremos um arquivo chamado `manifest.yml` no diretório principal
 cf push
 {% endhighlight %}
 
-Isso irá disparar o  primeiro deploy para o anynimes. A gem cf irá notar que não existe `manifest.yml`e irá pedir-lhe um conjunto  padrão de perguntas de configuração, tais como o número e tamanho da memória desejado de suas instâncias de aplicativos, se e quais serviços para se ligarem à eles e mais importante, se você deseja armazenar essas informações.
+Isso irá disparar o  primeiro deploy para o anynimes. A gem cf irá notar que não existe `manifest.yml`e irá pedir-lhe um conjunto  padrão de perguntas de configuração, tais como o número e tamanho da memória desejado de suas instâncias de aplicativos, se e quais serviços para se ligarem a eles e mais importante, se você deseja armazenar essas informações.
 
 Por favor, responda a esta pergunta com um "hell yes" uma vez que o desejado arquivo `manifest.yml` será criado!
 
@@ -93,7 +93,7 @@ No caso de você não saber a URL do anynies, use
 cf target
 {% endhighlight %}
 
-para reunir todas as informações necessárias para a configuração do Travis. Isso inclui URL de destino, nome de usuário, a organização e espaço que você está usando atualmente. Você pode também dar uma olhada no email de boas vindas que você deve ter recebido após se inscrever no anynines.com.
+para reunir todas as informações necessárias para a configuração do Travis. Isso inclui URL de destino, nome de usuário, a organização e espaço que você está usando atualmente. Você pode também dar uma olhada no email de boas-vindas que você deve ter recebido após se inscrever no anynines.com.
 
 Após o comando `travis` ter finalizado, seu `.travis.yml` deve parecer algo como isso:
 {% highlight sh %}

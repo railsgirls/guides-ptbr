@@ -8,7 +8,7 @@ permalink: touristic-autism_continuous-deployment
 
 *Criado por Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
 *para [Rails Girls Galway](https://github.com/RailsGirlsGalway)*.
-Os guias básicos que foram unidos e adaptados são o [Tutorial de Ruby on Rails](http://www.railstutorial.org/book), o [RailsGirls app básico](http://guides.railsgirls.com/app/) e os tutorias para [criar thumbnails](http://guides.railsgirls.com/thumbnails), [autenticar usuários](http://guides.railsgirls.com/devise/), [adicionar design](http://guides.railsgirls.com/design), [deploy ao OpenShift](http://guides.railsgirls.com/openshift/) e [adicionar comentários](http://guides.railsgirls.com/commenting).
+Os guias básicos que foram unidos e adaptados são o [Tutorial de Ruby on Rails](http://www.railstutorial.org/book), o [RailsGirls app básico](http://guides.railsgirls.com/app/) e os tutoriais para [criar thumbnails](http://guides.railsgirls.com/thumbnails), [autenticar usuários](http://guides.railsgirls.com/devise/), [adicionar design](http://guides.railsgirls.com/design), [deploy ao OpenShift](http://guides.railsgirls.com/openshift/) e [adicionar comentários](http://guides.railsgirls.com/commenting).
 Traduzido por Renan Muliterno, [rmuliterno](https://github.com/rmuliterno).
 
 

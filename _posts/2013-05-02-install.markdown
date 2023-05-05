@@ -14,7 +14,7 @@ Traduzido por Marcela Oliveira, [@magaeu](https://twitter.com/magaeu)
 
 Para construir apps e outras coisas com Ruby on Rails, precisamos configurar alguns softwares e o ambiente de desenvolvimento em seu computador.
 
-Siga as instruições para seu sistema operacional (SO). Se você tiver algum problema, não entre em pânico. Avise-nos e vamos resolver juntos.
+Siga as instruções para seu sistema operacional (SO). Se você tiver algum problema, não entre em pânico. Avise-nos e vamos resolver juntos.
 
 * [Instalação para macOS](#instalação-para-os-x)
 * [Instalação para Windows](#instalação-para-windows)
@@ -280,7 +280,7 @@ _Se você tiver algum problema durante esta etapa, verifique a parte de [Possív
 
 ## Instalação para Linux
 
-Para instalar o ambiente de Ruby on Rails você deve apenas copiar a linha abaixo para sua distribuição Linux (Ubuntu ou Fedora), e colar no **Terminal** e pressionar Enter. Aproveite o texto que aparece na tela; irá levar algum tempo para o processo acabar. Nesse meio tempo, encorajamos você a pegar uma bebida refrescante antes de comecar.
+Para instalar o ambiente de Ruby on Rails você deve apenas copiar a linha abaixo para sua distribuição Linux (Ubuntu ou Fedora), e colar no **Terminal** e pressionar Enter. Aproveite o texto que aparece na tela; irá levar algum tempo para o processo acabar. Nesse meio tempo, encorajamos você a pegar uma bebida refrescante antes de começar.
 
 ### *1.* Instalar Yarn
 
@@ -353,13 +353,13 @@ Acesse [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador, caso 
 
 ## Utilização da Máquina Virtual
 
-Ao invés de instalar todas as ferramentas em seu computador, você pode configurar um ambiente de desenvolvimento em uma Máquina Virtual. Favor, verifique os deltalhes [aqui]({% post_url 2014-03-24-alternative-dev-environment %}).
+Ao invés de instalar todas as ferramentas em seu computador, você pode configurar um ambiente de desenvolvimento em uma Máquina Virtual. Favor, verifique os detalhes [aqui]({% post_url 2014-03-24-alternative-dev-environment %}).
 
 <hr />
 
 ## Utilização de Serviço em Nuvem
 
-Ao invés de instalar **Ruby on Rails** e o editor em seu computador, você pode utilizar um webservice para desenvolvimento. Tudo que precisa é um navegador e conexão com a internet. Esse tutorial explica como utilizar o [codenvy.io](https://codenvy.io). Se você utilizar outro serviço, talvez eles utilizem outra nomeclatura, como por exemplo 'workspace' ao invés de 'box', mas o processo é geralmente bem parecido.
+Ao invés de instalar **Ruby on Rails** e o editor em seu computador, você pode utilizar um webservice para desenvolvimento. Tudo que precisa é um navegador e conexão com a internet. Esse tutorial explica como utilizar o [codenvy.io](https://codenvy.io). Se você utilizar outro serviço, talvez eles utilizem outra nomenclatura, como por exemplo 'workspace' ao invés de 'box', mas o processo é geralmente bem parecido.
 
 ### *1.* Atualizar seu navegador (browser)
 
@@ -390,11 +390,11 @@ Na tela 'New workspace', algumas configurações tem que ser feitas.
 
 ![](/images/codenvy/create-workspace.jpg)
 
-* Codeenvy cria uma pasta '/projects' durante a instalação, que você poderá depois colocar seu código. Ele também cria uma pasta 'console-ruby-simple' que nós não precisamos. VOcê pode vê-lo no Project Explorer. Ignore ou delete a pasta clicando com o botão direito.
+* Codeenvy cria uma pasta '/projects' durante a instalação, que você poderá depois colocar seu código. Ele também cria uma pasta 'console-ruby-simple' que nós não precisamos. Você pode vê-lo no Project Explorer. Ignore ou delete a pasta clicando com o botão direito.
 
 ### *4.* Encontre e reinicie seu workspace
 * Se você acabou de criar seu projeto, você pode provavelmente pular estes passos - eles são bons de saber se você fizer login no Codenvy mais tarde
-* Se você não utilizou seu workspace ou projetos por um tempo, eles talvez possam ser desligados por inatividade. Vocé irá notar um círculo vazio próximo ao nome do workspace.
+* Se você não utilizou seu workspace ou projetos por um tempo, eles talvez possam ser desligados por inatividade. Você irá notar um círculo vazio próximo ao nome do workspace.
 
 ![](/images/codenvy/start-workspace.jpg)
 
