@@ -126,7 +126,7 @@ Execute um bundle para configurar as dependências da sua aplicação:
 bundle install --without production
 {% endhighlight %}
 
-Em algumas plataformas, esse comando pode gerar versão específicas da plataforma que podem gerar problemas para sua aplicação quando for tentar enviá-la (push) para o ambiente em nuvem. Para prevenir esse problema, abra seu arquivo `Gemfile.lock` e verifique as versões das Gems 'sqlite3' e 'pg'. Se elas possuirem um sufixo específico da plataforma, como `-x86-mingw32`, remova o sufixo (ex. mude `pg (0.16.0-x86-mingw32)` para `pg (0.16.0)` e `sqlite3 (1.3.8-x86-mingw32)` para `sqlite3 (1.3.8)`). Salve e feche o arquivo, e execute o comando de bundle novamente antes de continuar.
+Em algumas plataformas, esse comando pode gerar versões específicas da plataforma que podem gerar problemas para sua aplicação quando for tentar enviá-la (push) para o ambiente em nuvem. Para prevenir esse problema, abra seu arquivo `Gemfile.lock` e verifique as versões das Gems 'sqlite3' e 'pg'. Se elas possuírem um sufixo específico da plataforma, como `-x86-mingw32`, remova o sufixo (ex. mude `pg (0.16.0-x86-mingw32)` para `pg (0.16.0)` e `sqlite3 (1.3.8-x86-mingw32)` para `sqlite3 (1.3.8)`). Salve e feche o arquivo, e execute o comando de bundle novamente antes de continuar.
 
 Adicione e comite suas mudanças no Git:
 
@@ -188,7 +188,7 @@ def url
 end
 {% endhighlight %}
 
-Agora as imagens carregadas serão armazenadas no diretório, porém elas ainda estarão disponíveis na mesma URL que estávamos utilizando anteriormente. Para fazer isso funcionar, nós também precisáremos adicionar um link simbólico no sistema de arquivo da localização do repositório para a localização real de armazenamento. Para realizar essa etapa, abra `.openshift/action_hooks/build` e adicione o seguinte código:
+Agora as imagens carregadas serão armazenadas no diretório, porém elas ainda estarão disponíveis na mesma URL que estávamos utilizando anteriormente. Para fazer isso funcionar, nós também precisaremos adicionar um link simbólico no sistema de arquivo da localização do repositório para a localização real de armazenamento. Para realizar essa etapa, abra `.openshift/action_hooks/build` e adicione o seguinte código:
 
 {% highlight sh %}
 mkdir -p $OPENSHIFT_DATA_DIR/uploads

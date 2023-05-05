@@ -83,7 +83,7 @@ Este é um teste de associação.
 
 **INSTRUTOR(A)**: Fale sobre o TDD e como começamos a adicionar recursos ao nosso aplicativo testando-o primeiro.
 
-Outro recurso que podemos adicionar ao nosso aplicativo é criar ideias sempre nomeadas. Como poderíamos fazer isso? Vamos começar dizendo que as idéias sempre devem ter um nome.
+Outro recurso que podemos adicionar ao nosso aplicativo é criar ideias sempre nomeadas. Como poderíamos fazer isso? Vamos começar dizendo que as ideias sempre devem ter um nome.
 
 Vamos começar criando um teste para isso. Podemos fazer isso adicionando as seguintes linhas ao nosso `spec/lib/idea_spec.rb`:
 
@@ -100,7 +100,7 @@ Depois disso, execute no seu terminal
 rspec spec/models/idea_spec.rb
 {% endhighlight %}
 
-Deve nos dar que não estamos validando adequadamente (e realmente não estamos). Então, para validar isso, precisamos adicionar as seguintes linhas ao nosso modelo, para que possamos validar a presença do nome em nossa Idéia.
+Deve nos dar que não estamos validando adequadamente (e realmente não estamos). Então, para validar isso, precisamos adicionar as seguintes linhas ao nosso modelo, para que possamos validar a presença do nome em nossa Ideia.
 
 {% highlight ruby %}
 validates :name, presence: true

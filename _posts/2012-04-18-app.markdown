@@ -77,7 +77,7 @@ mkdir projetos
 
     <div>
 
-<p>Rodando o comando  <code>ls</code> no terminal você poderá constatar que um diretório denominado  <code>projetos</code> foi criado. Você verá o diretório <code>projetos</code> na saida do terminal. A seguir você deverá ir para o diretório  <code>projetos</code> executando o seguinte comando:</p>
+<p>Rodando o comando  <code>ls</code> no terminal você poderá constatar que um diretório denominado  <code>projetos</code> foi criado. Você verá o diretório <code>projetos</code> na saída do terminal. A seguir você deverá ir para o diretório  <code>projetos</code> executando o seguinte comando:</p>
     </div>
 
 {% highlight sh %}

@@ -76,11 +76,11 @@ Abra `app/views/ideas/index.html.erb` em seu editor de texto e substitua todas a
 
 **Instrutor(a):** Explique o que o novo código significa linha por linha, e fale um pouco sobre o grid do Bootstrap
 
-Atualize! Nós ficamos com uma boa lista de ideias com design bonito. Clique no botão "New Idea", e crie mais idéias com o texto real e imagens bonitas, a página ficará muito melhor com o conteúdo. Há um princípio de web design contemporâneo: o conteúdo é a melhor decoração.
+Atualize! Nós ficamos com uma boa lista de ideias com design bonito. Clique no botão "New Idea", e crie mais ideias com o texto real e imagens bonitas, a página ficará muito melhor com o conteúdo. Há um princípio de web design contemporâneo: o conteúdo é a melhor decoração.
 
 ## *4.* Design para a página de detalhes da ideia
 
-Clique no título de uma idéia, e você será levado para a página de detalhes da idéia. Agora ainda  é scaffold gerado pelo Rails, então vamos melhorar a página.
+Clique no título de uma ideia, e você será levado para a página de detalhes da ideia. Agora ainda  é scaffold gerado pelo Rails, então vamos melhorar a página.
 
 Abra `app/views/ideas/show.html.erb` em seu editor de texto e substitua todas as linhas com
 

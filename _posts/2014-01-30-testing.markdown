@@ -52,7 +52,7 @@ Isso adiciona os seguintes arquivos usados para configuração:
 ## *2.* Crie seu primeiro teste!
 
 Rubystas frequentemente utilizam as palavras 'teste' e 'especificação' da mesma maneira, e é por isso que você irá armazenar seus testes no diretório 'specs'.
-Para fazer isso, execute as seguintes passos:
+Para fazer isso, execute os seguintes passos:
 
 Vamos criar um teste para o nosso modelo `idea`, para fazer isso de maneira elegante em Rails:
 
@@ -83,7 +83,7 @@ rspec spec/models/idea_spec.rb
 
 qual será o resultado que seu teste está pendente, pois ainda não está implementado.
 
-__INSTRUTOR(A)__: Fale sobre 'goglear' a saída do terminal
+__INSTRUTOR(A)__: Fale sobre 'googlear' a saída do terminal
 
 Vamos fazer algo sobre isso!
 

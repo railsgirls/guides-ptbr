@@ -82,7 +82,7 @@ Para referência futura, você pode usar o comando `passenger-config restart-app
 
 #### tmp/always_restart.txt
 
-O Passenger também suporta o arquivo mágico `tmp/always_restart.txt`. Com este arquivo, o Passenger irá reiniciar seu aplicativo após cada solicitação. Dessa forma, você não precisa invocar o comando de reinicialização com freqüência.
+O Passenger também suporta o arquivo mágico `tmp/always_restart.txt`. Com este arquivo, o Passenger irá reiniciar seu aplicativo após cada solicitação. Dessa forma, você não precisa invocar o comando de reinicialização com frequência.
 
 Ative este mecanismo criado o arquivo:
 
@@ -97,7 +97,7 @@ Desative o mecanismo removendo o arquivo:
 rm tmp/always_restart.txt
 {% endhighlight %}
 
-**INSTRUTOR(A)**: Ás vezes a gem carrierwave gem causa problemas. Adicionando `require 'carrierwave/orm/activerecord'` ao arquivo `environment.rb` muitas vezes será suficiente.
+**INSTRUTOR(A)**: Às vezes a gem carrierwave gem causa problemas. Adicionando `require 'carrierwave/orm/activerecord'` ao arquivo `environment.rb` muitas vezes será suficiente.
 
 ### Implantando seu app
 
