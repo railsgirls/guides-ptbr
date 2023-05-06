@@ -20,7 +20,7 @@ $ git clone git@github.com:YOUR-USERNAME/guides-ptbr.git
 
 ## Como rodar o projeto
 
-Dentro do diretório `guides-ptbr` execute o camando abaixo para instalar todas as gems que o projeto precisa.
+Dentro do diretório `guides-ptbr` execute o comando abaixo para instalar todas as gems que o projeto precisa.
 
 ```bash
 $ bundle install
@@ -33,6 +33,18 @@ $ bundle exec jekyll serve --watch
 ```
 
 para iniciar o servidor e abrir no navegador com o endereço [http://localhost:4000](http://localhost:4000)
+
+## Com Docker
+
+Construa a imagem localmente
+```
+docker build -t guides-ptbr .
+```
+
+Inicie o servidor e abrir no navegador com o endereço [http://localhost:4000](http://localhost:4000)
+```
+docker run --publish 4000:4000 --volume $(pwd):/app guides-ptbr
+```
 
 ## Como abrir um Pull Request
 
